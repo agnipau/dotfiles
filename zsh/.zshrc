@@ -1,21 +1,45 @@
 #
+# .zshrc
+#
+
+
+# zsh-related variables
+ZSH="${HOME}/.oh-my-zsh"
+ZSH_THEME='agnoster'
+HIST_STAMPS='dd/mm/yyyy'
+
+
+# oh-my-zsh plugins
+plugins=(
+  git
+  sudo
+)
+. ${ZSH}/oh-my-zsh.sh
+
+
+# -----------------------------
+# BASH compatible configuration
+# -----------------------------
+
+
+#
 # .bashrc
 #
 
 
-# If not running interactively, don't do anything:
-[[ $- != *i* ]] && return
+## If not running interactively, don't do anything:
+#[[ $- != *i* ]] && return
 
 
 # Source pywal colors
 . ${HOME}/.cache/wal/colors.sh
 
 
-# Prompt
-PS1="\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] "
+## Prompt
+#PS1="\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] "
 
 
-# Envars
+## Envars
 export HISTCONTROL='ignoredups'
 export HISTSIZE='1000000'
 export PATH="${HOME}/progetti/youtube-dl-batchfiles/.phantomjs/phantomjs-2.1.1-linux-x86_64/bin:${HOME}/.cargo/bin:${HOME}/bin:${HOME}/bin/color:${HOME}/.gem/ruby/2.5.0/bin:${PATH}"
@@ -26,22 +50,23 @@ export RTV_BROWSER='/usr/bin/w3m'
 export LANG='it_IT.UTF-8'
 export XDG_CONFIG_HOME="${HOME}/.config"
 export SSH_KEY_PATH="${HOME}/.ssh/id_rsa"
-export PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
+#export PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
+#export DISABLE_AUTO_TITLE="true"
 
 
-# Better tab completion and other bindings
-bind 'TAB: menu-complete'
-bind 'set show-all-if-ambiguous on'
-bind 'set completion-ignore-case on'
-bind 'set completion-map-case on'
-bind 'set page-completions off'
-bind 'set menu-complete-display-prefix on'
-bind 'set completion-query-items 0'
-bind 'set colored-stats on'
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+## Better tab completion and other bindings
+#bind 'TAB: menu-complete'
+#bind 'set show-all-if-ambiguous on'
+#bind 'set completion-ignore-case on'
+#bind 'set completion-map-case on'
+#bind 'set page-completions off'
+#bind 'set menu-complete-display-prefix on'
+#bind 'set completion-query-items 0'
+#bind 'set colored-stats on'
+#bind '"\e[A": history-search-backward'
+#bind '"\e[B": history-search-forward'
 bind '"\e\C-l": "\C-p\C-e | less\C-m"'
-bind '"\e\e": "\C-asudo \C-e"'
+#bind '"\e\e": "\C-asudo \C-e"'
 
 
 # Tmux
@@ -72,12 +97,12 @@ alias ibash='. ${HOME}/.bashrc'
 alias izsh='. ${HOME}/.zshrc'
 
 
-# Inspired by zsh's cd ... thing
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
+## Inspired by zsh's cd ... thing
+#alias ..='cd ..'
+#alias ...='cd ../..'
+#alias ....='cd ../../..'
+#alias .....='cd ../../../..'
+#alias ......='cd ../../../../..'
 
 
 # Yeah, that's pretty strange

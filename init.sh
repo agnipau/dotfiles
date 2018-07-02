@@ -25,7 +25,8 @@ stow -D 2bwm \
 	viewnior \
 	x \
 	xdg-user-dirs \
-	zathura
+	zathura \
+	zsh
 
 echo "==> Starting to create symbolic links..."
 
@@ -48,6 +49,7 @@ stow -t ${HOME} 2bwm \
 	      viewnior \
 	      x \
 	      xdg-user-dirs \
-	      zathura
+	      zathura \
+	      zsh
 
 echo "==> Success!"
