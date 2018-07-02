@@ -59,7 +59,7 @@ alias envim='nvim ${HOME}/.config/nvim/init.vim'
 alias ebash='nvim ${HOME}/.bashrc'
 alias ebox='nvim ${HOME}/.config/openbox/rc.xml'
 alias ebspwm='nvim ${HOME}/.config/bspwm/bspwmrc'
-alias esxhkd='nvim ${HOME}/.config/sxhkd/sxhdrc'
+alias esxhkd='nvim ${HOME}/.config/sxhkd/sxhkdrc'
 alias etheme='nvim ${HOME}/.themes/agnipau/openbox-3/themerc'
 alias emenu='nvim ${HOME}/.config/openbox/menu.xml'
 alias eauto='nvim ${HOME}/.config/openbox/autostart'
@@ -94,12 +94,13 @@ alias cx='clear; exit; quit'
 
 
 # Git
-alias gadd='git add -A'
-alias gcom='git commit'
-alias gpus='git push'
-alias gpul='git pull'
+alias gpush='git push'
+alias gpull='git pull'
+alias ga='git add -A'
+alias gc='git commit'
+alias gl='git log'
+alias gv='git remote -v'
 alias gs='git status'
-alias grem='git remote -v'
 alias clone='git clone --depth=1'
 
 
@@ -280,6 +281,22 @@ mkcd() {
 }
 
 
+# Git add -A, git commit -m "message"
+gg() {
+  if [[ $# -eq 0 ]]; then
+    TIME=$(date +"%a %d %b %g at %H:%M")
+    git pull
+    git add -A
+    git commit -m "Comment: update on $TIME"
+  elif [[ $# -eq 1 ]]; then
+    TIME=$(date +"%a %d %b %g at %H:%M")
+    git pull
+    git add -A
+    git commit -m "Comment: $1 on $TIME"
+  fi
+}
+
+
 # Git add -A, git commit -m "message"; git push -u origin master
 ggg() {
   if [[ $# -eq 0 ]]; then
@@ -298,29 +315,44 @@ ggg() {
 }
 
 
-# Git add -A, git commit -m "message"
-gg() {
-  if [[ $# -eq 0 ]]; then
-    TIME=$(date +"%a %d %b %g at %H:%M")
-    git pull
-    git add -A
-    git commit -m "Comment: update on $TIME"
-  elif [[ $# -eq 1 ]]; then
-    TIME=$(date +"%a %d %b %g at %H:%M")
-    git pull
-    git add -A
-    git commit -m "Comment: $1 on $TIME"
-  fi
+# Prints the output of git status for every project of mine
+gsa() {
+  original_dir="$PWD"
+
+  [[ $# -eq 0 ]] && path="$HOME/progetti" && cd $path
+  [[ $# -eq 1 ]] && path="$1" && cd $path
+
+  for i in $(ls); do cd $i; echo -e "\n\n==> $i"; git status; cd ..; done; echo; cd $original_dir
 }
 
 
 # git pull everywhere
 gpuller() {
   original_dir="$PWD"
+
   [[ $# -eq 1 ]] && path="$1" && cd $path
   [[ $# -eq 0 ]] && path="${HOME}/progetti" && cd $path
 
   for i in $(ls); do cd $i; echo -e "\n==> $i"; git pull; cd ..; done; echo; cd $original_dir
+}
+
+
+# Set the git remote repository url to use with SSH, can't do it in a better way because I use both GitHub and GitLab (free private repos hehehe)
+git-remote-setter() {
+  original_dir="$PWD"
+  cd ${HOME}/progetti/dotfiles
+  git remote set-url origin git@github.com:matteoguarda/dotfiles.git
+  cd ${HOME}/progetti/termux-ct
+  git remote set-url origin git@github.com:matteoguarda/termux-ct.git
+  cd ${HOME}/progetti/void-packages
+  git remote set-url origin git@github.com:matteoguarda/void-packages.git
+  cd ${HOME}/progetti/youtube-dl-batchfiles
+  git remote set-url origin git@github.com:matteoguarda/youtube-dl-batchfiles.git
+  cd ${HOME}/progetti/wallpapers
+  git remote set-url origin git@gitlab.com:matteoguarda/wallpapers.git
+  cd ${HOME}/progetti/srcsbak
+  git remote set-url origin git@gitlab.com:matteoguarda/srcsbak.git
+  echo "==> Done!"
 }
 
 
@@ -387,25 +419,6 @@ color-test() {
     echo;
   done
   echo
-}
-
-
-# Set the git remote repository url to use with SSH, can't do it in a better way because I use both GitHub and GitLab (free private repos hehehe)
-git-remote-setter() {
-  original_dir="$PWD"
-  cd ${HOME}/progetti/dotfiles
-  git remote set-url origin git@github.com:matteoguarda/dotfiles.git
-  cd ${HOME}/progetti/termux-ct
-  git remote set-url origin git@github.com:matteoguarda/termux-ct.git
-  cd ${HOME}/progetti/void-packages
-  git remote set-url origin git@github.com:matteoguarda/void-packages.git
-  cd ${HOME}/progetti/youtube-dl-batchfiles
-  git remote set-url origin git@github.com:matteoguarda/youtube-dl-batchfiles.git
-  cd ${HOME}/progetti/wallpapers
-  git remote set-url origin git@gitlab.com:matteoguarda/wallpapers.git
-  cd ${HOME}/progetti/srcsbak
-  git remote set-url origin git@gitlab.com:matteoguarda/srcsbak.git
-  echo "==> Done!"
 }
 
 
