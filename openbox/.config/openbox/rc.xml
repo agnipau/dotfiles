@@ -395,6 +395,14 @@
       <height>96%</height>
     </action>
   </keybind>
+  <keybind key="W-C-g">
+    <action name="MoveResizeTo">
+      <x>center</x>
+      <y>center</y>
+      <width>95%</width>
+      <height>96%</height>
+    </action>
+  </keybind>
 
   <!-- Keybindings for running applications -->
   <keybind key="W-c">

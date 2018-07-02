@@ -287,7 +287,7 @@ mkcd() {
 
 
 # Git add -A, git commit -m "message"
-gg() {
+ggo() {
   if [[ $# -eq 0 ]]; then
     TIME=$(date +"%a %d %b %g at %H:%M")
     git pull
