@@ -2,7 +2,6 @@
 #
 # Start a screencast using ffmpeg (can be started from rofi, no input required).
 
-
 notify-send "Screencast" "Starting to record..."
 
 ffmpeg -f x11grab \

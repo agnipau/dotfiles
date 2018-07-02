@@ -2,7 +2,6 @@
 #
 # dunst config file
 
-
 [global]
   # Display
   monitor = 0
@@ -50,10 +49,8 @@
   # Legacy
   force_xinerama = false
 
-
 [experimental]
   per_monitor_dpi = false
-
 
 [shortcuts]
   close = ctrl+space
@@ -61,20 +58,17 @@
   history = ctrl+grave
   context = ctrl+shift+period
 
-
 [urgency_low]
   background = "#222222"
   foreground = "#888888"
   timeout = 10
   #icon = /path/to/icon
 
-
 [urgency_normal]
   background = "#285577"
   foreground = "#ffffff"
   timeout = 10
   #icon = /path/to/icon
-
 
 [urgency_critical]
   background = "#900000"

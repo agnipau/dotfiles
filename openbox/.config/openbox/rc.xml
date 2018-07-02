@@ -219,44 +219,8 @@
     </action>
   </keybind>
 
-  <!-- Keybindings for fast window switching -->
+  <!-- Keybindings for window switching -->
   <keybind key="W-Tab">
-    <action name="NextWindow">
-      <dialog>none</dialog>
-      <bar>no</bar>
-      <raise>yes</raise>
-      <allDesktops>no</allDesktops>
-      <panels>no</panels>
-      <desktop>no</desktop>
-      <linear>yes</linear>
-      <interactive>no</interactive>
-      <finalactions>
-	<action name="Focus"/>
-        <action name="Raise"/>
-        <action name="Unshade"/>
-      </finalactions>
-    </action>
-  </keybind>
-  <keybind key="W-S-Tab">
-    <action name="PreviousWindow">
-      <dialog>none</dialog>
-      <bar>no</bar>
-      <raise>yes</raise>
-      <allDesktops>no</allDesktops>
-      <panels>no</panels>
-      <desktop>no</desktop>
-      <linear>yes</linear>
-      <interactive>no</interactive>
-      <finalactions>
-	<action name="Focus"/>
-        <action name="Raise"/>
-        <action name="Unshade"/>
-      </finalactions>
-    </action>
-  </keybind>
-
-  <!-- Keybindings for more accurate window switching -->
-  <keybind key="S-Tab">
     <action name="NextWindow">
       <dialog>none</dialog>
       <bar>yes</bar>
@@ -273,36 +237,19 @@
       </finalactions>
     </action>
   </keybind>
-
-  <!-- Keybindings for window switching without raising them -->
-  <keybind key="A-Tab">
-    <action name="NextWindow">
-      <dialog>none</dialog>
-      <bar>no</bar>
-      <raise>no</raise>
-      <allDesktops>no</allDesktops>
-      <panels>no</panels>
-      <desktop>no</desktop>
-      <linear>yes</linear>
-      <interactive>no</interactive>
-      <finalactions>
-	<action name="Focus"/>
-        <action name="Unshade"/>
-      </finalactions>
-    </action>
-  </keybind>
-  <keybind key="A-S-Tab">
+  <keybind key="W-S-Tab">
     <action name="PreviousWindow">
       <dialog>none</dialog>
-      <bar>no</bar>
+      <bar>yes</bar>
       <raise>no</raise>
       <allDesktops>no</allDesktops>
       <panels>no</panels>
       <desktop>no</desktop>
       <linear>yes</linear>
-      <interactive>no</interactive>
+      <interactive>yes</interactive>
       <finalactions>
 	<action name="Focus"/>
+        <action name="Raise"/>
         <action name="Unshade"/>
       </finalactions>
     </action>
@@ -408,7 +355,9 @@
     </action>
   </keybind>
   <keybind key="W-s">
-    <action name="ToggleShade"/>
+    <action name="Execute">
+      <command>slock</command>
+    </action>
   </keybind>
   <keybind key="C-x">
     <action name="ToggleMaximize">
@@ -498,11 +447,6 @@
       <command>~/bin/norec</command>
     </action>
   </keybind>
-  <keybind key="W-S-s">
-    <action name="Execute">
-      <command>slock</command>
-    </action>
-  </keybind>
   <keybind key="W-Return">
     <action name="Execute">
       <command>st</command>
@@ -565,12 +509,15 @@
   <context name="Client">
     <mousebind button="Left" action="Press">
       <action name="Focus"/>
+      <action name="Raise"/>
     </mousebind>
     <mousebind button="Middle" action="Press">
       <action name="Focus"/>
+      <action name="Raise"/>
     </mousebind>
     <mousebind button="Right" action="Press">
       <action name="Focus"/>
+      <action name="Raise"/>
     </mousebind>
   </context>
 
@@ -600,6 +547,10 @@
 
   <!-- Titlebar -->
   <context name="Titlebar">
+    <mousebind button="Left" action="Click">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
     <mousebind button="Left" action="Drag">
       <action name="Focus"/>
       <action name="Raise"/>
@@ -770,7 +721,7 @@
     </position>
     <size>
       <width>95%</width>
-      <height>87%</height>
+      <height>88%</height>
     </size>
   </application>
   <application class="feh">

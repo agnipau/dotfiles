@@ -2,7 +2,6 @@
 #
 # Stop the screencast started by rec script.
 
-
 killall -9 ffmpeg
 
 notify-send "Screencast" "Finished to record..."

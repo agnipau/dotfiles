@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-
 wal -c -q --backend wal -i $(cat ${HOME}/.cache/wal/wal) -o ${HOME}/bin/wal-set

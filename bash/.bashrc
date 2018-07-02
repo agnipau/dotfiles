@@ -26,6 +26,7 @@ export RTV_BROWSER='/usr/bin/w3m'
 export LANG='it_IT.UTF-8'
 export XDG_CONFIG_HOME="${HOME}/.config"
 export SSH_KEY_PATH="${HOME}/.ssh/id_rsa"
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 
 
 # Better tab completion and other bindings
@@ -39,8 +40,7 @@ bind 'set completion-query-items 0'
 bind 'set colored-stats on'
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
-bind '"\e\C-l": "\C-e | less\C-m"'
-bind '"\e\C-b": "\C-e | bat\C-m"'
+bind '"\e\C-l": "\C-p\C-e | less\C-m"'
 bind '"\e\e": "\C-asudo \C-e"'
 
 
@@ -128,8 +128,9 @@ alias ls='ls --group-directories-first --color=auto'
 alias l='ls'
 alias l.='ls -A | egrep '^\.''
 alias la='ls -Alh'
-alias du='du -h'
 alias df='df -h'
+alias duu='du -h .'
+alias dua='du -h *'
 
 
 # Fix obvious typo's
@@ -186,6 +187,7 @@ alias obapp='obxprop | grep ^_OB_APP_'
 alias app='xprop | grep ^WM_'
 alias nodebug='notify-send "Debug" "Debug message"'
 alias cnodebug='notify-send -h string:fgcolor:${color1} "Debug" "Debug message"'
+alias down='curl -sLO'
 
 
 # Add colors to man pages
@@ -319,7 +321,7 @@ ggg() {
 gsa() {
   original_dir="$PWD"
 
-  [[ $# -eq 0 ]] && path="$HOME/progetti" && cd $path
+  [[ $# -eq 0 ]] && path="${HOME}/progetti" && cd $path
   [[ $# -eq 1 ]] && path="$1" && cd $path
 
   for i in $(ls); do cd $i; echo -e "\n\n==> $i"; git status; cd ..; done; echo; cd $original_dir
@@ -434,5 +436,9 @@ xbps-clean() {
 #[[ -z "$TMUX" ]] && exec tmux
 
 
-# Source FZF
+# Source fzf
 [[ -f "${HOME}/.fzf.bash" ]] && . ${HOME}/.fzf.bash
+
+
+# Source icons-in-terminal
+[[ -f "${HOME}/.local/share/icons-in-terminal/icons_bash.sh" ]] && . ${HOME}/.local/share/icons-in-terminal/icons_bash.sh

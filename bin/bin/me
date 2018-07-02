@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 #
-# Advanced script for calculating the average of given numbers.
+# Script for calculating the average of given numbers written as much complicated as possible XD.
 
 
-rm -rf .me
-echo -e "\n==> Enter the numbers you want the average of and space them with blank spaces:"
+rm -rf .me echo -e "\n==> Enter the numbers you want the average of and space them with blank spaces:"
 read -p "==> " known_numbers
 how_many_numbers_ive_summed=$(echo $known_numbers | wc -w)
 

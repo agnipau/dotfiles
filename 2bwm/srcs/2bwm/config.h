@@ -61,7 +61,12 @@ static const uint8_t borders[] = {
 #define LOOK_INTO "WM_NAME"
 static const char *ignore_names[] = {"bar",
   "xclock",
+  "feh",
+  "mpv",
+  "TelegramDesktop",
   "Chromium",
+  "Viewnior",
+  "Lxappearance",
 };
 
 
@@ -70,9 +75,12 @@ static const char *menucmd[]       = {"", NULL};
 static const char *screenshot[]    = {"/home/matte/bin/screenshot", NULL};
 static const char *rec[]           = {"/home/matte/bin/rec", NULL};
 static const char *norec[]         = {"/home/matte/bin/norec", NULL};
-static const char *rofi[]          = {"/home/matte/bin/2bwm-programs-launcher", "-rofi", NULL};
-static const char *std[]           = {"/home/matte/bin/2bwm-programs-launcher", "-std", NULL};
-static const char *stl[]           = {"/home/matte/bin/2bwm-programs-launcher", "-stl", NULL};
+static const char *rofir[]          = {"/home/matte/bin/2bwm-programs-launcher", "-rofir", NULL};
+static const char *rofiw[]          = {"/home/matte/bin/2bwm-programs-launcher", "-rofiw", NULL};
+static const char *astd[]           = {"/home/matte/bin/2bwm-programs-launcher", "-astd", NULL};
+static const char *astl[]           = {"/home/matte/bin/2bwm-programs-launcher", "-astl", NULL};
+static const char *cstd[]           = {"/home/matte/bin/current-wal-dark", NULL};
+static const char *cstl[]           = {"/home/matte/bin/current-wal-light", NULL};
 static const char *draw[]          = {"/home/matte/bin/draw", NULL};
 static const char *st[]            = {"st", NULL};
 static const char *stfullscreen[]  = {"/home/matte/bin/2bwm-programs-launcher", "-stfullscreen", NULL};
@@ -223,9 +231,12 @@ static key keys[] = {
     {  MOD,               XK_p,          start,              {.com = screenshot}},
     {  MOD,               XK_w,          start,              {.com = rec}},
     {  MOD |SHIFT,        XK_w,          start,              {.com = norec}},
-    {  MOD,               XK_d,          start,              {.com = rofi}},
-    {  MOD,               XK_i,          start,              {.com = std}},
-    {  MOD |SHIFT,        XK_i,          start,              {.com = stl}},
+    {  MOD,               XK_d,          start,              {.com = rofir}},
+    {  MOD |SHIFT,        XK_d,          start,              {.com = rofiw}},
+    {  MOD,               XK_i,          start,              {.com = astd}},
+    {  MOD |SHIFT,        XK_i,          start,              {.com = astl}},
+    {  MOD,               XK_o,          start,              {.com = cstd}},
+    {  MOD |SHIFT,        XK_o,          start,              {.com = cstl}},
     {  MOD,               XK_z,          start,              {.com = draw}},
     {  MOD,               XK_Return,     start,              {.com = st}},
     {  MOD |SHIFT,        XK_Return,     start,              {.com = stfullscreen}},
