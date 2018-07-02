@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+#
+# Script executed by pywal.
+
+
+. "$HOME/.cache/wal/colors.sh"
+
+
+reload_dunst() {
+  pkill dunst
+  dunst \
+    -lb "$color0" \
+    -nb "$color0" \
+    -cb "$color1" \
+    -lf "$color7" \
+    -nf "$color7" \
+    -cf "$color0" \
+    -lfr "$color0" \
+    -nfr "$color0" \
+    -cfr "$color1" &
+}
+
+
+reload_zathura() {
+  echo "set default-bg \"$color0\"" > $HOME/.cache/wal/colors-zathura
+  echo "set default-fg \"$color7\"" >> $HOME/.cache/wal/colors-zathura
+  echo "set completion-bg \"$color0\"" >> $HOME/.cache/wal/colors-zathura
+  echo "set completion-fg \"$color7\"" >> $HOME/.cache/wal/colors-zathura
+  echo "set completion-highlight-bg \"$color1\"" >> $HOME/.cache/wal/colors-zathura
+  echo "set completion-highlight-fg \"$color0\"" >> $HOME/.cache/wal/colors-zathura
+  echo "set statusbar-bg \"$color1\"" >> $HOME/.cache/wal/colors-zathura
+  echo "set statusbar-fg \"$color0\"" >> $HOME/.cache/wal/colors-zathura
+  echo "set inputbar-bg \"$color0\"" >> $HOME/.cache/wal/colors-zathura
+  echo "set inputbar-fg \"$color7\"" >> $HOME/.cache/wal/colors-zathura
+}
+
+
+reload_openbox() {
+  sed -i"" --follow-symlinks \
+      -e "s/bg.color: #.*/bg.color: ${color0:-#000000}/" \
+      -e "s/text.color: #.*/text.color: ${color7:-#FFFFFF}/" \
+      -e "s/image.color: #.*/image.color: ${color7:-#FFFFFF}/" \
+      "${HOME}/.themes/agnipau/openbox-3/themerc"
+  openbox --reconfigure
+}
+
+
+reload_2bwm() {
+  echo "static const char *colors[] = {" > $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "  \"${color0:-#000000}\", // focuscol" >> $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "  \"${color0:-#000000}\", // unfocuscol" >> $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "  \"${color3:-#00FF00}\", // fixedcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "  \"${color1:-#FF0000}\", // unkilcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "  \"${color4:-#FFFF00}\", // fixedunkilcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "  \"${color0:-#000000}\", // outerbordercol" >> $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "  \"#000000\"  // emptycol" >> $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "};" >> $HOME/.cache/wal/colors-wal-2bwm.h
+}
+
+
+main() {
+  reload_dunst &
+  reload_zathura &
+  reload_openbox &
+  reload_2bwm &
+  xrdb -load ~/.Xresources
+}
+main

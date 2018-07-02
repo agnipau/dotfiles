@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+#
+# Bulk renamer script.
+
+
+[[ $# -eq 0 ]] && echo -e "==> Need the dir to rename path as \$1!" && exit 1
+[[ $# -eq 1 ]] && path="$1" && modality='brutal'
+[[ $# -eq 2 ]] && path="$1" && prefix="$2" && modality='brutal'
+[[ $# -eq 3 ]] && path="$1" && prefix="$2" && modality="$3"
+
+
+if [[ "$modality" == "brutal" ]]; then
+  cd "$path"
+  rm -rf .rinbak
+  rm -rf .rintmp
+  mkdir -p .rintmp
+  c=0
+  for i in $(ls); do
+    c=$(( $c+1 ))
+    if [ ! -z $(echo $i | grep -F .) ]; then
+      cp -r $i .rintmp/${prefix}${c}.$(echo $i | rev | cut -d. -f1 | rev) && rm -rf $i
+    else
+      cp -r $i .rintmp/${prefix}${c} && rm -rf $i
+    fi
+  done
+  mv .rintmp/* .
+  rm -rf .rintmp
+elif [[ "$modality" == "cauto" ]]; then
+  cd "$path"
+  rm -rf .rinbak
+  mkdir -p .rinbak
+  rm -rf .rintmp
+  mkdir -p .rintmp
+  cp -r * .rinbak
+  c=0
+  for i in $(ls); do
+    c=$(( $c+1 ))
+    if [ ! -z $(echo $i | grep -F .) ]; then
+      cp -r $i .rintmp/${prefix}${c}.$(echo $i | rev | cut -d. -f1 | rev) && rm -rf $i
+    else
+      cp -r $i .rintmp/${prefix}${c} && rm -rf $i
+    fi
+  done
+  mv .rintmp/* .
+  rm -rf .rintmp
+fi

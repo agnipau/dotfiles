@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# I need this script for launching some programs in 2bwm.
+
+
+[[ "$1" == "-rofi" ]] && rofi -show run
+[[ "$1" == "-std" ]] && wal -q --iterative -i ${HOME}/progetti/wallpapers -o ${HOME}/bin/wal-set
+[[ "$1" == "-stl" ]] && wal -q --iterative -i ${HOME}/progetti/wallpapers -o ${HOME}/bin/wal-set -l
+[[ "$1" == "-stfullscreen" ]] && st -g "1366x768+0+0"

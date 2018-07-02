@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+#
+# Advanced script for calculating the average of given numbers.
+
+
+rm -rf .me
+echo -e "\n==> Enter the numbers you want the average of and space them with blank spaces:"
+read -p "==> " known_numbers
+how_many_numbers_ive_summed=$(echo $known_numbers | wc -w)
+
+
+c=1
+while [ $c -le $how_many_numbers_ive_summed ]; do
+  echo $known_numbers | cut -d" " -f$c >> .me
+  c=$(( $c+1 ))
+done
+
+
+average=$(echo "$(paste -s -d+ .me | bc -l) / $how_many_numbers_ive_summed" | bc -l | cut -d. -f1).$(echo "$(paste -s -d+ .me | bc -l) / $how_many_numbers_ive_summed" | bc -l | cut -d. -f2 | cut -c1-2)
+sum_of_the_known_numbers=$(echo "$average * $how_many_numbers_ive_summed" | bc -l)
+echo -e "\n==> Average of these numbers is: $average"
+
+
+echo -e "\n==> What avarege do you want? [q to quit]"
+read -p "==> " wanted_average
+[ "$wanted_average" = "q" ] && echo && exit 0
+[ "$wanted_average" = "e" ] && echo && exit 0
+# Just some basic maths:
+# (sum_of_the_known_numbers+x)/(how_many_numbers_ive_summed+1)=(wanted_average); x=(wanted_average)*(how_many_numbers_ive_summed+1)-(sum_of_the_known_numbers)
+x=$(echo "$wanted_average * $(( $how_many_numbers_ive_summed+1 )) - $sum_of_the_known_numbers" | bc -l)
+echo -e "\n==> You need $x to obtain $wanted_average as average\n"
+
+
+if [ $(echo "$x > 10" | bc -l) -eq 1 ]; then
+  echo "==> How many numbers do you want to get $wanted_average as average? [q to quit] [school for school grades useful mod]"
+  read -p "==> " how_many_numbers_to_get_wanted_average
+  [ "$how_many_numbers_to_get_wanted_average" = "q" ] && echo && exit 0
+  [ "$how_many_numbers_to_get_wanted_average" = "e" ] && echo && exit 0
+  if [ "$how_many_numbers_to_get_wanted_average" = "school" ]; then
+    how_many_numbers_to_get_wanted_average=0
+    while [ $(echo "$x > 10" | bc -l) -eq 1 ]; do
+      how_many_numbers_to_get_wanted_average=$(( $how_many_numbers_to_get_wanted_average + 1 ))
+      x=$(echo "$wanted_average * $(( $how_many_numbers_ive_summed + $how_many_numbers_to_get_wanted_average )) - $(echo "$sum_of_the_known_numbers + $(echo "10 * $(( $how_many_numbers_to_get_wanted_average - 1 ))" | bc -l )" | bc -l)" | bc -l)
+    done
+    echo -e "\n==> You need $(( $how_many_numbers_to_get_wanted_average - 1 )) times 10 and $x to obtain $wanted_average as average\n"
+  elif [ $how_many_numbers_to_get_wanted_average -eq 1 ]; then
+    echo -e "\n==> You need $x to obtain $wanted_average as average\n"
+  elif [ $how_many_numbers_to_get_wanted_average -gt 1 ]; then
+    x=$(echo "$wanted_average * $(( $how_many_numbers_ive_summed + $how_many_numbers_to_get_wanted_average )) - $(echo "$sum_of_the_known_numbers + $(echo "10 * $(( $how_many_numbers_to_get_wanted_average - 1 ))" | bc -l )" | bc -l)" | bc -l)
+    echo -e "\n==> You need $(( $how_many_numbers_to_get_wanted_average - 1 )) times 10 and $x to obtain $wanted_average as average\n"
+  fi
+fi
+
+
+rm -rf .me

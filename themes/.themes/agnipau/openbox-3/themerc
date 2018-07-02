@@ -1,0 +1,23 @@
+# vim:ft=sh
+#
+# agnipau theme for openbox
+
+
+# Titlebar colors
+window.*.title.bg.color: #fdf0fa
+window.*.label.text.color: #05030D
+window.*.button.*.image.color: #05030D
+
+
+# Titlebar
+padding.width: 15
+padding.height: 15
+window.*.title.bg: Solid Flat
+window.*.*.bg: Parentrelative
+window.label.text.justify: Center
+
+
+# Borders
+border.width: 0
+window.client.padding.width: 0
+window.handle.width: 0

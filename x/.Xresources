@@ -1,0 +1,40 @@
+!
+! .Xresources
+!
+
+
+! Fonts
+*.font: xft:Iosevka Term:size=12
+*.boldFont: xft:Iosevka Term:size=12
+*.italicFont: xft:Iosevka Term:size=12
+*.boldItalicFont: xft:Iosevka Term:size=12
+
+
+! Xft settings
+!Xft.dpi: 110
+Xft.antialias: true
+Xft.hinting: true
+Xft.autohint: false
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+
+
+! Rofi
+rofi.theme: .cache/wal/colors-rofi-dark.rasi
+rofi.font: Iosevka 18
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+rofi.fullscreen: false
+rofi.location: 1
+rofi.fake-transparency: true
+rofi.columns: 1
+rofi.lines: 6
+rofi.yoffset: 45
+rofi.xoffset: 45
+rofi.width: 300
+rofi.padding: 32
+
+
+! 2bwm
+twobwm.enable_compton: true

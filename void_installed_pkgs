@@ -1,0 +1,106 @@
+Adapta ImageMagick LuaJIT MesaLib-devel SDL2 aalib acl acpid alsa-lib
+alsa-utils at-spi2-atk at-spi2-atk-devel at-spi2-core at-spi2-core-devel
+atk atk-devel attr autoconf automake avahi-glib-libs avahi-libs
+b43-fwcutter babl base-files base-system bash bash-completion bc
+binutils bspwm btrfs-progs bzip2 bzip2-devel ca-certificates cairo
+cairo-devel cargo cava celt chromium cmake cmus colord-devel compton-git
+coreutils cpio cryptsetup cups-devel curl dash dbus dbus-devel
+dbus-glib dbus-libs dbus-x11 dejavu-fonts-ttf desktop-file-utils
+device-mapper dhcpcd diffutils dmraid dnssec-anchors dosfstools dracut
+dunst e2fsprogs e2fsprogs-libs efibootmgr elfutils-devel enchant
+encodings ethtool eudev eudev-libudev eudev-libudev-devel exiv2 expat
+expat-devel f2fs-tools fd feh ffmpeg file findutils font-adobe-100dpi
+font-adobe-75dpi font-adobe-utopia-100dpi font-adobe-utopia-75dpi
+font-adobe-utopia-type1 font-alias font-bh-100dpi font-bh-75dpi
+font-bh-lucidatypewriter-100dpi font-bh-lucidatypewriter-75dpi
+font-bh-ttf font-bh-type1 font-bitstream-100dpi font-bitstream-75dpi
+font-bitstream-type1 font-cursor-misc font-daewoo-misc font-dec-misc
+font-ibm-type1 font-isas-misc font-jis-misc font-misc-misc font-mutt-misc
+font-util fontconfig fontconfig-devel freetype freetype-devel fribidi
+fribidi-devel fuse gawk gc gcc gcr gd gdbm gdk-pixbuf gdk-pixbuf-devel
+gdk-pixbuf-xlib gegl ghostscript giblib giflib gimp gir-freedesktop
+girara git glew glib glib-networking glibc glibc-devel glibc-locales gmp
+gnome-online-accounts gnupg2 gnutls gpgme graphite graphite-devel grep
+grub grub-i386-efi grub-x86_64-efi gsettings-desktop-schemas gsfonts
+gst-plugins-base1 gstreamer1 gtk+ gtk+3 gtk+3-devel gtk-engine-murrine
+gtk-update-icon-cache gvfs gzip harfbuzz harfbuzz-devel hicolor-icon-theme
+hsetroot http-parser hwids hyphen iana-etc iceauth icu icu-devel
+icu-libs ilmbase imlib2 iniparser iproute2 iputils ipw2100-firmware
+ipw2200-firmware iso-codes iw jansson json-c json-glib jsoncpp kbd
+kbd-data kernel-libc-headers kmod lame lcms2 lcms2-devel less libEGL
+libGL libGLES libICE libOSMesa libSM libX11 libX11-devel libXScrnSaver
+libXau libXau-devel libXaw libXcomposite libXcomposite-devel libXcursor
+libXcursor-devel libXdamage libXdamage-devel libXdmcp libXdmcp-devel
+libXext libXext-devel libXfixes libXfixes-devel libXfont2 libXfontcache
+libXft libXft-devel libXi libXi-devel libXinerama libXinerama-devel
+libXmu libXpm libXrandr libXrandr-devel libXrender libXrender-devel libXt
+libXtst libXv libXvMC libXxf86misc libXxf86vm libXxf86vm-devel libaio
+libarchive libass libassuan libasyncns libatasmart libatomic libatomic_ops
+libavcodec libavdevice libavfilter libavformat libavresample libavutil
+libblkid libblkid-devel libblockdev libbluray libbs2b libbytesize libcap
+libcap-ng libcap-progs libcddb libcdio libcdio-paranoia libcdparanoia
+libcolord libconfig libcroco libcrypto43 libcryptsetup libcups libcurl
+libdatrie libdatrie-devel libdaxctl libdb libdjvulibre libdmx libdrm
+libdrm-devel libdvdnav libdvdread libedit libefivar libelf libepoxy
+libepoxy-devel libevdev libevent libexif libfdisk libffi libffi-devel
+libfftw libflac libfm libfm-extra libfm-gtk libfontenc libgbm libgcc
+libgcc-devel libgcrypt libgdata libgexiv2 libgimp libgirepository
+libgit2 libglapi libglib-devel libgomp libgpg-error libgs libgudev
+libgusb libharfbuzz libhunspell libid3tag libidn libijs libinput
+libjack libjasper libjbig2dec libjpeg-turbo libjpeg-turbo-devel
+libjpeg-turbo-tools libkeyutils libkmod libksba libldap libldns
+libllvm6.0 libltdl liblzma liblzma-devel libmad libmagic libmagick
+libmcpp libmng libmnl libmodplug libmount libmount-devel libmpdclient
+libmupdf libmypaint libndctl libnfs libnl3 libnotify liboauth libogg
+libopenal libopenbox libopenexr libopenjpeg libopenjpeg-devel libopenjpeg2
+libopenjpeg2-devel libpaper libparted libpciaccess libpciaccess-devel
+libpcre libpcre2 libpcrecpp libpng libpng-devel libpostproc libproxy
+libpulseaudio libressl librsvg librtmp librubberband libsamplerate
+libsasl libsecret libsigsegv libsmartcols libsndfile libsndio libsoup
+libsoup-gnome libsoxr libspeex libssh2 libssl45 libssp libssp-devel
+libstdc++ libstdc++-devel libswresample libswscale libtasn1 libtdb
+libtermkey libthai libthai-devel libtheora libtls17 libunistring
+libusb libuuid libuuid-devel libuv libva libvamp-plugin-sdk libvdpau
+libvidstab libvisual libvorbis libvpx libvterm libwacom libwayland-egl
+libwebp libwmf libxatracker libxbps libxcb libxcb-devel libxdg-basedir
+libxkbcommon libxkbcommon-devel libxkbcommon-x11 libxkbfile libxml2
+libxml2-devel libxshmfence libxshmfence-devel libxslt libyaml libzstd
+linux linux-firmware-amd linux-firmware-intel linux-firmware-network
+linux-firmware-nvidia linux4.16 lua52 lvm2 lxappearance lzo m4 make
+man-pages mcpp mdadm mdocml menu-cache mesa-ati-dri mesa-intel-dri
+mesa-nouveau-dri mesa-vmwgfx-dri minizip mit-krb5-libs mkfontdir
+mkfontscale mozjs52 mpfr mpv msgpack mtdev mypaint-brushes ncurses
+ncurses-base ncurses-libs neofetch neovim nettle nghttp2 npth nspr
+nss ntfs-3g nvi ocl-icd oclock openbox openjpeg openjpeg2 openssh opus
+orc os-prober p11-kit pam pam-base pam-libs pango pango-devel pango-xft
+papirus-icon-theme patch pciutils pcmanfm pcre-devel perl perl-Authen-SASL
+perl-Convert-BinHex perl-IO-Socket-SSL perl-IO-stringy perl-MIME-tools
+perl-MailTools perl-Module-Build perl-Net-SMTP-SSL perl-Net-SSLeay
+perl-Stow perl-TimeDate perl-URI pinentry pixman pixman-devel pkg-config
+polkit polybar poppler poppler-data poppler-glib popt procps-ng psmisc pv
+python python-pip python-setuptools python3 python3-cairo python3-docopt
+python3-gobject python3-keyutils python3-setuptools python3-yaml pywal
+qiv qt5 qt5-imageformats qtchooser re2 readline rest rhash rofi ruby
+run-parts runit runit-void rust rxvt-unicode rxvt-unicode-terminfo
+scrot sed sessreg setxkbmap shadow shared-mime-info slop smproxy snappy
+speexdsp sqlite startup-notification stow sudo sxhkd tar telegram-desktop
+telepathy-glib texlive2018-bin thin-provisioning-tools tiff tiff-devel
+tmux traceroute transset tslib tzdata udiskie udisks2 unibilium unzip
+usbutils util-linux v4l-utils viewnior void-artwork volume_key w3m
+w3m-img wayland wayland-devel wayland-protocols webkit2gtk wget which
+wifi-firmware wireless_tools wpa_supplicant x11perf x264 x265 xauth
+xbacklight xbps xbps-triggers xcalc xcb-proto xcb-util xcb-util-cursor
+xcb-util-cursor-devel xcb-util-devel xcb-util-image xcb-util-image-devel
+xcb-util-keysyms xcb-util-keysyms-devel xcb-util-renderutil
+xcb-util-renderutil-devel xcb-util-wm xcb-util-wm-devel xcb-util-xrm
+xcb-util-xrm-devel xclip xclipboard xclock xcmsdb xconsole xcursorgen
+xdg-user-dirs xdg-utils xdpyinfo xev xeyes xf86-input-evdev
+xf86-input-libinput xf86-input-synaptics xf86-input-vmmouse
+xf86-input-wacom xf86-video-amdgpu xf86-video-ati xf86-video-dummy
+xf86-video-intel xf86-video-mga xf86-video-nouveau xf86-video-vesa
+xf86-video-vmware xfontsel xfsprogs xgamma xhost xinit xinput xkbcomp
+xkbevd xkbutils xkeyboard-config xkill xload xlogo xlsatoms xlsclients
+xmessage xmodmap xorg xorg-apps xorg-fonts xorg-input-drivers xorg-server
+xorg-video-drivers xorgproto xpr xprop xrandr xrdb xrefresh xset xsetroot
+xtools xtrans xvidcore xvinfo xwd xwininfo xwud xz youtube-dl zathura
+zathura-pdf-mupdf zd1211-firmware zip zlib zlib-devel zziplib

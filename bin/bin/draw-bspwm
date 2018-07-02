@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# Spawn terminals interactively by drawing them.
+#
+# Requires slop and a terminal emulator that can be launched with specified dimensions (geometry parameter) (I use st, but URxvt works too).
+
+
+read -r X Y W H < <(slop -f "%x %y %w %h" -b 4 -t 0 -q)
+
+
+# To get this values you need to make your terminal fullscreen and then divide your screen width by $(tput cols) or $COLUMNS and your screen height by $(tput lines) or $LINES.
+# No floats are accepted, you need to experiment by changing your terminal borders and then again dividing your screen width by your new $(tput cols) or $COLUMNS output and the same with your screen height.
+((W /= 8))  # best for 1366x768 and 25px st border
+((H /= 22)) # best for 1366x768 and 25px st border
+g=${W}x${H}+${X}+${Y}
+
+
+# I use bspwm, so I need this one shot rule to launch st in floating mode, otherwise the script wouldn't work in tiling mode.
+# PS: st -n hasdof sets hasdof as instance name of st, so the rule is more accurate, you can also use --add \* or --add st-256color.
+bspc rule --add st-256color:hasdof --one-shot state=floating
+st -n hasdof -g $g
+#bspc rule --add URxvt:hasdof --one-shot state=floating
+#urxvt -name hasdof -geometry $g
