@@ -42,11 +42,14 @@ magenta="$(tput setaf 5)"
 cyan="$(tput setaf 6)"
 white="$(tput setaf 7)"
 reset="$(tput sgr0)"
-lc="${reset}${bold}${green}"    # labels
-nc="${reset}${bold}${green}"    # user and hostname
-ic="${reset}${bold}${white}"    # info
-c0="${reset}${bold}${green}"    # first color
-c1="${reset}${green}"           # second color
+
+
+# You can change these lines
+lc="${reset}${bold}${red}"    # labels
+nc="${reset}${bold}${red}"    # user and hostname
+ic="${reset}"                 # info
+c0="${reset}${bold}${red}"    # first color
+c1="${reset}${red}"           # second color
 
 
 # Print the final output

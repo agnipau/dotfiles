@@ -12,7 +12,7 @@
 
 
 # Prompt
-PS1="\[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] "
+PS1="\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] "
 
 
 # Envars
@@ -124,10 +124,11 @@ alias clear_cinema='rm -rf ${HOME}/progetti/youtube-dl-batchfiles/downloaded/*'
 
 
 # Human readable / list aliases
-alias ls='ls --group-directories-first --color=auto'
+alias ls='/opt/coreutils/bin/ls --group-directories-first --color=auto'
 alias l='ls'
 alias l.='ls -A | egrep '^\.''
 alias la='ls -Alh'
+alias ls-home='ls ${HOME}/*'
 alias df='df -h'
 alias duu='du -h .'
 alias dua='du -h *'
