@@ -343,7 +343,7 @@ gpuller() {
 
 
 # git pull for every repo
-gpuller_all() {
+gpuller-all() {
   original_dir="$PWD"
 
   [[ $# -eq 1 ]] && path="$1" && cd $path
