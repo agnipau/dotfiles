@@ -57,6 +57,7 @@ alias data='date +"%A %d %B"'
 # Source editing and compiling
 alias envim='nvim ${HOME}/.config/nvim/init.vim'
 alias ebash='nvim ${HOME}/.bashrc'
+alias ewpa='sudo nvim /etc/wpa_supplicant/wpa_supplicant.conf'
 alias ebox='nvim ${HOME}/.config/openbox/rc.xml'
 alias ebspwm='nvim ${HOME}/.config/bspwm/bspwmrc'
 alias esxhkd='nvim ${HOME}/.config/sxhkd/sxhkdrc'
@@ -131,6 +132,7 @@ alias la='ls -Alh'
 alias ls-home='ls ${HOME}/*'
 alias df='df -h'
 alias duu='du -h .'
+alias dus='du -h'
 alias dua='du -h *'
 
 
@@ -329,8 +331,19 @@ gsa() {
 }
 
 
-# git pull everywhere
+# git pull for lightweight repos
 gpuller() {
+  original_dir="$PWD"
+
+  [[ $# -eq 1 ]] && path="$1" && cd $path
+  [[ $# -eq 0 ]] && path="${HOME}/progetti" && cd $path
+
+  for i in $(ls); do if [[ "$i" != "void-packages" ]]; then cd $i; echo -e "\n==> $i"; git pull; cd ..; fi; done; echo; cd $original_dir
+}
+
+
+# git pull for every repo
+gpuller_all() {
   original_dir="$PWD"
 
   [[ $# -eq 1 ]] && path="$1" && cd $path
@@ -343,6 +356,7 @@ gpuller() {
 # Set the git remote repository url to use with SSH, can't do it in a better way because I use both GitHub and GitLab (free private repos hehehe)
 git-remote-setter() {
   original_dir="$PWD"
+
   cd ${HOME}/progetti/dotfiles
   git remote set-url origin git@github.com:matteoguarda/dotfiles.git
   cd ${HOME}/progetti/termux-ct
@@ -355,7 +369,13 @@ git-remote-setter() {
   git remote set-url origin git@gitlab.com:matteoguarda/wallpapers.git
   cd ${HOME}/progetti/srcsbak
   git remote set-url origin git@gitlab.com:matteoguarda/srcsbak.git
+  cd ${HOME}/progetti/fonts
+  git remote set-url origin git@gitlab.com:matteoguarda/fonts.git
+  cd ${HOME}/progetti/musica
+  git remote set-url origin git@gitlab.com:matteoguarda/musica.git
+
   echo "==> Done!"
+  cd $original_dir
 }
 
 
@@ -391,18 +411,6 @@ sa() {
 }
 
 
-# Download songs from YouTube (with metadata)
-ydla() {
-  youtube-dl $1 \
-             --add-metadata --metadata-from-title "%(artist)s - %(title)s" \
-             --extract-audio --audio-format mp3 --audio-quality 0 --prefer-ffmpeg \
-             --youtube-skip-dash-manifest --ignore-errors --restrict-filenames \
-             --verbose $f
-
-  notify-send "YouTube" "Song downloaded!"
-}
-
-
 # This function echoes a bunch of color codes to the terminal to demonstrate what's available.
 # Each line is the color code of one forground color, out of 17 (default + 16 escapes), followed by a test use of that color on all nine background colors (default + 8 escapes).
 color-test() {
@@ -429,7 +437,24 @@ color-test() {
 xbps-clean() {
   dir_size=$(cd /var/cache/xbps && du -h | tail -n1 | cut -d. -f1)
   sudo rm -rf /var/cache/xbps/*
-  echo "==> Cleaned garbage succefully, for a total of $dir_size"
+  echo " -> Cleaned garbage succefully, for a total of $dir_size"
+}
+
+
+# Clean Telegram Desktop download dir
+telegram-clean() {
+  dir_size=$(cd ${HOME}/roba/Telegram\ Desktop && du -h | tail -n1 | cut -d. -f1)
+  rm -rf ${HOME}/roba/Telegram\ Desktop/*
+  echo "  -> Cleaned garbage succefully, for a total of $dir_size"
+}
+
+
+# Combines other clean functions
+all-clean() {
+  echo "==> Telegram:"
+  telegram-clean
+  echo "==> xbps cache:"
+  xbps-clean
 }
 
 

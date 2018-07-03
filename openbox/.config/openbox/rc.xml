@@ -354,11 +354,6 @@
     <direction>both</direction>
     </action>
   </keybind>
-  <keybind key="W-s">
-    <action name="Execute">
-      <command>slock</command>
-    </action>
-  </keybind>
   <keybind key="C-x">
     <action name="ToggleMaximize">
     <direction>vertical</direction>
@@ -413,6 +408,16 @@
   <keybind key="W-S-c">
     <action name="Execute">
       <command>wal -c -q --iterative --backend wal -i ~/progetti/wallpapers -o ~/bin/wal-set -l</command>
+    </action>
+  </keybind>
+  <keybind key="W-s">
+    <action name="Execute">
+      <command>~/bin/cmus-info</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-s">
+    <action name="Execute">
+      <command>slock</command>
     </action>
   </keybind>
   <keybind key="A-c">
@@ -499,9 +504,6 @@
     <mousebind button="W-Right" action="DoubleClick">
       <action name="Close"/>
     </mousebind>
-    <mousebind button="Middle" action="Click">
-      <action name="ToggleShade"/>
-    </mousebind>
     <mousebind button="W-Middle" action="Click">
       <action name="Focus"/>
       <action name="Raise"/>
@@ -566,6 +568,18 @@
     </mousebind>
     <mousebind button="Left" action="DoubleClick">
       <action name="ToggleMaximizeFull"/>
+    </mousebind>
+    <mousebind button="Middle" action="Click">
+      <action name="Focus"/>
+      <action name="Raise"/>
+      <action name="Unshade"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+	<y>center</y>
+      </action>
+    </mousebind>
+    <mousebind button="Right" action="Click">
+      <action name="ToggleShade"/>
     </mousebind>
     <mousebind button="Right" action="Drag">
       <action name="Focus"/>
@@ -723,6 +737,17 @@
   </application>
   <application class="TelegramDesktop">
     <desktop>3</desktop>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>95%</width>
+      <height>88%</height>
+    </size>
+  </application>
+  <application class="discord">
+    <desktop>4</desktop>
     <position force="yes">
       <x>center</x>
       <y>center</y>
