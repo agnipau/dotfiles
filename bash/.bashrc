@@ -26,7 +26,7 @@ export RTV_BROWSER='/usr/bin/w3m'
 export LANG='it_IT.UTF-8'
 export XDG_CONFIG_HOME="${HOME}/.config"
 export SSH_KEY_PATH="${HOME}/.ssh/id_rsa"
-export PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
+#export PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 
 
 # Better tab completion and other bindings
@@ -57,7 +57,6 @@ alias data='date +"%A %d %B"'
 # Source editing and compiling
 alias envim='nvim ${HOME}/.config/nvim/init.vim'
 alias ebash='nvim ${HOME}/.bashrc'
-alias ezsh='nvim ${HOME}/.zshrc'
 alias ebox='nvim ${HOME}/.config/openbox/rc.xml'
 alias ebspwm='nvim ${HOME}/.config/bspwm/bspwmrc'
 alias esxhkd='nvim ${HOME}/.config/sxhkd/sxhkdrc'
@@ -69,7 +68,6 @@ alias est='nvim ${HOME}/srcs/st/config.h'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
 alias i2bwm='cd ${HOME}/srcs/2bwm && sudo make clean install && cd -'
 alias ibash='. ${HOME}/.bashrc'
-alias izsh='. ${HOME}/.zshrc'
 
 
 # Inspired by zsh's cd ... thing

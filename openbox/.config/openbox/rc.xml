@@ -37,13 +37,13 @@
   <font place="ActiveWindow">
     <name>Iosevka</name>
     <size>12</size>
-    <weight>normal</weight>
+    <weight>bold</weight>
     <slant>normal</slant>
   </font>
   <font place="InactiveWindow">
     <name>Iosevka</name>
     <size>12</size>
-    <weight>normal</weight>
+    <weight>bold</weight>
     <slant>normal</slant>
   </font>
   <!--font place="MenuHeader">
