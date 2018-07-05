@@ -7,10 +7,6 @@
 [[ $- != *i* ]] && return
 
 
-# Source pywal colors
-. ${HOME}/.cache/wal/colors.sh
-
-
 # Prompt
 PS1="\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] "
 
@@ -41,8 +37,7 @@ bind 'set colored-stats on'
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 bind '"\e\C-l": "\C-p\C-e | less\C-m"'
-bind '"\e\e": "\C-asudo \C-e"'
-
+bind '"\e\e": "\C-asudo \C-e"' 
 
 # Tmux
 alias tmux='tmux -f ${HOME}/.config/tmux/tmux.conf'
@@ -50,8 +45,8 @@ alias mux='tmuxinator'
 
 
 # Time related
-alias ore='date +%H:%M'
-alias data='date +"%A %d %B"'
+#alias ore='date +%H:%M'
+#alias data='date +"%A %d %B"'
 
 
 # Source editing and compiling
@@ -101,7 +96,6 @@ alias ga='git add -A'
 alias gc='git commit'
 alias gl='git log'
 alias gv='git remote -v'
-alias gs='git status'
 alias clone='git clone --depth=1'
 
 
@@ -279,10 +273,24 @@ export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
 export FZF_CTRL_R_OPTS='--reverse'
 
 
+# Source pywal colors
+. ${HOME}/.cache/wal/colors.sh
+
+
 # Create a dir and cd into it
 mkcd() {
   [[ $# -gt 1 ]] && return
   mkdir "$1" && cd "$1"
+}
+
+
+# git status utility
+gs() {
+  [[ $# -eq 0 ]] && repo_path="$PWD"
+  [[ $# -eq 1 ]] && repo_path="${HOME}/progetti/${1}"
+
+  cd $repo_path || return
+  cd $repo_path && git status
 }
 
 

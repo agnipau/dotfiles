@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#
+# Triggera la modalita' zen.
+
+killall -9 telegram-desktop \
+           Discord &> /dev/null
+
+echo "Ora concentrati e porta a termine il tuo obbiettivo."

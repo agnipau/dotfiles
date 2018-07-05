@@ -46,3 +46,7 @@ map <leader><leader> /
 map rr :source ~/.config/nvim/init.vim <CR>
 map mo :nohlsearch <CR>
 map go :Goyo <CR>
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
+nnoremap <silent> <A-h> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-l> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>

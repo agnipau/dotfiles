@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Send a notification with the current date.
+
+notify-send "Data" "`date '+%A %d %B'`"

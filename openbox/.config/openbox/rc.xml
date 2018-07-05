@@ -354,12 +354,12 @@
     <direction>both</direction>
     </action>
   </keybind>
-  <keybind key="C-x">
+  <keybind key="W-C-x">
     <action name="ToggleMaximize">
     <direction>vertical</direction>
     </action>
   </keybind>
-  <keybind key="A-x">
+  <keybind key="W-A-x">
     <action name="ToggleMaximize">
     <direction>horizontal</direction>
     </action>
@@ -374,6 +374,14 @@
     <action name="MoveResizeTo">
       <x>4%</x>
       <y>center</y>
+    </action>
+  </keybind>
+  <keybind key="A-S-g">
+    <action name="MoveResizeTo">
+      <x>4%</x>
+      <y>center</y>
+      <width>45%</width>
+      <height>96%</height>
     </action>
   </keybind>
   <keybind key="W-g">
@@ -455,6 +463,16 @@
       <command>~/bin/rec</command>
     </action>
   </keybind>
+  <keybind key="W-v">
+    <action name="Execute">
+      <command>~/bin/ore</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-v">
+    <action name="Execute">
+      <command>~/bin/data</command>
+    </action>
+  </keybind>
   <keybind key="W-S-w">
     <action name="Execute">
       <command>~/bin/norec</command>
@@ -463,6 +481,16 @@
   <keybind key="W-Return">
     <action name="Execute">
       <command>st</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-Return">
+    <action name="Focus"/>
+    <action name="Raise"/>
+    <action name="MoveResizeTo">
+      <x>center</x>
+      <y>24</y>
+      <width>45%</width>
+      <height>48%</height>
     </action>
   </keybind>
   <keybind key="A-Return">
@@ -535,17 +563,17 @@
   <context name="Desktop">
     <mousebind button="Left" action="Click">
       <action name="GoToDesktop">
-        <to>left</to>
-      </action>
-    </mousebind>
-    <mousebind button="Middle" action="Click">
-      <action name="GoToDesktop">
         <to>right</to>
       </action>
     </mousebind>
-    <mousebind button="Right" action="Click">
+    <mousebind button="Middle" action="Click">
       <action name="Execute">
         <command>~/bin/draw</command>
+      </action>
+    </mousebind>
+    <mousebind button="Right" action="Click">
+      <action name="GoToDesktop">
+        <to>left</to>
       </action>
     </mousebind>
     <!--mousebind button="Right" action="Click">

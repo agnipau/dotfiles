@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Send a notification with the current time.
+
+notify-send "Ore" "`date +%H:%M`"

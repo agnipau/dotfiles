@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#
+# Connect Void Linux to home wifi.
+
+sudo cp /etc/wpa_supplicant/wpa_supplicant.conf.casa \
+        /etc/wpa_supplicant/wpa_supplicant.conf
+
+sudo sv restart dhcpcd
