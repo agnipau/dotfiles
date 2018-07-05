@@ -370,6 +370,9 @@
   <keybind key="W-q">
     <action name="Close"/>
   </keybind>
+  <keybind key="A-q">
+    <action name="Close"/>
+  </keybind>
   <keybind key="A-g">
     <action name="MoveResizeTo">
       <x>4%</x>

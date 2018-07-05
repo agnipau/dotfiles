@@ -370,6 +370,9 @@
   <keybind key="W-q">
     <action name="Close"/>
   </keybind>
+  <keybind key="A-q">
+    <action name="Close"/>
+  </keybind>
   <keybind key="A-g">
     <action name="MoveResizeTo">
       <x>4%</x>
@@ -378,10 +381,10 @@
   </keybind>
   <keybind key="A-S-g">
     <action name="MoveResizeTo">
-      <x>4%</x>
+      <x>center</x>
       <y>center</y>
-      <width>45%</width>
-      <height>96%</height>
+      <width>850</width>
+      <height>94%</height>
     </action>
   </keybind>
   <keybind key="W-g">
@@ -394,8 +397,8 @@
     <action name="MoveResizeTo">
       <x>center</x>
       <y>center</y>
-      <width>45%</width>
-      <height>96%</height>
+      <width>32%</width>
+      <height>67%</height>
     </action>
   </keybind>
   <keybind key="W-C-g">
@@ -403,7 +406,7 @@
       <x>center</x>
       <y>center</y>
       <width>95%</width>
-      <height>96%</height>
+      <height>93%</height>
     </action>
   </keybind>
 
@@ -495,7 +498,7 @@
   </keybind>
   <keybind key="A-Return">
     <action name="Execute">
-      <command>st</command>
+      <command>st -g 100x45</command>
     </action>
   </keybind>
 </keyboard>
