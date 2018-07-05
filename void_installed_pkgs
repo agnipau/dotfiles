@@ -6,7 +6,7 @@ bc binutils bison bspwm btrfs-progs bzip2 bzip2-devel ca-certificates
 cairo cairo-devel cava celt chromium clang cmake cmus colord-devel
 compton-git coreutils cpio cryptsetup cups-devel curl dash dbus dbus-devel
 dbus-glib dbus-libs dbus-x11 dconf dejavu-fonts-ttf desktop-file-utils
-device-mapper dhcpcd diffutils discord dmraid dnssec-anchors dosfstools
+device-mapper dhcpcd diffutils dmraid dnssec-anchors dosfstools
 dracut dunst e2fsprogs e2fsprogs-libs efibootmgr elfutils-devel enchant
 encodings ethtool eudev eudev-libudev eudev-libudev-devel exiv2 exo expat
 expat-devel f2fs-tools fd feh ffmpeg file findutils font-adobe-100dpi
@@ -25,8 +25,8 @@ gnome-online-accounts gnupg2 gnutls gperf gpgme graphite graphite-devel
 grep grub grub-i386-efi grub-x86_64-efi gsettings-desktop-schemas gsfonts
 gst-plugins-base1 gstreamer1 gtk+ gtk+3 gtk+3-devel gtk-engine-murrine
 gtk-update-icon-cache gvfs gzip harfbuzz harfbuzz-devel hicolor-icon-theme
-hsetroot hwids hyphen iana-etc iceauth icu icu-devel icu-libs id3lib
-id3v2 ilmbase imlib2 iniparser iproute2 iputils ipw2100-firmware
+hsetroot http-parser hwids hyphen iana-etc iceauth icu icu-devel icu-libs
+id3lib id3v2 ilmbase imlib2 iniparser iproute2 iputils ipw2100-firmware
 ipw2200-firmware iso-codes iw jansson json-c json-glib jsoncpp kbd
 kbd-data kernel-libc-headers kmod lame lcms2 lcms2-devel less libEGL
 libGL libGLES libICE libOSMesa libSM libX11 libX11-devel libXScrnSaver
@@ -42,12 +42,12 @@ libblkid libblkid-devel libblockdev libbluray libbs2b libbytesize libcap
 libcap-ng libcap-progs libcddb libcdio libcdio-paranoia libcdparanoia
 libcolord libconfig libcroco libcrypto43 libcryptsetup libcups libcurl
 libcxx libdatrie libdatrie-devel libdaxctl libdb libdjvulibre libdmx
-libdrm libdrm-devel libdvdnav libdvdread libedit libefivar libelf libepoxy
-libepoxy-devel libevdev libevent libexif libfdisk libffi libffi-devel
-libfftw libflac libfontenc libgbm libgcc libgcc-devel libgcrypt
-libgdata libgexiv2 libgimp libgirepository libglapi libglib-devel
-libgomp libgpg-error libgs libgudev libgusb libharfbuzz libhunspell
-libid3tag libidn libijs libinput libjack libjasper libjbig2dec
+libdrm libdrm-devel libdvdnav libdvdread libedit libefivar libelf
+libepoxy libepoxy-devel libevdev libevent libexif libfdisk libffi
+libffi-devel libfftw libflac libfontenc libgbm libgcc libgcc-devel
+libgcrypt libgdata libgexiv2 libgimp libgirepository libgit2 libglapi
+libglib-devel libgomp libgpg-error libgs libgudev libgusb libharfbuzz
+libhunspell libid3tag libidn libijs libinput libjack libjasper libjbig2dec
 libjpeg-turbo libjpeg-turbo-devel libjpeg-turbo-tools libkeyutils
 libkmod libksba libldap libldns libllvm6.0 libltdl liblzma liblzma-devel
 libmad libmagic libmagick libmcpp libmng libmnl libmodplug libmount
@@ -84,7 +84,7 @@ python3-docopt python3-gobject python3-keyutils python3-setuptools
 python3-yaml pywal qiv qt5 qt5-imageformats qtchooser re2 readline
 rest rhash rofi rsync ruby run-parts runit runit-void rxvt-unicode
 rxvt-unicode-terminfo scrot sed sessreg setxkbmap shadow shared-mime-info
-slop smproxy snappy speexdsp spotify sqlite startup-notification stow
+slop smproxy snappy speexdsp sqlite startup-notification stow
 sudo sxhkd tar telegram-desktop telepathy-glib texinfo texlive2018-bin
 thin-provisioning-tools thunar-archive-plugin thunar-volman tiff
 tiff-devel tmux traceroute transset tslib tzdata udiskie udisks2

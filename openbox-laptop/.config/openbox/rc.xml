@@ -612,7 +612,6 @@
     <mousebind button="Right" action="Drag">
       <action name="Focus"/>
       <action name="Raise"/>
-      <action name="Unshade"/>
       <action name="Resize"/>
     </mousebind>
   </context>

@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_config xmlns="http://openbox.org/3.4/rc"
+		xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Resistance -->
+<resistance>
+  <strength>10</strength>
+  <screen_edge_strength>20</screen_edge_strength>
+</resistance>
+
+<!-- Focus -->
+<focus>
+  <focusNew>yes</focusNew>
+  <followMouse>yes</followMouse>
+  <focusLast>yes</focusLast>
+  <underMouse>no</underMouse>
+  <focusDelay>0</focusDelay>
+  <raiseOnFocus>no</raiseOnFocus>
+</focus>
+
+<!-- Placement -->
+<placement>
+  <policy>Smart</policy>
+  <center>yes</center>
+  <monitor>Mouse</monitor>
+  <primaryMonitor>1</primaryMonitor>
+</placement>
+
+<!-- Theme -->
+<theme>
+  <name>agnipau</name>
+  <titleLayout>LC</titleLayout>
+  <cornerRadius>3</cornerRadius>
+  <keepBorder>no</keepBorder>
+  <animateIconify>no</animateIconify>
+  <font place="ActiveWindow">
+    <name>Iosevka</name>
+    <size>12</size>
+    <weight>bold</weight>
+    <slant>normal</slant>
+  </font>
+  <font place="InactiveWindow">
+    <name>Iosevka</name>
+    <size>12</size>
+    <weight>bold</weight>
+    <slant>normal</slant>
+  </font>
+  <!--font place="MenuHeader">
+    <name>Iosevka</name>
+    <size>12</size>
+    <weight>normal</weight>
+    <slant>normal</slant>
+  </font>
+  <font place="MenuItem">
+    <name>Iosevka</name>
+    <size>12</size>
+    <weight>normal</weight>
+    <slant>normal</slant>
+  </font!-->
+</theme>
+
+<!-- Desktops -->
+<desktops>
+  <number>6</number>
+  <firstdesk>1</firstdesk>
+  <popupTime>0</popupTime>
+  <names>
+    <name>uno</name>
+    <name>due</name>
+    <name>tre</name>
+    <name>quattro</name>
+    <name>cinque</name>
+    <name>sei</name>
+  </names>
+</desktops>
+
+<!-- Resize -->
+<resize>
+  <drawContents>yes</drawContents>
+  <popupShow>Never</popupShow>
+  <popupPosition>Fixed</popupPosition>
+  <popupFixedPosition>
+    <x>-45</x>
+    <y>45</y>
+  </popupFixedPosition>
+</resize>
+
+<!-- Margins -->
+<margins>
+  <top>0</top>
+  <bottom>0</bottom>
+  <left>0</left>
+  <right>0</right>
+</margins>
+
+<!-- Keyboard -->
+<keyboard>
+  <rebindOnMappingNotify>yes</rebindOnMappingNotify>
+  <chainQuitKey>C-g</chainQuitKey>
+
+  <!-- Keybindings for desktop switching -->
+  <keybind key="W-1">
+    <action name="GoToDesktop">
+      <to>1</to>
+    </action>
+  </keybind>
+  <keybind key="W-2">
+    <action name="GoToDesktop">
+      <to>2</to>
+    </action>
+  </keybind>
+  <keybind key="W-3">
+    <action name="GoToDesktop">
+      <to>3</to>
+    </action>
+  </keybind>
+  <keybind key="W-4">
+    <action name="GoToDesktop">
+      <to>4</to>
+    </action>
+  </keybind>
+  <keybind key="W-5">
+    <action name="GoToDesktop">
+      <to>5</to>
+    </action>
+  </keybind>
+  <keybind key="W-6">
+    <action name="GoToDesktop">
+      <to>6</to>
+    </action>
+  </keybind>
+
+  <!-- Keybindings for sending windows to workspaces and preserve the current workspace -->
+  <keybind key="W-S-1">
+    <action name="SendToDesktop">
+      <to>1</to>
+      <wrap>no</wrap>
+      <follow>no</follow>
+    </action>
+  </keybind>
+  <keybind key="W-S-2">
+    <action name="SendToDesktop">
+      <to>2</to>
+      <wrap>no</wrap>
+      <follow>no</follow>
+    </action>
+  </keybind>
+  <keybind key="W-S-3">
+    <action name="SendToDesktop">
+      <to>3</to>
+      <wrap>no</wrap>
+      <follow>no</follow>
+    </action>
+  </keybind>
+  <keybind key="W-S-4">
+    <action name="SendToDesktop">
+      <to>4</to>
+      <wrap>no</wrap>
+      <follow>no</follow>
+    </action>
+  </keybind>
+  <keybind key="W-S-5">
+    <action name="SendToDesktop">
+      <to>5</to>
+      <wrap>no</wrap>
+      <follow>no</follow>
+    </action>
+  </keybind>
+  <keybind key="W-S-6">
+    <action name="SendToDesktop">
+      <to>6</to>
+      <wrap>no</wrap>
+      <follow>no</follow>
+    </action>
+  </keybind>
+
+  <!-- Keybindings for sending windows to workspaces and switch to that workspace-->
+  <keybind key="W-C-1">
+    <action name="SendToDesktop">
+      <to>1</to>
+      <wrap>no</wrap>
+      <follow>yes</follow>
+    </action>
+  </keybind>
+  <keybind key="W-C-2">
+    <action name="SendToDesktop">
+      <to>2</to>
+      <wrap>no</wrap>
+      <follow>yes</follow>
+    </action>
+  </keybind>
+  <keybind key="W-C-3">
+    <action name="SendToDesktop">
+      <to>3</to>
+      <wrap>no</wrap>
+      <follow>yes</follow>
+    </action>
+  </keybind>
+  <keybind key="W-C-4">
+    <action name="SendToDesktop">
+      <to>4</to>
+      <wrap>no</wrap>
+      <follow>yes</follow>
+    </action>
+  </keybind>
+  <keybind key="W-C-5">
+    <action name="SendToDesktop">
+      <to>5</to>
+      <wrap>no</wrap>
+      <follow>yes</follow>
+    </action>
+  </keybind>
+  <keybind key="W-C-6">
+    <action name="SendToDesktop">
+      <to>6</to>
+      <wrap>no</wrap>
+      <follow>yes</follow>
+    </action>
+  </keybind>
+
+  <!-- Keybindings for window switching -->
+  <keybind key="W-Tab">
+    <action name="NextWindow">
+      <dialog>none</dialog>
+      <bar>yes</bar>
+      <raise>no</raise>
+      <allDesktops>no</allDesktops>
+      <panels>no</panels>
+      <desktop>no</desktop>
+      <linear>yes</linear>
+      <interactive>yes</interactive>
+      <finalactions>
+	<action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </finalactions>
+    </action>
+  </keybind>
+  <keybind key="W-S-Tab">
+    <action name="PreviousWindow">
+      <dialog>none</dialog>
+      <bar>yes</bar>
+      <raise>no</raise>
+      <allDesktops>no</allDesktops>
+      <panels>no</panels>
+      <desktop>no</desktop>
+      <linear>yes</linear>
+      <interactive>yes</interactive>
+      <finalactions>
+	<action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </finalactions>
+    </action>
+  </keybind>
+
+  <!-- 2bwm style keybindings for moving windows fast -->
+  <keybind key="W-k">
+    <action name="MoveRelative">
+      <x>0</x>
+      <y>-40</y>
+    </action>
+  </keybind>
+  <keybind key="W-j">
+    <action name="MoveRelative">
+      <x>0</x>
+      <y>40</y>
+    </action>
+  </keybind>
+  <keybind key="W-l">
+    <action name="MoveRelative">
+      <x>40</x>
+      <y>0</y>
+    </action>
+  </keybind>
+  <keybind key="W-h">
+    <action name="MoveRelative">
+      <x>-40</x>
+      <y>0</y>
+    </action>
+  </keybind>
+  
+  <!-- 2bwm style keybindings for moving windows slowly -->
+  <keybind key="W-C-k">
+    <action name="MoveRelative">
+      <x>0</x>
+      <y>-20</y>
+    </action>
+  </keybind>
+  <keybind key="W-C-j">
+    <action name="MoveRelative">
+      <x>0</x>
+      <y>20</y>
+    </action>
+  </keybind>
+  <keybind key="W-C-l">
+    <action name="MoveRelative">
+      <x>20</x>
+      <y>0</y>
+    </action>
+  </keybind>
+  <keybind key="W-C-h">
+    <action name="MoveRelative">
+      <x>-20</x>
+      <y>0</y>
+    </action>
+  </keybind>
+
+  <!-- 2bwm style keybindings for resizing windows -->
+  <keybind key="W-S-k">
+    <action name="ResizeRelative">
+      <bottom>-5</bottom>
+    </action>
+  </keybind>
+  <keybind key="W-S-j">
+    <action name="ResizeRelative">
+      <bottom>5</bottom>
+    </action>
+  </keybind>
+  <keybind key="W-S-l">
+    <action name="ResizeRelative">
+      <right>5</right>
+    </action>
+  </keybind>
+  <keybind key="W-S-h">
+    <action name="ResizeRelative">
+      <right>-5</right>
+    </action>
+  </keybind>
+
+  <!-- Openbox management keybindings -->
+  <keybind key="W-r">
+    <action name="Reconfigure"/>
+  </keybind>
+  <keybind key="W-S-r">
+    <action name="Restart"/>
+  </keybind>
+  <keybind key="W-C-q">
+    <action name="Execute">
+      <command>openbox --exit</command>
+    </action>
+  </keybind>
+
+  <!-- Keybindings to toggle some windows functionalities -->
+  <keybind key="W-o">
+    <action name="ToggleOmnipresent"/>
+  </keybind>
+  <keybind key="W-a">
+    <action name="ToggleAlwaysOnTop"/>
+  </keybind>
+  <keybind key="W-x">
+    <action name="ToggleMaximize">
+    <direction>both</direction>
+    </action>
+  </keybind>
+  <keybind key="W-C-x">
+    <action name="ToggleMaximize">
+    <direction>vertical</direction>
+    </action>
+  </keybind>
+  <keybind key="W-A-x">
+    <action name="ToggleMaximize">
+    <direction>horizontal</direction>
+    </action>
+  </keybind>
+  <keybind key="W-S-x">
+    <action name="ToggleFullscreen"/>
+  </keybind>
+  <keybind key="W-q">
+    <action name="Close"/>
+  </keybind>
+  <keybind key="A-g">
+    <action name="MoveResizeTo">
+      <x>4%</x>
+      <y>center</y>
+    </action>
+  </keybind>
+  <keybind key="A-S-g">
+    <action name="MoveResizeTo">
+      <x>4%</x>
+      <y>center</y>
+      <width>45%</width>
+      <height>96%</height>
+    </action>
+  </keybind>
+  <keybind key="W-g">
+    <action name="MoveResizeTo">
+      <x>center</x>
+      <y>center</y>
+    </action>
+  </keybind>
+  <keybind key="W-S-g">
+    <action name="MoveResizeTo">
+      <x>center</x>
+      <y>center</y>
+      <width>45%</width>
+      <height>96%</height>
+    </action>
+  </keybind>
+  <keybind key="W-C-g">
+    <action name="MoveResizeTo">
+      <x>center</x>
+      <y>center</y>
+      <width>95%</width>
+      <height>96%</height>
+    </action>
+  </keybind>
+
+  <!-- Keybindings for running applications -->
+  <keybind key="W-c">
+    <action name="Execute">
+      <command>wal -c -q --iterative --backend wal -i ~/progetti/wallpapers -o ~/bin/wal-set</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-c">
+    <action name="Execute">
+      <command>wal -c -q --iterative --backend wal -i ~/progetti/wallpapers -o ~/bin/wal-set -l</command>
+    </action>
+  </keybind>
+  <keybind key="W-s">
+    <action name="Execute">
+      <command>~/bin/cmus-info</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-s">
+    <action name="Execute">
+      <command>slock</command>
+    </action>
+  </keybind>
+  <keybind key="A-c">
+    <action name="Execute">
+      <command>~/bin/current-wal-dark</command>
+    </action>
+  </keybind>
+  <keybind key="A-S-c">
+    <action name="Execute">
+      <command>~/bin/current-wal-light</command>
+    </action>
+  </keybind>
+  <keybind key="W-d">
+    <action name="Execute">
+      <command>rofi -show run</command>
+    </action>
+  </keybind>
+  <keybind key="W-i">
+    <action name="Execute">
+      <command>rofi -show window</command>
+    </action>
+  </keybind>
+  <keybind key="W-p">
+    <action name="Execute">
+      <command>~/bin/screenshot</command>
+    </action>
+  </keybind>
+  <keybind key="W-z">
+    <action name="Execute">
+      <command>~/bin/draw</command>
+    </action>
+  </keybind>
+  <keybind key="W-w">
+    <action name="Execute">
+      <command>~/bin/rec</command>
+    </action>
+  </keybind>
+  <keybind key="W-v">
+    <action name="Execute">
+      <command>~/bin/ore</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-v">
+    <action name="Execute">
+      <command>~/bin/data</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-w">
+    <action name="Execute">
+      <command>~/bin/norec</command>
+    </action>
+  </keybind>
+  <keybind key="W-Return">
+    <action name="Execute">
+      <command>st</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-Return">
+    <action name="Focus"/>
+    <action name="Raise"/>
+    <action name="MoveResizeTo">
+      <x>center</x>
+      <y>24</y>
+      <width>45%</width>
+      <height>48%</height>
+    </action>
+  </keybind>
+  <keybind key="A-Return">
+    <action name="Execute">
+      <command>st</command>
+    </action>
+  </keybind>
+</keyboard>
+
+<!-- Mouse -->
+<mouse>
+  <dragThreshold>1</dragThreshold>
+  <doubleClickTime>500</doubleClickTime>
+  <screenEdgeWarpTime>400</screenEdgeWarpTime>
+
+  <!-- Frame -->
+  <context name="Frame">
+    <mousebind button="W-Left" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="W-Left" action="Drag">
+      <action name="Move"/>
+    </mousebind>
+    <mousebind button="W-Left" action="Click">
+      <action name="Unshade"/>
+    </mousebind>
+    <mousebind button="W-Left" action="DoubleClick">
+      <action name="ToggleMaximize"/>
+    </mousebind>
+    <mousebind button="W-Right" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+      <action name="Unshade"/>
+    </mousebind>
+    <mousebind button="W-Right" action="Drag">
+      <action name="Resize"/>
+    </mousebind>
+    <mousebind button="W-Right" action="DoubleClick">
+      <action name="Close"/>
+    </mousebind>
+    <mousebind button="W-Middle" action="Click">
+      <action name="Focus"/>
+      <action name="Raise"/>
+      <action name="Unshade"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+	<y>center</y>
+      </action>
+    </mousebind>
+  </context>
+
+  <!-- Client -->
+  <context name="Client">
+    <mousebind button="Left" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="Middle" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="Right" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+  </context>
+
+  <!-- Desktop -->
+  <context name="Desktop">
+    <mousebind button="Left" action="Click">
+      <action name="GoToDesktop">
+        <to>right</to>
+      </action>
+    </mousebind>
+    <mousebind button="Middle" action="Click">
+      <action name="Execute">
+        <command>~/bin/draw</command>
+      </action>
+    </mousebind>
+    <mousebind button="Right" action="Click">
+      <action name="GoToDesktop">
+        <to>left</to>
+      </action>
+    </mousebind>
+    <!--mousebind button="Right" action="Click">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
+    </mousebind!-->
+  </context>
+
+  <!-- Titlebar -->
+  <context name="Titlebar">
+    <mousebind button="Left" action="Click">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="Left" action="Drag">
+      <action name="Focus"/>
+      <action name="Raise"/>
+      <action name="Move"/>
+    </mousebind>
+    <mousebind button="Left" action="DoubleClick">
+      <action name="ToggleMaximizeFull"/>
+    </mousebind>
+    <mousebind button="Middle" action="Click">
+      <action name="Focus"/>
+      <action name="Raise"/>
+      <action name="Unshade"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+	<y>center</y>
+      </action>
+    </mousebind>
+    <mousebind button="Right" action="Click">
+      <action name="ToggleShade"/>
+    </mousebind>
+    <mousebind button="Right" action="Drag">
+      <action name="Focus"/>
+      <action name="Raise"/>
+      <action name="Resize"/>
+    </mousebind>
+  </context>
+
+  <!-- Top -->
+  <context name="Top">
+    <mousebind button="Left" action="Drag">
+      <action name="Resize">
+        <edge>top</edge>
+      </action>
+    </mousebind>
+  </context>
+
+  <!-- Bottom -->
+  <context name="Bottom">
+    <mousebind button="Left" action="Drag">
+      <action name="Resize">
+        <edge>bottom</edge>
+      </action>
+    </mousebind>
+  </context>
+
+  <!-- Left -->
+  <context name="Left">
+    <mousebind button="Left" action="Drag">
+      <action name="Resize">
+        <edge>left</edge>
+      </action>
+    </mousebind>
+  </context>
+
+  <!-- Right -->
+  <context name="Right">
+    <mousebind button="Left" action="Drag">
+      <action name="Resize">
+        <edge>right</edge>
+      </action>
+    </mousebind>
+  </context>
+
+  <!-- Corners -->
+  <context name="TRCorner BRCorner TLCorner BLCorner">
+    <mousebind button="Left" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+      <action name="Unshade"/>
+    </mousebind>
+    <mousebind button="Left" action="Drag">
+      <action name="Resize"/>
+    </mousebind>
+  </context>
+
+  <!-- Iconify -->
+  <context name="Iconify">
+    <mousebind button="Left" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="Left" action="Click">
+      <action name="Iconify"/>
+    </mousebind>
+  </context>
+
+  <!-- Maximize -->
+  <context name="Maximize">
+    <mousebind button="Left" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="Middle" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="Right" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="Left" action="Click">
+      <action name="ToggleMaximize"/>
+    </mousebind>
+    <mousebind button="Middle" action="Click">
+      <action name="ToggleMaximize">
+        <direction>vertical</direction>
+      </action>
+    </mousebind>
+    <mousebind button="Right" action="Click">
+      <action name="ToggleMaximize">
+        <direction>horizontal</direction>
+      </action>
+    </mousebind>
+  </context>
+
+  <!-- Close -->
+  <context name="Close">
+    <mousebind button="Left" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="Left" action="Click">
+      <action name="Close"/>
+    </mousebind>
+  </context>
+
+  <!-- AllDesktops -->
+  <context name="AllDesktops">
+    <mousebind button="Left" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="Left" action="Click">
+      <action name="ToggleOmnipresent"/>
+    </mousebind>
+  </context>
+
+  <!-- Shade -->
+  <context name="Shade">
+    <mousebind button="Left" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="Left" action="Click">
+      <action name="ToggleShade"/>
+    </mousebind>
+  </context>
+</mouse>
+
+<!-- Menu -->
+<!--menu>
+  <file>menu.xml</file>
+  <hideDelay>200</hideDelay>
+  <middle>no</middle>
+  <submenuShowDelay>100</submenuShowDelay>
+  <submenuHideDelay>400</submenuHideDelay>
+  <showIcons>no</showIcons>
+  <manageDesktops>no</manageDesktops>
+</menu-->
+
+<!-- Applications -->
+<applications>
+  <application class="Chromium">
+    <desktop>2</desktop>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>95%</width>
+      <height>92%</height>
+    </size>
+  </application>
+  <application class="TelegramDesktop">
+    <desktop>3</desktop>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>95%</width>
+      <height>87%</height>
+    </size>
+  </application>
+  <application class="discord">
+    <desktop>4</desktop>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>95%</width>
+      <height>87%</height>
+    </size>
+  </application>
+  <application class="feh">
+    <decor>no</decor>
+  </application>
+  <application class="Viewnior">
+    <decor>no</decor>
+  </application>
+  <application title="qiv*">
+    <decor>no</decor>
+  </application>
+  <application class="mpv">
+    <decor>no</decor>
+  </application>
+  <!--application class="*">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+      <monitor>mouse</monitor>
+    </position>
+  </application-->
+</applications>
+
+</openbox_config>

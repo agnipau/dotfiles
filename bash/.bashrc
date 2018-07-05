@@ -107,15 +107,13 @@ alias spdtst='curl -o /dev/null http://test.kpnqwest.it/file2000.bin'
 
 # Personal git projects related aliases
 alias baydl='cd ${HOME}/progetti/youtube-dl-batchfiles && ./baydl.sh'
-alias bin='cd ${HOME}/bin/arch; ls'
-alias dotfiles='cd ${HOME}/progetti/dotfiles; ls'
-alias nvim-config='cd ${HOME}/progetti/nvim-config; ls'
-alias termux-ct='cd ${HOME}/progetti/termux-ct; ls'
+alias dots='cd ${HOME}/progetti/dotfiles; ls'
+alias tct='cd ${HOME}/progetti/termux-ct; ls'
 alias cinema='cd ${HOME}/progetti/youtube-dl-batchfiles/downloaded; ls'
 alias anime='cd ${HOME}/progetti/youtube-dl-batchfiles/batch-files/anime; ls'
 alias serie='cd ${HOME}/progetti/youtube-dl-batchfiles/batch-files/serie; ls'
 alias film='cd ${HOME}/progetti/youtube-dl-batchfiles/batch-files/film; ls'
-alias clear_cinema='rm -rf ${HOME}/progetti/youtube-dl-batchfiles/downloaded/*'
+alias cinema-clear='rm -rf ${HOME}/progetti/youtube-dl-batchfiles/downloaded/*'
 
 
 # Human readable / list aliases
@@ -160,7 +158,7 @@ alias fgrep='fgrep --color=auto'
 alias upd='sudo xbps-install -Suyv'
 alias ins='sudo xbps-install -Syv'
 alias rem='sudo xbps-remove -Ryv'
-alias arem='sudo xbps-remove -Ooyv'
+alias arem='sudo xbps-remove -ROoyv'
 alias src='xbps-query -Rs'
 alias dep='xbps-query -Rx'
 
@@ -373,14 +371,15 @@ git-remote-setter() {
   git remote set-url origin git@github.com:matteoguarda/void-packages.git
   cd ${HOME}/progetti/youtube-dl-batchfiles
   git remote set-url origin git@github.com:matteoguarda/youtube-dl-batchfiles.git
+  cd ${HOME}/progetti/wal.tdesktop-theme
+  git remote set-url origin git@github.com:matteoguarda/wal.tdesktop-theme
+
   cd ${HOME}/progetti/wallpapers
   git remote set-url origin git@gitlab.com:matteoguarda/wallpapers.git
   cd ${HOME}/progetti/srcsbak
   git remote set-url origin git@gitlab.com:matteoguarda/srcsbak.git
   cd ${HOME}/progetti/fonts
   git remote set-url origin git@gitlab.com:matteoguarda/fonts.git
-  cd ${HOME}/progetti/musica
-  git remote set-url origin git@gitlab.com:matteoguarda/musica.git
 
   echo "==> Done!"
   cd $original_dir
@@ -409,6 +408,7 @@ nvima() {
 void-list-pkgs() {
   xbps-query -l | awk '{ print $2 }' | xargs -n1 xbps-uhelper getpkgname | fmt > void_installed_pkgs
   echo "==> You have installed $(cat void_installed_pkgs | wc -w) packages"
+  sed -i -e 's/ discord//' -e 's/ spotify//' void_installed_pkgs
 }
 
 

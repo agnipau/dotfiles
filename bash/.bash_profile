@@ -6,4 +6,4 @@
 . ${HOME}/.bashrc
 
 # Execute startx after logging into tty1
-[[ -z $DISPLAY && "$(tty)" == "/dev/tty1" ]] && startx
+#[[ -z $DISPLAY && "$(tty)" == "/dev/tty1" ]] && startx

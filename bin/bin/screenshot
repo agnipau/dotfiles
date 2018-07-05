@@ -3,4 +3,4 @@
 # A simple script to take a screenshot using scrot.
 
 scrot 'Screen_%d.%m.%y_%H.%M.%S.png' \
-      -e 'mv $f ~/immagini; qiv ~/immagini/$f'
+      -e 'mv $f ~/immagini
