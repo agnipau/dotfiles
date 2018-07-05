@@ -405,7 +405,7 @@
     <action name="MoveResizeTo">
       <x>center</x>
       <y>center</y>
-      <width>95%</width>
+      <width>1826</width>
       <height>93%</height>
     </action>
   </keybind>
@@ -762,7 +762,7 @@
     </position>
     <size>
       <width>95%</width>
-      <height>92%</height>
+      <height>93%</height>
     </size>
   </application>
   <application class="TelegramDesktop">
@@ -773,7 +773,7 @@
     </position>
     <size>
       <width>95%</width>
-      <height>87%</height>
+      <height>88%</height>
     </size>
   </application>
   <application class="discord">
@@ -784,7 +784,7 @@
     </position>
     <size>
       <width>95%</width>
-      <height>87%</height>
+      <height>88%</height>
     </size>
   </application>
   <application class="feh">
