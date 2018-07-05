@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#
+# Backup my projects.
+
+cd ${HOME}/progetti
+
+for i in $(ls); do
+  if [[ "$i" != "void-packages" && "$i" != "wallpapers" ]]; then
+    zip -9 -r ${i}.zip $i
+  fi
+done
