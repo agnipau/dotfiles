@@ -42,14 +42,14 @@ if [[ $# -eq 7 ]]; then
   cd .ydla_temp
   youtube-dl $1 \
              --extract-audio --audio-format mp3 --audio-quality 0 --prefer-ffmpeg \
-             --youtube-skip-dash-manifest --ignore-errors --continue --restrict-filenames \
-             --verbose
-  mv *.mp3 ../${artist}\ -\ ${title}.mp3
+             --youtube-skip-dash-manifest --ignore-errors --continue --no-overwrites \
+	     --restrict-filenames --verbose
+  mv *.mp3 "../${artist} - ${title}.mp3"
   cd ..
   link=$(echo $1 | sed 's_https://__')
   id3v2 --delete-all "${artist} - ${title}.mp3"
   id3v2 --artist "$artist" --song "$title" --album "$album" --comment "$link" "${artist} - ${title}.mp3"
-  notify-send --expire-time=3000 "YouTube" "$title downloaded"
+  notify-send --expire-time=3000 "YouTube" "$artist - $title downloaded"
 elif [[ $# -eq 5 ]]; then
   while [[ -z $hasdof ]]; do
     case $1 in
@@ -71,20 +71,20 @@ elif [[ $# -eq 5 ]]; then
   cd .ydla_temp
   youtube-dl $1 \
              --extract-audio --audio-format mp3 --audio-quality 0 --prefer-ffmpeg \
-             --youtube-skip-dash-manifest --ignore-errors --continue --restrict-filenames \
-             --verbose
-  mv *.mp3 ../${artist}\ -\ ${title}.mp3
+             --youtube-skip-dash-manifest --ignore-errors --continue --no-overwrites \
+	     --restrict-filenames --verbose
+  mv *.mp3 "../${artist} - ${title}.mp3"
   cd ..
   link=$(echo $1 | sed 's_https://__')
   id3v2 --delete-all "${artist} - ${title}.mp3"
   id3v2 --artist "$artist" --song "$title" --comment "$link" "${artist} - ${title}.mp3"
-  notify-send --expire-time=3000 "YouTube" "$title downloaded"
+  notify-send --expire-time=3000 "YouTube" "$artist - $title downloaded"
 elif [[ $# -eq 1 ]]; then
   youtube-dl $1 \
              --add-metadata --metadata-from-title "%(artist)s - %(title)s" \
              --extract-audio --audio-format mp3 --audio-quality 0 --prefer-ffmpeg \
-             --youtube-skip-dash-manifest --ignore-errors --continue --restrict-filenames \
-             --verbose
+             --youtube-skip-dash-manifest --ignore-errors --continue --no-overwrites \
+	     --restrict-filenames --verbose
   notify-send --expire-time=3000 "YouTube" "Song downloaded"
 else
   echo -e "Available options are:\n  -a, --artist \"Artist of the song\"\n  -t, --title  \"Title of the song\"\n  -A, --album  \"Album name\""

@@ -123,9 +123,7 @@ alias l.='ls -A | egrep '^\.''
 alias la='ls -Alh'
 alias ls-home='ls ${HOME}/*'
 alias df='df -h'
-alias duu='du -h .'
-alias dus='du -h'
-alias dua='du -h *'
+alias du='du -h'
 
 
 # Fix obvious typo's
@@ -172,10 +170,7 @@ alias re='sudo reboot'
 alias m='alsamixer'
 alias n='nvim'
 alias nfzf='nvim $(fzf)'
-alias todo='clear; bat ${HOME}/todo.md; echo'
-alias etodo='nvim ${HOME}/todo.md'
-alias neo='clear; neofetch'
-alias which='type -p'
+alias neofetch='clear; neofetch'
 alias ydl='youtube-dl'
 alias mv='mv -i'
 alias obapp='obxprop | grep ^_OB_APP_'
@@ -185,6 +180,8 @@ alias cnodebug='notify-send -h string:fgcolor:${color1} "Debug" "Debug message"'
 alias down='curl -sLO'
 alias grad='. ${HOME}/.bashrc; hsetroot -add $color1 -add $color2 -gradient 0'
 alias solid='. ${HOME}/.bashrc; hsetroot -solid $color1'
+alias cp='rsync -ah --progress'
+alias cps='rsync -a'
 
 
 # Add colors to man pages

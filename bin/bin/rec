@@ -2,13 +2,16 @@
 #
 # Start a screencast using ffmpeg (can be started from rofi, no input required).
 
-notify-send "Screencast" "Starting to record..."
+notify-send --expire-time=3000 "Screencast" "Starting to record..."
+
+screen_res=$(xrandr | grep '*' | cut -d" " -f4)
+screen_res_alt=$(xdpyinfo | grep 'dimensions:' | cut -d" " -f7)
 
 ffmpeg -f x11grab \
-       -s 1366x768 \
+       -s $screen_res \
        -an -i :0.0 \
        -c:v libvpx \
        -b:v 5M \
        -crf 10 \
        -quality realtime \
-       -y ${HOME}/video/record.mkv
+       -y ${HOME}/video/screencast.mkv

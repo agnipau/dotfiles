@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
-# Stop the screencast started by rec script.
+# Stop the screencast started by rec script and compress the video.
 
 killall -9 ffmpeg
 
-notify-send "Screencast" "Finished to record..."
+notify-send --expire-time=3000 "Screencast" "Finished to record..."

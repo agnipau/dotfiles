@@ -616,7 +616,7 @@
   <context name="Desktop">
     <mousebind button="Left" action="Click">
       <action name="GoToDesktop">
-        <to>right</to>
+        <to>left</to>
       </action>
     </mousebind>
     <mousebind button="Middle" action="Click">
@@ -626,7 +626,7 @@
     </mousebind>
     <mousebind button="Right" action="Click">
       <action name="GoToDesktop">
-        <to>left</to>
+        <to>right</to>
       </action>
     </mousebind>
     <!--mousebind button="Right" action="Click">
