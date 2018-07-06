@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Download songs from YouTube and then adds user specified metadata like --title, --artist or --album.
-# Requires youtube-dl, ffmpeg and id3v2 for adding metadata to the downloaded mp3.
+# Requires youtube-dl, sed, ffmpeg and id3v2 for adding metadata to the downloaded mp3.
 # Optionally notify-send if you want to receive a notification when download completes.
 #
 # Syntax:
@@ -13,8 +13,8 @@
 # -a | --artist
 # -A | --album
 
-# If present, remove .ydla-temp folder (used for renaming downloaded songs)
-rm -rf .ydla-temp
+# If present, remove .ydla_temp folder (used for renaming downloaded songs)
+rm -rf .ydla_temp
 
 # Actual program
 if [[ $# -eq 7 ]]; then
@@ -38,17 +38,18 @@ if [[ $# -eq 7 ]]; then
         ;;
     esac
   done
-  mkdir .ydla-temp
-  cd .ydla-temp
+  mkdir .ydla_temp
+  cd .ydla_temp
   youtube-dl $1 \
              --extract-audio --audio-format mp3 --audio-quality 0 --prefer-ffmpeg \
              --youtube-skip-dash-manifest --ignore-errors --continue --restrict-filenames \
              --verbose
   mv *.mp3 ../${artist}\ -\ ${title}.mp3
   cd ..
+  link=$(echo $1 | sed 's_https://__')
   id3v2 --delete-all "${artist} - ${title}.mp3"
-  id3v2 --artist "$artist" --song "$title" --album "${album}" "${artist} - ${title}.mp3"
-  notify-send "YouTube" "$title downloaded"
+  id3v2 --artist "$artist" --song "$title" --album "$album" --comment "$link" "${artist} - ${title}.mp3"
+  notify-send --expire-time=3000 "YouTube" "$title downloaded"
 elif [[ $# -eq 5 ]]; then
   while [[ -z $hasdof ]]; do
     case $1 in
@@ -66,28 +67,29 @@ elif [[ $# -eq 5 ]]; then
         ;;
     esac
   done
-  mkdir .ydla-temp
-  cd .ydla-temp
+  mkdir .ydla_temp
+  cd .ydla_temp
   youtube-dl $1 \
              --extract-audio --audio-format mp3 --audio-quality 0 --prefer-ffmpeg \
              --youtube-skip-dash-manifest --ignore-errors --continue --restrict-filenames \
              --verbose
   mv *.mp3 ../${artist}\ -\ ${title}.mp3
   cd ..
+  link=$(echo $1 | sed 's_https://__')
   id3v2 --delete-all "${artist} - ${title}.mp3"
-  id3v2 --artist "$artist" --song "$title" "${artist} - ${title}.mp3"
-  notify-send "YouTube" "$title downloaded"
+  id3v2 --artist "$artist" --song "$title" --comment "$link" "${artist} - ${title}.mp3"
+  notify-send --expire-time=3000 "YouTube" "$title downloaded"
 elif [[ $# -eq 1 ]]; then
   youtube-dl $1 \
              --add-metadata --metadata-from-title "%(artist)s - %(title)s" \
              --extract-audio --audio-format mp3 --audio-quality 0 --prefer-ffmpeg \
              --youtube-skip-dash-manifest --ignore-errors --continue --restrict-filenames \
              --verbose
-  notify-send "YouTube" "Song downloaded"
+  notify-send --expire-time=3000 "YouTube" "Song downloaded"
 else
   echo -e "Available options are:\n  -a, --artist \"Artist of the song\"\n  -t, --title  \"Title of the song\"\n  -A, --album  \"Album name\""
   exit 1
 fi
 
-# If present, remove .ydla-temp folder (used for renaming downloaded songs)
-rm -rf .ydla-temp
+# If present, remove .ydla_temp folder (used for renaming downloaded songs)
+rm -rf .ydla_temp

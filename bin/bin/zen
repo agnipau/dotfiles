@@ -1,8 +1,18 @@
 #!/usr/bin/env bash
 #
-# Triggera la modalita' zen.
+# Triggera la modalita' zen XD
+
+. ${HOME}/.cache/wal/colors.sh
 
 killall -9 telegram-desktop \
            Discord &> /dev/null
+
+# -gradient 0 = up
+# -gradient 90 = right
+# -gradient 180 = down
+# -gradient 270 = left
+# -gradient 360 = up
+# ...
+hsetroot -add $color1 -add $color2 -gradient 0
 
 echo "Ora concentrati e porta a termine il tuo obbiettivo."

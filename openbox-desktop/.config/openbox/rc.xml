@@ -413,12 +413,42 @@
   <!-- Keybindings for running applications -->
   <keybind key="W-c">
     <action name="Execute">
-      <command>wal -c -q --iterative --backend wal -i ~/progetti/wallpapers -o ~/bin/wal-set</command>
+      <command>~/bin/style --another-wal-dark</command>
     </action>
   </keybind>
   <keybind key="W-S-c">
     <action name="Execute">
-      <command>wal -c -q --iterative --backend wal -i ~/progetti/wallpapers -o ~/bin/wal-set -l</command>
+      <command>~/bin/style --another-wal-light</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-c">
+    <action name="Execute">
+      <command>~/bin/style --another-grad-dark</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-S-c">
+    <action name="Execute">
+      <command>~/bin/style --another-grad-light</command>
+    </action>
+  </keybind>
+  <keybind key="A-c">
+    <action name="Execute">
+      <command>~/bin/style --current-wal-dark</command>
+    </action>
+  </keybind>
+  <keybind key="A-S-c">
+    <action name="Execute">
+      <command>~/bin/style --current-wal-light</command>
+    </action>
+  </keybind>
+  <keybind key="A-C-c">
+    <action name="Execute">
+      <command>~/bin/style --current-grad-dark</command>
+    </action>
+  </keybind>
+  <keybind key="A-C-S-c">
+    <action name="Execute">
+      <command>~/bin/style --current-grad-light</command>
     </action>
   </keybind>
   <keybind key="W-s">
@@ -429,16 +459,6 @@
   <keybind key="W-S-s">
     <action name="Execute">
       <command>slock</command>
-    </action>
-  </keybind>
-  <keybind key="A-c">
-    <action name="Execute">
-      <command>~/bin/current-wal-dark</command>
-    </action>
-  </keybind>
-  <keybind key="A-S-c">
-    <action name="Execute">
-      <command>~/bin/current-wal-light</command>
     </action>
   </keybind>
   <keybind key="W-d">
@@ -499,6 +519,36 @@
   <keybind key="A-Return">
     <action name="Execute">
       <command>st -g 100x45</command>
+    </action>
+  </keybind>
+  <keybind key="W-Up">
+    <action name="Execute">
+      <command>~/bin/vol --volup</command>
+    </action>
+  </keybind>
+  <keybind key="W-Down">
+    <action name="Execute">
+      <command>~/bin/vol --voldown</command>
+    </action>
+  </keybind>
+  <keybind key="W-Left">
+    <action name="Execute">
+      <command>~/bin/vol --toggle</command>
+    </action>
+  </keybind>
+  <keybind key="A-Left">
+    <action name="Execute">
+      <command>~/bin/vol --min</command>
+    </action>
+  </keybind>
+  <keybind key="W-Right">
+    <action name="Execute">
+      <command>~/bin/vol --current</command>
+    </action>
+  </keybind>
+  <keybind key="A-Right">
+    <action name="Execute">
+      <command>~/bin/vol --max</command>
     </action>
   </keybind>
 </keyboard>

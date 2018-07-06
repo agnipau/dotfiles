@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+#
+# Script for downloading a list of song and add id3v2 tags to them from a simple text file formatted as the following:
+#
+# Artist@Title of the song
+# <link to the song>
+# Artist@Title of the song
+# <link to the song>
+# And so on...
+
+# Declare values for the counters
+c=1
+end=$(($(wc -l musica_da_scaricare)-1))
+
+# Create a dir to store the songs that will be downloaded
+mkdir downloaded_music
+cd downloaded_music
+
+# Actual script
+while [[ $c -le $end ]]; do
+  artist=$(sed -n -e '${c}p' musica_da_scaricare | cut -d@ -f1)
+  title=$(sed -n -e '${c}p' musica_da_scaricare | cut -d@ -f2)
+  link=$(sed -n -e '$((c+1))p' musica_da_scaricare)
+  link_abbreviato=$(sed -n -e '$((c+1))p' musica_da_scaricare | sed -n -e 's_https://__')
+  mkdir .ydla-temp
+  cd .ydla-temp
+  youtube-dl $link \
+             --extract-audio --audio-format mp3 --audio-quality 0 --prefer-ffmpeg \
+             --youtube-skip-dash-manifest --ignore-errors --continue --restrict-filenames \
+             --verbose
+  mv *.mp3 ../${artist}\ -\ ${title}.mp3
+  cd ..
+  id3v2 --delete-all "${artist} - ${title}.mp3"
+  id3v2 --artist "$artist" --song "$title" --comment "$link_abbreviato" "${artist} - ${title}.mp3"
+  notify-send --expire-time=3000 "YouTube" "$title downloaded"
+  c=$((c+2))
+done

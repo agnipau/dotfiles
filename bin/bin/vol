@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+#
+# Control alsa controllers volues.
+# Optionally it requires dunst if you want to receive a notification with the current volume.
+
+current_vol=$(amixer sget Master | tail -n1 | cut -d" " -f6)
+
+current() {
+  notify-send --expire-time=1000 "Volume: $current_vol"
+}
+
+volup() {
+  amixer sset Master 5%+
+}
+
+voldown() {
+  amixer sset Master 5%-
+}
+
+toggle() {
+  amixer sset Master toggle
+}
+
+mute() {
+  amixer sset Master mute
+}
+
+unmute() {
+  amixer sset Master unmute
+}
+
+max() {
+  amixer sset Master 100%
+}
+
+min() {
+  amixer sset Master 0%
+}
+
+[[ "$1" == "--current" ]] && current
+[[ "$1" == "--volup" ]] && volup
+[[ "$1" == "--voldown" ]] && voldown
+[[ "$1" == "--toggle" ]] && toggle
+[[ "$1" == "--mute" ]] && mute
+[[ "$1" == "--unmute" ]] && unmute
+[[ "$1" == "--max" ]] && max
+[[ "$1" == "--min" ]] && min

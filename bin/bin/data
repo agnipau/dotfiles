@@ -2,4 +2,4 @@
 #
 # Send a notification with the current date.
 
-notify-send "Data" "`date '+%A %d %B'`"
+notify-send --expire-time=1000 "Data" "`date '+%A %d %B'`"

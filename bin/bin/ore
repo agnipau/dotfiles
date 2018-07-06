@@ -2,4 +2,4 @@
 #
 # Send a notification with the current time.
 
-notify-send "Ore" "`date +%H:%M`"
+notify-send --expire-time=1000 "Ore" "`date +%H:%M`"

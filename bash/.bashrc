@@ -183,6 +183,8 @@ alias app='xprop | grep ^WM_'
 alias nodebug='notify-send "Debug" "Debug message"'
 alias cnodebug='notify-send -h string:fgcolor:${color1} "Debug" "Debug message"'
 alias down='curl -sLO'
+alias grad='. ${HOME}/.bashrc; hsetroot -add $color1 -add $color2 -gradient 0'
+alias solid='. ${HOME}/.bashrc; hsetroot -solid $color1'
 
 
 # Add colors to man pages
@@ -292,23 +294,21 @@ gs() {
 }
 
 
-# Git add -A, git commit -m "message"
+# git add -A, git commit -m "message" (when offline)
 ggo() {
   if [[ $# -eq 0 ]]; then
     TIME=$(date +"%a %d %b %g at %H:%M")
-    git pull
     git add -A
     git commit -m "Comment: update on $TIME"
   elif [[ $# -eq 1 ]]; then
     TIME=$(date +"%a %d %b %g at %H:%M")
-    git pull
     git add -A
     git commit -m "Comment: $1 on $TIME"
   fi
 }
 
 
-# Git add -A, git commit -m "message"; git push -u origin master
+# git pull; git add -A, git commit -m "message"; git push -u origin master (when online)
 ggg() {
   if [[ $# -eq 0 ]]; then
     TIME=$(date +"%a %d %b %g at %H:%M")
