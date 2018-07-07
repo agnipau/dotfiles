@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 #
 # Script executed by pywal.
+# Requires sed.
 
 
-. "$HOME/.cache/wal/colors.sh"
+. ${HOME}/.cache/wal/colors.sh
 
 
 reload_dunst() {
@@ -22,25 +23,25 @@ reload_dunst() {
 
 
 reload_zathura() {
-  echo "set default-bg \"$color0\"" > $HOME/.cache/wal/colors-zathura
-  echo "set default-fg \"$color7\"" >> $HOME/.cache/wal/colors-zathura
-  echo "set completion-bg \"$color0\"" >> $HOME/.cache/wal/colors-zathura
-  echo "set completion-fg \"$color7\"" >> $HOME/.cache/wal/colors-zathura
-  echo "set completion-highlight-bg \"$color1\"" >> $HOME/.cache/wal/colors-zathura
-  echo "set completion-highlight-fg \"$color0\"" >> $HOME/.cache/wal/colors-zathura
-  echo "set statusbar-bg \"$color1\"" >> $HOME/.cache/wal/colors-zathura
-  echo "set statusbar-fg \"$color0\"" >> $HOME/.cache/wal/colors-zathura
-  echo "set inputbar-bg \"$color0\"" >> $HOME/.cache/wal/colors-zathura
-  echo "set inputbar-fg \"$color7\"" >> $HOME/.cache/wal/colors-zathura
+  echo "set default-bg \"${color0:-#000000}\"" > ${HOME}/.cache/wal/colors-zathura
+  echo "set default-fg \"${color7:-#ffffff}\"" >> ${HOME}/.cache/wal/colors-zathura
+  echo "set completion-bg \"${color0:-#000000}\"" >> ${HOME}/.cache/wal/colors-zathura
+  echo "set completion-fg \"${color7:-#ffffff}\"" >> ${HOME}/.cache/wal/colors-zathura
+  echo "set completion-highlight-bg \"${color1:-#ff0000}\"" >> ${HOME}/.cache/wal/colors-zathura
+  echo "set completion-highlight-fg \"${color0:-#000000}\"" >> ${HOME}/.cache/wal/colors-zathura
+  echo "set statusbar-bg \"${color1:-#ff0000}\"" >> ${HOME}/.cache/wal/colors-zathura
+  echo "set statusbar-fg \"${color0:-#000000}\"" >> ${HOME}/.cache/wal/colors-zathura
+  echo "set inputbar-bg \"${color0:-#000000}\"" >> ${HOME}/.cache/wal/colors-zathura
+  echo "set inputbar-fg \"${color7:-#ffffff}\"" >> ${HOME}/.cache/wal/colors-zathura
 }
 
 
 reload_openbox() {
-  sed -i"" --follow-symlinks \
+  sed -i --follow-symlinks \
       -e "s/bg.color: #.*/bg.color: ${color0:-#000000}/" \
-      -e "s/text.color: #.*/text.color: ${color7:-#FFFFFF}/" \
-      -e "s/image.color: #.*/image.color: ${color7:-#FFFFFF}/" \
-      "${HOME}/.themes/agnipau/openbox-3/themerc"
+      -e "s/text.color: #.*/text.color: ${color7:-#ffffff}/" \
+      -e "s/image.color: #.*/image.color: ${color7:-#ffffff}/" \
+      ${HOME}/.themes/Agnipau/openbox-3/themerc
   openbox --reconfigure
 }
 
@@ -49,12 +50,34 @@ reload_2bwm() {
   echo "static const char *colors[] = {" > $HOME/.cache/wal/colors-wal-2bwm.h
   echo "  \"${color0:-#000000}\", // focuscol" >> $HOME/.cache/wal/colors-wal-2bwm.h
   echo "  \"${color0:-#000000}\", // unfocuscol" >> $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "  \"${color3:-#00FF00}\", // fixedcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "  \"${color1:-#FF0000}\", // unkilcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "  \"${color4:-#FFFF00}\", // fixedunkilcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "  \"${color3:-#00ff00}\", // fixedcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "  \"${color1:-#ff0000}\", // unkilcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "  \"${color4:-#ffff00}\", // fixedunkilcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
   echo "  \"${color0:-#000000}\", // outerbordercol" >> $HOME/.cache/wal/colors-wal-2bwm.h
   echo "  \"#000000\"  // emptycol" >> $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "};" >> $HOME/.cache/wal/colors-wal-2bwm.h
+  echo "};" >> ${HOME}/.cache/wal/colors-wal-2bwm.h
+}
+
+
+reload_polybar() {
+  sed -i --follow-symlinks \
+      -e "s/^color0 = #.*/color0 = ${color0:-#000000}/" \
+      -e "s/^color1 = #.*/color1 = ${color1:-#ffffff}/" \
+      -e "s/^color2 = #.*/color2 = ${color2:-#ffffff}/" \
+      -e "s/^color3 = #.*/color3 = ${color3:-#ffffff}/" \
+      -e "s/^color4 = #.*/color4 = ${color4:-#ffffff}/" \
+      -e "s/^color5 = #.*/color5 = ${color5:-#ffffff}/" \
+      -e "s/^color6 = #.*/color6 = ${color6:-#ffffff}/" \
+      -e "s/^color7 = #.*/color7 = ${color7:-#ffffff}/" \
+      -e "s/^color8 = #.*/color8 = ${color8:-#ffffff}/" \
+      -e "s/^color9 = #.*/color9 = ${color9:-#ffffff}/" \
+      -e "s/^color10 = #.*/color10 = ${color10:-#ffffff}/" \
+      -e "s/^color11 = #.*/color11 = ${color11:-#ffffff}/" \
+      -e "s/^color12 = #.*/color12 = ${color12:-#ffffff}/" \
+      -e "s/^color13 = #.*/color13 = ${color13:-#ffffff}/" \
+      -e "s/^color14 = #.*/color14 = ${color14:-#ffffff}/" \
+      -e "s/^color15 = #.*/color15 = ${color15:-#ffffff}/" \
+      ${HOME}/.config/polybar/config
 }
 
 
@@ -63,6 +86,7 @@ main() {
   reload_zathura &
   reload_openbox &
   reload_2bwm &
-  xrdb -load ~/.Xresources
+  reload_polybar &
+  xrdb -load ${HOME}/.Xresources
 }
 main

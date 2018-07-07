@@ -1,11 +1,11 @@
 # vim:ft=sh
 #
-# agnipau theme for openbox
+# Agnipau theme for openbox
 
 # Titlebar colors
-window.*.title.bg.color: #011A27
-window.*.label.text.color: #c2cbd2
-window.*.button.*.image.color: #c2cbd2
+window.*.title.bg.color: #0d0d0c
+window.*.label.text.color: #afb7b6
+window.*.button.*.image.color: #afb7b6
 
 # Titlebar
 padding.width: 15

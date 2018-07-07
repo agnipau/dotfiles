@@ -9,7 +9,7 @@
 
 # Prompt
 PS1="\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] "
-
+#PS1='➜ '
 
 # Envars
 export HISTCONTROL='ignoredups'
@@ -39,6 +39,7 @@ bind '"\e[B": history-search-forward'
 bind '"\e\C-l": "\C-p\C-e | less\C-m"'
 bind '"\e\e": "\C-asudo \C-e"' 
 
+
 # Tmux
 alias tmux='tmux -f ${HOME}/.config/tmux/tmux.conf'
 alias mux='tmuxinator'
@@ -64,6 +65,8 @@ alias est='nvim ${HOME}/srcs/st/config.h'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
 alias i2bwm='cd ${HOME}/srcs/2bwm && sudo make clean install && cd -'
 alias ibash='. ${HOME}/.bashrc'
+alias exre='nvim ${HOME}/.Xresources'
+alias ixre='xrdb -load ${HOME}/.Xresources'
 
 
 # Inspired by zsh's cd ... thing
@@ -177,7 +180,6 @@ alias obapp='obxprop | grep ^_OB_APP_'
 alias app='xprop | grep ^WM_'
 alias nodebug='notify-send "Debug" "Debug message"'
 alias cnodebug='notify-send -h string:fgcolor:${color1} "Debug" "Debug message"'
-alias down='curl -sLO'
 alias grad='. ${HOME}/.bashrc; hsetroot -add $color1 -add $color2 -gradient 0'
 alias solid='. ${HOME}/.bashrc; hsetroot -solid $color1'
 alias cp='rsync -ah --progress'

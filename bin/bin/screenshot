@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #
-# A simple script to take a screenshot using scrot.
+# A simple script to take screenshots using scrot.
 
-scrot 'Screen_%d.%m.%y_%H.%M.%S.png' \
-      -e 'mv $f ~/immagini
+scrot '%d-%m-%Y_%H-%M-%S.png' \
+      -e 'mv $f ~/immagini'
+
+notify-send --expire-time=3000 "Screenshot saved"

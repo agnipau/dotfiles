@@ -29,7 +29,7 @@
 
 <!-- Theme -->
 <theme>
-  <name>agnipau</name>
+  <name>Agnipau</name>
   <titleLayout>LC</titleLayout>
   <cornerRadius>3</cornerRadius>
   <keepBorder>no</keepBorder>
@@ -66,12 +66,12 @@
   <firstdesk>1</firstdesk>
   <popupTime>0</popupTime>
   <names>
-    <name>uno</name>
-    <name>due</name>
-    <name>tre</name>
-    <name>quattro</name>
-    <name>cinque</name>
-    <name>sei</name>
+    <name>1</name>
+    <name>2</name>
+    <name>3</name>
+    <name>4</name>
+    <name>5</name>
+    <name>6</name>
   </names>
 </desktops>
 
@@ -466,7 +466,7 @@
       <command>rofi -show run</command>
     </action>
   </keybind>
-  <keybind key="W-i">
+  <keybind key="W-S-d">
     <action name="Execute">
       <command>rofi -show window</command>
     </action>
@@ -557,7 +557,7 @@
 <mouse>
   <dragThreshold>1</dragThreshold>
   <doubleClickTime>500</doubleClickTime>
-  <screenEdgeWarpTime>400</screenEdgeWarpTime>
+  <screenEdgeWarpTime>0</screenEdgeWarpTime>
 
   <!-- Frame -->
   <context name="Frame">
@@ -826,6 +826,12 @@
       <height>88%</height>
     </size>
   </application>
+  <application class="Telegram-desktop">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+  </application>
   <application class="discord">
     <desktop>4</desktop>
     <position force="yes">
@@ -836,6 +842,18 @@
       <width>95%</width>
       <height>88%</height>
     </size>
+  </application>
+  <application class="Lxappearance">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+  </application>
+  <application class="Thunar">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
   </application>
   <application class="feh">
     <decor>no</decor>
