@@ -36,7 +36,11 @@ bind 'set completion-query-items 0'
 bind 'set colored-stats on'
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
-bind '"\e\C-l": "\C-p\C-e | less\C-m"'
+
+
+# Some precious bindings
+bind '"\e\C-l": "\C-e | less\C-m"'
+bind '"\e\C-b": "\C-abc -l <<< \C-m"'
 bind '"\e\e": "\C-asudo \C-e"' 
 
 
@@ -170,6 +174,7 @@ alias re='sudo reboot'
 
 
 # Other
+alias aa='echo $COLUMNS $LINES'
 alias m='alsamixer'
 alias n='nvim'
 alias nfzf='nvim $(fzf)'

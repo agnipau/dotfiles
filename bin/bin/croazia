@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #
-# Connect Void Linux to home wifi.
+# Connect Void Linux to home wifi in Croatia.
 
 sudo rm -rf /etc/wpa_supplicant/wpa_supplicant.conf
 
-sudo cp /etc/wpa_supplicant/wpa_supplicant.conf.casa \
+sudo cp /etc/wpa_supplicant/wpa_supplicant.conf.croazia \
         /etc/wpa_supplicant/wpa_supplicant.conf
 
 sudo sv restart dhcpcd

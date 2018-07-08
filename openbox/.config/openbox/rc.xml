@@ -31,7 +31,7 @@
 <theme>
   <name>Agnipau</name>
   <titleLayout>LC</titleLayout>
-  <cornerRadius>3</cornerRadius>
+  <cornerRadius menu="yes">3</cornerRadius>
   <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
   <font place="ActiveWindow">
@@ -373,18 +373,18 @@
   <keybind key="A-q">
     <action name="Close"/>
   </keybind>
+
+  <!-- Emulate pseudo tiling window management -->
   <keybind key="A-g">
     <action name="MoveResizeTo">
-      <x>4%</x>
+      <x>8%</x>
       <y>center</y>
     </action>
   </keybind>
   <keybind key="A-S-g">
     <action name="MoveResizeTo">
-      <x>center</x>
+      <x>-8%</x>
       <y>center</y>
-      <width>850</width>
-      <height>94%</height>
     </action>
   </keybind>
   <keybind key="W-g">
@@ -397,16 +397,38 @@
     <action name="MoveResizeTo">
       <x>center</x>
       <y>center</y>
-      <width>32%</width>
-      <height>67%</height>
+      <width>41%</width>
+      <height>90%</height>
     </action>
   </keybind>
   <keybind key="W-C-g">
     <action name="MoveResizeTo">
       <x>center</x>
       <y>center</y>
-      <width>1826</width>
-      <height>93%</height>
+      <width>90%</width>
+      <height>90%</height>
+    </action>
+  </keybind>
+
+  <!-- st related keybindings -->
+  <keybind key="W-Return">
+    <action name="Execute">
+      <command>st</command>
+    </action>
+  </keybind>
+  <keybind key="A-Return">
+    <action name="Execute">
+      <command>st</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-Return">
+    <action name="Focus"/>
+    <action name="Raise"/>
+    <action name="MoveResizeTo">
+      <x>center</x>
+      <y>44</y>
+      <width>41%</width>
+      <height>45%</height>
     </action>
   </keybind>
 
@@ -451,16 +473,6 @@
       <command>~/bin/style --current-grad-light</command>
     </action>
   </keybind>
-  <keybind key="W-s">
-    <action name="Execute">
-      <command>~/bin/cmus-info</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-s">
-    <action name="Execute">
-      <command>slock</command>
-    </action>
-  </keybind>
   <keybind key="W-d">
     <action name="Execute">
       <command>rofi -show run</command>
@@ -469,11 +481,6 @@
   <keybind key="W-S-d">
     <action name="Execute">
       <command>rofi -show window</command>
-    </action>
-  </keybind>
-  <keybind key="W-p">
-    <action name="Execute">
-      <command>~/bin/screenshot</command>
     </action>
   </keybind>
   <keybind key="W-z">
@@ -501,54 +508,101 @@
       <command>~/bin/norec</command>
     </action>
   </keybind>
-  <keybind key="W-Return">
+
+  <!-- F-keys and arrows keybindings -->
+  <keybind key="W-F1">
     <action name="Execute">
-      <command>st</command>
+      <command>slock</command>
     </action>
   </keybind>
-  <keybind key="W-S-Return">
-    <action name="Focus"/>
-    <action name="Raise"/>
-    <action name="MoveResizeTo">
-      <x>center</x>
-      <y>24</y>
-      <width>45%</width>
-      <height>48%</height>
-    </action>
-  </keybind>
-  <keybind key="A-Return">
+  <keybind key="W-F2">
     <action name="Execute">
-      <command>st -g 100x45</command>
+      <command>~/bin/show_ssid</command>
     </action>
   </keybind>
-  <keybind key="W-Up">
+  <keybind key="W-F5">
     <action name="Execute">
-      <command>~/bin/vol --volup</command>
+      <command>xbacklight -dec 10%</command>
     </action>
   </keybind>
-  <keybind key="W-Down">
+  <keybind key="W-F6">
     <action name="Execute">
-      <command>~/bin/vol --voldown</command>
+      <command>xbacklight -inc 10%</command>
     </action>
   </keybind>
-  <keybind key="W-Left">
+  <keybind key="W-F10">
     <action name="Execute">
       <command>~/bin/vol --toggle</command>
     </action>
   </keybind>
-  <keybind key="A-Left">
-    <action name="Execute">
-      <command>~/bin/vol --min</command>
-    </action>
-  </keybind>
-  <keybind key="W-Right">
+  <keybind key="W-S-F10">
     <action name="Execute">
       <command>~/bin/vol --current</command>
     </action>
   </keybind>
-  <keybind key="A-Right">
+  <keybind key="W-F11">
+    <action name="Execute">
+      <command>~/bin/vol --voldown</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-F11">
+    <action name="Execute">
+      <command>~/bin/vol --min</command>
+    </action>
+  </keybind>
+  <keybind key="W-F12">
+    <action name="Execute">
+      <command>~/bin/vol --volup</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-F12">
     <action name="Execute">
       <command>~/bin/vol --max</command>
+    </action>
+  </keybind>
+  <keybind key="W-Print">
+    <action name="Execute">
+      <command>~/bin/screenshot</command>
+    </action>
+  </keybind>
+  <keybind key="W-Up">
+    <action name="Execute">
+      <command>cmus-remote --stop</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-Up">
+    <action name="Execute">
+      <command>cmus-remote --play</command>
+    </action>
+  </keybind>
+  <keybind key="W-Down">
+    <action name="Execute">
+      <command>cmus-remote --pause</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-Down">
+    <action name="Execute">
+      <command>~/bin/cmus-info</command>
+    </action>
+  </keybind>
+  <keybind key="W-Left">
+    <action name="Execute">
+      <command>cmus-remote --prev</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-Left">
+    <action name="Execute">
+      <command>cmus-remote --seek -5s</command>
+    </action>
+  </keybind>
+  <keybind key="W-Right">
+    <action name="Execute">
+      <command>cmus-remote --next</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-Right">
+    <action name="Execute">
+      <command>cmus-remote --seek +5s</command>
     </action>
   </keybind>
 </keyboard>
@@ -811,8 +865,8 @@
       <y>center</y>
     </position>
     <size>
-      <width>95%</width>
-      <height>93%</height>
+      <width>1226</width>
+      <height>630</height>
     </size>
   </application>
   <application class="TelegramDesktop">
@@ -822,15 +876,9 @@
       <y>center</y>
     </position>
     <size>
-      <width>95%</width>
-      <height>88%</height>
+      <width>1226</width>
+      <height>630</height>
     </size>
-  </application>
-  <application class="Telegram-desktop">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
   </application>
   <application class="discord">
     <desktop>4</desktop>
@@ -839,21 +887,9 @@
       <y>center</y>
     </position>
     <size>
-      <width>95%</width>
-      <height>88%</height>
+      <width>1226</width>
+      <height>630</height>
     </size>
-  </application>
-  <application class="Lxappearance">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-  </application>
-  <application class="Thunar">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
   </application>
   <application class="feh">
     <decor>no</decor>
@@ -867,13 +903,13 @@
   <application class="mpv">
     <decor>no</decor>
   </application>
-  <!--application class="*">
+  <application class="*">
     <position force="yes">
       <x>center</x>
       <y>center</y>
       <monitor>mouse</monitor>
     </position>
-  </application-->
+  </application>
 </applications>
 
 </openbox_config>
