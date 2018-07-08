@@ -1,0 +1,10 @@
+# This works too, but alsamixer will by default look at the wrong audio card (in my case).
+#pcm.!default {
+#  type hw
+#  card 1
+#  device 0
+#}
+
+defaults.pcm.card 1
+defaults.pcm.device 0
+defaults.ctl.card 1

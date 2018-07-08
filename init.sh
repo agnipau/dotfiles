@@ -18,7 +18,8 @@ read -p "==> Starting to remove all config files that would make conflict with m
 
 [ "$enter" = "q" ] && exit 0
 
-stow -D 2bwm \
+stow -D alsa \
+        2bwm \
 	bash \
 	bin \
 	bspwm \
@@ -41,7 +42,8 @@ stow -D 2bwm \
 
 echo "==> Starting to create symbolic links..."
 
-stow -t ${HOME} 2bwm \
+stow -t ${HOME} alsa \
+                2bwm \
 	        bash \
 	        bin \
 	        bspwm \

@@ -276,13 +276,6 @@ export FZF_CTRL_R_OPTS='--reverse'
 . ${HOME}/.cache/wal/colors.sh
 
 
-# Create a dir and cd into it
-mkcd() {
-  [[ $# -gt 1 ]] && return
-  mkdir "$1" && cd "$1"
-}
-
-
 # git status utility
 gs() {
   [[ $# -eq 0 ]] && repo_path="$PWD"
@@ -371,7 +364,7 @@ git-remote-setter() {
   cd ${HOME}/progetti/youtube-dl-batchfiles
   git remote set-url origin git@github.com:matteoguarda/youtube-dl-batchfiles.git
   cd ${HOME}/progetti/wal.tdesktop-theme
-  git remote set-url origin git@github.com:matteoguarda/wal.tdesktop-theme
+  git remote set-url origin git@github.com:matteoguarda/wal.tdesktop-theme.git
 
   cd ${HOME}/progetti/wallpapers
   git remote set-url origin git@gitlab.com:matteoguarda/wallpapers.git
@@ -379,6 +372,8 @@ git-remote-setter() {
   git remote set-url origin git@gitlab.com:matteoguarda/srcsbak.git
   cd ${HOME}/progetti/fonts
   git remote set-url origin git@gitlab.com:matteoguarda/fonts.git
+  cd ${HOME}/progetti/altro
+  git remote set-url origin git@gitlab.com:matteoguarda/altro.git
 
   echo "==> Done!"
   cd $original_dir
@@ -407,7 +402,7 @@ nvima() {
 void-list-pkgs() {
   xbps-query -l | awk '{ print $2 }' | xargs -n1 xbps-uhelper getpkgname | fmt > void_installed_pkgs
   echo "==> You have installed $(cat void_installed_pkgs | wc -w) packages"
-  sed -i -e 's/ discord//' -e 's/ spotify//' void_installed_pkgs
+  sed -i -e 's/ discord//' -e 's/ spotify//' -e 's/ openbox//' void_installed_pkgs
 }
 
 

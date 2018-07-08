@@ -1,14 +1,15 @@
-Adapta GConf ImageMagick LuaJIT MesaLib-devel SDL2 Thunar aalib acl
-acpid alsa-lib alsa-utils at-spi2-atk at-spi2-atk-devel at-spi2-core
-at-spi2-core-devel atk atk-devel attr autoconf automake avahi-glib-libs
-avahi-libs b43-fwcutter babl base-files base-system bash bash-completion
-bc binutils bison bspwm btrfs-progs bzip2 bzip2-devel ca-certificates
-cairo cairo-devel cava celt chromium clang cmake cmus colord-devel
-compton-git coreutils cpio cryptsetup cups-devel curl dash dbus dbus-devel
-dbus-glib dbus-libs dbus-x11 dconf dejavu-fonts-ttf desktop-file-utils
-device-mapper dhcpcd diffutils dmraid dnssec-anchors dosfstools
-dracut dunst e2fsprogs e2fsprogs-libs efibootmgr elfutils-devel enchant
-encodings ethtool eudev eudev-libudev eudev-libudev-devel exiv2 exo expat
+Adapta GConf ImageMagick LuaJIT MesaLib-devel SDL2 Thunar aalib
+acl acpid alsa-lib alsa-utils at-spi2-atk at-spi2-atk-devel
+at-spi2-core at-spi2-core-devel atk atk-devel attr autoconf automake
+avahi-glib-libs avahi-libs axel b43-fwcutter babl base-files
+base-system bash bash-completion bc binutils bison bspwm btrfs-progs
+bzip2 bzip2-devel ca-certificates cairo cairo-devel cava celt chromium
+clang cmake cmus colord-devel compton-git coreutils cpio cryptsetup
+cups-devel curl dash dbus dbus-devel dbus-glib dbus-libs dbus-x11
+dconf dejavu-fonts-ttf desktop-file-utils device-mapper dhcpcd
+diffutils dmraid dnssec-anchors dosfstools dracut dunst
+e2fsprogs e2fsprogs-libs efibootmgr elfutils-devel enchant encodings
+ethtool eudev eudev-libudev eudev-libudev-devel exiv2 exo expat
 expat-devel f2fs-tools fd feh ffmpeg file findutils font-adobe-100dpi
 font-adobe-75dpi font-adobe-utopia-100dpi font-adobe-utopia-75dpi
 font-adobe-utopia-type1 font-alias font-bh-100dpi font-bh-75dpi
@@ -72,7 +73,7 @@ lzo m4 make man-pages mcpp mdadm mdocml mesa-ati-dri mesa-intel-dri
 mesa-nouveau-dri mesa-vmwgfx-dri minizip mit-krb5-libs mkfontdir
 mkfontscale mozjs52 mpfr mpv msgpack mtdev mypaint-brushes ncurses
 ncurses-base ncurses-libs neofetch neovim nettle nghttp2 npth nspr
-nss ntfs-3g nvi ocl-icd oclock openbox openjpeg openjpeg2 openssh opus
+nss ntfs-3g nvi ocl-icd oclock openjpeg openjpeg2 openssh opus
 orc os-prober p11-kit pam pam-base pam-libs pango pango-devel pango-xft
 papirus-icon-theme parted patch pciutils pcre-devel perl perl-Authen-SASL
 perl-Convert-BinHex perl-IO-Socket-SSL perl-IO-stringy perl-MIME-tools
@@ -82,28 +83,28 @@ pmount polkit polybar poppler poppler-data poppler-glib popt procps-ng
 psmisc pv python python-pip python-setuptools python3 python3-cairo
 python3-docopt python3-gobject python3-keyutils python3-setuptools
 python3-yaml pywal qiv qt5 qt5-imageformats qtchooser re2 readline
-rest rhash rofi rsync ruby run-parts runit runit-void rxvt-unicode
-rxvt-unicode-terminfo scrot sed sessreg setxkbmap shadow shared-mime-info
-slop smproxy snappy speexdsp sqlite startup-notification stow
-sudo sxhkd tar telegram-desktop telepathy-glib texinfo texlive2018-bin
-thin-provisioning-tools thunar-archive-plugin thunar-volman tiff
-tiff-devel tmux traceroute transset tslib tzdata udiskie udisks2
-unibilium unzip usbutils util-linux v4l-utils viewnior void-artwork
-volume_key w3m w3m-img wayland wayland-devel wayland-protocols webkit2gtk
-wget which wifi-firmware wireless_tools wpa_supplicant x11perf x264
-x265 xauth xbacklight xbps xbps-triggers xcalc xcb-proto xcb-util
-xcb-util-cursor xcb-util-cursor-devel xcb-util-devel xcb-util-image
-xcb-util-image-devel xcb-util-keysyms xcb-util-keysyms-devel
-xcb-util-renderutil xcb-util-renderutil-devel xcb-util-wm
-xcb-util-wm-devel xcb-util-xrm xcb-util-xrm-devel xclip xclipboard
-xclock xcmsdb xconsole xcursorgen xdg-user-dirs xdg-utils xdpyinfo
-xev xeyes xf86-input-evdev xf86-input-libinput xf86-input-synaptics
-xf86-input-vmmouse xf86-input-wacom xf86-video-amdgpu xf86-video-ati
-xf86-video-dummy xf86-video-intel xf86-video-mga xf86-video-nouveau
-xf86-video-vesa xf86-video-vmware xfce4-panel xfconf xfontsel xfsprogs
-xgamma xhost xinit xinput xkbcomp xkbevd xkbutils xkeyboard-config xkill
-xload xlogo xlsatoms xlsclients xmessage xmodmap xorg xorg-apps xorg-fonts
-xorg-input-drivers xorg-server xorg-video-drivers xorgproto xpr xprop
-xrandr xrdb xrefresh xset xsetroot xtools xtrans xvidcore xvinfo xwd
-xwininfo xwud xz youtube-dl zathura zathura-pdf-mupdf zd1211-firmware
-zip zlib zlib-devel zziplib
+redshift rest rhash rofi rsync ruby run-parts runit runit-void
+rxvt-unicode rxvt-unicode-terminfo scrot sed sessreg setxkbmap
+shadow shared-mime-info slop smproxy snappy speexdsp sqlite
+startup-notification stow sudo sxhkd tar telegram-desktop telepathy-glib
+texinfo texlive2018-bin thin-provisioning-tools thunar-archive-plugin
+thunar-volman tiff tiff-devel tmux traceroute transset tslib tzdata
+udiskie udisks2 unibilium unzip usbutils util-linux v4l-utils
+viewnior void-artwork volume_key w3m w3m-img wayland wayland-devel
+wayland-protocols webkit2gtk wget which wifi-firmware wireless_tools
+wpa_supplicant x11perf x264 x265 xauth xbacklight xbps xbps-triggers
+xcalc xcb-proto xcb-util xcb-util-cursor xcb-util-cursor-devel
+xcb-util-devel xcb-util-image xcb-util-image-devel xcb-util-keysyms
+xcb-util-keysyms-devel xcb-util-renderutil xcb-util-renderutil-devel
+xcb-util-wm xcb-util-wm-devel xcb-util-xrm xcb-util-xrm-devel
+xclip xclipboard xclock xcmsdb xconsole xcursorgen xdg-user-dirs
+xdg-utils xdpyinfo xev xeyes xf86-input-evdev xf86-input-libinput
+xf86-input-synaptics xf86-input-vmmouse xf86-input-wacom
+xf86-video-amdgpu xf86-video-ati xf86-video-dummy xf86-video-intel
+xf86-video-mga xf86-video-nouveau xf86-video-vesa xf86-video-vmware
+xfce4-panel xfconf xfontsel xfsprogs xgamma xhost xinit xinput xkbcomp
+xkbevd xkbutils xkeyboard-config xkill xload xlogo xlsatoms xlsclients
+xmessage xmodmap xorg xorg-apps xorg-fonts xorg-input-drivers xorg-server
+xorg-video-drivers xorgproto xpr xprop xrandr xrdb xrefresh xset xsetroot
+xtools xtrans xvidcore xvinfo xwd xwininfo xwud xz youtube-dl zathura
+zathura-pdf-mupdf zd1211-firmware zip zlib zlib-devel zziplib

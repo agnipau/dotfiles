@@ -9,7 +9,7 @@ xset m 1/1
 xset r rate 200 40
 xrdb ${HOME}/.Xresources
 
-wal -R -o ${HOME}/bin/wal-set -l
+wal -R -o ${HOME}/bin/wal-set
 
 compton -b --config ${HOME}/.config/compton/compton.conf
 
