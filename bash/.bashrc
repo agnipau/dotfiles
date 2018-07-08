@@ -11,6 +11,7 @@
 PS1="\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] "
 #PS1='➜ '
 
+
 # Envars
 export HISTCONTROL='ignoredups'
 export HISTSIZE='1000000'
@@ -183,8 +184,8 @@ alias ydl='youtube-dl'
 alias mv='mv -i'
 alias obapp='obxprop | grep ^_OB_APP_'
 alias app='xprop | grep ^WM_'
-alias nodebug='notify-send "Debug" "Debug message"'
-alias cnodebug='notify-send -h string:fgcolor:${color1} "Debug" "Debug message"'
+alias nodebug='notify-send "Debug message"'
+alias cnodebug='notify-send -h string:fgcolor:${color1} "Debug message"'
 alias grad='. ${HOME}/.bashrc; hsetroot -add $color1 -add $color2 -gradient 0'
 alias solid='. ${HOME}/.bashrc; hsetroot -solid $color1'
 alias cp='rsync -ah --progress'

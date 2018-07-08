@@ -3,7 +3,6 @@ set encoding=utf-8
 set fileencoding=utf-8
 scriptencoding utf-8
 
-
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
 
@@ -16,11 +15,9 @@ Plug 'baskerville/vim-sxhkdrc'
 
 call plug#end()
 
-
 " Enter Limelight every time Goyo is toggled
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-
 
 " Some opts
 syntax on
@@ -38,7 +35,6 @@ set noswapfile
 set nocursorline
 set backspace=indent,eol,start
 set clipboard=unnamedplus
-
 
 " Keybindings
 let mapleader=" "

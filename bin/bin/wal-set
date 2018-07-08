@@ -85,8 +85,6 @@ main() {
   reload_dunst &
   reload_zathura &
   reload_openbox &
-  reload_2bwm &
-  reload_polybar &
   xrdb -load ${HOME}/.Xresources
 }
 main

@@ -6,25 +6,25 @@
   # Display
   monitor = 0
   follow = mouse
-  geometry = "300-45+45"
+  geometry = "300-30+30"
   indicate_hidden = yes
   shrink = yes
   transparency = 0
   notification_height = 0
   separator_height = 0
-  padding = 32
-  horizontal_padding = 32
+  padding = 25
+  horizontal_padding = 25
   frame_width = 0
   frame_color = "#aaaaaa"
   separator_color = frame
   sort = yes
   idle_threshold = 120
   # Text
-  font = Iosevka Term 16
+  font = Iosevka Term 14
   line_height = 0
   markup = full
   format = "<b>%s</b>\n%b"
-  alignment = right
+  alignment = center
   show_age_threshold = 60
   word_wrap = yes
   ellipsize = middle

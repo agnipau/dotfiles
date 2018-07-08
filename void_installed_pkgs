@@ -68,7 +68,7 @@ libxbps libxcb libxcb-devel libxdg-basedir libxfce4ui libxfce4util
 libxkbcommon libxkbcommon-devel libxkbcommon-x11 libxkbfile libxml2
 libxml2-devel libxshmfence libxshmfence-devel libxslt libyaml libzstd
 linux linux-firmware-amd linux-firmware-intel linux-firmware-network
-linux-firmware-nvidia linux4.16 llvm-libunwind lua52 lvm2 lxappearance
+linux-firmware-nvidia linux4.17 llvm-libunwind lua52 lvm2 lxappearance
 lzo m4 make man-pages mcpp mdadm mdocml mesa-ati-dri mesa-intel-dri
 mesa-nouveau-dri mesa-vmwgfx-dri minizip mit-krb5-libs mkfontdir
 mkfontscale mozjs52 mpfr mpv msgpack mtdev mypaint-brushes ncurses
