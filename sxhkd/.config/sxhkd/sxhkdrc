@@ -4,7 +4,6 @@
 
 
 # WM indipendent keybindings
-
 ## Terminal (tiling mode)
 super + Return
         st
@@ -65,7 +64,6 @@ super + Escape
 
 
 # bspwm
-
 ## Quit bspwm normally
 super + control + q
 	bspc quit
@@ -89,9 +87,7 @@ super + y
 super + {shift + }g
 	bspc node --swap biggest{.local}
 
-
 # State/Flags
-
 ## Set the window state
 super + {t,p,f,x}
 	bspc node --state {tiled,pseudo_tiled,floating,fullscreen}
@@ -108,7 +104,6 @@ alt + {u,s,y}
 
 
 # Focus/Swap
-
 ## Focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node --{focus,swap} {west,south,north,east}
@@ -161,7 +156,6 @@ alt + control + {1-9,0}
 
 
 # Preselect
-
 ## Preselect the direction
 super + ctrl + {h,j,k,l}
 	bspc node --presel-dir {west,south,north,east}
@@ -180,7 +174,6 @@ super + ctrl + shift + space
 
 
 # Move/Resize (with features I like from 2bwm)
-
 ## Resize a tiled window (bspwm style)
 super + shift + control + {h,j,k,l}
         bspc node --resize {left -20 0,bottom 0 20, top 0 -20, right 20 0}

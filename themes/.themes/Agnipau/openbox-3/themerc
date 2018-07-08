@@ -1,6 +1,6 @@
 # vim:ft=sh
 #
-# Agnipau theme for openbox
+# Agnipau theme for Openbox
 
 # Titlebar colors
 window.*.title.bg.color: #0d1310
