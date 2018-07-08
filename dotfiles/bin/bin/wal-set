@@ -46,19 +46,6 @@ reload_openbox() {
 }
 
 
-reload_2bwm() {
-  echo "static const char *colors[] = {" > $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "  \"${color0:-#000000}\", // focuscol" >> $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "  \"${color0:-#000000}\", // unfocuscol" >> $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "  \"${color3:-#00ff00}\", // fixedcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "  \"${color1:-#ff0000}\", // unkilcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "  \"${color4:-#ffff00}\", // fixedunkilcol" >> $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "  \"${color0:-#000000}\", // outerbordercol" >> $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "  \"#000000\"  // emptycol" >> $HOME/.cache/wal/colors-wal-2bwm.h
-  echo "};" >> ${HOME}/.cache/wal/colors-wal-2bwm.h
-}
-
-
 reload_polybar() {
   sed -i --follow-symlinks \
       -e "s/^color0 = #.*/color0 = ${color0:-#000000}/" \

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Send a notify with the artist name and the title of the currently playing song by cmus.
+# Send a notification with the artist name and the title of the currently playing song by cmus.
 
 title="$(cmus-remote -Q | grep "^tag title" | sed 's/tag title //')"
 artist="$(cmus-remote -Q | grep "^tag artist" | sed 's/tag artist //')"

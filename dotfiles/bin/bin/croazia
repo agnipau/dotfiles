@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Connect Void Linux to home wifi in Croatia.
+# Connect to home wifi in Croatia.
 
 sudo rm -rf /etc/wpa_supplicant/wpa_supplicant.conf
 

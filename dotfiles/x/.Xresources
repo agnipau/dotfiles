@@ -8,7 +8,6 @@
 *.italicFont: xft:Iosevka Term:size=12 *.boldItalicFont: xft:Iosevka Term:size=12
 
 ! Xft settings
-!Xft.dpi: 110
 Xft.antialias: true
 Xft.hinting: true
 Xft.autohint: false
@@ -18,7 +17,7 @@ Xft.hintstyle: hintslight
 
 ! Rofi
 rofi.theme: .cache/wal/colors-rofi-dark.rasi
-rofi.font: Iosevka 14
+rofi.font: Iosevka 16
 rofi.separator-style: none
 rofi.hide-scrollbar: true
 rofi.fullscreen: false

@@ -3,7 +3,7 @@ acl acpid alsa-lib alsa-utils at-spi2-atk at-spi2-atk-devel
 at-spi2-core at-spi2-core-devel atk atk-devel attr autoconf automake
 avahi-glib-libs avahi-libs axel b43-fwcutter babl base-files
 base-system bash bash-completion bc binutils bison bspwm btrfs-progs
-bzip2 bzip2-devel ca-certificates cairo cairo-devel cava celt chromium
+bzip2 bzip2-devel ca-certificates cairo cairo-devel celt chromium
 clang cmake cmus colord-devel compton-git coreutils cpio cryptsetup
 cups-devel curl dash dbus dbus-devel dbus-glib dbus-libs dbus-x11
 dconf dejavu-fonts-ttf desktop-file-utils device-mapper dhcpcd

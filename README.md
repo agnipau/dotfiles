@@ -1,18 +1,45 @@
 # Dotfiles
 
-![openbox screenshot](https://user-images.githubusercontent.com/40271651/42132687-1afc47a4-7d1d-11e8-97a0-a0c013997b38.png)
+# Screenshots
+
+![openbox-patched screenshot]()
 > openbox-patched
 
-![bspwm screenshot](https://user-images.githubusercontent.com/40271651/42163101-80e3df7a-7e01-11e8-98c8-2715298c6fe5.png)
+![bspwm screenshot]()
 > bspwm
 
-![2bwm screenshot](https://user-images.githubusercontent.com/40271651/41940483-2715ad8c-7999-11e8-8ab4-492d82bc428a.png)
+![2bwm screenshot]()
 > 2bwm
 
-Currently I'm using [openbox] as my floating window manager and [bspwm] as my tiling window manager, but there are also configs for [2bwm].
+Currently I'm using [void linux] as my os, [openbox] as my floating window manager ([with some patches]) and [bspwm] as my tiling window manager, but there are also configs for [2bwm], which I enjoy a lot.
 
+# Installation
+
+Just install [stow] and then run:
+
+```bash
+git clone --depth 1 https://github.com/matteoguarda/dotfiles.git
+cd dotfiles
+./init.sh
+```
+
+If stow gives you any error, delete the files that make conflict with what you want to stow.
+You can also just individually stow a config, e.g.:
+
+```bash
+cd dotfiles
+stow -t $HOME st
+```
+
+If you don't want anymore a config, run:
+```bash
+cd dotfiles
+stow -D st
+```
+
+[void linux]: https://voidlinux.org
 [openbox]: http://openbox.org/wiki/Main_Page
-[2bwm]: https://github.com/venam/2bwm
-[i3]: https://i3wm.org/
+[with some patches]: https://github.com/dylanaraps/openbox-patched
 [bspwm]: https://github.com/baskerville/bspwm
-[dwm]: https://dwm.suckless.org/
+[2bwm]: https://github.com/venam/2bwm
+[stow]: https://www.gnu.org/software/stow
