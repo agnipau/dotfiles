@@ -8,10 +8,7 @@
 ![bspwm screenshot]()
 > bspwm
 
-![2bwm screenshot]()
-> 2bwm
-
-Currently I'm using [void linux] as my os, [openbox] as my floating window manager ([with some patches]) and [bspwm] as my tiling window manager, but there are also configs for [2bwm], which I enjoy a lot.
+Currently I'm using [void linux] as my os, [openbox] as my floating window manager ([with some patches]) and [bspwm] as my tiling window manager.
 
 # Installation
 
