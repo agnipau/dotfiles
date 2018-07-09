@@ -35,6 +35,7 @@ set noswapfile
 set nocursorline
 set backspace=indent,eol,start
 set clipboard=unnamedplus
+set colorcolumn=80
 
 " Keybindings
 let mapleader=" "

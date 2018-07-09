@@ -488,6 +488,11 @@
       <command>~/bin/draw</command>
     </action>
   </keybind>
+  <keybind key="W-m">
+    <action name="Execute">
+      <command>st -n musica -e cmus</command>
+    </action>
+  </keybind>
   <keybind key="W-w">
     <action name="Execute">
       <command>~/bin/rec</command>
@@ -528,6 +533,16 @@
   <keybind key="W-F6">
     <action name="Execute">
       <command>xbacklight -inc 10%</command>
+    </action>
+  </keybind>
+  <keybind key="W-F7">
+    <action name="Execute">
+      <command>redshift -PO 4500</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-F7">
+    <action name="Execute">
+      <command>redshift -x</command>
     </action>
   </keybind>
   <keybind key="W-F10">
@@ -866,7 +881,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>630</height>
+      <height>680</height>
     </size>
   </application>
   <application class="TelegramDesktop">
@@ -891,6 +906,29 @@
       <height>630</height>
     </size>
   </application>
+  <application class="Lxappearance">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+  </application>
+  <application class="Thunar">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+  </application>
+  <application name="musica">
+    <desktop>5</desktop>
+    <position force="yes">
+      <x>70</x>
+      <y>44</y>
+    </position>
+    <size>
+      <width>90%</width>
+      <height>83%</height>
+    </size>
+  </application>
   <application class="feh">
     <decor>no</decor>
   </application>
@@ -902,13 +940,6 @@
   </application>
   <application class="mpv">
     <decor>no</decor>
-  </application>
-  <application class="*">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-      <monitor>mouse</monitor>
-    </position>
   </application>
 </applications>
 

@@ -3,9 +3,9 @@
 # Agnipau theme for Openbox
 
 # Titlebar colors
-window.*.title.bg.color: #0d1310
-window.*.label.text.color: #ccd8d5
-window.*.button.*.image.color: #ccd8d5
+window.*.title.bg.color: #060604
+window.*.label.text.color: #dad1cb
+window.*.button.*.image.color: #dad1cb
 
 # Titlebar
 padding.width: 15

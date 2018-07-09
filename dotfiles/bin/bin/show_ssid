@@ -2,5 +2,5 @@
 #
 # Send a notification with the SSID of the network I'm currently connected.
 
-test "$(iwgetid -r)" && notify-send "$(iwgetid -r)"
-test -z "$(iwgetid -r)" && notify-send "Not connected"
+test "$(iwgetid -r)" && notify-send --expire-time=3000 "$(iwgetid -r)"
+test -z "$(iwgetid -r)" && notify-send --expire-time=3000 "Not connected"
