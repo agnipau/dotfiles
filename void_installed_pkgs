@@ -84,8 +84,8 @@ psmisc pv python python-pip python-setuptools python3 python3-cairo
 python3-docopt python3-gobject python3-keyutils python3-setuptools
 python3-yaml pywal qiv qt5 qt5-imageformats qtchooser re2 readline
 redshift rest rhash rofi rsync ruby run-parts runit runit-void
-rxvt-unicode rxvt-unicode-terminfo scrot sed sessreg setxkbmap
-shadow shared-mime-info slop smproxy snappy speexdsp sqlite
+rxvt-unicode rxvt-unicode-terminfo scrot sed sessreg setxkbmap shadow
+shared-mime-info shellcheck slop smproxy snappy speexdsp sqlite
 startup-notification stow sudo sxhkd tar telegram-desktop telepathy-glib
 texinfo texlive2018-bin thin-provisioning-tools thunar-archive-plugin
 thunar-volman tiff tiff-devel tmux traceroute transset tslib tzdata
