@@ -35,14 +35,16 @@ set noswapfile
 set nocursorline
 set backspace=indent,eol,start
 set clipboard=unnamedplus
-set colorcolumn=80
 
 " Keybindings
 let mapleader=" "
 map <leader><leader> /
-map rr :source ~/.config/nvim/init.vim <CR>
-map mo :nohlsearch <CR>
-map go :Goyo <CR>
+map <leader>rr :source ~/.config/nvim/init.vim <CR>
+map <leader>mo :nohlsearch <CR>
+map <leader>go :Goyo <CR>
+map <leader>li :Limelight! <CR>
+map <leader>cc :set colorcolumn=80 <CR>
+map <leader>co :set colorcolumn=0 <CR>
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
 nnoremap <silent> <A-h> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>

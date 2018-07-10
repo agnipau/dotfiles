@@ -1,41 +1,33 @@
 #!/usr/bin/env bash
 #
-# Script for downloading a list of song and add id3v2 tags to them from a simple text file formatted as the following:
-#
-# Artist@Title of the song
-# <link to the song>
-# Artist@Title of the song
-# <link to the song>
-# And so on...
-#
-# The file containing the links to the songs must be in the same directory where this script is located and you must specify it's name as $1.
-# e.g: ./music-down file_containing_music
+# Script for downloading a list of song and add id3v2 tags to them.
 
-# Declare values for the counters and file containing links to the songs
-c=1
-end=$(($(wc -l musica_da_scaricare | cut -d" " -f1)-1))
 batch_file="$1"
+end_gre="$(wc -l musica_da_scaricare)"
+end="$((${end_gre/$batch_file} - 1))"
 
-# Create a dir to store the songs that will be downloaded
-mkdir downloaded_music
-cd downloaded_music
+mkdir "downloaded_music"
+cd "downloaded_music"
 
-# Actual script
-while [[ $c -le $end ]]; do
-  artist=$(sed -n -e "${c}p" ../${batch_file} | cut -d@ -f1)
-  title=$(sed -n -e "${c}p" ../${batch_file} | cut -d@ -f2)
+for ((c=1; $c<=$end; c+=2)); do
+  artist_gre=$(sed -n -e "${c}p" ../${batch_file})
+  artist="${title_gre/@*}"
+  title_gre=$(sed -n -e "${c}p" ../${batch_file})
+  title="${title_gre/*@}"
   link=$(sed -n -e "$((c+1))p" ../${batch_file})
-  short_link=$(sed -n -e "$((c+1))p" ../${batch_file} | sed -n -e 's_https://__')
+  short_link=${link/"https://"/}
   mkdir -p .ydla-temp
   cd .ydla-temp
   youtube-dl $link \
-             --extract-audio --audio-format mp3 --audio-quality 0 --prefer-ffmpeg \
-             --youtube-skip-dash-manifest --ignore-errors --continue --no-overwrites \
-	     --restrict-filenames --verbose
+             --extract-audio --audio-format mp3 --audio-quality 0 \
+	     --prefer-ffmpeg --youtube-skip-dash-manifest --ignore-errors \
+	     --continue --no-overwrites --restrict-filenames --verbose
   mv *.mp3 "../${artist} - ${title}.mp3"
   cd ..
   id3v2 --delete-all "${artist} - ${title}.mp3"
-  id3v2 --artist "$artist" --song "$title" --comment "$short_link" "${artist} - ${title}.mp3"
+  id3v2 --artist "$artist" \
+	--song "$title" \
+	--comment "$short_link" \
+	"${artist} - ${title}.mp3"
   notify-send --expire-time=3000 "YouTube" "$artist - $title downloaded"
-  c=$((c+2))
 done

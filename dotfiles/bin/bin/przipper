@@ -2,9 +2,7 @@
 #
 # Backup my projects.
 
-cd ${HOME}/progetti
-
-for i in $(ls); do
+for i in "$HOME/progetti/*"; do
   if [[ "$i" != "void-packages" && "$i" != "wallpapers" ]]; then
     zip -9 -r ${i}.zip $i
   fi

@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 #
-# Send a notification with the artist name and the title of the currently playing song by cmus.
+# Send a notification with the artist name and the title of the song played by
+# cmus.
 
-title="$(cmus-remote -Q | grep "^tag title" | sed 's/tag title //')"
-artist="$(cmus-remote -Q | grep "^tag artist" | sed 's/tag artist //')"
-album="$(cmus-remote -Q | grep "^tag album" | sed 's/tag album //')"
+title_gre="$(cmus-remote -Q | grep '^tag title')"
+title="${title_gre/"tag title "/}"
+artist_gre="$(cmus-remote -Q | grep '^tag artist')"
+artist="${artist_gre/"tag artist "/}"
+album_gre="$(cmus-remote -Q | grep '^tag album')"
+album="${album_gre/"tag album "/}"
 
-test "$album" && notify-send --expire-time=3000 "$title" "$artist · $album"
-test -z "$album" && notify-send --expire-time=3000 "$title" "$artist"
+[[ "$album" ]] && notify-send --expire-time=3000 "$artist" "$title · $album"
+[[ -z "$album" ]] && notify-send --expire-time=3000 "$artist" "$title"

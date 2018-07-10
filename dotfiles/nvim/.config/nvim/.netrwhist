@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/matte/progetti/dotfiles/dotfiles/bin/bin/color'
+let g:netrw_dirhist_2='/home/matte/progetti/dotfiles/dotfiles/neofetch/.config/neofetch'
+let g:netrw_dirhist_3='/home/matte/roba'

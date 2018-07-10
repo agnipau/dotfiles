@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+# Prints the output of git status for every project of mine.
+
+linea="--------------------------------------------------------------"
+
+for dir in "$HOME/progetti/*"; do
+  cd "$dir"
+  echo "$linea"
+  echo -e "==> $dir"
+  echo "$linea"
+  git status
+  cd ..
+done
+echo "$linea"

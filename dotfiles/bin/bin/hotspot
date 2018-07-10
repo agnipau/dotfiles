@@ -2,7 +2,7 @@
 #
 # Connect to my smartphone's hotspot. 
 
-sudo rm -rf /etc/wpa_supplicant/wpa_supplicant.conf
+sudo rm -f /etc/wpa_supplicant/wpa_supplicant.conf
 
 sudo cp /etc/wpa_supplicant/wpa_supplicant.conf.hotspot \
         /etc/wpa_supplicant/wpa_supplicant.conf

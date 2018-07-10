@@ -2,7 +2,7 @@
 #
 # Connect to home wifi in Italy.
 
-sudo rm -rf /etc/wpa_supplicant/wpa_supplicant.conf
+sudo rm -f /etc/wpa_supplicant/wpa_supplicant.conf
 
 sudo cp /etc/wpa_supplicant/wpa_supplicant.conf.casa \
         /etc/wpa_supplicant/wpa_supplicant.conf

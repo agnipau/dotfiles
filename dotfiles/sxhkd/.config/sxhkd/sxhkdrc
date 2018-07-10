@@ -2,7 +2,6 @@
 # sxhkd config file
 #
 
-
 # WM indipendent keybindings
 ## Terminal (tiling mode)
 super + Return
@@ -62,7 +61,6 @@ super + shift + s
 super + Escape
 	pkill -USR1 -x sxhkd
 
-
 # bspwm
 ## Quit bspwm normally
 super + control + q
@@ -101,7 +99,6 @@ super + {u,s,y}
 
 alt + {u,s,y}
 	bspc node --flag {locked,sticky,private}
-
 
 # Focus/Swap
 ## Focus the node in the given direction
@@ -154,7 +151,6 @@ alt + {_,shift + }{1-9,0}
 alt + control + {1-9,0}
         bspc {node --to-desktop} '^{1-9,10}' --follow
 
-
 # Preselect
 ## Preselect the direction
 super + ctrl + {h,j,k,l}
@@ -171,7 +167,6 @@ super + ctrl + space
 ## Cancel the preselection for the focused desktop
 super + ctrl + shift + space
 	bspc query --nodes -d | xargs -I id -n 1 bspc node id --presel-dir cancel
-
 
 # Move/Resize (with features I like from 2bwm)
 ## Resize a tiled window (bspwm style)

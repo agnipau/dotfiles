@@ -1,50 +1,46 @@
 #!/usr/bin/env bash
 #
 # Script executed by pywal.
-# Requires sed.
 
-
-. ${HOME}/.cache/wal/colors.sh
-
+. "$HOME/.cache/wal/colors.sh"
 
 reload_dunst() {
   pkill dunst
   dunst \
-    -lb "$color0" \
-    -nb "$color0" \
-    -cb "$color1" \
-    -lf "$color7" \
-    -nf "$color7" \
-    -cf "$color0" \
-    -lfr "$color0" \
-    -nfr "$color0" \
-    -cfr "$color1" &
+    -lb "${color0:-#000000}" \
+    -nb "${color0:-#000000}" \
+    -cb "${color1:-#ff0000}" \
+    -lf "${color7:-#ffffff}" \
+    -nf "${color7:-#ffffff}" \
+    -cf "${color0:-#000000}" \
+    -lfr "${color0:-#000000}" \
+    -nfr "${color0:-#000000}" \
+    -cfr "${color1:-#ff0000}"
 }
-
 
 reload_zathura() {
-  echo "set default-bg \"${color0:-#000000}\"" > ${HOME}/.cache/wal/colors-zathura
-  echo "set default-fg \"${color7:-#ffffff}\"" >> ${HOME}/.cache/wal/colors-zathura
-  echo "set completion-bg \"${color0:-#000000}\"" >> ${HOME}/.cache/wal/colors-zathura
-  echo "set completion-fg \"${color7:-#ffffff}\"" >> ${HOME}/.cache/wal/colors-zathura
-  echo "set completion-highlight-bg \"${color1:-#ff0000}\"" >> ${HOME}/.cache/wal/colors-zathura
-  echo "set completion-highlight-fg \"${color0:-#000000}\"" >> ${HOME}/.cache/wal/colors-zathura
-  echo "set statusbar-bg \"${color1:-#ff0000}\"" >> ${HOME}/.cache/wal/colors-zathura
-  echo "set statusbar-fg \"${color0:-#000000}\"" >> ${HOME}/.cache/wal/colors-zathura
-  echo "set inputbar-bg \"${color0:-#000000}\"" >> ${HOME}/.cache/wal/colors-zathura
-  echo "set inputbar-fg \"${color7:-#ffffff}\"" >> ${HOME}/.cache/wal/colors-zathura
+  cat << EOF > "$HOME/.cache/wal/colors-zathura"
+set default-bg "${color0:-#000000}"
+set default-fg "${color7:-#ffffff}"
+set completion-bg "${color0:-#000000}"
+set completion-fg "${color7:-#ffffff}"
+set completion-highlight-bg "${color1:-#ff0000}"
+set completion-highlight-fg "${color0:-#000000}"
+set statusbar-bg "${color1:-#ff0000}"
+set statusbar-fg "${color0:-#000000}"
+set inputbar-bg "${color0:-#000000}"
+set inputbar-fg "${color7:-#ffffff}"
+EOF
 }
-
 
 reload_openbox() {
   sed -i --follow-symlinks \
       -e "s/bg.color: #.*/bg.color: ${color0:-#000000}/" \
       -e "s/text.color: #.*/text.color: ${color7:-#ffffff}/" \
       -e "s/image.color: #.*/image.color: ${color7:-#ffffff}/" \
-      ${HOME}/.themes/Agnipau/openbox-3/themerc
+      "$HOME/.themes/Agnipau/openbox-3/themerc"
   openbox --reconfigure
 }
-
 
 reload_polybar() {
   sed -i --follow-symlinks \
@@ -64,14 +60,13 @@ reload_polybar() {
       -e "s/^color13 = #.*/color13 = ${color13:-#ffffff}/" \
       -e "s/^color14 = #.*/color14 = ${color14:-#ffffff}/" \
       -e "s/^color15 = #.*/color15 = ${color15:-#ffffff}/" \
-      ${HOME}/.config/polybar/config
+      "$HOME/.config/polybar/config"
 }
-
 
 main() {
   reload_dunst &
   reload_zathura &
   reload_openbox &
-  xrdb -load ${HOME}/.Xresources
+  xrdb -load "$HOME/.Xresources"
 }
 main
