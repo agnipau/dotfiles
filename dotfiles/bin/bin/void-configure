@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-#
-# Install the driver for my laptop's wireless card.
-
-sudo xbps-install -Syv b43-fwcutter
-firmware_install_dir="/usr/lib/firmware"
-wget http://www.lwfinger.com/b43-firmware/broadcom-wl-5.100.138.tar.bz2
-tar xjf broadcom-wl-5.100.138.tar.bz2
-b43-fwcutter -w "$firmware_install_dir" broadcom-wl-5.100.138/linux/wl_apsta.o
