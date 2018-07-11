@@ -1,5 +1,5 @@
-Adapta GConf ImageMagick LuaJIT MesaLib-devel SDL2 Thunar aalib
-acl acpid alsa-lib alsa-utils at-spi2-atk at-spi2-atk-devel
+Adapta GConf ImageMagick LuaJIT MesaLib-devel SDL2 Thunar aalib acl
+acpid alsa-lib alsa-utils android-tools at-spi2-atk at-spi2-atk-devel
 at-spi2-core at-spi2-core-devel atk atk-devel attr autoconf automake
 avahi-glib-libs avahi-libs axel b43-fwcutter babl base-files
 base-system bash bash-completion bc binutils bison bspwm btrfs-progs
