@@ -4,11 +4,11 @@
 # cmus.
 
 title_gre="$(cmus-remote -Q | grep '^tag title')"
-title="${title_gre/"tag title "/}"
+title="${title_gre/'tag title '}"
 artist_gre="$(cmus-remote -Q | grep '^tag artist')"
-artist="${artist_gre/"tag artist "/}"
+artist="${artist_gre/'tag artist '}"
 album_gre="$(cmus-remote -Q | grep '^tag album')"
-album="${album_gre/"tag album "/}"
+album="${album_gre/'tag album '}"
 
-[[ "$album" ]] && notify-send --expire-time=3000 "$artist" "$title · $album"
+[[ "$album" ]] && notify-send --expire-time=3000 "$artist" "${title} · ${album}"
 [[ -z "$album" ]] && notify-send --expire-time=3000 "$artist" "$title"

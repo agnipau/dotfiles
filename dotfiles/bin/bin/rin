@@ -10,8 +10,10 @@ tmp_dir="$(mktemp -d)"
 c=0
 for file in *; do
   ((c += 1))
-  [[ "$file" =~ "." ]] && mv "$file" "$tmp_dir/${prefix}$c.${file##*.}"
-  [[ ! "$file" =~ "." ]] && mv "$file" "$tmp_dir/${prefix}$c"
+  # shellcheck disable=SC2076
+  [[ "$file" =~ "." ]] && mv "$file" "${tmp_dir}/${prefix}${c}.${file##*.}"
+  # shellcheck disable=SC2076
+  [[ ! "$file" =~ "." ]] && mv "$file" "${tmp_dir}/${prefix}${c}"
 done
 mv "$tmp_dir"/* .
 rm -rf "$tmp_dir"

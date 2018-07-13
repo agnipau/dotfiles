@@ -3,56 +3,56 @@
 # Style script.
 
 source_wal() {
-  . "$HOME/.cache/wal/colors.sh"
+  . "${HOME}/.cache/wal/colors.sh"
 }
 
 another-wal-dark() {
-  wal -c -q --iterative --backend wal -i "$HOME/progetti/wallpapers" -o "$HOME/bin/wal-set"
+  wal -c -q --iterative --backend wal -i "${HOME}/progetti/wallpapers" -o "${HOME}/bin/wal-set"
 }
 
 another-wal-light() {
-  wal -c -q --iterative --backend wal -i "$HOME/progetti/wallpapers" -o "$HOME/bin/wal-set" -l
+  wal -c -q --iterative --backend wal -i "${HOME}/progetti/wallpapers" -o "${HOME}/bin/wal-set" -l
 }
 
 another-grad-dark() {
-  wal -c -q --iterative --backend wal -i "$HOME/progetti/wallpapers" -o "$HOME/bin/wal-set" -n
+  wal -c -q --iterative --backend wal -i "${HOME}/progetti/wallpapers" -o "${HOME}/bin/wal-set" -n
   source_wal
   hsetroot -add "$color1" -add "$color2" -gradient 0
 }
 
 another-grad-light() {
-  wal -c -q --iterative --backend wal -i "$HOME/progetti/wallpapers" -o "$HOME/bin/wal-set" -l -n
+  wal -c -q --iterative --backend wal -i "${HOME}/progetti/wallpapers" -o "${HOME}/bin/wal-set" -l -n
   source_wal
   hsetroot -add "$color1" -add "$color2" -gradient 0
 }
 
 current-wal-dark() {
-  wal -c -q --backend wal -i "$(cat "$HOME/.cache/wal/wal")" -o "$HOME/bin/wal-set"
+  wal -c -q --backend wal -i "$(<"${HOME}/.cache/wal/wal")" -o "${HOME}/bin/wal-set"
 }
 
 current-wal-light() {
-  wal -c -q --backend wal -i "$(cat "$HOME/.cache/wal/wal")" -o "$HOME/bin/wal-set" -l
+  wal -c -q --backend wal -i "$(<"${HOME}/.cache/wal/wal")" -o "${HOME}/bin/wal-set" -l
 }
 
 current-grad-dark() {
-  wal -c -q --backend wal -i "$(cat "$HOME/.cache/wal/wal")" -o "$HOME/bin/wal-set" -n
+  wal -c -q --backend wal -i "$(<"${HOME}/.cache/wal/wal")" -o "${HOME}/bin/wal-set" -n
   source_wal
   hsetroot -add "$color1" -add "$color2" -gradient 0
 }
 
 current-grad-light() {
-  wal -c -q --backend wal -i "$(cat "$HOME/.cache/wal/wal")" -o "$HOME/bin/wal-set" -l -n
+  wal -c -q --backend wal -i "$(<"${HOME}/.cache/wal/wal")" -o "${HOME}/bin/wal-set" -l -n
   source_wal
   hsetroot -add "$color1" -add "$color2" -gradient 0
 }
 
 source_wal
 
-[[ "$1" == "--another-wal-light" ]] && another-wal-light
-[[ "$1" == "--another-wal-dark" ]] && another-wal-dark
-[[ "$1" == "--another-grad-dark" ]] && another-grad-dark
-[[ "$1" == "--another-grad-light" ]] && another-grad-light
-[[ "$1" == "--current-wal-light" ]] && current-wal-light
-[[ "$1" == "--current-wal-dark" ]] && current-wal-dark
-[[ "$1" == "--current-grad-dark" ]] && current-grad-dark
-[[ "$1" == "--current-grad-light" ]] && current-grad-light
+[[ "$1" == --another-wal-light ]] && another-wal-light
+[[ "$1" == --another-wal-dark ]] && another-wal-dark
+[[ "$1" == --another-grad-dark ]] && another-grad-dark
+[[ "$1" == --another-grad-light ]] && another-grad-light
+[[ "$1" == --current-wal-light ]] && current-wal-light
+[[ "$1" == --current-wal-dark ]] && current-wal-dark
+[[ "$1" == --current-grad-dark ]] && current-grad-dark
+[[ "$1" == --current-grad-light ]] && current-grad-light

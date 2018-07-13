@@ -12,5 +12,5 @@ read -r X Y W H < <(slop -f '%x %y %w %h' -b 4 -t 0 -q)
 
 g="${W}x${H}+${X}+${Y}"
 
-st -n 'hasdof' -g "$g"
+st -n hasdof -g "$g"
 #urxvt -geometry "$g"

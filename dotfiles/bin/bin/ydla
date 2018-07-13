@@ -4,26 +4,26 @@
 # title of the song and the name of the artist.
 
 temp_dir="$(mktemp -d)"
-download_dir="$PWD/downloaded_music"
+download_dir="${PWD}/downloaded_music"
 mkdir -p ./downloaded_music
 
-[[ $# -eq 5 && $1 == "--title" || $1 == "-t" ]] && title="$1" \
-	                                        && artist="$3" \
-						&& link="$5"
+[[ "$#" -eq 5 && "$1" == --title || "$1" == -t ]] && title="$1" \
+	                                              && artist="$3" \
+						      && link="$5"
 
-[[ $# -eq 5 && $1 == "--artist" || $1 == "-a" ]] && artist="$1" \
-	                                         && title="$3" \
-						 && link="$5"
+[[ "$#" -eq 5 && "$1" == --artist || $1 == -a ]] && artist="$1" \
+	                                             && title="$3" \
+						     && link="$5"
 
-[[ $# -eq 1 ]] && link="$1"
+[[ "$#" -eq 1 ]] && link="$1"
 
-if [[ $# -eq 5 ]]; then
+if [[ "$#" -eq 5 ]]; then
   cd "$temp_dir" || exit 1
   youtube-dl "$link" \
              --extract-audio --audio-format mp3 --audio-quality 0 \
              --prefer-ffmpeg --youtube-skip-dash-manifest --ignore-errors \
              --continue --no-overwrites --restrict-filenames --verbose
-  mv ./*.mp3 "$download_dir/${artist} - ${title}.mp3"
+  mv ./*.mp3 "${download_dir}/${artist} - ${title}.mp3"
   cd "$download_dir" || exit 1
   link_abbreviato="${link:8}"
   id3v2 --delete-all "${artist} - ${title}.mp3"
@@ -32,7 +32,7 @@ if [[ $# -eq 5 ]]; then
 	--comment "$link_abbreviato" \
 	"${artist} - ${title}.mp3"
   notify-send --expire-time=3000 "YouTube" "${artist} - ${title} downloaded"
-elif [[ $# -eq 1 ]]; then
+elif [[ "$#" -eq 1 ]]; then
   youtube-dl "$link" \
              --add-metadata --metadata-from-title "%(artist)s - %(title)s" \
              --extract-audio --audio-format mp3 --audio-quality 0 \

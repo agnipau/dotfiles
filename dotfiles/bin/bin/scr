@@ -2,6 +2,7 @@
 #
 # A simple script to take screenshots using scrot.
 
+# shellcheck disable=SC2016
 scrot '%d-%m-%Y_%H-%M-%S.png' \
       -e 'mv $f ~/immagini'
 

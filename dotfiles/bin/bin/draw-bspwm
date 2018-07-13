@@ -3,7 +3,7 @@
 # Spawn terminals interactively by drawing them.
 # Requires slop and a terminal emulator that can be launched with specified dimensions (geometry parameter) (I use st, but URxvt works too).
 
-read -r X Y W H < <(slop -f "%x %y %w %h" -b 4 -t 0 -q)
+read -r X Y W H < <(slop -f '%x %y %w %h' -b 4 -t 0 -q)
 
 # To get this values you need to make your terminal fullscreen and then divide your screen width by $(tput cols) or $COLUMNS and your screen height by $(tput lines) or $LINES.
 # No floats are accepted, you need to experiment by changing your terminal borders and then again dividing your screen width by your new $(tput cols) or $COLUMNS output and the same with your screen height.

@@ -2,7 +2,8 @@
 #
 # Triggera la modalita' zen XD
 
-. "$HOME/.cache/wal/colors.sh"
+# shellcheck source=/dev/null
+. "${HOME}/.cache/wal/colors.sh"
 
 killall -9 telegram-desktop \
            Discord &> /dev/null
@@ -13,6 +14,7 @@ killall -9 telegram-desktop \
 # -gradient 270 = left
 # -gradient 360 = up
 # ...
-hsetroot -add "$color1" -add "$color2" -gradient "0"
+# shellcheck disable=SC2154
+hsetroot -add "$color1" -add "$color2" -gradient 0
 
-echo "Ora concentrati e porta a termine il tuo obbiettivo."
+printf '%s\n' "Ora concentrati e porta a termine il tuo obbiettivo."

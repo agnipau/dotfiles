@@ -23,7 +23,7 @@ if [[ -z "$WM" ]]; then
     WM="$DESKTOP_SESSION"
   else
     envtype="WM"
-    WM="$(tail -n1 "$HOME/.xinitrc" | cut -d" " -f2)"
+    WM="$(tail -n1 "${HOME}/.xinitrc" | cut -d" " -f2)"
   fi
 else
   envtype="WM"

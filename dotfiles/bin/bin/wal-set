@@ -2,7 +2,8 @@
 #
 # Script executed by pywal.
 
-. "$HOME/.cache/wal/colors.sh"
+# shellcheck source=/dev/null
+. "${HOME}/.cache/wal/colors.sh"
 
 reload_dunst() {
   pkill dunst
@@ -19,7 +20,7 @@ reload_dunst() {
 }
 
 reload_zathura() {
-  cat << EOF > "$HOME/.cache/wal/colors-zathura"
+  cat <<EOF >"${HOME}/.cache/wal/colors-zathura"
 set default-bg "${color0:-#000000}"
 set default-fg "${color7:-#ffffff}"
 set completion-bg "${color0:-#000000}"
@@ -38,7 +39,7 @@ reload_openbox() {
       -e "s/bg.color: #.*/bg.color: ${color0:-#000000}/" \
       -e "s/text.color: #.*/text.color: ${color7:-#ffffff}/" \
       -e "s/image.color: #.*/image.color: ${color7:-#ffffff}/" \
-      "$HOME/.themes/Agnipau/openbox-3/themerc"
+      "${HOME}/.themes/Agnipau/openbox-3/themerc"
   openbox --reconfigure
 }
 
@@ -60,13 +61,13 @@ reload_polybar() {
       -e "s/^color13 = #.*/color13 = ${color13:-#ffffff}/" \
       -e "s/^color14 = #.*/color14 = ${color14:-#ffffff}/" \
       -e "s/^color15 = #.*/color15 = ${color15:-#ffffff}/" \
-      "$HOME/.config/polybar/config"
+      "${HOME}/.config/polybar/config"
 }
 
 main() {
   reload_dunst &
   reload_zathura &
   reload_openbox &
-  xrdb -load "$HOME/.Xresources"
+  xrdb -load "${HOME}/.Xresources"
 }
 main

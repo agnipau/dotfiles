@@ -2,8 +2,8 @@
 #
 # Backup my projects.
 
-for i in "$HOME/progetti/*"; do
-  if [[ "$i" != "void-packages" && "$i" != "wallpapers" ]]; then
-    zip -9 -r ${i}.zip $i
+for project in "${HOME}/progetti"/*; do
+  if [[ "$project" != void-packages && "$project" != wallpapers ]]; then
+    zip -9 -r "${project}.zip" "$project"
   fi
 done

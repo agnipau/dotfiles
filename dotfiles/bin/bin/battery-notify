@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Prints the state of my laptop's battery.
+
+notify-send --expire-time=3000 "$(<"/sys/class/power_supply/BAT0/status"): $(<"/sys/class/power_supply/BAT0/capacity")%"

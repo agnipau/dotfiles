@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Connect to home wifi in Croatia.
+
+sudo rm -f /etc/wpa_supplicant/wpa_supplicant.conf
+
+sudo cp /etc/wpa_supplicant/wpa_supplicant.conf.router.croazia \
+        /etc/wpa_supplicant/wpa_supplicant.conf
+
+sudo sv restart dhcpcd

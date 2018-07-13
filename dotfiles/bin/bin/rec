@@ -11,4 +11,4 @@ ffmpeg -f x11grab \
        -b:v 5M \
        -crf 10 \
        -quality realtime \
-       -y "$HOME/video/screencast.mkv"
+       -y "${HOME}/video/screencast.mkv"

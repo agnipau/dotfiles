@@ -6,20 +6,20 @@
 [[ $- != *i* ]] && return
 
 # Prompt
-PS1="\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] "
-#PS1="➜  "
+PS1='\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] '
+#PS1='➜  '
 
 # Envars
 export HISTCONTROL="ignoredups"
 export HISTSIZE=1000000
-export PATH="$HOME/.phantomjs:$HOME/bin:$HOME/.gem/ruby/2.5.0/bin:$PATH"
+export PATH="${HOME}/.phantomjs:${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${PATH}"
 export VISUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
 export BROWSER="/usr/bin/chromium"
 export RTV_BROWSER="/usr/bin/w3m"
 export LANG="it_IT.UTF-8"
-export XDG_CONFIG_HOME="$HOME/.config"
-export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export SSH_KEY_PATH="${HOME}/.ssh/id_rsa"
 #export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 
 # Better tab completion
@@ -42,7 +42,8 @@ bind '"\e\e": "\C-asudo \C-e"'
 # Aliases
 alias ore='date +%H:%M'
 alias data='date +"%A %d %B"'
-alias ist='cd $HOME/srcs/st && sudo make clean install && exit'
+alias bat='printf "%s\n" "$(<"/sys/class/power_supply/BAT0/status"): $(<"/sys/class/power_supply/BAT0/capacity")%"'
+alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
 alias c='clear'
 alias q='exit'
 alias gs='git status'
@@ -52,7 +53,7 @@ alias clone='git clone --depth=1'
 alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
 alias p='ping google.com'
 alias spdtst='curl -o /dev/null http://test.kpnqwest.it/file2000.bin'
-alias baydl='cd $HOME/progetti/youtube-dl-batchfiles && ./baydl.sh'
+alias baydl='cd ${HOME}/progetti/youtube-dl-batchfiles && ./baydl.sh'
 alias ls='/opt/coreutils/bin/ls --group-directories-first --color=auto'
 alias l.="ls -A | egrep '^\.'"
 alias la='ls -A'
@@ -74,7 +75,10 @@ alias src='xbps-query -Rs'
 alias dep='xbps-query -Rx'
 alias po='sudo poweroff'
 alias re='sudo reboot'
-alias sa='. $HOME/bin/ssh-set'
+alias zzz='sudo zzz'
+alias ZZZ='sudo ZZZ'
+alias halt='sudo halt'
+alias sa='. ${HOME}/bin/ssh-set'
 alias fixwifi="sudo modprobe -r iwlmvm; sudo modprobe iwlmvm"
 alias m='alsamixer'
 alias mv='mv -i'
@@ -82,8 +86,8 @@ alias obapp='obxprop | grep ^_OB_APP_'
 alias app='xprop | grep ^WM_'
 alias nodebug='notify-send "Debug" "Debug message"'
 alias cnodebug='notify-send -h string:fgcolor:$color1 "Debug" "Debug message"'
-alias grad='. $HOME/.bashrc; hsetroot -add $color1 -add $color2 -gradient 0'
-alias solid='. $HOME/.bashrc; hsetroot -solid $color1'
+alias grad='. ${HOME}/.bashrc; hsetroot -add $color1 -add $color2 -gradient 0'
+alias solid='. ${HOME}/.bashrc; hsetroot -solid $color1'
 
 # Add colors to man pages
 export LESS_TERMCAP_mb=$'\e[0;33m'
@@ -101,9 +105,9 @@ export FZF_DEFAULT_OPTS="--multi --inline-info"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
 export FZF_CTRL_R_OPTS="--reverse"
 
-. "$HOME/.cache/wal/colors.sh"
+. "${HOME}/.cache/wal/colors.sh"
 
-[[ -f "$HOME/.fzf.bash" ]] && . "$HOME/.fzf.bash"
+[[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
 
-[[ -f "$HOME/.local/share/icons-in-terminal/icons_bash.sh" ]] && . \
-  "$HOME/.local/share/icons-in-terminal/icons_bash.sh"
+[[ -f "${HOME}/.local/share/icons-in-terminal/icons_bash.sh" ]] && . \
+  "${HOME}/.local/share/icons-in-terminal/icons_bash.sh"

@@ -130,6 +130,16 @@
       <to>6</to>
     </action>
   </keybind>
+  <keybind key="W-A-h">
+    <action name="GoToDesktop">
+      <to>left</to>
+    </action>
+  </keybind>
+  <keybind key="W-A-l">
+    <action name="GoToDesktop">
+      <to>right</to>
+    </action>
+  </keybind>
 
   <!-- Keybindings for sending windows to workspaces and preserve the current workspace -->
   <keybind key="W-S-1">
@@ -517,12 +527,27 @@
   <!-- F-keys and arrows keybindings -->
   <keybind key="W-F1">
     <action name="Execute">
+      <command>sudo zzz</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-F1">
+    <action name="Execute">
       <command>slock</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-F1">
+    <action name="Execute">
+      <command>sudo poweroff</command>
     </action>
   </keybind>
   <keybind key="W-F2">
     <action name="Execute">
       <command>~/bin/show_ssid</command>
+    </action>
+  </keybind>
+  <keybind key="W-F3">
+    <action name="Execute">
+      <command>~/bin/battery-notify</command>
     </action>
   </keybind>
   <keybind key="W-F5">
@@ -602,22 +627,22 @@
   </keybind>
   <keybind key="W-Left">
     <action name="Execute">
-      <command>cmus-remote --prev</command>
+      <command>cmus-remote --seek -5s</command>
     </action>
   </keybind>
   <keybind key="W-S-Left">
     <action name="Execute">
-      <command>cmus-remote --seek -5s</command>
+      <command>cmus-remote --prev</command>
     </action>
   </keybind>
   <keybind key="W-Right">
     <action name="Execute">
-      <command>cmus-remote --next</command>
+      <command>cmus-remote --seek +5s</command>
     </action>
   </keybind>
   <keybind key="W-S-Right">
     <action name="Execute">
-      <command>cmus-remote --seek +5s</command>
+      <command>cmus-remote --next</command>
     </action>
   </keybind>
 </keyboard>
@@ -897,6 +922,16 @@
   </application>
   <application class="discord">
     <desktop>4</desktop>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="Zathura">
     <position force="yes">
       <x>center</x>
       <y>center</y>
