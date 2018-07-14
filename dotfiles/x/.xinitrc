@@ -7,10 +7,11 @@ xset b off
 xset s off
 xset m 1/1
 xset r rate 200 40
-xrdb $HOME/.Xresources
+xrdb "${HOME}/.Xresources"
+xmodmap "${HOME}/.Xmodmap"
 
-wal -R -o $HOME/bin/wal-set
+wal -R -o "${HOME}/bin/wal-set"
 
-compton -b --config $HOME/.config/compton/compton.conf
+compton -b --config "${HOME}/.config/compton/compton.conf"
 
 exec openbox-session

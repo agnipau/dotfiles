@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# Send a notification with the SSID of the network I'm currently connected.
+
+# shellcheck source=/dev/null
+. "${HOME}/.local/share/icons-in-terminal/icons_bash.sh"
+
+# shellcheck disable=SC2059,2154,1117
+ico="$(printf "$fa_wifi\n")"
+
+[[ "$(iwgetid -r)" ]] && notify-send --expire-time=3000 "${ico} $(iwgetid -r)"
+[[ -z "$(iwgetid -r)" ]] && notify-send --expire-time=3000 "${ico} -"

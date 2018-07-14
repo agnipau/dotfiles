@@ -43,6 +43,12 @@ reload_openbox() {
   openbox --reconfigure
 }
 
+reload_telegram() {
+  pkill telegram
+  "${HOME}/.wal-telegram/tgen"
+  telegram-desktop
+}
+
 reload_polybar() {
   sed -i --follow-symlinks \
       -e "s/^color0 = #.*/color0 = ${color0:-#000000}/" \
@@ -68,6 +74,7 @@ main() {
   reload_dunst &
   reload_zathura &
   reload_openbox &
+  reload_telegram &
   xrdb -load "${HOME}/.Xresources"
 }
 main

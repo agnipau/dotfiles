@@ -8,9 +8,13 @@ set -x
 . "${HOME}/.local/share/icons-in-terminal/icons_bash.sh"
 
 cvo_gre="$(amixer sget Master | tail -n1 | cut -d' ' -f6)"
-cvo="${cvo_gre:1:2}"
+cvo="${cvo_gre:1:3}"
 
-if [[ "${cvo:1}" = "%" ]]; then
+if [[ "${cvo:2}" = % ]]; then
+  cvo="${cvo:0:2}"
+elif [[ "${cvo:2}" = 0 ]]; then
+  cvo="${cvo:0:3}"
+else
   cvo="${cvo:0:1}"
 fi
 

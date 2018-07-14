@@ -542,7 +542,7 @@
   </keybind>
   <keybind key="W-F2">
     <action name="Execute">
-      <command>~/bin/show_ssid</command>
+      <command>~/bin/ssid-notify</command>
     </action>
   </keybind>
   <keybind key="W-F3">
