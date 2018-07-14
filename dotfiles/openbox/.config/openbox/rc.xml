@@ -550,6 +550,11 @@
       <command>~/bin/battery-notify</command>
     </action>
   </keybind>
+  <keybind key="W-F4">
+    <action name="Execute">
+      <command>~/bin/brightness-notify</command>
+    </action>
+  </keybind>
   <keybind key="W-F5">
     <action name="Execute">
       <command>xbacklight -dec 10%</command>

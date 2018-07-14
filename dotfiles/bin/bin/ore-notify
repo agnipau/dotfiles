@@ -2,4 +2,10 @@
 #
 # Send a notification with the current time.
 
-notify-send --expire-time=1000 "Ore" "$(date +%H:%M)"
+# shellcheck source=/dev/null
+. "${HOME}/.local/share/icons-in-terminal/icons_bash.sh"
+
+# shellcheck disable=SC2059,2154,1117
+ico="$(printf "$fa_clock_o\n")"
+
+notify-send --expire-time=1000 "${ico} $(date +%H:%M)"
