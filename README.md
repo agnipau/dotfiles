@@ -2,13 +2,10 @@
 
 # Screenshots
 
-![openbox-patched screenshot]()
+![openbox-patched scrot]()
 > openbox-patched
 
-![bspwm screenshot]()
-> bspwm
-
-Currently I'm using [void linux] as my os, [openbox] as my floating window manager ([with some patches]) and [bspwm] as my tiling window manager.
+Currently I'm using [arch linux] as my os, [openbox] as my floating window manager ([with some patches]) and [bspwm] as my tiling window manager.
 
 # Installation
 
@@ -25,18 +22,17 @@ You can also just individually stow a config, e.g.:
 
 ```bash
 cd dotfiles
-stow -t $HOME st
+stow -t $HOME compton
 ```
 
 If you don't want anymore a config, run:
 ```bash
 cd dotfiles
-stow -D st
+stow -D compton
 ```
 
-[void linux]: https://voidlinux.org
+[arch linux]: https://www.archlinux.org
 [openbox]: http://openbox.org/wiki/Main_Page
 [with some patches]: https://github.com/dylanaraps/openbox-patched
 [bspwm]: https://github.com/baskerville/bspwm
-[2bwm]: https://github.com/venam/2bwm
 [stow]: https://www.gnu.org/software/stow

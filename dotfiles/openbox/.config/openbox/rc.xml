@@ -29,9 +29,9 @@
 
 <!-- Theme -->
 <theme>
-  <name>Agnipau</name>
-  <titleLayout>LC</titleLayout>
-  <cornerRadius menu="yes">3</cornerRadius>
+  <name>thicc</name>
+  <titleLayout>C</titleLayout>
+  <cornerRadius>3</cornerRadius>
   <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
   <font place="ActiveWindow">
@@ -46,18 +46,6 @@
     <weight>bold</weight>
     <slant>normal</slant>
   </font>
-  <!--font place="MenuHeader">
-    <name>Iosevka</name>
-    <size>12</size>
-    <weight>normal</weight>
-    <slant>normal</slant>
-  </font>
-  <font place="MenuItem">
-    <name>Iosevka</name>
-    <size>12</size>
-    <weight>normal</weight>
-    <slant>normal</slant>
-  </font!-->
 </theme>
 
 <!-- Desktops -->
@@ -380,21 +368,30 @@
   <keybind key="W-q">
     <action name="Close"/>
   </keybind>
-  <keybind key="A-q">
-    <action name="Close"/>
-  </keybind>
 
   <!-- Emulate pseudo tiling window management -->
   <keybind key="A-g">
     <action name="MoveResizeTo">
       <x>8%</x>
       <y>center</y>
+      <width>41%</width>
+      <height>90%</height>
     </action>
   </keybind>
   <keybind key="A-S-g">
     <action name="MoveResizeTo">
       <x>-8%</x>
       <y>center</y>
+      <width>41%</width>
+      <height>90%</height>
+    </action>
+  </keybind>
+  <keybind key="A-C-g">
+    <action name="MoveResizeTo">
+      <x>center</x>
+      <y>center</y>
+      <width>51%</width>
+      <height>78%</height>
     </action>
   </keybind>
   <keybind key="W-g">
@@ -436,9 +433,9 @@
     <action name="Raise"/>
     <action name="MoveResizeTo">
       <x>center</x>
-      <y>44</y>
-      <width>41%</width>
-      <height>45%</height>
+      <y>94</y>
+      <width>51%</width>
+      <height>39%</height>
     </action>
   </keybind>
 
@@ -463,22 +460,22 @@
       <command>~/bin/style --another-grad-light</command>
     </action>
   </keybind>
-  <keybind key="A-c">
+  <keybind key="W-b">
     <action name="Execute">
       <command>~/bin/style --current-wal-dark</command>
     </action>
   </keybind>
-  <keybind key="A-S-c">
+  <keybind key="W-S-b">
     <action name="Execute">
       <command>~/bin/style --current-wal-light</command>
     </action>
   </keybind>
-  <keybind key="A-C-c">
+  <keybind key="W-C-b">
     <action name="Execute">
       <command>~/bin/style --current-grad-dark</command>
     </action>
   </keybind>
-  <keybind key="A-C-S-c">
+  <keybind key="W-C-S-b">
     <action name="Execute">
       <command>~/bin/style --current-grad-light</command>
     </action>
@@ -495,7 +492,7 @@
   </keybind>
   <keybind key="W-z">
     <action name="Execute">
-      <command>~/bin/draw</command>
+      <command>~/bin/draw-openbox</command>
     </action>
   </keybind>
   <keybind key="W-m">
@@ -505,64 +502,39 @@
   </keybind>
   <keybind key="W-w">
     <action name="Execute">
-      <command>~/bin/rec</command>
-    </action>
-  </keybind>
-  <keybind key="W-v">
-    <action name="Execute">
-      <command>~/bin/ore-notify</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-v">
-    <action name="Execute">
-      <command>~/bin/data-notify</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-w">
-    <action name="Execute">
-      <command>~/bin/norec</command>
+      <command>simplescreenrecorder</command>
     </action>
   </keybind>
 
   <!-- F-keys and arrows keybindings -->
   <keybind key="W-F1">
     <action name="Execute">
-      <command>sudo zzz</command>
+      <command>slock</command>
     </action>
   </keybind>
   <keybind key="W-S-F1">
     <action name="Execute">
-      <command>slock</command>
+      <command>systemctl suspend</command>
     </action>
   </keybind>
   <keybind key="W-C-F1">
     <action name="Execute">
-      <command>sudo poweroff</command>
-    </action>
-  </keybind>
-  <keybind key="W-F2">
-    <action name="Execute">
-      <command>~/bin/ssid-notify</command>
-    </action>
-  </keybind>
-  <keybind key="W-F3">
-    <action name="Execute">
-      <command>~/bin/battery-notify</command>
-    </action>
-  </keybind>
-  <keybind key="W-F4">
-    <action name="Execute">
-      <command>~/bin/brightness-notify</command>
+      <command>poweroff</command>
     </action>
   </keybind>
   <keybind key="W-F5">
     <action name="Execute">
-      <command>xbacklight -dec 10%</command>
+      <command>sudo ~/bin/lum --dec 10</command>
     </action>
   </keybind>
   <keybind key="W-F6">
     <action name="Execute">
-      <command>xbacklight -inc 10%</command>
+      <command>sudo ~/bin/lum --inc 10</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-F6">
+    <action name="Execute">
+      <command>sudo ~/bin/lum --max</command>
     </action>
   </keybind>
   <keybind key="W-F7">
@@ -578,11 +550,6 @@
   <keybind key="W-F10">
     <action name="Execute">
       <command>~/bin/vol --toggle</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-F10">
-    <action name="Execute">
-      <command>~/bin/vol --current</command>
     </action>
   </keybind>
   <keybind key="W-F11">
@@ -605,7 +572,7 @@
       <command>~/bin/vol --max</command>
     </action>
   </keybind>
-  <keybind key="W-Print">
+  <keybind key="W-P">
     <action name="Execute">
       <command>~/bin/scr</command>
     </action>
@@ -623,11 +590,6 @@
   <keybind key="W-Down">
     <action name="Execute">
       <command>cmus-remote --pause</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-Down">
-    <action name="Execute">
-      <command>~/bin/cmus-info</command>
     </action>
   </keybind>
   <keybind key="W-Left">
@@ -720,7 +682,7 @@
     </mousebind>
     <mousebind button="Middle" action="Click">
       <action name="Execute">
-        <command>~/bin/draw</command>
+        <command>~/bin/draw-openbox</command>
       </action>
     </mousebind>
     <mousebind button="Right" action="Click">
@@ -728,11 +690,6 @@
         <to>right</to>
       </action>
     </mousebind>
-    <!--mousebind button="Right" action="Click">
-      <action name="ShowMenu">
-        <menu>root-menu</menu>
-      </action>
-    </mousebind!-->
   </context>
 
   <!-- Titlebar -->
@@ -890,20 +847,11 @@
   </context>
 </mouse>
 
-<!-- Menu -->
-<!--menu>
-  <file>menu.xml</file>
-  <hideDelay>200</hideDelay>
-  <middle>no</middle>
-  <submenuShowDelay>100</submenuShowDelay>
-  <submenuHideDelay>400</submenuHideDelay>
-  <showIcons>no</showIcons>
-  <manageDesktops>no</manageDesktops>
-</menu-->
-
 <!-- Applications -->
 <applications>
-  <application class="Chromium">
+
+  <!-- Center apps and change size -->
+  <application class="Firefox">
     <desktop>2</desktop>
     <position force="yes">
       <x>center</x>
@@ -911,11 +859,22 @@
     </position>
     <size>
       <width>1226</width>
-      <height>680</height>
+      <height>630</height>
+    </size>
+  </application>
+  <application name="musica">
+    <desktop>3</desktop>
+    <position force="yes">
+      <x>338</x>
+      <y>94</y>
+    </position>
+    <size>
+      <width>51%</width>
+      <height>70%</height>
     </size>
   </application>
   <application class="TelegramDesktop">
-    <desktop>3</desktop>
+    <desktop>4</desktop>
     <position force="yes">
       <x>center</x>
       <y>center</y>
@@ -926,7 +885,7 @@
     </size>
   </application>
   <application class="discord">
-    <desktop>4</desktop>
+    <desktop>5</desktop>
     <position force="yes">
       <x>center</x>
       <y>center</y>
@@ -946,7 +905,24 @@
       <height>630</height>
     </size>
   </application>
-  <application class="Lxappearance">
+
+  <!-- Center apps -->
+  <!--
+  Can't do <application class="*">
+                  <position force="yes">
+		    <x>center</x>
+		    <y>center</y>
+                  </position>
+                </application>
+  because in this way drawing terminals will not work
+  -->
+  <application class="SimpleScreenRecorder">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+  </application>
+  <application class="Xfd">
     <position force="yes">
       <x>center</x>
       <y>center</y>
@@ -958,21 +934,15 @@
       <y>center</y>
     </position>
   </application>
-  <application name="musica">
-    <desktop>5</desktop>
+  <application class="Lxappearance">
     <position force="yes">
-      <x>70</x>
-      <y>44</y>
+      <x>center</x>
+      <y>center</y>
     </position>
-    <size>
-      <width>90%</width>
-      <height>83%</height>
-    </size>
   </application>
+
+  <!-- No decor -->
   <application class="feh">
-    <decor>no</decor>
-  </application>
-  <application class="Viewnior">
     <decor>no</decor>
   </application>
   <application title="qiv*">

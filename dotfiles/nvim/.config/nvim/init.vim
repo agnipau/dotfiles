@@ -12,6 +12,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'baskerville/vim-sxhkdrc'
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
@@ -35,6 +36,7 @@ set noswapfile
 set nocursorline
 set backspace=indent,eol,start
 set clipboard=unnamedplus
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 
 " Keybindings
 let mapleader=" "

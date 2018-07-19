@@ -1,1 +1,5 @@
-st -n musica -e cmus
+xrandr --dpi 96
+openbox --restart
+st -n musica -e cmus &
+compton -b --config ~/.config/compton/compton.conf
+wal -R -o ~/bin/wal-set

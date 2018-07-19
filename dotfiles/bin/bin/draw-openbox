@@ -3,7 +3,13 @@
 # Spawn terminals interactively by drawing them.
 # Requires slop and a terminal emulator that can be launched with specified
 # dimensions (geometry parameter) (I use xst, but URxvt works too).
-# I tested this version with bspwm and it works.
+# I tested this version and it works with openbox as long as you don't set this
+# rule in ~/.config/openbox/rc.mxl: <application class="*">
+#                                     <position force="yes">
+#                                       <x>center</x>
+#                                       <y>center</y>
+#                                     </position>
+#                                   </application>
 
 read -r X Y W H < <(slop -f '%x %y %w %h' -b 4 -t 0 -q)
 
@@ -17,11 +23,5 @@ read -r X Y W H < <(slop -f '%x %y %w %h' -b 4 -t 0 -q)
 
 g="${W}x${H}+${X}+${Y}"
 
-# I use bspwm, so I need this one shot rule to launch xst in floating mode,
-# otherwise the script wouldn't work in tiling mode. PS: st -n drawn_terminal
-# sets drawn_terminal as instance name of xst, so the rule is more accurate,
-# you can also use --add \* or --add st-256color.
-bspc rule --add st-256color:drawn_terminal --one-shot state=floating
 st -n drawn_terminal -g "$g"
-#bspc rule --add URxvt:drawn_terminal --one-shot state=floating
 #urxvt -name drawn_terminal -geometry "$g"

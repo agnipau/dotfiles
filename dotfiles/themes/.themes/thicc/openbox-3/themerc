@@ -1,11 +1,11 @@
 # vim:ft=sh
 #
-# Agnipau theme for Openbox
+# thicc theme for Openbox by Dylan Araps, modified a bit.
 
 # Titlebar colors
-window.*.title.bg.color: #101717
-window.*.label.text.color: #d0ccdb
-window.*.button.*.image.color: #d0ccdb
+window.*.title.bg.color: #121b21
+window.*.label.text.color: #cad4da
+window.*.button.*.image.color: #cad4da
 
 # Titlebar
 padding.width: 15

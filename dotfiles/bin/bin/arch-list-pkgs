@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# Generate a list of installed pkgs in Arch Linux.
+
+pacman -Qq > arch_installed_pkgs
+
+n_pkgs="$(wc -l arch_installed_pkgs | cut -d' ' -f1)"
+
+printf '%s\n' "==> You have installed $n_pkgs packages"
+
+for word in $(pacman -Qqm); do
+  sed -i -e "s/$word//" \
+         arch_installed_pkgs
+done

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Triggera la modalita' zen XD
+# Triggers zen mode XD (aka concentration mode).
 
 # shellcheck source=/dev/null
 . "${HOME}/.cache/wal/colors.sh"

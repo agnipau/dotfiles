@@ -6,7 +6,7 @@
 . "${HOME}/.cache/wal/colors.sh"
 
 reload_dunst() {
-  pkill dunst
+  killall -9 dunst
   dunst \
     -lb "${color0:-#000000}" \
     -nb "${color0:-#000000}" \
@@ -16,7 +16,7 @@ reload_dunst() {
     -cf "${color0:-#000000}" \
     -lfr "${color0:-#000000}" \
     -nfr "${color0:-#000000}" \
-    -cfr "${color1:-#ff0000}"
+    -cfr "${color1:-#ff0000}" &
 }
 
 reload_zathura() {
@@ -43,38 +43,22 @@ reload_openbox() {
   openbox --reconfigure
 }
 
-reload_telegram() {
-  pkill telegram
-  "${HOME}/.wal-telegram/tgen"
-  telegram-desktop
-}
-
-reload_polybar() {
-  sed -i --follow-symlinks \
-      -e "s/^color0 = #.*/color0 = ${color0:-#000000}/" \
-      -e "s/^color1 = #.*/color1 = ${color1:-#ffffff}/" \
-      -e "s/^color2 = #.*/color2 = ${color2:-#ffffff}/" \
-      -e "s/^color3 = #.*/color3 = ${color3:-#ffffff}/" \
-      -e "s/^color4 = #.*/color4 = ${color4:-#ffffff}/" \
-      -e "s/^color5 = #.*/color5 = ${color5:-#ffffff}/" \
-      -e "s/^color6 = #.*/color6 = ${color6:-#ffffff}/" \
-      -e "s/^color7 = #.*/color7 = ${color7:-#ffffff}/" \
-      -e "s/^color8 = #.*/color8 = ${color8:-#ffffff}/" \
-      -e "s/^color9 = #.*/color9 = ${color9:-#ffffff}/" \
-      -e "s/^color10 = #.*/color10 = ${color10:-#ffffff}/" \
-      -e "s/^color11 = #.*/color11 = ${color11:-#ffffff}/" \
-      -e "s/^color12 = #.*/color12 = ${color12:-#ffffff}/" \
-      -e "s/^color13 = #.*/color13 = ${color13:-#ffffff}/" \
-      -e "s/^color14 = #.*/color14 = ${color14:-#ffffff}/" \
-      -e "s/^color15 = #.*/color15 = ${color15:-#ffffff}/" \
-      "${HOME}/.config/polybar/config"
+reload_colors() {
+  old_string="--color fg:7,bg:0,hl:1,fg+:232,bg+:1,hl+:255"
+  new_string="--color fg:7,hl:1,fg+:232,bg+:1,hl+:255"
+  sed -i -e "s/$old_string/$new_string/" \
+         "${HOME}/.cache/wal/colors.sh"
 }
 
 main() {
-  reload_dunst &
-  reload_zathura &
-  reload_openbox &
-  reload_telegram &
-  xrdb -load "${HOME}/.Xresources"
+  reload_dunst
+  reload_zathura
+  reload_openbox
+  reload_colors
+  "${HOME}/.wal-telegram/tgen" &
+  "${HOME}/altri_progetti/wal-discord/wal-discord"
+  xrdb "${HOME}/.Xresources"
+  for pid in $(pidof st); do kill -s USR1 "$pid"; done
 }
+
 main

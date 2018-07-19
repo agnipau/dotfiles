@@ -5,14 +5,23 @@
 # If not running interactively, don't do anything:
 [[ $- != *i* ]] && return
 
-# Prompt
-PS1='\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] '
+# Prompt (modified version of Dylan Araps's prompt)
+prompt() {
+    branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+    printf "%s%s%s%s" "\\[\\e[1;33m\\]\\u " \
+                      "\\[\\e[3;32m\\]\\w\\[\\e[0m\\]" \
+                      "\\[\\e[1;33m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
+                      "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
+}
+
+#PS1='\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] '
 #PS1='➜  '
+PROMPT_COMMAND='PS1=$(prompt)'
 
 # Envars
 export HISTCONTROL="ignoredups"
 export HISTSIZE=1000000
-export PATH="${HOME}/.phantomjs:${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${PATH}"
+export PATH="${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${HOME}/altri_progetti/wal-discord:${HOME}/altri_progetti/sassc/bin:${PATH}"
 export VISUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
 export BROWSER="/usr/bin/chromium"
@@ -39,56 +48,61 @@ bind '"\e\C-l": "\C-e | less\C-m"'
 bind '"\e\C-b": "\C-abc -l <<< \C-m"'
 bind '"\e\e": "\C-asudo \C-e"' 
 
-# Aliases
-alias ore='date +%H:%M'
-alias data='date +"%A %d %B"'
-alias bat='printf "%s\n" "$(</sys/class/power_supply/BAT0/status): $(</sys/class/power_supply/BAT0/capacity)%"'
-alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
-alias c='clear'
-alias q='exit'
-alias gs='git status'
-alias ggo='git add -A; git commit -m "update"'
-alias ggg='git add -A; git commit -m "update"; git push'
+# Miscellanous
 alias clone='git clone --depth=1'
-alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
-alias p='ping google.com'
 alias spdtst='curl -o /dev/null http://test.kpnqwest.it/file2000.bin'
 alias baydl='cd ${HOME}/progetti/youtube-dl-batchfiles && ./baydl.sh'
-alias ls='/opt/coreutils/bin/ls --group-directories-first --color=auto'
+alias obapp='obxprop | grep ^_OB_APP_'
+alias app='xprop | grep ^WM_'
+alias nodebug='notify-send "Debug" "Debug message"'
+alias cnodebug='notify-send -h string:fgcolor:"$color1" "Debug" "Debug message"'
+alias grad='. ${HOME}/.bashrc; hsetroot -add "$color1" -add "$color2" -gradient 0'
+alias solid='. ${HOME}/.bashrc; hsetroot -solid "$color1"'
+alias tra='sed -i -e "s/st.opacity: .*/st.opacity: 240/" ${HOME}/.Xresources && xrdb .Xresources && kill -USR1 $(pidof st)'
+alias notra='sed -i -e "s/st.opacity: .*/st.opacity: 255/" ${HOME}/.Xresources && xrdb .Xresources && kill -USR1 $(pidof st)'
+alias adbpl='adb pull "/storage/emulated/0/$1" "$2"'
+alias adbps='adb push "$1" "/storage/emulated/0/$2"'
+alias discord='beautifuldiscord --css "${HOME}/.cache/wal-discord/style.css"'
+
+# Short aliases
+alias m='alsamixer'
+alias c='clear'
+alias q='exit'
+alias t='tmux'
+alias p='ping google.com'
+alias gs='git status'
+alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
+alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
+
+# Make programs human readable
+alias ls='ls --group-directories-first --color=auto'
 alias l.="ls -A | egrep '^\.'"
 alias la='ls -A'
 alias ll='ls -Alh'
 alias df='df -h'
 alias du='du -h'
 alias ll='ls -Alh'
+
+# Typos
 alias dc='cd'
 alias sl='ls'
 alias nivm='nvim'
 alias nvi='nvim'
+
+# Grep
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias upd='sudo xbps-install -Suyv'
-alias ins='sudo xbps-install -Syv'
-alias rem='sudo xbps-remove -Ryv'
-alias arem='sudo xbps-remove -ROoyv'
-alias src='xbps-query -Rs'
-alias dep='xbps-query -Rx'
-alias po='sudo poweroff'
-alias re='sudo reboot'
-alias zzz='sudo zzz'
-alias ZZZ='sudo ZZZ'
-alias halt='sudo halt'
-alias sa='. ${HOME}/bin/ssh-set'
-alias fixwifi="sudo modprobe -r iwlmvm; sudo modprobe iwlmvm"
-alias m='alsamixer'
-alias mv='mv -i'
-alias obapp='obxprop | grep ^_OB_APP_'
-alias app='xprop | grep ^WM_'
-alias nodebug='notify-send "Debug" "Debug message"'
-alias cnodebug='notify-send -h string:fgcolor:$color1 "Debug" "Debug message"'
-alias grad='. ${HOME}/.bashrc; hsetroot -add $color1 -add $color2 -gradient 0'
-alias solid='. ${HOME}/.bashrc; hsetroot -solid $color1'
+
+# Arch Linux
+alias upd='sudo pacman -Syu --noconfirm'
+alias ins='sudo pacman -S --needed --noconfirm'
+alias rem='sudo pacman -Rsu --noconfirm'
+alias arem='sudo pacman -R $(pacman -Qdtq)' 
+alias src='pacman -Ss'
+alias dep='pacman -Qi'
+alias po='poweroff'
+alias re='reboot'
 
 # Add colors to man pages
 export LESS_TERMCAP_mb=$'\e[0;33m'
@@ -100,15 +114,19 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[0;32m'
 
 # FZF options
-export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--multi --inline-info"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
 export FZF_CTRL_R_OPTS="--reverse"
 
+sa() {
+  eval "$(ssh-agent -s)"
+  ssh-add "${HOME}/.ssh/id_rsa"
+}
+
 . "${HOME}/.cache/wal/colors.sh"
 
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
 
-[[ -f "${HOME}/.local/share/icons-in-terminal/icons_bash.sh" ]] && . \
-  "${HOME}/.local/share/icons-in-terminal/icons_bash.sh"
+[[ -z "$TMUX" ]] && tmux

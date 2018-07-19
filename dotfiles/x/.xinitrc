@@ -2,16 +2,18 @@
 #
 # .xinitrc
 
+# I don't know why, but with nvidia drivers, I need this to get X server
+# working. This set dpi to 75, then dpi are set back to 96 (default) in
+# openbox autostart file.
+xrandr --auto
+
 setxkbmap it
 xset b off
 xset s off
 xset m 1/1
 xset r rate 200 40
-xrdb "${HOME}/.Xresources"
-xmodmap "${HOME}/.Xmodmap"
+xrdb ~/.Xresources
+xmodmap ~/.Xmodmap
 
-wal -R -o "${HOME}/bin/wal-set"
-
-compton -b --config "${HOME}/.config/compton/compton.conf"
-
+# The rest can be found in ~/.config/openbox/autostart
 exec openbox-session

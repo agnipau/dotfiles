@@ -2,10 +2,13 @@
 ! .Xresources
 !
 
-! Fonts
+! Colors
+#include "/home/matte/.cache/wal/colors.Xresources"
+
+! Fallback fonts
 *.font: xft:Iosevka Term:size=12
-*.boldFont: xft:Iosevka Term:size=12
-*.italicFont: xft:Iosevka Term:size=12 *.boldItalicFont: xft:Iosevka Term:size=12
+*.boldFont: xft:Iosevka Term Bold:size=12
+*.italicFont: xft:Iosevka Term Bold Italic:size=12
 
 ! Xft settings
 Xft.antialias: true
@@ -30,5 +33,21 @@ rofi.xoffset: 30
 rofi.width: 300
 rofi.padding: 25
 
-! 2bwm
-twobwm.enable_compton: true
+! st
+st.termname: st-256color
+st.shell: /bin/bash
+st.font: Iosevka Term:size=12:antialias=true:autohint=true;
+st.borderpx: 25
+st.cursorshape: 2
+st.cursorthickness: 2
+st.cursorblinkstyle: 0
+st.cursorblinkontype: 1
+st.bold_font: 1
+st.xfps: 120
+st.actionfps: 30
+st.chscale: 1.0
+st.cwscale: 1.0
+st.blinktimeout: 800
+st.bellvolume: 0
+st.prompt_char: $
+st.opacity: 255

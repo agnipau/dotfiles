@@ -6,4 +6,6 @@
 scrot '%d-%m-%Y_%H-%M-%S.png' \
       -e 'mv $f ~/immagini'
 
-notify-send --expire-time=3000 "Screenshot saved"
+ico="$(printf '%b\n' "\\uf030")"
+
+notify-send --expire-time=3000 "$ico  Screenshot saved"

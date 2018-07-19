@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#
-# Clean xbps cache.
-
-dir_size="$(cd /var/cache/xbps && du -h | tail -n1 | cut -d. -f1)"
-sudo rm -rf /var/cache/xbps/*
-echo " -> Cleaned garbage succefully, for a total of $dir_size"
