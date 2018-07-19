@@ -1,7 +1,5 @@
 # Dotfiles
 
-# Screenshot
-
 ![openbox-patched scrot](https://user-images.githubusercontent.com/40271651/42960069-11335e0c-8b8b-11e8-96ca-be82774ff0a3.png)
 > [openbox-patched]
 
