@@ -1,4 +1,5 @@
-# Some garbage
+# Garbage
+dotfiles/viewnior/.config/viewnior/accel_map
 dotfiles/nvim/.config/nvim/.netrwhist
 dotfiles/nvim/.config/nvim/plugged
 dotfiles/mpv/fonts.scale

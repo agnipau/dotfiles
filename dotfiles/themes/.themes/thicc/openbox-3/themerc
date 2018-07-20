@@ -3,9 +3,9 @@
 # thicc theme for Openbox by Dylan Araps, modified a bit.
 
 # Titlebar colors
-window.*.title.bg.color: #121b21
-window.*.label.text.color: #cad4da
-window.*.button.*.image.color: #cad4da
+window.*.title.bg.color: #051D30
+window.*.label.text.color: #eccfdc
+window.*.button.*.image.color: #eccfdc
 
 # Titlebar
 padding.width: 15

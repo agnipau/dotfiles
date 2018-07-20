@@ -572,9 +572,14 @@
       <command>~/bin/vol --max</command>
     </action>
   </keybind>
-  <keybind key="W-P">
+  <keybind key="W-p">
     <action name="Execute">
       <command>~/bin/scr</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-p">
+    <action name="Execute">
+      <command>~/bin/sscr</command>
     </action>
   </keybind>
   <keybind key="W-Up">
@@ -905,6 +910,16 @@
       <height>630</height>
     </size>
   </application>
+  <application class="Auryo">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
 
   <!-- Center apps -->
   <!--
@@ -941,15 +956,34 @@
     </position>
   </application>
 
-  <!-- No decor -->
+  <!-- No decor and position -->
+  <application class="Viewnior">
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+  </application>
   <application class="feh">
     <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
   </application>
   <application title="qiv*">
     <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
   </application>
   <application class="mpv">
     <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
   </application>
 </applications>
 

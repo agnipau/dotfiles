@@ -21,7 +21,7 @@ PROMPT_COMMAND='PS1=$(prompt)'
 # Envars
 export HISTCONTROL="ignoredups"
 export HISTSIZE=1000000
-export PATH="${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${HOME}/altri_progetti/wal-discord:${HOME}/altri_progetti/sassc/bin:${PATH}"
+export PATH="${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${PATH}"
 export VISUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
 export BROWSER="/usr/bin/chromium"
@@ -49,7 +49,7 @@ bind '"\e\C-b": "\C-abc -l <<< \C-m"'
 bind '"\e\e": "\C-asudo \C-e"' 
 
 # Miscellanous
-alias clone='git clone --depth=1'
+alias clone='git clone --depth 1 https://github.com/'
 alias spdtst='curl -o /dev/null http://test.kpnqwest.it/file2000.bin'
 alias baydl='cd ${HOME}/progetti/youtube-dl-batchfiles && ./baydl.sh'
 alias obapp='obxprop | grep ^_OB_APP_'
@@ -58,8 +58,6 @@ alias nodebug='notify-send "Debug" "Debug message"'
 alias cnodebug='notify-send -h string:fgcolor:"$color1" "Debug" "Debug message"'
 alias grad='. ${HOME}/.bashrc; hsetroot -add "$color1" -add "$color2" -gradient 0'
 alias solid='. ${HOME}/.bashrc; hsetroot -solid "$color1"'
-alias tra='sed -i -e "s/st.opacity: .*/st.opacity: 240/" ${HOME}/.Xresources && xrdb .Xresources && kill -USR1 $(pidof st)'
-alias notra='sed -i -e "s/st.opacity: .*/st.opacity: 255/" ${HOME}/.Xresources && xrdb .Xresources && kill -USR1 $(pidof st)'
 alias adbpl='adb pull "/storage/emulated/0/$1" "$2"'
 alias adbps='adb push "$1" "/storage/emulated/0/$2"'
 alias discord='beautifuldiscord --css "${HOME}/.cache/wal-discord/style.css"'
@@ -74,14 +72,16 @@ alias gs='git status'
 alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
 
-# Make programs human readable
+# Make programs human readable/faster to type
 alias ls='ls --group-directories-first --color=auto'
+alias l="ls"
 alias l.="ls -A | egrep '^\.'"
 alias la='ls -A'
 alias ll='ls -Alh'
 alias df='df -h'
 alias du='du -h'
 alias ll='ls -Alh'
+alias mkdir='mkdir -p'
 
 # Typos
 alias dc='cd'
@@ -96,11 +96,17 @@ alias fgrep='fgrep --color=auto'
 
 # Arch Linux
 alias upd='sudo pacman -Syu --noconfirm'
+alias aupd='aurman -Syu --noconfirm'
 alias ins='sudo pacman -S --needed --noconfirm'
+alias ains='aurman -S --needed --noconfirm'
 alias rem='sudo pacman -Rsu --noconfirm'
-alias arem='sudo pacman -R $(pacman -Qdtq)' 
+alias arem='aurman -Rsu --noconfirm'
+alias autorem='sudo pacman -R $(pacman -Qdtq)' 
 alias src='pacman -Ss'
+alias asrc='aurman -Ss'
 alias dep='pacman -Qi'
+
+# System management
 alias po='poweroff'
 alias re='reboot'
 
@@ -114,7 +120,7 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[0;32m'
 
 # FZF options
-export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git . $HOME"
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--multi --inline-info"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
@@ -123,6 +129,12 @@ export FZF_CTRL_R_OPTS="--reverse"
 sa() {
   eval "$(ssh-agent -s)"
   ssh-add "${HOME}/.ssh/id_rsa"
+}
+
+wal-telegram() {
+  cd "${HOME}/progetti/wal-telegram"
+  ./wal-telegram
+  cd - &>/dev/null
 }
 
 . "${HOME}/.cache/wal/colors.sh"

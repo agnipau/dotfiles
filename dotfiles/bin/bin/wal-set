@@ -39,7 +39,7 @@ reload_openbox() {
       -e "s/bg.color: #.*/bg.color: ${color0:-#000000}/" \
       -e "s/text.color: #.*/text.color: ${color7:-#ffffff}/" \
       -e "s/image.color: #.*/image.color: ${color7:-#ffffff}/" \
-      "${HOME}/.themes/Agnipau/openbox-3/themerc"
+      "${HOME}/.themes/thicc/openbox-3/themerc"
   openbox --reconfigure
 }
 
@@ -55,7 +55,7 @@ main() {
   reload_zathura
   reload_openbox
   reload_colors
-  "${HOME}/.wal-telegram/tgen" &
+  "${HOME}/progetti/wal-telegram/wal-telegram"
   "${HOME}/altri_progetti/wal-discord/wal-discord"
   xrdb "${HOME}/.Xresources"
   for pid in $(pidof st); do kill -s USR1 "$pid"; done

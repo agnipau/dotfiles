@@ -8,10 +8,12 @@ aom
 archlinux-keyring
 argon2
 aria2
+aspell
 at-spi2-atk
 at-spi2-core
 atk
 attr
+
 
 
 autoconf
@@ -25,6 +27,8 @@ bc
 binutils
 bison
 blas
+brotli
+btrfs-progs
 bzip2
 c-ares
 ca-certificates
@@ -53,6 +57,7 @@ dhcpcd
 dialog
 diffutils
 
+dmraid
 dnssec-anchors
 dosfstools
 double-conversion
@@ -62,6 +67,9 @@ efibootmgr
 efivar
 egl-wayland
 eglexternalplatform
+electron
+enchant
+
 exfat-utils
 exiv2
 exo
@@ -91,6 +99,8 @@ gc
 gcc
 gcc-libs
 gconf
+gcr
+gd
 gdbm
 gdk-pixbuf2
 gegl
@@ -107,10 +117,12 @@ glib2
 glibc
 glu
 gmp
+gnome-online-accounts
 gnupg
 gnutls
 gperf
 gpgme
+gptfdisk
 graphite
 grep
 groff
@@ -118,12 +130,18 @@ grub
 gsettings-desktop-schemas
 gsfonts
 gsm
+gst-plugins-base-libs
+gstreamer
 gtk-update-icon-cache
 gtk2
 gtk3
 guile
+gvfs
+gvfs-goa
+gvfs-google
 gzip
 harfbuzz
+harfbuzz-icu
 haskell-aeson
 haskell-attoparsec
 haskell-base-compat
@@ -145,9 +163,12 @@ haskell-uuid-types
 haskell-vector
 hicolor-icon-theme
 
+hspell
 http-parser
+hunspell
 hunspell-en_US
 hwids
+hyphen
 iana-etc
 icu
 id3lib
@@ -160,6 +181,7 @@ intel-tbb
 iproute2
 iptables
 iputils
+iso-codes
 iw
 jack
 jansson
@@ -186,10 +208,13 @@ libarchive
 libass
 libassuan
 libasyncns
+libatasmart
 libatomic_ops
 libavc1394
+libblockdev
 libbluray
 libbsd
+libbytesize
 
 abi
 experimental
@@ -221,6 +246,7 @@ libexif
 libffi
 libfontenc
 libgcrypt
+libgdata
 libgexiv2
 libglade
 libglvnd
@@ -252,8 +278,10 @@ libnghttp2
 libnl
 libnotify
 libnsl
+liboauth
 libogg
 libomxil-bellagio
+libpaper
 libpcap
 libpciaccess
 libpipeline
@@ -269,6 +297,7 @@ libsamplerate
 libsasl
 libseccomp
 libsecret
+libsigsegv
 libsm
 libsndfile
 libsoup
@@ -276,6 +305,7 @@ libsoxr
 libspiro
 libssh
 libssh2
+libsynctex
 libsystemd
 libtasn1
 libtermkey
@@ -292,6 +322,7 @@ libutil-linux
 libuv
 libva
 libvdpau
+libvoikko
 libvorbis
 libvpx
 libvterm
@@ -327,6 +358,7 @@ libxpm
 libxrandr
 libxrender
 libxshmfence
+libxslt
 libxss
 libxt
 libxtst
@@ -368,11 +400,12 @@ mtdev
 mypaint-brushes
 nano
 ncurses
+ndctl
 neovim
 netctl
 nettle
 node-gyp
-nodejs
+nodejs-lts-carbon
 noto-fonts
 npm
 npth
@@ -382,6 +415,7 @@ ntfs-3g
 nvidia
 nvidia-settings
 nvidia-utils
+
 openal
 
 opencore-amr
@@ -392,6 +426,7 @@ openssh
 openssl
 openssl-1.0
 opus
+orc
 p11-kit
 p7zip
 
@@ -401,12 +436,14 @@ pam
 pambase
 pango
 papirus-icon-theme
+parted
 patch
 pciutils
 pcre
 pcre2
 perl
 perl-error
+perl-file-which
 perl-mailtools
 perl-timedate
 perl-uri
@@ -416,8 +453,10 @@ pixman
 pkgconf
 
 polkit
+poppler
 poppler-data
 popt
+potrace
 procps-ng
 psmisc
 pyalpm
@@ -448,6 +487,7 @@ qiv
 qt5-base
 qt5-imageformats
 qt5-x11extras
+re2
 readline
 redshift
 reiserfsprogs
@@ -459,6 +499,7 @@ rubberband
 ruby
 ruby-rdoc
 rubygems
+run-parts
 s-nail
 scrot
 sdl2
@@ -471,6 +512,7 @@ simplescreenrecorder
 slock
 slop
 smbclient
+snappy
 sound-theme-freedesktop
 speex
 speexdsp
@@ -483,13 +525,28 @@ suitesparse
 sysfsutils
 systemd
 systemd-sysvcompat
+t1lib
 talloc
 tar
 tdb
 telegram-desktop
+telepathy-glib
 tevent
 texinfo
-thin-provisioning-tools
+texlive-bibtexextra
+texlive-bin
+texlive-core
+texlive-fontsextra
+texlive-formatsextra
+texlive-games
+texlive-humanities
+texlive-latexextra
+texlive-music
+texlive-pictures
+texlive-pstricks
+texlive-publishers
+texlive-science
+thin-provising-tools
 thunar
 thunar-archive-plugin
 thunar-volman
@@ -498,6 +555,7 @@ tmux
 tslib
 tzdata
 uchardet
+udisks2
 unibilium
 unrar
 unzip
@@ -507,12 +565,16 @@ v4l-utils
 vamp-plugin-sdk
 vi
 vid.stab
+viewnior
+volume_key
 vulkan-icd-loader
 wayland
 wayland-protocols
+webkit2gtk
 wget
 which
 wireless_tools
+woff2
 wpa_supplicant
 x265
 xcb-proto
@@ -551,3 +613,5 @@ zip
 zita-alsa-pcmi
 zita-resampler
 zlib
+zstd
+zziplib

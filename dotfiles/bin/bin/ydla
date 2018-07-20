@@ -30,6 +30,7 @@ if [[ "$#" -eq 5 ]]; then
   id3v2 --artist "$artist" \
 	--song "$title" \
 	--comment "$link_abbreviato" \
+	--track "" \
 	"${artist} - ${title}.mp3"
   notify-send --expire-time=3000 "YouTube" "${artist} - ${title} downloaded"
 elif [[ "$#" -eq 1 ]]; then
