@@ -576,6 +576,8 @@ python-urllib3
 python2
 python2-cairo
 python2-gobject2
+
+python2-wxpython3
 qiv
 qt5-base
 qt5-imageformats
@@ -672,6 +674,8 @@ which
 wireless_tools
 woff2
 wpa_supplicant
+wxgtk-common
+wxgtk3
 x265
 xcb-proto
 xcb-util
@@ -707,6 +711,7 @@ xvidcore
 xz
 yajl
 youtube-dl
+
 zathura
 zathura-pdf-mupdf
 zip

@@ -41,7 +41,7 @@ enable-scroll = true
 icon-0 = uno;"  "
 icon-1 = due;"  "
 icon-2 = tre;"  "
-icon-3 = quattro;"  "
+icon-3 = quattro;"  "
 icon-4 = cinque;"  "
 icon-5 = sei;"  "
 format = <label-state>
@@ -61,13 +61,13 @@ label-empty-foreground = ${colors.faint}
 [module/brightness]
 type = custom/script
 exec = ~/bin/lum --current
-interval = 1
+interval = 0.1
 format = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.faint}
 label = %output% 
-scroll-up = ~/bin/lum --inc 5
-scroll-down = ~/bin/lum --dec 5
+scroll-up = sudo ~/bin/lum --inc 5
+scroll-down = sudo ~/bin/lum --dec 5
 click-left = redshift -PO 4500
 click-right = redshift -x
 

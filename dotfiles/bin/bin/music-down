@@ -3,7 +3,7 @@
 # Script for downloading a list of song and add id3v2 tags to them.
 
 batch_file="$1"
-end_gre="$(wc -l musica_da_scaricare)"
+end_gre="$(wc -l $batch_file)"
 end="$((${end_gre/${batch_file}} - 1))"
 
 mkdir -p downloaded_music
@@ -19,12 +19,12 @@ for ((c = 1; c <= end; c += 2)); do
   mkdir -p .ydla-temp
   cd .ydla-temp || exit 1
   youtube-dl "$link" \
-             --write-thumbnail --extract-audio --audio-format mp3 \
-             --audio-quality 0 --prefer-ffmpeg --youtube-skip-dash-manifest \
-             --ignore-errors --continue --no-overwrites --restrict-filenames \
-             --verbose
+             --extract-audio --audio-format mp3 --audio-quality 0 \
+	     --prefer-ffmpeg --youtube-skip-dash-manifest --ignore-errors \
+	     --continue --no-overwrites --restrict-filenames --verbose
   mv ./*.mp3 "../${artist} - ${title}.mp3"
   cd .. || exit 1
+  id3v2 --delete-all "${artist} - ${title}.mp3"
   id3v2 --artist "$artist" \
 	--song "$title" \
 	--comment "$short_link" \
@@ -32,3 +32,4 @@ for ((c = 1; c <= end; c += 2)); do
 	"${artist} - ${title}.mp3"
   notify-send --expire-time=3000 "YouTube" "${artist} - ${title} downloaded"
 done
+notify-send --expire-time=3000 "YouTube" "All downloads completed"

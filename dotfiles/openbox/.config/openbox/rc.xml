@@ -564,7 +564,7 @@
   </keybind>
   <keybind key="W-F11">
     <action name="Execute">
-      <command>~/bin/vol --voldown</command>
+      <command>~/bin/vol --voldown 2</command>
     </action>
   </keybind>
   <keybind key="W-S-F11">
@@ -574,7 +574,7 @@
   </keybind>
   <keybind key="W-F12">
     <action name="Execute">
-      <command>~/bin/vol --volup</command>
+      <command>~/bin/vol --volup 2</command>
     </action>
   </keybind>
   <keybind key="W-S-F12">
