@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Show the ssid of the network I'm currently connected.
+
+iwgetid -r

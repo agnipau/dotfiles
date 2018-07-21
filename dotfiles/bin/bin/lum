@@ -23,6 +23,12 @@ max() {
   printf '%s\n' "$mbr" > /sys/class/backlight/intel_backlight/brightness
 }
 
+current() {
+  mbr="$((mbr / 100))"
+  printf '%s\n' "$((abr / mbr - 1 ))%"
+}
+
 [[ "$1" == --dec ]] && dec
 [[ "$1" == --inc ]] && inc
 [[ "$1" == --max ]] && max
+[[ "$1" == --current ]] && current

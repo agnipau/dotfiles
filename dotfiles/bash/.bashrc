@@ -49,7 +49,6 @@ bind '"\e\C-b": "\C-abc -l <<< \C-m"'
 bind '"\e\e": "\C-asudo \C-e"' 
 
 # Miscellanous
-alias clone='git clone --depth 1 https://github.com/'
 alias spdtst='curl -o /dev/null http://test.kpnqwest.it/file2000.bin'
 alias baydl='cd ${HOME}/progetti/youtube-dl-batchfiles && ./baydl.sh'
 alias obapp='obxprop | grep ^_OB_APP_'
@@ -131,13 +130,9 @@ sa() {
   ssh-add "${HOME}/.ssh/id_rsa"
 }
 
-wal-telegram() {
-  cd "${HOME}/progetti/wal-telegram"
-  ./wal-telegram
-  cd - &>/dev/null
+clone() {
+  git clone --depth 1 "https://github.com/$1"
 }
-
-. "${HOME}/.cache/wal/colors.sh"
 
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
 

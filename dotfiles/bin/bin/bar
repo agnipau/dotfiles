@@ -1,19 +1,12 @@
 #!/usr/bin/env bash
 #
 # Converted polybar into tmux status line.
-# Modified version of bar script by Dylan Araps.
+# Modified version of the bar script by Dylan Araps.
 
 lum() {
-  lum_gre="$(bc -l <<<"$(</sys/class/backlight/intel_backlight/brightness) \
-    / $(</sys/class/backlight/intel_backlight/max_brightness) * 100")"
-
-  if [[ "${lum_gre:3:1}" == "." ]]; then
-    lum="100% \\uf0eb"
-  elif [[ "${lum_gre:2:1}" == "." ]]; then
-    lum="${lum_gre:0:2}% \\uf0eb"
-  elif [[ "${lum_gre:1:1}" == "." ]]; then
-    lum="${lum_gre:0:1}% \\uf0eb"
-  fi
+  abr="$(</sys/class/backlight/intel_backlight/brightness)"
+  mbr="$(( "$(</sys/class/backlight/intel_backlight/max_brightness)" / 100 ))"
+  lum="$((abr / mbr - 1 ))% \\uf0eb"
 }
 
 vol() {
@@ -58,14 +51,14 @@ bat() {
   fi
 
   [[ "$sta" == Charging ]] && \
-    bat+="  \\uf0e7"
+    bat="\\uf0e7  $bat"
 }
 
 ore() {
   ore="$(printf "%(%a %d %H:%M)T" "-1") \\uf017"
 }
 
-if (("${1:-148}" >= 147)); then
+if (("${1:-165}" >= 164)); then
   lum
   vol
   ssid

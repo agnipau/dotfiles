@@ -6,7 +6,7 @@ batch_file="$1"
 end_gre="$(wc -l musica_da_scaricare)"
 end="$((${end_gre/${batch_file}} - 1))"
 
-mkdir downloaded_music
+mkdir -p downloaded_music
 cd downloaded_music || exit 1
 
 for ((c = 1; c <= end; c += 2)); do
@@ -19,12 +19,12 @@ for ((c = 1; c <= end; c += 2)); do
   mkdir -p .ydla-temp
   cd .ydla-temp || exit 1
   youtube-dl "$link" \
-             --extract-audio --audio-format mp3 --audio-quality 0 \
-	     --prefer-ffmpeg --youtube-skip-dash-manifest --ignore-errors \
-	     --continue --no-overwrites --restrict-filenames --verbose
+             --write-thumbnail --extract-audio --audio-format mp3 \
+             --audio-quality 0 --prefer-ffmpeg --youtube-skip-dash-manifest \
+             --ignore-errors --continue --no-overwrites --restrict-filenames \
+             --verbose
   mv ./*.mp3 "../${artist} - ${title}.mp3"
   cd .. || exit 1
-  id3v2 --delete-all "${artist} - ${title}.mp3"
   id3v2 --artist "$artist" \
 	--song "$title" \
 	--comment "$short_link" \

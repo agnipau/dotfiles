@@ -54,12 +54,12 @@
   <firstdesk>1</firstdesk>
   <popupTime>0</popupTime>
   <names>
-    <name>1</name>
-    <name>2</name>
-    <name>3</name>
-    <name>4</name>
-    <name>5</name>
-    <name>6</name>
+    <name>uno</name>
+    <name>due</name>
+    <name>tre</name>
+    <name>quattro</name>
+    <name>cinque</name>
+    <name>sei</name>
   </names>
 </desktops>
 
@@ -77,7 +77,7 @@
 <!-- Margins -->
 <margins>
   <top>0</top>
-  <bottom>0</bottom>
+  <bottom>44</bottom>
   <left>0</left>
   <right>0</right>
 </margins>
@@ -879,17 +879,6 @@
     </size>
   </application>
   <application class="TelegramDesktop">
-    <desktop>4</desktop>
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>630</height>
-    </size>
-  </application>
-  <application class="discord">
     <desktop>5</desktop>
     <position force="yes">
       <x>center</x>
@@ -900,7 +889,17 @@
       <height>630</height>
     </size>
   </application>
-  <application class="Zathura">
+  <application class="Spotify">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="discord">
     <position force="yes">
       <x>center</x>
       <y>center</y>
@@ -984,6 +983,14 @@
       <x>center</x>
       <y>center</y>
     </position>
+  </application>
+
+  <!-- Fullscreen apps -->
+  <application class="Gimp">
+    <fullscreen>yes</fullscreen>
+  </application>
+  <application class="Zathura">
+    <fullscreen>yes</fullscreen>
   </application>
 </applications>
 
