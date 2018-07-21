@@ -878,7 +878,6 @@
     </size>
   </application>
   <application name="musica">
-    <desktop>3</desktop>
     <position force="yes">
       <x>338</x>
       <y>94</y>
@@ -889,7 +888,6 @@
     </size>
   </application>
   <application class="TelegramDesktop">
-    <desktop>5</desktop>
     <position force="yes">
       <x>center</x>
       <y>center</y>

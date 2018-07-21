@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-rm -rf "${HOME}/progetti/wallpapers/bat3-$1.jpg"

@@ -72,6 +72,7 @@ alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
 
 # Make programs human readable/faster to type
+alias r='ranger'
 alias ls='ls --group-directories-first --color=auto'
 alias l="ls"
 alias l.="ls -A | egrep '^\.'"

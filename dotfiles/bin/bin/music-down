@@ -9,7 +9,7 @@ end="$((${end_gre/${batch_file}} - 1))"
 mkdir -p downloaded_music
 cd downloaded_music || exit 1
 
-for ((c = 1; c <= end; c += 2)); do
+for ((c=1; c<=end; c+=2)); do
   artist_gre="$(sed -n -e "${c}p" "../${batch_file}")"
   artist="${artist_gre/@*}"
   title_gre="$(sed -n -e "${c}p" "../${batch_file}")"

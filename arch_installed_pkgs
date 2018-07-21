@@ -9,7 +9,6 @@ aom
 archlinux-keyring
 argon2
 aria2
-aspell
 at-spi2-atk
 at-spi2-core
 atk
@@ -28,7 +27,6 @@ bc
 binutils
 bison
 blas
-brotli
 btrfs-progs
 bzip2
 c-ares
@@ -69,11 +67,9 @@ efivar
 egl-wayland
 eglexternalplatform
 electron
-enchant
 
 exfat-utils
 exiv2
-exo
 expac
 expat
 faad2
@@ -120,11 +116,11 @@ glib2
 glibc
 glu
 gmp
-gnome-online-accounts
 gnupg
 gnutls
 gperf
 gpgme
+gpm
 gptfdisk
 graphite
 grep
@@ -140,8 +136,6 @@ gtk2
 gtk3
 guile
 gvfs
-gvfs-goa
-gvfs-google
 gzip
 harfbuzz
 harfbuzz-icu
@@ -242,12 +236,9 @@ haskell-zip-archive
 haskell-zlib
 hicolor-icon-theme
 
-hspell
 http-parser
-hunspell
 hunspell-en_US
 hwids
-hyphen
 iana-etc
 icu
 id3lib
@@ -330,7 +321,6 @@ libexif
 libffi
 libfontenc
 libgcrypt
-libgdata
 libgexiv2
 libglade
 libglvnd
@@ -365,7 +355,6 @@ libnghttp2
 libnl
 libnotify
 libnsl
-liboauth
 libogg
 libomxil-bellagio
 libpaper
@@ -412,7 +401,6 @@ libutil-linux
 libuv
 libva
 libvdpau
-libvoikko
 libvorbis
 libvpx
 libvterm
@@ -431,8 +419,6 @@ libxdamage
 libxdg-basedir
 libxdmcp
 libxext
-libxfce4ui
-libxfce4util
 libxfixes
 libxfont2
 libxft
@@ -538,7 +524,6 @@ perl-error
 perl-file-which
 perl-mailtools
 perl-timedate
-perl-uri
 
 pinentry
 pixman
@@ -583,6 +568,7 @@ qt5-base
 qt5-imageformats
 qt5-svg
 qt5-x11extras
+ranger
 re2
 readline
 redshift
@@ -627,7 +613,6 @@ talloc
 tar
 tdb
 telegram-desktop
-telepathy-glib
 tevent
 texinfo
 texlive-bibtexextra
@@ -644,9 +629,6 @@ texlive-pstricks
 texlive-publishers
 texlive-science
 thin-provising-tools
-thunar
-thunar-archive-plugin
-thunar-volman
 tldr
 tmux
 tslib
@@ -666,13 +648,12 @@ viewnior
 vlc
 volume_key
 vulkan-icd-loader
+w3m
 wayland
 wayland-protocols
-webkit2gtk
 wget
 which
 wireless_tools
-woff2
 wpa_supplicant
 wxgtk-common
 wxgtk3
@@ -689,7 +670,6 @@ xclip
 xdg-user-dirs
 xdg-utils
 xf86-input-libinput
-xfconf
 xfsprogs
 xkeyboard-config
 xorg-server

@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-wal -i "${HOME}/progetti/wallpapers/bat3-$1.jpg" -o "${HOME}/bin/wal-set"
