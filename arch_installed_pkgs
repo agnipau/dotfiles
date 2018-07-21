@@ -28,7 +28,6 @@ bc
 binutils
 bison
 blas
-bluez-libs
 brotli
 btrfs-progs
 bzip2
@@ -126,7 +125,6 @@ gnupg
 gnutls
 gperf
 gpgme
-gpm
 gptfdisk
 graphite
 grep
@@ -362,13 +360,9 @@ libmpc
 libmpcdec
 libmpeg2
 libmypaint
-libndp
-libnewt
 libnftnl
 libnghttp2
 libnl
-libnm
-libnm-glib
 libnotify
 libnsl
 liboauth
@@ -377,7 +371,6 @@ libomxil-bellagio
 libpaper
 libpcap
 libpciaccess
-libpgm
 libpipeline
 libplacebo
 libpng
@@ -395,7 +388,6 @@ libsecret
 libsigsegv
 libsm
 libsndfile
-libsodium
 libsoup
 libsoxr
 libspiro
@@ -405,7 +397,6 @@ libsynctex
 libsystemd
 libtar
 libtasn1
-libteam
 libtermkey
 libthai
 libtheora
@@ -500,10 +491,10 @@ mypaint-brushes
 nano
 ncurses
 ndctl
+neofetch
 neovim
 netctl
 nettle
-networkmanager
 node-gyp
 nodejs-lts-carbon
 noto-fonts
@@ -612,7 +603,6 @@ shadow
 shared-mime-info
 shellcheck
 simplescreenrecorder
-slang
 slock
 slop
 smbclient
@@ -719,7 +709,6 @@ yajl
 youtube-dl
 zathura
 zathura-pdf-mupdf
-zeromq
 zip
 zita-alsa-pcmi
 zita-resampler

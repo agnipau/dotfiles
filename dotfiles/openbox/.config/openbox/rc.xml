@@ -77,7 +77,7 @@
 <!-- Margins -->
 <margins>
   <top>0</top>
-  <bottom>44</bottom>
+  <bottom>0</bottom>
   <left>0</left>
   <right>0</right>
 </margins>
@@ -500,6 +500,16 @@
       <command>st -n musica -e cmus</command>
     </action>
   </keybind>
+  <keybind key="W-v">
+    <action name="Execute">
+      <command>~/bin/polyon</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-v">
+    <action name="Execute">
+      <command>~/bin/polyoff</command>
+    </action>
+  </keybind>
   <keybind key="W-w">
     <action name="Execute">
       <command>simplescreenrecorder</command>
@@ -918,6 +928,12 @@
       <width>1226</width>
       <height>630</height>
     </size>
+  </application>
+  <application name="flt_wifi">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
   </application>
 
   <!-- Center apps -->

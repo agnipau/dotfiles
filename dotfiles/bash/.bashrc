@@ -81,6 +81,7 @@ alias df='df -h'
 alias du='du -h'
 alias ll='ls -Alh'
 alias mkdir='mkdir -p'
+alias neo='clear; neofetch'
 
 # Typos
 alias dc='cd'
