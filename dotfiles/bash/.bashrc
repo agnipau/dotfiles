@@ -29,6 +29,7 @@ export RTV_BROWSER="/usr/bin/w3m"
 export LANG="it_IT.UTF-8"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export SSH_KEY_PATH="${HOME}/.ssh/id_rsa"
+export RANGER_LOAD_DEFAULT_RC="false"
 #export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 
 # Better tab completion
