@@ -65,7 +65,7 @@ interval = 1
 format = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
-label = 
+label =  %output%
 click-left = st -n flt_wifi -g 50x22 -e sudo wifi-menu
 
 [module/battery]
@@ -153,6 +153,7 @@ format-foreground = ${colors.foreground}
 [module/stitle]
 type = custom/script
 exec = ~/bin/cmus-info
+exec-if = pgrep -x cmus
 click-left = cmus-remote --pause
 click-right = cmus-remote --play
 scroll-up = cmus-remote --seek +5s

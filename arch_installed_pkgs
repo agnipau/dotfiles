@@ -12,6 +12,7 @@ aria2
 at-spi2-atk
 at-spi2-core
 atk
+atool
 attr
 
 
@@ -27,6 +28,7 @@ bc
 binutils
 bison
 blas
+boost-libs
 btrfs-progs
 bzip2
 c-ares
@@ -38,11 +40,13 @@ cairo
 cantarell-fonts
 cifs-utils
 clang
+clucene
 cmus
 colord
 compiler-rt
 compton
 coreutils
+cpio
 cracklib
 cryptsetup
 curl
@@ -129,8 +133,6 @@ grub
 gsettings-desktop-schemas
 gsfonts
 gsm
-gst-plugins-base-libs
-gstreamer
 gtk-update-icon-cache
 gtk2
 gtk3
@@ -237,8 +239,10 @@ haskell-zlib
 hicolor-icon-theme
 
 http-parser
+hunspell
 hunspell-en_US
 hwids
+hyphen
 iana-etc
 icu
 id3lib
@@ -251,7 +255,6 @@ intel-tbb
 iproute2
 iptables
 iputils
-iso-codes
 iw
 jack
 jansson
@@ -275,6 +278,8 @@ ldb
 ldns
 lensfun
 less
+lhasa
+libabw
 libaio
 libarchive
 libass
@@ -297,6 +302,8 @@ libcap-ng
 libcddb
 libcdio
 libcdio-paranoia
+libcdr
+libcmis
 libconfig
 libcroco
 libcue
@@ -311,15 +318,20 @@ libdrm
 libdvbpsi
 libdvdnav
 libdvdread
+libe-book
 libebml
 libedit
 libelf
 libepoxy
+libepubgen
+libetonyek
 libevdev
 libevent
 libexif
+libexttextcat
 libffi
 libfontenc
+libfreehand
 libgcrypt
 libgexiv2
 libglade
@@ -335,8 +347,10 @@ libidn
 libidn2
 libiec61883
 libinput
+libixion
 libjpeg-turbo
 libksba
+liblangtag
 libldap
 liblqr
 libmad
@@ -349,14 +363,19 @@ libmodplug
 libmpc
 libmpcdec
 libmpeg2
+libmspub
+libmwaw
 libmypaint
 libnftnl
 libnghttp2
 libnl
 libnotify
 libnsl
+libodfgen
 libogg
 libomxil-bellagio
+liborcus
+libpagemaker
 libpaper
 libpcap
 libpciaccess
@@ -366,9 +385,12 @@ libpng
 libproxy
 libpsl
 libpulse
+libqxp
 libraqm
 libraw
 libraw1394
+libreoffice-fresh
+librevenge
 librsvg
 libsamplerate
 libsasl
@@ -382,6 +404,7 @@ libsoxr
 libspiro
 libssh
 libssh2
+libstaroffice
 libsynctex
 libsystemd
 libtar
@@ -391,6 +414,7 @@ libthai
 libtheora
 libtiff
 libtirpc
+libtommath
 libtool
 libunistring
 libunwind
@@ -401,6 +425,7 @@ libutil-linux
 libuv
 libva
 libvdpau
+libvisio
 libvorbis
 libvpx
 libvterm
@@ -408,6 +433,9 @@ libwacom
 libwbclient
 libwebp
 libwmf
+libwpd
+libwpg
+libwps
 libx11
 libx264
 libxau
@@ -441,6 +469,7 @@ libxtst
 libxv
 libxxf86vm
 libyaml
+libzmf
 licenses
 linux
 linux-api-headers
@@ -449,6 +478,7 @@ llvm-libs
 lm_sensors
 lmdb
 logrotate
+lpsolve
 lshw
 lua
 lua52
@@ -457,6 +487,7 @@ lvm2
 lxappearance
 lz4
 lzo
+lzop
 m4
 mailcap
 make
@@ -478,6 +509,7 @@ nano
 ncurses
 ndctl
 neofetch
+neon
 neovim
 netctl
 nettle
@@ -503,7 +535,6 @@ openssh
 openssl
 openssl-1.0
 opus
-orc
 p11-kit
 p7zip
 
@@ -561,16 +592,17 @@ python-urllib3
 python2
 python2-cairo
 python2-gobject2
-
-python2-wxpython3
 qiv
 qt5-base
 qt5-imageformats
 qt5-svg
 qt5-x11extras
 ranger
+raptor
+rasqal
 re2
 readline
+redland
 redshift
 reiserfsprogs
 rest
@@ -582,6 +614,8 @@ ruby
 ruby-rdoc
 rubygems
 run-parts
+rxvt-unicode
+rxvt-unicode-terminfo
 s-nail
 scrot
 sdl2
@@ -635,6 +669,7 @@ tslib
 tzdata
 uchardet
 udisks2
+unace
 unibilium
 unrar
 unzip
@@ -653,10 +688,9 @@ wayland
 wayland-protocols
 wget
 which
+wildmidi
 wireless_tools
 wpa_supplicant
-wxgtk-common
-wxgtk3
 x265
 xcb-proto
 xcb-util
@@ -672,6 +706,7 @@ xdg-utils
 xf86-input-libinput
 xfsprogs
 xkeyboard-config
+xmlsec
 xorg-server
 xorg-server-common
 xorg-setxkbmap
@@ -691,7 +726,6 @@ xvidcore
 xz
 yajl
 youtube-dl
-
 zathura
 zathura-pdf-mupdf
 zip
