@@ -6,7 +6,7 @@
   # Display
   monitor = 0
   follow = mouse
-  geometry = "300-30+30"
+  geometry = "300-35+21"
   indicate_hidden = yes
   shrink = yes
   transparency = 0
@@ -19,6 +19,7 @@
   separator_color = frame
   sort = yes
   idle_threshold = 120
+  corner_radius = 3
   # Text
   font = Iosevka Term 14
   line_height = 0

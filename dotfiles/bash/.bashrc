@@ -70,6 +70,8 @@ alias t='tmux'
 alias p='ping google.com'
 alias gs='git status'
 alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
+#alias pd='pdflatex "$1" &>/dev/null'
+alias pd='pdflatex "$1"'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
 
 # Make programs human readable/faster to type

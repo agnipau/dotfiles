@@ -13,24 +13,40 @@ faint = ${xrdb:color8}
 margin-top = 0
 margin-bottom = 0
 
-[bar/bar]
+[bar/bar-left]
 monitor = eDP-1-1
 bottom = true
 fixed-center = true
-width = 100%
+width = 28%
 height = 40
-offset-x = 0
-offset-y = 0
+offset-x = 35
+offset-y = 21
 background = ${colors.background}
 foreground = ${colors.foreground}
-radius = 0.0
+radius = 5.0
 padding= 3
 module-margin = 1
 font-0 = Iosevka Term:size=12:antialias=true:autohint=false;3
 font-1 = FontAwesome:size=12:antialias=true:autohint=false;3
-modules-left = openbox_wms network battery volume brightness
-modules-center = date
-modules-right = prev stitle next
+modules-center = wifi battery volume brightness
+locale = it_IT.UTF-8
+
+[bar/bar-right]
+monitor = eDP-1-1
+bottom = true
+fixed-center = true
+width = 19%
+height = 40
+offset-x = 1070
+offset-y = 21
+background = ${colors.background}
+foreground = ${colors.foreground}
+radius = 5.0
+padding= 3
+module-margin = 1
+font-0 = Iosevka Term:size=12:antialias=true:autohint=false;3
+font-1 = FontAwesome:size=12:antialias=true:autohint=false;3
+modules-center = date music
 locale = it_IT.UTF-8
 
 [module/openbox_wms]
@@ -58,7 +74,7 @@ label-empty =
 label-empty-background = ${colors.background}
 label-empty-foreground = ${colors.foreground}
 
-[module/network]
+[module/wifi]
 type = custom/script
 exec = ~/bin/net
 interval = 1
@@ -81,6 +97,9 @@ label-charging-foreground = ${colors.foreground}
 label-discharging = %percentage%%
 label-discharging-background = ${colors.background}
 label-discharging-foreground = ${colors.foreground}
+label-full =  %percentage%%
+label-full-background = ${colors.background}
+label-full-foreground = ${colors.foreground}
 ramp-capacity-0 =  
 ramp-capacity-0-background = ${colors.background}
 ramp-capacity-0-foreground = ${colors.foreground}
@@ -132,39 +151,23 @@ click-right = redshift -x
 [module/date]
 type = internal/date
 interval = 1
-date = "%a, %d %b "
-date-alt = "%a, %d %b "
-time = %H:%M
-time-alt = %H:%M:%S
+date = " %a %d %b "
+date-alt = " %a, %d %b "
+time =  %H:%M
+time-alt =  %H:%M:%S
 format = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 label = %date% %time%
 label-foreground = ${colors.foreground}
 
-[module/prev]
+[module/music]
 type = custom/script
 format-text = label
-label = 
+label = 
 exec = printf '%s' label
-click-left = cmus-remote --prev
-format-foreground = ${colors.foreground}
-
-[module/stitle]
-type = custom/script
-exec = ~/bin/cmus-info
-exec-if = pgrep -x cmus
+scroll-up= cmus-remote --seek +5s
+scroll-down = cmus-remote --seek -5s
 click-left = cmus-remote --pause
 click-right = cmus-remote --play
-scroll-up = cmus-remote --seek +5s
-scroll-down = cmus-remote --seek -5s
-interval = 0.8
-format-foreground = ${colors.foreground}
-
-[module/next]
-type = custom/script
-format-text = label
-label = 
-exec = printf '%s' label
-click-left = cmus-remote --next
 format-foreground = ${colors.foreground}

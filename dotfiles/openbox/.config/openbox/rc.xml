@@ -874,7 +874,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>630</height>
+      <height>570</height>
     </size>
   </application>
   <application name="musica">
@@ -894,7 +894,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>630</height>
+      <height>570</height>
     </size>
   </application>
   <application class="Spotify">
@@ -904,7 +904,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>630</height>
+      <height>570</height>
     </size>
   </application>
   <application class="discord">
@@ -914,7 +914,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>630</height>
+      <height>570</height>
     </size>
   </application>
   <application class="Auryo">
@@ -924,7 +924,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>630</height>
+      <height>570</height>
     </size>
   </application>
   <application name="flt_wifi">

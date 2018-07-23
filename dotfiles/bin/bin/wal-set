@@ -50,11 +50,17 @@ reload_colors() {
          "${HOME}/.cache/wal/colors.sh"
 }
 
+reload_rofi() {
+  sed -i -e "33i\ \ \ \ border-radius: 5;" \
+         "${HOME}/.cache/wal/colors-rofi-dark.rasi"
+}
+
 main() {
   reload_dunst
   reload_zathura
   reload_openbox
   reload_colors
+  reload_rofi
   "${HOME}/progetti/wal-telegram/wal-telegram"
   "${HOME}/altri_progetti/wal-discord/wal-discord"
   xrdb "${HOME}/.Xresources"

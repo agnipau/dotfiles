@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+#
+# Returns the artist name and the title of the song played by cmus, auryo or
+# spotify.
+# PS: playerctl is a bit buggy with auryo, so the auryo part is a bit more
+# complex
+
+status() {
+  if [[ "$(pgrep -x spotify &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    case "$(playerctl status)" in
+      Playing)
+        title="$(playerctl metadata title)"
+        artist="$(playerctl metadata artist)"
+        printf '%s' "${artist} - ${title}"
+        ;;
+      Paused)
+        printf ""
+        ;;
+    esac
+  elif [[ "$(pgrep -x auryo &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    tmp_dir="$(mktemp -d)"
+    playerctl status &>"${tmp_dir}/status"
+    status="$(cat "${tmp_dir}/status" | tail -n1)"
+    case "$status" in
+      Playing)
+        playerctl metadata title &>"${tmp_dir}/title"
+        playerctl metadata artist &>"${tmp_dir}/artist"
+	artist="$(cat "${tmp_dir}/artist" | tail -n1)"
+	title="$(cat "${tmp_dir}/title" | tail -n1)"
+        printf '%s' "${artist} - ${title}"
+        ;;
+      Paused)
+        printf ""
+        ;;
+    esac
+  elif [[ "$(pgrep -x cmus &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    title_gre="$(cmus-remote -Q | grep '^tag title')"
+    title="${title_gre/'tag title '}"
+    artist_gre="$(cmus-remote -Q | grep '^tag artist')"
+    artist="${artist_gre/'tag artist '}"
+    printf '%s' "${artist} - ${title}"
+  else
+    printf ""
+  fi
+}
+
+play-pause() {
+  if [[ "$(pgrep -x spotify &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    playerctl play-pause
+  elif [[ "$(pgrep -x auryo &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    playerctl play-pause
+  elif [[ "$(pgrep -x cmus &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    cmus-remote --pause
+  fi
+}
+
+next() {
+  if [[ "$(pgrep -x spotify &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    playerctl next
+  elif [[ "$(pgrep -x auryo &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    playerctl next
+  elif [[ "$(pgrep -x cmus &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    cmus-remote --next
+  fi
+}
+
+prev() {
+  if [[ "$(pgrep -x spotify &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    playerctl previous
+  elif [[ "$(pgrep -x auryo &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    playerctl previous
+  elif [[ "$(pgrep -x cmus &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+    cmus-remote --prev
+  fi
+}
+
+[[ "$1" == --status ]] && status
+[[ "$1" == --play-pause ]] && play-pause
+[[ "$1" == --next ]] && next
+[[ "$1" == --prev ]] && prev

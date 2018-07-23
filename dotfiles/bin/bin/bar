@@ -38,8 +38,8 @@ bat() {
   sta="$(</sys/class/power_supply/BAT0/status)"
   cap="$(</sys/class/power_supply/BAT0/capacity)"
 
-  if [[ "$cap" -eq 100 ]]; then
-    bat="${cap}% \\uf240"
+  if [[ "$cap" -ge 100 ]]; then
+    bat="100% \\uf240"
   elif [[ "$cap" -ge 75 ]]; then
     bat="${cap}% \\uf241"
   elif [[ "$cap" -ge 50 ]]; then
