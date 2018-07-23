@@ -13,4 +13,9 @@ GUI Font: Iosevka
 
 Please don't copy unless you know _exactly_ what you're copying.
 
+This setup works with Termux!
+Obviously stow directory named ...-termux instead of the ones that don't end with -termux.
+By default Termux look is quite awful, you can use tct to set a better colorscheme and font.
+Termux supports ligatures, so try a font with ligatures (fira-code, iosevka etc.).
+
 [openbox-patched]: https://github.com/dylanaraps/openbox-patched
