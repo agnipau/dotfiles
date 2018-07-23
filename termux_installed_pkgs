@@ -1,6 +1,7 @@
 
 apt
 aria2
+asciinema
 bash
 busybox
 c-ares
@@ -13,6 +14,7 @@ dpkg
 ffmpeg
 fontconfig
 freetype
+gdbm
 git
 glib
 gnupg2
@@ -27,6 +29,7 @@ libassuan
 libbz2
 libc++
 libcairo
+libcrypt
 libcurl
 libedit
 libevent
@@ -71,8 +74,12 @@ libx265
 libxml2
 libyaml
 littlecms
+mpv
 ncurses
+ncurses-ui-libs
+ncurses-utils
 neovim
+openal-soft
 openjpeg
 openssh
 openssl
@@ -81,6 +88,7 @@ pcre2
 perl
 pinentry
 poppler
+python
 readline
 rsync
 ruby
@@ -92,7 +100,6 @@ termux-tools
 texlive
 texlive-bin
 texlive-tlmgr
-tmux
 tsu
 wget
 xvidcore
