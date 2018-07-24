@@ -334,6 +334,11 @@
   <keybind key="W-S-r">
     <action name="Restart"/>
   </keybind>
+  <keybind key="W-C-r">
+    <action name="Execute">
+      <command>reboot</command>
+    </action>
+  </keybind>
   <keybind key="W-C-q">
     <action name="Execute">
       <command>openbox --exit</command>
@@ -537,6 +542,11 @@
       <command>sudo ~/bin/lum --dec 10</command>
     </action>
   </keybind>
+  <keybind key="W-S-F5">
+    <action name="Execute">
+      <command>sudo ~/bin/lum --min</command>
+    </action>
+  </keybind>
   <keybind key="W-F6">
     <action name="Execute">
       <command>sudo ~/bin/lum --inc 10</command>
@@ -559,27 +569,27 @@
   </keybind>
   <keybind key="W-F10">
     <action name="Execute">
-      <command>~/bin/vol --toggle</command>
+      <command>~/bin/pvol --toggle</command>
     </action>
   </keybind>
   <keybind key="W-F11">
     <action name="Execute">
-      <command>~/bin/vol --voldown 2</command>
+      <command>~/bin/pvol --voldown 2</command>
     </action>
   </keybind>
   <keybind key="W-S-F11">
     <action name="Execute">
-      <command>~/bin/vol --min</command>
+      <command>~/bin/pvol --zero</command>
     </action>
   </keybind>
   <keybind key="W-F12">
     <action name="Execute">
-      <command>~/bin/vol --volup 2</command>
+      <command>~/bin/pvol --volup 2</command>
     </action>
   </keybind>
   <keybind key="W-S-F12">
     <action name="Execute">
-      <command>~/bin/vol --max</command>
+      <command>~/bin/pvol --cento</command>
     </action>
   </keybind>
   <keybind key="W-p">

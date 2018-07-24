@@ -68,11 +68,17 @@ alias c='clear'
 alias q='exit'
 alias t='tmux'
 alias p='ping google.com'
-alias gs='git status'
 alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
-#alias pd='pdflatex "$1" &>/dev/null'
 alias pd='pdflatex "$1"'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
+
+# git aliases
+alias ga='git add .'
+alias gm='git commit -m'
+alias gps='git push'
+alias gpl='git pull'
+alias gs='git status'
+alias gr='git remote -v'
 
 # Make programs human readable/faster to type
 alias r='ranger'
@@ -145,6 +151,4 @@ cclone() {
 
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
 
-[[ -z "$TMUX" ]] && tmux
-
-cat "${HOME}/.cache/wal/sequences"
+[[ -z "$TMUX" && "$DISPLAY" ]] && tmux

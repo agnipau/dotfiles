@@ -16,11 +16,19 @@ dec() {
 
 inc() {
   (( abr += $((abr * prc / 100)) ))
-  printf '%s\n' "$abr" > /sys/class/backlight/intel_backlight/brightness
+  [[ "$abr" -ge "$mbr" ]] && \
+    printf '%s\n' "$mbr" > /sys/class/backlight/intel_backlight/brightness
+  [[ "$abr" -lt "$mbr" ]] && \
+    printf '%s\n' "$abr" > /sys/class/backlight/intel_backlight/brightness
 }
 
 max() {
   printf '%s\n' "$mbr" > /sys/class/backlight/intel_backlight/brightness
+}
+
+# Quite useless but it works
+min() {
+  printf '%s\n' "0" > /sys/class/backlight/intel_backlight/brightness
 }
 
 current() {
@@ -31,4 +39,5 @@ current() {
 [[ "$1" == --dec ]]     && dec
 [[ "$1" == --inc ]]     && inc
 [[ "$1" == --max ]]     && max
+[[ "$1" == --min ]]     && min
 [[ "$1" == --current ]] && current

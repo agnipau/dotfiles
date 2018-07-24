@@ -18,7 +18,8 @@ current() {
   if [[ "$vsta" == on ]]; then
     case "$nperc" in
       [0-9])  iperc="\\uf026 ${nperc}%" ;;
-      [1-7]?) iperc="\\uf027 ${nperc}%" ;;
+      [1-4]?) iperc="\\uf026 ${nperc}%" ;;
+      [5-8]?) iperc="\\uf027 ${nperc}%" ;;
       *)      iperc="\\uf028 ${nperc}%" ;;
     esac
   elif [[ "$vsta" == off ]]; then

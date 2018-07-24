@@ -11,7 +11,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'baskerville/vim-sxhkdrc'
 Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()

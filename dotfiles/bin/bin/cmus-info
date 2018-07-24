@@ -2,10 +2,12 @@
 #
 # Returns the artist name and the title of the song played by cmus.
 
-title_gre="$(cmus-remote -Q | grep '^tag title')"
-title="${title_gre/'tag title '}"
-
-artist_gre="$(cmus-remote -Q | grep '^tag artist')"
-artist="${artist_gre/'tag artist '}"
-
-printf '%s' "${artist} - ${title}"
+if [[ "$(pgrep -x cmus &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+  title_gre="$(cmus-remote -Q | grep '^tag title')"
+  title="${title_gre/'tag title '}"
+  
+  artist_gre="$(cmus-remote -Q | grep '^tag artist')"
+  artist="${artist_gre/'tag artist '}"
+  
+  printf '%s\n' "${artist} - ${title}"
+fi
