@@ -136,11 +136,6 @@ export FZF_DEFAULT_OPTS="--multi --inline-info"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
 export FZF_CTRL_R_OPTS="--reverse"
 
-sa() {
-  eval "$(ssh-agent -s)"
-  ssh-add "${HOME}/.ssh/id_rsa"
-}
-
 clone() {
   git clone --depth 1 "https://github.com/$1.git"
 }
