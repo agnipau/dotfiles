@@ -61,6 +61,7 @@ alias adbpl='adb pull "/storage/emulated/0/$1" "$2"'
 alias adbps='adb push "$1" "/storage/emulated/0/$2"'
 alias discord='beautifuldiscord --css "${HOME}/.cache/wal-discord/style.css"'
 alias down='curl -fsSLO'
+alias tnvim='nvim *.tex'
 
 # Short aliases
 alias m='alsamixer'
@@ -69,7 +70,7 @@ alias q='exit'
 alias t='tmux'
 alias p='ping google.com'
 alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
-alias pd='pdflatex "$1"'
+alias pd='pdflatex *.tex'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
 
 # git aliases
