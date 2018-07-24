@@ -25,10 +25,10 @@ max() {
 
 current() {
   mbr="$((mbr / 100))"
-  printf '%s\n' "$((abr / mbr - 1 ))%"
+  printf '%s\n' "$((abr / mbr - 1))%"
 }
 
-[[ "$1" == --dec ]] && dec
-[[ "$1" == --inc ]] && inc
-[[ "$1" == --max ]] && max
+[[ "$1" == --dec ]]     && dec
+[[ "$1" == --inc ]]     && inc
+[[ "$1" == --max ]]     && max
 [[ "$1" == --current ]] && current

@@ -9,10 +9,12 @@ secondary = ${xrdb:color2}
 alert = ${xrdb:color3}
 faint = ${xrdb:color8}
 
+; Global options
 [global/wm]
 margin-top = 0
 margin-bottom = 0
 
+; (wifi, battery, volume and brightness)
 [bar/bar-left]
 monitor = eDP-1-1
 bottom = true
@@ -28,9 +30,10 @@ padding= 3
 module-margin = 1
 font-0 = Iosevka Term:size=12:antialias=true:autohint=false;3
 font-1 = FontAwesome:size=12:antialias=true:autohint=false;3
-modules-center = wifi battery volume brightness
+modules-center = wifi battery pvol brightness
 locale = it_IT.UTF-8
 
+; (date, time and music)
 [bar/bar-right]
 monitor = eDP-1-1
 bottom = true
@@ -49,6 +52,8 @@ font-1 = FontAwesome:size=12:antialias=true:autohint=false;3
 modules-center = date music
 locale = it_IT.UTF-8
 
+; Quite useless with openbox, but works.
+; If you find it useful use it.
 [module/openbox_wms]
 type = internal/xworkspaces
 pin-workspaces = true
@@ -74,6 +79,8 @@ label-empty =
 label-empty-background = ${colors.background}
 label-empty-foreground = ${colors.foreground}
 
+; Show ssid and if you left click, it will open a terminal instance with
+; wifi-menu opened.
 [module/wifi]
 type = custom/script
 exec = ~/bin/net
@@ -84,6 +91,7 @@ format-foreground = ${colors.foreground}
 label =  %output%
 click-left = st -n flt_wifi -g 50x22 -e sudo wifi-menu
 
+; Display battery stats
 [module/battery]
 type = internal/battery
 battery = BAT0
@@ -116,25 +124,35 @@ ramp-capacity-4 = 
 ramp-capacity-4-background = ${colors.background}
 ramp-capacity-4-foreground = ${colors.foreground}
 
-[module/volume]
-type = internal/volume
-mapped = true
-format-volume = <ramp-volume> <label-volume>
-label-volume-background = ${colors.background}
-label-volume-foreground = ${colors.foreground}
-ramp-volume-0 = 
-ramp-volume-0-background = ${colors.background}
-ramp-volume-0-foreground = ${colors.foreground}
-ramp-volume-1 = 
-ramp-volume-1-background = ${colors.background}
-ramp-volume-1-foreground = ${colors.foreground}
-ramp-volume-2 = 
-ramp-volume-2-background = ${colors.background} 
-ramp-volume-2-foreground = ${colors.foreground} 
-label-muted =  muted
-label-muted-background = ${colors.background}
-label-muted-foreground = ${colors.foreground}
+; ALSA volume
+[module/avol]
+type = custom/script
+exec = ~/bin/avol --current
+interval = 0.1
+format = <label>
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+label = %output%
+scroll-up = ~/bin/pvol --volup 2
+scroll-down = ~/bin/pvol --voldown 2
+click-left = ~/bin/pvol --toggle
+click-right = ~/bin/pvol --max
 
+; PulseAudio volume (with pulse you can set volume to over 100%)
+[module/pvol]
+type = custom/script
+exec = ~/bin/pvol --current
+interval = 0.1
+format = <label>
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+label = %output%
+scroll-up = ~/bin/pvol --volup 2
+scroll-down = ~/bin/pvol --voldown 2
+click-left = ~/bin/pvol --toggle
+click-right = ~/bin/pvol --cento
+
+; xbacklight doesn't work in my laptop, so I wrote a script to do the same thing.
 [module/brightness]
 type = custom/script
 exec = ~/bin/lum --current
@@ -148,6 +166,7 @@ scroll-down = sudo ~/bin/lum --dec 5
 click-left = redshift -PO 4500
 click-right = redshift -x
 
+; Display the date and time
 [module/date]
 type = internal/date
 interval = 1
@@ -161,6 +180,8 @@ format-foreground = ${colors.foreground}
 label = %date% %time%
 label-foreground = ${colors.foreground}
 
+; I can do the same thing with spotify and auryo (using playerctl), but it's
+; quite buggy, so I prefer to use it only with cmus.
 [module/music]
 type = custom/script
 format-text = label

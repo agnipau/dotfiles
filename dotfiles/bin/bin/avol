@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+#
+# Control alsa controllers values.
+
+current() {
+  nperc="$(amixer sget Master \
+    | tail -n1 \
+    | cut -d' ' -f6 \
+    | cut -d[ -f2 \
+    | cut -d] -f1)"
+
+  vsta="$(amixer sget Master \
+    | tail -n1 \
+    | cut -d' ' -f8 \
+    | cut -d[ -f2 \
+    | cut -d] -f1)"
+
+  if [[ "$vsta" == on ]]; then
+    case "$nperc" in
+      [0-9]%)  iperc="\\uf026 ${nperc}" ;;
+      [1-7]?%) iperc="\\uf027 ${nperc}" ;;
+      *)       iperc="\\uf028 ${nperc}" ;;
+    esac
+  elif [[ "$vsta" == off ]]; then
+    iperc="\\uf026 muted"
+  fi
+
+  printf '%b\n' "$iperc"
+}
+
+[[ "$1" == --volup ]]   && amixer sset Master "$2"%+
+[[ "$1" == --voldown ]] && amixer sset Master "$2"%-
+[[ "$1" == --toggle ]]  && amixer sset Master toggle
+[[ "$1" == --mute ]]    && amixer sset Master mute
+[[ "$1" == --unmute ]]  && amixer sset Master unmute
+[[ "$1" == --max ]]     && amixer sset Master 100%
+[[ "$1" == --min ]]     && amixer sset Master 0%
+[[ "$1" == --current ]] && current

@@ -4,7 +4,6 @@
 
 # If not running interactively, don't do anything:
 [[ $- != *i* ]] && return
-
 # Prompt (modified version of Dylan Araps's prompt)
 prompt() {
     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
@@ -61,6 +60,7 @@ alias solid='. ${HOME}/.bashrc; hsetroot -solid "$color1"'
 alias adbpl='adb pull "/storage/emulated/0/$1" "$2"'
 alias adbps='adb push "$1" "/storage/emulated/0/$2"'
 alias discord='beautifuldiscord --css "${HOME}/.cache/wal-discord/style.css"'
+alias down='curl -fsSLO'
 
 # Short aliases
 alias m='alsamixer'
@@ -136,9 +136,15 @@ sa() {
 }
 
 clone() {
-  git clone --depth 1 "https://github.com/$1"
+  git clone --depth 1 "https://github.com/$1.git"
+}
+
+cclone() {
+  git clone --depth 1 "$1.git"
 }
 
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
 
 [[ -z "$TMUX" ]] && tmux
+
+cat "${HOME}/.cache/wal/sequences"

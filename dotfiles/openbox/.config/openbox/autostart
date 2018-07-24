@@ -2,4 +2,5 @@ xrandr --dpi 96
 openbox --restart
 compton -b --config ~/.config/compton/compton.conf
 wal -R -o ~/bin/wal-set
-polybar bar &
+polybar bar-left &
+polybar bar-right &

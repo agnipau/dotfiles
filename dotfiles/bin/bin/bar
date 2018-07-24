@@ -1,54 +1,84 @@
 #!/usr/bin/env bash
 #
 # Converted polybar into tmux status line.
+# It works only when in full screen.
 # Modified version of the bar script by Dylan Araps.
 
 lum() {
   abr="$(</sys/class/backlight/intel_backlight/brightness)"
   mbr="$(( "$(</sys/class/backlight/intel_backlight/max_brightness)" / 100 ))"
-  lum="$((abr / mbr - 1 ))% \\uf0eb"
+  lum="$((abr / mbr - 1))% \\uf0eb"
 }
 
-vol() {
-  cvo_gre="$(amixer sget Master | tail -n1 | cut -d' ' -f6)"
-  cvo="${cvo_gre:1:3}"
-  
-  if [[ "${cvo:2}" = % ]]; then
-    cvo="${cvo:0:2}"
-  elif [[ "${cvo:2}" = 0 ]]; then
-    cvo="${cvo:0:3}"
-  else
-    cvo="${cvo:0:1}"
-  fi
+# Works with ALSA
+avol() {
+  nperc="$(amixer sget Master \
+    | tail -n1 \
+    | cut -d' ' -f6 \
+    | cut -d[ -f2 \
+    | cut -d] -f1)"
 
-  if [[ "$cvo" -ge 50 ]]; then
-    vol="${cvo}% \\uf028"
-  elif [[ "$cvo" -gt 0 ]]; then
-    vol="${cvo}% \\uf027"
-  elif [[ "$cvo" -eq 0 ]]; then
-    vol="${cvo}% \\uf026"
+  vsta="$(amixer sget Master \
+    | tail -n1 \
+    | cut -d' ' -f8 \
+    | cut -d[ -f2 \
+    | cut -d] -f1)"
+
+  if [[ "$vsta" == on ]]; then
+    case "$nperc" in
+      [0-9]%)  vol="${nperc} \\uf026" ;;
+      [1-7]?%) vol="${nperc} \\uf027" ;;
+      *)       vol="${nperc} \\uf028" ;;
+    esac
+  elif [[ "$vsta" == off ]]; then
+    vol="muted \\uf026"
+  fi
+}
+
+# Works with PulseAudio
+pvol() {
+  nperc="$(pactl list sinks \
+    | grep '^[[:space:]]Volume:' \
+    | head -n"$((SINK + 1))" \
+    | tail -n1 \
+    | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')"
+
+  vsta="$(amixer sget Master \
+    | tail -n1 \
+    | cut -d' ' -f8 \
+    | cut -d[ -f2 \
+    | cut -d] -f1)"
+
+  if [[ "$vsta" == on ]]; then
+    case "$nperc" in
+      [0-9])  vol="${nperc}% \\uf026" ;;
+      [1-7]?) vol="${nperc}% \\uf027" ;;
+      *)      vol="${nperc}% \\uf028" ;;
+    esac
+  elif [[ "$vsta" == off ]]; then
+    vol="muted \\uf026"
   fi
 }
 
 ssid() {
-  ssid="$(iwgetid -r) \\uf1eb"
+  if [[ -z "$(iwgetid -r)" ]]; then
+    ssid="- \\uf1eb"
+  elif [[ "$(iwgetid -r)" ]]; then
+    ssid="$(iwgetid -r) \\uf1eb"
+  fi
 }
 
 bat() {
   sta="$(</sys/class/power_supply/BAT0/status)"
   cap="$(</sys/class/power_supply/BAT0/capacity)"
 
-  if [[ "$cap" -ge 100 ]]; then
-    bat="100% \\uf240"
-  elif [[ "$cap" -ge 75 ]]; then
-    bat="${cap}% \\uf241"
-  elif [[ "$cap" -ge 50 ]]; then
-    bat="${cap}% \\uf242"
-  elif [[ "$cap" -ge 25 ]]; then
-    bat="${cap}% \\uf243"
-  elif [[ "$cap" -ge 0 ]]; then
-    bat="${cap}% \\uf244"
-  fi
+  case "$cap" in
+    [0-9])  bat="${cap}% \\uf244" ;;
+    [1-3]?) bat="${cap}% \\uf243" ;;
+    [4-6]?) bat="${cap}% \\uf242" ;;
+    [7-9]?) bat="${cap}% \\uf241" ;;
+    *)      bat="100% \\uf240" ;;
+  esac
 
   [[ "$sta" == Charging ]] && \
     bat="\\uf0e7  $bat"
@@ -60,7 +90,7 @@ ore() {
 
 if (("${1:-165}" >= 164 && "${2:-35}" >= 34)); then
   lum
-  vol
+  pvol
   ssid
   bat
   ore

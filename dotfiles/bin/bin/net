@@ -2,4 +2,5 @@
 #
 # Show the ssid of the network I'm currently connected.
 
-iwgetid -r
+ssid="$(iwgetid -r)"
+printf '%s\n' "${ssid:--}"
