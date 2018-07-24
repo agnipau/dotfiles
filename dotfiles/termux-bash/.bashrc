@@ -98,6 +98,11 @@ alias rem='pkg uninstall'
 alias autorem='apt autoremove' 
 alias src='pkg search'
 
+# Grep
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
 # System management
 alias po='poweroff'
 alias re='reboot'
