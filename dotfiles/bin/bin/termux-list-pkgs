@@ -1,0 +1,13 @@
+#!/data/data/com.termux/files/usr/bin/bash
+#
+# Generate a list of installed pkgs in Termux.
+
+pkg list-installed &>/dev/null >tlp.tmp 
+cat tlp.tmp | cut -d/ -f1 > termux_installed_pkgs
+rm -f tlp.tmp
+
+sed -i -e 's/Listing...//' termux_installed_pkgs
+
+n_pkgs="$(( $(wc -l termux_installed_pkgs | cut -d' ' -f1) - 1 ))"
+
+printf '%s\n' "==> You have installed $n_pkgs packages"
