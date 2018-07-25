@@ -505,12 +505,12 @@
       <command>st -n musica -e cmus</command>
     </action>
   </keybind>
-  <keybind key="W-v">
+  <keybind key="W-p">
     <action name="Execute">
-      <command>~/bin/polyon</command>
+      <command>~/bin/polyop</command>
     </action>
   </keybind>
-  <keybind key="W-S-v">
+  <keybind key="W-S-p">
     <action name="Execute">
       <command>~/bin/polyoff</command>
     </action>
@@ -592,12 +592,12 @@
       <command>~/bin/pvol --cento</command>
     </action>
   </keybind>
-  <keybind key="W-p">
+  <keybind key="W-Print">
     <action name="Execute">
       <command>~/bin/scr</command>
     </action>
   </keybind>
-  <keybind key="W-S-p">
+  <keybind key="W-S-Print">
     <action name="Execute">
       <command>~/bin/sscr</command>
     </action>

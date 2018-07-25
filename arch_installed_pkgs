@@ -2,7 +2,9 @@ a52dec
 acl
 adapta-gtk-theme
 adwaita-icon-theme
+
 alsa-lib
+alsa-plugins
 alsa-utils
 android-tools
 aom
@@ -64,7 +66,7 @@ dmraid
 dnssec-anchors
 dosfstools
 double-conversion
-dunst
+
 e2fsprogs
 efibootmgr
 efivar
@@ -244,6 +246,7 @@ hunspell
 hunspell-en_US
 hwids
 hyphen
+i3-gaps
 iana-etc
 icu
 id3lib
@@ -326,6 +329,7 @@ libelf
 libepoxy
 libepubgen
 libetonyek
+libev
 libevdev
 libevent
 libexif
@@ -536,6 +540,7 @@ openssh
 openssl
 openssl-1.0
 opus
+orc
 p11-kit
 p7zip
 
@@ -570,6 +575,8 @@ popt
 potrace
 procps-ng
 psmisc
+pulseaudio
+pulseaudio-alsa
 pyalpm
 pygobject2-devel
 pygtk
@@ -610,6 +617,7 @@ reiserfsprogs
 rest
 rofi
 rsync
+rtkit
 rtmpdump
 rubberband
 ruby
@@ -694,6 +702,8 @@ vulkan-icd-loader
 w3m
 wayland
 wayland-protocols
+
+webrtc-audio-processing
 wget
 which
 wildmidi

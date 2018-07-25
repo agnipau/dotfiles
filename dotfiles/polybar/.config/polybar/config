@@ -14,7 +14,7 @@ faint = ${xrdb:color8}
 margin-top = 0
 margin-bottom = 0
 
-; (wifi, battery, volume and brightness)
+; (openbox) (wifi, battery, volume and brightness)
 [bar/bar-left]
 monitor = eDP-1-1
 bottom = true
@@ -33,7 +33,7 @@ font-1 = FontAwesome:size=12:antialias=true:autohint=false;3
 modules-center = wifi battery pvol brightness
 locale = it_IT.UTF-8
 
-; (date, time and music)
+; (openbox) (date, time and music)
 [bar/bar-right]
 monitor = eDP-1-1
 bottom = true
@@ -52,8 +52,58 @@ font-1 = FontAwesome:size=12:antialias=true:autohint=false;3
 modules-center = date music
 locale = it_IT.UTF-8
 
-; Quite useless with openbox, but works.
+; (i3) (all the modules)
+[bar/bar-i3]
+monitor = eDP-1-1
+bottom = false
+fixed-center = true
+width = 1246
+height = 40
+offset-x = 60
+offset-y = 10
+override-redirect = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+radius = 10.0
+padding-right = 2
+module-margin = 1
+font-0 = Iosevka Term:size=12:antialias=true:autohint=false;3
+font-1 = FontAwesome:size=12:antialias=true:autohint=false;3
+modules-left = i3
+modules-right = pvol brightness wifi battery date music
+locale = it_IT.UTF-8
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+; i3 workspaces
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+strip-wsnumbers = true
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+reverse-scroll = false
+label-focused = %name%
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.primary}
+label-focused-padding = 2
+label-unfocused = %name%
+label-unfocused-padding = 2
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-background = ${colors.background}
+label-urgent = %name%
+label-urgent-foreground = ${colors.background}
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+label-visible = %name%
+label-visible-foreground = ${colors.background}
+label-visible-background = ${colors.primary}
+label-visible-padding = 2
+
+; Quite useless in openbox*, but it works.
 ; If you find it useful use it.
+; *you can't see what workspaces are active and what are inactive.
 [module/openbox_wms]
 type = internal/xworkspaces
 pin-workspaces = true
