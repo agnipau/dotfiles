@@ -22,8 +22,7 @@
 <!-- Placement -->
 <placement>
   <policy>Smart</policy>
-  <center>yes</center>
-  <monitor>Mouse</monitor>
+  <center>yes</center> <monitor>Mouse</monitor>
   <primaryMonitor>1</primaryMonitor>
 </placement>
 
@@ -438,9 +437,9 @@
     <action name="Raise"/>
     <action name="MoveResizeTo">
       <x>center</x>
-      <y>94</y>
+      <y>63</y>
       <width>51%</width>
-      <height>39%</height>
+      <height>42%</height>
     </action>
   </keybind>
 
@@ -890,11 +889,11 @@
   <application name="musica">
     <position force="yes">
       <x>338</x>
-      <y>94</y>
+      <y>center</y>
     </position>
     <size>
       <width>51%</width>
-      <height>70%</height>
+      <height>75%</height>
     </size>
   </application>
   <application class="TelegramDesktop">

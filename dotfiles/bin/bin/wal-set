@@ -63,8 +63,6 @@ main() {
   reload_rofi
   "${HOME}/progetti/wal-telegram/wal-telegram"
   "${HOME}/altri_progetti/wal-discord/wal-discord"
-  xrdb "${HOME}/.Xresources"
-  for pid in $(pidof st); do kill -s USR1 "$pid"; done
 }
 
 main
