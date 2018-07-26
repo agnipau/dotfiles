@@ -4,6 +4,8 @@
 # This script takes an hex color (${1}), converts it in rgb, darkens it by
 # ${2}% if $2 is a negative number, lighten it by ${2}% if $2 is a positive
 # number and finally reconverts it in hex.
+#
+# e.g. ./colors-variants "#ffffff" -20 (result = #cccccc)
 
 if [[ "${2:0:1}" == - ]]; then
   modality="negative"

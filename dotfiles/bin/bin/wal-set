@@ -55,6 +55,12 @@ reload_rofi() {
          "${HOME}/.cache/wal/colors-rofi-dark.rasi"
 }
 
+add_colors_variants() {
+  . "${HOME}/.cache/wal/colors.sh"
+  printf "\e]4;17;rgb:${color0_lighter_20:1:2}/${color0_lighter20_:3:2}/${color0_lighter20_:5:2}\e\\\e[31m"
+  printf "\e]4;18;rgb:${color0_lighter_40:1:2}/${color0_lighter20_:3:2}/${color0_lighter20_:5:2}\e\\\e[31m"
+}
+
 main() {
   reload_dunst
   reload_zathura
@@ -63,6 +69,8 @@ main() {
   reload_rofi
   "${HOME}/progetti/wal-telegram/wal-telegram"
   "${HOME}/altri_progetti/wal-discord/wal-discord"
+  #"${HOME}/bin/extend_pywal"
+  #add_colors_variants
 }
 
 main

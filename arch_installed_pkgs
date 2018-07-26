@@ -11,6 +11,7 @@ aom
 archlinux-keyring
 argon2
 aria2
+aspell
 at-spi2-atk
 at-spi2-core
 atk
@@ -31,6 +32,7 @@ binutils
 bison
 blas
 boost-libs
+brotli
 btrfs-progs
 bzip2
 c-ares
@@ -73,9 +75,11 @@ efivar
 egl-wayland
 eglexternalplatform
 electron
+enchant
 
 exfat-utils
 exiv2
+exo
 expac
 expat
 faad2
@@ -122,6 +126,7 @@ glib2
 glibc
 glu
 gmp
+gnome-online-accounts
 gnupg
 gnutls
 gobject-introspection-runtime
@@ -136,11 +141,15 @@ grub
 gsettings-desktop-schemas
 gsfonts
 gsm
+gst-plugins-base-libs
+gstreamer
 gtk-update-icon-cache
 gtk2
 gtk3
 guile
 gvfs
+gvfs-goa
+gvfs-google
 gzip
 harfbuzz
 harfbuzz-icu
@@ -241,6 +250,7 @@ haskell-zip-archive
 haskell-zlib
 hicolor-icon-theme
 
+hspell
 http-parser
 hunspell
 hunspell-en_US
@@ -259,6 +269,7 @@ intel-tbb
 iproute2
 iptables
 iputils
+iso-codes
 iw
 jack
 jansson
@@ -338,6 +349,7 @@ libffi
 libfontenc
 libfreehand
 libgcrypt
+libgdata
 libgexiv2
 libglade
 libglvnd
@@ -376,6 +388,7 @@ libnghttp2
 libnl
 libnotify
 libnsl
+liboauth
 libodfgen
 libogg
 libomxil-bellagio
@@ -431,6 +444,7 @@ libuv
 libva
 libvdpau
 libvisio
+libvoikko
 libvorbis
 libvpx
 libvterm
@@ -452,6 +466,8 @@ libxdamage
 libxdg-basedir
 libxdmcp
 libxext
+libxfce4ui
+libxfce4util
 libxfixes
 libxfont2
 libxft
@@ -561,6 +577,7 @@ perl-error
 perl-file-which
 perl-mailtools
 perl-timedate
+perl-uri
 
 pinentry
 pixman
@@ -574,6 +591,7 @@ poppler-data
 popt
 potrace
 procps-ng
+
 psmisc
 pulseaudio
 pulseaudio-alsa
@@ -582,22 +600,33 @@ pygobject2-devel
 pygtk
 python
 python-appdirs
+python-cachecontrol
 python-chardet
 python-colorama
 python-dateutil
+python-distlib
+python-distro
 python-feedparser
+python-html5lib
 python-idna
+python-lockfile
+python-msgpack
 python-packaging
+python-pip
+python-progress
 python-psutil
 python-pyparsing
+python-pytoml
 python-pywal
 python-regex
 python-requests
+python-retrying
 python-setuptools
 python-sgmllib
 python-six
 python-termcolor
 python-urllib3
+python-webencodings
 python2
 python2-cairo
 python2-gobject2
@@ -657,6 +686,7 @@ talloc
 tar
 tdb
 telegram-desktop
+telepathy-glib
 tevent
 texinfo
 texlive-bibtexextra
@@ -679,6 +709,7 @@ texlive-pstricks
 texlive-publishers
 texlive-science
 thin-provising-tools
+thunar
 tldr
 tmux
 tslib
@@ -696,6 +727,8 @@ vamp-plugin-sdk
 vi
 vid.stab
 viewnior
+vim
+vim-runtime
 vlc
 volume_key
 vulkan-icd-loader
@@ -703,11 +736,13 @@ w3m
 wayland
 wayland-protocols
 
+webkit2gtk
 webrtc-audio-processing
 wget
 which
 wildmidi
 wireless_tools
+woff2
 wpa_supplicant
 x265
 xcb-proto
@@ -722,6 +757,7 @@ xclip
 xdg-user-dirs
 xdg-utils
 xf86-input-libinput
+xfconf
 xfsprogs
 xkeyboard-config
 xmlsec
