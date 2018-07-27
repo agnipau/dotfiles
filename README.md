@@ -8,8 +8,8 @@ WM: openbox-patched
 Shell: bash
 File Manager: ranger
 Bar: polybar
-Terminal Font: Iosevka Term
-GUI Font: Iosevka
+Terminal Font: Iosevka Term SS07 (Monaco Style)
+GUI Font: Iosevka SS07 (Monaco Style)
 
 Please don't copy unless you know _exactly_ what you're copying.
 

@@ -57,15 +57,16 @@ reload_rofi() {
          "${HOME}/.cache/wal/colors-rofi-dark.rasi"
 }
 
-escape() {
-  printf "%b" "\033]4;17;$color0_lighter_40\007" > "$term"
-  printf "%b" "\033]4;18;$color0_lighter_60\007" > "$term"
-}
-
+# Change the value of color17 and the value of color18
 add_colors_variants() {
   . "${HOME}/.cache/wal/colors.sh"
   for term in /dev/pts/[0-9]*; do
-    escape &
+    if [[ -w "$term" ]]; then
+      printf "\e]4;17;rgb:${color0_lighter_40:1:2}/${color0_lighter_40:3:2}/${color0_lighter_40:5:2}\e\\" > "$term"
+      #printf "\033]4;17;rgb:${color0_lighter_40:1:2}/${color0_lighter_40:3:2}/${color0_lighter_40:5:2}\007" > "$term"
+      printf "\e]4;18;rgb:${color0_lighter_60:1:2}/${color0_lighter_60:3:2}/${color0_lighter_60:5:2}\e\\" > "$term"
+      #printf "\033]4;18;rgb:${color0_lighter_60:1:2}/${color0_lighter_60:3:2}/${color0_lighter_60:5:2}\007" > "$term"
+    fi
   done
 }
 

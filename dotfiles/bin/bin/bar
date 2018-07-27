@@ -81,7 +81,7 @@ bat() {
   esac
 
   [[ "$sta" == Charging ]] && \
-    bat="\\uf0e7  $bat"
+    bat="$bat  \\uf0e7"
 }
 
 ore() {
@@ -97,5 +97,5 @@ if (("${1:-165}" >= 164 && "${2:-35}" >= 34)); then
   [[ "$sta" == Discharging ]] && \
     printf '%b\n' "$lum  $vol   $ssid   $bat    $ore "
   [[ "$sta" == Charging ]] && \
-    printf '%b\n' "$lum  $vol   $ssid   $bat   $ore "
+    printf '%b\n' "$lum  $vol   $ssid   $bat  $ore "
 fi

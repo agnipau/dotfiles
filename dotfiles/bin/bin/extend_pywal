@@ -23,6 +23,24 @@ gen_colors() {
     c_rgb_12d="$(( 0x"${!color:1:2}" ))"
     c_rgb_34d="$(( 0x"${!color:3:2}" ))"
     c_rgb_56d="$(( 0x"${!color:5:2}" ))"
+
+    c_rgb_12d_10l="$(( c_rgb_12d + "$((c_rgb_12d / 10))" ))"
+    c_rgb_34d_10l="$(( c_rgb_34d + "$((c_rgb_34d / 10))" ))"
+    c_rgb_56d_10l="$(( c_rgb_56d + "$((c_rgb_56d / 10))" ))"
+    [[ "${c_rgb_12d_10l}" -ge 255 ]] && c_rgb_12d_10l=255
+    [[ "${c_rgb_34d_10l}" -ge 255 ]] && c_rgb_34d_10l=255
+    [[ "${c_rgb_56d_10l}" -ge 255 ]] && c_rgb_56d_10l=255
+    printf -v c_hex_12d_10l '%x' "$c_rgb_12d_10l"
+    printf -v c_hex_34d_10l '%x' "$c_rgb_34d_10l"
+    printf -v c_hex_56d_10l '%x' "$c_rgb_56d_10l"
+    [[ "${#c_hex_12d_10l}" -eq 1 ]] && c_hex_12d_10l="0${c_hex_12d_10l}"
+    [[ "${#c_hex_34d_10l}" -eq 1 ]] && c_hex_34d_10l="0${c_hex_34d_10l}"
+    [[ "${#c_hex_56d_10l}" -eq 1 ]] && c_hex_56d_10l="0${c_hex_56d_10l}"
+    c_hex_10l="#${c_hex_12d_10l}${c_hex_34d_10l}${c_hex_56d_10l}"
+    c_rgb_10l="${c_rgb_12d_10l},${c_rgb_34d_10l},${c_rgb_56d_10l}"
+    declare -g color"${i}"_lighter_10="$c_hex_10l"
+    declare -g color"${i}"_lighter_10_rgb="$c_rgb_10l"
+
     c_rgb_12d_20l="$(( c_rgb_12d + "$((c_rgb_12d / 5))" ))"
     c_rgb_34d_20l="$(( c_rgb_34d + "$((c_rgb_34d / 5))" ))"
     c_rgb_56d_20l="$(( c_rgb_56d + "$((c_rgb_56d / 5))" ))"
@@ -39,6 +57,7 @@ gen_colors() {
     c_rgb_20l="${c_rgb_12d_20l},${c_rgb_34d_20l},${c_rgb_56d_20l}"
     declare -g color"${i}"_lighter_20="$c_hex_20l"
     declare -g color"${i}"_lighter_20_rgb="$c_rgb_20l"
+
     c_rgb_12d_30l="$(( c_rgb_12d + "$((c_rgb_12d * 3 / 10))" ))"
     c_rgb_34d_30l="$(( c_rgb_34d + "$((c_rgb_34d * 3 / 10))" ))"
     c_rgb_56d_30l="$(( c_rgb_56d + "$((c_rgb_56d * 3 / 10))" ))"
@@ -55,6 +74,7 @@ gen_colors() {
     c_rgb_30l="${c_rgb_12d_30l},${c_rgb_34d_30l},${c_rgb_56d_30l}"
     declare -g color"${i}"_lighter_30="$c_hex_30l"
     declare -g color"${i}"_lighter_30_rgb="$c_rgb_30l"
+
     c_rgb_12d_40l="$(( c_rgb_12d + "$((c_rgb_12d * 2 / 5))" ))"
     c_rgb_34d_40l="$(( c_rgb_34d + "$((c_rgb_34d * 2 / 5))" ))"
     c_rgb_56d_40l="$(( c_rgb_56d + "$((c_rgb_56d * 2 / 5))" ))"
@@ -71,6 +91,7 @@ gen_colors() {
     c_rgb_40l="${c_rgb_12d_40l},${c_rgb_34d_40l},${c_rgb_56d_40l}"
     declare -g color"${i}"_lighter_40="$c_hex_40l"
     declare -g color"${i}"_lighter_40_rgb="$c_rgb_40l"
+
     c_rgb_12d_50l="$(( c_rgb_12d + "$((c_rgb_12d / 2))" ))"
     c_rgb_34d_50l="$(( c_rgb_34d + "$((c_rgb_34d / 2))" ))"
     c_rgb_56d_50l="$(( c_rgb_56d + "$((c_rgb_56d / 2))" ))"
@@ -87,6 +108,7 @@ gen_colors() {
     c_rgb_50l="${c_rgb_12d_50l},${c_rgb_34d_50l},${c_rgb_56d_50l}"
     declare -g color"${i}"_lighter_50="$c_hex_50l"
     declare -g color"${i}"_lighter_50_rgb="$c_rgb_50l"
+
     c_rgb_12d_60l="$(( c_rgb_12d + "$((c_rgb_12d * 3 / 5))" ))"
     c_rgb_34d_60l="$(( c_rgb_34d + "$((c_rgb_34d * 3 / 5))" ))"
     c_rgb_56d_60l="$(( c_rgb_56d + "$((c_rgb_56d * 3 / 5))" ))"
@@ -103,6 +125,7 @@ gen_colors() {
     c_rgb_60l="${c_rgb_12d_60l},${c_rgb_34d_60l},${c_rgb_56d_60l}"
     declare -g color"${i}"_lighter_60="$c_hex_60l"
     declare -g color"${i}"_lighter_60_rgb="$c_rgb_60l"
+
     c_rgb_12d_70l="$(( c_rgb_12d + "$((c_rgb_12d * 7 / 10))" ))"
     c_rgb_34d_70l="$(( c_rgb_34d + "$((c_rgb_34d * 7 / 10))" ))"
     c_rgb_56d_70l="$(( c_rgb_56d + "$((c_rgb_56d * 7 / 10))" ))"
@@ -119,6 +142,7 @@ gen_colors() {
     c_rgb_70l="${c_rgb_12d_70l},${c_rgb_34d_70l},${c_rgb_56d_70l}"
     declare -g color"${i}"_lighter_70="$c_hex_70l"
     declare -g color"${i}"_lighter_70_rgb="$c_rgb_70l"
+
     c_rgb_12d_80l="$(( c_rgb_12d + "$((c_rgb_12d * 4 / 5))" ))"
     c_rgb_34d_80l="$(( c_rgb_34d + "$((c_rgb_34d * 4 / 5))" ))"
     c_rgb_56d_80l="$(( c_rgb_56d + "$((c_rgb_56d * 4 / 5))" ))"
@@ -135,6 +159,7 @@ gen_colors() {
     c_rgb_80l="${c_rgb_12d_80l},${c_rgb_34d_80l},${c_rgb_56d_80l}"
     declare -g color"${i}"_lighter_80="$c_hex_80l"
     declare -g color"${i}"_lighter_80_rgb="$c_rgb_80l"
+
     c_rgb_12d_90l="$(( c_rgb_12d + "$((c_rgb_12d * 9 / 10))" ))"
     c_rgb_34d_90l="$(( c_rgb_34d + "$((c_rgb_34d * 9 / 10))" ))"
     c_rgb_56d_90l="$(( c_rgb_56d + "$((c_rgb_56d * 9 / 10))" ))"
@@ -151,6 +176,21 @@ gen_colors() {
     c_rgb_90l="${c_rgb_12d_90l},${c_rgb_34d_90l},${c_rgb_56d_90l}"
     declare -g color"${i}"_lighter_90="$c_hex_90l"
     declare -g color"${i}"_lighter_90_rgb="$c_rgb_90l"
+
+    c_rgb_12d_10d="$(( c_rgb_12d - "$((c_rgb_12d / 10))" ))"
+    c_rgb_34d_10d="$(( c_rgb_34d - "$((c_rgb_34d / 10))" ))"
+    c_rgb_56d_10d="$(( c_rgb_56d - "$((c_rgb_56d / 10))" ))"
+    printf -v c_hex_12d_10d '%x' "$c_rgb_12d_10d"
+    printf -v c_hex_34d_10d '%x' "$c_rgb_34d_10d"
+    printf -v c_hex_56d_10d '%x' "$c_rgb_56d_10d"
+    [[ "${#c_hex_12d_10d}" -eq 1 ]] && c_hex_12d_10d="0${c_hex_12d_10d}"
+    [[ "${#c_hex_34d_10d}" -eq 1 ]] && c_hex_34d_10d="0${c_hex_34d_10d}"
+    [[ "${#c_hex_56d_10d}" -eq 1 ]] && c_hex_56d_10d="0${c_hex_56d_10d}"
+    c_hex_10d="#${c_hex_12d_10d}${c_hex_34d_10d}${c_hex_56d_10d}"
+    c_rgb_10d="${c_rgb_12d_10d},${c_rgb_34d_10d},${c_rgb_56d_10d}"
+    declare -g color"${i}"_darker_10="$c_hex_10d"
+    declare -g color"${i}"_darker_10_rgb="$c_rgb_10d"
+
     c_rgb_12d_20d="$(( c_rgb_12d - "$((c_rgb_12d / 5))" ))"
     c_rgb_34d_20d="$(( c_rgb_34d - "$((c_rgb_34d / 5))" ))"
     c_rgb_56d_20d="$(( c_rgb_56d - "$((c_rgb_56d / 5))" ))"
@@ -164,6 +204,7 @@ gen_colors() {
     c_rgb_20d="${c_rgb_12d_20d},${c_rgb_34d_20d},${c_rgb_56d_20d}"
     declare -g color"${i}"_darker_20="$c_hex_20d"
     declare -g color"${i}"_darker_20_rgb="$c_rgb_20d"
+
     c_rgb_12d_30d="$(( c_rgb_12d - "$((c_rgb_12d * 3 / 10))" ))"
     c_rgb_34d_30d="$(( c_rgb_34d - "$((c_rgb_34d * 3 / 10))" ))"
     c_rgb_56d_30d="$(( c_rgb_56d - "$((c_rgb_56d * 3 / 10))" ))"
@@ -177,6 +218,7 @@ gen_colors() {
     c_rgb_30d="${c_rgb_12d_30d},${c_rgb_34d_30d},${c_rgb_56d_30d}"
     declare -g color"${i}"_darker_30="$c_hex_30d"
     declare -g color"${i}"_darker_30_rgb="$c_rgb_30d"
+
     c_rgb_12d_40d="$(( c_rgb_12d - "$((c_rgb_12d * 2 / 5))" ))"
     c_rgb_34d_40d="$(( c_rgb_34d - "$((c_rgb_34d * 2 / 5))" ))"
     c_rgb_56d_40d="$(( c_rgb_56d - "$((c_rgb_56d * 2 / 5))" ))"
@@ -190,6 +232,7 @@ gen_colors() {
     c_rgb_40d="${c_rgb_12d_40d},${c_rgb_34d_40d},${c_rgb_56d_40d}"
     declare -g color"${i}"_darker_40="$c_hex_40d"
     declare -g color"${i}"_darker_40_rgb="$c_rgb_40d"
+
     c_rgb_12d_50d="$(( c_rgb_12d - "$((c_rgb_12d / 2))" ))"
     c_rgb_34d_50d="$(( c_rgb_34d - "$((c_rgb_34d / 2))" ))"
     c_rgb_56d_50d="$(( c_rgb_56d - "$((c_rgb_56d / 2))" ))"
@@ -203,6 +246,7 @@ gen_colors() {
     c_rgb_50d="${c_rgb_12d_50d},${c_rgb_34d_50d},${c_rgb_56d_50d}"
     declare -g color"${i}"_darker_50="$c_hex_50d"
     declare -g color"${i}"_darker_50_rgb="$c_rgb_50d"
+
     c_rgb_12d_60d="$(( c_rgb_12d - "$((c_rgb_12d * 3 / 5))" ))"
     c_rgb_34d_60d="$(( c_rgb_34d - "$((c_rgb_34d * 3 / 5))" ))"
     c_rgb_56d_60d="$(( c_rgb_56d - "$((c_rgb_56d * 3 / 5))" ))"
@@ -216,6 +260,7 @@ gen_colors() {
     c_rgb_60d="${c_rgb_12d_60d},${c_rgb_34d_60d},${c_rgb_56d_60d}"
     declare -g color"${i}"_darker_60="$c_hex_60d"
     declare -g color"${i}"_darker_60_rgb="$c_rgb_60d"
+
     c_rgb_12d_70d="$(( c_rgb_12d - "$((c_rgb_12d * 7 / 10))" ))"
     c_rgb_34d_70d="$(( c_rgb_34d - "$((c_rgb_34d * 7 / 10))" ))"
     c_rgb_56d_70d="$(( c_rgb_56d - "$((c_rgb_56d * 7 / 10))" ))"
@@ -229,6 +274,7 @@ gen_colors() {
     c_rgb_70d="${c_rgb_12d_70d},${c_rgb_34d_70d},${c_rgb_56d_70d}"
     declare -g color"${i}"_darker_70="$c_hex_70d"
     declare -g color"${i}"_darker_70_rgb="$c_rgb_70d"
+
     c_rgb_12d_80d="$(( c_rgb_12d - "$((c_rgb_12d * 4 / 5))" ))"
     c_rgb_34d_80d="$(( c_rgb_34d - "$((c_rgb_34d * 4 / 5))" ))"
     c_rgb_56d_80d="$(( c_rgb_56d - "$((c_rgb_56d * 4 / 5))" ))"
@@ -242,6 +288,7 @@ gen_colors() {
     c_rgb_80d="${c_rgb_12d_80d},${c_rgb_34d_80d},${c_rgb_56d_80d}"
     declare -g color"${i}"_darker_80="$c_hex_80d"
     declare -g color"${i}"_darker_80_rgb="$c_rgb_80d"
+
     c_rgb_12d_90d="$(( c_rgb_12d - "$((c_rgb_12d * 9 / 10))" ))"
     c_rgb_34d_90d="$(( c_rgb_34d - "$((c_rgb_34d * 9 / 10))" ))"
     c_rgb_56d_90d="$(( c_rgb_56d - "$((c_rgb_56d * 9 / 10))" ))"
@@ -260,7 +307,9 @@ gen_colors() {
 
 # Extends ~/.cache/wal/colors.Xresources.
 extend_xres() {
-  sed -i -e "23i\*.color0_lighter_20:  $color0_lighter_20" \
+  sed -i -e "23i\*.color0_lighter_10:  $color0_lighter_10" \
+         -e "23i\*color0_lighter_10:   $color0_lighter_10" \
+         -e "23i\*.color0_lighter_20:  $color0_lighter_20" \
          -e "23i\*color0_lighter_20:   $color0_lighter_20" \
          -e "23i\*.color0_lighter_30:  $color0_lighter_30" \
          -e "23i\*color0_lighter_30:   $color0_lighter_30" \
@@ -276,6 +325,8 @@ extend_xres() {
          -e "23i\*color0_lighter_80:   $color0_lighter_80" \
          -e "23i\*.color0_lighter_90:  $color0_lighter_90" \
          -e "23i\*color0_lighter_90:   $color0_lighter_90" \
+         -e "23i\*.color0_darker_10:   $color0_darker_10" \
+         -e "23i\*color0_darker_10:    $color0_darker_10" \
          -e "23i\*.color0_darker_20:   $color0_darker_20" \
          -e "23i\*color0_darker_20:    $color0_darker_20" \
          -e "23i\*.color0_darker_30:   $color0_darker_30" \
@@ -292,6 +343,8 @@ extend_xres() {
          -e "23i\*color0_darker_80:    $color0_darker_80" \
          -e "23i\*.color0_darker_90:   $color0_darker_90" \
          -e "23i\*color0_darker_90:    $color0_darker_90" \
+         -e "25i\*.color1_lighter_10:  $color1_lighter_10" \
+         -e "25i\*color1_lighter_10:   $color1_lighter_10" \
          -e "25i\*.color1_lighter_20:  $color1_lighter_20" \
          -e "25i\*color1_lighter_20:   $color1_lighter_20" \
          -e "25i\*.color1_lighter_30:  $color1_lighter_30" \
@@ -308,6 +361,8 @@ extend_xres() {
          -e "25i\*color1_lighter_80:   $color1_lighter_80" \
          -e "25i\*.color1_lighter_90:  $color1_lighter_90" \
          -e "25i\*color1_lighter_90:   $color1_lighter_90" \
+         -e "25i\*.color1_darker_10:   $color1_darker_10" \
+         -e "25i\*color1_darker_10:    $color1_darker_10" \
          -e "25i\*.color1_darker_20:   $color1_darker_20" \
          -e "25i\*color1_darker_20:    $color1_darker_20" \
          -e "25i\*.color1_darker_30:   $color1_darker_30" \
@@ -324,6 +379,8 @@ extend_xres() {
          -e "25i\*color1_darker_80:    $color1_darker_80" \
          -e "25i\*.color1_darker_90:   $color1_darker_90" \
          -e "25i\*color1_darker_90:    $color1_darker_90" \
+         -e "27i\*.color2_lighter_10:  $color2_lighter_10" \
+         -e "27i\*color2_lighter_10:   $color2_lighter_10" \
          -e "27i\*.color2_lighter_20:  $color2_lighter_20" \
          -e "27i\*color2_lighter_20:   $color2_lighter_20" \
          -e "27i\*.color2_lighter_30:  $color2_lighter_30" \
@@ -340,6 +397,8 @@ extend_xres() {
          -e "27i\*color2_lighter_80:   $color2_lighter_80" \
          -e "27i\*.color2_lighter_90:  $color2_lighter_90" \
          -e "27i\*color2_lighter_90:   $color2_lighter_90" \
+         -e "27i\*.color2_darker_10:   $color2_darker_10" \
+         -e "27i\*color2_darker_10:    $color2_darker_10" \
          -e "27i\*.color2_darker_20:   $color2_darker_20" \
          -e "27i\*color2_darker_20:    $color2_darker_20" \
          -e "27i\*.color2_darker_30:   $color2_darker_30" \
@@ -356,6 +415,8 @@ extend_xres() {
          -e "27i\*color2_darker_80:    $color2_darker_80" \
          -e "27i\*.color2_darker_90:   $color2_darker_90" \
          -e "27i\*color2_darker_90:    $color2_darker_90" \
+         -e "29i\*.color3_lighter_10:  $color3_lighter_10" \
+         -e "29i\*color3_lighter_10:   $color3_lighter_10" \
          -e "29i\*.color3_lighter_20:  $color3_lighter_20" \
          -e "29i\*color3_lighter_20:   $color3_lighter_20" \
          -e "29i\*.color3_lighter_30:  $color3_lighter_30" \
@@ -372,6 +433,8 @@ extend_xres() {
          -e "29i\*color3_lighter_80:   $color3_lighter_80" \
          -e "29i\*.color3_lighter_90:  $color3_lighter_90" \
          -e "29i\*color3_lighter_90:   $color3_lighter_90" \
+         -e "29i\*.color3_darker_10:   $color3_darker_10" \
+         -e "29i\*color3_darker_10:    $color3_darker_10" \
          -e "29i\*.color3_darker_20:   $color3_darker_20" \
          -e "29i\*color3_darker_20:    $color3_darker_20" \
          -e "29i\*.color3_darker_30:   $color3_darker_30" \
@@ -388,6 +451,8 @@ extend_xres() {
          -e "29i\*color3_darker_80:    $color3_darker_80" \
          -e "29i\*.color3_darker_90:   $color3_darker_90" \
          -e "29i\*color3_darker_90:    $color3_darker_90" \
+         -e "31i\*.color4_lighter_10:  $color4_lighter_10" \
+         -e "31i\*color4_lighter_10:   $color4_lighter_10" \
          -e "31i\*.color4_lighter_20:  $color4_lighter_20" \
          -e "31i\*color4_lighter_20:   $color4_lighter_20" \
          -e "31i\*.color4_lighter_30:  $color4_lighter_30" \
@@ -404,6 +469,8 @@ extend_xres() {
          -e "31i\*color4_lighter_80:   $color4_lighter_80" \
          -e "31i\*.color4_lighter_90:  $color4_lighter_90" \
          -e "31i\*color4_lighter_90:   $color4_lighter_90" \
+         -e "31i\*.color4_darker_10:   $color4_darker_10" \
+         -e "31i\*color4_darker_10:    $color4_darker_10" \
          -e "31i\*.color4_darker_20:   $color4_darker_20" \
          -e "31i\*color4_darker_20:    $color4_darker_20" \
          -e "31i\*.color4_darker_30:   $color4_darker_30" \
@@ -420,6 +487,8 @@ extend_xres() {
          -e "31i\*color4_darker_80:    $color4_darker_80" \
          -e "31i\*.color4_darker_90:   $color4_darker_90" \
          -e "31i\*color4_darker_90:    $color4_darker_90" \
+         -e "33i\*.color5_lighter_10:  $color5_lighter_10" \
+         -e "33i\*color5_lighter_10:   $color5_lighter_10" \
          -e "33i\*.color5_lighter_20:  $color5_lighter_20" \
          -e "33i\*color5_lighter_20:   $color5_lighter_20" \
          -e "33i\*.color5_lighter_30:  $color5_lighter_30" \
@@ -436,6 +505,8 @@ extend_xres() {
          -e "33i\*color5_lighter_80:   $color5_lighter_80" \
          -e "33i\*.color5_lighter_90:  $color5_lighter_90" \
          -e "33i\*color5_lighter_90:   $color5_lighter_90" \
+         -e "33i\*.color5_darker_10:   $color5_darker_10" \
+         -e "33i\*color5_darker_10:    $color5_darker_10" \
          -e "33i\*.color5_darker_20:   $color5_darker_20" \
          -e "33i\*color5_darker_20:    $color5_darker_20" \
          -e "33i\*.color5_darker_30:   $color5_darker_30" \
@@ -452,6 +523,8 @@ extend_xres() {
          -e "33i\*color5_darker_80:    $color5_darker_80" \
          -e "33i\*.color5_darker_90:   $color5_darker_90" \
          -e "33i\*color5_darker_90:    $color5_darker_90" \
+         -e "35i\*.color6_lighter_10:  $color6_lighter_10" \
+         -e "35i\*color6_lighter_10:   $color6_lighter_10" \
          -e "35i\*.color6_lighter_20:  $color6_lighter_20" \
          -e "35i\*color6_lighter_20:   $color6_lighter_20" \
          -e "35i\*.color6_lighter_30:  $color6_lighter_30" \
@@ -468,6 +541,8 @@ extend_xres() {
          -e "35i\*color6_lighter_80:   $color6_lighter_80" \
          -e "35i\*.color6_lighter_90:  $color6_lighter_90" \
          -e "35i\*color6_lighter_90:   $color6_lighter_90" \
+         -e "35i\*.color6_darker_10:   $color6_darker_10" \
+         -e "35i\*color6_darker_10:    $color6_darker_10" \
          -e "35i\*.color6_darker_20:   $color6_darker_20" \
          -e "35i\*color6_darker_20:    $color6_darker_20" \
          -e "35i\*.color6_darker_30:   $color6_darker_30" \
@@ -484,6 +559,8 @@ extend_xres() {
          -e "35i\*color6_darker_80:    $color6_darker_80" \
          -e "35i\*.color6_darker_90:   $color6_darker_90" \
          -e "35i\*color6_darker_90:    $color6_darker_90" \
+         -e "37i\*.color7_lighter_10:  $color7_lighter_10" \
+         -e "37i\*color7_lighter_10:   $color7_lighter_10" \
          -e "37i\*.color7_lighter_20:  $color7_lighter_20" \
          -e "37i\*color7_lighter_20:   $color7_lighter_20" \
          -e "37i\*.color7_lighter_30:  $color7_lighter_30" \
@@ -500,6 +577,8 @@ extend_xres() {
          -e "37i\*color7_lighter_80:   $color7_lighter_80" \
          -e "37i\*.color7_lighter_90:  $color7_lighter_90" \
          -e "37i\*color7_lighter_90:   $color7_lighter_90" \
+         -e "37i\*.color7_darker_10:   $color7_darker_10" \
+         -e "37i\*color7_darker_10:    $color7_darker_10" \
          -e "37i\*.color7_darker_20:   $color7_darker_20" \
          -e "37i\*color7_darker_20:    $color7_darker_20" \
          -e "37i\*.color7_darker_30:   $color7_darker_30" \
@@ -516,6 +595,8 @@ extend_xres() {
          -e "37i\*color7_darker_80:    $color7_darker_80" \
          -e "37i\*.color7_darker_90:   $color7_darker_90" \
          -e "37i\*color7_darker_90:    $color7_darker_90" \
+         -e "39i\*.color8_lighter_10:  $color8_lighter_10" \
+         -e "39i\*color8_lighter_10:   $color8_lighter_10" \
          -e "39i\*.color8_lighter_20:  $color8_lighter_20" \
          -e "39i\*color8_lighter_20:   $color8_lighter_20" \
          -e "39i\*.color8_lighter_30:  $color8_lighter_30" \
@@ -532,6 +613,8 @@ extend_xres() {
          -e "39i\*color8_lighter_80:   $color8_lighter_80" \
          -e "39i\*.color8_lighter_90:  $color8_lighter_90" \
          -e "39i\*color8_lighter_90:   $color8_lighter_90" \
+         -e "39i\*.color8_darker_10:   $color8_darker_10" \
+         -e "39i\*color8_darker_10:    $color8_darker_10" \
          -e "39i\*.color8_darker_20:   $color8_darker_20" \
          -e "39i\*color8_darker_20:    $color8_darker_20" \
          -e "39i\*.color8_darker_30:   $color8_darker_30" \
@@ -548,6 +631,8 @@ extend_xres() {
          -e "39i\*color8_darker_80:    $color8_darker_80" \
          -e "39i\*.color8_darker_90:   $color8_darker_90" \
          -e "39i\*color8_darker_90:    $color8_darker_90" \
+         -e "41i\*.color9_lighter_10:  $color9_lighter_10" \
+         -e "41i\*color9_lighter_10:   $color9_lighter_10" \
          -e "41i\*.color9_lighter_20:  $color9_lighter_20" \
          -e "41i\*color9_lighter_20:   $color9_lighter_20" \
          -e "41i\*.color9_lighter_30:  $color9_lighter_30" \
@@ -564,6 +649,8 @@ extend_xres() {
          -e "41i\*color9_lighter_80:   $color9_lighter_80" \
          -e "41i\*.color9_lighter_90:  $color9_lighter_90" \
          -e "41i\*color9_lighter_90:   $color9_lighter_90" \
+         -e "41i\*.color9_darker_10:   $color9_darker_10" \
+         -e "41i\*color9_darker_10:    $color9_darker_10" \
          -e "41i\*.color9_darker_20:   $color9_darker_20" \
          -e "41i\*color9_darker_20:    $color9_darker_20" \
          -e "41i\*.color9_darker_30:   $color9_darker_30" \
@@ -580,6 +667,8 @@ extend_xres() {
          -e "41i\*color9_darker_80:    $color9_darker_80" \
          -e "41i\*.color9_darker_90:   $color9_darker_90" \
          -e "41i\*color9_darker_90:    $color9_darker_90" \
+         -e "43i\*.color10_lighter_10: $color10_lighter_10" \
+         -e "43i\*color10_lighter_10:  $color10_lighter_10" \
          -e "43i\*.color10_lighter_20: $color10_lighter_20" \
          -e "43i\*color10_lighter_20:  $color10_lighter_20" \
          -e "43i\*.color10_lighter_30: $color10_lighter_30" \
@@ -596,6 +685,8 @@ extend_xres() {
          -e "43i\*color10_lighter_80:  $color10_lighter_80" \
          -e "43i\*.color10_lighter_90: $color10_lighter_90" \
          -e "43i\*color10_lighter_90:  $color10_lighter_90" \
+         -e "43i\*.color10_darker_10:  $color10_darker_10" \
+         -e "43i\*color10_darker_10:   $color10_darker_10" \
          -e "43i\*.color10_darker_20:  $color10_darker_20" \
          -e "43i\*color10_darker_20:   $color10_darker_20" \
          -e "43i\*.color10_darker_30:  $color10_darker_30" \
@@ -612,6 +703,8 @@ extend_xres() {
          -e "43i\*color10_darker_80:   $color10_darker_80" \
          -e "43i\*.color10_darker_90:  $color10_darker_90" \
          -e "43i\*color10_darker_90:   $color10_darker_90" \
+         -e "45i\*.color11_lighter_10: $color11_lighter_10" \
+         -e "45i\*color11_lighter_10:  $color11_lighter_10" \
          -e "45i\*.color11_lighter_20: $color11_lighter_20" \
          -e "45i\*color11_lighter_20:  $color11_lighter_20" \
          -e "45i\*.color11_lighter_30: $color11_lighter_30" \
@@ -628,6 +721,8 @@ extend_xres() {
          -e "45i\*color11_lighter_80:  $color11_lighter_80" \
          -e "45i\*.color11_lighter_90: $color11_lighter_90" \
          -e "45i\*color11_lighter_90:  $color11_lighter_90" \
+         -e "45i\*.color11_darker_10:  $color11_darker_10" \
+         -e "45i\*color11_darker_10:   $color11_darker_10" \
          -e "45i\*.color11_darker_20:  $color11_darker_20" \
          -e "45i\*color11_darker_20:   $color11_darker_20" \
          -e "45i\*.color11_darker_30:  $color11_darker_30" \
@@ -644,6 +739,8 @@ extend_xres() {
          -e "45i\*color11_darker_80:   $color11_darker_80" \
          -e "45i\*.color11_darker_90:  $color11_darker_90" \
          -e "45i\*color11_darker_90:   $color11_darker_90" \
+         -e "47i\*.color12_lighter_10: $color12_lighter_10" \
+         -e "47i\*color12_lighter_10:  $color12_lighter_10" \
          -e "47i\*.color12_lighter_20: $color12_lighter_20" \
          -e "47i\*color12_lighter_20:  $color12_lighter_20" \
          -e "47i\*.color12_lighter_30: $color12_lighter_30" \
@@ -660,6 +757,8 @@ extend_xres() {
          -e "47i\*color12_lighter_80:  $color12_lighter_80" \
          -e "47i\*.color12_lighter_90: $color12_lighter_90" \
          -e "47i\*color12_lighter_90:  $color12_lighter_90" \
+         -e "47i\*.color12_darker_10:  $color12_darker_10" \
+         -e "47i\*color12_darker_10:   $color12_darker_10" \
          -e "47i\*.color12_darker_20:  $color12_darker_20" \
          -e "47i\*color12_darker_20:   $color12_darker_20" \
          -e "47i\*.color12_darker_30:  $color12_darker_30" \
@@ -676,6 +775,8 @@ extend_xres() {
          -e "47i\*color12_darker_80:   $color12_darker_80" \
          -e "47i\*.color12_darker_90:  $color12_darker_90" \
          -e "47i\*color12_darker_90:   $color12_darker_90" \
+         -e "49i\*.color13_lighter_10: $color13_lighter_10" \
+         -e "49i\*color13_lighter_10:  $color13_lighter_10" \
          -e "49i\*.color13_lighter_20: $color13_lighter_20" \
          -e "49i\*color13_lighter_20:  $color13_lighter_20" \
          -e "49i\*.color13_lighter_30: $color13_lighter_30" \
@@ -692,6 +793,8 @@ extend_xres() {
          -e "49i\*color13_lighter_80:  $color13_lighter_80" \
          -e "49i\*.color13_lighter_90: $color13_lighter_90" \
          -e "49i\*color13_lighter_90:  $color13_lighter_90" \
+         -e "49i\*.color13_darker_10:  $color13_darker_10" \
+         -e "49i\*color13_darker_10:   $color13_darker_10" \
          -e "49i\*.color13_darker_20:  $color13_darker_20" \
          -e "49i\*color13_darker_20:   $color13_darker_20" \
          -e "49i\*.color13_darker_30:  $color13_darker_30" \
@@ -708,6 +811,8 @@ extend_xres() {
          -e "49i\*color13_darker_80:   $color13_darker_80" \
          -e "49i\*.color13_darker_90:  $color13_darker_90" \
          -e "49i\*color13_darker_90:   $color13_darker_90" \
+         -e "51i\*.color14_lighter_10: $color14_lighter_10" \
+         -e "51i\*color14_lighter_10:  $color14_lighter_10" \
          -e "51i\*.color14_lighter_20: $color14_lighter_20" \
          -e "51i\*color14_lighter_20:  $color14_lighter_20" \
          -e "51i\*.color14_lighter_30: $color14_lighter_30" \
@@ -724,6 +829,8 @@ extend_xres() {
          -e "51i\*color14_lighter_80:  $color14_lighter_80" \
          -e "51i\*.color14_lighter_90: $color14_lighter_90" \
          -e "51i\*color14_lighter_90:  $color14_lighter_90" \
+         -e "51i\*.color14_darker_10:  $color14_darker_10" \
+         -e "51i\*color14_darker_10:   $color14_darker_10" \
          -e "51i\*.color14_darker_20:  $color14_darker_20" \
          -e "51i\*color14_darker_20:   $color14_darker_20" \
          -e "51i\*.color14_darker_30:  $color14_darker_30" \
@@ -740,6 +847,8 @@ extend_xres() {
          -e "51i\*color14_darker_80:   $color14_darker_80" \
          -e "51i\*.color14_darker_90:  $color14_darker_90" \
          -e "51i\*color14_darker_90:   $color14_darker_90" \
+         -e "53i\*.color15_lighter_10: $color15_lighter_10" \
+         -e "53i\*color15_lighter_10:  $color15_lighter_10" \
          -e "53i\*.color15_lighter_20: $color15_lighter_20" \
          -e "53i\*color15_lighter_20:  $color15_lighter_20" \
          -e "53i\*.color15_lighter_30: $color15_lighter_30" \
@@ -756,6 +865,8 @@ extend_xres() {
          -e "53i\*color15_lighter_80:  $color15_lighter_80" \
          -e "53i\*.color15_lighter_90: $color15_lighter_90" \
          -e "53i\*color15_lighter_90:  $color15_lighter_90" \
+         -e "53i\*.color15_darker_10:  $color15_darker_10" \
+         -e "53i\*color15_darker_10:   $color15_darker_10" \
          -e "53i\*.color15_darker_20:  $color15_darker_20" \
          -e "53i\*color15_darker_20:   $color15_darker_20" \
          -e "53i\*.color15_darker_30:  $color15_darker_30" \
@@ -777,7 +888,8 @@ extend_xres() {
 
 # Extends ~/.cache/wal/colors.css.
 extend_css() {
-  sed -i -e "13i\ \ \ \ --color0_lighter_20:  $color0_lighter_20;" \
+  sed -i -e "13i\ \ \ \ --color0_lighter_10:  $color0_lighter_10;" \
+         -e "13i\ \ \ \ --color0_lighter_20:  $color0_lighter_20;" \
          -e "13i\ \ \ \ --color0_lighter_30:  $color0_lighter_30;" \
          -e "13i\ \ \ \ --color0_lighter_40:  $color0_lighter_40;" \
          -e "13i\ \ \ \ --color0_lighter_50:  $color0_lighter_50;" \
@@ -785,6 +897,7 @@ extend_css() {
          -e "13i\ \ \ \ --color0_lighter_70:  $color0_lighter_70;" \
          -e "13i\ \ \ \ --color0_lighter_80:  $color0_lighter_80;" \
          -e "13i\ \ \ \ --color0_lighter_90:  $color0_lighter_90;" \
+         -e "13i\ \ \ \ --color0_darker_10:   $color0_darker_10;" \
          -e "13i\ \ \ \ --color0_darker_20:   $color0_darker_20;" \
          -e "13i\ \ \ \ --color0_darker_30:   $color0_darker_30;" \
          -e "13i\ \ \ \ --color0_darker_40:   $color0_darker_40;" \
@@ -793,6 +906,7 @@ extend_css() {
          -e "13i\ \ \ \ --color0_darker_70:   $color0_darker_70;" \
          -e "13i\ \ \ \ --color0_darker_80:   $color0_darker_80;" \
          -e "13i\ \ \ \ --color0_darker_90:   $color0_darker_90;" \
+         -e "14i\ \ \ \ --color1_lighter_10:  $color1_lighter_10;" \
          -e "14i\ \ \ \ --color1_lighter_20:  $color1_lighter_20;" \
          -e "14i\ \ \ \ --color1_lighter_30:  $color1_lighter_30;" \
          -e "14i\ \ \ \ --color1_lighter_40:  $color1_lighter_40;" \
@@ -801,6 +915,7 @@ extend_css() {
          -e "14i\ \ \ \ --color1_lighter_70:  $color1_lighter_70;" \
          -e "14i\ \ \ \ --color1_lighter_80:  $color1_lighter_80;" \
          -e "14i\ \ \ \ --color1_lighter_90:  $color1_lighter_90;" \
+         -e "14i\ \ \ \ --color1_darker_10:   $color1_darker_10;" \
          -e "14i\ \ \ \ --color1_darker_20:   $color1_darker_20;" \
          -e "14i\ \ \ \ --color1_darker_30:   $color1_darker_30;" \
          -e "14i\ \ \ \ --color1_darker_40:   $color1_darker_40;" \
@@ -809,6 +924,7 @@ extend_css() {
          -e "14i\ \ \ \ --color1_darker_70:   $color1_darker_70;" \
          -e "14i\ \ \ \ --color1_darker_80:   $color1_darker_80;" \
          -e "14i\ \ \ \ --color1_darker_90:   $color1_darker_90;" \
+         -e "15i\ \ \ \ --color2_lighter_10:  $color2_lighter_10;" \
          -e "15i\ \ \ \ --color2_lighter_20:  $color2_lighter_20;" \
          -e "15i\ \ \ \ --color2_lighter_30:  $color2_lighter_30;" \
          -e "15i\ \ \ \ --color2_lighter_40:  $color2_lighter_40;" \
@@ -817,6 +933,7 @@ extend_css() {
          -e "15i\ \ \ \ --color2_lighter_70:  $color2_lighter_70;" \
          -e "15i\ \ \ \ --color2_lighter_80:  $color2_lighter_80;" \
          -e "15i\ \ \ \ --color2_lighter_90:  $color2_lighter_90;" \
+         -e "15i\ \ \ \ --color2_darker_10:   $color2_darker_10;" \
          -e "15i\ \ \ \ --color2_darker_20:   $color2_darker_20;" \
          -e "15i\ \ \ \ --color2_darker_30:   $color2_darker_30;" \
          -e "15i\ \ \ \ --color2_darker_40:   $color2_darker_40;" \
@@ -825,6 +942,7 @@ extend_css() {
          -e "15i\ \ \ \ --color2_darker_70:   $color2_darker_70;" \
          -e "15i\ \ \ \ --color2_darker_80:   $color2_darker_80;" \
          -e "15i\ \ \ \ --color2_darker_90:   $color2_darker_90;" \
+         -e "16i\ \ \ \ --color3_lighter_10:  $color3_lighter_10;" \
          -e "16i\ \ \ \ --color3_lighter_20:  $color3_lighter_20;" \
          -e "16i\ \ \ \ --color3_lighter_30:  $color3_lighter_30;" \
          -e "16i\ \ \ \ --color3_lighter_40:  $color3_lighter_40;" \
@@ -833,6 +951,7 @@ extend_css() {
          -e "16i\ \ \ \ --color3_lighter_70:  $color3_lighter_70;" \
          -e "16i\ \ \ \ --color3_lighter_80:  $color3_lighter_80;" \
          -e "16i\ \ \ \ --color3_lighter_90:  $color3_lighter_90;" \
+         -e "16i\ \ \ \ --color3_darker_10:   $color3_darker_10;" \
          -e "16i\ \ \ \ --color3_darker_20:   $color3_darker_20;" \
          -e "16i\ \ \ \ --color3_darker_30:   $color3_darker_30;" \
          -e "16i\ \ \ \ --color3_darker_40:   $color3_darker_40;" \
@@ -841,6 +960,7 @@ extend_css() {
          -e "16i\ \ \ \ --color3_darker_70:   $color3_darker_70;" \
          -e "16i\ \ \ \ --color3_darker_80:   $color3_darker_80;" \
          -e "16i\ \ \ \ --color3_darker_90:   $color3_darker_90;" \
+         -e "17i\ \ \ \ --color4_lighter_10:  $color4_lighter_10;" \
          -e "17i\ \ \ \ --color4_lighter_20:  $color4_lighter_20;" \
          -e "17i\ \ \ \ --color4_lighter_30:  $color4_lighter_30;" \
          -e "17i\ \ \ \ --color4_lighter_40:  $color4_lighter_40;" \
@@ -849,6 +969,7 @@ extend_css() {
          -e "17i\ \ \ \ --color4_lighter_70:  $color4_lighter_70;" \
          -e "17i\ \ \ \ --color4_lighter_80:  $color4_lighter_80;" \
          -e "17i\ \ \ \ --color4_lighter_90:  $color4_lighter_90;" \
+         -e "17i\ \ \ \ --color4_darker_10:   $color4_darker_10;" \
          -e "17i\ \ \ \ --color4_darker_20:   $color4_darker_20;" \
          -e "17i\ \ \ \ --color4_darker_30:   $color4_darker_30;" \
          -e "17i\ \ \ \ --color4_darker_40:   $color4_darker_40;" \
@@ -858,6 +979,7 @@ extend_css() {
          -e "17i\ \ \ \ --color4_darker_70:   $color4_darker_70;" \
          -e "17i\ \ \ \ --color4_darker_80:   $color4_darker_80;" \
          -e "17i\ \ \ \ --color4_darker_90:   $color4_darker_90;" \
+         -e "18i\ \ \ \ --color5_lighter_10:  $color5_lighter_10;" \
          -e "18i\ \ \ \ --color5_lighter_20:  $color5_lighter_20;" \
          -e "18i\ \ \ \ --color5_lighter_30:  $color5_lighter_30;" \
          -e "18i\ \ \ \ --color5_lighter_40:  $color5_lighter_40;" \
@@ -866,6 +988,7 @@ extend_css() {
          -e "18i\ \ \ \ --color5_lighter_70:  $color5_lighter_70;" \
          -e "18i\ \ \ \ --color5_lighter_80:  $color5_lighter_80;" \
          -e "18i\ \ \ \ --color5_lighter_90:  $color5_lighter_90;" \
+         -e "18i\ \ \ \ --color5_darker_10:   $color5_darker_10;" \
          -e "18i\ \ \ \ --color5_darker_20:   $color5_darker_20;" \
          -e "18i\ \ \ \ --color5_darker_30:   $color5_darker_30;" \
          -e "18i\ \ \ \ --color5_darker_40:   $color5_darker_40;" \
@@ -874,6 +997,7 @@ extend_css() {
          -e "18i\ \ \ \ --color5_darker_70:   $color5_darker_70;" \
          -e "18i\ \ \ \ --color5_darker_80:   $color5_darker_80;" \
          -e "18i\ \ \ \ --color5_darker_90:   $color5_darker_90;" \
+         -e "19i\ \ \ \ --color6_lighter_10:  $color6_lighter_10;" \
          -e "19i\ \ \ \ --color6_lighter_20:  $color6_lighter_20;" \
          -e "19i\ \ \ \ --color6_lighter_30:  $color6_lighter_30;" \
          -e "19i\ \ \ \ --color6_lighter_40:  $color6_lighter_40;" \
@@ -882,6 +1006,7 @@ extend_css() {
          -e "19i\ \ \ \ --color6_lighter_70:  $color6_lighter_70;" \
          -e "19i\ \ \ \ --color6_lighter_80:  $color6_lighter_80;" \
          -e "19i\ \ \ \ --color6_lighter_90:  $color6_lighter_90;" \
+         -e "19i\ \ \ \ --color6_darker_10:   $color6_darker_10;" \
          -e "19i\ \ \ \ --color6_darker_20:   $color6_darker_20;" \
          -e "19i\ \ \ \ --color6_darker_30:   $color6_darker_30;" \
          -e "19i\ \ \ \ --color6_darker_40:   $color6_darker_40;" \
@@ -890,6 +1015,7 @@ extend_css() {
          -e "19i\ \ \ \ --color6_darker_70:   $color6_darker_70;" \
          -e "19i\ \ \ \ --color6_darker_80:   $color6_darker_80;" \
          -e "19i\ \ \ \ --color6_darker_90:   $color6_darker_90;" \
+         -e "20i\ \ \ \ --color7_lighter_10:  $color7_lighter_10;" \
          -e "20i\ \ \ \ --color7_lighter_20:  $color7_lighter_20;" \
          -e "20i\ \ \ \ --color7_lighter_30:  $color7_lighter_30;" \
          -e "20i\ \ \ \ --color7_lighter_40:  $color7_lighter_40;" \
@@ -898,6 +1024,7 @@ extend_css() {
          -e "20i\ \ \ \ --color7_lighter_70:  $color7_lighter_70;" \
          -e "20i\ \ \ \ --color7_lighter_80:  $color7_lighter_80;" \
          -e "20i\ \ \ \ --color7_lighter_90:  $color7_lighter_90;" \
+         -e "20i\ \ \ \ --color7_darker_10:   $color7_darker_10;" \
          -e "20i\ \ \ \ --color7_darker_20:   $color7_darker_20;" \
          -e "20i\ \ \ \ --color7_darker_30:   $color7_darker_30;" \
          -e "20i\ \ \ \ --color7_darker_40:   $color7_darker_40;" \
@@ -906,6 +1033,7 @@ extend_css() {
          -e "20i\ \ \ \ --color7_darker_70:   $color7_darker_70;" \
          -e "20i\ \ \ \ --color7_darker_80:   $color7_darker_80;" \
          -e "20i\ \ \ \ --color7_darker_90:   $color7_darker_90;" \
+         -e "21i\ \ \ \ --color8_lighter_10:  $color8_lighter_10;" \
          -e "21i\ \ \ \ --color8_lighter_20:  $color8_lighter_20;" \
          -e "21i\ \ \ \ --color8_lighter_30:  $color8_lighter_30;" \
          -e "21i\ \ \ \ --color8_lighter_40:  $color8_lighter_40;" \
@@ -914,6 +1042,7 @@ extend_css() {
          -e "21i\ \ \ \ --color8_lighter_70:  $color8_lighter_70;" \
          -e "21i\ \ \ \ --color8_lighter_80:  $color8_lighter_80;" \
          -e "21i\ \ \ \ --color8_lighter_90:  $color8_lighter_90;" \
+         -e "21i\ \ \ \ --color8_darker_10:   $color8_darker_10;" \
          -e "21i\ \ \ \ --color8_darker_20:   $color8_darker_20;" \
          -e "21i\ \ \ \ --color8_darker_30:   $color8_darker_30;" \
          -e "21i\ \ \ \ --color8_darker_40:   $color8_darker_40;" \
@@ -922,6 +1051,7 @@ extend_css() {
          -e "21i\ \ \ \ --color8_darker_70:   $color8_darker_70;" \
          -e "21i\ \ \ \ --color8_darker_80:   $color8_darker_80;" \
          -e "21i\ \ \ \ --color8_darker_90:   $color8_darker_90;" \
+         -e "22i\ \ \ \ --color9_lighter_10:  $color9_lighter_10;" \
          -e "22i\ \ \ \ --color9_lighter_20:  $color9_lighter_20;" \
          -e "22i\ \ \ \ --color9_lighter_30:  $color9_lighter_30;" \
          -e "22i\ \ \ \ --color9_lighter_40:  $color9_lighter_40;" \
@@ -930,6 +1060,7 @@ extend_css() {
          -e "22i\ \ \ \ --color9_lighter_70:  $color9_lighter_70" \
          -e "22i\ \ \ \ --color9_lighter_80:  $color9_lighter_80" \
          -e "22i\ \ \ \ --color9_lighter_90:  $color9_lighter_90" \
+         -e "22i\ \ \ \ --color9_darker_10:   $color9_darker_10;" \
          -e "22i\ \ \ \ --color9_darker_20:   $color9_darker_20;" \
          -e "22i\ \ \ \ --color9_darker_30:   $color9_darker_30;" \
          -e "22i\ \ \ \ --color9_darker_40:   $color9_darker_40;" \
@@ -938,6 +1069,7 @@ extend_css() {
          -e "22i\ \ \ \ --color9_darker_70:   $color9_darker_70;" \
          -e "22i\ \ \ \ --color9_darker_80:   $color9_darker_80;" \
          -e "22i\ \ \ \ --color9_darker_90:   $color9_darker_90;" \
+         -e "23i\ \ \ \ --color10_lighter_10: $color10_lighter_10;" \
          -e "23i\ \ \ \ --color10_lighter_20: $color10_lighter_20;" \
          -e "23i\ \ \ \ --color10_lighter_30: $color10_lighter_30;" \
          -e "23i\ \ \ \ --color10_lighter_40: $color10_lighter_40;" \
@@ -946,6 +1078,7 @@ extend_css() {
          -e "23i\ \ \ \ --color10_lighter_70: $color10_lighter_70;" \
          -e "23i\ \ \ \ --color10_lighter_80: $color10_lighter_80;" \
          -e "23i\ \ \ \ --color10_lighter_90: $color10_lighter_90;" \
+         -e "23i\ \ \ \ --color10_darker_10:  $color10_darker_10;" \
          -e "23i\ \ \ \ --color10_darker_20:  $color10_darker_20;" \
          -e "23i\ \ \ \ --color10_darker_30:  $color10_darker_30;" \
          -e "23i\ \ \ \ --color10_darker_40:  $color10_darker_40;" \
@@ -954,6 +1087,7 @@ extend_css() {
          -e "23i\ \ \ \ --color10_darker_70:  $color10_darker_70;" \
          -e "23i\ \ \ \ --color10_darker_80:  $color10_darker_80;" \
          -e "23i\ \ \ \ --color10_darker_90:  $color10_darker_90;" \
+         -e "24i\ \ \ \ --color11_lighter_10: $color11_lighter_10;" \
          -e "24i\ \ \ \ --color11_lighter_20: $color11_lighter_20;" \
          -e "24i\ \ \ \ --color11_lighter_30: $color11_lighter_30;" \
          -e "24i\ \ \ \ --color11_lighter_40: $color11_lighter_40;" \
@@ -962,6 +1096,7 @@ extend_css() {
          -e "24i\ \ \ \ --color11_lighter_70: $color11_lighter_70;" \
          -e "24i\ \ \ \ --color11_lighter_80: $color11_lighter_80;" \
          -e "24i\ \ \ \ --color11_lighter_90: $color11_lighter_90;" \
+         -e "24i\ \ \ \ --color11_darker_10:  $color11_darker_10;" \
          -e "24i\ \ \ \ --color11_darker_20:  $color11_darker_20;" \
          -e "24i\ \ \ \ --color11_darker_30:  $color11_darker_30;" \
          -e "24i\ \ \ \ --color11_darker_40:  $color11_darker_40;" \
@@ -970,6 +1105,7 @@ extend_css() {
          -e "24i\ \ \ \ --color11_darker_70:  $color11_darker_70;" \
          -e "24i\ \ \ \ --color11_darker_80:  $color11_darker_80;" \
          -e "24i\ \ \ \ --color11_darker_90:  $color11_darker_90;" \
+         -e "25i\ \ \ \ --color12_lighter_10: $color12_lighter_10;" \
          -e "25i\ \ \ \ --color12_lighter_20: $color12_lighter_20;" \
          -e "25i\ \ \ \ --color12_lighter_30: $color12_lighter_30;" \
          -e "25i\ \ \ \ --color12_lighter_40: $color12_lighter_40;" \
@@ -978,6 +1114,7 @@ extend_css() {
          -e "25i\ \ \ \ --color12_lighter_70: $color12_lighter_70;" \
          -e "25i\ \ \ \ --color12_lighter_80: $color12_lighter_80;" \
          -e "25i\ \ \ \ --color12_lighter_90: $color12_lighter_90;" \
+         -e "25i\ \ \ \ --color12_darker_10:  $color12_darker_10;" \
          -e "25i\ \ \ \ --color12_darker_20:  $color12_darker_20;" \
          -e "25i\ \ \ \ --color12_darker_30:  $color12_darker_30;" \
          -e "25i\ \ \ \ --color12_darker_40:  $color12_darker_40;" \
@@ -986,6 +1123,7 @@ extend_css() {
          -e "25i\ \ \ \ --color12_darker_70:  $color12_darker_70;" \
          -e "25i\ \ \ \ --color12_darker_80:  $color12_darker_80;" \
          -e "25i\ \ \ \ --color12_darker_90:  $color12_darker_90;" \
+         -e "26i\ \ \ \ --color13_lighter_10: $color13_lighter_10;" \
          -e "26i\ \ \ \ --color13_lighter_20: $color13_lighter_20;" \
          -e "26i\ \ \ \ --color13_lighter_30: $color13_lighter_30;" \
          -e "26i\ \ \ \ --color13_lighter_40: $color13_lighter_40;" \
@@ -994,6 +1132,7 @@ extend_css() {
          -e "26i\ \ \ \ --color13_lighter_70: $color13_lighter_70;" \
          -e "26i\ \ \ \ --color13_lighter_80: $color13_lighter_80;" \
          -e "26i\ \ \ \ --color13_lighter_90: $color13_lighter_90;" \
+         -e "26i\ \ \ \ --color13_darker_10:  $color13_darker_10;" \
          -e "26i\ \ \ \ --color13_darker_20:  $color13_darker_20;" \
          -e "26i\ \ \ \ --color13_darker_30:  $color13_darker_30;" \
          -e "26i\ \ \ \ --color13_darker_40:  $color13_darker_40;" \
@@ -1002,6 +1141,7 @@ extend_css() {
          -e "26i\ \ \ \ --color13_darker_70:  $color13_darker_70;" \
          -e "26i\ \ \ \ --color13_darker_80:  $color13_darker_80;" \
          -e "26i\ \ \ \ --color13_darker_90:  $color13_darker_90;" \
+         -e "27i\ \ \ \ --color14_lighter_10: $color14_lighter_10;" \
          -e "27i\ \ \ \ --color14_lighter_20: $color14_lighter_20;" \
          -e "27i\ \ \ \ --color14_lighter_30: $color14_lighter_30;" \
          -e "27i\ \ \ \ --color14_lighter_30: $color14_lighter_30;" \
@@ -1011,6 +1151,7 @@ extend_css() {
          -e "27i\ \ \ \ --color14_lighter_70: $color14_lighter_70" \
          -e "27i\ \ \ \ --color14_lighter_80: $color14_lighter_80" \
          -e "27i\ \ \ \ --color14_lighter_90: $color14_lighter_90" \
+         -e "27i\ \ \ \ --color14_darker_10:  $color14_darker_10;" \
          -e "27i\ \ \ \ --color14_darker_20:  $color14_darker_20;" \
          -e "27i\ \ \ \ --color14_darker_30:  $color14_darker_30;" \
          -e "27i\ \ \ \ --color14_darker_40:  $color14_darker_40;" \
@@ -1019,6 +1160,7 @@ extend_css() {
          -e "27i\ \ \ \ --color14_darker_70:  $color14_darker_70;" \
          -e "27i\ \ \ \ --color14_darker_80:  $color14_darker_80;" \
          -e "27i\ \ \ \ --color14_darker_90:  $color14_darker_90;" \
+         -e "28i\ \ \ \ --color15_lighter_10: $color15_lighter_10;" \
          -e "28i\ \ \ \ --color15_lighter_20: $color15_lighter_20;" \
          -e "28i\ \ \ \ --color15_lighter_30: $color15_lighter_30;" \
          -e "28i\ \ \ \ --color15_lighter_40: $color15_lighter_40;" \
@@ -1027,6 +1169,7 @@ extend_css() {
          -e "28i\ \ \ \ --color15_lighter_70: $color15_lighter_70;" \
          -e "28i\ \ \ \ --color15_lighter_80: $color15_lighter_80;" \
          -e "28i\ \ \ \ --color15_lighter_90: $color15_lighter_90;" \
+         -e "28i\ \ \ \ --color15_darker_10:  $color15_darker_10;" \
          -e "28i\ \ \ \ --color15_darker_20:  $color15_darker_20;" \
          -e "28i\ \ \ \ --color15_darker_30:  $color15_darker_30;" \
          -e "28i\ \ \ \ --color15_darker_40:  $color15_darker_40;" \
@@ -1040,7 +1183,8 @@ extend_css() {
 
 # Extends ~/.cache/wal/colors.json.
 extend_json() {
-  sed -i -e "12i\ \ \ \ \ \ \ \ \"color0_lighter_20\":  \"$color0_lighter_20\"," \
+  sed -i -e "12i\ \ \ \ \ \ \ \ \"color0_lighter_10\":  \"$color0_lighter_10\"," \
+         -e "12i\ \ \ \ \ \ \ \ \"color0_lighter_20\":  \"$color0_lighter_20\"," \
          -e "12i\ \ \ \ \ \ \ \ \"color0_lighter_30\":  \"$color0_lighter_30\"," \
          -e "12i\ \ \ \ \ \ \ \ \"color0_lighter_40\":  \"$color0_lighter_40\"," \
          -e "12i\ \ \ \ \ \ \ \ \"color0_lighter_50\":  \"$color0_lighter_50\"," \
@@ -1048,6 +1192,7 @@ extend_json() {
          -e "12i\ \ \ \ \ \ \ \ \"color0_lighter_70\":  \"$color0_lighter_70\"," \
          -e "12i\ \ \ \ \ \ \ \ \"color0_lighter_80\":  \"$color0_lighter_80\"," \
          -e "12i\ \ \ \ \ \ \ \ \"color0_lighter_90\":  \"$color0_lighter_90\"," \
+         -e "12i\ \ \ \ \ \ \ \ \"color0_darker_10\":   \"$color0_darker_10\"," \
          -e "12i\ \ \ \ \ \ \ \ \"color0_darker_20\":   \"$color0_darker_20\"," \
          -e "12i\ \ \ \ \ \ \ \ \"color0_darker_30\":   \"$color0_darker_30\"," \
          -e "12i\ \ \ \ \ \ \ \ \"color0_darker_40\":   \"$color0_darker_40\"," \
@@ -1056,6 +1201,7 @@ extend_json() {
          -e "12i\ \ \ \ \ \ \ \ \"color0_darker_70\":   \"$color0_darker_70\"," \
          -e "12i\ \ \ \ \ \ \ \ \"color0_darker_80\":   \"$color0_darker_80\"," \
          -e "12i\ \ \ \ \ \ \ \ \"color0_darker_90\":   \"$color0_darker_90\"," \
+         -e "13i\ \ \ \ \ \ \ \ \"color1_lighter_10\":  \"$color1_lighter_10\"," \
          -e "13i\ \ \ \ \ \ \ \ \"color1_lighter_20\":  \"$color1_lighter_20\"," \
          -e "13i\ \ \ \ \ \ \ \ \"color1_lighter_30\":  \"$color1_lighter_30\"," \
          -e "13i\ \ \ \ \ \ \ \ \"color1_lighter_40\":  \"$color1_lighter_40\"," \
@@ -1064,6 +1210,7 @@ extend_json() {
          -e "13i\ \ \ \ \ \ \ \ \"color1_lighter_70\":  \"$color1_lighter_70\"," \
          -e "13i\ \ \ \ \ \ \ \ \"color1_lighter_80\":  \"$color1_lighter_80\"," \
          -e "13i\ \ \ \ \ \ \ \ \"color1_lighter_90\":  \"$color1_lighter_90\"," \
+         -e "13i\ \ \ \ \ \ \ \ \"color1_darker_10\":   \"$color1_darker_10\"," \
          -e "13i\ \ \ \ \ \ \ \ \"color1_darker_20\":   \"$color1_darker_20\"," \
          -e "13i\ \ \ \ \ \ \ \ \"color1_darker_30\":   \"$color1_darker_30\"," \
          -e "13i\ \ \ \ \ \ \ \ \"color1_darker_40\":   \"$color1_darker_40\"," \
@@ -1072,6 +1219,7 @@ extend_json() {
          -e "13i\ \ \ \ \ \ \ \ \"color1_darker_70\":   \"$color1_darker_70\"," \
          -e "13i\ \ \ \ \ \ \ \ \"color1_darker_80\":   \"$color1_darker_80\"," \
          -e "13i\ \ \ \ \ \ \ \ \"color1_darker_90\":   \"$color1_darker_90\"," \
+         -e "14i\ \ \ \ \ \ \ \ \"color2_lighter_10\":  \"$color2_lighter_10\"," \
          -e "14i\ \ \ \ \ \ \ \ \"color2_lighter_20\":  \"$color2_lighter_20\"," \
          -e "14i\ \ \ \ \ \ \ \ \"color2_lighter_30\":  \"$color2_lighter_30\"," \
          -e "14i\ \ \ \ \ \ \ \ \"color2_lighter_40\":  \"$color2_lighter_40\"," \
@@ -1080,6 +1228,7 @@ extend_json() {
          -e "14i\ \ \ \ \ \ \ \ \"color2_lighter_70\":  \"$color2_lighter_70\"," \
          -e "14i\ \ \ \ \ \ \ \ \"color2_lighter_80\":  \"$color2_lighter_80\"," \
          -e "14i\ \ \ \ \ \ \ \ \"color2_lighter_90\":  \"$color2_lighter_90\"," \
+         -e "14i\ \ \ \ \ \ \ \ \"color2_darker_10\":   \"$color2_darker_10\"," \
          -e "14i\ \ \ \ \ \ \ \ \"color2_darker_20\":   \"$color2_darker_20\"," \
          -e "14i\ \ \ \ \ \ \ \ \"color2_darker_30\":   \"$color2_darker_30\"," \
          -e "14i\ \ \ \ \ \ \ \ \"color2_darker_40\":   \"$color2_darker_40\"," \
@@ -1088,6 +1237,7 @@ extend_json() {
          -e "14i\ \ \ \ \ \ \ \ \"color2_darker_70\":   \"$color2_darker_70\"," \
          -e "14i\ \ \ \ \ \ \ \ \"color2_darker_80\":   \"$color2_darker_80\"," \
          -e "14i\ \ \ \ \ \ \ \ \"color2_darker_90\":   \"$color2_darker_90\"," \
+         -e "15i\ \ \ \ \ \ \ \ \"color3_lighter_10\":  \"$color3_lighter_10\"," \
          -e "15i\ \ \ \ \ \ \ \ \"color3_lighter_20\":  \"$color3_lighter_20\"," \
          -e "15i\ \ \ \ \ \ \ \ \"color3_lighter_30\":  \"$color3_lighter_30\"," \
          -e "15i\ \ \ \ \ \ \ \ \"color3_lighter_40\":  \"$color3_lighter_40\"," \
@@ -1096,6 +1246,7 @@ extend_json() {
          -e "15i\ \ \ \ \ \ \ \ \"color3_lighter_70\":  \"$color3_lighter_70\"," \
          -e "15i\ \ \ \ \ \ \ \ \"color3_lighter_80\":  \"$color3_lighter_80\"," \
          -e "15i\ \ \ \ \ \ \ \ \"color3_lighter_90\":  \"$color3_lighter_90\"," \
+         -e "15i\ \ \ \ \ \ \ \ \"color3_darker_10\":   \"$color3_darker_10\"," \
          -e "15i\ \ \ \ \ \ \ \ \"color3_darker_20\":   \"$color3_darker_20\"," \
          -e "15i\ \ \ \ \ \ \ \ \"color3_darker_30\":   \"$color3_darker_30\"," \
          -e "15i\ \ \ \ \ \ \ \ \"color3_darker_40\":   \"$color3_darker_40\"," \
@@ -1104,6 +1255,7 @@ extend_json() {
          -e "15i\ \ \ \ \ \ \ \ \"color3_darker_70\":   \"$color3_darker_70\"," \
          -e "15i\ \ \ \ \ \ \ \ \"color3_darker_80\":   \"$color3_darker_80\"," \
          -e "15i\ \ \ \ \ \ \ \ \"color3_darker_90\":   \"$color3_darker_90\"," \
+         -e "16i\ \ \ \ \ \ \ \ \"color4_lighter_10\":  \"$color4_lighter_10\"," \
          -e "16i\ \ \ \ \ \ \ \ \"color4_lighter_20\":  \"$color4_lighter_20\"," \
          -e "16i\ \ \ \ \ \ \ \ \"color4_lighter_30\":  \"$color4_lighter_30\"," \
          -e "16i\ \ \ \ \ \ \ \ \"color4_lighter_40\":  \"$color4_lighter_40\"," \
@@ -1112,6 +1264,7 @@ extend_json() {
          -e "16i\ \ \ \ \ \ \ \ \"color4_lighter_70\":  \"$color4_lighter_70\"," \
          -e "16i\ \ \ \ \ \ \ \ \"color4_lighter_80\":  \"$color4_lighter_80\"," \
          -e "16i\ \ \ \ \ \ \ \ \"color4_lighter_90\":  \"$color4_lighter_90\"," \
+         -e "16i\ \ \ \ \ \ \ \ \"color4_darker_10\":   \"$color4_darker_10\"," \
          -e "16i\ \ \ \ \ \ \ \ \"color4_darker_20\":   \"$color4_darker_20\"," \
          -e "16i\ \ \ \ \ \ \ \ \"color4_darker_30\":   \"$color4_darker_30\"," \
          -e "16i\ \ \ \ \ \ \ \ \"color4_darker_40\":   \"$color4_darker_40\"," \
@@ -1121,6 +1274,7 @@ extend_json() {
          -e "16i\ \ \ \ \ \ \ \ \"color4_darker_70\":   \"$color4_darker_70\"," \
          -e "16i\ \ \ \ \ \ \ \ \"color4_darker_80\":   \"$color4_darker_80\"," \
          -e "16i\ \ \ \ \ \ \ \ \"color4_darker_90\":   \"$color4_darker_90\"," \
+         -e "17i\ \ \ \ \ \ \ \ \"color5_lighter_10\":  \"$color5_lighter_10\"," \
          -e "17i\ \ \ \ \ \ \ \ \"color5_lighter_20\":  \"$color5_lighter_20\"," \
          -e "17i\ \ \ \ \ \ \ \ \"color5_lighter_30\":  \"$color5_lighter_30\"," \
          -e "17i\ \ \ \ \ \ \ \ \"color5_lighter_40\":  \"$color5_lighter_40\"," \
@@ -1129,6 +1283,7 @@ extend_json() {
          -e "17i\ \ \ \ \ \ \ \ \"color5_lighter_70\":  \"$color5_lighter_70\"," \
          -e "17i\ \ \ \ \ \ \ \ \"color5_lighter_80\":  \"$color5_lighter_80\"," \
          -e "17i\ \ \ \ \ \ \ \ \"color5_lighter_90\":  \"$color5_lighter_90\"," \
+         -e "17i\ \ \ \ \ \ \ \ \"color5_darker_10\":   \"$color5_darker_10\"," \
          -e "17i\ \ \ \ \ \ \ \ \"color5_darker_20\":   \"$color5_darker_20\"," \
          -e "17i\ \ \ \ \ \ \ \ \"color5_darker_30\":   \"$color5_darker_30\"," \
          -e "17i\ \ \ \ \ \ \ \ \"color5_darker_40\":   \"$color5_darker_40\"," \
@@ -1137,6 +1292,7 @@ extend_json() {
          -e "17i\ \ \ \ \ \ \ \ \"color5_darker_70\":   \"$color5_darker_70\"," \
          -e "17i\ \ \ \ \ \ \ \ \"color5_darker_80\":   \"$color5_darker_80\"," \
          -e "17i\ \ \ \ \ \ \ \ \"color5_darker_90\":   \"$color5_darker_90\"," \
+         -e "18i\ \ \ \ \ \ \ \ \"color6_lighter_10\":  \"$color6_lighter_10\"," \
          -e "18i\ \ \ \ \ \ \ \ \"color6_lighter_20\":  \"$color6_lighter_20\"," \
          -e "18i\ \ \ \ \ \ \ \ \"color6_lighter_30\":  \"$color6_lighter_30\"," \
          -e "18i\ \ \ \ \ \ \ \ \"color6_lighter_40\":  \"$color6_lighter_40\"," \
@@ -1145,6 +1301,7 @@ extend_json() {
          -e "18i\ \ \ \ \ \ \ \ \"color6_lighter_70\":  \"$color6_lighter_70\"," \
          -e "18i\ \ \ \ \ \ \ \ \"color6_lighter_80\":  \"$color6_lighter_80\"," \
          -e "18i\ \ \ \ \ \ \ \ \"color6_lighter_90\":  \"$color6_lighter_90\"," \
+         -e "18i\ \ \ \ \ \ \ \ \"color6_darker_10\":   \"$color6_darker_10\"," \
          -e "18i\ \ \ \ \ \ \ \ \"color6_darker_20\":   \"$color6_darker_20\"," \
          -e "18i\ \ \ \ \ \ \ \ \"color6_darker_30\":   \"$color6_darker_30\"," \
          -e "18i\ \ \ \ \ \ \ \ \"color6_darker_40\":   \"$color6_darker_40\"," \
@@ -1153,6 +1310,7 @@ extend_json() {
          -e "18i\ \ \ \ \ \ \ \ \"color6_darker_70\":   \"$color6_darker_70\"," \
          -e "18i\ \ \ \ \ \ \ \ \"color6_darker_80\":   \"$color6_darker_80\"," \
          -e "18i\ \ \ \ \ \ \ \ \"color6_darker_90\":   \"$color6_darker_90\"," \
+         -e "19i\ \ \ \ \ \ \ \ \"color7_lighter_10\":  \"$color7_lighter_10\"," \
          -e "19i\ \ \ \ \ \ \ \ \"color7_lighter_20\":  \"$color7_lighter_20\"," \
          -e "19i\ \ \ \ \ \ \ \ \"color7_lighter_30\":  \"$color7_lighter_30\"," \
          -e "19i\ \ \ \ \ \ \ \ \"color7_lighter_40\":  \"$color7_lighter_40\"," \
@@ -1161,6 +1319,7 @@ extend_json() {
          -e "19i\ \ \ \ \ \ \ \ \"color7_lighter_70\":  \"$color7_lighter_70\"," \
          -e "19i\ \ \ \ \ \ \ \ \"color7_lighter_80\":  \"$color7_lighter_80\"," \
          -e "19i\ \ \ \ \ \ \ \ \"color7_lighter_90\":  \"$color7_lighter_90\"," \
+         -e "19i\ \ \ \ \ \ \ \ \"color7_darker_10\":   \"$color7_darker_10\"," \
          -e "19i\ \ \ \ \ \ \ \ \"color7_darker_20\":   \"$color7_darker_20\"," \
          -e "19i\ \ \ \ \ \ \ \ \"color7_darker_30\":   \"$color7_darker_30\"," \
          -e "19i\ \ \ \ \ \ \ \ \"color7_darker_40\":   \"$color7_darker_40\"," \
@@ -1169,6 +1328,7 @@ extend_json() {
          -e "19i\ \ \ \ \ \ \ \ \"color7_darker_70\":   \"$color7_darker_70\"," \
          -e "19i\ \ \ \ \ \ \ \ \"color7_darker_80\":   \"$color7_darker_80\"," \
          -e "19i\ \ \ \ \ \ \ \ \"color7_darker_90\":   \"$color7_darker_90\"," \
+         -e "20i\ \ \ \ \ \ \ \ \"color8_lighter_10\":  \"$color8_lighter_10\"," \
          -e "20i\ \ \ \ \ \ \ \ \"color8_lighter_20\":  \"$color8_lighter_20\"," \
          -e "20i\ \ \ \ \ \ \ \ \"color8_lighter_30\":  \"$color8_lighter_30\"," \
          -e "20i\ \ \ \ \ \ \ \ \"color8_lighter_40\":  \"$color8_lighter_40\"," \
@@ -1177,6 +1337,7 @@ extend_json() {
          -e "20i\ \ \ \ \ \ \ \ \"color8_lighter_70\":  \"$color8_lighter_70\"," \
          -e "20i\ \ \ \ \ \ \ \ \"color8_lighter_80\":  \"$color8_lighter_80\"," \
          -e "20i\ \ \ \ \ \ \ \ \"color8_lighter_90\":  \"$color8_lighter_90\"," \
+         -e "20i\ \ \ \ \ \ \ \ \"color8_darker_10\":   \"$color8_darker_10\"," \
          -e "20i\ \ \ \ \ \ \ \ \"color8_darker_20\":   \"$color8_darker_20\"," \
          -e "20i\ \ \ \ \ \ \ \ \"color8_darker_30\":   \"$color8_darker_30\"," \
          -e "20i\ \ \ \ \ \ \ \ \"color8_darker_40\":   \"$color8_darker_40\"," \
@@ -1185,6 +1346,7 @@ extend_json() {
          -e "20i\ \ \ \ \ \ \ \ \"color8_darker_70\":   \"$color8_darker_70\"," \
          -e "20i\ \ \ \ \ \ \ \ \"color8_darker_80\":   \"$color8_darker_80\"," \
          -e "20i\ \ \ \ \ \ \ \ \"color8_darker_90\":   \"$color8_darker_90\"," \
+         -e "21i\ \ \ \ \ \ \ \ \"color9_lighter_10\":  \"$color9_lighter_10\"," \
          -e "21i\ \ \ \ \ \ \ \ \"color9_lighter_20\":  \"$color9_lighter_20\"," \
          -e "21i\ \ \ \ \ \ \ \ \"color9_lighter_30\":  \"$color9_lighter_30\"," \
          -e "21i\ \ \ \ \ \ \ \ \"color9_lighter_40\":  \"$color9_lighter_40\"," \
@@ -1194,6 +1356,7 @@ extend_json() {
          -e "21i\ \ \ \ \ \ \ \ \"color9_lighter_70\":  \"$color9_lighter_70\"," \
          -e "21i\ \ \ \ \ \ \ \ \"color9_lighter_80\":  \"$color9_lighter_80\"," \
          -e "21i\ \ \ \ \ \ \ \ \"color9_lighter_90\":  \"$color9_lighter_90\"," \
+         -e "21i\ \ \ \ \ \ \ \ \"color9_darker_10\":   \"$color9_darker_10\"," \
          -e "21i\ \ \ \ \ \ \ \ \"color9_darker_20\":   \"$color9_darker_20\"," \
          -e "21i\ \ \ \ \ \ \ \ \"color9_darker_30\":   \"$color9_darker_30\"," \
          -e "21i\ \ \ \ \ \ \ \ \"color9_darker_40\":   \"$color9_darker_40\"," \
@@ -1202,6 +1365,7 @@ extend_json() {
          -e "21i\ \ \ \ \ \ \ \ \"color9_darker_70\":   \"$color9_darker_70\"," \
          -e "21i\ \ \ \ \ \ \ \ \"color9_darker_80\":   \"$color9_darker_80\"," \
          -e "21i\ \ \ \ \ \ \ \ \"color9_darker_90\":   \"$color9_darker_90\"," \
+         -e "22i\ \ \ \ \ \ \ \ \"color10_lighter_10\": \"$color10_lighter_10\"," \
          -e "22i\ \ \ \ \ \ \ \ \"color10_lighter_20\": \"$color10_lighter_20\"," \
          -e "22i\ \ \ \ \ \ \ \ \"color10_lighter_30\": \"$color10_lighter_30\"," \
          -e "22i\ \ \ \ \ \ \ \ \"color10_lighter_40\": \"$color10_lighter_40\"," \
@@ -1210,6 +1374,7 @@ extend_json() {
          -e "22i\ \ \ \ \ \ \ \ \"color10_lighter_70\": \"$color10_lighter_70\"," \
          -e "22i\ \ \ \ \ \ \ \ \"color10_lighter_80\": \"$color10_lighter_80\"," \
          -e "22i\ \ \ \ \ \ \ \ \"color10_lighter_90\": \"$color10_lighter_90\"," \
+         -e "22i\ \ \ \ \ \ \ \ \"color10_darker_10\":  \"$color10_darker_10\"," \
          -e "22i\ \ \ \ \ \ \ \ \"color10_darker_20\":  \"$color10_darker_20\"," \
          -e "22i\ \ \ \ \ \ \ \ \"color10_darker_30\":  \"$color10_darker_30\"," \
          -e "22i\ \ \ \ \ \ \ \ \"color10_darker_40\":  \"$color10_darker_40\"," \
@@ -1218,6 +1383,7 @@ extend_json() {
          -e "22i\ \ \ \ \ \ \ \ \"color10_darker_70\":  \"$color10_darker_70\"," \
          -e "22i\ \ \ \ \ \ \ \ \"color10_darker_80\":  \"$color10_darker_80\"," \
          -e "22i\ \ \ \ \ \ \ \ \"color10_darker_90\":  \"$color10_darker_90\"," \
+         -e "23i\ \ \ \ \ \ \ \ \"color11_lighter_10\": \"$color11_lighter_10\"," \
          -e "23i\ \ \ \ \ \ \ \ \"color11_lighter_20\": \"$color11_lighter_20\"," \
          -e "23i\ \ \ \ \ \ \ \ \"color11_lighter_30\": \"$color11_lighter_30\"," \
          -e "23i\ \ \ \ \ \ \ \ \"color11_lighter_40\": \"$color11_lighter_40\"," \
@@ -1226,6 +1392,7 @@ extend_json() {
          -e "23i\ \ \ \ \ \ \ \ \"color11_lighter_70\": \"$color11_lighter_70\"," \
          -e "23i\ \ \ \ \ \ \ \ \"color11_lighter_80\": \"$color11_lighter_80\"," \
          -e "23i\ \ \ \ \ \ \ \ \"color11_lighter_90\": \"$color11_lighter_90\"," \
+         -e "23i\ \ \ \ \ \ \ \ \"color11_darker_10\":  \"$color11_darker_10\"," \
          -e "23i\ \ \ \ \ \ \ \ \"color11_darker_20\":  \"$color11_darker_20\"," \
          -e "23i\ \ \ \ \ \ \ \ \"color11_darker_30\":  \"$color11_darker_30\"," \
          -e "23i\ \ \ \ \ \ \ \ \"color11_darker_40\":  \"$color11_darker_40\"," \
@@ -1234,6 +1401,7 @@ extend_json() {
          -e "23i\ \ \ \ \ \ \ \ \"color11_darker_70\":  \"$color11_darker_70\"," \
          -e "23i\ \ \ \ \ \ \ \ \"color11_darker_80\":  \"$color11_darker_80\"," \
          -e "23i\ \ \ \ \ \ \ \ \"color11_darker_90\":  \"$color11_darker_90\"," \
+         -e "24i\ \ \ \ \ \ \ \ \"color12_lighter_10\": \"$color12_lighter_10\"," \
          -e "24i\ \ \ \ \ \ \ \ \"color12_lighter_20\": \"$color12_lighter_20\"," \
          -e "24i\ \ \ \ \ \ \ \ \"color12_lighter_30\": \"$color12_lighter_30\"," \
          -e "24i\ \ \ \ \ \ \ \ \"color12_lighter_40\": \"$color12_lighter_40\"," \
@@ -1242,6 +1410,7 @@ extend_json() {
          -e "24i\ \ \ \ \ \ \ \ \"color12_lighter_70\": \"$color12_lighter_70\"," \
          -e "24i\ \ \ \ \ \ \ \ \"color12_lighter_80\": \"$color12_lighter_80\"," \
          -e "24i\ \ \ \ \ \ \ \ \"color12_lighter_90\": \"$color12_lighter_90\"," \
+         -e "24i\ \ \ \ \ \ \ \ \"color12_darker_10\":  \"$color12_darker_10\"," \
          -e "24i\ \ \ \ \ \ \ \ \"color12_darker_20\":  \"$color12_darker_20\"," \
          -e "24i\ \ \ \ \ \ \ \ \"color12_darker_30\":  \"$color12_darker_30\"," \
          -e "24i\ \ \ \ \ \ \ \ \"color12_darker_40\":  \"$color12_darker_40\"," \
@@ -1250,6 +1419,7 @@ extend_json() {
          -e "24i\ \ \ \ \ \ \ \ \"color12_darker_70\":  \"$color12_darker_70\"," \
          -e "24i\ \ \ \ \ \ \ \ \"color12_darker_80\":  \"$color12_darker_80\"," \
          -e "24i\ \ \ \ \ \ \ \ \"color12_darker_90\":  \"$color12_darker_90\"," \
+         -e "25i\ \ \ \ \ \ \ \ \"color13_lighter_10\": \"$color13_lighter_10\"," \
          -e "25i\ \ \ \ \ \ \ \ \"color13_lighter_20\": \"$color13_lighter_20\"," \
          -e "25i\ \ \ \ \ \ \ \ \"color13_lighter_30\": \"$color13_lighter_30\"," \
          -e "25i\ \ \ \ \ \ \ \ \"color13_lighter_40\": \"$color13_lighter_40\"," \
@@ -1258,6 +1428,7 @@ extend_json() {
          -e "25i\ \ \ \ \ \ \ \ \"color13_lighter_70\": \"$color13_lighter_70\"," \
          -e "25i\ \ \ \ \ \ \ \ \"color13_lighter_80\": \"$color13_lighter_80\"," \
          -e "25i\ \ \ \ \ \ \ \ \"color13_lighter_90\": \"$color13_lighter_90\"," \
+         -e "25i\ \ \ \ \ \ \ \ \"color13_darker_10\":  \"$color13_darker_10\"," \
          -e "25i\ \ \ \ \ \ \ \ \"color13_darker_20\":  \"$color13_darker_20\"," \
          -e "25i\ \ \ \ \ \ \ \ \"color13_darker_30\":  \"$color13_darker_30\"," \
          -e "25i\ \ \ \ \ \ \ \ \"color13_darker_40\":  \"$color13_darker_40\"," \
@@ -1266,6 +1437,7 @@ extend_json() {
          -e "25i\ \ \ \ \ \ \ \ \"color13_darker_70\":  \"$color13_darker_70\"," \
          -e "25i\ \ \ \ \ \ \ \ \"color13_darker_80\":  \"$color13_darker_80\"," \
          -e "25i\ \ \ \ \ \ \ \ \"color13_darker_90\":  \"$color13_darker_90\"," \
+         -e "26i\ \ \ \ \ \ \ \ \"color14_lighter_10\": \"$color14_lighter_10\"," \
          -e "26i\ \ \ \ \ \ \ \ \"color14_lighter_20\": \"$color14_lighter_20\"," \
          -e "26i\ \ \ \ \ \ \ \ \"color14_lighter_30\": \"$color14_lighter_30\"," \
          -e "26i\ \ \ \ \ \ \ \ \"color14_lighter_30\": \"$color14_lighter_30\"," \
@@ -1275,6 +1447,7 @@ extend_json() {
          -e "26i\ \ \ \ \ \ \ \ \"color14_lighter_70\": \"$color14_lighter_70\"," \
          -e "26i\ \ \ \ \ \ \ \ \"color14_lighter_80\": \"$color14_lighter_80\"," \
          -e "26i\ \ \ \ \ \ \ \ \"color14_lighter_90\": \"$color14_lighter_90\"," \
+         -e "26i\ \ \ \ \ \ \ \ \"color14_darker_10\":  \"$color14_darker_10\"," \
          -e "26i\ \ \ \ \ \ \ \ \"color14_darker_20\":  \"$color14_darker_20\"," \
          -e "26i\ \ \ \ \ \ \ \ \"color14_darker_30\":  \"$color14_darker_30\"," \
          -e "26i\ \ \ \ \ \ \ \ \"color14_darker_40\":  \"$color14_darker_40\"," \
@@ -1284,6 +1457,7 @@ extend_json() {
          -e "26i\ \ \ \ \ \ \ \ \"color14_darker_80\":  \"$color14_darker_80\"," \
          -e "26i\ \ \ \ \ \ \ \ \"color14_darker_90\":  \"$color14_darker_90\"," \
          -e "27i\ \ \ \ \ \ \ \ \"color15\": \"$color15\"," \
+         -e "27i\ \ \ \ \ \ \ \ \"color15_lighter_10\": \"$color15_lighter_10\"," \
          -e "27i\ \ \ \ \ \ \ \ \"color15_lighter_20\": \"$color15_lighter_20\"," \
          -e "27i\ \ \ \ \ \ \ \ \"color15_lighter_30\": \"$color15_lighter_30\"," \
          -e "27i\ \ \ \ \ \ \ \ \"color15_lighter_40\": \"$color15_lighter_40\"," \
@@ -1292,6 +1466,7 @@ extend_json() {
          -e "27i\ \ \ \ \ \ \ \ \"color15_lighter_70\": \"$color15_lighter_70\"," \
          -e "27i\ \ \ \ \ \ \ \ \"color15_lighter_80\": \"$color15_lighter_80\"," \
          -e "27i\ \ \ \ \ \ \ \ \"color15_lighter_90\": \"$color15_lighter_90\"," \
+         -e "27i\ \ \ \ \ \ \ \ \"color15_darker_10\":  \"$color15_darker_10\"," \
          -e "27i\ \ \ \ \ \ \ \ \"color15_darker_20\":  \"$color15_darker_20\"," \
          -e "27i\ \ \ \ \ \ \ \ \"color15_darker_30\":  \"$color15_darker_30\"," \
          -e "27i\ \ \ \ \ \ \ \ \"color15_darker_40\":  \"$color15_darker_40\"," \
@@ -1308,7 +1483,8 @@ extend_json() {
 
 # Extends ~/.cache/wal/colors.scss.
 extend_scss() {
-  sed -i -e "12i\$color0_lighter_20:  $color0_lighter_20;" \
+  sed -i -e "12i\$color0_lighter_10:  $color0_lighter_10;" \
+         -e "12i\$color0_lighter_20:  $color0_lighter_20;" \
          -e "12i\$color0_lighter_30:  $color0_lighter_30;" \
          -e "12i\$color0_lighter_40:  $color0_lighter_40;" \
          -e "12i\$color0_lighter_50:  $color0_lighter_50;" \
@@ -1316,6 +1492,7 @@ extend_scss() {
          -e "12i\$color0_lighter_70:  $color0_lighter_70;" \
          -e "12i\$color0_lighter_80:  $color0_lighter_80;" \
          -e "12i\$color0_lighter_90:  $color0_lighter_90;" \
+         -e "12i\$color0_darker_10:   $color0_darker_10;" \
          -e "12i\$color0_darker_20:   $color0_darker_20;" \
          -e "12i\$color0_darker_30:   $color0_darker_30;" \
          -e "12i\$color0_darker_40:   $color0_darker_40;" \
@@ -1324,6 +1501,7 @@ extend_scss() {
          -e "12i\$color0_darker_70:   $color0_darker_70;" \
          -e "12i\$color0_darker_80:   $color0_darker_80;" \
          -e "12i\$color0_darker_90:   $color0_darker_90;" \
+         -e "13i\$color1_lighter_10:  $color1_lighter_10;" \
          -e "13i\$color1_lighter_20:  $color1_lighter_20;" \
          -e "13i\$color1_lighter_30:  $color1_lighter_30;" \
          -e "13i\$color1_lighter_40:  $color1_lighter_40;" \
@@ -1332,6 +1510,7 @@ extend_scss() {
          -e "13i\$color1_lighter_70:  $color1_lighter_70;" \
          -e "13i\$color1_lighter_80:  $color1_lighter_80;" \
          -e "13i\$color1_lighter_90:  $color1_lighter_90;" \
+         -e "13i\$color1_darker_10:   $color1_darker_10;" \
          -e "13i\$color1_darker_20:   $color1_darker_20;" \
          -e "13i\$color1_darker_30:   $color1_darker_30;" \
          -e "13i\$color1_darker_40:   $color1_darker_40;" \
@@ -1340,6 +1519,7 @@ extend_scss() {
          -e "13i\$color1_darker_70:   $color1_darker_70;" \
          -e "13i\$color1_darker_80:   $color1_darker_80;" \
          -e "13i\$color1_darker_90:   $color1_darker_90;" \
+         -e "14i\$color2_lighter_10:  $color2_lighter_10;" \
          -e "14i\$color2_lighter_20:  $color2_lighter_20;" \
          -e "14i\$color2_lighter_30:  $color2_lighter_30;" \
          -e "14i\$color2_lighter_40:  $color2_lighter_40;" \
@@ -1348,6 +1528,7 @@ extend_scss() {
          -e "14i\$color2_lighter_70:  $color2_lighter_70;" \
          -e "14i\$color2_lighter_80:  $color2_lighter_80;" \
          -e "14i\$color2_lighter_90:  $color2_lighter_90;" \
+         -e "14i\$color2_darker_10:   $color2_darker_10;" \
          -e "14i\$color2_darker_20:   $color2_darker_20;" \
          -e "14i\$color2_darker_30:   $color2_darker_30;" \
          -e "14i\$color2_darker_40:   $color2_darker_40;" \
@@ -1356,6 +1537,7 @@ extend_scss() {
          -e "14i\$color2_darker_70:   $color2_darker_70;" \
          -e "14i\$color2_darker_80:   $color2_darker_80;" \
          -e "14i\$color2_darker_90:   $color2_darker_90;" \
+         -e "15i\$color3_lighter_10:  $color3_lighter_10;" \
          -e "15i\$color3_lighter_20:  $color3_lighter_20;" \
          -e "15i\$color3_lighter_30:  $color3_lighter_30;" \
          -e "15i\$color3_lighter_40:  $color3_lighter_40;" \
@@ -1364,6 +1546,7 @@ extend_scss() {
          -e "15i\$color3_lighter_70:  $color3_lighter_70;" \
          -e "15i\$color3_lighter_80:  $color3_lighter_80;" \
          -e "15i\$color3_lighter_90:  $color3_lighter_90;" \
+         -e "15i\$color3_darker_10:   $color3_darker_10;" \
          -e "15i\$color3_darker_20:   $color3_darker_20;" \
          -e "15i\$color3_darker_30:   $color3_darker_30;" \
          -e "15i\$color3_darker_40:   $color3_darker_40;" \
@@ -1372,6 +1555,7 @@ extend_scss() {
          -e "15i\$color3_darker_70:   $color3_darker_70;" \
          -e "15i\$color3_darker_80:   $color3_darker_80;" \
          -e "15i\$color3_darker_90:   $color3_darker_90;" \
+         -e "16i\$color4_lighter_10:  $color4_lighter_10;" \
          -e "16i\$color4_lighter_20:  $color4_lighter_20;" \
          -e "16i\$color4_lighter_30:  $color4_lighter_30;" \
          -e "16i\$color4_lighter_40:  $color4_lighter_40;" \
@@ -1380,6 +1564,7 @@ extend_scss() {
          -e "16i\$color4_lighter_70:  $color4_lighter_70;" \
          -e "16i\$color4_lighter_80:  $color4_lighter_80;" \
          -e "16i\$color4_lighter_90:  $color4_lighter_90;" \
+         -e "16i\$color4_darker_10:   $color4_darker_10;" \
          -e "16i\$color4_darker_20:   $color4_darker_20;" \
          -e "16i\$color4_darker_30:   $color4_darker_30;" \
          -e "16i\$color4_darker_40:   $color4_darker_40;" \
@@ -1389,6 +1574,7 @@ extend_scss() {
          -e "16i\$color4_darker_70:   $color4_darker_70;" \
          -e "16i\$color4_darker_80:   $color4_darker_80;" \
          -e "16i\$color4_darker_90:   $color4_darker_90;" \
+         -e "17i\$color5_lighter_10:  $color5_lighter_10;" \
          -e "17i\$color5_lighter_20:  $color5_lighter_20;" \
          -e "17i\$color5_lighter_30:  $color5_lighter_30;" \
          -e "17i\$color5_lighter_40:  $color5_lighter_40;" \
@@ -1397,6 +1583,7 @@ extend_scss() {
          -e "17i\$color5_lighter_70:  $color5_lighter_70;" \
          -e "17i\$color5_lighter_80:  $color5_lighter_80;" \
          -e "17i\$color5_lighter_90:  $color5_lighter_90;" \
+         -e "17i\$color5_darker_10:   $color5_darker_10;" \
          -e "17i\$color5_darker_20:   $color5_darker_20;" \
          -e "17i\$color5_darker_30:   $color5_darker_30;" \
          -e "17i\$color5_darker_40:   $color5_darker_40;" \
@@ -1405,6 +1592,7 @@ extend_scss() {
          -e "17i\$color5_darker_70:   $color5_darker_70;" \
          -e "17i\$color5_darker_80:   $color5_darker_80;" \
          -e "17i\$color5_darker_90:   $color5_darker_90;" \
+         -e "18i\$color6_lighter_10:  $color6_lighter_10;" \
          -e "18i\$color6_lighter_20:  $color6_lighter_20;" \
          -e "18i\$color6_lighter_30:  $color6_lighter_30;" \
          -e "18i\$color6_lighter_40:  $color6_lighter_40;" \
@@ -1413,6 +1601,7 @@ extend_scss() {
          -e "18i\$color6_lighter_70:  $color6_lighter_70;" \
          -e "18i\$color6_lighter_80:  $color6_lighter_80;" \
          -e "18i\$color6_lighter_90:  $color6_lighter_90;" \
+         -e "18i\$color6_darker_10:   $color6_darker_10;" \
          -e "18i\$color6_darker_20:   $color6_darker_20;" \
          -e "18i\$color6_darker_30:   $color6_darker_30;" \
          -e "18i\$color6_darker_40:   $color6_darker_40;" \
@@ -1421,6 +1610,7 @@ extend_scss() {
          -e "18i\$color6_darker_70:   $color6_darker_70;" \
          -e "18i\$color6_darker_80:   $color6_darker_80;" \
          -e "18i\$color6_darker_90:   $color6_darker_90;" \
+         -e "19i\$color7_lighter_10:  $color7_lighter_10;" \
          -e "19i\$color7_lighter_20:  $color7_lighter_20;" \
          -e "19i\$color7_lighter_30:  $color7_lighter_30;" \
          -e "19i\$color7_lighter_40:  $color7_lighter_40;" \
@@ -1429,6 +1619,7 @@ extend_scss() {
          -e "19i\$color7_lighter_70:  $color7_lighter_70;" \
          -e "19i\$color7_lighter_80:  $color7_lighter_80;" \
          -e "19i\$color7_lighter_90:  $color7_lighter_90;" \
+         -e "19i\$color7_darker_10:   $color7_darker_10;" \
          -e "19i\$color7_darker_20:   $color7_darker_20;" \
          -e "19i\$color7_darker_30:   $color7_darker_30;" \
          -e "19i\$color7_darker_40:   $color7_darker_40;" \
@@ -1437,6 +1628,7 @@ extend_scss() {
          -e "19i\$color7_darker_70:   $color7_darker_70;" \
          -e "19i\$color7_darker_80:   $color7_darker_80;" \
          -e "19i\$color7_darker_90:   $color7_darker_90;" \
+         -e "20i\$color8_lighter_10:  $color8_lighter_10;" \
          -e "20i\$color8_lighter_20:  $color8_lighter_20;" \
          -e "20i\$color8_lighter_30:  $color8_lighter_30;" \
          -e "20i\$color8_lighter_40:  $color8_lighter_40;" \
@@ -1445,6 +1637,7 @@ extend_scss() {
          -e "20i\$color8_lighter_70:  $color8_lighter_70;" \
          -e "20i\$color8_lighter_80:  $color8_lighter_80;" \
          -e "20i\$color8_lighter_90:  $color8_lighter_90;" \
+         -e "20i\$color8_darker_10:   $color8_darker_10;" \
          -e "20i\$color8_darker_20:   $color8_darker_20;" \
          -e "20i\$color8_darker_30:   $color8_darker_30;" \
          -e "20i\$color8_darker_40:   $color8_darker_40;" \
@@ -1453,6 +1646,7 @@ extend_scss() {
          -e "20i\$color8_darker_70:   $color8_darker_70;" \
          -e "20i\$color8_darker_80:   $color8_darker_80;" \
          -e "20i\$color8_darker_90:   $color8_darker_90;" \
+         -e "21i\$color9_lighter_10:  $color9_lighter_10;" \
          -e "21i\$color9_lighter_20:  $color9_lighter_20;" \
          -e "21i\$color9_lighter_30:  $color9_lighter_30;" \
          -e "21i\$color9_lighter_40:  $color9_lighter_40;" \
@@ -1462,6 +1656,7 @@ extend_scss() {
          -e "21i\$color9_lighter_70:  $color9_lighter_70" \
          -e "21i\$color9_lighter_80:  $color9_lighter_80" \
          -e "21i\$color9_lighter_90:  $color9_lighter_90" \
+         -e "21i\$color9_darker_10:   $color9_darker_10;" \
          -e "21i\$color9_darker_20:   $color9_darker_20;" \
          -e "21i\$color9_darker_30:   $color9_darker_30;" \
          -e "21i\$color9_darker_40:   $color9_darker_40;" \
@@ -1470,6 +1665,7 @@ extend_scss() {
          -e "21i\$color9_darker_70:   $color9_darker_70;" \
          -e "21i\$color9_darker_80:   $color9_darker_80;" \
          -e "21i\$color9_darker_90:   $color9_darker_90;" \
+         -e "22i\$color10_lighter_10: $color10_lighter_10;" \
          -e "22i\$color10_lighter_20: $color10_lighter_20;" \
          -e "22i\$color10_lighter_30: $color10_lighter_30;" \
          -e "22i\$color10_lighter_40: $color10_lighter_40;" \
@@ -1478,6 +1674,7 @@ extend_scss() {
          -e "22i\$color10_lighter_70: $color10_lighter_70;" \
          -e "22i\$color10_lighter_80: $color10_lighter_80;" \
          -e "22i\$color10_lighter_90: $color10_lighter_90;" \
+         -e "22i\$color10_darker_10:  $color10_darker_10;" \
          -e "22i\$color10_darker_20:  $color10_darker_20;" \
          -e "22i\$color10_darker_30:  $color10_darker_30;" \
          -e "22i\$color10_darker_40:  $color10_darker_40;" \
@@ -1486,6 +1683,7 @@ extend_scss() {
          -e "22i\$color10_darker_70:  $color10_darker_70;" \
          -e "22i\$color10_darker_80:  $color10_darker_80;" \
          -e "22i\$color10_darker_90:  $color10_darker_90;" \
+         -e "23i\$color11_lighter_10: $color11_lighter_10;" \
          -e "23i\$color11_lighter_20: $color11_lighter_20;" \
          -e "23i\$color11_lighter_30: $color11_lighter_30;" \
          -e "23i\$color11_lighter_40: $color11_lighter_40;" \
@@ -1494,6 +1692,7 @@ extend_scss() {
          -e "23i\$color11_lighter_70: $color11_lighter_70;" \
          -e "23i\$color11_lighter_80: $color11_lighter_80;" \
          -e "23i\$color11_lighter_90: $color11_lighter_90;" \
+         -e "23i\$color11_darker_10:  $color11_darker_10;" \
          -e "23i\$color11_darker_20:  $color11_darker_20;" \
          -e "23i\$color11_darker_30:  $color11_darker_30;" \
          -e "23i\$color11_darker_40:  $color11_darker_40;" \
@@ -1502,6 +1701,7 @@ extend_scss() {
          -e "23i\$color11_darker_70:  $color11_darker_70;" \
          -e "23i\$color11_darker_80:  $color11_darker_80;" \
          -e "23i\$color11_darker_90:  $color11_darker_90;" \
+         -e "24i\$color12_lighter_10: $color12_lighter_10;" \
          -e "24i\$color12_lighter_20: $color12_lighter_20;" \
          -e "24i\$color12_lighter_30: $color12_lighter_30;" \
          -e "24i\$color12_lighter_40: $color12_lighter_40;" \
@@ -1510,6 +1710,7 @@ extend_scss() {
          -e "24i\$color12_lighter_70: $color12_lighter_70;" \
          -e "24i\$color12_lighter_80: $color12_lighter_80;" \
          -e "24i\$color12_lighter_90: $color12_lighter_90;" \
+         -e "24i\$color12_darker_10:  $color12_darker_10;" \
          -e "24i\$color12_darker_20:  $color12_darker_20;" \
          -e "24i\$color12_darker_30:  $color12_darker_30;" \
          -e "24i\$color12_darker_40:  $color12_darker_40;" \
@@ -1518,6 +1719,7 @@ extend_scss() {
          -e "24i\$color12_darker_70:  $color12_darker_70;" \
          -e "24i\$color12_darker_80:  $color12_darker_80;" \
          -e "24i\$color12_darker_90:  $color12_darker_90;" \
+         -e "25i\$color13_lighter_10: $color13_lighter_10;" \
          -e "25i\$color13_lighter_20: $color13_lighter_20;" \
          -e "25i\$color13_lighter_30: $color13_lighter_30;" \
          -e "25i\$color13_lighter_40: $color13_lighter_40;" \
@@ -1526,6 +1728,7 @@ extend_scss() {
          -e "25i\$color13_lighter_70: $color13_lighter_70;" \
          -e "25i\$color13_lighter_80: $color13_lighter_80;" \
          -e "25i\$color13_lighter_90: $color13_lighter_90;" \
+         -e "25i\$color13_darker_10:  $color13_darker_10;" \
          -e "25i\$color13_darker_20:  $color13_darker_20;" \
          -e "25i\$color13_darker_30:  $color13_darker_30;" \
          -e "25i\$color13_darker_40:  $color13_darker_40;" \
@@ -1534,6 +1737,7 @@ extend_scss() {
          -e "25i\$color13_darker_70:  $color13_darker_70;" \
          -e "25i\$color13_darker_80:  $color13_darker_80;" \
          -e "25i\$color13_darker_90:  $color13_darker_90;" \
+         -e "26i\$color14_lighter_10: $color14_lighter_10;" \
          -e "26i\$color14_lighter_20: $color14_lighter_20;" \
          -e "26i\$color14_lighter_30: $color14_lighter_30;" \
          -e "26i\$color14_lighter_30: $color14_lighter_30;" \
@@ -1543,6 +1747,7 @@ extend_scss() {
          -e "26i\$color14_lighter_70: $color14_lighter_70" \
          -e "26i\$color14_lighter_80: $color14_lighter_80" \
          -e "26i\$color14_lighter_90: $color14_lighter_90" \
+         -e "26i\$color14_darker_10:  $color14_darker_10;" \
          -e "26i\$color14_darker_20:  $color14_darker_20;" \
          -e "26i\$color14_darker_30:  $color14_darker_30;" \
          -e "26i\$color14_darker_40:  $color14_darker_40;" \
@@ -1551,6 +1756,7 @@ extend_scss() {
          -e "26i\$color14_darker_70:  $color14_darker_70;" \
          -e "26i\$color14_darker_80:  $color14_darker_80;" \
          -e "26i\$color14_darker_90:  $color14_darker_90;" \
+         -e "$ a\$color15_lighter_10: $color15_lighter_10;" \
          -e "$ a\$color15_lighter_20: $color15_lighter_20;" \
          -e "$ a\$color15_lighter_30: $color15_lighter_30;" \
          -e "$ a\$color15_lighter_40: $color15_lighter_40;" \
@@ -1559,6 +1765,7 @@ extend_scss() {
          -e "$ a\$color15_lighter_70: $color15_lighter_70;" \
          -e "$ a\$color15_lighter_80: $color15_lighter_80;" \
          -e "$ a\$color15_lighter_90: $color15_lighter_90;" \
+         -e "$ a\$color15_darker_10:  $color15_darker_10;" \
          -e "$ a\$color15_darker_20:  $color15_darker_20;" \
          -e "$ a\$color15_darker_30:  $color15_darker_30;" \
          -e "$ a\$color15_darker_40:  $color15_darker_40;" \
@@ -1572,7 +1779,8 @@ extend_scss() {
 
 # Extends ~/.cache/wal/colors.sh.
 extend_sh() {
-  sed -i -e "12icolor0_lighter_20='$color0_lighter_20'" \
+  sed -i -e "12icolor0_lighter_10='$color0_lighter_10'" \
+         -e "12icolor0_lighter_20='$color0_lighter_20'" \
          -e "12icolor0_lighter_30='$color0_lighter_30'" \
          -e "12icolor0_lighter_40='$color0_lighter_40'" \
          -e "12icolor0_lighter_50='$color0_lighter_50'" \
@@ -1580,6 +1788,7 @@ extend_sh() {
          -e "12icolor0_lighter_70='$color0_lighter_70'" \
          -e "12icolor0_lighter_80='$color0_lighter_80'" \
          -e "12icolor0_lighter_90='$color0_lighter_90'" \
+         -e "12icolor0_darker_10='$color0_darker_10'" \
          -e "12icolor0_darker_20='$color0_darker_20'" \
          -e "12icolor0_darker_30='$color0_darker_30'" \
          -e "12icolor0_darker_40='$color0_darker_40'" \
@@ -1588,6 +1797,7 @@ extend_sh() {
          -e "12icolor0_darker_70='$color0_darker_70'" \
          -e "12icolor0_darker_80='$color0_darker_80'" \
          -e "12icolor0_darker_90='$color0_darker_90'" \
+         -e "13icolor1_lighter_10='$color1_lighter_10'" \
          -e "13icolor1_lighter_20='$color1_lighter_20'" \
          -e "13icolor1_lighter_30='$color1_lighter_30'" \
          -e "13icolor1_lighter_40='$color1_lighter_40'" \
@@ -1596,6 +1806,7 @@ extend_sh() {
          -e "13icolor1_lighter_70='$color1_lighter_70'" \
          -e "13icolor1_lighter_80='$color1_lighter_80'" \
          -e "13icolor1_lighter_90='$color1_lighter_90'" \
+         -e "13icolor1_darker_10='$color1_darker_10'" \
          -e "13icolor1_darker_20='$color1_darker_20'" \
          -e "13icolor1_darker_30='$color1_darker_30'" \
          -e "13icolor1_darker_40='$color1_darker_40'" \
@@ -1604,6 +1815,7 @@ extend_sh() {
          -e "13icolor1_darker_70='$color1_darker_70'" \
          -e "13icolor1_darker_80='$color1_darker_80'" \
          -e "13icolor1_darker_90='$color1_darker_90'" \
+         -e "14icolor2_lighter_10='$color2_lighter_10'" \
          -e "14icolor2_lighter_20='$color2_lighter_20'" \
          -e "14icolor2_lighter_30='$color2_lighter_30'" \
          -e "14icolor2_lighter_40='$color2_lighter_40'" \
@@ -1612,6 +1824,7 @@ extend_sh() {
          -e "14icolor2_lighter_70='$color2_lighter_70'" \
          -e "14icolor2_lighter_80='$color2_lighter_80'" \
          -e "14icolor2_lighter_90='$color2_lighter_90'" \
+         -e "14icolor2_darker_10='$color2_darker_10'" \
          -e "14icolor2_darker_20='$color2_darker_20'" \
          -e "14icolor2_darker_30='$color2_darker_30'" \
          -e "14icolor2_darker_40='$color2_darker_40'" \
@@ -1620,6 +1833,7 @@ extend_sh() {
          -e "14icolor2_darker_70='$color2_darker_70'" \
          -e "14icolor2_darker_80='$color2_darker_80'" \
          -e "14icolor2_darker_90='$color2_darker_90'" \
+         -e "15icolor3_lighter_10='$color3_lighter_10'" \
          -e "15icolor3_lighter_20='$color3_lighter_20'" \
          -e "15icolor3_lighter_30='$color3_lighter_30'" \
          -e "15icolor3_lighter_40='$color3_lighter_40'" \
@@ -1628,6 +1842,7 @@ extend_sh() {
          -e "15icolor3_lighter_70='$color3_lighter_70'" \
          -e "15icolor3_lighter_80='$color3_lighter_80'" \
          -e "15icolor3_lighter_90='$color3_lighter_90'" \
+         -e "15icolor3_darker_10='$color3_darker_10'" \
          -e "15icolor3_darker_20='$color3_darker_20'" \
          -e "15icolor3_darker_30='$color3_darker_30'" \
          -e "15icolor3_darker_40='$color3_darker_40'" \
@@ -1636,6 +1851,7 @@ extend_sh() {
          -e "15icolor3_darker_70='$color3_darker_70'" \
          -e "15icolor3_darker_80='$color3_darker_80'" \
          -e "15icolor3_darker_90='$color3_darker_90'" \
+         -e "16icolor4_lighter_10='$color4_lighter_10'" \
          -e "16icolor4_lighter_20='$color4_lighter_20'" \
          -e "16icolor4_lighter_30='$color4_lighter_30'" \
          -e "16icolor4_lighter_40='$color4_lighter_40'" \
@@ -1644,6 +1860,7 @@ extend_sh() {
          -e "16icolor4_lighter_70='$color4_lighter_70'" \
          -e "16icolor4_lighter_80='$color4_lighter_80'" \
          -e "16icolor4_lighter_90='$color4_lighter_90'" \
+         -e "16icolor4_darker_10='$color4_darker_10'" \
          -e "16icolor4_darker_20='$color4_darker_20'" \
          -e "16icolor4_darker_30='$color4_darker_30'" \
          -e "16icolor4_darker_40='$color4_darker_40'" \
@@ -1653,6 +1870,7 @@ extend_sh() {
          -e "16icolor4_darker_70='$color4_darker_70'" \
          -e "16icolor4_darker_80='$color4_darker_80'" \
          -e "16icolor4_darker_90='$color4_darker_90'" \
+         -e "17icolor5_lighter_10='$color5_lighter_10'" \
          -e "17icolor5_lighter_20='$color5_lighter_20'" \
          -e "17icolor5_lighter_30='$color5_lighter_30'" \
          -e "17icolor5_lighter_40='$color5_lighter_40'" \
@@ -1661,6 +1879,7 @@ extend_sh() {
          -e "17icolor5_lighter_70='$color5_lighter_70'" \
          -e "17icolor5_lighter_80='$color5_lighter_80'" \
          -e "17icolor5_lighter_90='$color5_lighter_90'" \
+         -e "17icolor5_darker_10='$color5_darker_10'" \
          -e "17icolor5_darker_20='$color5_darker_20'" \
          -e "17icolor5_darker_30='$color5_darker_30'" \
          -e "17icolor5_darker_40='$color5_darker_40'" \
@@ -1669,6 +1888,7 @@ extend_sh() {
          -e "17icolor5_darker_70='$color5_darker_70'" \
          -e "17icolor5_darker_80='$color5_darker_80'" \
          -e "17icolor5_darker_90='$color5_darker_90'" \
+         -e "18icolor6_lighter_10='$color6_lighter_10'" \
          -e "18icolor6_lighter_20='$color6_lighter_20'" \
          -e "18icolor6_lighter_30='$color6_lighter_30'" \
          -e "18icolor6_lighter_40='$color6_lighter_40'" \
@@ -1677,6 +1897,7 @@ extend_sh() {
          -e "18icolor6_lighter_70='$color6_lighter_70'" \
          -e "18icolor6_lighter_80='$color6_lighter_80'" \
          -e "18icolor6_lighter_90='$color6_lighter_90'" \
+         -e "18icolor6_darker_10='$color6_darker_10'" \
          -e "18icolor6_darker_20='$color6_darker_20'" \
          -e "18icolor6_darker_30='$color6_darker_30'" \
          -e "18icolor6_darker_40='$color6_darker_40'" \
@@ -1685,6 +1906,7 @@ extend_sh() {
          -e "18icolor6_darker_70='$color6_darker_70'" \
          -e "18icolor6_darker_80='$color6_darker_80'" \
          -e "18icolor6_darker_90='$color6_darker_90'" \
+         -e "19icolor7_lighter_10='$color7_lighter_10'" \
          -e "19icolor7_lighter_20='$color7_lighter_20'" \
          -e "19icolor7_lighter_30='$color7_lighter_30'" \
          -e "19icolor7_lighter_40='$color7_lighter_40'" \
@@ -1693,6 +1915,7 @@ extend_sh() {
          -e "19icolor7_lighter_70='$color7_lighter_70'" \
          -e "19icolor7_lighter_80='$color7_lighter_80'" \
          -e "19icolor7_lighter_90='$color7_lighter_90'" \
+         -e "19icolor7_darker_10='$color7_darker_10'" \
          -e "19icolor7_darker_20='$color7_darker_20'" \
          -e "19icolor7_darker_30='$color7_darker_30'" \
          -e "19icolor7_darker_40='$color7_darker_40'" \
@@ -1701,6 +1924,7 @@ extend_sh() {
          -e "19icolor7_darker_70='$color7_darker_70'" \
          -e "19icolor7_darker_80='$color7_darker_80'" \
          -e "19icolor7_darker_90='$color7_darker_90'" \
+         -e "20icolor8_lighter_10='$color8_lighter_10'" \
          -e "20icolor8_lighter_20='$color8_lighter_20'" \
          -e "20icolor8_lighter_30='$color8_lighter_30'" \
          -e "20icolor8_lighter_40='$color8_lighter_40'" \
@@ -1709,6 +1933,7 @@ extend_sh() {
          -e "20icolor8_lighter_70='$color8_lighter_70'" \
          -e "20icolor8_lighter_80='$color8_lighter_80'" \
          -e "20icolor8_lighter_90='$color8_lighter_90'" \
+         -e "20icolor8_darker_10='$color8_darker_10'" \
          -e "20icolor8_darker_20='$color8_darker_20'" \
          -e "20icolor8_darker_30='$color8_darker_30'" \
          -e "20icolor8_darker_40='$color8_darker_40'" \
@@ -1717,6 +1942,7 @@ extend_sh() {
          -e "20icolor8_darker_70='$color8_darker_70'" \
          -e "20icolor8_darker_80='$color8_darker_80'" \
          -e "20icolor8_darker_90='$color8_darker_90'" \
+         -e "21icolor9_lighter_10='$color9_lighter_10'" \
          -e "21icolor9_lighter_20='$color9_lighter_20'" \
          -e "21icolor9_lighter_30='$color9_lighter_30'" \
          -e "21icolor9_lighter_40='$color9_lighter_40'" \
@@ -1726,6 +1952,7 @@ extend_sh() {
          -e "21icolor9_lighter_70='$color9_lighter_70'" \
          -e "21icolor9_lighter_80='$color9_lighter_80'" \
          -e "21icolor9_lighter_90='$color9_lighter_90'" \
+         -e "21icolor9_darker_10='$color9_darker_10'" \
          -e "21icolor9_darker_20='$color9_darker_20'" \
          -e "21icolor9_darker_30='$color9_darker_30'" \
          -e "21icolor9_darker_40='$color9_darker_40'" \
@@ -1734,6 +1961,7 @@ extend_sh() {
          -e "21icolor9_darker_70='$color9_darker_70'" \
          -e "21icolor9_darker_80='$color9_darker_80'" \
          -e "21icolor9_darker_90='$color9_darker_90'" \
+         -e "22icolor10_lighter_10='$color10_lighter_10'" \
          -e "22icolor10_lighter_20='$color10_lighter_20'" \
          -e "22icolor10_lighter_30='$color10_lighter_30'" \
          -e "22icolor10_lighter_40='$color10_lighter_40'" \
@@ -1742,6 +1970,7 @@ extend_sh() {
          -e "22icolor10_lighter_70='$color10_lighter_70'" \
          -e "22icolor10_lighter_80='$color10_lighter_80'" \
          -e "22icolor10_lighter_90='$color10_lighter_90'" \
+         -e "22icolor10_darker_10='$color10_darker_10'" \
          -e "22icolor10_darker_20='$color10_darker_20'" \
          -e "22icolor10_darker_30='$color10_darker_30'" \
          -e "22icolor10_darker_40='$color10_darker_40'" \
@@ -1750,6 +1979,7 @@ extend_sh() {
          -e "22icolor10_darker_70='$color10_darker_70'" \
          -e "22icolor10_darker_80='$color10_darker_80'" \
          -e "22icolor10_darker_90='$color10_darker_90'" \
+         -e "23icolor11_lighter_10='$color11_lighter_10'" \
          -e "23icolor11_lighter_20='$color11_lighter_20'" \
          -e "23icolor11_lighter_30='$color11_lighter_30'" \
          -e "23icolor11_lighter_40='$color11_lighter_40'" \
@@ -1758,6 +1988,7 @@ extend_sh() {
          -e "23icolor11_lighter_70='$color11_lighter_70'" \
          -e "23icolor11_lighter_80='$color11_lighter_80'" \
          -e "23icolor11_lighter_90='$color11_lighter_90'" \
+         -e "23icolor11_darker_10='$color11_darker_10'" \
          -e "23icolor11_darker_20='$color11_darker_20'" \
          -e "23icolor11_darker_30='$color11_darker_30'" \
          -e "23icolor11_darker_40='$color11_darker_40'" \
@@ -1766,6 +1997,7 @@ extend_sh() {
          -e "23icolor11_darker_70='$color11_darker_70'" \
          -e "23icolor11_darker_80='$color11_darker_80'" \
          -e "23icolor11_darker_90='$color11_darker_90'" \
+         -e "24icolor12_lighter_10='$color12_lighter_10'" \
          -e "24icolor12_lighter_20='$color12_lighter_20'" \
          -e "24icolor12_lighter_30='$color12_lighter_30'" \
          -e "24icolor12_lighter_40='$color12_lighter_40'" \
@@ -1774,6 +2006,7 @@ extend_sh() {
          -e "24icolor12_lighter_70='$color12_lighter_70'" \
          -e "24icolor12_lighter_80='$color12_lighter_80'" \
          -e "24icolor12_lighter_90='$color12_lighter_90'" \
+         -e "24icolor12_darker_10='$color12_darker_10'" \
          -e "24icolor12_darker_20='$color12_darker_20'" \
          -e "24icolor12_darker_30='$color12_darker_30'" \
          -e "24icolor12_darker_40='$color12_darker_40'" \
@@ -1782,6 +2015,7 @@ extend_sh() {
          -e "24icolor12_darker_70='$color12_darker_70'" \
          -e "24icolor12_darker_80='$color12_darker_80'" \
          -e "24icolor12_darker_90='$color12_darker_90'" \
+         -e "25icolor13_lighter_10='$color13_lighter_10'" \
          -e "25icolor13_lighter_20='$color13_lighter_20'" \
          -e "25icolor13_lighter_30='$color13_lighter_30'" \
          -e "25icolor13_lighter_40='$color13_lighter_40'" \
@@ -1790,6 +2024,7 @@ extend_sh() {
          -e "25icolor13_lighter_70='$color13_lighter_70'" \
          -e "25icolor13_lighter_80='$color13_lighter_80'" \
          -e "25icolor13_lighter_90='$color13_lighter_90'" \
+         -e "25icolor13_darker_10='$color13_darker_10'" \
          -e "25icolor13_darker_20='$color13_darker_20'" \
          -e "25icolor13_darker_30='$color13_darker_30'" \
          -e "25icolor13_darker_40='$color13_darker_40'" \
@@ -1798,6 +2033,7 @@ extend_sh() {
          -e "25icolor13_darker_70='$color13_darker_70'" \
          -e "25icolor13_darker_80='$color13_darker_80'" \
          -e "25icolor13_darker_90='$color13_darker_90'" \
+         -e "26icolor14_lighter_10='$color14_lighter_10'" \
          -e "26icolor14_lighter_20='$color14_lighter_20'" \
          -e "26icolor14_lighter_30='$color14_lighter_30'" \
          -e "26icolor14_lighter_30='$color14_lighter_30'" \
@@ -1807,6 +2043,7 @@ extend_sh() {
          -e "26icolor14_lighter_70='$color14_lighter_70'" \
          -e "26icolor14_lighter_80='$color14_lighter_80'" \
          -e "26icolor14_lighter_90='$color14_lighter_90'" \
+         -e "26icolor14_darker_10='$color14_darker_10'" \
          -e "26icolor14_darker_20='$color14_darker_20'" \
          -e "26icolor14_darker_30='$color14_darker_30'" \
          -e "26icolor14_darker_40='$color14_darker_40'" \
@@ -1815,6 +2052,7 @@ extend_sh() {
          -e "26icolor14_darker_70='$color14_darker_70'" \
          -e "26icolor14_darker_80='$color14_darker_80'" \
          -e "26icolor14_darker_90='$color14_darker_90'" \
+         -e "27icolor15_lighter_10='$color15_lighter_10'" \
          -e "27icolor15_lighter_20='$color15_lighter_20'" \
          -e "27icolor15_lighter_30='$color15_lighter_30'" \
          -e "27icolor15_lighter_40='$color15_lighter_40'" \
@@ -1823,6 +2061,7 @@ extend_sh() {
          -e "27icolor15_lighter_70='$color15_lighter_70'" \
          -e "27icolor15_lighter_80='$color15_lighter_80'" \
          -e "27icolor15_lighter_90='$color15_lighter_90'" \
+         -e "27icolor15_darker_10='$color15_darker_10'" \
          -e "27icolor15_darker_20='$color15_darker_20'" \
          -e "27icolor15_darker_30='$color15_darker_30'" \
          -e "27icolor15_darker_40='$color15_darker_40'" \
@@ -1836,7 +2075,8 @@ extend_sh() {
 
 # Extends ~/.cache/wal/colors-sway.
 extend_sway() {
-  sed -i -e "7iset \$color0_lighter_20 $color0_lighter_20" \
+  sed -i -e "7iset \$color0_lighter_10 $color0_lighter_10" \
+         -e "7iset \$color0_lighter_20 $color0_lighter_20" \
          -e "7iset \$color0_lighter_30 $color0_lighter_30" \
          -e "7iset \$color0_lighter_40 $color0_lighter_40" \
          -e "7iset \$color0_lighter_50 $color0_lighter_50" \
@@ -1844,6 +2084,7 @@ extend_sway() {
          -e "7iset \$color0_lighter_70 $color0_lighter_70" \
          -e "7iset \$color0_lighter_80 $color0_lighter_80" \
          -e "7iset \$color0_lighter_90 $color0_lighter_90" \
+         -e "7iset \$color0_darker_10 $color0_darker_10" \
          -e "7iset \$color0_darker_20 $color0_darker_20" \
          -e "7iset \$color0_darker_30 $color0_darker_30" \
          -e "7iset \$color0_darker_40 $color0_darker_40" \
@@ -1852,6 +2093,7 @@ extend_sway() {
          -e "7iset \$color0_darker_70 $color0_darker_70" \
          -e "7iset \$color0_darker_80 $color0_darker_80" \
          -e "7iset \$color0_darker_90 $color0_darker_90" \
+         -e "8iset \$color1_lighter_10 $color1_lighter_10" \
          -e "8iset \$color1_lighter_20 $color1_lighter_20" \
          -e "8iset \$color1_lighter_30 $color1_lighter_30" \
          -e "8iset \$color1_lighter_40 $color1_lighter_40" \
@@ -1860,6 +2102,7 @@ extend_sway() {
          -e "8iset \$color1_lighter_70 $color1_lighter_70" \
          -e "8iset \$color1_lighter_80 $color1_lighter_80" \
          -e "8iset \$color1_lighter_90 $color1_lighter_90" \
+         -e "8iset \$color1_darker_10 $color1_darker_10" \
          -e "8iset \$color1_darker_20 $color1_darker_20" \
          -e "8iset \$color1_darker_30 $color1_darker_30" \
          -e "8iset \$color1_darker_40 $color1_darker_40" \
@@ -1868,6 +2111,7 @@ extend_sway() {
          -e "8iset \$color1_darker_70 $color1_darker_70" \
          -e "8iset \$color1_darker_80 $color1_darker_80" \
          -e "8iset \$color1_darker_90 $color1_darker_90" \
+         -e "9iset \$color2_lighter_10 $color2_lighter_10" \
          -e "9iset \$color2_lighter_20 $color2_lighter_20" \
          -e "9iset \$color2_lighter_30 $color2_lighter_30" \
          -e "9iset \$color2_lighter_40 $color2_lighter_40" \
@@ -1876,6 +2120,7 @@ extend_sway() {
          -e "9iset \$color2_lighter_70 $color2_lighter_70" \
          -e "9iset \$color2_lighter_80 $color2_lighter_80" \
          -e "9iset \$color2_lighter_90 $color2_lighter_90" \
+         -e "9iset \$color2_darker_10 $color2_darker_10" \
          -e "9iset \$color2_darker_20 $color2_darker_20" \
          -e "9iset \$color2_darker_30 $color2_darker_30" \
          -e "9iset \$color2_darker_40 $color2_darker_40" \
@@ -1884,6 +2129,7 @@ extend_sway() {
          -e "9iset \$color2_darker_70 $color2_darker_70" \
          -e "9iset \$color2_darker_80 $color2_darker_80" \
          -e "9iset \$color2_darker_90 $color2_darker_90" \
+         -e "10iset \$color3_lighter_10 $color3_lighter_10" \
          -e "10iset \$color3_lighter_20 $color3_lighter_20" \
          -e "10iset \$color3_lighter_30 $color3_lighter_30" \
          -e "10iset \$color3_lighter_40 $color3_lighter_40" \
@@ -1892,6 +2138,7 @@ extend_sway() {
          -e "10iset \$color3_lighter_70 $color3_lighter_70" \
          -e "10iset \$color3_lighter_80 $color3_lighter_80" \
          -e "10iset \$color3_lighter_90 $color3_lighter_90" \
+         -e "10iset \$color3_darker_10 $color3_darker_10" \
          -e "10iset \$color3_darker_20 $color3_darker_20" \
          -e "10iset \$color3_darker_30 $color3_darker_30" \
          -e "10iset \$color3_darker_40 $color3_darker_40" \
@@ -1900,6 +2147,7 @@ extend_sway() {
          -e "10iset \$color3_darker_70 $color3_darker_70" \
          -e "10iset \$color3_darker_80 $color3_darker_80" \
          -e "10iset \$color3_darker_90 $color3_darker_90" \
+         -e "11iset \$color4_lighter_10 $color4_lighter_10" \
          -e "11iset \$color4_lighter_20 $color4_lighter_20" \
          -e "11iset \$color4_lighter_30 $color4_lighter_30" \
          -e "11iset \$color4_lighter_40 $color4_lighter_40" \
@@ -1908,6 +2156,7 @@ extend_sway() {
          -e "11iset \$color4_lighter_70 $color4_lighter_70" \
          -e "11iset \$color4_lighter_80 $color4_lighter_80" \
          -e "11iset \$color4_lighter_90 $color4_lighter_90" \
+         -e "11iset \$color4_darker_10 $color4_darker_10" \
          -e "11iset \$color4_darker_20 $color4_darker_20" \
          -e "11iset \$color4_darker_30 $color4_darker_30" \
          -e "11iset \$color4_darker_40 $color4_darker_40" \
@@ -1917,6 +2166,7 @@ extend_sway() {
          -e "11iset \$color4_darker_70 $color4_darker_70" \
          -e "11iset \$color4_darker_80 $color4_darker_80" \
          -e "11iset \$color4_darker_90 $color4_darker_90" \
+         -e "12iset \$color5_lighter_10 $color5_lighter_10" \
          -e "12iset \$color5_lighter_20 $color5_lighter_20" \
          -e "12iset \$color5_lighter_30 $color5_lighter_30" \
          -e "12iset \$color5_lighter_40 $color5_lighter_40" \
@@ -1925,6 +2175,7 @@ extend_sway() {
          -e "12iset \$color5_lighter_70 $color5_lighter_70" \
          -e "12iset \$color5_lighter_80 $color5_lighter_80" \
          -e "12iset \$color5_lighter_90 $color5_lighter_90" \
+         -e "12iset \$color5_darker_10 $color5_darker_10" \
          -e "12iset \$color5_darker_20 $color5_darker_20" \
          -e "12iset \$color5_darker_30 $color5_darker_30" \
          -e "12iset \$color5_darker_40 $color5_darker_40" \
@@ -1933,6 +2184,7 @@ extend_sway() {
          -e "12iset \$color5_darker_70 $color5_darker_70" \
          -e "12iset \$color5_darker_80 $color5_darker_80" \
          -e "12iset \$color5_darker_90 $color5_darker_90" \
+         -e "13iset \$color6_lighter_10 $color6_lighter_10" \
          -e "13iset \$color6_lighter_20 $color6_lighter_20" \
          -e "13iset \$color6_lighter_30 $color6_lighter_30" \
          -e "13iset \$color6_lighter_40 $color6_lighter_40" \
@@ -1941,6 +2193,7 @@ extend_sway() {
          -e "13iset \$color6_lighter_70 $color6_lighter_70" \
          -e "13iset \$color6_lighter_80 $color6_lighter_80" \
          -e "13iset \$color6_lighter_90 $color6_lighter_90" \
+         -e "13iset \$color6_darker_10 $color6_darker_10" \
          -e "13iset \$color6_darker_20 $color6_darker_20" \
          -e "13iset \$color6_darker_30 $color6_darker_30" \
          -e "13iset \$color6_darker_40 $color6_darker_40" \
@@ -1949,6 +2202,7 @@ extend_sway() {
          -e "13iset \$color6_darker_70 $color6_darker_70" \
          -e "13iset \$color6_darker_80 $color6_darker_80" \
          -e "13iset \$color6_darker_90 $color6_darker_90" \
+         -e "14iset \$color7_lighter_10 $color7_lighter_10" \
          -e "14iset \$color7_lighter_20 $color7_lighter_20" \
          -e "14iset \$color7_lighter_30 $color7_lighter_30" \
          -e "14iset \$color7_lighter_40 $color7_lighter_40" \
@@ -1957,6 +2211,7 @@ extend_sway() {
          -e "14iset \$color7_lighter_70 $color7_lighter_70" \
          -e "14iset \$color7_lighter_80 $color7_lighter_80" \
          -e "14iset \$color7_lighter_90 $color7_lighter_90" \
+         -e "14iset \$color7_darker_10 $color7_darker_10" \
          -e "14iset \$color7_darker_20 $color7_darker_20" \
          -e "14iset \$color7_darker_30 $color7_darker_30" \
          -e "14iset \$color7_darker_40 $color7_darker_40" \
@@ -1965,6 +2220,7 @@ extend_sway() {
          -e "14iset \$color7_darker_70 $color7_darker_70" \
          -e "14iset \$color7_darker_80 $color7_darker_80" \
          -e "14iset \$color7_darker_90 $color7_darker_90" \
+         -e "15iset \$color8_lighter_10 $color8_lighter_10" \
          -e "15iset \$color8_lighter_20 $color8_lighter_20" \
          -e "15iset \$color8_lighter_30 $color8_lighter_30" \
          -e "15iset \$color8_lighter_40 $color8_lighter_40" \
@@ -1973,6 +2229,7 @@ extend_sway() {
          -e "15iset \$color8_lighter_70 $color8_lighter_70" \
          -e "15iset \$color8_lighter_80 $color8_lighter_80" \
          -e "15iset \$color8_lighter_90 $color8_lighter_90" \
+         -e "15iset \$color8_darker_10 $color8_darker_10" \
          -e "15iset \$color8_darker_20 $color8_darker_20" \
          -e "15iset \$color8_darker_30 $color8_darker_30" \
          -e "15iset \$color8_darker_40 $color8_darker_40" \
@@ -1981,6 +2238,7 @@ extend_sway() {
          -e "15iset \$color8_darker_70 $color8_darker_70" \
          -e "15iset \$color8_darker_80 $color8_darker_80" \
          -e "15iset \$color8_darker_90 $color8_darker_90" \
+         -e "16iset \$color9_lighter_10 $color9_lighter_10" \
          -e "16iset \$color9_lighter_20 $color9_lighter_20" \
          -e "16iset \$color9_lighter_30 $color9_lighter_30" \
          -e "16iset \$color9_lighter_40 $color9_lighter_40" \
@@ -1989,6 +2247,7 @@ extend_sway() {
          -e "16iset \$color9_lighter_70 $color9_lighter_70" \
          -e "16iset \$color9_lighter_80 $color9_lighter_80" \
          -e "16iset \$color9_lighter_90 $color9_lighter_90" \
+         -e "16iset \$color9_darker_10 $color9_darker_10" \
          -e "16iset \$color9_darker_20 $color9_darker_20" \
          -e "16iset \$color9_darker_30 $color9_darker_30" \
          -e "16iset \$color9_darker_40 $color9_darker_40" \
@@ -1997,6 +2256,7 @@ extend_sway() {
          -e "16iset \$color9_darker_70 $color9_darker_70" \
          -e "16iset \$color9_darker_80 $color9_darker_80" \
          -e "16iset \$color9_darker_90 $color9_darker_90" \
+         -e "17iset \$color10_lighter_10 $color10_lighter_10" \
          -e "17iset \$color10_lighter_20 $color10_lighter_20" \
          -e "17iset \$color10_lighter_30 $color10_lighter_30" \
          -e "17iset \$color10_lighter_40 $color10_lighter_40" \
@@ -2005,6 +2265,7 @@ extend_sway() {
          -e "17iset \$color10_lighter_70 $color10_lighter_70" \
          -e "17iset \$color10_lighter_80 $color10_lighter_80" \
          -e "17iset \$color10_lighter_90 $color10_lighter_90" \
+         -e "17iset \$color10_darker_10 $color10_darker_10" \
          -e "17iset \$color10_darker_20 $color10_darker_20" \
          -e "17iset \$color10_darker_30 $color10_darker_30" \
          -e "17iset \$color10_darker_40 $color10_darker_40" \
@@ -2013,6 +2274,7 @@ extend_sway() {
          -e "17iset \$color10_darker_70 $color10_darker_70" \
          -e "17iset \$color10_darker_80 $color10_darker_80" \
          -e "17iset \$color10_darker_90 $color10_darker_90" \
+         -e "18iset \$color11_lighter_10 $color11_lighter_10" \
          -e "18iset \$color11_lighter_20 $color11_lighter_20" \
          -e "18iset \$color11_lighter_30 $color11_lighter_30" \
          -e "18iset \$color11_lighter_40 $color11_lighter_40" \
@@ -2021,6 +2283,7 @@ extend_sway() {
          -e "18iset \$color11_lighter_70 $color11_lighter_70" \
          -e "18iset \$color11_lighter_80 $color11_lighter_80" \
          -e "18iset \$color11_lighter_90 $color11_lighter_90" \
+         -e "18iset \$color11_darker_10 $color11_darker_10" \
          -e "18iset \$color11_darker_20 $color11_darker_20" \
          -e "18iset \$color11_darker_30 $color11_darker_30" \
          -e "18iset \$color11_darker_40 $color11_darker_40" \
@@ -2029,6 +2292,7 @@ extend_sway() {
          -e "18iset \$color11_darker_70 $color11_darker_70" \
          -e "18iset \$color11_darker_80 $color11_darker_80" \
          -e "18iset \$color11_darker_90 $color11_darker_90" \
+         -e "19iset \$color12_lighter_10 $color12_lighter_10" \
          -e "19iset \$color12_lighter_20 $color12_lighter_20" \
          -e "19iset \$color12_lighter_30 $color12_lighter_30" \
          -e "19iset \$color12_lighter_40 $color12_lighter_40" \
@@ -2037,6 +2301,7 @@ extend_sway() {
          -e "19iset \$color12_lighter_70 $color12_lighter_70" \
          -e "19iset \$color12_lighter_80 $color12_lighter_80" \
          -e "19iset \$color12_lighter_90 $color12_lighter_90" \
+         -e "19iset \$color12_darker_10 $color12_darker_10" \
          -e "19iset \$color12_darker_20 $color12_darker_20" \
          -e "19iset \$color12_darker_30 $color12_darker_30" \
          -e "19iset \$color12_darker_40 $color12_darker_40" \
@@ -2045,6 +2310,7 @@ extend_sway() {
          -e "19iset \$color12_darker_70 $color12_darker_70" \
          -e "19iset \$color12_darker_80 $color12_darker_80" \
          -e "19iset \$color12_darker_90 $color12_darker_90" \
+         -e "20iset \$color13_lighter_10 $color13_lighter_10" \
          -e "20iset \$color13_lighter_20 $color13_lighter_20" \
          -e "20iset \$color13_lighter_30 $color13_lighter_30" \
          -e "20iset \$color13_lighter_40 $color13_lighter_40" \
@@ -2053,6 +2319,7 @@ extend_sway() {
          -e "20iset \$color13_lighter_70 $color13_lighter_70" \
          -e "20iset \$color13_lighter_80 $color13_lighter_80" \
          -e "20iset \$color13_lighter_90 $color13_lighter_90" \
+         -e "20iset \$color13_darker_10 $color13_darker_10" \
          -e "20iset \$color13_darker_20 $color13_darker_20" \
          -e "20iset \$color13_darker_30 $color13_darker_30" \
          -e "20iset \$color13_darker_40 $color13_darker_40" \
@@ -2061,6 +2328,7 @@ extend_sway() {
          -e "20iset \$color13_darker_70 $color13_darker_70" \
          -e "20iset \$color13_darker_80 $color13_darker_80" \
          -e "20iset \$color13_darker_90 $color13_darker_90" \
+         -e "21iset \$color14_lighter_10 $color14_lighter_10" \
          -e "21iset \$color14_lighter_20 $color14_lighter_20" \
          -e "21iset \$color14_lighter_30 $color14_lighter_30" \
          -e "21iset \$color14_lighter_30 $color14_lighter_30" \
@@ -2070,6 +2338,7 @@ extend_sway() {
          -e "21iset \$color14_lighter_70 $color14_lighter_70" \
          -e "21iset \$color14_lighter_80 $color14_lighter_80" \
          -e "21iset \$color14_lighter_90 $color14_lighter_90" \
+         -e "21iset \$color14_darker_10 $color14_darker_10" \
          -e "21iset \$color14_darker_20 $color14_darker_20" \
          -e "21iset \$color14_darker_30 $color14_darker_30" \
          -e "21iset \$color14_darker_40 $color14_darker_40" \
@@ -2078,6 +2347,7 @@ extend_sway() {
          -e "21iset \$color14_darker_70 $color14_darker_70" \
          -e "21iset \$color14_darker_80 $color14_darker_80" \
          -e "21iset \$color14_darker_90 $color14_darker_90" \
+         -e "$ aset \$color15_lighter_10 $color15_lighter_10" \
          -e "$ aset \$color15_lighter_20 $color15_lighter_20" \
          -e "$ aset \$color15_lighter_30 $color15_lighter_30" \
          -e "$ aset \$color15_lighter_40 $color15_lighter_40" \
@@ -2086,6 +2356,7 @@ extend_sway() {
          -e "$ aset \$color15_lighter_70 $color15_lighter_70" \
          -e "$ aset \$color15_lighter_80 $color15_lighter_80" \
          -e "$ aset \$color15_lighter_90 $color15_lighter_90" \
+         -e "$ aset \$color15_darker_10 $color15_darker_10" \
          -e "$ aset \$color15_darker_20 $color15_darker_20" \
          -e "$ aset \$color15_darker_30 $color15_darker_30" \
          -e "$ aset \$color15_darker_40 $color15_darker_40" \
@@ -2099,7 +2370,8 @@ extend_sway() {
 
 # Extends ~/.cache/wal/colors.yml.
 extend_yml() {
-  sed -i -e "10i\ \ \ \ color0_lighter_20: \"$color0_lighter_20\"" \
+  sed -i -e "10i\ \ \ \ color0_lighter_10: \"$color0_lighter_10\"" \
+         -e "10i\ \ \ \ color0_lighter_20: \"$color0_lighter_20\"" \
          -e "10i\ \ \ \ color0_lighter_30: \"$color0_lighter_30\"" \
          -e "10i\ \ \ \ color0_lighter_40: \"$color0_lighter_40\"" \
          -e "10i\ \ \ \ color0_lighter_50: \"$color0_lighter_50\"" \
@@ -2107,6 +2379,7 @@ extend_yml() {
          -e "10i\ \ \ \ color0_lighter_70: \"$color0_lighter_70\"" \
          -e "10i\ \ \ \ color0_lighter_80: \"$color0_lighter_80\"" \
          -e "10i\ \ \ \ color0_lighter_90: \"$color0_lighter_90\"" \
+         -e "10i\ \ \ \ color0_darker_10: \"$color0_darker_10\"" \
          -e "10i\ \ \ \ color0_darker_20: \"$color0_darker_20\"" \
          -e "10i\ \ \ \ color0_darker_30: \"$color0_darker_30\"" \
          -e "10i\ \ \ \ color0_darker_40: \"$color0_darker_40\"" \
@@ -2115,6 +2388,7 @@ extend_yml() {
          -e "10i\ \ \ \ color0_darker_70: \"$color0_darker_70\"" \
          -e "10i\ \ \ \ color0_darker_80: \"$color0_darker_80\"" \
          -e "10i\ \ \ \ color0_darker_90: \"$color0_darker_90\"" \
+         -e "11i\ \ \ \ color1_lighter_10: \"$color1_lighter_10\"" \
          -e "11i\ \ \ \ color1_lighter_20: \"$color1_lighter_20\"" \
          -e "11i\ \ \ \ color1_lighter_30: \"$color1_lighter_30\"" \
          -e "11i\ \ \ \ color1_lighter_40: \"$color1_lighter_40\"" \
@@ -2123,6 +2397,7 @@ extend_yml() {
          -e "11i\ \ \ \ color1_lighter_70: \"$color1_lighter_70\"" \
          -e "11i\ \ \ \ color1_lighter_80: \"$color1_lighter_80\"" \
          -e "11i\ \ \ \ color1_lighter_90: \"$color1_lighter_90\"" \
+         -e "11i\ \ \ \ color1_darker_10: \"$color1_darker_10\"" \
          -e "11i\ \ \ \ color1_darker_20: \"$color1_darker_20\"" \
          -e "11i\ \ \ \ color1_darker_30: \"$color1_darker_30\"" \
          -e "11i\ \ \ \ color1_darker_40: \"$color1_darker_40\"" \
@@ -2131,6 +2406,7 @@ extend_yml() {
          -e "11i\ \ \ \ color1_darker_70: \"$color1_darker_70\"" \
          -e "11i\ \ \ \ color1_darker_80: \"$color1_darker_80\"" \
          -e "11i\ \ \ \ color1_darker_90: \"$color1_darker_90\"" \
+         -e "12i\ \ \ \ color2_lighter_10: \"$color2_lighter_10\"" \
          -e "12i\ \ \ \ color2_lighter_20: \"$color2_lighter_20\"" \
          -e "12i\ \ \ \ color2_lighter_30: \"$color2_lighter_30\"" \
          -e "12i\ \ \ \ color2_lighter_40: \"$color2_lighter_40\"" \
@@ -2139,6 +2415,7 @@ extend_yml() {
          -e "12i\ \ \ \ color2_lighter_70: \"$color2_lighter_70\"" \
          -e "12i\ \ \ \ color2_lighter_80: \"$color2_lighter_80\"" \
          -e "12i\ \ \ \ color2_lighter_90: \"$color2_lighter_90\"" \
+         -e "12i\ \ \ \ color2_darker_10: \"$color2_darker_10\"" \
          -e "12i\ \ \ \ color2_darker_20: \"$color2_darker_20\"" \
          -e "12i\ \ \ \ color2_darker_30: \"$color2_darker_30\"" \
          -e "12i\ \ \ \ color2_darker_40: \"$color2_darker_40\"" \
@@ -2147,6 +2424,7 @@ extend_yml() {
          -e "12i\ \ \ \ color2_darker_70: \"$color2_darker_70\"" \
          -e "12i\ \ \ \ color2_darker_80: \"$color2_darker_80\"" \
          -e "12i\ \ \ \ color2_darker_90: \"$color2_darker_90\"" \
+         -e "13i\ \ \ \ color3_lighter_10: \"$color3_lighter_10\"" \
          -e "13i\ \ \ \ color3_lighter_20: \"$color3_lighter_20\"" \
          -e "13i\ \ \ \ color3_lighter_30: \"$color3_lighter_30\"" \
          -e "13i\ \ \ \ color3_lighter_40: \"$color3_lighter_40\"" \
@@ -2155,6 +2433,7 @@ extend_yml() {
          -e "13i\ \ \ \ color3_lighter_70: \"$color3_lighter_70\"" \
          -e "13i\ \ \ \ color3_lighter_80: \"$color3_lighter_80\"" \
          -e "13i\ \ \ \ color3_lighter_90: \"$color3_lighter_90\"" \
+         -e "13i\ \ \ \ color3_darker_10: \"$color3_darker_10\"" \
          -e "13i\ \ \ \ color3_darker_20: \"$color3_darker_20\"" \
          -e "13i\ \ \ \ color3_darker_30: \"$color3_darker_30\"" \
          -e "13i\ \ \ \ color3_darker_40: \"$color3_darker_40\"" \
@@ -2163,6 +2442,7 @@ extend_yml() {
          -e "13i\ \ \ \ color3_darker_70: \"$color3_darker_70\"" \
          -e "13i\ \ \ \ color3_darker_80: \"$color3_darker_80\"" \
          -e "13i\ \ \ \ color3_darker_90: \"$color3_darker_90\"" \
+         -e "14i\ \ \ \ color4_lighter_10: \"$color4_lighter_10\"" \
          -e "14i\ \ \ \ color4_lighter_20: \"$color4_lighter_20\"" \
          -e "14i\ \ \ \ color4_lighter_30: \"$color4_lighter_30\"" \
          -e "14i\ \ \ \ color4_lighter_40: \"$color4_lighter_40\"" \
@@ -2171,6 +2451,7 @@ extend_yml() {
          -e "14i\ \ \ \ color4_lighter_70: \"$color4_lighter_70\"" \
          -e "14i\ \ \ \ color4_lighter_80: \"$color4_lighter_80\"" \
          -e "14i\ \ \ \ color4_lighter_90: \"$color4_lighter_90\"" \
+         -e "14i\ \ \ \ color4_darker_10: \"$color4_darker_10\"" \
          -e "14i\ \ \ \ color4_darker_20: \"$color4_darker_20\"" \
          -e "14i\ \ \ \ color4_darker_30: \"$color4_darker_30\"" \
          -e "14i\ \ \ \ color4_darker_40: \"$color4_darker_40\"" \
@@ -2180,6 +2461,7 @@ extend_yml() {
          -e "14i\ \ \ \ color4_darker_70: \"$color4_darker_70\"" \
          -e "14i\ \ \ \ color4_darker_80: \"$color4_darker_80\"" \
          -e "14i\ \ \ \ color4_darker_90: \"$color4_darker_90\"" \
+         -e "15i\ \ \ \ color5_lighter_10: \"$color5_lighter_10\"" \
          -e "15i\ \ \ \ color5_lighter_20: \"$color5_lighter_20\"" \
          -e "15i\ \ \ \ color5_lighter_30: \"$color5_lighter_30\"" \
          -e "15i\ \ \ \ color5_lighter_40: \"$color5_lighter_40\"" \
@@ -2188,6 +2470,7 @@ extend_yml() {
          -e "15i\ \ \ \ color5_lighter_70: \"$color5_lighter_70\"" \
          -e "15i\ \ \ \ color5_lighter_80: \"$color5_lighter_80\"" \
          -e "15i\ \ \ \ color5_lighter_90: \"$color5_lighter_90\"" \
+         -e "15i\ \ \ \ color5_darker_10: \"$color5_darker_10\"" \
          -e "15i\ \ \ \ color5_darker_20: \"$color5_darker_20\"" \
          -e "15i\ \ \ \ color5_darker_30: \"$color5_darker_30\"" \
          -e "15i\ \ \ \ color5_darker_40: \"$color5_darker_40\"" \
@@ -2196,6 +2479,7 @@ extend_yml() {
          -e "15i\ \ \ \ color5_darker_70: \"$color5_darker_70\"" \
          -e "15i\ \ \ \ color5_darker_80: \"$color5_darker_80\"" \
          -e "15i\ \ \ \ color5_darker_90: \"$color5_darker_90\"" \
+         -e "16i\ \ \ \ color6_lighter_10: \"$color6_lighter_10\"" \
          -e "16i\ \ \ \ color6_lighter_20: \"$color6_lighter_20\"" \
          -e "16i\ \ \ \ color6_lighter_30: \"$color6_lighter_30\"" \
          -e "16i\ \ \ \ color6_lighter_40: \"$color6_lighter_40\"" \
@@ -2204,6 +2488,7 @@ extend_yml() {
          -e "16i\ \ \ \ color6_lighter_70: \"$color6_lighter_70\"" \
          -e "16i\ \ \ \ color6_lighter_80: \"$color6_lighter_80\"" \
          -e "16i\ \ \ \ color6_lighter_90: \"$color6_lighter_90\"" \
+         -e "16i\ \ \ \ color6_darker_10: \"$color6_darker_10\"" \
          -e "16i\ \ \ \ color6_darker_20: \"$color6_darker_20\"" \
          -e "16i\ \ \ \ color6_darker_30: \"$color6_darker_30\"" \
          -e "16i\ \ \ \ color6_darker_40: \"$color6_darker_40\"" \
@@ -2212,6 +2497,7 @@ extend_yml() {
          -e "16i\ \ \ \ color6_darker_70: \"$color6_darker_70\"" \
          -e "16i\ \ \ \ color6_darker_80: \"$color6_darker_80\"" \
          -e "16i\ \ \ \ color6_darker_90: \"$color6_darker_90\"" \
+         -e "17i\ \ \ \ color7_lighter_10: \"$color7_lighter_10\"" \
          -e "17i\ \ \ \ color7_lighter_20: \"$color7_lighter_20\"" \
          -e "17i\ \ \ \ color7_lighter_30: \"$color7_lighter_30\"" \
          -e "17i\ \ \ \ color7_lighter_40: \"$color7_lighter_40\"" \
@@ -2220,6 +2506,7 @@ extend_yml() {
          -e "17i\ \ \ \ color7_lighter_70: \"$color7_lighter_70\"" \
          -e "17i\ \ \ \ color7_lighter_80: \"$color7_lighter_80\"" \
          -e "17i\ \ \ \ color7_lighter_90: \"$color7_lighter_90\"" \
+         -e "17i\ \ \ \ color7_darker_10: \"$color7_darker_10\"" \
          -e "17i\ \ \ \ color7_darker_20: \"$color7_darker_20\"" \
          -e "17i\ \ \ \ color7_darker_30: \"$color7_darker_30\"" \
          -e "17i\ \ \ \ color7_darker_40: \"$color7_darker_40\"" \
@@ -2228,6 +2515,7 @@ extend_yml() {
          -e "17i\ \ \ \ color7_darker_70: \"$color7_darker_70\"" \
          -e "17i\ \ \ \ color7_darker_80: \"$color7_darker_80\"" \
          -e "17i\ \ \ \ color7_darker_90: \"$color7_darker_90\"" \
+         -e "18i\ \ \ \ color8_lighter_10: \"$color8_lighter_10\"" \
          -e "18i\ \ \ \ color8_lighter_20: \"$color8_lighter_20\"" \
          -e "18i\ \ \ \ color8_lighter_30: \"$color8_lighter_30\"" \
          -e "18i\ \ \ \ color8_lighter_40: \"$color8_lighter_40\"" \
@@ -2236,6 +2524,7 @@ extend_yml() {
          -e "18i\ \ \ \ color8_lighter_70: \"$color8_lighter_70\"" \
          -e "18i\ \ \ \ color8_lighter_80: \"$color8_lighter_80\"" \
          -e "18i\ \ \ \ color8_lighter_90: \"$color8_lighter_90\"" \
+         -e "18i\ \ \ \ color8_darker_10: \"$color8_darker_10\"" \
          -e "18i\ \ \ \ color8_darker_20: \"$color8_darker_20\"" \
          -e "18i\ \ \ \ color8_darker_30: \"$color8_darker_30\"" \
          -e "18i\ \ \ \ color8_darker_40: \"$color8_darker_40\"" \
@@ -2244,6 +2533,7 @@ extend_yml() {
          -e "18i\ \ \ \ color8_darker_70: \"$color8_darker_70\"" \
          -e "18i\ \ \ \ color8_darker_80: \"$color8_darker_80\"" \
          -e "18i\ \ \ \ color8_darker_90: \"$color8_darker_90\"" \
+         -e "19i\ \ \ \ color9_lighter_10: \"$color9_lighter_10\"" \
          -e "19i\ \ \ \ color9_lighter_20: \"$color9_lighter_20\"" \
          -e "19i\ \ \ \ color9_lighter_30: \"$color9_lighter_30\"" \
          -e "19i\ \ \ \ color9_lighter_40: \"$color9_lighter_40\"" \
@@ -2252,6 +2542,7 @@ extend_yml() {
          -e "19i\ \ \ \ color9_lighter_70: \"$color9_lighter_70\"" \
          -e "19i\ \ \ \ color9_lighter_80: \"$color9_lighter_80\"" \
          -e "19i\ \ \ \ color9_lighter_90: \"$color9_lighter_90\"" \
+         -e "19i\ \ \ \ color9_darker_10: \"$color9_darker_10\"" \
          -e "19i\ \ \ \ color9_darker_20: \"$color9_darker_20\"" \
          -e "19i\ \ \ \ color9_darker_30: \"$color9_darker_30\"" \
          -e "19i\ \ \ \ color9_darker_40: \"$color9_darker_40\"" \
@@ -2260,6 +2551,7 @@ extend_yml() {
          -e "19i\ \ \ \ color9_darker_70: \"$color9_darker_70\"" \
          -e "19i\ \ \ \ color9_darker_80: \"$color9_darker_80\"" \
          -e "19i\ \ \ \ color9_darker_90: \"$color9_darker_90\"" \
+         -e "20i\ \ \ \ color10_lighter_10: \"$color10_lighter_10\"" \
          -e "20i\ \ \ \ color10_lighter_20: \"$color10_lighter_20\"" \
          -e "20i\ \ \ \ color10_lighter_30: \"$color10_lighter_30\"" \
          -e "20i\ \ \ \ color10_lighter_40: \"$color10_lighter_40\"" \
@@ -2268,6 +2560,7 @@ extend_yml() {
          -e "20i\ \ \ \ color10_lighter_70: \"$color10_lighter_70\"" \
          -e "20i\ \ \ \ color10_lighter_80: \"$color10_lighter_80\"" \
          -e "20i\ \ \ \ color10_lighter_90: \"$color10_lighter_90\"" \
+         -e "20i\ \ \ \ color10_darker_10: \"$color10_darker_10\"" \
          -e "20i\ \ \ \ color10_darker_20: \"$color10_darker_20\"" \
          -e "20i\ \ \ \ color10_darker_30: \"$color10_darker_30\"" \
          -e "20i\ \ \ \ color10_darker_40: \"$color10_darker_40\"" \
@@ -2276,6 +2569,7 @@ extend_yml() {
          -e "20i\ \ \ \ color10_darker_70: \"$color10_darker_70\"" \
          -e "20i\ \ \ \ color10_darker_80: \"$color10_darker_80\"" \
          -e "20i\ \ \ \ color10_darker_90: \"$color10_darker_90\"" \
+         -e "21i\ \ \ \ color11_lighter_10: \"$color11_lighter_10\"" \
          -e "21i\ \ \ \ color11_lighter_20: \"$color11_lighter_20\"" \
          -e "21i\ \ \ \ color11_lighter_30: \"$color11_lighter_30\"" \
          -e "21i\ \ \ \ color11_lighter_40: \"$color11_lighter_40\"" \
@@ -2284,6 +2578,7 @@ extend_yml() {
          -e "21i\ \ \ \ color11_lighter_70: \"$color11_lighter_70\"" \
          -e "21i\ \ \ \ color11_lighter_80: \"$color11_lighter_80\"" \
          -e "21i\ \ \ \ color11_lighter_90: \"$color11_lighter_90\"" \
+         -e "21i\ \ \ \ color11_darker_10: \"$color11_darker_10\"" \
          -e "21i\ \ \ \ color11_darker_20: \"$color11_darker_20\"" \
          -e "21i\ \ \ \ color11_darker_30: \"$color11_darker_30\"" \
          -e "21i\ \ \ \ color11_darker_40: \"$color11_darker_40\"" \
@@ -2292,6 +2587,7 @@ extend_yml() {
          -e "21i\ \ \ \ color11_darker_70: \"$color11_darker_70\"" \
          -e "21i\ \ \ \ color11_darker_80: \"$color11_darker_80\"" \
          -e "21i\ \ \ \ color11_darker_90: \"$color11_darker_90\"" \
+         -e "22i\ \ \ \ color12_lighter_10: \"$color12_lighter_10\"" \
          -e "22i\ \ \ \ color12_lighter_20: \"$color12_lighter_20\"" \
          -e "22i\ \ \ \ color12_lighter_30: \"$color12_lighter_30\"" \
          -e "22i\ \ \ \ color12_lighter_40: \"$color12_lighter_40\"" \
@@ -2300,6 +2596,7 @@ extend_yml() {
          -e "22i\ \ \ \ color12_lighter_70: \"$color12_lighter_70\"" \
          -e "22i\ \ \ \ color12_lighter_80: \"$color12_lighter_80\"" \
          -e "22i\ \ \ \ color12_lighter_90: \"$color12_lighter_90\"" \
+         -e "22i\ \ \ \ color12_darker_10: \"$color12_darker_l0\"" \
          -e "22i\ \ \ \ color12_darker_20: \"$color12_darker_20\"" \
          -e "22i\ \ \ \ color12_darker_30: \"$color12_darker_30\"" \
          -e "22i\ \ \ \ color12_darker_40: \"$color12_darker_40\"" \
@@ -2308,6 +2605,7 @@ extend_yml() {
          -e "22i\ \ \ \ color12_darker_70: \"$color12_darker_70\"" \
          -e "22i\ \ \ \ color12_darker_80: \"$color12_darker_80\"" \
          -e "22i\ \ \ \ color12_darker_90: \"$color12_darker_90\"" \
+         -e "23i\ \ \ \ color13_lighter_10: \"$color13_lighter_10\"" \
          -e "23i\ \ \ \ color13_lighter_20: \"$color13_lighter_20\"" \
          -e "23i\ \ \ \ color13_lighter_30: \"$color13_lighter_30\"" \
          -e "23i\ \ \ \ color13_lighter_40: \"$color13_lighter_40\"" \
@@ -2316,6 +2614,7 @@ extend_yml() {
          -e "23i\ \ \ \ color13_lighter_70: \"$color13_lighter_70\"" \
          -e "23i\ \ \ \ color13_lighter_80: \"$color13_lighter_80\"" \
          -e "23i\ \ \ \ color13_lighter_90: \"$color13_lighter_90\"" \
+         -e "23i\ \ \ \ color13_darker_10: \"$color13_darker_10\"" \
          -e "23i\ \ \ \ color13_darker_20: \"$color13_darker_20\"" \
          -e "23i\ \ \ \ color13_darker_30: \"$color13_darker_30\"" \
          -e "23i\ \ \ \ color13_darker_40: \"$color13_darker_40\"" \
@@ -2324,6 +2623,7 @@ extend_yml() {
          -e "23i\ \ \ \ color13_darker_70: \"$color13_darker_70\"" \
          -e "23i\ \ \ \ color13_darker_80: \"$color13_darker_80\"" \
          -e "23i\ \ \ \ color13_darker_90: \"$color13_darker_90\"" \
+         -e "24i\ \ \ \ color14_lighter_10: \"$color14_lighter_10\"" \
          -e "24i\ \ \ \ color14_lighter_20: \"$color14_lighter_20\"" \
          -e "24i\ \ \ \ color14_lighter_30: \"$color14_lighter_30\"" \
          -e "24i\ \ \ \ color14_lighter_30: \"$color14_lighter_30\"" \
@@ -2333,6 +2633,7 @@ extend_yml() {
          -e "24i\ \ \ \ color14_lighter_70: \"$color14_lighter_70\"" \
          -e "24i\ \ \ \ color14_lighter_80: \"$color14_lighter_80\"" \
          -e "24i\ \ \ \ color14_lighter_90: \"$color14_lighter_90\"" \
+         -e "24i\ \ \ \ color14_darker_10: \"$color14_darker_10\"" \
          -e "24i\ \ \ \ color14_darker_20: \"$color14_darker_20\"" \
          -e "24i\ \ \ \ color14_darker_30: \"$color14_darker_30\"" \
          -e "24i\ \ \ \ color14_darker_40: \"$color14_darker_40\"" \
@@ -2341,6 +2642,7 @@ extend_yml() {
          -e "24i\ \ \ \ color14_darker_70: \"$color14_darker_70\"" \
          -e "24i\ \ \ \ color14_darker_80: \"$color14_darker_80\"" \
          -e "24i\ \ \ \ color14_darker_90: \"$color14_darker_90\"" \
+         -e "$ a\ \ \ \ color15_lighter_10: \"$color15_lighter_10\"" \
          -e "$ a\ \ \ \ color15_lighter_20: \"$color15_lighter_20\"" \
          -e "$ a\ \ \ \ color15_lighter_30: \"$color15_lighter_30\"" \
          -e "$ a\ \ \ \ color15_lighter_40: \"$color15_lighter_40\"" \
@@ -2349,6 +2651,7 @@ extend_yml() {
          -e "$ a\ \ \ \ color15_lighter_70: \"$color15_lighter_70\"" \
          -e "$ a\ \ \ \ color15_lighter_80: \"$color15_lighter_80\"" \
          -e "$ a\ \ \ \ color15_lighter_90: \"$color15_lighter_90\"" \
+         -e "$ a\ \ \ \ color15_darker_10: \"$color15_darker_10\"" \
          -e "$ a\ \ \ \ color15_darker_20: \"$color15_darker_20\"" \
          -e "$ a\ \ \ \ color15_darker_30: \"$color15_darker_30\"" \
          -e "$ a\ \ \ \ color15_darker_40: \"$color15_darker_40\"" \
@@ -2362,7 +2665,8 @@ extend_yml() {
 
 # Extends ~/.cache/wal/colors-wal.vim.
 extend_vim() {
-  sed -i -e "9ilet color0_lighter_20  = \"$color0_lighter_20\"" \
+  sed -i -e "9ilet color0_lighter_10  = \"$color0_lighter_10\"" \
+         -e "9ilet color0_lighter_20  = \"$color0_lighter_20\"" \
          -e "9ilet color0_lighter_30  = \"$color0_lighter_30\"" \
          -e "9ilet color0_lighter_40  = \"$color0_lighter_40\"" \
          -e "9ilet color0_lighter_50  = \"$color0_lighter_50\"" \
@@ -2370,6 +2674,7 @@ extend_vim() {
          -e "9ilet color0_lighter_70  = \"$color0_lighter_70\"" \
          -e "9ilet color0_lighter_80  = \"$color0_lighter_80\"" \
          -e "9ilet color0_lighter_90  = \"$color0_lighter_90\"" \
+         -e "9ilet color0_darker_10   = \"$color0_darker_10\"" \
          -e "9ilet color0_darker_20   = \"$color0_darker_20\"" \
          -e "9ilet color0_darker_30   = \"$color0_darker_30\"" \
          -e "9ilet color0_darker_40   = \"$color0_darker_40\"" \
@@ -2378,6 +2683,7 @@ extend_vim() {
          -e "9ilet color0_darker_70   = \"$color0_darker_70\"" \
          -e "9ilet color0_darker_80   = \"$color0_darker_80\"" \
          -e "9ilet color0_darker_90   = \"$color0_darker_90\"" \
+         -e "10ilet color1_lighter_10  = \"$color1_lighter_10\"" \
          -e "10ilet color1_lighter_20  = \"$color1_lighter_20\"" \
          -e "10ilet color1_lighter_30  = \"$color1_lighter_30\"" \
          -e "10ilet color1_lighter_40  = \"$color1_lighter_40\"" \
@@ -2386,6 +2692,7 @@ extend_vim() {
          -e "10ilet color1_lighter_70  = \"$color1_lighter_70\"" \
          -e "10ilet color1_lighter_80  = \"$color1_lighter_80\"" \
          -e "10ilet color1_lighter_90  = \"$color1_lighter_90\"" \
+         -e "10ilet color1_darker_10   = \"$color1_darker_10\"" \
          -e "10ilet color1_darker_20   = \"$color1_darker_20\"" \
          -e "10ilet color1_darker_30   = \"$color1_darker_30\"" \
          -e "10ilet color1_darker_40   = \"$color1_darker_40\"" \
@@ -2394,6 +2701,7 @@ extend_vim() {
          -e "10ilet color1_darker_70   = \"$color1_darker_70\"" \
          -e "10ilet color1_darker_80   = \"$color1_darker_80\"" \
          -e "10ilet color1_darker_90   = \"$color1_darker_90\"" \
+         -e "11ilet color2_lighter_10  = \"$color2_lighter_10\"" \
          -e "11ilet color2_lighter_20  = \"$color2_lighter_20\"" \
          -e "11ilet color2_lighter_30  = \"$color2_lighter_30\"" \
          -e "11ilet color2_lighter_40  = \"$color2_lighter_40\"" \
@@ -2402,6 +2710,7 @@ extend_vim() {
          -e "11ilet color2_lighter_70  = \"$color2_lighter_70\"" \
          -e "11ilet color2_lighter_80  = \"$color2_lighter_80\"" \
          -e "11ilet color2_lighter_90  = \"$color2_lighter_90\"" \
+         -e "11ilet color2_darker_10   = \"$color2_darker_10\"" \
          -e "11ilet color2_darker_20   = \"$color2_darker_20\"" \
          -e "11ilet color2_darker_30   = \"$color2_darker_30\"" \
          -e "11ilet color2_darker_40   = \"$color2_darker_40\"" \
@@ -2410,6 +2719,7 @@ extend_vim() {
          -e "11ilet color2_darker_70   = \"$color2_darker_70\"" \
          -e "11ilet color2_darker_80   = \"$color2_darker_80\"" \
          -e "11ilet color2_darker_90   = \"$color2_darker_90\"" \
+         -e "12ilet color3_lighter_10  = \"$color3_lighter_10\"" \
          -e "12ilet color3_lighter_20  = \"$color3_lighter_20\"" \
          -e "12ilet color3_lighter_30  = \"$color3_lighter_30\"" \
          -e "12ilet color3_lighter_40  = \"$color3_lighter_40\"" \
@@ -2418,6 +2728,7 @@ extend_vim() {
          -e "12ilet color3_lighter_70  = \"$color3_lighter_70\"" \
          -e "12ilet color3_lighter_80  = \"$color3_lighter_80\"" \
          -e "12ilet color3_lighter_90  = \"$color3_lighter_90\"" \
+         -e "12ilet color3_darker_10   = \"$color3_darker_10\"" \
          -e "12ilet color3_darker_20   = \"$color3_darker_20\"" \
          -e "12ilet color3_darker_30   = \"$color3_darker_30\"" \
          -e "12ilet color3_darker_40   = \"$color3_darker_40\"" \
@@ -2426,6 +2737,7 @@ extend_vim() {
          -e "12ilet color3_darker_70   = \"$color3_darker_70\"" \
          -e "12ilet color3_darker_80   = \"$color3_darker_80\"" \
          -e "12ilet color3_darker_90   = \"$color3_darker_90\"" \
+         -e "13ilet color4_lighter_10  = \"$color4_lighter_10\"" \
          -e "13ilet color4_lighter_20  = \"$color4_lighter_20\"" \
          -e "13ilet color4_lighter_30  = \"$color4_lighter_30\"" \
          -e "13ilet color4_lighter_40  = \"$color4_lighter_40\"" \
@@ -2434,6 +2746,7 @@ extend_vim() {
          -e "13ilet color4_lighter_70  = \"$color4_lighter_70\"" \
          -e "13ilet color4_lighter_80  = \"$color4_lighter_80\"" \
          -e "13ilet color4_lighter_90  = \"$color4_lighter_90\"" \
+         -e "13ilet color4_darker_10   = \"$color4_darker_10\"" \
          -e "13ilet color4_darker_20   = \"$color4_darker_20\"" \
          -e "13ilet color4_darker_30   = \"$color4_darker_30\"" \
          -e "13ilet color4_darker_40   = \"$color4_darker_40\"" \
@@ -2443,6 +2756,7 @@ extend_vim() {
          -e "13ilet color4_darker_70   = \"$color4_darker_70\"" \
          -e "13ilet color4_darker_80   = \"$color4_darker_80\"" \
          -e "13ilet color4_darker_90   = \"$color4_darker_90\"" \
+         -e "14ilet color5_lighter_10  = \"$color5_lighter_10\"" \
          -e "14ilet color5_lighter_20  = \"$color5_lighter_20\"" \
          -e "14ilet color5_lighter_30  = \"$color5_lighter_30\"" \
          -e "14ilet color5_lighter_40  = \"$color5_lighter_40\"" \
@@ -2451,6 +2765,7 @@ extend_vim() {
          -e "14ilet color5_lighter_70  = \"$color5_lighter_70\"" \
          -e "14ilet color5_lighter_80  = \"$color5_lighter_80\"" \
          -e "14ilet color5_lighter_90  = \"$color5_lighter_90\"" \
+         -e "14ilet color5_darker_10   = \"$color5_darker_10\"" \
          -e "14ilet color5_darker_20   = \"$color5_darker_20\"" \
          -e "14ilet color5_darker_30   = \"$color5_darker_30\"" \
          -e "14ilet color5_darker_40   = \"$color5_darker_40\"" \
@@ -2459,6 +2774,7 @@ extend_vim() {
          -e "14ilet color5_darker_70   = \"$color5_darker_70\"" \
          -e "14ilet color5_darker_80   = \"$color5_darker_80\"" \
          -e "14ilet color5_darker_90   = \"$color5_darker_90\"" \
+         -e "15ilet color6_lighter_10  = \"$color6_lighter_10\"" \
          -e "15ilet color6_lighter_20  = \"$color6_lighter_20\"" \
          -e "15ilet color6_lighter_30  = \"$color6_lighter_30\"" \
          -e "15ilet color6_lighter_40  = \"$color6_lighter_40\"" \
@@ -2467,6 +2783,7 @@ extend_vim() {
          -e "15ilet color6_lighter_70  = \"$color6_lighter_70\"" \
          -e "15ilet color6_lighter_80  = \"$color6_lighter_80\"" \
          -e "15ilet color6_lighter_90  = \"$color6_lighter_90\"" \
+         -e "15ilet color6_darker_10   = \"$color6_darker_10\"" \
          -e "15ilet color6_darker_20   = \"$color6_darker_20\"" \
          -e "15ilet color6_darker_30   = \"$color6_darker_30\"" \
          -e "15ilet color6_darker_40   = \"$color6_darker_40\"" \
@@ -2475,6 +2792,7 @@ extend_vim() {
          -e "15ilet color6_darker_70   = \"$color6_darker_70\"" \
          -e "15ilet color6_darker_80   = \"$color6_darker_80\"" \
          -e "15ilet color6_darker_90   = \"$color6_darker_90\"" \
+         -e "16ilet color7_lighter_10  = \"$color7_lighter_10\"" \
          -e "16ilet color7_lighter_20  = \"$color7_lighter_20\"" \
          -e "16ilet color7_lighter_30  = \"$color7_lighter_30\"" \
          -e "16ilet color7_lighter_40  = \"$color7_lighter_40\"" \
@@ -2483,6 +2801,7 @@ extend_vim() {
          -e "16ilet color7_lighter_70  = \"$color7_lighter_70\"" \
          -e "16ilet color7_lighter_80  = \"$color7_lighter_80\"" \
          -e "16ilet color7_lighter_90  = \"$color7_lighter_90\"" \
+         -e "16ilet color7_darker_10   = \"$color7_darker_10\"" \
          -e "16ilet color7_darker_20   = \"$color7_darker_20\"" \
          -e "16ilet color7_darker_30   = \"$color7_darker_30\"" \
          -e "16ilet color7_darker_40   = \"$color7_darker_40\"" \
@@ -2491,6 +2810,7 @@ extend_vim() {
          -e "16ilet color7_darker_70   = \"$color7_darker_70\"" \
          -e "16ilet color7_darker_80   = \"$color7_darker_80\"" \
          -e "16ilet color7_darker_90   = \"$color7_darker_90\"" \
+         -e "17ilet color8_lighter_10  = \"$color8_lighter_10\"" \
          -e "17ilet color8_lighter_20  = \"$color8_lighter_20\"" \
          -e "17ilet color8_lighter_30  = \"$color8_lighter_30\"" \
          -e "17ilet color8_lighter_40  = \"$color8_lighter_40\"" \
@@ -2499,6 +2819,7 @@ extend_vim() {
          -e "17ilet color8_lighter_70  = \"$color8_lighter_70\"" \
          -e "17ilet color8_lighter_80  = \"$color8_lighter_80\"" \
          -e "17ilet color8_lighter_90  = \"$color8_lighter_90\"" \
+         -e "17ilet color8_darker_10   = \"$color8_darker_10\"" \
          -e "17ilet color8_darker_20   = \"$color8_darker_20\"" \
          -e "17ilet color8_darker_30   = \"$color8_darker_30\"" \
          -e "17ilet color8_darker_40   = \"$color8_darker_40\"" \
@@ -2507,6 +2828,7 @@ extend_vim() {
          -e "17ilet color8_darker_70   = \"$color8_darker_70\"" \
          -e "17ilet color8_darker_80   = \"$color8_darker_80\"" \
          -e "17ilet color8_darker_90   = \"$color8_darker_90\"" \
+         -e "18ilet color9_lighter_10  = \"$color9_lighter_10\"" \
          -e "18ilet color9_lighter_20  = \"$color9_lighter_20\"" \
          -e "18ilet color9_lighter_30  = \"$color9_lighter_30\"" \
          -e "18ilet color9_lighter_40  = \"$color9_lighter_40\"" \
@@ -2516,6 +2838,7 @@ extend_vim() {
          -e "18ilet color9_lighter_70  = \"$color9_lighter_70\"" \
          -e "18ilet color9_lighter_80  = \"$color9_lighter_80\"" \
          -e "18ilet color9_lighter_90  = \"$color9_lighter_90\"" \
+         -e "18ilet color9_darker_10   = \"$color9_darker_10\"" \
          -e "18ilet color9_darker_20   = \"$color9_darker_20\"" \
          -e "18ilet color9_darker_30   = \"$color9_darker_30\"" \
          -e "18ilet color9_darker_40   = \"$color9_darker_40\"" \
@@ -2524,6 +2847,7 @@ extend_vim() {
          -e "18ilet color9_darker_70   = \"$color9_darker_70\"" \
          -e "18ilet color9_darker_80   = \"$color9_darker_80\"" \
          -e "18ilet color9_darker_90   = \"$color9_darker_90\"" \
+         -e "19ilet color10_lighter_10 = \"$color10_lighter_10\"" \
          -e "19ilet color10_lighter_20 = \"$color10_lighter_20\"" \
          -e "19ilet color10_lighter_30 = \"$color10_lighter_30\"" \
          -e "19ilet color10_lighter_40 = \"$color10_lighter_40\"" \
@@ -2532,6 +2856,7 @@ extend_vim() {
          -e "19ilet color10_lighter_70 = \"$color10_lighter_70\"" \
          -e "19ilet color10_lighter_80 = \"$color10_lighter_80\"" \
          -e "19ilet color10_lighter_90 = \"$color10_lighter_90\"" \
+         -e "19ilet color10_darker_10  = \"$color10_darker_10\"" \
          -e "19ilet color10_darker_20  = \"$color10_darker_20\"" \
          -e "19ilet color10_darker_30  = \"$color10_darker_30\"" \
          -e "19ilet color10_darker_40  = \"$color10_darker_40\"" \
@@ -2540,6 +2865,7 @@ extend_vim() {
          -e "19ilet color10_darker_70  = \"$color10_darker_70\"" \
          -e "19ilet color10_darker_80  = \"$color10_darker_80\"" \
          -e "19ilet color10_darker_90  = \"$color10_darker_90\"" \
+         -e "20ilet color11_lighter_10 = \"$color11_lighter_10\"" \
          -e "20ilet color11_lighter_20 = \"$color11_lighter_20\"" \
          -e "20ilet color11_lighter_30 = \"$color11_lighter_30\"" \
          -e "20ilet color11_lighter_40 = \"$color11_lighter_40\"" \
@@ -2548,6 +2874,7 @@ extend_vim() {
          -e "20ilet color11_lighter_70 = \"$color11_lighter_70\"" \
          -e "20ilet color11_lighter_80 = \"$color11_lighter_80\"" \
          -e "20ilet color11_lighter_90 = \"$color11_lighter_90\"" \
+         -e "20ilet color11_darker_10  = \"$color11_darker_10\"" \
          -e "20ilet color11_darker_20  = \"$color11_darker_20\"" \
          -e "20ilet color11_darker_30  = \"$color11_darker_30\"" \
          -e "20ilet color11_darker_40  = \"$color11_darker_40\"" \
@@ -2556,6 +2883,7 @@ extend_vim() {
          -e "20ilet color11_darker_70  = \"$color11_darker_70\"" \
          -e "20ilet color11_darker_80  = \"$color11_darker_80\"" \
          -e "20ilet color11_darker_90  = \"$color11_darker_90\"" \
+         -e "21ilet color12_lighter_10 = \"$color12_lighter_10\"" \
          -e "21ilet color12_lighter_20 = \"$color12_lighter_20\"" \
          -e "21ilet color12_lighter_30 = \"$color12_lighter_30\"" \
          -e "21ilet color12_lighter_40 = \"$color12_lighter_40\"" \
@@ -2564,6 +2892,7 @@ extend_vim() {
          -e "21ilet color12_lighter_70 = \"$color12_lighter_70\"" \
          -e "21ilet color12_lighter_80 = \"$color12_lighter_80\"" \
          -e "21ilet color12_lighter_90 = \"$color12_lighter_90\"" \
+         -e "21ilet color12_darker_10  = \"$color12_darker_10\"" \
          -e "21ilet color12_darker_20  = \"$color12_darker_20\"" \
          -e "21ilet color12_darker_30  = \"$color12_darker_30\"" \
          -e "21ilet color12_darker_40  = \"$color12_darker_40\"" \
@@ -2572,6 +2901,7 @@ extend_vim() {
          -e "21ilet color12_darker_70  = \"$color12_darker_70\"" \
          -e "21ilet color12_darker_80  = \"$color12_darker_80\"" \
          -e "21ilet color12_darker_90  = \"$color12_darker_90\"" \
+         -e "22ilet color13_lighter_10 = \"$color13_lighter_10\"" \
          -e "22ilet color13_lighter_20 = \"$color13_lighter_20\"" \
          -e "22ilet color13_lighter_30 = \"$color13_lighter_30\"" \
          -e "22ilet color13_lighter_40 = \"$color13_lighter_40\"" \
@@ -2580,6 +2910,7 @@ extend_vim() {
          -e "22ilet color13_lighter_70 = \"$color13_lighter_70\"" \
          -e "22ilet color13_lighter_80 = \"$color13_lighter_80\"" \
          -e "22ilet color13_lighter_90 = \"$color13_lighter_90\"" \
+         -e "22ilet color13_darker_10  = \"$color13_darker_10\"" \
          -e "22ilet color13_darker_20  = \"$color13_darker_20\"" \
          -e "22ilet color13_darker_30  = \"$color13_darker_30\"" \
          -e "22ilet color13_darker_40  = \"$color13_darker_40\"" \
@@ -2588,6 +2919,7 @@ extend_vim() {
          -e "22ilet color13_darker_70  = \"$color13_darker_70\"" \
          -e "22ilet color13_darker_80  = \"$color13_darker_80\"" \
          -e "22ilet color13_darker_90  = \"$color13_darker_90\"" \
+         -e "23ilet color14_lighter_10 = \"$color14_lighter_10\"" \
          -e "23ilet color14_lighter_20 = \"$color14_lighter_20\"" \
          -e "23ilet color14_lighter_30 = \"$color14_lighter_30\"" \
          -e "23ilet color14_lighter_30 = \"$color14_lighter_30\"" \
@@ -2597,6 +2929,7 @@ extend_vim() {
          -e "23ilet color14_lighter_70 = \"$color14_lighter_70\"" \
          -e "23ilet color14_lighter_80 = \"$color14_lighter_80\"" \
          -e "23ilet color14_lighter_90 = \"$color14_lighter_90\"" \
+         -e "23ilet color14_darker_10  = \"$color14_darker_10\"" \
          -e "23ilet color14_darker_20  = \"$color14_darker_20\"" \
          -e "23ilet color14_darker_30  = \"$color14_darker_30\"" \
          -e "23ilet color14_darker_40  = \"$color14_darker_40\"" \
@@ -2605,6 +2938,7 @@ extend_vim() {
          -e "23ilet color14_darker_70  = \"$color14_darker_70\"" \
          -e "23ilet color14_darker_80  = \"$color14_darker_80\"" \
          -e "23ilet color14_darker_90  = \"$color14_darker_90\"" \
+         -e "$ alet color15_lighter_10 = \"$color15_lighter_10\"" \
          -e "$ alet color15_lighter_20 = \"$color15_lighter_20\"" \
          -e "$ alet color15_lighter_30 = \"$color15_lighter_30\"" \
          -e "$ alet color15_lighter_40 = \"$color15_lighter_40\"" \
@@ -2613,6 +2947,7 @@ extend_vim() {
          -e "$ alet color15_lighter_70 = \"$color15_lighter_70\"" \
          -e "$ alet color15_lighter_80 = \"$color15_lighter_80\"" \
          -e "$ alet color15_lighter_90 = \"$color15_lighter_90\"" \
+         -e "$ alet color15_darker_10  = \"$color15_darker_10\"" \
          -e "$ alet color15_darker_20  = \"$color15_darker_20\"" \
          -e "$ alet color15_darker_30  = \"$color15_darker_30\"" \
          -e "$ alet color15_darker_40  = \"$color15_darker_40\"" \
@@ -2626,7 +2961,8 @@ extend_vim() {
 
 # Extends ~/.cache/wal/colors-putty.reg
 extend_putty() {
-  sed -i -e "5i\"colour0_lighter_20\"=\"$color0_lighter_20_rgb\"" \
+  sed -i -e "5i\"colour0_lighter_10\"=\"$color0_lighter_10_rgb\"" \
+         -e "5i\"colour0_lighter_20\"=\"$color0_lighter_20_rgb\"" \
          -e "5i\"colour0_lighter_30\"=\"$color0_lighter_30_rgb\"" \
          -e "5i\"colour0_lighter_40\"=\"$color0_lighter_40_rgb\"" \
          -e "5i\"colour0_lighter_50\"=\"$color0_lighter_50_rgb\"" \
@@ -2634,6 +2970,7 @@ extend_putty() {
          -e "5i\"colour0_lighter_70\"=\"$color0_lighter_70_rgb\"" \
          -e "5i\"colour0_lighter_80\"=\"$color0_lighter_80_rgb\"" \
          -e "5i\"colour0_lighter_90\"=\"$color0_lighter_90_rgb\"" \
+         -e "5i\"colour0_darker_10\"=\"$color0_lighter_10_rgb\"" \
          -e "5i\"colour0_darker_20\"=\"$color0_lighter_20_rgb\"" \
          -e "5i\"colour0_darker_30\"=\"$color0_lighter_30_rgb\"" \
          -e "5i\"colour0_darker_40\"=\"$color0_lighter_40_rgb\"" \
@@ -2642,6 +2979,7 @@ extend_putty() {
          -e "5i\"colour0_darker_70\"=\"$color0_lighter_70_rgb\"" \
          -e "5i\"colour0_darker_80\"=\"$color0_lighter_80_rgb\"" \
          -e "5i\"colour0_darker_90\"=\"$color0_lighter_90_rgb\"" \
+         -e "6i\"colour1_lighter_10\"=\"$color1_lighter_10_rgb\"" \
          -e "6i\"colour1_lighter_20\"=\"$color1_lighter_20_rgb\"" \
          -e "6i\"colour1_lighter_30\"=\"$color1_lighter_30_rgb\"" \
          -e "6i\"colour1_lighter_40\"=\"$color1_lighter_40_rgb\"" \
@@ -2650,6 +2988,7 @@ extend_putty() {
          -e "6i\"colour1_lighter_70\"=\"$color1_lighter_70_rgb\"" \
          -e "6i\"colour1_lighter_80\"=\"$color1_lighter_80_rgb\"" \
          -e "6i\"colour1_lighter_90\"=\"$color1_lighter_90_rgb\"" \
+         -e "6i\"colour1_darker_10\"=\"$color1_lighter_10_rgb\"" \
          -e "6i\"colour1_darker_20\"=\"$color1_lighter_20_rgb\"" \
          -e "6i\"colour1_darker_30\"=\"$color1_lighter_30_rgb\"" \
          -e "6i\"colour1_darker_40\"=\"$color1_lighter_40_rgb\"" \
@@ -2658,6 +2997,7 @@ extend_putty() {
          -e "6i\"colour1_darker_70\"=\"$color1_lighter_70_rgb\"" \
          -e "6i\"colour1_darker_80\"=\"$color1_lighter_80_rgb\"" \
          -e "6i\"colour1_darker_90\"=\"$color1_lighter_90_rgb\"" \
+         -e "7i\"colour2_lighter_10\"=\"$color2_lighter_10_rgb\"" \
          -e "7i\"colour2_lighter_20\"=\"$color2_lighter_20_rgb\"" \
          -e "7i\"colour2_lighter_30\"=\"$color2_lighter_30_rgb\"" \
          -e "7i\"colour2_lighter_40\"=\"$color2_lighter_40_rgb\"" \
@@ -2666,6 +3006,7 @@ extend_putty() {
          -e "7i\"colour2_lighter_70\"=\"$color2_lighter_70_rgb\"" \
          -e "7i\"colour2_lighter_80\"=\"$color2_lighter_80_rgb\"" \
          -e "7i\"colour2_lighter_90\"=\"$color2_lighter_90_rgb\"" \
+         -e "7i\"colour2_darker_10\"=\"$color2_lighter_10_rgb\"" \
          -e "7i\"colour2_darker_20\"=\"$color2_lighter_20_rgb\"" \
          -e "7i\"colour2_darker_30\"=\"$color2_lighter_30_rgb\"" \
          -e "7i\"colour2_darker_40\"=\"$color2_lighter_40_rgb\"" \
@@ -2674,6 +3015,7 @@ extend_putty() {
          -e "7i\"colour2_darker_70\"=\"$color2_lighter_70_rgb\"" \
          -e "7i\"colour2_darker_80\"=\"$color2_lighter_80_rgb\"" \
          -e "7i\"colour2_darker_90\"=\"$color2_lighter_90_rgb\"" \
+         -e "8i\"colour3_lighter_10\"=\"$color3_lighter_10_rgb\"" \
          -e "8i\"colour3_lighter_20\"=\"$color3_lighter_20_rgb\"" \
          -e "8i\"colour3_lighter_30\"=\"$color3_lighter_30_rgb\"" \
          -e "8i\"colour3_lighter_40\"=\"$color3_lighter_40_rgb\"" \
@@ -2682,6 +3024,7 @@ extend_putty() {
          -e "8i\"colour3_lighter_70\"=\"$color3_lighter_70_rgb\"" \
          -e "8i\"colour3_lighter_80\"=\"$color3_lighter_80_rgb\"" \
          -e "8i\"colour3_lighter_90\"=\"$color3_lighter_90_rgb\"" \
+         -e "8i\"colour3_darker_10\"=\"$color3_lighter_10_rgb\"" \
          -e "8i\"colour3_darker_20\"=\"$color3_lighter_20_rgb\"" \
          -e "8i\"colour3_darker_30\"=\"$color3_lighter_30_rgb\"" \
          -e "8i\"colour3_darker_40\"=\"$color3_lighter_40_rgb\"" \
@@ -2690,6 +3033,7 @@ extend_putty() {
          -e "8i\"colour3_darker_70\"=\"$color3_lighter_70_rgb\"" \
          -e "8i\"colour3_darker_80\"=\"$color3_lighter_80_rgb\"" \
          -e "8i\"colour3_darker_90\"=\"$color3_lighter_90_rgb\"" \
+         -e "9i\"colour4_lighter_10\"=\"$color4_lighter_10_rgb\"" \
          -e "9i\"colour4_lighter_20\"=\"$color4_lighter_20_rgb\"" \
          -e "9i\"colour4_lighter_30\"=\"$color4_lighter_30_rgb\"" \
          -e "9i\"colour4_lighter_40\"=\"$color4_lighter_40_rgb\"" \
@@ -2698,6 +3042,7 @@ extend_putty() {
          -e "9i\"colour4_lighter_70\"=\"$color4_lighter_70_rgb\"" \
          -e "9i\"colour4_lighter_80\"=\"$color4_lighter_80_rgb\"" \
          -e "9i\"colour4_lighter_90\"=\"$color4_lighter_90_rgb\"" \
+         -e "9i\"colour4_darker_10\"=\"$color4_lighter_10_rgb\"" \
          -e "9i\"colour4_darker_20\"=\"$color4_lighter_20_rgb\"" \
          -e "9i\"colour4_darker_30\"=\"$color4_lighter_30_rgb\"" \
          -e "9i\"colour4_darker_40\"=\"$color4_lighter_40_rgb\"" \
@@ -2706,6 +3051,7 @@ extend_putty() {
          -e "9i\"colour4_darker_70\"=\"$color4_lighter_70_rgb\"" \
          -e "9i\"colour4_darker_80\"=\"$color4_lighter_80_rgb\"" \
          -e "9i\"colour4_darker_90\"=\"$color4_lighter_90_rgb\"" \
+         -e "10i\"colour5_lighter_10\"=\"$color5_lighter_10_rgb\"" \
          -e "10i\"colour5_lighter_20\"=\"$color5_lighter_20_rgb\"" \
          -e "10i\"colour5_lighter_30\"=\"$color5_lighter_30_rgb\"" \
          -e "10i\"colour5_lighter_40\"=\"$color5_lighter_40_rgb\"" \
@@ -2714,6 +3060,7 @@ extend_putty() {
          -e "10i\"colour5_lighter_70\"=\"$color5_lighter_70_rgb\"" \
          -e "10i\"colour5_lighter_80\"=\"$color5_lighter_80_rgb\"" \
          -e "10i\"colour5_lighter_90\"=\"$color5_lighter_90_rgb\"" \
+         -e "10i\"colour5_darker_10\"=\"$color5_lighter_10_rgb\"" \
          -e "10i\"colour5_darker_20\"=\"$color5_lighter_20_rgb\"" \
          -e "10i\"colour5_darker_30\"=\"$color5_lighter_30_rgb\"" \
          -e "10i\"colour5_darker_40\"=\"$color5_lighter_40_rgb\"" \
@@ -2722,6 +3069,7 @@ extend_putty() {
          -e "10i\"colour5_darker_70\"=\"$color5_lighter_70_rgb\"" \
          -e "10i\"colour5_darker_80\"=\"$color5_lighter_80_rgb\"" \
          -e "10i\"colour5_darker_90\"=\"$color5_lighter_90_rgb\"" \
+         -e "11i\"colour6_lighter_10\"=\"$color6_lighter_10_rgb\"" \
          -e "11i\"colour6_lighter_20\"=\"$color6_lighter_20_rgb\"" \
          -e "11i\"colour6_lighter_30\"=\"$color6_lighter_30_rgb\"" \
          -e "11i\"colour6_lighter_40\"=\"$color6_lighter_40_rgb\"" \
@@ -2730,6 +3078,7 @@ extend_putty() {
          -e "11i\"colour6_lighter_70\"=\"$color6_lighter_70_rgb\"" \
          -e "11i\"colour6_lighter_80\"=\"$color6_lighter_80_rgb\"" \
          -e "11i\"colour6_lighter_90\"=\"$color6_lighter_90_rgb\"" \
+         -e "11i\"colour6_darker_10\"=\"$color6_lighter_10_rgb\"" \
          -e "11i\"colour6_darker_20\"=\"$color6_lighter_20_rgb\"" \
          -e "11i\"colour6_darker_30\"=\"$color6_lighter_30_rgb\"" \
          -e "11i\"colour6_darker_40\"=\"$color6_lighter_40_rgb\"" \
@@ -2738,6 +3087,7 @@ extend_putty() {
          -e "11i\"colour6_darker_70\"=\"$color6_lighter_70_rgb\"" \
          -e "11i\"colour6_darker_80\"=\"$color6_lighter_80_rgb\"" \
          -e "11i\"colour6_darker_90\"=\"$color6_lighter_90_rgb\"" \
+         -e "12i\"colour7_lighter_10\"=\"$color7_lighter_10_rgb\"" \
          -e "12i\"colour7_lighter_20\"=\"$color7_lighter_20_rgb\"" \
          -e "12i\"colour7_lighter_30\"=\"$color7_lighter_30_rgb\"" \
          -e "12i\"colour7_lighter_40\"=\"$color7_lighter_40_rgb\"" \
@@ -2746,6 +3096,7 @@ extend_putty() {
          -e "12i\"colour7_lighter_70\"=\"$color7_lighter_70_rgb\"" \
          -e "12i\"colour7_lighter_80\"=\"$color7_lighter_80_rgb\"" \
          -e "12i\"colour7_lighter_90\"=\"$color7_lighter_90_rgb\"" \
+         -e "12i\"colour7_darker_10\"=\"$color7_lighter_10_rgb\"" \
          -e "12i\"colour7_darker_20\"=\"$color7_lighter_20_rgb\"" \
          -e "12i\"colour7_darker_30\"=\"$color7_lighter_30_rgb\"" \
          -e "12i\"colour7_darker_40\"=\"$color7_lighter_40_rgb\"" \
@@ -2754,6 +3105,7 @@ extend_putty() {
          -e "12i\"colour7_darker_70\"=\"$color7_lighter_70_rgb\"" \
          -e "12i\"colour7_darker_80\"=\"$color7_lighter_80_rgb\"" \
          -e "12i\"colour7_darker_90\"=\"$color7_lighter_90_rgb\"" \
+         -e "13i\"colour8_lighter_10\"=\"$color8_lighter_10_rgb\"" \
          -e "13i\"colour8_lighter_20\"=\"$color8_lighter_20_rgb\"" \
          -e "13i\"colour8_lighter_30\"=\"$color8_lighter_30_rgb\"" \
          -e "13i\"colour8_lighter_40\"=\"$color8_lighter_40_rgb\"" \
@@ -2762,6 +3114,7 @@ extend_putty() {
          -e "13i\"colour8_lighter_70\"=\"$color8_lighter_70_rgb\"" \
          -e "13i\"colour8_lighter_80\"=\"$color8_lighter_80_rgb\"" \
          -e "13i\"colour8_lighter_90\"=\"$color8_lighter_90_rgb\"" \
+         -e "13i\"colour8_darker_10\"=\"$color8_lighter_10_rgb\"" \
          -e "13i\"colour8_darker_20\"=\"$color8_lighter_20_rgb\"" \
          -e "13i\"colour8_darker_30\"=\"$color8_lighter_30_rgb\"" \
          -e "13i\"colour8_darker_40\"=\"$color8_lighter_40_rgb\"" \
@@ -2770,6 +3123,7 @@ extend_putty() {
          -e "13i\"colour8_darker_70\"=\"$color8_lighter_70_rgb\"" \
          -e "13i\"colour8_darker_80\"=\"$color8_lighter_80_rgb\"" \
          -e "13i\"colour8_darker_90\"=\"$color8_lighter_90_rgb\"" \
+         -e "14i\"colour9_lighter_10\"=\"$color9_lighter_10_rgb\"" \
          -e "14i\"colour9_lighter_20\"=\"$color9_lighter_20_rgb\"" \
          -e "14i\"colour9_lighter_30\"=\"$color9_lighter_30_rgb\"" \
          -e "14i\"colour9_lighter_40\"=\"$color9_lighter_40_rgb\"" \
@@ -2778,6 +3132,7 @@ extend_putty() {
          -e "14i\"colour9_lighter_70\"=\"$color9_lighter_70_rgb\"" \
          -e "14i\"colour9_lighter_80\"=\"$color9_lighter_80_rgb\"" \
          -e "14i\"colour9_lighter_90\"=\"$color9_lighter_90_rgb\"" \
+         -e "14i\"colour9_darker_10\"=\"$color9_lighter_10_rgb\"" \
          -e "14i\"colour9_darker_20\"=\"$color9_lighter_20_rgb\"" \
          -e "14i\"colour9_darker_30\"=\"$color9_lighter_30_rgb\"" \
          -e "14i\"colour9_darker_40\"=\"$color9_lighter_40_rgb\"" \
@@ -2786,6 +3141,7 @@ extend_putty() {
          -e "14i\"colour9_darker_70\"=\"$color9_lighter_70_rgb\"" \
          -e "14i\"colour9_darker_80\"=\"$color9_lighter_80_rgb\"" \
          -e "14i\"colour9_darker_90\"=\"$color9_lighter_90_rgb\"" \
+         -e "15i\"colour10_lighter_10\"=\"$color10_lighter_10_rgb\"" \
          -e "15i\"colour10_lighter_20\"=\"$color10_lighter_20_rgb\"" \
          -e "15i\"colour10_lighter_30\"=\"$color10_lighter_30_rgb\"" \
          -e "15i\"colour10_lighter_40\"=\"$color10_lighter_40_rgb\"" \
@@ -2794,6 +3150,7 @@ extend_putty() {
          -e "15i\"colour10_lighter_70\"=\"$color10_lighter_70_rgb\"" \
          -e "15i\"colour10_lighter_80\"=\"$color10_lighter_80_rgb\"" \
          -e "15i\"colour10_lighter_90\"=\"$color10_lighter_90_rgb\"" \
+         -e "15i\"colour10_darker_10\"=\"$color10_lighter_10_rgb\"" \
          -e "15i\"colour10_darker_20\"=\"$color10_lighter_20_rgb\"" \
          -e "15i\"colour10_darker_30\"=\"$color10_lighter_30_rgb\"" \
          -e "15i\"colour10_darker_40\"=\"$color10_lighter_40_rgb\"" \
@@ -2802,6 +3159,7 @@ extend_putty() {
          -e "15i\"colour10_darker_70\"=\"$color10_lighter_70_rgb\"" \
          -e "15i\"colour10_darker_80\"=\"$color10_lighter_80_rgb\"" \
          -e "15i\"colour10_darker_90\"=\"$color10_lighter_90_rgb\"" \
+         -e "16i\"colour11_lighter_10\"=\"$color11_lighter_10_rgb\"" \
          -e "16i\"colour11_lighter_20\"=\"$color11_lighter_20_rgb\"" \
          -e "16i\"colour11_lighter_30\"=\"$color11_lighter_30_rgb\"" \
          -e "16i\"colour11_lighter_40\"=\"$color11_lighter_40_rgb\"" \
@@ -2810,6 +3168,7 @@ extend_putty() {
          -e "16i\"colour11_lighter_70\"=\"$color11_lighter_70_rgb\"" \
          -e "16i\"colour11_lighter_80\"=\"$color11_lighter_80_rgb\"" \
          -e "16i\"colour11_lighter_90\"=\"$color11_lighter_90_rgb\"" \
+         -e "16i\"colour11_darker_10\"=\"$color11_lighter_10_rgb\"" \
          -e "16i\"colour11_darker_20\"=\"$color11_lighter_20_rgb\"" \
          -e "16i\"colour11_darker_30\"=\"$color11_lighter_30_rgb\"" \
          -e "16i\"colour11_darker_40\"=\"$color11_lighter_40_rgb\"" \
@@ -2818,6 +3177,7 @@ extend_putty() {
          -e "16i\"colour11_darker_70\"=\"$color11_lighter_70_rgb\"" \
          -e "16i\"colour11_darker_80\"=\"$color11_lighter_80_rgb\"" \
          -e "16i\"colour11_darker_90\"=\"$color11_lighter_90_rgb\"" \
+         -e "17i\"colour12_lighter_10\"=\"$color12_lighter_10_rgb\"" \
          -e "17i\"colour12_lighter_20\"=\"$color12_lighter_20_rgb\"" \
          -e "17i\"colour12_lighter_30\"=\"$color12_lighter_30_rgb\"" \
          -e "17i\"colour12_lighter_40\"=\"$color12_lighter_40_rgb\"" \
@@ -2826,6 +3186,7 @@ extend_putty() {
          -e "17i\"colour12_lighter_70\"=\"$color12_lighter_70_rgb\"" \
          -e "17i\"colour12_lighter_80\"=\"$color12_lighter_80_rgb\"" \
          -e "17i\"colour12_lighter_90\"=\"$color12_lighter_90_rgb\"" \
+         -e "17i\"colour12_darker_10\"=\"$color12_lighter_10_rgb\"" \
          -e "17i\"colour12_darker_20\"=\"$color12_lighter_20_rgb\"" \
          -e "17i\"colour12_darker_30\"=\"$color12_lighter_30_rgb\"" \
          -e "17i\"colour12_darker_40\"=\"$color12_lighter_40_rgb\"" \
@@ -2834,6 +3195,7 @@ extend_putty() {
          -e "17i\"colour12_darker_70\"=\"$color12_lighter_70_rgb\"" \
          -e "17i\"colour12_darker_80\"=\"$color12_lighter_80_rgb\"" \
          -e "17i\"colour12_darker_90\"=\"$color12_lighter_90_rgb\"" \
+         -e "18i\"colour13_lighter_10\"=\"$color13_lighter_10_rgb\"" \
          -e "18i\"colour13_lighter_20\"=\"$color13_lighter_20_rgb\"" \
          -e "18i\"colour13_lighter_30\"=\"$color13_lighter_30_rgb\"" \
          -e "18i\"colour13_lighter_40\"=\"$color13_lighter_40_rgb\"" \
@@ -2842,6 +3204,7 @@ extend_putty() {
          -e "18i\"colour13_lighter_70\"=\"$color13_lighter_70_rgb\"" \
          -e "18i\"colour13_lighter_80\"=\"$color13_lighter_80_rgb\"" \
          -e "18i\"colour13_lighter_90\"=\"$color13_lighter_90_rgb\"" \
+         -e "18i\"colour13_darker_10\"=\"$color13_lighter_10_rgb\"" \
          -e "18i\"colour13_darker_20\"=\"$color13_lighter_20_rgb\"" \
          -e "18i\"colour13_darker_30\"=\"$color13_lighter_30_rgb\"" \
          -e "18i\"colour13_darker_40\"=\"$color13_lighter_40_rgb\"" \
@@ -2850,6 +3213,7 @@ extend_putty() {
          -e "18i\"colour13_darker_70\"=\"$color13_lighter_70_rgb\"" \
          -e "18i\"colour13_darker_80\"=\"$color13_lighter_80_rgb\"" \
          -e "18i\"colour13_darker_90\"=\"$color13_lighter_90_rgb\"" \
+         -e "19i\"colour14_lighter_10\"=\"$color14_lighter_10_rgb\"" \
          -e "19i\"colour14_lighter_20\"=\"$color14_lighter_20_rgb\"" \
          -e "19i\"colour14_lighter_30\"=\"$color14_lighter_30_rgb\"" \
          -e "19i\"colour14_lighter_40\"=\"$color14_lighter_40_rgb\"" \
@@ -2858,6 +3222,7 @@ extend_putty() {
          -e "19i\"colour14_lighter_70\"=\"$color14_lighter_70_rgb\"" \
          -e "19i\"colour14_lighter_80\"=\"$color14_lighter_80_rgb\"" \
          -e "19i\"colour14_lighter_90\"=\"$color14_lighter_90_rgb\"" \
+         -e "19i\"colour14_darker_10\"=\"$color14_lighter_10_rgb\"" \
          -e "19i\"colour14_darker_20\"=\"$color14_lighter_20_rgb\"" \
          -e "19i\"colour14_darker_30\"=\"$color14_lighter_30_rgb\"" \
          -e "19i\"colour14_darker_40\"=\"$color14_lighter_40_rgb\"" \
@@ -2866,6 +3231,7 @@ extend_putty() {
          -e "19i\"colour14_darker_70\"=\"$color14_lighter_70_rgb\"" \
          -e "19i\"colour14_darker_80\"=\"$color14_lighter_80_rgb\"" \
          -e "19i\"colour14_darker_90\"=\"$color14_lighter_90_rgb\"" \
+         -e "$ a\"colour15_lighter_10\"=\"$color15_lighter_10_rgb\"" \
          -e "$ a\"colour15_lighter_20\"=\"$color15_lighter_20_rgb\"" \
          -e "$ a\"colour15_lighter_30\"=\"$color15_lighter_30_rgb\"" \
          -e "$ a\"colour15_lighter_40\"=\"$color15_lighter_40_rgb\"" \
@@ -2874,6 +3240,7 @@ extend_putty() {
          -e "$ a\"colour15_lighter_70\"=\"$color15_lighter_70_rgb\"" \
          -e "$ a\"colour15_lighter_80\"=\"$color15_lighter_80_rgb\"" \
          -e "$ a\"colour15_lighter_90\"=\"$color15_lighter_90_rgb\"" \
+         -e "$ a\"colour15_darker_10\"=\"$color15_lighter_10_rgb\"" \
          -e "$ a\"colour15_darker_20\"=\"$color15_lighter_20_rgb\"" \
          -e "$ a\"colour15_darker_30\"=\"$color15_lighter_30_rgb\"" \
          -e "$ a\"colour15_darker_40\"=\"$color15_lighter_40_rgb\"" \
