@@ -4,6 +4,7 @@
 
 # If not running interactively, don't do anything:
 [[ $- != *i* ]] && return
+
 # Prompt (modified version of Dylan Araps's prompt)
 prompt() {
     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
@@ -137,14 +138,6 @@ export FZF_DEFAULT_OPTS="--multi --inline-info"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
 export FZF_CTRL_R_OPTS="--reverse"
 
-clone() {
-  git clone --depth 1 "https://github.com/$1.git"
-}
-
-cclone() {
-  git clone --depth 1 "$1.git"
-}
-
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
-
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux
+[[ -f "${HOME}/.cache/wal/colors.sh" ]] && . "${HOME}/.cache/wal/colors.sh" #&& printf "\e]4;17;rgb:${color0_lighter_40:1:2}/${color0_lighter_40:3:2}/${color0_lighter_40:5:2}\e\\" && printf "\e]4;18;rgb:${color0_lighter_60:1:2}/${color0_lighter_60:3:2}/${color0_lighter_60:5:2}\e\\"
