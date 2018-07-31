@@ -875,7 +875,7 @@
 <applications>
 
   <!-- Center apps and change size -->
-  <application class="Firefox">
+  <application class="Chromium">
     <desktop>2</desktop>
     <position force="yes">
       <x>center</x>
@@ -930,6 +930,16 @@
     <position force="yes">
       <x>center</x>
       <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>570</height>
+    </size>
+  </application>
+  <application class="Youtube-dl-gui">
+    <position force="yes">
+      <x>71</x>
+      <y>45</y>
     </position>
     <size>
       <width>1226</width>

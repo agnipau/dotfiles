@@ -1,6 +1,8 @@
 # Garbage
 dotfiles/viewnior/.config/viewnior/accel_map
-dotfiles/nvim/.config/nvim/.netrwhist
+dotfiles/nvim/.config/nvim/autoload
 dotfiles/nvim/.config/nvim/plugged
+dotfiles/nvim/.config/nvim/tmp
+dotfiles/nvim/.config/nvim/.*
 dotfiles/mpv/fonts.scale
 .uuid

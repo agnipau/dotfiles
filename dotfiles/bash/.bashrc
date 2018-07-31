@@ -30,6 +30,7 @@ export LANG="it_IT.UTF-8"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export SSH_KEY_PATH="${HOME}/.ssh/id_rsa"
 export RANGER_LOAD_DEFAULT_RC="false"
+export MANPAGER="nvim -c MANPAGER -"
 #export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 
 # Better tab completion
@@ -86,7 +87,7 @@ alias gr='git remote -v'
 alias r='ranger'
 alias ls='ls --group-directories-first --color=auto'
 alias l="ls"
-alias l.="ls -A | egrep '^\.'"
+alias l.="ls -A | egrep '^\\.'"
 alias la='ls -A'
 alias ll='ls -Alh'
 alias df='df -h'
@@ -132,7 +133,7 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[0;32m'
 
 # FZF options
-export FZF_DEFAULT_COMMAND="sudo fd --type f --hidden --follow --exclude .git"
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--multi --inline-info"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"

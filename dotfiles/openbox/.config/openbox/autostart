@@ -1,5 +1,5 @@
 xrandr --dpi 96
 openbox --restart
 compton -b --config ~/.config/compton/compton.conf
-wal -R -o ~/bin/wal-set
+wal -c -q --backend wal -i ~/progetti/wallpapers -o ~/bin/wal-set
 ~/bin/polyop
