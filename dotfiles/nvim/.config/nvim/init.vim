@@ -46,15 +46,17 @@ Plug 'kana/vim-textobj-user'
 Plug 'Yggdroot/indentLine'
   let g:indentLine_color_term = 18
   let g:indentLine_char = '▏'
-Plug 'tpope/vim-endwise'
+
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'rstacruz/vim-closer'
+Plug 'tpope/vim-fugitive'
+
+Plug 'jiangmiao/auto-pairs'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'machakann/vim-highlightedyank'
-  let g:highlightedyank_highlight_duration = 100
-
+  let g:highlightedyank_highlight_duration = 300
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   let g:deoplete#enable_at_startup = 1
   inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
@@ -62,7 +64,6 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-vim'
 Plug 'wellle/tmux-complete.vim'
   let g:tmuxcomplete#trigger = ''
-
 Plug 'mattn/emmet-vim'
   let g:user_emmet_leader_key = '<c-d>'
 Plug 'junegunn/vim-easy-align'
