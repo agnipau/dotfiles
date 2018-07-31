@@ -55,6 +55,8 @@ reload_colors() {
 reload_rofi() {
   sed -i -e "33i\ \ \ \ border-radius: 5;" \
          "${HOME}/.cache/wal/colors-rofi-dark.rasi"
+  sed -i -e "s/selected-normal-foreground: @.*/selected-normal-foreground: @background;/" \
+         "${HOME}/.cache/wal/colors-rofi-dark.rasi"
 }
 
 # Change the value of color17 and the value of color18

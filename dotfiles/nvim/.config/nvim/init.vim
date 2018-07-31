@@ -1,5 +1,98 @@
+" Plugins {{{
+call plug#begin('~/.config/nvim/plugged')
+
+Plug 'dylanaraps/wal.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+  " I don't know why when I disable Goyo, these highlight groups change
+  function! s:goyo_leave()
+    highlight ModeBlock      ctermbg=01 ctermfg=00
+    highlight GitBlock       ctermbg=18 ctermfg=07
+    highlight CentralBlock   ctermbg=17 ctermfg=07
+    Limelight!
+  endfunction
+
+  augroup goyo_custom
+    autocmd! User GoyoEnter Limelight
+    autocmd! User GoyoLeave call <SID>goyo_leave()
+  augroup END
+Plug 'junegunn/limelight.vim'
+Plug 'terryma/vim-multiple-cursors'
+  let g:multi_cursor_use_default_mapping = 0
+  let g:multi_cursor_select_all_word_key = '<c-t>'
+  let g:multi_cursor_next_key            = '<c-j>'
+  let g:multi_cursor_prev_key            = '<c-k>'
+  let g:multi_cursor_skip_key            = '<c-p>'
+  let g:multi_cursor_quit_key            = '<esc>'
+Plug 'terryma/vim-expand-region'
+Plug 'reedes/vim-pencil'
+  function! s:prose()
+    call pencil#init()
+    call textobj#quote#init()
+  
+    iabbrev <buffer> -- –
+    iabbrev <buffer> --- —
+    iabbrev <buffer> << «
+    iabbrev <buffer> >> »
+    iabbrev <buffer> ... …
+  endfunction
+  augroup writing
+    autocmd!
+    autocmd! FileType markdown,mkd,text call <SID>prose()
+  augroup END
+Plug 'reedes/vim-textobj-quote'
+Plug 'kana/vim-textobj-user'
+Plug 'Yggdroot/indentLine'
+  let g:indentLine_color_term = 18
+  let g:indentLine_char = '▏'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'rstacruz/vim-closer'
+Plug 'mzlogin/vim-markdown-toc'
+Plug 'machakann/vim-highlightedyank'
+  let g:highlightedyank_highlight_duration = 100
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  let g:deoplete#enable_at_startup = 1
+  inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
+  inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+Plug 'Shougo/neco-vim'
+Plug 'wellle/tmux-complete.vim'
+  let g:tmuxcomplete#trigger = ''
+
+Plug 'mattn/emmet-vim'
+  let g:user_emmet_leader_key = '<c-d>'
+Plug 'junegunn/vim-easy-align'
+  xmap ga <plug>(EasyAlign)
+  nmap ga <plug>(EasyAlign)
+Plug 'lambdalisue/vim-manpager'
+Plug 'rhysd/open-pdf.vim'
+Plug 'yuttie/comfortable-motion.vim'
+  let g:comfortable_motion_no_default_key_mappings = 1
+  nnoremap <silent> J :call comfortable_motion#flick(55)<cr>
+  nnoremap <silent> K :call comfortable_motion#flick(-55)<cr>
+  noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<cr>
+  noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<cr>
+
+Plug 'w0rp/ale'
+  " Partially fix the annoying cursor lag
+  let g:ale_echo_delay                       = 0
+  let g:ale_linters_sh_shellcheck_exclusions = 'SC1090'
+  let g:ale_lint_on_save                     = 1
+  let g:ale_lint_on_text_changed             = 0
+  let g:ale_lint_on_enter                    = 1
+  let g:ale_sign_error                       = '> '
+  let g:ale_sign_warning                     = '! '
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
+
+call plug#end()
+" }}}
+
 " Options {{{
-nnoremap <leader>w  :match ExtraWhitespace /\s\+$/<cr>
 set encoding=utf-8
 scriptencoding utf-8
 syntax on
@@ -28,182 +121,21 @@ set backspace=indent,eol,start
 set clipboard=unnamed
 " }}}
 
-" Plugins {{{
-" Auto install plug if not found
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fsSLo --create-dirs ~/.config/nvim/autoload/plug.vim \
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-  augroup plug
-    autocmd!
-    autocmd VimEnter * PlugInstall
-  augroup END
-endif
-
-" List of plugins
-call plug#begin('~/.config/nvim/plugged')
-
-Plug 'dylanaraps/wal.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'reedes/vim-pencil'
-Plug 'reedes/vim-textobj-quote'
-Plug 'kana/vim-textobj-user'
-Plug 'Yggdroot/indentLine'
-Plug 'w0rp/ale'
-Plug 'terryma/vim-expand-region'
-Plug 'tpope/vim-endwise'
-Plug 'rstacruz/vim-closer'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'machakann/vim-highlightedyank'
-  let g:highlightedyank_highlight_duration = 100
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  let g:deoplete#enable_at_startup = 1
-  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-Plug 'lervag/vimtex'
-  let g:vimtex_compiler_progname = 'nvr'
-Plug 'mzlogin/vim-markdown-toc'
-Plug 'Shougo/neco-vim'
-Plug 'Shougo/neco-syntax'
-Plug 'wellle/tmux-complete.vim'
-  let g:tmuxcomplete#trigger = ''
-Plug 'mattn/emmet-vim'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'lambdalisue/vim-manpager'
-Plug 'scrooloose/nerdtree'
-Plug 'airblade/vim-gitgutter'
-Plug 'rhysd/open-pdf.vim'
-Plug 'andymass/vim-matchup'
-Plug 'yuttie/comfortable-motion.vim'
-Plug 'tomasr/molokai'
-Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'morhetz/gruvbox'
-Plug 'yuttie/hydrangea-vim'
-Plug 'tyrannicaltoucan/vim-deep-space'
-Plug 'AlessandroYorba/Despacio'
-Plug 'cocopon/iceberg.vim'
-Plug 'w0ng/vim-hybrid'
-
-call plug#end()
-" }}}
-
-" Plugins options {{{
-" I don't know why when disabling Goyo, these highlight groups change
-function! s:goyo_leave()
-  highlight ModeBlock      ctermbg=01 ctermfg=00
-  highlight GitBlock       ctermbg=18 ctermfg=07
-  highlight CentralBlock   ctermbg=17 ctermfg=07
-  Limelight!
-endfunction
-
-augroup goyo_custom
-  autocmd! User GoyoEnter Limelight
-  autocmd! User GoyoLeave call <SID>goyo_leave()
-augroup END
-
-" Enhanced writing for text documents
-function! s:prose()
-  call pencil#init()
-  call textobj#quote#init()
-
-  iabbrev <buffer> -- –
-  iabbrev <buffer> --- —
-  iabbrev <buffer> << «
-  iabbrev <buffer> >> »
-  iabbrev <buffer> ... …
-endfunction
-
-augroup writing
-  autocmd!
-  autocmd! FileType markdown,mkd,text call <SID>prose()
-augroup END
-
-" Custom mapping for vim-multiple-cursor
-let g:multi_cursor_use_default_mapping = 0
-let g:multi_cursor_select_all_word_key = '<c-t>'
-let g:multi_cursor_next_key            = '<c-j>'
-let g:multi_cursor_prev_key            = '<c-k>'
-let g:multi_cursor_skip_key            = '<c-p>'
-let g:multi_cursor_quit_key            = '<esc>'
-
-" indentLine options
-let g:indentLine_color_term = 18
-let g:indentLine_char       = '▏'
-
-" ale options
-" Partially fix the annoying cursor lag
-let g:ale_echo_delay                       = 0
-let g:ale_linters_sh_shellcheck_exclusions = 'SC1090'
-let g:ale_lint_on_save                     = 1
-let g:ale_lint_on_text_changed             = 0
-let g:ale_lint_on_enter                    = 1
-let g:ale_sign_error                       = '> '
-let g:ale_sign_warning                     = '! '
-
-" Set wal colorscheme
+" Look and feel {{{
 colorscheme wal
-" }}}
-
-" Mappings {{{
-" Define leader keys
-let mapleader=' '
-let maplocalleader=' '
-
-" Normal mode mappings {{{
-nnoremap <leader><leader> /
-nnoremap <leader>mo :nohlsearch<cr>
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>rr :source $MYVIMRC<cr>
-nnoremap <leader>" viw<esc>a"<esc>bi"<esc>el
-nnoremap <leader>' viw<esc>a'<esc>bi'<esc>el
-nnoremap H 0
-nnoremap L $
-nnoremap J j
-nnoremap K k
-nnoremap <leader>C 0x
-nnoremap <leader>w  :match ExtraWhitespace /\s\+$/<cr>
-nnoremap <leader>W  :match<cr>
-nnoremap / /\v
-nnoremap <leader>go :Goyo<cr>
-nnoremap <leader>li :Limelight!<cr>
-nnoremap <leader>cc :set colorcolumn=80<cr>
-nnoremap <leader>co :set colorcolumn=0<cr>
-nnoremap <c-h> :tabprevious<cr>
-nnoremap <c-l> :tabnext<cr>
-nnoremap <c-n> :cnext<cr>zz
-nnoremap <c-m> :cprevious<cr>zz
-nnoremap <leader>f :call <SID>FoldColumnToggle()<cr>
-nnoremap <leader>q :call <SID>QuickfixToggle()<cr>
-nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
-nnoremap <leader>a :ALEToggle<cr>
-nmap <silent> <c-q> <Plug>(ale_previous_wrap)
-nmap <silent> <c-e> <Plug>(ale_next_wrap)
-nnoremap <leader>pc :PlugClean<cr>
-nnoremap <leader>pi :PlugInstall<cr>
-" }}}
-
-" Visual mode mappings {{{
-vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
-vnoremap <leader>' <esc>`<i"<esc>`>la"<esc>
-vnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
-vmap v <Plug>(expand_region_expand)
-vmap <c-v> <Plug>(expand_region_shrink)
-" }}}
-
-" Insert mode mappings {{{
-inoremap <c-u> <esc>viw~wa
-onoremap in( :<c-u>normal! f)vi(<cr>
-onoremap il( :<c-u>normal! F)vi(<cr>
-onoremap in{ :<c-u>normal! f}vi{<cr>
-onoremap il{ :<c-u>normal! F}vi{<cr>
-" }}}
+highlight ExtraWhitespace ctermbg=01 ctermfg=00
+highlight EndOfBuffer     ctermbg=00 ctermfg=00
+highlight FoldColumn      ctermbg=00 ctermfg=07
+highlight Folded          ctermbg=00 ctermfg=08
+highlight fzf1            ctermbg=17 ctermfg=01
+highlight fzf2            ctermbg=17 ctermfg=07
+highlight fzf3            ctermbg=17 ctermfg=07
+highlight Pmenu           ctermbg=18 ctermfg=07
+highlight PmenuSel        ctermbg=02 ctermfg=00
+highlight PmenuSbar       ctermbg=17
+highlight PmenuThumb      ctermbg=02
+highlight ALEErrorSign    ctermbg=00 ctermfg=01
+highlight ALEWarningSign  ctermbg=00 ctermfg=02
 " }}}
 
 " Statusline {{{
@@ -230,9 +162,9 @@ let g:currentmode={
   \ 't'  : 'TERMINAL '}
 
 " Create highlight groups used in the bar
-highlight ModeBlock      ctermbg=01 ctermfg=00
-highlight GitBlock       ctermbg=18 ctermfg=07
-highlight CentralBlock   ctermbg=17 ctermfg=07
+highlight ModeBlock    ctermbg=01 ctermfg=00
+highlight GitBlock     ctermbg=18 ctermfg=07
+highlight CentralBlock ctermbg=17 ctermfg=07
 
 " Set the statusline
 set statusline=%#ModeBlock#                " use ModeBlock highlight group
@@ -260,6 +192,59 @@ function! StatuslineGit()
   let l:branchname = GitBranch()
   return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
+" }}}
+
+" Mappings {{{
+" Define leader keys
+let mapleader=' '
+let maplocalleader=' '
+
+" Normal mode mappings {{{
+nnoremap <leader><leader> /
+nnoremap <leader>mo :nohlsearch<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>rr :source $MYVIMRC<cr>
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>el
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>el
+nnoremap H 0
+nnoremap L $
+nnoremap <leader>C 0x
+nnoremap <leader>w  :match ExtraWhitespace /\s\+$/<cr>
+nnoremap <leader>W  :match<cr>
+nnoremap / /\v
+nnoremap <leader>go :Goyo<cr>
+nnoremap <leader>li :Limelight!<cr>
+nnoremap <leader>cc :set colorcolumn=80<cr>
+nnoremap <leader>co :set colorcolumn=0<cr>
+nnoremap <c-h> :tabprevious<cr>
+nnoremap <c-l> :tabnext<cr>
+nnoremap <c-n> :cnext<cr>zz
+nnoremap <c-m> :cprevious<cr>zz
+nnoremap <leader>f :call <SID>FoldColumnToggle()<cr>
+nnoremap <leader>q :call <SID>QuickfixToggle()<cr>
+nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
+nnoremap <leader>a :ALEToggle<cr>
+nmap <silent> <c-q> <plug>(ale_previous_wrap)
+nmap <silent> <c-e> <plug>(ale_next_wrap)
+nnoremap <leader>pc :PlugClean<cr>
+nnoremap <leader>pi :PlugInstall<cr>
+" }}}
+
+" Visual mode mappings {{{
+xnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
+xnoremap <leader>' <esc>`<i"<esc>`>la"<esc>
+xnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
+xmap v <plug>(expand_region_expand)
+xmap <c-v> <plug>(expand_region_shrink)
+" }}}
+
+" Insert mode mappings {{{
+inoremap <c-u> <esc>viw~wa
+onoremap in( :<c-u>normal! f)vi(<cr>
+onoremap il( :<c-u>normal! F)vi(<cr>
+onoremap in{ :<c-u>normal! f}vi{<cr>
+onoremap il{ :<c-u>normal! F}vi{<cr>
+" }}}
 " }}}
 
 " Auto commands {{{
@@ -302,20 +287,6 @@ augroup filetype_vim
   autocmd FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
-" }}}
-
-" Highlight groups {{{
-highlight ExtraWhitespace ctermbg=01 ctermfg=00
-highlight EndOfBuffer     ctermbg=00 ctermfg=00
-highlight FoldColumn      ctermbg=00 ctermfg=07
-highlight Folded          ctermbg=00 ctermfg=08
-highlight fzf1            ctermbg=17 ctermfg=01
-highlight fzf2            ctermbg=17 ctermfg=07
-highlight fzf3            ctermbg=17 ctermfg=07
-highlight ALEErrorSign    ctermbg=00 ctermfg=01
-highlight ALEWarningSign  ctermbg=00 ctermfg=02
-highlight Pmenu           ctermbg=18 ctermfg=07
-highlight PmenuSel        ctermbg=02 ctermfg=07
 " }}}
 
 " Functions {{{
