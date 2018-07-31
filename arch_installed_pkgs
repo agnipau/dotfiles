@@ -9,10 +9,6 @@ attr
 
 autoconf
 automake
-avahi
-babl
-bash
-bash-completion
 bc
 
 binutils
