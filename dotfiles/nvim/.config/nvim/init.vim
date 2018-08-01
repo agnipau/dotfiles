@@ -26,6 +26,7 @@ Plug 'terryma/vim-multiple-cursors'
   let g:multi_cursor_skip_key            = '<c-p>'
   let g:multi_cursor_quit_key            = '<esc>'
 Plug 'terryma/vim-expand-region'
+
 Plug 'reedes/vim-pencil'
   function! s:prose()
     call pencil#init()
@@ -46,14 +47,10 @@ Plug 'kana/vim-textobj-user'
 Plug 'Yggdroot/indentLine'
   let g:indentLine_color_term = 18
   let g:indentLine_char = '▏'
-
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
-
 Plug 'jiangmiao/auto-pairs'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'machakann/vim-highlightedyank'
@@ -90,6 +87,8 @@ Plug 'w0rp/ale'
   let g:ale_sign_warning                     = '! '
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 call plug#end()
 " }}}
@@ -100,13 +99,16 @@ scriptencoding utf-8
 syntax on
 filetype on
 filetype plugin indent on
+set nonumber
+set nocursorline
 set wrap
-set number
 set shiftround
 set shiftwidth=2
-set laststatus=2
-set t_Co=256
 set noshowmode
+set laststatus=2
+set shortmess=atI
+set cmdheight=1
+set t_Co=256
 set foldlevelstart=0
 set hlsearch
 set incsearch
@@ -118,26 +120,37 @@ set mouse=a
 set history=10000
 set backupdir=~/.config/nvim/tmp,~/.vim/tmp,.
 set directory=~/.config/nvim/tmp,~/.vim/tmp,.
-set nocursorline
 set backspace=indent,eol,start
 set clipboard=unnamed
 " }}}
 
 " Look and feel {{{
 colorscheme wal
-highlight ExtraWhitespace ctermbg=01 ctermfg=00
-highlight EndOfBuffer     ctermbg=00 ctermfg=00
-highlight FoldColumn      ctermbg=00 ctermfg=07
-highlight Folded          ctermbg=00 ctermfg=08
-highlight fzf1            ctermbg=17 ctermfg=01
-highlight fzf2            ctermbg=17 ctermfg=07
-highlight fzf3            ctermbg=17 ctermfg=07
-highlight Pmenu           ctermbg=18 ctermfg=07
-highlight PmenuSel        ctermbg=02 ctermfg=00
-highlight PmenuSbar       ctermbg=17
-highlight PmenuThumb      ctermbg=02
-highlight ALEErrorSign    ctermbg=00 ctermfg=01
-highlight ALEWarningSign  ctermbg=00 ctermfg=02
+set fillchars=fold:\ 
+if colors_name ==# 'wal'
+  highlight EndOfBuffer           ctermbg=none ctermfg=00
+  highlight FoldColumn            ctermbg=00   ctermfg=07
+  highlight Folded                ctermbg=none ctermfg=08 cterm=bold
+  highlight fzf1                  ctermbg=17   ctermfg=01
+  highlight fzf2                  ctermbg=17   ctermfg=07
+  highlight fzf3                  ctermbg=17   ctermfg=07
+  highlight Pmenu                 ctermbg=none ctermfg=07
+  highlight PmenuSel              ctermbg=01   ctermfg=00
+  highlight PmenuSbar             ctermbg=none
+  highlight PmenuThumb            ctermbg=01
+  highlight ALEErrorSign          ctermbg=none ctermfg=01
+  highlight ALEWarningSign        ctermbg=none ctermfg=02
+  highlight Visual                ctermbg=07   ctermfg=18
+  highlight HighlightedyankRegion ctermbg=none ctermfg=07
+  highlight CursorLine            ctermbg=18   ctermfg=08 cterm=none
+  highlight VertSplit             ctermbg=none ctermfg=18 cterm=none
+  highlight Comment               ctermbg=none ctermfg=08 cterm=italic
+  highlight LineNr                ctermbg=none ctermfg=18
+  highlight CursorLineNr          ctermbg=none ctermfg=07
+  highlight CursorLine            ctermbg=none ctermfg=none
+  highlight Search                ctermbg=18   ctermfg=none
+  highlight IncSearch             ctermbg=none ctermfg=01
+endif
 " }}}
 
 " Statusline {{{
@@ -166,7 +179,7 @@ let g:currentmode={
 " Create highlight groups used in the bar
 highlight ModeBlock    ctermbg=01 ctermfg=00
 highlight GitBlock     ctermbg=18 ctermfg=07
-highlight CentralBlock ctermbg=17 ctermfg=07
+highlight CentralBlock ctermbg=none ctermfg=07
 
 " Set the statusline
 set statusline=%#ModeBlock#                " use ModeBlock highlight group
@@ -231,6 +244,8 @@ nmap <silent> <c-e> <plug>(ale_next_wrap)
 nnoremap <leader>pc :PlugClean!<cr>
 nnoremap <leader>pu :PlugUpdate<cr>
 nnoremap <leader>pi :PlugInstall<cr>
+nnoremap ; :
+nnoremap <leader>n :set number! cursorline!<cr>
 " }}}
 
 " Visual mode mappings {{{

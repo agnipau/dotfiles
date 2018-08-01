@@ -29,7 +29,7 @@
 <!-- Theme -->
 <theme>
   <name>thicc</name>
-  <titleLayout>C</titleLayout>
+  <titleLayout></titleLayout>
   <cornerRadius>3</cornerRadius>
   <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
@@ -704,7 +704,12 @@
         <to>left</to>
       </action>
     </mousebind>
-    <mousebind button="Middle" action="Click">
+    <mousebind button="W-Left" action="Click">
+      <action name="Execute">
+        <command>~/bin/draw-openbox</command>
+      </action>
+    </mousebind>
+    <mousebind button="W-Right" action="Click">
       <action name="Execute">
         <command>~/bin/draw-openbox</command>
       </action>
@@ -727,8 +732,8 @@
       <action name="Raise"/>
       <action name="Move"/>
     </mousebind>
-    <mousebind button="Left" action="DoubleClick">
-      <action name="ToggleMaximizeFull"/>
+    <mousebind button="Right" action="Click">
+      <action name="Close"/>
     </mousebind>
     <mousebind button="Middle" action="Click">
       <action name="Focus"/>
@@ -739,7 +744,7 @@
 	<y>center</y>
       </action>
     </mousebind>
-    <mousebind button="Right" action="Click">
+    <mousebind button="Left" action="DoubleClick">
       <action name="ToggleShade"/>
     </mousebind>
     <mousebind button="Right" action="Drag">

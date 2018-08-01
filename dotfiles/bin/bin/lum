@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# xbacklight doesn't work with my nvidia gpu so i wrote this script.
+# xbacklight doesn't work with my nvidia gpu so I wrote this script.
 # xbacklight doesn't wokrk, but I can still manually change the content of
 # /sys/class/backlight/intel_backlight/brightness, so this script automatize the
 # process of changing the value of this file.
