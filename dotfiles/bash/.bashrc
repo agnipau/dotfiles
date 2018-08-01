@@ -152,3 +152,5 @@ if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
   printf "\e]4;18;rgb:${color0_lighter_90:1:2}/${color0_lighter_90:3:2}/${color0_lighter_90:5:2}\e\\"
   #printf "\033]4;18;rgb:${color0_lighter_60:1:2}/${color0_lighter_60:3:2}/${color0_lighter_60:5:2}\007"
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

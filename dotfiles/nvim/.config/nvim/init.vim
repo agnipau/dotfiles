@@ -52,6 +52,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'mzlogin/vim-markdown-toc'
@@ -227,7 +228,8 @@ nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
 nnoremap <leader>a :ALEToggle<cr>
 nmap <silent> <c-q> <plug>(ale_previous_wrap)
 nmap <silent> <c-e> <plug>(ale_next_wrap)
-nnoremap <leader>pc :PlugClean<cr>
+nnoremap <leader>pc :PlugClean!<cr>
+nnoremap <leader>pu :PlugUpdate<cr>
 nnoremap <leader>pi :PlugInstall<cr>
 " }}}
 
