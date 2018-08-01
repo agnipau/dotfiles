@@ -51,7 +51,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
+Plug 'rstacruz/vim-closer'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'machakann/vim-highlightedyank'
   let g:highlightedyank_highlight_duration = 300
@@ -150,6 +150,7 @@ if colors_name ==# 'wal'
   highlight CursorLine            ctermbg=none ctermfg=none
   highlight Search                ctermbg=18   ctermfg=none
   highlight IncSearch             ctermbg=none ctermfg=01
+  highlight ColorColumn           ctermbg=18   ctermfg=none
 endif
 " }}}
 
@@ -178,7 +179,7 @@ let g:currentmode={
 
 " Create highlight groups used in the bar
 highlight ModeBlock    ctermbg=01 ctermfg=00
-highlight GitBlock     ctermbg=18 ctermfg=07
+highlight GitBlock     ctermbg=19 ctermfg=07
 highlight CentralBlock ctermbg=none ctermfg=07
 
 " Set the statusline
@@ -254,6 +255,7 @@ xnoremap <leader>' <esc>`<i"<esc>`>la"<esc>
 xnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
 xmap v <plug>(expand_region_expand)
 xmap <c-v> <plug>(expand_region_shrink)
+xnoremap ; :
 " }}}
 
 " Insert mode mappings {{{

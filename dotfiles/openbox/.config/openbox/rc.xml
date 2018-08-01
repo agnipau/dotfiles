@@ -506,10 +506,20 @@
   </keybind>
   <keybind key="W-p">
     <action name="Execute">
-      <command>~/bin/polyop</command>
+      <command>~/bin/scr</command>
     </action>
   </keybind>
   <keybind key="W-S-p">
+    <action name="Execute">
+      <command>~/bin/sscr</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-p">
+    <action name="Execute">
+      <command>~/bin/polyop</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-S-p">
     <action name="Execute">
       <command>~/bin/polyoff</command>
     </action>
@@ -591,19 +601,14 @@
       <command>~/bin/pvol --cento</command>
     </action>
   </keybind>
-  <keybind key="W-Print">
-    <action name="Execute">
-      <command>~/bin/scr</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-Print">
-    <action name="Execute">
-      <command>~/bin/sscr</command>
-    </action>
-  </keybind>
   <keybind key="W-Up">
     <action name="Execute">
       <command>cmus-remote --stop</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-Up">
+    <action name="Execute">
+      <command>~/bin/spcontrol --pause</command>
     </action>
   </keybind>
   <keybind key="W-S-Up">
@@ -611,9 +616,19 @@
       <command>cmus-remote --play</command>
     </action>
   </keybind>
+  <keybind key="W-C-S-Up">
+    <action name="Execute">
+      <command>~/bin/spcontrol --play</command>
+    </action>
+  </keybind>
   <keybind key="W-Down">
     <action name="Execute">
       <command>cmus-remote --pause</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-Down">
+    <action name="Execute">
+      <command>~/bin/spcontrol --toggle</command>
     </action>
   </keybind>
   <keybind key="W-Left">
@@ -626,6 +641,11 @@
       <command>cmus-remote --prev</command>
     </action>
   </keybind>
+  <keybind key="W-C-Left">
+    <action name="Execute">
+      <command>~/bin/spcontrol --prev</command>
+    </action>
+  </keybind>
   <keybind key="W-Right">
     <action name="Execute">
       <command>cmus-remote --seek +5s</command>
@@ -634,6 +654,11 @@
   <keybind key="W-S-Right">
     <action name="Execute">
       <command>cmus-remote --next</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-Right">
+    <action name="Execute">
+      <command>~/bin/spcontrol --next</command>
     </action>
   </keybind>
 </keyboard>

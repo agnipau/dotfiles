@@ -96,6 +96,20 @@ alias ll='ls -Alh'
 alias mkdir='mkdir -p'
 alias neo='clear; neofetch'
 
+# Aliases for editing configuration files
+alias ebash='nvim "${HOME}/.bashrc"'
+alias envim='nvim "${HOME}/.config/nvim/init.vim"'
+alias ebox='nvim "${HOME}/.config/openbox/rc.xml"'
+alias emux='nvim "${HOME}/.tmux.conf"'
+alias ebar='nvim "${HOME}/.config/polybar/config"'
+
+# Aliases for sourcing configuration files
+alias ibash='. "${HOME}/.bashrc"'
+alias ix='xrdb "${HOME}/.Xresources"'
+alias ibox='openbox --reconfigure'
+alias imux='tmux source-file "${HOME}/.tmux.conf"'
+alias ibar='"${HOME}/bin/polyop"'
+
 # Typos
 alias dc='cd'
 alias sl='ls'
@@ -148,9 +162,8 @@ export FZF_CTRL_R_OPTS="--reverse"
 if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
   . "${HOME}/.cache/wal/colors.sh"
   printf "\e]4;17;rgb:${color0_lighter_30:1:2}/${color0_lighter_30:3:2}/${color0_lighter_30:5:2}\e\\"
-  #printf "\033]4;17;rgb:${color0_lighter_40:1:2}/${color0_lighter_40:3:2}/${color0_lighter_40:5:2}\007"
   printf "\e]4;18;rgb:${color0_lighter_90:1:2}/${color0_lighter_90:3:2}/${color0_lighter_90:5:2}\e\\"
-  #printf "\033]4;18;rgb:${color0_lighter_60:1:2}/${color0_lighter_60:3:2}/${color0_lighter_60:5:2}\007"
+  printf "\e]4;19;rgb:${color1_darker_40:1:2}/${color1_darker_40:3:2}/${color1_darker_40:5:2}\e\\"
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
