@@ -28,7 +28,7 @@ for ((c=1; c<=end; c+=2)); do
   id3v2 --artist "$artist" \
 	--song "$title" \
 	--comment "$short_link" \
-	--track \
+	--track "" \
 	"${artist} - ${title}.mp3"
   notify-send --expire-time=3000 "YouTube" "${artist} - ${title} downloaded"
 done

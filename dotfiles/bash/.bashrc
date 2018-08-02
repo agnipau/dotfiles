@@ -74,6 +74,7 @@ alias p='ping google.com'
 alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
 alias pd='pdflatex *.tex'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
+alias rma='rm -rf ./*'
 
 # git aliases
 alias ga='git add .'
@@ -99,13 +100,14 @@ alias neo='clear; neofetch'
 # Aliases for editing configuration files
 alias ebash='nvim "${HOME}/.bashrc"'
 alias envim='nvim "${HOME}/.config/nvim/init.vim"'
+alias exres='nvim "${HOME}/.Xresources"'
 alias ebox='nvim "${HOME}/.config/openbox/rc.xml"'
 alias emux='nvim "${HOME}/.tmux.conf"'
 alias ebar='nvim "${HOME}/.config/polybar/config"'
 
 # Aliases for sourcing configuration files
 alias ibash='. "${HOME}/.bashrc"'
-alias ix='xrdb "${HOME}/.Xresources"'
+alias ixres='xrdb "${HOME}/.Xresources"'
 alias ibox='openbox --reconfigure'
 alias imux='tmux source-file "${HOME}/.tmux.conf"'
 alias ibar='"${HOME}/bin/polyop"'
@@ -166,4 +168,10 @@ if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
   printf "\e]4;19;rgb:${color1_darker_40:1:2}/${color1_darker_40:3:2}/${color1_darker_40:5:2}\e\\"
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+clone() {
+  git clone --depth 1 "https://github.com/$1.git"
+}
+
+cclone() {
+  git clone --depth 1 "$1.git"
+}

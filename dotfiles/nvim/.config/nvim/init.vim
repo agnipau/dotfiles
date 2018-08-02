@@ -14,6 +14,7 @@ Plug 'junegunn/goyo.vim'
   endfunction
 
   augroup goyo_custom
+    autocmd!
     autocmd! User GoyoEnter Limelight
     autocmd! User GoyoLeave call <SID>goyo_leave()
   augroup END
@@ -54,7 +55,7 @@ Plug 'tpope/vim-surround'
 Plug 'rstacruz/vim-closer'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'machakann/vim-highlightedyank'
-  let g:highlightedyank_highlight_duration = 300
+  let g:highlightedyank_highlight_duration = 200
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   let g:deoplete#enable_at_startup = 1
   inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
@@ -80,11 +81,12 @@ Plug 'w0rp/ale'
   " Partially fix the annoying cursor lag
   let g:ale_echo_delay                       = 0
   let g:ale_linters_sh_shellcheck_exclusions = 'SC1090'
-  let g:ale_lint_on_save                     = 1
+  let g:ale_lint_on_save                     = 0
   let g:ale_lint_on_text_changed             = 0
-  let g:ale_lint_on_enter                    = 1
+  let g:ale_lint_on_enter                    = 0
   let g:ale_sign_error                       = '> '
   let g:ale_sign_warning                     = '! '
+  autocmd! BufReadPre * ALEDisable
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -121,7 +123,8 @@ set history=10000
 set backupdir=~/.config/nvim/tmp,~/.vim/tmp,.
 set directory=~/.config/nvim/tmp,~/.vim/tmp,.
 set backspace=indent,eol,start
-set clipboard=unnamed
+set clipboard=unnamedplus
+set colorcolumn=0
 " }}}
 
 " Look and feel {{{
@@ -151,6 +154,7 @@ if colors_name ==# 'wal'
   highlight Search                ctermbg=18   ctermfg=none
   highlight IncSearch             ctermbg=none ctermfg=01
   highlight ColorColumn           ctermbg=18   ctermfg=none
+  highlight MatchParen            ctermbg=18   ctermfg=none
 endif
 " }}}
 
@@ -230,8 +234,7 @@ nnoremap <leader>W  :match<cr>
 nnoremap / /\v
 nnoremap <leader>go :Goyo<cr>
 nnoremap <leader>li :Limelight!<cr>
-nnoremap <leader>cc :set colorcolumn=80<cr>
-nnoremap <leader>co :set colorcolumn=0<cr>
+nnoremap <leader>cc :call <SID>ColorColumnToggle()<cr>
 nnoremap <c-h> :tabprevious<cr>
 nnoremap <c-l> :tabnext<cr>
 nnoremap <c-n> :cnext<cr>zz
@@ -239,13 +242,15 @@ nnoremap <c-m> :cprevious<cr>zz
 nnoremap <leader>f :call <SID>FoldColumnToggle()<cr>
 nnoremap <leader>q :call <SID>QuickfixToggle()<cr>
 nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
-nnoremap <leader>a :ALEToggle<cr>
+nnoremap <leader>aa :ALEEnable<cr>
+nnoremap <leader>af :ALEDisable<cr>
 nmap <silent> <c-q> <plug>(ale_previous_wrap)
 nmap <silent> <c-e> <plug>(ale_next_wrap)
 nnoremap <leader>pc :PlugClean!<cr>
 nnoremap <leader>pu :PlugUpdate<cr>
 nnoremap <leader>pi :PlugInstall<cr>
 nnoremap ; :
+nnoremap è .
 nnoremap <leader>n :set number! cursorline!<cr>
 " }}}
 
@@ -316,6 +321,15 @@ function! s:FoldColumnToggle()
     setlocal foldcolumn=0
   else
     setlocal foldcolumn=1
+  endif
+endfunction
+
+" Toggle the colorcolumn option
+function! s:ColorColumnToggle()
+  if &colorcolumn
+    setlocal colorcolumn=0
+  else
+    setlocal colorcolumn=80
   endif
 endfunction
 

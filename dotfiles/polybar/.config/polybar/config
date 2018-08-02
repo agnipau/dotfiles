@@ -52,6 +52,25 @@ font-1 = FontAwesome:size=12:antialias=true:autohint=false;3
 modules-center = date music
 locale = it_IT.UTF-8
 
+; (openbox) (new style)
+[bar/bar-stilosa]
+monitor = eDP-1-1
+bottom = true
+fixed-center = true
+width = 19%
+height = 40
+offset-x = 1070
+offset-y = 21
+background = ${colors.background}
+foreground = ${colors.foreground}
+radius = 5.0
+padding= 3
+module-margin = 1
+font-0 = Iosevka Term SS07:size=12:antialias=true:autohint=false;3
+font-1 = FontAwesome:size=12:antialias=true:autohint=false;3
+modules-center = icon
+locale = it_IT.UTF-8
+
 ; (i3) (all the modules)
 [bar/bar-i3]
 monitor = eDP-1-1
@@ -230,8 +249,6 @@ format-foreground = ${colors.foreground}
 label = %date% %time%
 label-foreground = ${colors.foreground}
 
-; I can do the same thing with spotify and auryo (using playerctl), but it's
-; quite buggy, so I prefer to use it only with cmus.
 [module/music]
 type = custom/script
 format-text = label
@@ -239,6 +256,14 @@ label = 
 exec = printf '%s' label
 scroll-up= cmus-remote --seek +5s
 scroll-down = cmus-remote --seek -5s
-click-left = cmus-remote --pause
-click-right = cmus-remote --play
+click-left = cmus-remote --pause  || ~/bin/spcontrol --toggle
+click-right = cmus-remote --prev  || ~/bin/spcontrol --prev
+click-middle = cmus-remote --next || ~/bin/spcontrol --next
+format-foreground = ${colors.foreground}
+
+[module/icon]
+type = custom/script
+format-text = label
+label = x
+exec = printf '%s' label
 format-foreground = ${colors.foreground}

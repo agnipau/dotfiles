@@ -489,11 +489,6 @@
       <command>rofi -show run</command>
     </action>
   </keybind>
-  <keybind key="W-S-d">
-    <action name="Execute">
-      <command>rofi -show window</command>
-    </action>
-  </keybind>
   <keybind key="W-z">
     <action name="Execute">
       <command>~/bin/draw-openbox</command>
@@ -526,7 +521,7 @@
   </keybind>
   <keybind key="W-w">
     <action name="Execute">
-      <command>simplescreenrecorder</command>
+      <command>rofi -show window</command>
     </action>
   </keybind>
 
