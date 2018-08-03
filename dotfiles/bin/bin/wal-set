@@ -38,9 +38,9 @@ EOF
 
 reload_openbox() {
   sed -i --follow-symlinks \
-      -e "s/bg.color: #.*/bg.color: ${color1:-#000000}/" \
-      -e "s/text.color: #.*/text.color: ${color0:-#ffffff}/" \
-      -e "s/image.color: #.*/image.color: ${color0:-#ffffff}/" \
+      -e "s/bg.color: #.*/bg.color: ${color0:-#000000}/" \
+      -e "s/text.color: #.*/text.color: ${color7:-#ffffff}/" \
+      -e "s/image.color: #.*/image.color: ${color7:-#ffffff}/" \
       "${HOME}/.themes/thicc/openbox-3/themerc"
   openbox --reconfigure
 }
@@ -53,7 +53,7 @@ reload_colors() {
 }
 
 reload_rofi() {
-  sed -i -e "33i\ \ \ \ border-radius: 5;" \
+  sed -i -e "33i\ \ \ \ border-radius: 4;" \
          "${HOME}/.cache/wal/colors-rofi-dark.rasi"
   sed -i -e "s/selected-normal-foreground: @.*/selected-normal-foreground: @background;/" \
          "${HOME}/.cache/wal/colors-rofi-dark.rasi"

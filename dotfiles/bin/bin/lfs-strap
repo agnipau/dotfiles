@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 #
 # Download all the updated LFS resources and make an archive out of them.
+# Be aware that this script downloads A LOT of files, so be patient.
+# download_size=~134MB
+# archive_size=~30MB
 
 olddir="$PWD"
 tmpdir="$(mktemp -d)"
@@ -15,6 +18,7 @@ mv www.linuxfromscratch.org/lfs/downloads/stable/* lfs
 # blfs.
 wget -mkEpnp http://www.linuxfromscratch.org/blfs/downloads/stable/
 rm -f www.linuxfromscratch.org/blfs/downloads/stable/index*
+rm -f www.linuxfromscratch.org/blfs/downloads/stable/patches/index*
 mkdir blfs
 mv www.linuxfromscratch.org/blfs/downloads/stable/* blfs
 
@@ -27,12 +31,24 @@ mv www.linuxfromscratch.org/alfs/downloads/jhalfs/stable/* jhalfs
 # hints.
 wget -mkEpnp http://www.linuxfromscratch.org/hints/downloads/files/
 rm -f www.linuxfromscratch.org/hints/downloads/files/index*
+rm -f www.linuxfromscratch.org/hints/downloads/files/ATTACHMENTS/index*
+rm -f www.linuxfromscratch.org/hints/downloads/files/LICENSES/index*
+# That's not a typo, they wrote it by mistake.
+rm -f www.linuxfromscratch.org/hints/downloads/files/MAINTAINER/index*
+rm -f www.linuxfromscratch.org/hints/downloads/files/OLD/index*
+rm -f www.linuxfromscratch.org/hints/downloads/files/pio-files/index*
+rm -f www.linuxfromscratch.org/hints/downloads/files/PREVIOUS_FORMAT/index*
 mkdir hints
 mv www.linuxfromscratch.org/hints/downloads/files/* hints
 
 # patches.
 wget -mkEpnp http://www.linuxfromscratch.org/patches/downloads/
 rm -f www.linuxfromscratch.org/patches/downloads/index*
+for i in www.linuxfromscratch.org/patches/downloads/*; do
+  if [[ -d "$i" ]]; then
+    rm -rf "$i"/index*
+  fi
+done
 mkdir patches
 mv www.linuxfromscratch.org/patches/downloads/* patches
 

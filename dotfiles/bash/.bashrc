@@ -81,6 +81,7 @@ alias ga='git add .'
 alias gm='git commit -m'
 alias gps='git push'
 alias gpl='git pull'
+alias gpla='cd "${HOME}/progetti"; for i in *; do echo "$i"; cd "$i"; git pull; cd ..; done'
 alias gs='git status'
 alias gr='git remote -v'
 

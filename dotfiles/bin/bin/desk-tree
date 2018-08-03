@@ -43,7 +43,7 @@ for p in ${lnslist}; do
   pna="$(wmctrl -l \
         | head -n"$p" \
         | tail -n1 \
-        | cut -d' ' -f5-10000)"
+        | awk '{ print $4 }')"
   [[ "$pde" ]] && touch "${tmpdir}/${pde}/$RANDOM ${pna}"
 done
 
