@@ -4,20 +4,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'dylanaraps/wal.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-  " I don't know why when I disable Goyo, these highlight groups change
-  function! s:goyo_leave()
-    highlight ModeBlock      ctermbg=01 ctermfg=00
-    highlight GitBlock       ctermbg=18 ctermfg=07
-    highlight CentralBlock   ctermbg=17 ctermfg=07
-    Limelight!
-  endfunction
-
-  augroup goyo_custom
-    autocmd!
-    autocmd! User GoyoEnter Limelight
-    autocmd! User GoyoLeave call <SID>goyo_leave()
-  augroup END
 Plug 'junegunn/limelight.vim'
 Plug 'terryma/vim-multiple-cursors'
   let g:multi_cursor_use_default_mapping = 0
@@ -107,9 +93,10 @@ set wrap
 set shiftround
 set shiftwidth=2
 set noshowmode
+set noruler
 set laststatus=2
-set shortmess=atI
-set cmdheight=1
+set noshowcmd
+"set shortmess=atI
 set t_Co=256
 set foldlevelstart=0
 set hlsearch
@@ -155,63 +142,8 @@ if colors_name ==# 'wal'
   highlight IncSearch             ctermbg=none ctermfg=01
   highlight ColorColumn           ctermbg=18   ctermfg=none
   highlight MatchParen            ctermbg=18   ctermfg=none
+  highlight StatusLine            ctermbg=none cterm=none
 endif
-" }}}
-
-" Statusline {{{
-" Returns a string based on the current mode
-let g:currentmode={
-  \ 'n'  : 'NORMAL ',
-  \ 'no' : 'N·OPERATOR PENDING ',
-  \ 'v'  : 'VISUAL ',
-  \ 'V'  : 'V·LINE ',
-  \ '' : 'V·BLOCK ',
-  \ 's'  : 'SELECT ',
-  \ 'S'  : 'S·LINE ',
-  \ '' : 'S·BLOCK ',
-  \ 'i'  : 'INSERT ',
-  \ 'R'  : 'REPLACE ',
-  \ 'Rv' : 'V·REPLACE ',
-  \ 'c'  : 'COMMAND ',
-  \ 'cv' : 'VIM EX ',
-  \ 'ce' : 'EX ',
-  \ 'r'  : 'PROMPT ',
-  \ 'rm' : 'MORE ',
-  \ 'r?' : 'CONFIRM ',
-  \ '!'  : 'SHELL ',
-  \ 't'  : 'TERMINAL '}
-
-" Create highlight groups used in the bar
-highlight ModeBlock    ctermbg=01 ctermfg=00
-highlight GitBlock     ctermbg=19 ctermfg=07
-highlight CentralBlock ctermbg=none ctermfg=07
-
-" Set the statusline
-set statusline=%#ModeBlock#                " use ModeBlock highlight group
-set statusline+=\ %{g:currentmode[mode()]} " mode block
-set statusline+=%#GitBlock#                " use GitBlock highlight group
-set statusline+=%{StatuslineGit()}         " git branch block
-set statusline+=%#CentralBlock#            " use CentralBlock highlight group
-set statusline+=\ %t\                      " display filename (tail)
-set statusline+=%m                         " display modified flag
-set statusline+=%=                         " switch to right side
-set statusline+=%#GitBlock#                " use GitBlock highlight group
-set statusline+=\ Ln                       " prefix for line number
-set statusline+=\ %l                       " display line number
-set statusline+=,\ Col                     " prefix for column number
-set statusline+=\ %c\                      " display column number
-set statusline+=%#ModeBlock#               " use ModeBlock highlight group
-set statusline+=\ %Y\                      " display the file type
-
-" Return the branch name if editing a file in a git repo
-function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
-
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-endfunction
 " }}}
 
 " Mappings {{{
