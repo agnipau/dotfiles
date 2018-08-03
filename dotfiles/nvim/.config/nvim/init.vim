@@ -252,6 +252,7 @@ nnoremap <leader>pi :PlugInstall<cr>
 nnoremap ; :
 nnoremap è .
 nnoremap <leader>n :set number! cursorline!<cr>
+nnoremap <leader>; :call <SID>ToggleFinalDot()<cr>
 " }}}
 
 " Visual mode mappings {{{
@@ -322,6 +323,20 @@ function! s:FoldColumnToggle()
   else
     setlocal foldcolumn=1
   endif
+endfunction
+
+" Toggle the final dot in the end of a sentence
+function! s:ToggleFinalDot()
+  let sunreg = @@
+
+  :normal $vy
+  if @@ ==# '.'
+    :normal $x
+  else
+    :execute "normal $a.\e"
+  endif
+
+  let @@ = sunreg
 endfunction
 
 " Toggle the colorcolumn option
