@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #
-# Backup my projects (lightweight ones XD).
+# Create a backup copy of some of my projects.
 
 for project in ~/progetti/*; do
-  if [[ "$project" != void-packages && "$project" != wallpapers ]]; then
-    zip -9 -r "${project}.zip" "$project"
+  if [[ "${project##*/}" != wallpapers ]]; then
+    tar cvzf "${project##*/}.tar.gz" "$project"
   fi
 done

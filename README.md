@@ -1,4 +1,4 @@
-![scrot]()
+![scrot](https://user-images.githubusercontent.com/40271651/43679294-2cd2b762-9823-11e8-952e-464dc298f77d.png)
 
 - OS: [Arch Linux], [Termux]
 - WM: [openbox-patched]

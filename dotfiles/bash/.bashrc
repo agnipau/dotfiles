@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything:
 [[ $- != *i* ]] && return
 
+# Enable the vi mode.
+set -o vi
+
 # Prompt (modified version of Dylan Araps's prompt script).
 prompt() {
     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
