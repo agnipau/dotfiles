@@ -1,7 +1,7 @@
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'dylanaraps/wal.vim'
+Plug 'matteoguarda/wal.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/limelight.vim'
@@ -14,21 +14,21 @@ Plug 'terryma/vim-multiple-cursors'
   let g:multi_cursor_quit_key            = '<esc>'
 Plug 'terryma/vim-expand-region'
 
-Plug 'reedes/vim-pencil'
-  function! s:prose()
-    call pencil#init()
-    call textobj#quote#init()
-  
-    iabbrev <buffer> -- –
-    iabbrev <buffer> --- —
-    iabbrev <buffer> << «
-    iabbrev <buffer> >> »
-    iabbrev <buffer> ... …
-  endfunction
-  augroup writing
-    autocmd!
-    autocmd! FileType markdown,mkd,text call <SID>prose()
-  augroup END
+"Plug 'reedes/vim-pencil'
+"  function! s:prose()
+"    call pencil#init()
+"    call textobj#quote#init()
+"  
+"    iabbrev <buffer> -- –
+"    iabbrev <buffer> --- —
+"    iabbrev <buffer> << «
+"    iabbrev <buffer> >> »
+"    iabbrev <buffer> ... …
+"  endfunction
+"  augroup writing
+"    autocmd!
+"    autocmd! FileType markdown,mkd,text call <SID>prose()
+"  augroup END
 Plug 'reedes/vim-textobj-quote'
 Plug 'kana/vim-textobj-user'
 Plug 'Yggdroot/indentLine'
@@ -73,7 +73,6 @@ Plug 'w0rp/ale'
   let g:ale_sign_error                       = '> '
   let g:ale_sign_warning                     = '! '
   autocmd! BufReadPre * ALEDisable
-Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -95,8 +94,9 @@ set shiftwidth=2
 set noshowmode
 set noruler
 set laststatus=2
+set statusline=%#BarraVuota# 
 set noshowcmd
-"set shortmess=atI
+set shortmess=atIcF
 set t_Co=256
 set foldlevelstart=0
 set hlsearch
@@ -119,15 +119,15 @@ colorscheme wal
 set fillchars=fold:\ 
 if colors_name ==# 'wal'
   highlight EndOfBuffer           ctermbg=none ctermfg=00
-  highlight FoldColumn            ctermbg=00   ctermfg=07
+  highlight FoldColumn            ctermbg=none ctermfg=07
   highlight Folded                ctermbg=none ctermfg=08 cterm=bold
   highlight fzf1                  ctermbg=17   ctermfg=01
   highlight fzf2                  ctermbg=17   ctermfg=07
   highlight fzf3                  ctermbg=17   ctermfg=07
-  highlight Pmenu                 ctermbg=none ctermfg=07
-  highlight PmenuSel              ctermbg=01   ctermfg=00
+  highlight Pmenu                 ctermbg=none ctermfg=18
+  highlight PmenuSel              ctermbg=none ctermfg=07
   highlight PmenuSbar             ctermbg=none
-  highlight PmenuThumb            ctermbg=01
+  highlight PmenuThumb            ctermbg=none
   highlight ALEErrorSign          ctermbg=none ctermfg=01
   highlight ALEWarningSign        ctermbg=none ctermfg=02
   highlight Visual                ctermbg=07   ctermfg=18
@@ -142,8 +142,59 @@ if colors_name ==# 'wal'
   highlight IncSearch             ctermbg=none ctermfg=01
   highlight ColorColumn           ctermbg=18   ctermfg=none
   highlight MatchParen            ctermbg=18   ctermfg=none
-  highlight StatusLine            ctermbg=none cterm=none
+  highlight BarraVuota            ctermbg=none
+  highlight StatusLine            ctermbg=none ctermfg=18 cterm=none
+  highlight StatusLineNC          ctermbg=none ctermfg=18 cterm=none
+  highlight WildMenu              ctermbg=none ctermfg=07 cterm=none
+  highlight TabLine               ctermbg=none ctermfg=07 cterm=none
+  highlight TabLineFill           ctermbg=none            cterm=none
+  highlight TabLineSel            ctermbg=01   ctermfg=00 cterm=none
 endif
+" }}}
+
+" Tab line {{{
+" This is code is almost 100% from :help setting-tabline, I've modified some
+" things.
+" I've removed the X on the right side of the tab line and made use of
+" fnamemodify to get the only the name of the file, not the full path.
+function! MyTabLine()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    " select the highlighting
+    if i + 1 == tabpagenr()
+      let s .= '%#TabLineSel#'
+    else
+      let s .= '%#TabLine#'
+    endif
+
+    " set the tab page number (for mouse clicks)
+    let s .= '%' . (i + 1) . 'T'
+
+    " the label is made by MyTabLabel()
+    let s .= ' %{MyTabLabel(' . (i + 1) . ')} '
+  endfor
+
+  " after the last tab fill with TabLineFill and reset tab page nr
+  let s .= '%#TabLineFill#%T'
+
+  " right-align the label to close the current tab page
+  " Remove close from s to don't display the close button.
+  if tabpagenr('$') > 1
+    let s .= '%=%#TabLine#%999X'
+  endif
+
+  return s
+endfunction
+
+function! MyTabLabel(n)
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+  " Use of fnamemodify to get only the name of the file, not its full or
+  " relative path.
+  return fnamemodify(bufname(buflist[winnr - 1]), ':t')
+endfunction
+
+set tabline=%!MyTabLine()
 " }}}
 
 " Mappings {{{

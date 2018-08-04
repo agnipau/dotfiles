@@ -159,14 +159,13 @@ export FZF_CTRL_R_OPTS="--reverse"
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux
 
-# Use escape sequences to change color17 to $color0_lighter_40
-# Change color18 to $color0_lighter_60
+# Use escape sequences to change color17 to $color0_lighter_30
+# Change color18 to $color0_lighter_90
 # I primarily need this trick for my vim status line
 if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
   . "${HOME}/.cache/wal/colors.sh"
   printf "\e]4;17;rgb:${color0_lighter_30:1:2}/${color0_lighter_30:3:2}/${color0_lighter_30:5:2}\e\\"
   printf "\e]4;18;rgb:${color0_lighter_90:1:2}/${color0_lighter_90:3:2}/${color0_lighter_90:5:2}\e\\"
-  printf "\e]4;19;rgb:${color1_darker_40:1:2}/${color1_darker_40:3:2}/${color1_darker_40:5:2}\e\\"
 fi
 
 clone() {
