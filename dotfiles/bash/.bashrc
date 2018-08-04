@@ -64,13 +64,12 @@ alias grad='. ${HOME}/.bashrc; hsetroot -add "$color1" -add "$color2" -gradient 
 alias solid='. ${HOME}/.bashrc; hsetroot -solid "$color1"'
 alias discord='beautifuldiscord --css "${HOME}/.cache/wal-discord/style.css"'
 alias down='curl -fsSLO'
-alias tnvim='nvim *.tex'
 
 # Short aliases.
 alias m='alsamixer'
 alias c='clear'
 alias q='exit'
-alias t='tmux'
+alias t='tmux -2'
 alias p='ping google.com'
 alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
 alias pd='pdflatex *.tex'
@@ -102,6 +101,8 @@ alias neo='clear; neofetch'
 # Aliases for editing configuration files.
 alias ebash='nvim "${HOME}/.bashrc"'
 alias envim='nvim "${HOME}/.config/nvim/init.vim"'
+alias rnvim='nvim README* || nvim readme*'
+alias tnvim='nvim *.tex'
 alias exres='nvim "${HOME}/.Xresources"'
 alias ebox='nvim "${HOME}/.config/openbox/rc.xml"'
 alias emux='nvim "${HOME}/.tmux.conf"'
@@ -168,11 +169,6 @@ export FZF_DEFAULT_OPTS="--multi --inline-info"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
 export FZF_CTRL_R_OPTS="--reverse"
 
-# Prerequisites to run some programs.
-[[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
-
-[[ -z "$TMUX" && "$DISPLAY" && -z "$PREFIX" ]] && tmux
-
 # Use escape sequences to change color17 to $color0_lighter_30
 # and to change color18 to $color0_lighter_90.
 # I primarily need this trick for my wal.vim fork.
@@ -181,6 +177,11 @@ if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
   printf "\e]4;17;rgb:${color0_lighter_30:1:2}/${color0_lighter_30:3:2}/${color0_lighter_30:5:2}\e\\"
   printf "\e]4;18;rgb:${color0_lighter_90:1:2}/${color0_lighter_90:3:2}/${color0_lighter_90:5:2}\e\\"
 fi
+
+# Prerequisites to run some programs.
+[[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
+
+[[ -z "$TMUX" && "$DISPLAY" && -z "$PREFIX" ]] && tmux -2
 
 # Functions.
 clone() {
