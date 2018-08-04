@@ -68,6 +68,7 @@ alias down='curl -fsSLO'
 # Short aliases.
 alias m='alsamixer'
 alias c='clear'
+alias cm='cmus'
 alias q='exit'
 alias t='tmux -2'
 alias p='ping google.com'

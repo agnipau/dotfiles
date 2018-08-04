@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 #
-# Triggers zen mode XD (aka concentration mode).
+# Triggers zen mode.
 
 # shellcheck source=/dev/null
 . "${HOME}/.cache/wal/colors.sh"
 
+# Kill sources of distraction.
 killall -9 telegram-desktop \
            Discord &> /dev/null
 
+# Create and set a gradient image as wallpaper using hsetroot.
 # -gradient 0 = up
 # -gradient 90 = right
 # -gradient 180 = down
@@ -17,4 +19,5 @@ killall -9 telegram-desktop \
 # shellcheck disable=SC2154
 hsetroot -add "$color1" -add "$color2" -gradient 0
 
+clear
 printf '%s\n' "Ora concentrati e porta a termine il tuo obbiettivo."

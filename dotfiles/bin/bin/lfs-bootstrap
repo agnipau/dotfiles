@@ -9,26 +9,26 @@ olddir="$PWD"
 tmpdir="$(mktemp -d)"
 cd "$tmpdir" || exit 1
 
-# lfs.
+# LFS.
 wget -mkEpnp http://www.linuxfromscratch.org/lfs/downloads/stable/
 rm -f www.linuxfromscratch.org/lfs/downloads/stable/index*
 mkdir lfs
 mv www.linuxfromscratch.org/lfs/downloads/stable/* lfs
 
-# blfs.
+# BLFS.
 wget -mkEpnp http://www.linuxfromscratch.org/blfs/downloads/stable/
 rm -f www.linuxfromscratch.org/blfs/downloads/stable/index*
 rm -f www.linuxfromscratch.org/blfs/downloads/stable/patches/index*
 mkdir blfs
 mv www.linuxfromscratch.org/blfs/downloads/stable/* blfs
 
-# jhalfs.
+# JHALFS.
 wget -mkEpnp http://www.linuxfromscratch.org/alfs/downloads/jhalfs/stable/
 rm -f www.linuxfromscratch.org/alfs/downloads/jhalfs/stable/index*
 mkdir jhalfs
 mv www.linuxfromscratch.org/alfs/downloads/jhalfs/stable/* jhalfs
 
-# hints.
+# Hints.
 wget -mkEpnp http://www.linuxfromscratch.org/hints/downloads/files/
 rm -f www.linuxfromscratch.org/hints/downloads/files/index*
 rm -f www.linuxfromscratch.org/hints/downloads/files/ATTACHMENTS/index*
@@ -41,7 +41,7 @@ rm -f www.linuxfromscratch.org/hints/downloads/files/PREVIOUS_FORMAT/index*
 mkdir hints
 mv www.linuxfromscratch.org/hints/downloads/files/* hints
 
-# patches.
+# Patches.
 wget -mkEpnp http://www.linuxfromscratch.org/patches/downloads/
 rm -f www.linuxfromscratch.org/patches/downloads/index*
 for i in www.linuxfromscratch.org/patches/downloads/*; do

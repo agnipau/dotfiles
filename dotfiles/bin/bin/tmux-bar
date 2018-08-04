@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 #
-# Converted polybar into tmux status line.
-# It works only when in full screen.
-# Modified version of the bar script by Dylan Araps.
+# A minimal tmux status line that uses FontAwesome icons.
+# It works only when in full screen (see the last if block).
+# This is a modified version of the bar script by Dylan Araps.
 
+# Display the screen brightness.
 lum() {
   abr="$(</sys/class/backlight/intel_backlight/brightness)"
   mbr="$(( "$(</sys/class/backlight/intel_backlight/max_brightness)" / 100 ))"
-  lum="$((abr / mbr - 1))% \\uf0eb"
+  lum="\\uf0eb $((abr / mbr - 1))%"
 }
 
-# Works with ALSA
+# Display the ALSA volume value.
 avol() {
   nperc="$(amixer sget Master \
     | tail -n1 \
@@ -26,16 +27,16 @@ avol() {
 
   if [[ "$vsta" == on ]]; then
     case "$nperc" in
-      [0-9]%)  vol="${nperc} \\uf026" ;;
-      [1-7]?%) vol="${nperc} \\uf027" ;;
-      *)       vol="${nperc} \\uf028" ;;
+      [0-9]%)  vol="\\uf026 ${nperc}" ;;
+      [1-7]?%) vol="\\uf027 ${nperc}" ;;
+      *)       vol="\\uf028  ${nperc}" ;;
     esac
   elif [[ "$vsta" == off ]]; then
-    vol="muted \\uf026"
+    vol="\\uf026 muted"
   fi
 }
 
-# Works with PulseAudio
+# Display the PulseAudio volume value.
 pvol() {
   nperc="$(pactl list sinks \
     | grep '^[[:space:]]Volume:' \
@@ -51,43 +52,47 @@ pvol() {
 
   if [[ "$vsta" == on ]]; then
     case "$nperc" in
-      [0-9])  vol="${nperc}% \\uf026" ;;
-      [1-7]?) vol="${nperc}% \\uf027" ;;
-      *)      vol="${nperc}% \\uf028" ;;
+      [0-9])  vol="\\uf026 ${nperc}%" ;;
+      [1-7]?) vol="\\uf027 ${nperc}%" ;;
+      *)      vol="\\uf028  ${nperc}%" ;;
     esac
   elif [[ "$vsta" == off ]]; then
-    vol="muted \\uf026"
+    vol="\\uf026 muted"
   fi
 }
 
+# Display the SSID name.
 ssid() {
   if [[ -z "$(iwgetid -r)" ]]; then
-    ssid="- \\uf1eb"
+    ssid="\\uf1eb  -"
   elif [[ "$(iwgetid -r)" ]]; then
-    ssid="$(iwgetid -r) \\uf1eb"
+    ssid="\\uf1eb  $(iwgetid -r)"
   fi
 }
 
+# Display the battery percentage.
 bat() {
   sta="$(</sys/class/power_supply/BAT0/status)"
   cap="$(</sys/class/power_supply/BAT0/capacity)"
 
   case "$cap" in
-    [0-9])  bat="${cap}% \\uf244" ;;
-    [1-3]?) bat="${cap}% \\uf243" ;;
-    [4-6]?) bat="${cap}% \\uf242" ;;
-    [7-9]?) bat="${cap}% \\uf241" ;;
-    *)      bat="100% \\uf240" ;;
+    [0-9])  bat="\\uf244   ${cap}%" ;;
+    [1-3]?) bat="\\uf243   ${cap}%" ;;
+    [4-6]?) bat="\\uf242   ${cap}%" ;;
+    [7-9]?) bat="\\uf241   ${cap}%" ;;
+    *)      bat="\\uf240   100%" ;;
   esac
 
   [[ "$sta" == Charging ]] && \
     bat="$bat  \\uf0e7"
 }
 
+# Display the date and time.
 ore() {
-  ore="$(printf "%(%a %d %b %H:%M)T" "-1") \\uf017"
+  ore="\\uf017  $(printf "%(%a %d %b %H:%M)T" "-1")"
 }
 
+# If tmux is on fullscreen, display the bar.
 if (("${1:-165}" >= 164 && "${2:-35}" >= 34)); then
   lum
   pvol
@@ -95,7 +100,7 @@ if (("${1:-165}" >= 164 && "${2:-35}" >= 34)); then
   bat
   ore
   [[ "$sta" == Discharging ]] && \
-    printf '%b\n' "$lum  $vol   $ssid   $bat    $ore "
+    printf '%b\n' "$lum  $vol  $ssid  $bat  $ore"
   [[ "$sta" == Charging ]] && \
-    printf '%b\n' "$lum  $vol   $ssid   $bat  $ore "
+    printf '%b\n' "$lum  $vol  $ssid  $bat  $ore "
 fi

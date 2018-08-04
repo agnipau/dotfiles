@@ -491,7 +491,7 @@
   </keybind>
   <keybind key="W-z">
     <action name="Execute">
-      <command>~/bin/draw-openbox</command>
+      <command>~/bin/draw</command>
     </action>
   </keybind>
   <keybind key="W-m">
@@ -511,7 +511,7 @@
   </keybind>
   <keybind key="W-C-p">
     <action name="Execute">
-      <command>~/bin/polyop</command>
+      <command>~/bin/polyon</command>
     </action>
   </keybind>
   <keybind key="W-C-S-p">
@@ -603,7 +603,7 @@
   </keybind>
   <keybind key="W-C-Up">
     <action name="Execute">
-      <command>~/bin/spcontrol --pause</command>
+      <command>~/bin/spotify-control --pause</command>
     </action>
   </keybind>
   <keybind key="W-S-Up">
@@ -613,7 +613,7 @@
   </keybind>
   <keybind key="W-C-S-Up">
     <action name="Execute">
-      <command>~/bin/spcontrol --play</command>
+      <command>~/bin/spotify-control --play</command>
     </action>
   </keybind>
   <keybind key="W-Down">
@@ -623,7 +623,7 @@
   </keybind>
   <keybind key="W-C-Down">
     <action name="Execute">
-      <command>~/bin/spcontrol --toggle</command>
+      <command>~/bin/spotify-control --toggle</command>
     </action>
   </keybind>
   <keybind key="W-Left">
@@ -638,7 +638,7 @@
   </keybind>
   <keybind key="W-C-Left">
     <action name="Execute">
-      <command>~/bin/spcontrol --prev</command>
+      <command>~/bin/spotify-control --prev</command>
     </action>
   </keybind>
   <keybind key="W-Right">
@@ -653,7 +653,7 @@
   </keybind>
   <keybind key="W-C-Right">
     <action name="Execute">
-      <command>~/bin/spcontrol --next</command>
+      <command>~/bin/spotify-control --next</command>
     </action>
   </keybind>
 </keyboard>
@@ -726,12 +726,12 @@
     </mousebind>
     <mousebind button="W-Left" action="Click">
       <action name="Execute">
-        <command>~/bin/draw-openbox</command>
+        <command>~/bin/draw</command>
       </action>
     </mousebind>
     <mousebind button="W-Right" action="Click">
       <action name="Execute">
-        <command>~/bin/draw-openbox</command>
+        <command>~/bin/draw</command>
       </action>
     </mousebind>
     <mousebind button="Right" action="Click">

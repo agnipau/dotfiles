@@ -2,12 +2,13 @@
 #
 # Returns the artist name and the title of the song played by cmus.
 
-if [[ "$(pgrep -x cmus &>/dev/null; printf '%s' "$?")" -eq 0 ]]; then
+if pgrep -x cmus &>/dev/null; then
   title_gre="$(cmus-remote -Q | grep '^tag title')"
   title="${title_gre/'tag title '}"
   
   artist_gre="$(cmus-remote -Q | grep '^tag artist')"
   artist="${artist_gre/'tag artist '}"
   
-  printf '%s\n' "${artist} - ${title}"
+  ico="$(printf '%b' '\uf001')"
+  notify-send --expire-time=3000 "${ico}   ${artist} - ${title}"
 fi

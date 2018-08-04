@@ -2,6 +2,7 @@
 #
 # Simple bulk renamer script.
 
+# Set some variables used in the if block.
 path="$1"
 prefix="$2"
 match="$3"
@@ -10,6 +11,7 @@ cd "$path" || exit 1
 tmp_dir="$(mktemp -d)"
 c=0
 
+# Rename all the files.
 if [[ -z "$match" ]]; then
   for file in *; do
     ((c += 1))
@@ -28,5 +30,6 @@ elif [[ "$match" ]]; then
   done
 fi
 
+# Move all the files in the current directory and remove the temporary one.
 mv "$tmp_dir"/* .
 rm -rf "$tmp_dir"

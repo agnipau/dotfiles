@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 #
-# Style script.
+# Terminal style script.
 
 # shellcheck source=/dev/null
 source_wal() {
 . "${HOME}/.cache/wal/colors.sh"
 }
 
+# Change wallpaper and apply to the terminals a dark theme using the wallpapers colors.
 another-wal-dark() {
   wal -c -q --iterative --backend wal -i "${HOME}/progetti/wallpapers" \
       -o "${HOME}/bin/wal-set"
@@ -15,6 +16,7 @@ another-wal-dark() {
   for pid in $(pidof st); do kill -s USR1 "$pid"; done
 }
 
+# Change wallpaper and apply to the terminals a light theme using the wallpapers colors.
 another-wal-light() {
   wal -c -q --iterative --backend wal -i "${HOME}/progetti/wallpapers" \
       -o "${HOME}/bin/wal-set" -l
@@ -23,6 +25,8 @@ another-wal-light() {
   for pid in $(pidof st); do kill -s USR1 "$pid"; done
 }
 
+# Change wallpaper, make the current wallpaper a gradient image and apply to the
+# terminals a dark theme using the wallpapers colors.
 another-grad-dark() {
   wal -c -q --iterative --backend wal -i "${HOME}/progetti/wallpapers" \
       -o "${HOME}/bin/wal-set" -n
@@ -34,6 +38,8 @@ another-grad-dark() {
   for pid in $(pidof st); do kill -s USR1 "$pid"; done
 }
 
+# Change wallpaper, make the current wallpaper a gradient image and apply to the
+# terminals a light theme using the wallpapers colors.
 another-grad-light() {
   wal -c -q --iterative --backend wal -i "${HOME}/progetti/wallpapers" \
       -o "${HOME}/bin/wal-set" -l -n
@@ -44,6 +50,7 @@ another-grad-light() {
   for pid in $(pidof st); do kill -s USR1 "$pid"; done
 }
 
+# Apply to the terminals a dark theme using the wallpapers colors.
 current-wal-dark() {
   wal -c -q --backend wal -i "$(<"${HOME}/.cache/wal/wal")" \
       -o "${HOME}/bin/wal-set"
@@ -52,6 +59,7 @@ current-wal-dark() {
   for pid in $(pidof st); do kill -s USR1 "$pid"; done
 }
 
+# Apply to the terminals a light theme using the wallpapers colors.
 current-wal-light() {
   wal -c -q --backend wal -i "$(<"${HOME}/.cache/wal/wal")" \
       -o "${HOME}/bin/wal-set" -l
@@ -60,6 +68,8 @@ current-wal-light() {
   for pid in $(pidof st); do kill -s USR1 "$pid"; done
 }
 
+# Make the current wallpaper a gradient image and apply to the terminals a dark
+# theme using the wallpapers colors.
 current-grad-dark() {
   wal -c -q --backend wal -i "$(<"${HOME}/.cache/wal/wal")" \
       -o "${HOME}/bin/wal-set" -n
@@ -70,6 +80,8 @@ current-grad-dark() {
   for pid in $(pidof st); do kill -s USR1 "$pid"; done
 }
 
+# Make the current wallpaper a gradient image and apply to the terminals a light
+# theme using the wallpapers colors.
 current-grad-light() {
   wal -c -q --backend wal -i "$(<"${HOME}/.cache/wal/wal")" \
       -o "${HOME}/bin/wal-set" -l -n

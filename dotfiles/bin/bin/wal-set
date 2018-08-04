@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 #
-# Script executed by pywal.
-
-set -x
+# Hook script executed by pywal.
 
 # shellcheck source=/dev/null
 . "${HOME}/.cache/wal/colors.sh"
 
+# Apply colors to dunst.
 reload_dunst() {
   killall -9 dunst
   dunst \
@@ -21,6 +20,7 @@ reload_dunst() {
     -cfr "${color1:-#ff0000}" &
 }
 
+# Generate a theme for zathura.
 reload_zathura() {
   cat <<EOF >"${HOME}/.cache/wal/colors-zathura"
 set default-bg "${color0:-#000000}"
@@ -36,6 +36,7 @@ set inputbar-fg "${color7:-#ffffff}"
 EOF
 }
 
+# Apply the colors to my OpenBox theme.
 reload_openbox() {
   sed -i --follow-symlinks \
       -e "s/bg.color: #.*/bg.color:       ${color0:-#000000}/" \
@@ -45,13 +46,15 @@ reload_openbox() {
   openbox --reconfigure
 }
 
-reload_colors() {
+# Fix transparency with fzf in terminal.
+fix_fzf_transparency() {
   old_string="--color fg:7,bg:0,hl:1,fg+:232,bg+:1,hl+:255"
   new_string="--color fg:7,hl:1,fg+:232,bg+:1,hl+:255"
   sed -i -e "s/$old_string/$new_string/" \
          "${HOME}/.cache/wal/colors.sh"
 }
 
+# Set radius to rofi and change the foreground color of the selected program.
 reload_rofi() {
   sed -i -e "33i\ \ \ \ border-radius: 4;" \
          "${HOME}/.cache/wal/colors-rofi-dark.rasi"
@@ -59,7 +62,7 @@ reload_rofi() {
          "${HOME}/.cache/wal/colors-rofi-dark.rasi"
 }
 
-# Change the value of color17 and the value of color18
+# Change the value of color17 and the value of color18.
 add_colors_variants() {
   . "${HOME}/.cache/wal/colors.sh"
   for term in /dev/pts/[0-9]*; do
@@ -74,7 +77,7 @@ main() {
   reload_dunst
   reload_zathura
   reload_openbox
-  reload_colors
+  fix_fzf_transparency
   reload_rofi
   "${HOME}/progetti/wal-telegram/wal-telegram"
   "${HOME}/altri_progetti/wal-discord/wal-discord"

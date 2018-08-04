@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 #
-# Control alsa controllers values.
+# Control ALSA controllers values.
+# Uses FontAwesome icons for the current() function.
 
+# Get the current volume value.
 current() {
   nperc="$(amixer sget Master \
     | tail -n1 \

@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 #
-# Control the volume in pulseaudio.
+# Control PulseAudio controllers values.
+# Uses FontAwesome icons for the current() function.
 
+# Get the current volume value.
 current() {
   nperc="$(pactl list sinks \
     | grep '^[[:space:]]Volume:' \

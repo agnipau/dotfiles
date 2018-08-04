@@ -86,7 +86,7 @@ label-empty-foreground    = ${colors.foreground}
 ; wifi-menu opened.
 [module/wifi]
 type              = custom/script
-exec              = ~/bin/net
+exec              = ~/bin/show-ssid
 interval          = 1
 format            = <label>
 format-background = ${colors.background}
@@ -158,7 +158,7 @@ click-right       = ~/bin/pvol --cento
 ; xbacklight doesn't work in my laptop, so I wrote a script to do the same thing.
 [module/brightness]
 type              = custom/script
-exec              = ~/bin/lum --current
+exec              = ~/bin/brightness --current
 interval          = 0.1
 format            = <label>
 format-background = ${colors.background}
@@ -191,7 +191,7 @@ label             = 
 exec              = printf '%s' label
 scroll-up         = cmus-remote --seek +5s
 scroll-down       = cmus-remote --seek -5s
-click-left        = cmus-remote --pause  || ~/bin/spcontrol --toggle
-click-right       = cmus-remote --prev  || ~/bin/spcontrol --prev
-click-middle      = cmus-remote --next || ~/bin/spcontrol --next
+click-left        = cmus-remote --pause  || ~/bin/spotify-control --toggle
+click-right       = cmus-remote --prev  || ~/bin/spotify-control --prev
+click-middle      = cmus-remote --next || ~/bin/spotify-control --next
 format-foreground = ${colors.foreground}
