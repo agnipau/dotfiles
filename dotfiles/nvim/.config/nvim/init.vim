@@ -1,10 +1,44 @@
 " Plugins {{{
+
+let mapleader=' '
+let maplocalleader=' '
+
+nnoremap <leader>pc :PlugClean!<cr>
+nnoremap <leader>pu :PlugUpdate<cr>
+nnoremap <leader>pi :PlugInstall<cr>
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'matteoguarda/wal.vim'
+Plug 'junegunn/limelight.vim'
+  nnoremap <leader>li :Limelight!!<cr>
+Plug 'Yggdroot/indentLine'
+  let g:indentLine_color_term = 18
+  let g:indentLine_char = '▏'
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/limelight.vim'
+  augroup fzf_nost
+    autocmd!
+    autocmd  FileType fzf set laststatus=0
+    autocmd BufLeave <buffer> set laststatus=2
+  augroup END
+  nnoremap <leader>ff :FZF<cr>
+  nnoremap <leader>fbl :BLines<cr>
+  nnoremap <leader>fll :Lines<cr>
+Plug 'scrooloose/nerdtree'
+  nnoremap <c-a> :NERDTreeToggle<cr>
+  let g:NERDTreeDirArrowExpandable  = '+'
+  let g:NERDTreeDirArrowCollapsible = '-'
+  let g:NERDTreeStatusline          = ' '
+  let g:NERDTreeMinimalUI           = 1
+  let g:NERDTreeWinPos              = 'left'
+  let g:NERDTreeWinSize             = 20
+  augroup nerdtree_close
+    autocmd!
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+  augroup END
+
 Plug 'terryma/vim-multiple-cursors'
   let g:multi_cursor_use_default_mapping = 0
   let g:multi_cursor_select_all_word_key = '<c-t>'
@@ -14,34 +48,14 @@ Plug 'terryma/vim-multiple-cursors'
   let g:multi_cursor_quit_key            = '<esc>'
 Plug 'terryma/vim-expand-region'
 
-"Plug 'reedes/vim-pencil'
-"  function! s:prose()
-"    call pencil#init()
-"    call textobj#quote#init()
-"  
-"    iabbrev <buffer> -- –
-"    iabbrev <buffer> --- —
-"    iabbrev <buffer> << «
-"    iabbrev <buffer> >> »
-"    iabbrev <buffer> ... …
-"  endfunction
-"  augroup writing
-"    autocmd!
-"    autocmd! FileType markdown,mkd,text call <SID>prose()
-"  augroup END
-Plug 'reedes/vim-textobj-quote'
-Plug 'kana/vim-textobj-user'
-Plug 'Yggdroot/indentLine'
-  let g:indentLine_color_term = 18
-  let g:indentLine_char = '▏'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
-Plug 'mzlogin/vim-markdown-toc'
-Plug 'machakann/vim-highlightedyank'
-  let g:highlightedyank_highlight_duration = 200
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   let g:deoplete#enable_at_startup = 1
   inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
@@ -49,22 +63,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-vim'
 Plug 'wellle/tmux-complete.vim'
   let g:tmuxcomplete#trigger = ''
-Plug 'mattn/emmet-vim'
-  let g:user_emmet_leader_key = '<c-d>'
-Plug 'junegunn/vim-easy-align'
-  xmap ga <plug>(EasyAlign)
-  nmap ga <plug>(EasyAlign)
-Plug 'lambdalisue/vim-manpager'
-Plug 'rhysd/open-pdf.vim'
-Plug 'yuttie/comfortable-motion.vim'
-  let g:comfortable_motion_no_default_key_mappings = 1
-  nnoremap <silent> J :call comfortable_motion#flick(55)<cr>
-  nnoremap <silent> K :call comfortable_motion#flick(-55)<cr>
-  noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<cr>
-  noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<cr>
-
 Plug 'w0rp/ale'
-  " Partially fix the annoying cursor lag
   let g:ale_echo_delay                       = 0
   let g:ale_linters_sh_shellcheck_exclusions = 'SC1090'
   let g:ale_lint_on_save                     = 0
@@ -72,20 +71,47 @@ Plug 'w0rp/ale'
   let g:ale_lint_on_enter                    = 0
   let g:ale_sign_error                       = '> '
   let g:ale_sign_warning                     = '! '
-  autocmd! BufReadPre * ALEDisable
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
+  augroup ale_disable_on_startup
+    autocmd!
+    autocmd BufReadPre * ALEDisable
+  augroup END
+  nnoremap <leader>aa :ALEEnable<cr>
+  nnoremap <leader>af :ALEDisable<cr>
+  nmap <silent> <c-q> <plug>(ale_previous_wrap)
+  nmap <silent> <c-e> <plug>(ale_next_wrap)
+
+Plug 'mattn/emmet-vim'
+  let g:user_emmet_leader_key = '<c-d>'
+Plug 'junegunn/vim-easy-align'
+  xmap ga <plug>(EasyAlign)
+  nmap ga <plug>(EasyAlign)
+Plug 'mzlogin/vim-markdown-toc'
+
+Plug 'machakann/vim-highlightedyank'
+  let g:highlightedyank_highlight_duration = 200
+Plug 'yuttie/comfortable-motion.vim'
+  let g:comfortable_motion_no_default_key_mappings = 1
+  nnoremap <silent> J :call comfortable_motion#flick(55)<cr>
+  nnoremap <silent> K :call comfortable_motion#flick(-55)<cr>
+  noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<cr>
+  noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<cr>
+Plug 'lambdalisue/vim-manpager'
+Plug 'rhysd/open-pdf.vim'
 
 call plug#end()
+
 " }}}
 
 " Options {{{
+
 set encoding=utf-8
 scriptencoding utf-8
+
 syntax on
 filetype on
 filetype plugin indent on
+
+set mouse=a
 set nonumber
 set nocursorline
 set wrap
@@ -96,63 +122,28 @@ set noruler
 set laststatus=2
 set statusline=%#BarraVuota# 
 set noshowcmd
-set shortmess=atIcF
+set shortmess+=cs
 set t_Co=256
+set notermguicolors
+colorscheme wal
+set fillchars=fold:\ 
 set foldlevelstart=0
+set colorcolumn=0
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-set notermguicolors
 set hidden
-set mouse=a
 set history=10000
 set backupdir=~/.config/nvim/tmp,~/.vim/tmp,.
 set directory=~/.config/nvim/tmp,~/.vim/tmp,.
 set backspace=indent,eol,start
 set clipboard=unnamedplus
-set colorcolumn=0
-" }}}
 
-" Look and feel {{{
-colorscheme wal
-set fillchars=fold:\ 
-if colors_name ==# 'wal'
-  highlight EndOfBuffer           ctermbg=none ctermfg=00
-  highlight FoldColumn            ctermbg=none ctermfg=07
-  highlight Folded                ctermbg=none ctermfg=08 cterm=bold
-  highlight fzf1                  ctermbg=17   ctermfg=01
-  highlight fzf2                  ctermbg=17   ctermfg=07
-  highlight fzf3                  ctermbg=17   ctermfg=07
-  highlight Pmenu                 ctermbg=none ctermfg=18
-  highlight PmenuSel              ctermbg=none ctermfg=07
-  highlight PmenuSbar             ctermbg=none
-  highlight PmenuThumb            ctermbg=none
-  highlight ALEErrorSign          ctermbg=none ctermfg=01
-  highlight ALEWarningSign        ctermbg=none ctermfg=02
-  highlight Visual                ctermbg=07   ctermfg=18
-  highlight HighlightedyankRegion ctermbg=none ctermfg=07
-  highlight CursorLine            ctermbg=18   ctermfg=08 cterm=none
-  highlight VertSplit             ctermbg=none ctermfg=18 cterm=none
-  highlight Comment               ctermbg=none ctermfg=08 cterm=italic
-  highlight LineNr                ctermbg=none ctermfg=18
-  highlight CursorLineNr          ctermbg=none ctermfg=07
-  highlight CursorLine            ctermbg=none ctermfg=none
-  highlight Search                ctermbg=18   ctermfg=none
-  highlight IncSearch             ctermbg=none ctermfg=01
-  highlight ColorColumn           ctermbg=18   ctermfg=none
-  highlight MatchParen            ctermbg=18   ctermfg=none
-  highlight BarraVuota            ctermbg=none
-  highlight StatusLine            ctermbg=none ctermfg=18 cterm=none
-  highlight StatusLineNC          ctermbg=none ctermfg=18 cterm=none
-  highlight WildMenu              ctermbg=none ctermfg=07 cterm=none
-  highlight TabLine               ctermbg=none ctermfg=07 cterm=none
-  highlight TabLineFill           ctermbg=none            cterm=none
-  highlight TabLineSel            ctermbg=01   ctermfg=00 cterm=none
-endif
 " }}}
 
 " Tab line {{{
+
 " This is code is almost 100% from :help setting-tabline, I've modified some
 " things.
 " I've removed the X on the right side of the tab line and made use of
@@ -195,111 +186,50 @@ function! MyTabLabel(n)
 endfunction
 
 set tabline=%!MyTabLine()
+
 " }}}
 
 " Mappings {{{
-" Define leader keys
-let mapleader=' '
-let maplocalleader=' '
 
-" Normal mode mappings {{{
 nnoremap <leader><leader> /
 nnoremap <leader>mo :nohlsearch<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>rr :source $MYVIMRC<cr>
-nnoremap <leader>" viw<esc>a"<esc>bi"<esc>el
-nnoremap <leader>' viw<esc>a'<esc>bi'<esc>el
-nnoremap H 0
-nnoremap L $
-nnoremap <leader>C 0x
-nnoremap <leader>w  :match ExtraWhitespace /\s\+$/<cr>
-nnoremap <leader>W  :match<cr>
-nnoremap / /\v
-nnoremap <leader>go :Goyo<cr>
-nnoremap <leader>li :Limelight!<cr>
-nnoremap <leader>cc :call <SID>ColorColumnToggle()<cr>
+nnoremap <leader>n :set number! cursorline!<cr>
 nnoremap <c-h> :tabprevious<cr>
 nnoremap <c-l> :tabnext<cr>
 nnoremap <c-n> :cnext<cr>zz
 nnoremap <c-m> :cprevious<cr>zz
+nnoremap H 0
+nnoremap L $
+nnoremap ; :
+nnoremap è .
+nnoremap <leader>cc :call <SID>ColorColumnToggle()<cr>
 nnoremap <leader>f :call <SID>FoldColumnToggle()<cr>
 nnoremap <leader>q :call <SID>QuickfixToggle()<cr>
 nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
-nnoremap <leader>aa :ALEEnable<cr>
-nnoremap <leader>af :ALEDisable<cr>
-nmap <silent> <c-q> <plug>(ale_previous_wrap)
-nmap <silent> <c-e> <plug>(ale_next_wrap)
-nnoremap <leader>pc :PlugClean!<cr>
-nnoremap <leader>pu :PlugUpdate<cr>
-nnoremap <leader>pi :PlugInstall<cr>
-nnoremap ; :
-nnoremap è .
-nnoremap <leader>n :set number! cursorline!<cr>
 nnoremap <leader>; :call <SID>ToggleFinalDot()<cr>
-" }}}
 
-" Visual mode mappings {{{
-xnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
-xnoremap <leader>' <esc>`<i"<esc>`>la"<esc>
 xnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
 xmap v <plug>(expand_region_expand)
 xmap <c-v> <plug>(expand_region_shrink)
 xnoremap ; :
-" }}}
 
-" Insert mode mappings {{{
-inoremap <c-u> <esc>viw~wa
-onoremap in( :<c-u>normal! f)vi(<cr>
-onoremap il( :<c-u>normal! F)vi(<cr>
-onoremap in{ :<c-u>normal! f}vi{<cr>
-onoremap il{ :<c-u>normal! F}vi{<cr>
-" }}}
 " }}}
 
 " Auto commands {{{
-" No Wrap {{{
-" Set nowrap to some files
-augroup filetype_wrap
-  autocmd!
-  autocmd BufNewFile,BufRead *.html setlocal nowrap
-augroup END
-" }}}
 
-" Comments {{{
-" Comments for file type
-augroup filetype_comments
-  autocmd!
-  autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
-  autocmd FileType javascript iabbrev  <buffer> iff if ()
-  autocmd FileType python     nnoremap <buffer> <localleader>c I#<esc>
-  autocmd FileType python     iabbrev  <buffer> iff if:
-  autocmd FileType sh         nnoremap <buffer> <localleader>c I#<esc>
-  autocmd FileType sh         iabbrev  <buffer> iff if [[  ]]; then
-augroup END
-" }}}
-
-" MD {{{
-" Change title of headings for markdown files
-augroup filetype_md
-  autocmd!
-  autocmd FileType markdown onoremap <buffer> ih= :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
-  autocmd FileType markdown onoremap <buffer> ih- :<c-u>execute "normal! ?^--\\+$\r:nohlsearch\rkvg_"<cr>
-  autocmd FileType markdown onoremap <buffer> ah= :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rg_vk0"<cr>
-  autocmd FileType markdown onoremap <buffer> ah- :<c-u>execute "normal! ?^--\\+$\r:nohlsearch\rg_vk0"<cr>
-augroup END
-" }}}
-
-" VIM {{{
-" Use marker method of folding for any Vimscript file
+" Use marker method of folding for any Vimscript file.
 augroup filetype_vim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
 augroup END
-" }}}
+
 " }}}
 
 " Functions {{{
-" Toggle the foldcolumn option
+
+" Toggle the foldcolumn option.
 function! s:FoldColumnToggle()
   if &foldcolumn
     setlocal foldcolumn=0
@@ -308,7 +238,7 @@ function! s:FoldColumnToggle()
   endif
 endfunction
 
-" Toggle the final dot in the end of a sentence
+" Toggle the final dot in the end of a sentence.
 function! s:ToggleFinalDot()
   let sunreg = @@
 
@@ -322,7 +252,7 @@ function! s:ToggleFinalDot()
   let @@ = sunreg
 endfunction
 
-" Toggle the colorcolumn option
+" Toggle the colorcolumn option.
 function! s:ColorColumnToggle()
   if &colorcolumn
     setlocal colorcolumn=0
@@ -331,7 +261,7 @@ function! s:ColorColumnToggle()
   endif
 endfunction
 
-" Toggle the quickfix window
+" Toggle the quickfix window.
 let g:quickfix_is_open = 0
 
 function! s:QuickfixToggle()
@@ -346,7 +276,7 @@ function! s:QuickfixToggle()
   endif
 endfunction
 
-" Grep operator
+" Grep operator.
 function! s:GrepOperator(type)
   let saved_unnamed_register = @@
 
@@ -363,4 +293,5 @@ function! s:GrepOperator(type)
 
   let @@ = saved_unnamed_register
 endfunction
+
 " }}}
