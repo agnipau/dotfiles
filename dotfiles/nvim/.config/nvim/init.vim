@@ -20,10 +20,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
   augroup fzf_nost
     autocmd!
-    autocmd  FileType fzf set laststatus=0
+    autocmd FileType fzf set laststatus=0
     autocmd BufLeave <buffer> set laststatus=2
   augroup END
-  nnoremap <leader>ff :FZF<cr>
+  nnoremap <leader>ff  :FZF<cr>
   nnoremap <leader>fbl :BLines<cr>
   nnoremap <leader>fll :Lines<cr>
 Plug 'scrooloose/nerdtree'
@@ -47,6 +47,8 @@ Plug 'terryma/vim-multiple-cursors'
   let g:multi_cursor_skip_key            = '<c-p>'
   let g:multi_cursor_quit_key            = '<esc>'
 Plug 'terryma/vim-expand-region'
+  xmap v <plug>(expand_region_expand)
+  xmap <c-v> <plug>(expand_region_shrink)
 
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
@@ -91,10 +93,10 @@ Plug 'machakann/vim-highlightedyank'
   let g:highlightedyank_highlight_duration = 200
 Plug 'yuttie/comfortable-motion.vim'
   let g:comfortable_motion_no_default_key_mappings = 1
-  nnoremap <silent> J :call comfortable_motion#flick(55)<cr>
-  nnoremap <silent> K :call comfortable_motion#flick(-55)<cr>
-  noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<cr>
-  noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<cr>
+  nnoremap <silent> J                 :call comfortable_motion#flick(55)<cr>
+  nnoremap <silent> K                 :call comfortable_motion#flick(-55)<cr>
+  noremap  <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<cr>
+  noremap  <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<cr>
 Plug 'lambdalisue/vim-manpager'
 Plug 'rhysd/open-pdf.vim'
 
@@ -195,7 +197,7 @@ nnoremap <leader><leader> /
 nnoremap <leader>mo :nohlsearch<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>rr :source $MYVIMRC<cr>
-nnoremap <leader>n :set number! cursorline!<cr>
+nnoremap <leader>n  :set number! cursorline!<cr>
 nnoremap <c-h> :tabprevious<cr>
 nnoremap <c-l> :tabnext<cr>
 nnoremap <c-n> :cnext<cr>zz
@@ -204,16 +206,13 @@ nnoremap H 0
 nnoremap L $
 nnoremap ; :
 nnoremap è .
+nnoremap <leader>;  :call <SID>ToggleFinalDot()<cr>
 nnoremap <leader>cc :call <SID>ColorColumnToggle()<cr>
-nnoremap <leader>f :call <SID>FoldColumnToggle()<cr>
-nnoremap <leader>q :call <SID>QuickfixToggle()<cr>
-nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
-nnoremap <leader>; :call <SID>ToggleFinalDot()<cr>
+nnoremap <leader>q  :call <SID>QuickfixToggle()<cr>
+nnoremap <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
 
-xnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
-xmap v <plug>(expand_region_expand)
-xmap <c-v> <plug>(expand_region_shrink)
 xnoremap ; :
+xnoremap <leader>g  :<c-u>call <SID>GrepOperator(visualmode())<cr>
 
 " }}}
 
@@ -229,15 +228,6 @@ augroup END
 
 " Functions {{{
 
-" Toggle the foldcolumn option.
-function! s:FoldColumnToggle()
-  if &foldcolumn
-    setlocal foldcolumn=0
-  else
-    setlocal foldcolumn=1
-  endif
-endfunction
-
 " Toggle the final dot in the end of a sentence.
 function! s:ToggleFinalDot()
   let sunreg = @@
@@ -252,7 +242,7 @@ function! s:ToggleFinalDot()
   let @@ = sunreg
 endfunction
 
-" Toggle the colorcolumn option.
+" Toggle the colorcolumn.
 function! s:ColorColumnToggle()
   if &colorcolumn
     setlocal colorcolumn=0
