@@ -38,11 +38,10 @@ EOF
 
 # Apply the colors to my OpenBox theme.
 reload_openbox() {
-  sed -i --follow-symlinks \
-      -e "s/bg.color:       #.*/bg.color:       ${color0:-#000000}/" \
-      -e "s/text.color:   #.*/text.color:   ${color7:-#ffffff}/" \
-      -e "s/image.color: #.*/image.color: ${color7:-#ffffff}/" \
-      "${HOME}/.themes/thicc/openbox-3/themerc"
+  sed -i -e "s/bg.color:       #.*/bg.color:       ${color0:-#000000}/" \
+         -e "s/text.color:   #.*/text.color:   ${color7:-#ffffff}/" \
+         -e "s/image.color: #.*/image.color: ${color7:-#ffffff}/" \
+         "${HOME}/.themes/thicc/openbox-3/themerc"
   openbox --reconfigure
 }
 
@@ -73,6 +72,12 @@ add_colors_variants() {
   done
 }
 
+# Change some color values for pqiv in rifle's rifle.conf config file.
+reload_rifle() {
+  sed -i -e "s/--box-colors='#.*':'#.*'/--box-colors='${color7}':'${color0}'/" \
+         "${HOME}/.config/ranger/rifle.conf"
+}
+
 main() {
   reload_dunst
   reload_zathura
@@ -83,6 +88,7 @@ main() {
   "${HOME}/altri_progetti/wal-discord/wal-discord"
   "${HOME}/bin/extend_pywal"
   add_colors_variants
+  reload_rifle
 }
 
 main
