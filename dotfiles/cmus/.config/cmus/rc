@@ -1,0 +1,6 @@
+# rc
+#
+# cmus config file.
+
+# Use PulseAudio instead of ALSA.
+set output_plugin=pulse

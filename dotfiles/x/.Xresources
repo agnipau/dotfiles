@@ -1,53 +1,53 @@
-!
 ! .Xresources
 !
+! Resource file for xrdb.
 
-! Colors
+! Include pywal colors.
 #include "/home/matte/.cache/wal/colors.Xresources"
 
-! Fallback fonts
-*.font: xft:Iosevka Term:size=12
-*.boldFont: xft:Iosevka Term Bold:size=12
+! Fallback fonts.
+*.font:       xft:Iosevka Term:size=12
+*.boldFont:   xft:Iosevka Term Bold:size=12
 *.italicFont: xft:Iosevka Term Bold Italic:size=12
 
-! Xft settings
+! Xft settings.
 Xft.antialias: true
-Xft.hinting: true
-Xft.autohint: false
-Xft.rgba: rgb
+Xft.hinting:   true
+Xft.autohint:  false
+Xft.rgba:      rgb
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintslight
 
-! Rofi
-rofi.theme: .cache/wal/colors-rofi-dark.rasi
-rofi.font: Iosevka 16
-rofi.separator-style: none
-rofi.hide-scrollbar: true
-rofi.fullscreen: false
-rofi.location: 1
+! Rofi settings.
+rofi.theme:             .cache/wal/colors-rofi-dark.rasi
+rofi.font:              Iosevka 16
+rofi.separator-style:   none
+rofi.hide-scrollbar:    true
+rofi.fullscreen:        false
+rofi.location:          1
 rofi.fake-transparency: true
-rofi.columns: 1
-rofi.lines: 5
-rofi.yoffset: 30
-rofi.xoffset: 30
-rofi.width: 300
-rofi.padding: 25
+rofi.columns:           1
+rofi.lines:             5
+rofi.yoffset:           30
+rofi.xoffset:           30
+rofi.width:             300
+rofi.padding:           25
 
-! st
-st.termname: st-256color
-st.shell: /bin/bash
-st.font: Iosevka Term:size=12:antialias=true:autohint=true;
-st.borderpx: 25
-st.cursorshape: 2
-st.cursorthickness: 2
-st.cursorblinkstyle: 0
+! xst settings.
+st.termname:          st-256color
+st.shell:             /bin/bash
+st.font:              Iosevka Term:size=12:antialias=true:autohint=true;
+st.borderpx:          25
+st.cursorshape:       2
+st.cursorthickness:   2
+st.cursorblinkstyle:  0
 st.cursorblinkontype: 1
-st.bold_font: 1
-st.xfps: 120
-st.actionfps: 30
-st.chscale: 1.0
-st.cwscale: 1.0
-st.blinktimeout: 800
-st.bellvolume: 0
-st.prompt_char: $
-st.opacity: 255
+st.bold_font:         1
+st.xfps:              120
+st.actionfps:         30
+st.chscale:           1.0
+st.cwscale:           1.0
+st.blinktimeout:      800
+st.bellvolume:        0
+st.prompt_char:       $
+st.opacity:           255

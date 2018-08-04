@@ -204,14 +204,14 @@ nnoremap <c-n> :cnext<cr>zz
 nnoremap <c-m> :cprevious<cr>zz
 nnoremap H 0
 nnoremap L $
-nnoremap ; :
+nnoremap , :
 nnoremap è .
-nnoremap <leader>;  :call <SID>ToggleFinalDot()<cr>
+nnoremap <leader>,  :call <SID>ToggleFinalDot()<cr>
 nnoremap <leader>cc :call <SID>ColorColumnToggle()<cr>
 nnoremap <leader>q  :call <SID>QuickfixToggle()<cr>
 nnoremap <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
 
-xnoremap ; :
+xnoremap , :
 xnoremap <leader>g  :<c-u>call <SID>GrepOperator(visualmode())<cr>
 
 " }}}

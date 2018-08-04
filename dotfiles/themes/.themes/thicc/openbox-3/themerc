@@ -1,20 +1,20 @@
 # vim:ft=sh
 #
-# thicc theme for Openbox by Dylan Araps, modified a bit.
+# thicc theme for Openbox by Dylan Araps, modified a bit by me.
 
-# Titlebar colors
-window.*.title.bg.color: #211f1e
-window.*.label.text.color: #dee0e2
-window.*.button.*.image.color: #dee0e2
+# Titlebar colors.
+window.*.title.bg.color:       #080806
+window.*.label.text.color:     #adb0ba
+window.*.button.*.image.color: #adb0ba
 
-# Titlebar
-padding.width: 15
-padding.height: 15
-window.*.title.bg: Solid Flat
-window.*.*.bg: Parentrelative
+# Titlebar.
+padding.width:             15
+padding.height:            15
+window.*.title.bg:         Solid Flat
+window.*.*.bg:             Parentrelative
 window.label.text.justify: Center
 
-# Borders
-border.width: 0
+# Borders.
+border.width:                0
 window.client.padding.width: 0
-window.handle.width: 0
+window.handle.width:         0

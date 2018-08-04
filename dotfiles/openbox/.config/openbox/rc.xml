@@ -3,13 +3,13 @@
 <openbox_config xmlns="http://openbox.org/3.4/rc"
 		xmlns:xi="http://www.w3.org/2001/XInclude">
 
-<!-- Resistance -->
+<!-- Resistance. -->
 <resistance>
   <strength>10</strength>
   <screen_edge_strength>20</screen_edge_strength>
 </resistance>
 
-<!-- Focus -->
+<!-- Focus. -->
 <focus>
   <focusNew>yes</focusNew>
   <followMouse>yes</followMouse>
@@ -19,14 +19,14 @@
   <raiseOnFocus>no</raiseOnFocus>
 </focus>
 
-<!-- Placement -->
+<!-- Placement. -->
 <placement>
   <policy>Smart</policy>
   <center>yes</center> <monitor>Mouse</monitor>
   <primaryMonitor>1</primaryMonitor>
 </placement>
 
-<!-- Theme -->
+<!-- Theme. -->
 <theme>
   <name>thicc</name>
   <titleLayout></titleLayout>
@@ -47,7 +47,7 @@
   </font>
 </theme>
 
-<!-- Desktops -->
+<!-- Desktops. -->
 <desktops>
   <number>6</number>
   <firstdesk>1</firstdesk>
@@ -62,7 +62,7 @@
   </names>
 </desktops>
 
-<!-- Resize -->
+<!-- Resize. -->
 <resize>
   <drawContents>yes</drawContents>
   <popupShow>Never</popupShow>
@@ -73,7 +73,7 @@
   </popupFixedPosition>
 </resize>
 
-<!-- Margins -->
+<!-- Margins. -->
 <margins>
   <top>0</top>
   <bottom>0</bottom>
@@ -81,12 +81,12 @@
   <right>0</right>
 </margins>
 
-<!-- Keyboard -->
+<!-- Keyboard. -->
 <keyboard>
   <rebindOnMappingNotify>yes</rebindOnMappingNotify>
   <chainQuitKey>C-g</chainQuitKey>
 
-  <!-- Keybindings for desktop switching -->
+  <!-- Keybindings for desktop switching. -->
   <keybind key="W-1">
     <action name="GoToDesktop">
       <to>1</to>
@@ -128,7 +128,7 @@
     </action>
   </keybind>
 
-  <!-- Keybindings for sending windows to workspaces and preserve the current workspace -->
+  <!-- Keybindings for sending windows to workspaces and preserve the current workspace. -->
   <keybind key="W-S-1">
     <action name="SendToDesktop">
       <to>1</to>
@@ -172,7 +172,7 @@
     </action>
   </keybind>
 
-  <!-- Keybindings for sending windows to workspaces and switch to that workspace-->
+  <!-- Keybindings for sending windows to workspaces and switch to that workspace. -->
   <keybind key="W-C-1">
     <action name="SendToDesktop">
       <to>1</to>
@@ -216,7 +216,7 @@
     </action>
   </keybind>
 
-  <!-- Keybindings for window switching -->
+  <!-- Keybindings for window switching. -->
   <keybind key="W-Tab">
     <action name="NextWindow">
       <dialog>none</dialog>
@@ -252,7 +252,7 @@
     </action>
   </keybind>
 
-  <!-- 2bwm style keybindings for moving windows fast -->
+  <!-- 2bwm style keybindings for moving windows fast. -->
   <keybind key="W-k">
     <action name="MoveRelative">
       <x>0</x>
@@ -278,7 +278,7 @@
     </action>
   </keybind>
   
-  <!-- 2bwm style keybindings for moving windows slowly -->
+  <!-- 2bwm style keybindings for moving windows slowly. -->
   <keybind key="W-C-k">
     <action name="MoveRelative">
       <x>0</x>
@@ -304,7 +304,7 @@
     </action>
   </keybind>
 
-  <!-- 2bwm style keybindings for resizing windows -->
+  <!-- 2bwm style keybindings for resizing windows. -->
   <keybind key="W-S-k">
     <action name="ResizeRelative">
       <bottom>-5</bottom>
@@ -326,7 +326,7 @@
     </action>
   </keybind>
 
-  <!-- Openbox management keybindings -->
+  <!-- Openbox management keybindings. -->
   <keybind key="W-r">
     <action name="Reconfigure"/>
   </keybind>
@@ -344,7 +344,7 @@
     </action>
   </keybind>
 
-  <!-- Keybindings to toggle some windows functionalities -->
+  <!-- Keybindings to toggle some windows functionalities. -->
   <keybind key="W-o">
     <action name="ToggleOmnipresent"/>
   </keybind>
@@ -373,7 +373,7 @@
     <action name="Close"/>
   </keybind>
 
-  <!-- Emulate pseudo tiling window management -->
+  <!-- Emulate pseudo tiling window management. -->
   <keybind key="A-g">
     <action name="MoveResizeTo">
       <x>8%</x>
@@ -421,7 +421,7 @@
     </action>
   </keybind>
 
-  <!-- st related keybindings -->
+  <!-- st related keybindings. -->
   <keybind key="W-Return">
     <action name="Execute">
       <command>st</command>
@@ -443,7 +443,7 @@
     </action>
   </keybind>
 
-  <!-- Keybindings for running applications -->
+  <!-- Keybindings for running applications. -->
   <keybind key="W-c">
     <action name="Execute">
       <command>~/bin/style --another-wal-dark</command>
@@ -525,7 +525,7 @@
     </action>
   </keybind>
 
-  <!-- F-keys and arrows keybindings -->
+  <!-- Special keys keybindings. -->
   <keybind key="W-F1">
     <action name="Execute">
       <command>slock</command>
@@ -658,13 +658,13 @@
   </keybind>
 </keyboard>
 
-<!-- Mouse -->
+<!-- Mouse. -->
 <mouse>
   <dragThreshold>1</dragThreshold>
   <doubleClickTime>500</doubleClickTime>
   <screenEdgeWarpTime>0</screenEdgeWarpTime>
 
-  <!-- Frame -->
+  <!-- Frame. -->
   <context name="Frame">
     <mousebind button="W-Left" action="Press">
       <action name="Focus"/>
@@ -701,7 +701,7 @@
     </mousebind>
   </context>
 
-  <!-- Client -->
+  <!-- Client. -->
   <context name="Client">
     <mousebind button="Left" action="Press">
       <action name="Focus"/>
@@ -717,7 +717,7 @@
     </mousebind>
   </context>
 
-  <!-- Desktop -->
+  <!-- Desktop. -->
   <context name="Desktop">
     <mousebind button="Left" action="Click">
       <action name="GoToDesktop">
@@ -741,7 +741,7 @@
     </mousebind>
   </context>
 
-  <!-- Titlebar -->
+  <!-- Titlebar. -->
   <context name="Titlebar">
     <mousebind button="Left" action="Click">
       <action name="Focus"/>
@@ -774,7 +774,7 @@
     </mousebind>
   </context>
 
-  <!-- Top -->
+  <!-- Top. -->
   <context name="Top">
     <mousebind button="Left" action="Drag">
       <action name="Resize">
@@ -783,7 +783,7 @@
     </mousebind>
   </context>
 
-  <!-- Bottom -->
+  <!-- Bottom. -->
   <context name="Bottom">
     <mousebind button="Left" action="Drag">
       <action name="Resize">
@@ -792,7 +792,7 @@
     </mousebind>
   </context>
 
-  <!-- Left -->
+  <!-- Left. -->
   <context name="Left">
     <mousebind button="Left" action="Drag">
       <action name="Resize">
@@ -801,7 +801,7 @@
     </mousebind>
   </context>
 
-  <!-- Right -->
+  <!-- Right. -->
   <context name="Right">
     <mousebind button="Left" action="Drag">
       <action name="Resize">
@@ -810,7 +810,7 @@
     </mousebind>
   </context>
 
-  <!-- Corners -->
+  <!-- Corners. -->
   <context name="TRCorner BRCorner TLCorner BLCorner">
     <mousebind button="Left" action="Press">
       <action name="Focus"/>
@@ -822,7 +822,7 @@
     </mousebind>
   </context>
 
-  <!-- Iconify -->
+  <!-- Iconify. -->
   <context name="Iconify">
     <mousebind button="Left" action="Press">
       <action name="Focus"/>
@@ -833,7 +833,7 @@
     </mousebind>
   </context>
 
-  <!-- Maximize -->
+  <!-- Maximize. -->
   <context name="Maximize">
     <mousebind button="Left" action="Press">
       <action name="Focus"/>
@@ -862,7 +862,7 @@
     </mousebind>
   </context>
 
-  <!-- Close -->
+  <!-- Close. -->
   <context name="Close">
     <mousebind button="Left" action="Press">
       <action name="Focus"/>
@@ -873,7 +873,7 @@
     </mousebind>
   </context>
 
-  <!-- AllDesktops -->
+  <!-- AllDesktops. -->
   <context name="AllDesktops">
     <mousebind button="Left" action="Press">
       <action name="Focus"/>
@@ -884,7 +884,7 @@
     </mousebind>
   </context>
 
-  <!-- Shade -->
+  <!-- Shade. -->
   <context name="Shade">
     <mousebind button="Left" action="Press">
       <action name="Focus"/>
@@ -896,10 +896,10 @@
   </context>
 </mouse>
 
-<!-- Applications -->
+<!-- Applications. -->
 <applications>
 
-  <!-- Center apps and change size -->
+  <!-- Center apps and change size. -->
   <application class="Chromium">
     <desktop>2</desktop>
     <position force="yes">
@@ -987,8 +987,19 @@
       <y>center</y>
     </position>
   </application>
+  <application class="mpv">
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>570</height>
+    </size>
+  </application>
 
-  <!-- Center apps -->
+  <!-- Center apps. -->
   <!--
   Can't do <application class="*">
                   <position force="yes">
@@ -996,7 +1007,7 @@
 		    <y>center</y>
                   </position>
                 </application>
-  because in this way drawing terminals will not work
+  because in this way drawing terminals will not work.
   -->
   <application class="SimpleScreenRecorder">
     <position force="yes">
@@ -1023,7 +1034,7 @@
     </position>
   </application>
 
-  <!-- No decor and position -->
+  <!-- No decor and position. -->
   <application class="Viewnior">
     <decor>no</decor>
     <position force="yes">
@@ -1045,15 +1056,8 @@
       <y>center</y>
     </position>
   </application>
-  <application class="mpv">
-    <decor>no</decor>
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-  </application>
 
-  <!-- Fullscreen apps -->
+  <!-- Fullscreen apps. -->
   <application class="Gimp">
     <fullscreen>yes</fullscreen>
   </application>

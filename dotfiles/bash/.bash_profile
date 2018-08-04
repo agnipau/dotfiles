@@ -1,7 +1,8 @@
 # .bash_profile
 #
-# Works with termux too.
+# Works with Termux too.
 
+# Automatically start ssh-agent.
 SSH_ENV="${HOME}/.ssh/environment"
 
 start_agent() {
@@ -23,4 +24,5 @@ fi
 
 . "${HOME}/.bashrc"
 
+# Run startx automatically if not in Termux and after login.
 [[ -z "$DISPLAY" && "$(tty)" == "/dev/tty1" && -z "$PREFIX" ]] && startx

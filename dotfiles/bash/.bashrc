@@ -1,11 +1,11 @@
-#
 # .bashrc
 #
+# BASH config file.
 
 # If not running interactively, don't do anything:
 [[ $- != *i* ]] && return
 
-# Prompt (modified version of Dylan Araps's prompt)
+# Prompt (modified version of Dylan Araps's prompt script).
 prompt() {
     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
     printf "%s%s%s%s" "\\[\\e[1;33m\\]\\u " \
@@ -18,7 +18,7 @@ prompt() {
 #PS1='➜  '
 PROMPT_COMMAND='PS1=$(prompt)'
 
-# Envars
+# Envars.
 export HISTCONTROL="ignoredups"
 export HISTSIZE=1000000
 export PATH="${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${PATH}"
@@ -33,7 +33,7 @@ export RANGER_LOAD_DEFAULT_RC="false"
 export MANPAGER="nvim -c MANPAGER -"
 #export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 
-# Better tab completion
+# Better tab completion.
 bind 'TAB: menu-complete'
 bind 'set show-all-if-ambiguous on'
 bind 'set completion-ignore-case on'
@@ -45,12 +45,12 @@ bind 'set colored-stats on'
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-# Some precious bindings
+# Some precious bindings.
 bind '"\e\C-l": "\C-e | less\C-m"'
 bind '"\e\C-b": "\C-abc -l <<< \C-m"'
 bind '"\e\e": "\C-asudo \C-e"' 
 
-# Miscellanous
+# Miscellanous aliases.
 alias spdtst='curl -o /dev/null http://test.kpnqwest.it/file2000.bin'
 alias baydl='cd ${HOME}/progetti/youtube-dl-batchfiles && ./baydl.sh'
 alias obapp='obxprop | grep ^_OB_APP_'
@@ -59,13 +59,11 @@ alias nodebug='notify-send "Debug" "Debug message"'
 alias cnodebug='notify-send -h string:fgcolor:"$color1" "Debug" "Debug message"'
 alias grad='. ${HOME}/.bashrc; hsetroot -add "$color1" -add "$color2" -gradient 0'
 alias solid='. ${HOME}/.bashrc; hsetroot -solid "$color1"'
-alias adbpl='adb pull "/storage/emulated/0/$1" "$2"'
-alias adbps='adb push "$1" "/storage/emulated/0/$2"'
 alias discord='beautifuldiscord --css "${HOME}/.cache/wal-discord/style.css"'
 alias down='curl -fsSLO'
 alias tnvim='nvim *.tex'
 
-# Short aliases
+# Short aliases.
 alias m='alsamixer'
 alias c='clear'
 alias q='exit'
@@ -76,7 +74,7 @@ alias pd='pdflatex *.tex'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
 alias rma='rm -rf ./*'
 
-# git aliases
+# Git aliases.
 alias ga='git add .'
 alias gm='git commit -m'
 alias gps='git push'
@@ -85,7 +83,7 @@ alias gpla='cd "${HOME}/progetti"; for i in *; do echo "$i"; cd "$i"; git pull; 
 alias gs='git status'
 alias gr='git remote -v'
 
-# Make programs human readable/faster to type
+# Make programs human readable/faster to type.
 alias r='ranger'
 alias ls='ls --group-directories-first --color=auto'
 alias l="ls"
@@ -98,7 +96,7 @@ alias ll='ls -Alh'
 alias mkdir='mkdir -p'
 alias neo='clear; neofetch'
 
-# Aliases for editing configuration files
+# Aliases for editing configuration files.
 alias ebash='nvim "${HOME}/.bashrc"'
 alias envim='nvim "${HOME}/.config/nvim/init.vim"'
 alias exres='nvim "${HOME}/.Xresources"'
@@ -106,25 +104,25 @@ alias ebox='nvim "${HOME}/.config/openbox/rc.xml"'
 alias emux='nvim "${HOME}/.tmux.conf"'
 alias ebar='nvim "${HOME}/.config/polybar/config"'
 
-# Aliases for sourcing configuration files
+# Aliases for sourcing configuration files.
 alias ibash='. "${HOME}/.bashrc"'
 alias ixres='xrdb "${HOME}/.Xresources"'
 alias ibox='openbox --reconfigure'
 alias imux='tmux source-file "${HOME}/.tmux.conf"'
 alias ibar='"${HOME}/bin/polyop"'
 
-# Typos
+# Aliases for fixing typos.
 alias dc='cd'
 alias sl='ls'
 alias nivm='nvim'
-alias nvi='nvim'
+alias cd..='cd ..'
 
-# Grep
+# Grep aliases.
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Arch Linux
+# Arch Linux aliases.
 alias upd='sudo pacman -Syu --noconfirm'
 alias aupd='aurman -Syu --noconfirm'
 alias ins='sudo pacman -S --needed --noconfirm'
@@ -136,11 +134,11 @@ alias src='pacman -Ss'
 alias asrc='aurman -Ss'
 alias dep='pacman -Qi'
 
-# System management
+# System management aliases.
 alias po='poweroff'
 alias re='reboot'
 
-# Add colors to man pages
+# Add colors to man pages.
 export LESS_TERMCAP_mb=$'\e[0;33m'
 export LESS_TERMCAP_md=$'\e[0;35m'
 export LESS_TERMCAP_me=$'\e[0m'
@@ -149,25 +147,28 @@ export LESS_TERMCAP_so=$'\e[1;34;31m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[0;32m'
 
-# FZF options
+# FZF options.
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--multi --inline-info"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
 export FZF_CTRL_R_OPTS="--reverse"
 
+# Prerequisites to run some programs.
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
+
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux
 
 # Use escape sequences to change color17 to $color0_lighter_30
-# Change color18 to $color0_lighter_90
-# I primarily need this trick for my vim status line
+# and to change color18 to $color0_lighter_90.
+# I primarily need this trick for my wal.vim fork.
 if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
   . "${HOME}/.cache/wal/colors.sh"
   printf "\e]4;17;rgb:${color0_lighter_30:1:2}/${color0_lighter_30:3:2}/${color0_lighter_30:5:2}\e\\"
   printf "\e]4;18;rgb:${color0_lighter_90:1:2}/${color0_lighter_90:3:2}/${color0_lighter_90:5:2}\e\\"
 fi
 
+# Functions.
 clone() {
   git clone --depth 1 "https://github.com/$1.git"
 }

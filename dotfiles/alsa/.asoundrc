@@ -1,6 +1,6 @@
-#
 # .asoundrc
 #
+# ALSA config file.
 
 pcm.!default {
   type plug
@@ -14,7 +14,7 @@ ctl.!default {
   card 1
 }
 
-# This works too, but it's not as stylish as above hehehe.
+# This works too.
 #defaults.pcm.card 1
 #defaults.pcm.device 0
 #defaults.ctl.card 1
