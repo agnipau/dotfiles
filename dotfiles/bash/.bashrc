@@ -125,17 +125,28 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Arch Linux aliases.
-alias upd='sudo pacman -Syu --noconfirm'
-alias aupd='aurman -Syu --noconfirm'
-alias ins='sudo pacman -S --needed --noconfirm'
-alias ains='aurman -S --needed --noconfirm'
-alias rem='sudo pacman -Rsu --noconfirm'
-alias arem='aurman -Rsu --noconfirm'
-alias autorem='sudo pacman -R $(pacman -Qdtq)' 
-alias src='pacman -Ss'
-alias asrc='aurman -Ss'
-alias dep='pacman -Qi'
+# System aliases.
+if [[ -z "$PREFIX" ]]; then
+  # Arch Linux aliases.
+  alias upd='sudo pacman -Syu --noconfirm'
+  alias aupd='aurman -Syu --noconfirm'
+  alias ins='sudo pacman -S --needed --noconfirm'
+  alias ains='aurman -S --needed --noconfirm'
+  alias rem='sudo pacman -Rsu --noconfirm'
+  alias arem='aurman -Rsu --noconfirm'
+  alias autorem='sudo pacman -R $(pacman -Qdtq)' 
+  alias src='pacman -Ss'
+  alias asrc='aurman -Ss'
+  alias dep='pacman -Qi'
+elif [[ "$PREFIX" ]]; then
+  # Termux aliases.
+  alias upd='pkg update'
+  alias upg='pkg upgrade'
+  alias ins='pkg install'
+  alias rem='pkg remove'
+  alias autorem='apt autoremove'
+  alias src='pkg search'
+fi
 
 # System management aliases.
 alias po='poweroff'
@@ -160,7 +171,7 @@ export FZF_CTRL_R_OPTS="--reverse"
 # Prerequisites to run some programs.
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
 
-[[ -z "$TMUX" && "$DISPLAY" ]] && tmux
+[[ -z "$TMUX" && "$DISPLAY" && -z "$PREFIX" ]] && tmux
 
 # Use escape sequences to change color17 to $color0_lighter_30
 # and to change color18 to $color0_lighter_90.
