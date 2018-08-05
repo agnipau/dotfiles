@@ -140,6 +140,7 @@ alias fgrep='fgrep --color=auto'
 # System aliases.
 if [[ -z "$PREFIX" ]]; then
   # Arch Linux aliases.
+  alias pacman='pacman --color auto'
   alias aurman='aurman --color always'
   alias upd='sudo pacman -Syu --noconfirm'
   alias aupd='aurman -Syu --noconfirm'

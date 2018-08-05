@@ -729,6 +729,11 @@
         <command>~/bin/draw</command>
       </action>
     </mousebind>
+    <mousebind button="Middle" action="Click">
+      <action name="Execute">
+        <command>~/bin/draw</command>
+      </action>
+    </mousebind>
     <mousebind button="W-Right" action="Click">
       <action name="Execute">
         <command>~/bin/draw</command>
