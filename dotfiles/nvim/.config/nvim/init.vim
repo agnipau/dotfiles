@@ -63,6 +63,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
   inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 Plug 'Shougo/neco-vim'
+Plug 'zchee/deoplete-clang'
 Plug 'wellle/tmux-complete.vim'
   let g:tmuxcomplete#trigger = ''
 Plug 'w0rp/ale'
