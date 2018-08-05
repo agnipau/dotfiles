@@ -191,7 +191,7 @@ fi
 # Prerequisites to run some programs.
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
 
-[[ -z "$TMUX" && "$DISPLAY" && -z "$PREFIX" ]] && tmux -2
+[[ -z "$TMUX" && "$PREFIX" ]] && tmux -2
 
 # Functions.
 clone() {

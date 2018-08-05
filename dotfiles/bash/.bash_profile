@@ -18,7 +18,7 @@ if [[ -f "$SSH_ENV" && -z "$TMUX" ]]; then
   ps -ef | grep "$SSH_AGENT_PID" \
          | grep ssh-agent >/dev/null \
 	 || start_agent
-else
+elif [[ -z "$TMUX" ]]; then
   start_agent
 fi
 
