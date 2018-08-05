@@ -212,6 +212,8 @@ nnoremap <leader>q  :call <SID>QuickfixToggle()<cr>
 nnoremap <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
 
 xnoremap , :
+xnoremap H 0
+xnoremap L $
 xnoremap <leader>g  :<c-u>call <SID>GrepOperator(visualmode())<cr>
 
 " }}}

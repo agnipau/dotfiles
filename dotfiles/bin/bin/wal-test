@@ -4,7 +4,7 @@
 # script, I test out all of them.
 
 clear
-for wallpaper in ~/progetti/wallpapers/*; do
+for wallpaper in ~/progetti/wallpapers/test/*; do
   wal -c -q --backend wal -i "$wallpaper" -o "${HOME}/bin/wal-set" &>/dev/null
   sed -i -e "s/st.opacity: .*/st.opacity: 255/" "${HOME}/.Xresources"
   xrdb .Xresources

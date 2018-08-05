@@ -77,6 +77,7 @@ alias m='alsamixer'
 alias c='clear'
 alias cm='cmus'
 alias q='exit'
+alias :q='exit'
 alias t='tmux -2'
 alias p='ping google.com'
 alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
@@ -139,6 +140,7 @@ alias fgrep='fgrep --color=auto'
 # System aliases.
 if [[ -z "$PREFIX" ]]; then
   # Arch Linux aliases.
+  alias aurman='aurman --color always'
   alias upd='sudo pacman -Syu --noconfirm'
   alias aupd='aurman -Syu --noconfirm'
   alias ins='sudo pacman -S --needed --noconfirm'
@@ -192,6 +194,8 @@ fi
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
 
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
+
+[[ -f "${HOME}/.local/share/icons-in-terminal/icons_bash.sh" ]] && . "${HOME}/.local/share/icons-in-terminal/icons_bash.sh"
 
 # Functions.
 clone() {
