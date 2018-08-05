@@ -13,7 +13,7 @@ start_agent() {
   ssh-add
 }
 
-if [[ -f "$SSH_ENV" ]]; then
+if [[ -f "$SSH_ENV" && -z "$TMUX" ]]; then
   . "$SSH_ENV" >/dev/null
   ps -ef | grep "$SSH_AGENT_PID" \
          | grep ssh-agent >/dev/null \
