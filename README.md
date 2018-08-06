@@ -1,4 +1,5 @@
-![scrot](https://user-images.githubusercontent.com/40271651/43679294-2cd2b762-9823-11e8-952e-464dc298f77d.png)
+![normal scrot](https://0x0.st/s4KQ.png)
+![fullscreen scrot](https://0x0.st/s4KS.png)
 
 - OS: [Arch Linux], [Termux]
 - WM: [openbox-patched]
