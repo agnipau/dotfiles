@@ -88,7 +88,6 @@ Plug 'mattn/emmet-vim'
 Plug 'junegunn/vim-easy-align'
   xmap ga <plug>(EasyAlign)
   nmap ga <plug>(EasyAlign)
-Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'machakann/vim-highlightedyank'
   let g:highlightedyank_highlight_duration = 200
@@ -142,6 +141,7 @@ set backupdir=~/.config/nvim/tmp,~/.vim/tmp,.
 set directory=~/.config/nvim/tmp,~/.vim/tmp,.
 set backspace=indent,eol,start
 set clipboard=unnamedplus
+set conceallevel=0
 
 " }}}
 
