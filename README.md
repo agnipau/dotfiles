@@ -1,5 +1,8 @@
 ![normal scrot](https://0x0.st/s4KQ.png)
+Windows arranged by hands.
+
 ![fullscreen scrot](https://0x0.st/s4KS.png)
+Fullscreen.
 
 - OS: [Arch Linux], [Termux]
 - WM: [openbox-patched]
