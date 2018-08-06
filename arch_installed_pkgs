@@ -1,8 +1,6 @@
 acl
-acorn
 adapta-gtk-theme
 adwaita-icon-theme
-
 alsa-lib
 alsa-plugins
 alsa-utils
@@ -17,18 +15,13 @@ at-spi2-core
 atk
 atool
 attr
-
-
-
 autoconf
 automake
 avahi
 babl
 bash
 bash-completion
-bash-language-server
 bc
-
 binutils
 bison
 blas
@@ -63,12 +56,10 @@ device-mapper
 dhcpcd
 dialog
 diffutils
-
 dmraid
 dnssec-anchors
 dosfstools
 double-conversion
-
 e2fsprogs
 efibootmgr
 efivar
@@ -76,7 +67,6 @@ egl-wayland
 eglexternalplatform
 electron
 enchant
-
 exfat-utils
 exiv2
 exo
@@ -112,6 +102,7 @@ gegl
 geoclue2
 gettext
 ghc-libs
+ghostscript
 giblib
 giflib
 gimp
@@ -245,7 +236,6 @@ haskell-xml
 haskell-zip-archive
 haskell-zlib
 hicolor-icon-theme
-
 hspell
 http-parser
 hub
@@ -256,6 +246,7 @@ iana-etc
 icu
 id3lib
 id3v2
+ijs
 ilmbase
 imagemagick
 imlib2
@@ -301,7 +292,6 @@ libblockdev
 libbluray
 libbsd
 libbytesize
-
 abi
 experimental
 libcaca
@@ -348,6 +338,7 @@ libidn2
 libiec61883
 libinput
 libjpeg-turbo
+libkeybinder3
 libksba
 libldap
 liblqr
@@ -502,7 +493,6 @@ nvidia
 nvidia-settings
 nvidia-utils
 openal
-
 opencore-amr
 openexr
 openjpeg2
@@ -514,7 +504,6 @@ opus
 orc
 p11-kit
 p7zip
-
 pacman
 pacman-mirrorlist
 pam
@@ -533,19 +522,15 @@ perl-file-which
 perl-mailtools
 perl-timedate
 perl-uri
-
 pinentry
 pixman
 pkgconf
-
 polkit
-
 poppler
 poppler-data
 popt
 potrace
 procps-ng
-
 psmisc
 pulseaudio
 pulseaudio-alsa
@@ -561,10 +546,13 @@ python-dateutil
 python-distlib
 python-distro
 python-feedparser
+python-greenlet
 python-html5lib
 python-idna
 python-lockfile
+python-lxml
 python-msgpack
+python-neovim
 python-packaging
 python-pip
 python-progress
@@ -584,9 +572,7 @@ python-webencodings
 python2
 python2-cairo
 python2-gobject2
-
 python2-wxpython3
-qiv
 qt5-base
 qt5-imageformats
 qt5-x11extras
@@ -615,7 +601,6 @@ semver
 shadow
 shared-mime-info
 shellcheck
-
 simplescreenrecorder
 slock
 slop
@@ -624,7 +609,6 @@ snappy
 sound-theme-freedesktop
 speex
 speexdsp
-
 sqlite
 startup-notification
 stow
@@ -684,7 +668,6 @@ vulkan-icd-loader
 w3m
 wayland
 wayland-protocols
-
 webkit2gtk
 webrtc-audio-processing
 wget
@@ -727,12 +710,10 @@ xorg-xrandr
 xorg-xrdb
 xorg-xset
 xorgproto
-
 xvidcore
 xz
 yajl
 youtube-dl
-
 zathura
 zathura-pdf-mupdf
 zip
