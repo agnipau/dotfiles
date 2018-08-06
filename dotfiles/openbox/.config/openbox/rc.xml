@@ -543,22 +543,22 @@
   </keybind>
   <keybind key="W-F5">
     <action name="Execute">
-      <command>sudo ~/bin/lum --dec 10</command>
+      <command>sudo ~/bin/brightness --dec 10</command>
     </action>
   </keybind>
   <keybind key="W-S-F5">
     <action name="Execute">
-      <command>sudo ~/bin/lum --min</command>
+      <command>sudo ~/bin/brightness --min</command>
     </action>
   </keybind>
   <keybind key="W-F6">
     <action name="Execute">
-      <command>sudo ~/bin/lum --inc 10</command>
+      <command>sudo ~/bin/brightness --inc 10</command>
     </action>
   </keybind>
   <keybind key="W-S-F6">
     <action name="Execute">
-      <command>sudo ~/bin/lum --max</command>
+      <command>sudo ~/bin/brightness --max</command>
     </action>
   </keybind>
   <keybind key="W-F7">

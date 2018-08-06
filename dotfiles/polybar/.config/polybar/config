@@ -174,8 +174,8 @@ format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-padding    = 1
 label             =  %output%
-scroll-up         = sudo ~/bin/lum --inc 5
-scroll-down       = sudo ~/bin/lum --dec 5
+scroll-up         = sudo ~/bin/brightness --inc 5
+scroll-down       = sudo ~/bin/brightness --dec 5
 click-left        = redshift -PO 4500
 click-right       = redshift -x
 
