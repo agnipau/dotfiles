@@ -16,7 +16,7 @@ faint      = ${xrdb:color8}
 margin-top    = 0
 margin-bottom = 0
 
-; Bar at the left side.
+; Small bar in the left side.
 [bar/bar-left]
 monitor        = eDP-1-1
 bottom         = true
@@ -24,18 +24,18 @@ fixed-center   = true
 width          = 28%
 height         = 40
 offset-x       = 35
-offset-y       = 21
+offset-y       = 30
 background     = ${colors.background}
 foreground     = ${colors.foreground}
 radius         = 4.0
 padding        = 3
-module-margin  = 1
+module-margin  = 0
 font-0         = Iosevka Term SS07:size=12:antialias=true:autohint=false;3
 font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
 modules-center = wifi battery pvol brightness
 locale         = it_IT.UTF-8
 
-; Bar at the right side.
+; Small bar in the right side.
 [bar/bar-right]
 monitor        = eDP-1-1
 bottom         = true
@@ -43,7 +43,26 @@ fixed-center   = true
 width          = 19%
 height         = 40
 offset-x       = 1070
-offset-y       = 21
+offset-y       = 30
+background     = ${colors.background}
+foreground     = ${colors.foreground}
+radius         = 4.0
+padding        = 3
+module-margin  = 0
+font-0         = Iosevka Term SS07:size=12:antialias=true:autohint=false;3
+font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
+modules-center = date time music
+locale         = it_IT.UTF-8
+
+; Long bar in the middle.
+[bar/bar-middle]
+monitor        = eDP-1-1
+bottom         = true
+fixed-center   = true
+width          = 63%
+height         = 40
+offset-x       = 254
+offset-y       = 30
 background     = ${colors.background}
 foreground     = ${colors.foreground}
 radius         = 4.0
@@ -51,36 +70,21 @@ padding        = 3
 module-margin  = 1
 font-0         = Iosevka Term SS07:size=12:antialias=true:autohint=false;3
 font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
-modules-center = date music
+modules-center = openbox_wms_good wifi battery pvol brightness date time music
 locale         = it_IT.UTF-8
 
-; Quite useless in openbox*, but it works.
-; If you find it useful use it.
-; *you can't see what workspaces are active and what are inactive.
-[module/openbox_wms]
-type                      = internal/xworkspaces
-pin-workspaces            = true
-enable-click              = true
-enable-scroll             = true
-icon-0                    = uno;1
-icon-1                    = due;2
-icon-2                    = tre;3
-icon-3                    = quattro;4
-icon-4                    = cinque;5
-icon-5                    = sei;6
-format                    = <label-state>
-label-urgent              = %icon%
-label-urgent-background   = ${colors.background}
-label-urgent-foreground   = ${colors.alert}
-label-active              = %icon%
-label-active-background   = ${colors.background}
-label-active-foreground   = ${colors.foreground}
-label-occupied            = %icon%
-label-occupied-background = ${colors.background}
-label-occupied-foreground = ${colors.foreground}
-label-empty               =
-label-empty-background    = ${colors.background}
-label-empty-foreground    = ${colors.foreground}
+; This is way better than the xworkspaces module, but you need the script.
+; And of course you can see what workspaces are active and what are inactive.
+[module/openbox_wms_good]
+type              = custom/script
+exec              = ~/bin/polybar-workspaces
+interval          = 0.1
+format            = <label>
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-prefix     = " "
+format-padding    = 1
+label             = %output%
 
 ; Show ssid and if you left click, it will open a terminal instance with
 ; wifi-menu opened.
@@ -91,6 +95,7 @@ interval          = 1
 format            = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
+format-padding    = 1
 label             =  %output%
 click-left        = st -n flt_wifi -g 50x22 -e sudo wifi-menu
 
@@ -101,7 +106,9 @@ battery                      = BAT0
 adapter                      = AC0
 full-at                      = 100
 format-charging              = <ramp-capacity> <label-charging>
+format-charging-padding      = 1
 format-discharging           = <ramp-capacity> <label-discharging>
+format-discharging-padding   = 1
 label-charging               =  %percentage%%
 label-charging-background    = ${colors.background}
 label-charging-foreground    = ${colors.foreground}
@@ -135,6 +142,7 @@ interval          = 0.1
 format            = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
+format-padding    = 1
 label             = %output%
 scroll-up         = ~/bin/pvol --volup 2
 scroll-down       = ~/bin/pvol --voldown 2
@@ -149,6 +157,7 @@ interval          = 0.1
 format            = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
+format-padding    = 1
 label             = %output%
 scroll-up         = ~/bin/pvol --volup 2
 scroll-down       = ~/bin/pvol --voldown 2
@@ -163,25 +172,26 @@ interval          = 0.1
 format            = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
+format-padding    = 1
 label             =  %output%
 scroll-up         = sudo ~/bin/lum --inc 5
 scroll-down       = sudo ~/bin/lum --dec 5
 click-left        = redshift -PO 4500
 click-right       = redshift -x
 
-; Display the date and time.
+; Display the date.
 [module/date]
-type              = internal/date
-interval          = 1
-date              = " %a %d %b "
-date-alt          = " %a %d %b "
-time              =  %H:%M
-time-alt          =  %H:%M:%S
-format            = <label>
-format-background = ${colors.background}
+type              = custom/script
+exec              = printf '%s' " $(date '+%a %d %b')"
 format-foreground = ${colors.foreground}
-label             = %date% %time%
-label-foreground  = ${colors.foreground}
+format-padding    = 1
+
+; Display the time.
+[module/time]
+type              = custom/script
+exec              = printf '%s' " $(date +%H:%M)"
+format-foreground = ${colors.foreground}
+format-padding    = 1
 
 ; Display a music button that toggle some functions when you click on it.
 [module/music]
@@ -191,7 +201,8 @@ label             = 
 exec              = printf '%s' label
 scroll-up         = cmus-remote --seek +5s
 scroll-down       = cmus-remote --seek -5s
-click-left        = cmus-remote --pause  || ~/bin/spotify-control --toggle
+click-left        = cmus-remote --pause || ~/bin/spotify-control --toggle
 click-right       = cmus-remote --prev  || ~/bin/spotify-control --prev
-click-middle      = cmus-remote --next || ~/bin/spotify-control --next
+click-middle      = cmus-remote --next  || ~/bin/spotify-control --next
 format-foreground = ${colors.foreground}
+format-padding    = 1

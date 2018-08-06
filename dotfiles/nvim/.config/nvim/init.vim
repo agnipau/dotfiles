@@ -221,6 +221,8 @@ xnoremap H 0
 xnoremap L $
 xnoremap <leader>g  :<c-u>call <SID>GrepOperator(visualmode())<cr>
 
+cnoremap W w
+
 " }}}
 
 " Auto commands {{{
