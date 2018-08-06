@@ -182,14 +182,11 @@ export FZF_DEFAULT_OPTS="--multi --inline-info"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
 export FZF_CTRL_R_OPTS="--reverse"
 
-# Use escape sequences to change color17 to $color0_lighter_30
-# and to change color18 to $color0_lighter_90.
+# Use escape sequences to change color17 to $color0_lighter_150.
 # I primarily need this trick for my wal.vim fork.
 if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
   . "${HOME}/.cache/wal/colors.sh"
-  printf "\e]4;17;rgb:${color0_lighter_30:1:2}/${color0_lighter_30:3:2}/${color0_lighter_30:5:2}\e\\"
-  printf "\e]4;18;rgb:${color0_lighter_90:1:2}/${color0_lighter_90:3:2}/${color0_lighter_90:5:2}\e\\"
-  printf "\e]4;19;rgb:${color7_darker_90:1:2}/${color7_darker_90:3:2}/${color7_darker_90:5:2}\e\\"
+  printf "\e]4;17;rgb:${color0_lighter_150:1:2}/${color0_lighter_150:3:2}/${color0_lighter_150:5:2}\e\\"
 fi
 
 # Prerequisites to run some programs.
