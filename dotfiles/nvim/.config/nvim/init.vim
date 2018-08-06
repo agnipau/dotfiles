@@ -118,7 +118,6 @@ set nonumber
 set nocursorline
 set wrap
 set shiftround
-set shiftwidth=2
 set noshowmode
 set noruler
 set laststatus=2
@@ -141,7 +140,10 @@ set backupdir=~/.config/nvim/tmp,~/.vim/tmp,.
 set directory=~/.config/nvim/tmp,~/.vim/tmp,.
 set backspace=indent,eol,start
 set clipboard=unnamedplus
-set conceallevel=0
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set autoindent
 
 " }}}
 
@@ -208,6 +210,8 @@ nnoremap L $
 nnoremap , :
 nnoremap è .
 nnoremap <leader>,  :call <SID>ToggleFinalDot()<cr>
+nnoremap <leader>w  :call <SID>ToggleTextWidth()<cr>
+nnoremap <leader>co :call <SID>ToggleConceal()<cr>
 nnoremap <leader>cc :call <SID>ColorColumnToggle()<cr>
 nnoremap <leader>q  :call <SID>QuickfixToggle()<cr>
 nnoremap <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
@@ -245,12 +249,30 @@ function! s:ToggleFinalDot()
   let @@ = sunreg
 endfunction
 
+" Toggle the text width.
+function! s:ToggleTextWidth()
+  if &textwidth
+    setlocal textwidth=0
+  else
+    setlocal textwidth=79
+  endif
+endfunction
+
+" Toggle the conceal level.
+function! s:ToggleConceal()
+  if &conceallevel
+    setlocal conceallevel=0
+  else
+    setlocal conceallevel=2
+  endif
+endfunction
+
 " Toggle the colorcolumn.
 function! s:ColorColumnToggle()
   if &colorcolumn
     setlocal colorcolumn=0
   else
-    setlocal colorcolumn=80
+    setlocal colorcolumn=79
   endif
 endfunction
 
