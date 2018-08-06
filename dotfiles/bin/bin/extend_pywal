@@ -302,6 +302,9 @@ gen_colors() {
     c_rgb_12d_10d="$(( c_rgb_12d - "$((c_rgb_12d / 10))" ))"
     c_rgb_34d_10d="$(( c_rgb_34d - "$((c_rgb_34d / 10))" ))"
     c_rgb_56d_10d="$(( c_rgb_56d - "$((c_rgb_56d / 10))" ))"
+    [[ "${c_rgb_12d_10d}" -le 0 ]] && c_rgb_12d_10d=0
+    [[ "${c_rgb_34d_10d}" -le 0 ]] && c_rgb_34d_10d=0
+    [[ "${c_rgb_56d_10d}" -le 0 ]] && c_rgb_56d_10d=0
     printf -v c_hex_12d_10d '%x' "$c_rgb_12d_10d"
     printf -v c_hex_34d_10d '%x' "$c_rgb_34d_10d"
     printf -v c_hex_56d_10d '%x' "$c_rgb_56d_10d"
@@ -316,6 +319,9 @@ gen_colors() {
     c_rgb_12d_20d="$(( c_rgb_12d - "$((c_rgb_12d / 5))" ))"
     c_rgb_34d_20d="$(( c_rgb_34d - "$((c_rgb_34d / 5))" ))"
     c_rgb_56d_20d="$(( c_rgb_56d - "$((c_rgb_56d / 5))" ))"
+    [[ "${c_rgb_12d_20d}" -le 0 ]] && c_rgb_12d_20d=0
+    [[ "${c_rgb_34d_20d}" -le 0 ]] && c_rgb_34d_20d=0
+    [[ "${c_rgb_56d_20d}" -le 0 ]] && c_rgb_56d_20d=0
     printf -v c_hex_12d_20d '%x' "$c_rgb_12d_20d"
     printf -v c_hex_34d_20d '%x' "$c_rgb_34d_20d"
     printf -v c_hex_56d_20d '%x' "$c_rgb_56d_20d"
@@ -330,6 +336,9 @@ gen_colors() {
     c_rgb_12d_30d="$(( c_rgb_12d - "$((c_rgb_12d * 3 / 10))" ))"
     c_rgb_34d_30d="$(( c_rgb_34d - "$((c_rgb_34d * 3 / 10))" ))"
     c_rgb_56d_30d="$(( c_rgb_56d - "$((c_rgb_56d * 3 / 10))" ))"
+    [[ "${c_rgb_12d_30d}" -le 0 ]] && c_rgb_12d_30d=0
+    [[ "${c_rgb_34d_30d}" -le 0 ]] && c_rgb_34d_30d=0
+    [[ "${c_rgb_56d_30d}" -le 0 ]] && c_rgb_56d_30d=0
     printf -v c_hex_12d_30d '%x' "$c_rgb_12d_30d"
     printf -v c_hex_34d_30d '%x' "$c_rgb_34d_30d"
     printf -v c_hex_56d_30d '%x' "$c_rgb_56d_30d"
@@ -344,6 +353,9 @@ gen_colors() {
     c_rgb_12d_40d="$(( c_rgb_12d - "$((c_rgb_12d * 2 / 5))" ))"
     c_rgb_34d_40d="$(( c_rgb_34d - "$((c_rgb_34d * 2 / 5))" ))"
     c_rgb_56d_40d="$(( c_rgb_56d - "$((c_rgb_56d * 2 / 5))" ))"
+    [[ "${c_rgb_12d_40d}" -le 0 ]] && c_rgb_12d_40d=0
+    [[ "${c_rgb_34d_40d}" -le 0 ]] && c_rgb_34d_40d=0
+    [[ "${c_rgb_56d_40d}" -le 0 ]] && c_rgb_56d_40d=0
     printf -v c_hex_12d_40d '%x' "$c_rgb_12d_40d"
     printf -v c_hex_34d_40d '%x' "$c_rgb_34d_40d"
     printf -v c_hex_56d_40d '%x' "$c_rgb_56d_40d"
@@ -358,6 +370,9 @@ gen_colors() {
     c_rgb_12d_50d="$(( c_rgb_12d - "$((c_rgb_12d / 2))" ))"
     c_rgb_34d_50d="$(( c_rgb_34d - "$((c_rgb_34d / 2))" ))"
     c_rgb_56d_50d="$(( c_rgb_56d - "$((c_rgb_56d / 2))" ))"
+    [[ "${c_rgb_12d_50d}" -le 0 ]] && c_rgb_12d_50d=0
+    [[ "${c_rgb_34d_50d}" -le 0 ]] && c_rgb_34d_50d=0
+    [[ "${c_rgb_56d_50d}" -le 0 ]] && c_rgb_56d_50d=0
     printf -v c_hex_12d_50d '%x' "$c_rgb_12d_50d"
     printf -v c_hex_34d_50d '%x' "$c_rgb_34d_50d"
     printf -v c_hex_56d_50d '%x' "$c_rgb_56d_50d"
@@ -372,6 +387,9 @@ gen_colors() {
     c_rgb_12d_60d="$(( c_rgb_12d - "$((c_rgb_12d * 3 / 5))" ))"
     c_rgb_34d_60d="$(( c_rgb_34d - "$((c_rgb_34d * 3 / 5))" ))"
     c_rgb_56d_60d="$(( c_rgb_56d - "$((c_rgb_56d * 3 / 5))" ))"
+    [[ "${c_rgb_12d_60d}" -le 0 ]] && c_rgb_12d_60d=0
+    [[ "${c_rgb_34d_60d}" -le 0 ]] && c_rgb_34d_60d=0
+    [[ "${c_rgb_56d_60d}" -le 0 ]] && c_rgb_56d_60d=0
     printf -v c_hex_12d_60d '%x' "$c_rgb_12d_60d"
     printf -v c_hex_34d_60d '%x' "$c_rgb_34d_60d"
     printf -v c_hex_56d_60d '%x' "$c_rgb_56d_60d"
@@ -386,6 +404,9 @@ gen_colors() {
     c_rgb_12d_70d="$(( c_rgb_12d - "$((c_rgb_12d * 7 / 10))" ))"
     c_rgb_34d_70d="$(( c_rgb_34d - "$((c_rgb_34d * 7 / 10))" ))"
     c_rgb_56d_70d="$(( c_rgb_56d - "$((c_rgb_56d * 7 / 10))" ))"
+    [[ "${c_rgb_12d_70d}" -le 0 ]] && c_rgb_12d_70d=0
+    [[ "${c_rgb_34d_70d}" -le 0 ]] && c_rgb_34d_70d=0
+    [[ "${c_rgb_56d_70d}" -le 0 ]] && c_rgb_56d_70d=0
     printf -v c_hex_12d_70d '%x' "$c_rgb_12d_70d"
     printf -v c_hex_34d_70d '%x' "$c_rgb_34d_70d"
     printf -v c_hex_56d_70d '%x' "$c_rgb_56d_70d"
@@ -400,6 +421,9 @@ gen_colors() {
     c_rgb_12d_80d="$(( c_rgb_12d - "$((c_rgb_12d * 4 / 5))" ))"
     c_rgb_34d_80d="$(( c_rgb_34d - "$((c_rgb_34d * 4 / 5))" ))"
     c_rgb_56d_80d="$(( c_rgb_56d - "$((c_rgb_56d * 4 / 5))" ))"
+    [[ "${c_rgb_12d_80d}" -le 0 ]] && c_rgb_12d_80d=0
+    [[ "${c_rgb_34d_80d}" -le 0 ]] && c_rgb_34d_80d=0
+    [[ "${c_rgb_56d_80d}" -le 0 ]] && c_rgb_56d_80d=0
     printf -v c_hex_12d_80d '%x' "$c_rgb_12d_80d"
     printf -v c_hex_34d_80d '%x' "$c_rgb_34d_80d"
     printf -v c_hex_56d_80d '%x' "$c_rgb_56d_80d"
@@ -414,6 +438,9 @@ gen_colors() {
     c_rgb_12d_90d="$(( c_rgb_12d - "$((c_rgb_12d * 9 / 10))" ))"
     c_rgb_34d_90d="$(( c_rgb_34d - "$((c_rgb_34d * 9 / 10))" ))"
     c_rgb_56d_90d="$(( c_rgb_56d - "$((c_rgb_56d * 9 / 10))" ))"
+    [[ "${c_rgb_12d_90d}" -le 0 ]] && c_rgb_12d_90d=0
+    [[ "${c_rgb_34d_90d}" -le 0 ]] && c_rgb_34d_90d=0
+    [[ "${c_rgb_56d_90d}" -le 0 ]] && c_rgb_56d_90d=0
     printf -v c_hex_12d_90d '%x' "$c_rgb_12d_90d"
     printf -v c_hex_34d_90d '%x' "$c_rgb_34d_90d"
     printf -v c_hex_56d_90d '%x' "$c_rgb_56d_90d"
@@ -428,6 +455,9 @@ gen_colors() {
     c_rgb_12d_100d="$(( c_rgb_12d - c_rgb_12d ))"
     c_rgb_34d_100d="$(( c_rgb_34d - c_rgb_34d ))"
     c_rgb_56d_100d="$(( c_rgb_56d - c_rgb_56d ))"
+    [[ "${c_rgb_12d_100d}" -le 0 ]] && c_rgb_12d_100d=0
+    [[ "${c_rgb_34d_100d}" -le 0 ]] && c_rgb_34d_100d=0
+    [[ "${c_rgb_56d_100d}" -le 0 ]] && c_rgb_56d_100d=0
     printf -v c_hex_12d_100d '%x' "$c_rgb_12d_100d"
     printf -v c_hex_34d_100d '%x' "$c_rgb_34d_100d"
     printf -v c_hex_56d_100d '%x' "$c_rgb_56d_100d"
@@ -442,6 +472,9 @@ gen_colors() {
     c_rgb_12d_110d="$(( c_rgb_12d - "$((c_rgb_12d * 11 / 10))" ))"
     c_rgb_34d_110d="$(( c_rgb_34d - "$((c_rgb_34d * 11 / 10))" ))"
     c_rgb_56d_110d="$(( c_rgb_56d - "$((c_rgb_56d * 11 / 10))" ))"
+    [[ "${c_rgb_12d_110d}" -le 0 ]] && c_rgb_12d_110d=0
+    [[ "${c_rgb_34d_110d}" -le 0 ]] && c_rgb_34d_110d=0
+    [[ "${c_rgb_56d_110d}" -le 0 ]] && c_rgb_56d_110d=0
     printf -v c_hex_12d_110d '%x' "$c_rgb_12d_110d"
     printf -v c_hex_34d_110d '%x' "$c_rgb_34d_110d"
     printf -v c_hex_56d_110d '%x' "$c_rgb_56d_110d"
@@ -456,6 +489,9 @@ gen_colors() {
     c_rgb_12d_120d="$(( c_rgb_12d - "$((c_rgb_12d * 6 / 5))" ))"
     c_rgb_34d_120d="$(( c_rgb_34d - "$((c_rgb_34d * 6 / 5))" ))"
     c_rgb_56d_120d="$(( c_rgb_56d - "$((c_rgb_56d * 6 / 5))" ))"
+    [[ "${c_rgb_12d_120d}" -le 0 ]] && c_rgb_12d_120d=0
+    [[ "${c_rgb_34d_120d}" -le 0 ]] && c_rgb_34d_120d=0
+    [[ "${c_rgb_56d_120d}" -le 0 ]] && c_rgb_56d_120d=0
     printf -v c_hex_12d_120d '%x' "$c_rgb_12d_120d"
     printf -v c_hex_34d_120d '%x' "$c_rgb_34d_120d"
     printf -v c_hex_56d_120d '%x' "$c_rgb_56d_120d"
@@ -470,6 +506,9 @@ gen_colors() {
     c_rgb_12d_130d="$(( c_rgb_12d - "$((c_rgb_12d * 13 / 10))" ))"
     c_rgb_34d_130d="$(( c_rgb_34d - "$((c_rgb_34d * 13 / 10))" ))"
     c_rgb_56d_130d="$(( c_rgb_56d - "$((c_rgb_56d * 13 / 10))" ))"
+    [[ "${c_rgb_12d_130d}" -le 0 ]] && c_rgb_12d_130d=0
+    [[ "${c_rgb_34d_130d}" -le 0 ]] && c_rgb_34d_130d=0
+    [[ "${c_rgb_56d_130d}" -le 0 ]] && c_rgb_56d_130d=0
     printf -v c_hex_12d_130d '%x' "$c_rgb_12d_130d"
     printf -v c_hex_34d_130d '%x' "$c_rgb_34d_130d"
     printf -v c_hex_56d_130d '%x' "$c_rgb_56d_130d"
@@ -484,6 +523,9 @@ gen_colors() {
     c_rgb_12d_140d="$(( c_rgb_12d - "$((c_rgb_12d * 7 / 5))" ))"
     c_rgb_34d_140d="$(( c_rgb_34d - "$((c_rgb_34d * 7 / 5))" ))"
     c_rgb_56d_140d="$(( c_rgb_56d - "$((c_rgb_56d * 7 / 5))" ))"
+    [[ "${c_rgb_12d_140d}" -le 0 ]] && c_rgb_12d_140d=0
+    [[ "${c_rgb_34d_140d}" -le 0 ]] && c_rgb_34d_140d=0
+    [[ "${c_rgb_56d_140d}" -le 0 ]] && c_rgb_56d_140d=0
     printf -v c_hex_12d_140d '%x' "$c_rgb_12d_140d"
     printf -v c_hex_34d_140d '%x' "$c_rgb_34d_140d"
     printf -v c_hex_56d_140d '%x' "$c_rgb_56d_140d"
@@ -498,6 +540,9 @@ gen_colors() {
     c_rgb_12d_150d="$(( c_rgb_12d - "$((c_rgb_12d * 15 / 10))" ))"
     c_rgb_34d_150d="$(( c_rgb_34d - "$((c_rgb_34d * 15 / 10))" ))"
     c_rgb_56d_150d="$(( c_rgb_56d - "$((c_rgb_56d * 15 / 10))" ))"
+    [[ "${c_rgb_12d_150d}" -le 0 ]] && c_rgb_12d_150d=0
+    [[ "${c_rgb_34d_150d}" -le 0 ]] && c_rgb_34d_150d=0
+    [[ "${c_rgb_56d_150d}" -le 0 ]] && c_rgb_56d_150d=0
     printf -v c_hex_12d_150d '%x' "$c_rgb_12d_150d"
     printf -v c_hex_34d_150d '%x' "$c_rgb_34d_150d"
     printf -v c_hex_56d_150d '%x' "$c_rgb_56d_150d"

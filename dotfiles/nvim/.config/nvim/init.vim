@@ -13,7 +13,7 @@ Plug 'matteoguarda/wal.vim'
 Plug 'junegunn/limelight.vim'
   nnoremap <leader>li :Limelight!!<cr>
 Plug 'Yggdroot/indentLine'
-  let g:indentLine_color_term = 18
+  let g:indentLine_color_term = 17
   let g:indentLine_char = '▏'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
