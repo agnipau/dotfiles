@@ -395,7 +395,7 @@
       <x>center</x>
       <y>center</y>
       <width>51%</width>
-      <height>82%</height>
+      <height>83%</height>
     </action>
   </keybind>
   <keybind key="W-g">
@@ -437,9 +437,9 @@
     <action name="Raise"/>
     <action name="MoveResizeTo">
       <x>center</x>
-      <y>63</y>
+      <y>60</y>
       <width>51%</width>
-      <height>42%</height>
+      <height>41%</height>
     </action>
   </keybind>
 
@@ -919,11 +919,11 @@
   <application name="musica">
     <position force="yes">
       <x>338</x>
-      <y>center</y>
+      <y>60</y>
     </position>
     <size>
       <width>51%</width>
-      <height>75%</height>
+      <height>78%</height>
     </size>
   </application>
   <application class="TelegramDesktop">
