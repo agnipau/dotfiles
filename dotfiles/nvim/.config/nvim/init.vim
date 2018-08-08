@@ -53,7 +53,6 @@ Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -68,7 +67,6 @@ Plug 'wellle/tmux-complete.vim'
   let g:tmuxcomplete#trigger = ''
 Plug 'w0rp/ale'
   let g:ale_echo_delay                       = 0
-  let g:ale_linters_sh_shellcheck_exclusions = 'SC1090'
   let g:ale_lint_on_save                     = 0
   let g:ale_lint_on_text_changed             = 0
   let g:ale_lint_on_enter                    = 0
@@ -197,31 +195,32 @@ set tabline=%!MyTabLine()
 " Mappings {{{
 
 nnoremap <leader><leader> /
-nnoremap <leader>mo :nohlsearch<cr>
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>rr :source $MYVIMRC<cr>
-nnoremap <leader>n  :set number! cursorline!<cr>
-nnoremap <c-h> :tabprevious<cr>
-nnoremap <c-l> :tabnext<cr>
-nnoremap <c-n> :cnext<cr>zz
-nnoremap <c-m> :cprevious<cr>zz
+nnoremap <silent> <leader>mo :nohlsearch<cr>
+nnoremap <silent> <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <silent> <leader>rr :source $MYVIMRC<cr>
+nnoremap <silent> <leader>n  :set number! cursorline!<cr>
+nnoremap <silent> <c-h> :tabprevious<cr>
+nnoremap <silent> <c-l> :tabnext<cr>
+nnoremap <silent> <c-n> :cnext<cr>zz
+nnoremap <silent> <c-m> :cprevious<cr>zz
 nnoremap H 0
 nnoremap L $
 nnoremap , :
 nnoremap è .
-nnoremap <leader>,  :call <SID>ToggleFinalDot()<cr>
-nnoremap <leader>w  :call <SID>ToggleTextWidth()<cr>
-nnoremap <leader>co :call <SID>ToggleConceal()<cr>
-nnoremap <leader>cc :call <SID>ColorColumnToggle()<cr>
-nnoremap <leader>q  :call <SID>QuickfixToggle()<cr>
-nnoremap <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
+nnoremap <silent> <leader>,  :call <SID>ToggleFinalDot()<cr>
+nnoremap <silent> <leader>w  :call <SID>ToggleTextWidth()<cr>
+nnoremap <silent> <leader>co :call <SID>ToggleConceal()<cr>
+nnoremap <silent> <leader>cc :call <SID>ColorColumnToggle()<cr>
+nnoremap <silent> <leader>q  :call <SID>QuickfixToggle()<cr>
+nnoremap <silent> <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
 
 xnoremap , :
 xnoremap H 0
 xnoremap L $
-xnoremap <leader>g  :<c-u>call <SID>GrepOperator(visualmode())<cr>
+xnoremap <silent> <leader>g  :<c-u>call <SID>GrepOperator(visualmode())<cr>
 
 cnoremap W w
+cnoremap Q q
 
 " }}}
 
