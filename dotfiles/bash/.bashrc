@@ -31,7 +31,7 @@ PROMPT_COMMAND='PS1=$(prompt)'
 # Envars.
 export HISTCONTROL="ignoredups"
 export HISTSIZE=1000000
-export PATH="${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${PATH}"
+export PATH="${HOME}/.phantomjs/bin:${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${PATH}"
 export VISUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
 export BROWSER="/usr/bin/chromium"
@@ -62,7 +62,7 @@ bind '"\e\e": "\C-asudo \C-e"'
 
 # Miscellanous aliases.
 alias spdtst='curl -o /dev/null http://test.kpnqwest.it/file2000.bin'
-alias baydl='cd ${HOME}/progetti/youtube-dl-batchfiles && ./baydl.sh'
+alias ydb='cd ${HOME}/progetti/ydb && ./ydb'
 alias obapp='obxprop | grep ^_OB_APP_'
 alias app='xprop | grep ^WM_'
 alias nodebug='notify-send "Debug" "Debug message"'
@@ -94,6 +94,7 @@ alias gpla='cd "${HOME}/progetti"; for i in *; do echo "$i"; cd "$i"; git pull; 
 alias gs='git status'
 alias gsa='cd "${HOME}/progetti"; for i in *; do echo "$i"; cd "$i"; git status; cd ..; done'
 alias gr='git remote -v'
+alias gl='git log'
 
 # Make programs human readable/faster to type.
 alias r='ranger'
@@ -204,3 +205,5 @@ clone() {
 cclone() {
   git clone --depth 1 "$1.git"
 }
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
