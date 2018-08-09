@@ -71,6 +71,7 @@ alias grad='. ${HOME}/.bashrc; hsetroot -add "$color1" -add "$color2" -gradient 
 alias solid='. ${HOME}/.bashrc; hsetroot -solid "$color1"'
 alias discord='beautifuldiscord --css "${HOME}/.cache/wal-discord/style.css"'
 alias down='curl -fsSLO'
+alias sdown='curl -fSLO#'
 
 # Short aliases.
 alias m='alsamixer'
@@ -80,6 +81,9 @@ alias q='exit'
 alias :q='exit'
 alias t='tmux -2'
 alias p='ping google.com'
+alias g='gcc a.c'
+alias a='./a.out'
+alias n='nvim a.c'
 alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
 alias pd='pdflatex *.tex'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
