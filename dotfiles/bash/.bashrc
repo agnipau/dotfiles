@@ -55,11 +55,6 @@ bind 'set colored-stats on'
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-# Some precious bindings.
-bind '"\e\C-l": "\C-e | less\C-m"'
-bind '"\e\C-b": "\C-abc -l <<< \C-m"'
-bind '"\e\e": "\C-asudo \C-e"' 
-
 # Miscellanous aliases.
 alias spdtst='curl -o /dev/null http://test.kpnqwest.it/file2000.bin'
 alias ydb='cd ${HOME}/progetti/ydb && ./ydb'
@@ -199,8 +194,6 @@ fi
 
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
 
-[[ -f "${HOME}/.local/share/icons-in-terminal/icons_bash.sh" ]] && . "${HOME}/.local/share/icons-in-terminal/icons_bash.sh"
-
 # Functions.
 clone() {
   git clone --depth 1 "https://github.com/$1.git"
@@ -209,5 +202,3 @@ clone() {
 cclone() {
   git clone --depth 1 "$1.git"
 }
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

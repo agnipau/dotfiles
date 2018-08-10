@@ -5,11 +5,6 @@
 ! Include pywal colors.
 #include "/home/matte/.cache/wal/colors.Xresources"
 
-! Fallback fonts.
-*.font:       xft:Iosevka Term:size=12
-*.boldFont:   xft:Iosevka Term Bold:size=12
-*.italicFont: xft:Iosevka Term Bold Italic:size=12
-
 ! Xft settings.
 Xft.antialias: true
 Xft.hinting:   true
@@ -20,7 +15,7 @@ Xft.hintstyle: hintslight
 
 ! Rofi settings.
 rofi.theme:             .cache/wal/colors-rofi-dark.rasi
-rofi.font:              Iosevka 16
+rofi.font:              Iosevka SS07 16
 rofi.separator-style:   none
 rofi.hide-scrollbar:    true
 rofi.fullscreen:        false
@@ -36,7 +31,7 @@ rofi.padding:           25
 ! xst settings.
 st.termname:          st-256color
 st.shell:             /bin/bash
-st.font:              Iosevka Term:size=12:antialias=true:autohint=true;
+st.font:              Iosevka Term SS07:size=12:antialias=true:autohint=true;
 st.borderpx:          25
 st.cursorshape:       2
 st.cursorthickness:   2

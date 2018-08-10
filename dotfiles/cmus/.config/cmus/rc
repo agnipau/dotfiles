@@ -7,3 +7,6 @@ set output_plugin=pulse
 
 # Send a notification every time a new song is played.
 set status_display_program=~/bin/cmus-info
+
+# Set the colorscheme.
+colorscheme minimal

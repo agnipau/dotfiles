@@ -77,7 +77,7 @@ locale         = it_IT.UTF-8
 ; And of course you can see what workspaces are active and what are inactive.
 [module/openbox_wms_good]
 type              = custom/script
-exec              = ~/bin/polybar-workspaces
+exec              = ~/bin/polybar-workspaces 2>/dev/null
 interval          = 0.1
 format            = <label>
 format-background = ${colors.background}
