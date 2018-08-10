@@ -5,4 +5,10 @@ dotfiles/nvim/.config/nvim/plugged
 dotfiles/nvim/.config/nvim/tmp
 dotfiles/nvim/.config/nvim/.*
 dotfiles/mpv/fonts.scale
+dotfiles/cmus/.config/cmus/playlist.pl
+dotfiles/cmus/.config/cmus/search-history
+dotfiles/cmus/.config/cmus/command-history
+dotfiles/cmus/.config/cmus/lib.pl
+dotfiles/cmus/.config/cmus/cache
+dotfiles/cmus/.config/cmus/autosave
 .uuid
