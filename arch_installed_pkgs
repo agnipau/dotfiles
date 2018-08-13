@@ -163,8 +163,6 @@ libatomic_ops
 libavc1394
 libbluray
 libbsd
-abi
-experimental
 libcaca
 libcanberra
 libcap
