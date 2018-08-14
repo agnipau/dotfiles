@@ -34,15 +34,15 @@
   <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
   <font place="ActiveWindow">
-    <name>Iosevka</name>
-    <size>12</size>
-    <weight>bold</weight>
+    <name>Roboto</name>
+    <size>11</size>
+    <weight>normal</weight>
     <slant>normal</slant>
   </font>
   <font place="InactiveWindow">
-    <name>Iosevka</name>
-    <size>12</size>
-    <weight>bold</weight>
+    <name>Roboto</name>
+    <size>11</size>
+    <weight>normal</weight>
     <slant>normal</slant>
   </font>
 </theme>
