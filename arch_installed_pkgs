@@ -5,8 +5,6 @@ alsa-utils
 android-tools
 aom
 arc-icon-theme
-arch-install-scripts
-archiso
 archlinux-keyring
 argon2
 aria2
@@ -189,7 +187,6 @@ libavc1394
 libblockdev
 libbluray
 libbsd
-libburn
 libbytesize
 abi
 experimental
@@ -232,8 +229,6 @@ libidn
 libidn2
 libiec61883
 libinput
-libisoburn
-libisofs
 libjpeg-turbo
 libksba
 libldap
@@ -341,7 +336,6 @@ lua52
 luajit
 lvm2
 lxappearance
-lynx
 lz4
 lzo
 m4
@@ -487,7 +481,6 @@ sound-theme-freedesktop
 speex
 speexdsp
 sqlite
-squashfs-tools
 startup-notification
 stow
 sudo
