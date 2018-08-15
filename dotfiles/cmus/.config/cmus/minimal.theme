@@ -12,7 +12,7 @@ set color_info=lightyellow
 
 # Title line colors.
 set color_titleline_bg=default
-set color_titleline_fg=2
+set color_titleline_fg=0
 
 # Status line colors.
 set color_statusline_bg=default
