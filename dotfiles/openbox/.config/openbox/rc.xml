@@ -28,19 +28,19 @@
 
 <!-- Theme. -->
 <theme>
-  <name>thicc</name>
-  <titleLayout></titleLayout>
+  <name>Samiero</name>
+  <titleLayout>L</titleLayout>
   <cornerRadius>2</cornerRadius>
   <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
   <font place="ActiveWindow">
-    <name>Roboto</name>
+    <name>Roboto Medium</name>
     <size>11</size>
     <weight>normal</weight>
     <slant>normal</slant>
   </font>
   <font place="InactiveWindow">
-    <name>Roboto</name>
+    <name>Roboto Medium</name>
     <size>11</size>
     <weight>normal</weight>
     <slant>normal</slant>
@@ -437,9 +437,9 @@
     <action name="Raise"/>
     <action name="MoveResizeTo">
       <x>center</x>
-      <y>60</y>
+      <y>0</y>
       <width>51%</width>
-      <height>41%</height>
+      <height>50%</height>
     </action>
   </keybind>
 
@@ -913,7 +913,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>570</height>
+      <height>590</height>
     </size>
   </application>
   <application name="musica">
@@ -933,7 +933,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>570</height>
+      <height>590</height>
     </size>
   </application>
   <application class="Telegram-desktop">
@@ -943,7 +943,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>570</height>
+      <height>590</height>
     </size>
   </application>
   <application class="Spotify">
@@ -953,7 +953,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>570</height>
+      <height>590</height>
     </size>
   </application>
   <application class="discord">
@@ -963,7 +963,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>570</height>
+      <height>590</height>
     </size>
   </application>
   <application class="Auryo">
@@ -973,7 +973,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>570</height>
+      <height>590</height>
     </size>
   </application>
   <application class="Youtube-dl-gui">
@@ -983,7 +983,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>570</height>
+      <height>590</height>
     </size>
   </application>
   <application name="flt_wifi">
@@ -1000,7 +1000,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>570</height>
+      <height>590</height>
     </size>
   </application>
 

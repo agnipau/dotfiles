@@ -189,7 +189,6 @@ if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
   printf "\e]4;17;rgb:${color0_lighter_150:1:2}/${color0_lighter_150:3:2}/${color0_lighter_150:5:2}\e\\"
 fi
 
-# Prerequisites to run some programs.
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"
 
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
@@ -202,5 +201,3 @@ clone() {
 cclone() {
   git clone --depth 1 "$1.git"
 }
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

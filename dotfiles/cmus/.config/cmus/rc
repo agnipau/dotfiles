@@ -10,3 +10,6 @@ set status_display_program=~/bin/cmus-info
 
 # Set the colorscheme.
 colorscheme minimal
+
+# Set the mouse on.
+set mouse=true

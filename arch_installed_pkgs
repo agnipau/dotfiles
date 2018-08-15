@@ -1,10 +1,12 @@
 acl
-adapta-gtk-theme
 adwaita-icon-theme
 alsa-lib
 alsa-utils
 android-tools
 aom
+arc-icon-theme
+arch-install-scripts
+archiso
 archlinux-keyring
 argon2
 aria2
@@ -87,6 +89,7 @@ gdk-pixbuf2
 geoclue2
 gettext
 ghc-libs
+giblib
 giflib
 girara
 git
@@ -186,6 +189,7 @@ libavc1394
 libblockdev
 libbluray
 libbsd
+libburn
 libbytesize
 abi
 experimental
@@ -228,6 +232,8 @@ libidn
 libidn2
 libiec61883
 libinput
+libisoburn
+libisofs
 libjpeg-turbo
 libksba
 libldap
@@ -335,6 +341,7 @@ lua52
 luajit
 lvm2
 lxappearance
+lynx
 lz4
 lzo
 m4
@@ -382,7 +389,6 @@ pacman-mirrorlist
 pam
 pambase
 pango
-papirus-icon-theme
 parted
 patch
 pciutils
@@ -419,6 +425,7 @@ python-html5lib
 python-idna
 python-jinja
 python-lockfile
+python-lxml
 python-markupsafe
 python-msgpack
 python-neovim
@@ -465,6 +472,7 @@ ruby-docs
 ruby-rdoc
 rubygems
 s-nail
+scrot
 sdl2
 sed
 semver
@@ -479,6 +487,7 @@ sound-theme-freedesktop
 speex
 speexdsp
 sqlite
+squashfs-tools
 startup-notification
 stow
 sudo
@@ -533,6 +542,7 @@ xcb-util-xrm
 xclip
 xdg-user-dirs
 xdg-utils
+xdotool
 xf86-input-libinput
 xfconf
 xfsprogs

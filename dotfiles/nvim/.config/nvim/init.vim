@@ -112,8 +112,8 @@ filetype on
 filetype plugin indent on
 
 set mouse=a
-set number
-set cursorline
+set nonumber
+set nocursorline
 set wrap
 set shiftround
 set noshowmode
