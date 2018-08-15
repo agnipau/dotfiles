@@ -45,6 +45,30 @@
     <weight>normal</weight>
     <slant>normal</slant>
   </font>
+  <font place="MenuHeader">
+    <name>Roboto Medium</name>
+    <size>11</size>
+    <weight>normal</weight>
+    <slant>normal</slant>
+  </font>
+  <font place="MenuItem">
+    <name>Roboto</name>
+    <size>11</size>
+    <weight>normal</weight>
+    <slant>normal</slant>
+  </font>
+  <font place="ActiveOnScreenDisplay">
+    <name>Roboto</name>
+    <size>11</size>
+    <weight>normal</weight>
+    <slant>normal</slant>
+  </font>
+  <font place="InactiveOnScreenDisplay">
+    <name>Roboto</name>
+    <size>11</size>
+    <weight>normal</weight>
+    <slant>normal</slant>
+  </font>
 </theme>
 
 <!-- Desktops. -->
@@ -351,6 +375,9 @@
   <keybind key="W-a">
     <action name="ToggleAlwaysOnTop"/>
   </keybind>
+  <keybind key="W-s">
+    <action name="ToggleShade"/>
+  </keybind>
   <keybind key="W-x">
     <action name="ToggleMaximize">
     <direction>both</direction>
@@ -489,6 +516,11 @@
       <command>rofi -show run</command>
     </action>
   </keybind>
+  <keybind key="W-S-d">
+    <action name="Execute">
+      <command>rofi -show window</command>
+    </action>
+  </keybind>
   <keybind key="W-z">
     <action name="Execute">
       <command>~/bin/draw</command>
@@ -521,7 +553,7 @@
   </keybind>
   <keybind key="W-w">
     <action name="Execute">
-      <command>rofi -show window</command>
+      <command>skippy-xd</command>
     </action>
   </keybind>
 
