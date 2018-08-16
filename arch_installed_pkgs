@@ -13,12 +13,14 @@ at-spi2-atk
 at-spi2-core
 atk
 attr
+audiofile
 autoconf
 automake
 avahi
 bash
 binutils
 bison
+boost-libs
 brotli
 btrfs-progs
 bzip2
@@ -31,7 +33,6 @@ cairo
 cantarell-fonts
 chromium
 cifs-utils
-cmus
 colord
 compton
 coreutils
@@ -60,6 +61,7 @@ enchant
 exo
 expac
 expat
+faad2
 fakeroot
 fd
 feh
@@ -178,6 +180,7 @@ ldb
 ldns
 less
 libaio
+libao
 libarchive
 libass
 libassuan
@@ -220,6 +223,7 @@ libfontenc
 libgcrypt
 libgdata
 libglvnd
+libgme
 libgpg-error
 libgudev
 libgusb
@@ -237,10 +241,13 @@ liblqr
 libmad
 libmagick
 libmm-glib
+libmms
 libmng
 libmnl
 libmodplug
 libmpc
+libmpdclient
+libnfs
 libnftnl
 libnghttp2
 libnl
@@ -263,6 +270,7 @@ libsamplerate
 libsasl
 libseccomp
 libsecret
+libshout
 libsm
 libsndfile
 libsoup
@@ -280,6 +288,7 @@ libtirpc
 libtool
 libunistring
 libunwind
+libupnp
 libusb
 libutempter
 libutil-linux
@@ -349,11 +358,14 @@ mesa
 minizip
 mkinitcpio
 mkinitcpio-busybox
+mpc
+mpd
 mpfr
 mpv
 msgpack-c
 mtdev
 nano
+ncmpcpp
 ncurses
 ndctl
 neovim
@@ -519,6 +531,7 @@ vid.stab
 volume_key
 vulkan-icd-loader
 w3m
+wavpack
 wayland
 wayland-protocols
 webkit2gtk
@@ -562,6 +575,7 @@ xorg-xset
 xorgproto
 xvidcore
 xz
+yajl
 youtube-dl
 zathura
 zathura-pdf-mupdf
@@ -569,3 +583,4 @@ zita-alsa-pcmi
 zita-resampler
 zlib
 zstd
+zziplib
