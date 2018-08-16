@@ -155,6 +155,7 @@ id3v2
 imagemagick
 imlib2
 inetutils
+iniparser
 iproute2
 iptables
 iputils
