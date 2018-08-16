@@ -14,7 +14,7 @@ Fullscreen.
 - Terminal Font: [Iosevka] Term SS07 (Monaco Style)
 - GUI Font: [Iosevka] SS07 (Monaco Style)
 - GTK Theme: [Adapta]
-- Icons: [Papirus]
+- Icons: [Papirus-Adapta]
 - Music Player: [MPD] + [ncmpcpp], [cmus]
 - Image Viewer: [pqiv]
 - Wallpaper Setter: [feh]
