@@ -67,6 +67,7 @@ alias solid='. ${HOME}/.bashrc; hsetroot -solid "$color1"'
 alias discord='beautifuldiscord --css "${HOME}/.cache/wal-discord/style.css"'
 alias down='curl -fsSLO'
 alias sdown='curl -fSLO#'
+alias sudo='sudo -p "$(tput bold)$(tput setaf 1)~~> $(tput sgr0)"'
 
 # Short aliases.
 alias m='alsamixer'
