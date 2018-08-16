@@ -531,6 +531,11 @@
       <command>st -n musica -e ~/bin/musica-maestro</command>
     </action>
   </keybind>
+  <keybind key="W-S-m">
+    <action name="Execute">
+      <command>st -n musica_cava -e cava</command>
+    </action>
+  </keybind>
   <keybind key="W-p">
     <action name="Execute">
       <command>~/bin/scr</command>
@@ -946,12 +951,18 @@
     </size>
   </application>
   <application name="musica">
-    <position force="yes">
+    <!--position force="yes">
       <x>406</x>
       <y>215</y>
-    </position>
+    </position-->
     <size>
       <width>41%</width>
+      <height>33%</height>
+    </size>
+  </application>
+  <application name="musica_cava">
+    <size>
+      <width>21%</width>
       <height>33%</height>
     </size>
   </application>
