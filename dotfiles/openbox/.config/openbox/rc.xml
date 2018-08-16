@@ -528,7 +528,7 @@
   </keybind>
   <keybind key="W-m">
     <action name="Execute">
-      <command>st -n musica -e cmus</command>
+      <command>st -n musica -e ~/bin/musica-maestro</command>
     </action>
   </keybind>
   <keybind key="W-p">
@@ -947,12 +947,12 @@
   </application>
   <application name="musica">
     <position force="yes">
-      <x>338</x>
-      <y>60</y>
+      <x>406</x>
+      <y>215</y>
     </position>
     <size>
-      <width>51%</width>
-      <height>78%</height>
+      <width>41%</width>
+      <height>33%</height>
     </size>
   </application>
   <application class="TelegramDesktop">
