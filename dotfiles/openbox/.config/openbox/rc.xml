@@ -635,7 +635,7 @@
   </keybind>
   <keybind key="W-Up">
     <action name="Execute">
-      <command>cmus-remote --stop</command>
+      <command>mpc stop</command>
     </action>
   </keybind>
   <keybind key="W-C-Up">
@@ -645,7 +645,7 @@
   </keybind>
   <keybind key="W-S-Up">
     <action name="Execute">
-      <command>cmus-remote --play</command>
+      <command>mpc seek 00:00:00</command>
     </action>
   </keybind>
   <keybind key="W-C-S-Up">
@@ -655,7 +655,7 @@
   </keybind>
   <keybind key="W-Down">
     <action name="Execute">
-      <command>cmus-remote --pause</command>
+      <command>mpc toggle</command>
     </action>
   </keybind>
   <keybind key="W-C-Down">
@@ -665,12 +665,12 @@
   </keybind>
   <keybind key="W-Left">
     <action name="Execute">
-      <command>cmus-remote --seek -5s</command>
+      <command>mpc seek -00:00:05</command>
     </action>
   </keybind>
   <keybind key="W-S-Left">
     <action name="Execute">
-      <command>cmus-remote --prev</command>
+      <command>mpc prev</command>
     </action>
   </keybind>
   <keybind key="W-C-Left">
@@ -680,12 +680,12 @@
   </keybind>
   <keybind key="W-Right">
     <action name="Execute">
-      <command>cmus-remote --seek +5s</command>
+      <command>mpc seek +00:00:05</command>
     </action>
   </keybind>
   <keybind key="W-S-Right">
     <action name="Execute">
-      <command>cmus-remote --next</command>
+      <command>mpc next</command>
     </action>
   </keybind>
   <keybind key="W-C-Right">

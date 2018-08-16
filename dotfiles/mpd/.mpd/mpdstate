@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:My Pulse Output
 audio_device_state:1:my_fifo
 state: play
-current: 6
-time: 4.224000
+current: 11
+time: 4.074000
 random: 0
 repeat: 1
 single: 0
@@ -25,4 +25,5 @@ playlist_begin
 10:Beethoven - Moonlight Sonata op.27 no.2 mvt.1-2-3.mp3
 11:Animenz - Attack on Titan - Guren no Yumiya [OP].mp3
 12:Mozart - Sinfonia no.40 in Sol minore.mp3
+13:Paganini & Liszt - Etude no.6.mp3
 playlist_end
