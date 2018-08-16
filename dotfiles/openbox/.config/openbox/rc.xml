@@ -709,18 +709,7 @@
       <action name="Unshade"/>
     </mousebind>
     <mousebind button="W-Left" action="DoubleClick">
-      <action name="ToggleMaximize"/>
-    </mousebind>
-    <mousebind button="W-Right" action="Press">
-      <action name="Focus"/>
-      <action name="Raise"/>
-      <action name="Unshade"/>
-    </mousebind>
-    <mousebind button="W-Right" action="Drag">
-      <action name="Resize"/>
-    </mousebind>
-    <mousebind button="W-Right" action="DoubleClick">
-      <action name="Close"/>
+      <action name="Shade"/>
     </mousebind>
     <mousebind button="W-Middle" action="Click">
       <action name="Focus"/>
@@ -730,6 +719,14 @@
         <x>center</x>
 	<y>center</y>
       </action>
+    </mousebind>
+    <mousebind button="W-Right" action="Press">
+      <action name="Focus"/>
+      <action name="Raise"/>
+      <action name="Unshade"/>
+    </mousebind>
+    <mousebind button="W-Right" action="Drag">
+      <action name="Resize"/>
     </mousebind>
   </context>
 
@@ -766,31 +763,31 @@
         <command>~/bin/draw</command>
       </action>
     </mousebind>
-    <mousebind button="W-Right" action="Click">
-      <action name="Execute">
-        <command>~/bin/draw</command>
-      </action>
-    </mousebind>
     <mousebind button="Right" action="Click">
       <action name="GoToDesktop">
         <to>right</to>
+      </action>
+    </mousebind>
+    <mousebind button="W-Right" action="Click">
+      <action name="Execute">
+        <command>~/bin/draw</command>
       </action>
     </mousebind>
   </context>
 
   <!-- Titlebar. -->
   <context name="Titlebar">
-    <mousebind button="Left" action="Click">
-      <action name="Focus"/>
-      <action name="Raise"/>
-    </mousebind>
     <mousebind button="Left" action="Drag">
       <action name="Focus"/>
       <action name="Raise"/>
       <action name="Move"/>
     </mousebind>
-    <mousebind button="Right" action="Click">
-      <action name="Close"/>
+    <mousebind button="Left" action="Click">
+      <action name="Focus"/>
+      <action name="Raise"/>
+    </mousebind>
+    <mousebind button="Left" action="DoubleClick">
+      <action name="ToggleFullscreen"/>
     </mousebind>
     <mousebind button="Middle" action="Click">
       <action name="Focus"/>
@@ -801,13 +798,13 @@
 	<y>center</y>
       </action>
     </mousebind>
-    <mousebind button="Left" action="DoubleClick">
-      <action name="ToggleShade"/>
-    </mousebind>
     <mousebind button="Right" action="Drag">
       <action name="Focus"/>
       <action name="Raise"/>
       <action name="Resize"/>
+    </mousebind>
+    <mousebind button="Right" action="Click">
+      <action name="Close"/>
     </mousebind>
   </context>
 

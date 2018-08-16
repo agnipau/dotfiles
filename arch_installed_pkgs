@@ -171,6 +171,7 @@ kbd
 keyutils
 kmod
 krb5
+l-smash
 lame
 lcms2
 ldb
@@ -293,8 +294,8 @@ libwacom
 libwbclient
 libwebp
 libx11
-libx264
 libxau
+libxaw
 libxcb
 libxcomposite
 libxcursor
@@ -314,6 +315,7 @@ libxkbcommon-x11
 libxkbfile
 libxml2
 libxmu
+libxpm
 libxrandr
 libxrender
 libxshmfence
@@ -487,6 +489,7 @@ sudo
 sysfsutils
 systemd
 systemd-sysvcompat
+taglib
 talloc
 tar
 tdb
@@ -496,6 +499,9 @@ tevent
 texinfo
 thin-provisioning-tools
 thunar
+thunar-archive-plugin
+thunar-media-tags-plugin
+thunar-volman
 tmux
 tslib
 tzdata
@@ -523,6 +529,7 @@ wireless_tools
 wmctrl
 woff2
 wpa_supplicant
+x264
 x265
 xcb-proto
 xcb-util
@@ -544,6 +551,7 @@ xorg-server
 xorg-server-common
 xorg-setxkbmap
 xorg-xauth
+xorg-xfd
 xorg-xinit
 xorg-xkbcomp
 xorg-xmodmap
