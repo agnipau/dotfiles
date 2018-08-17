@@ -55,7 +55,7 @@ bind 'set colored-stats on'
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-# Miscellanous aliases.
+# Misc. aliases.
 alias spdtst='curl -o /dev/null http://test.kpnqwest.it/file2000.bin'
 alias ydb='cd ${HOME}/progetti/ydb && ./ydb'
 alias obapp='obxprop | grep ^_OB_APP_'
@@ -72,9 +72,13 @@ alias sudo='sudo -p "$(tput bold)$(tput setaf 1)~~> $(tput sgr0)"'
 # Short aliases.
 alias m='alsamixer'
 alias c='clear'
-alias cm='cmus'
 alias q='exit'
+alias cq='clear; exit'
 alias :q='exit'
+alias :q!='exit'
+alias :wq='exit'
+alias ZZ='exit'
+alias ZQ='exit'
 alias t='tmux -2'
 alias p='ping google.com'
 alias g='gcc a.c'
@@ -84,6 +88,7 @@ alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
 alias pd='pdflatex *.tex'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
 alias rma='rm -rf ./*'
+alias lp='~/bin/arch-list-pkgs; ~/bin/aur-list-pkgs'
 
 # Git aliases.
 alias ga='git add .'

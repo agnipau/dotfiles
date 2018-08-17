@@ -369,6 +369,7 @@ nano
 ncmpcpp
 ncurses
 ndctl
+neofetch
 neovim
 netctl
 nettle
@@ -404,6 +405,7 @@ patch
 pciutils
 pcre
 pcre2
+pepper-flash
 perl
 perl-error
 perl-mailtools
@@ -471,6 +473,7 @@ ranger
 re2
 readline
 redshift
+reflector
 reiserfsprogs
 rest
 rofi
