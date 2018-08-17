@@ -100,6 +100,7 @@ alias gs='git status'
 alias gsa='cd "${HOME}/progetti"; for i in *; do echo "$i"; cd "$i"; git status; cd ..; done'
 alias gr='git remote -v'
 alias gl='git log'
+alias lg='lazygit'
 
 # Make programs human readable/faster to type.
 alias r='ranger'
