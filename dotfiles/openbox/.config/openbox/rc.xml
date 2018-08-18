@@ -951,16 +951,14 @@
     </size>
   </application>
   <application name="musica">
-    <!--position force="yes">
-      <x>406</x>
-      <y>215</y>
-    </position-->
+    <decor>no</decor>
     <size>
       <width>41%</width>
       <height>33%</height>
     </size>
   </application>
   <application name="musica_cava">
+    <decor>no</decor>
     <size>
       <width>21%</width>
       <height>33%</height>

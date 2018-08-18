@@ -32,13 +32,13 @@ playlist_disable_highlight_delay = 1
 message_delay_time               = 1
 
 # Appearance of some UI elements.
-song_columns_list_format            = (100)[08]{t}
+song_columns_list_format            = (90)[08]{t}
 current_item_prefix                 = $r
 current_item_suffix                 = $/r
 current_item_inactive_column_prefix =
 current_item_inactive_column_suffix =
-now_playing_prefix                  = $8$b
-now_playing_suffix                  = «$/b$9
+now_playing_prefix                  = {$2$b//$9 }
+now_playing_suffix                  = $/b
 
 # General settings.
 playlist_display_mode              = columns

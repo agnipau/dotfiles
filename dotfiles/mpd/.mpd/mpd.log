@@ -976,3 +976,312 @@ Aug 17 00:14 : client: [278] closed
 Aug 17 00:15 : client: [339] opened from 127.0.0.1:46630
 Aug 17 00:15 : client: [339] closed
 Aug 17 00:15 : player: played "Your Lie In April - Ballade no.1 in G minor op.23.mp3"
+Aug 17 23:32 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 17 23:32 : client: [0] opened from 127.0.0.1:58620
+Aug 17 23:35 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 18 00:11 : client: [0] closed
+Aug 18 00:12 : client: [1] opened from 127.0.0.1:58638
+Aug 18 00:12 : client: [1] closed
+Aug 18 00:12 : client: [2] opened from 127.0.0.1:58642
+Aug 18 00:14 : client: [2] closed
+Aug 18 00:14 : client: [3] opened from 127.0.0.1:58650
+Aug 18 00:14 : client: [3] closed
+Aug 18 00:14 : client: [4] opened from 127.0.0.1:58654
+Aug 18 00:23 : player: played "Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3"
+Aug 18 00:25 : client: [5] opened from 127.0.0.1:58686
+Aug 18 00:25 : client: [6] opened from 127.0.0.1:58690
+Aug 18 00:25 : client: [5] closed
+Aug 18 00:25 : client: [6] closed
+Aug 18 00:25 : client: [7] opened from 127.0.0.1:58694
+Aug 18 00:25 : client: [7] closed
+Aug 18 00:25 : client: [8] opened from 127.0.0.1:58698
+Aug 18 00:25 : client: [9] opened from 127.0.0.1:58702
+Aug 18 00:25 : client: [8] closed
+Aug 18 00:25 : client: [9] closed
+Aug 18 00:25 : client: [10] opened from 127.0.0.1:58706
+Aug 18 00:25 : client: [11] opened from 127.0.0.1:58710
+Aug 18 00:25 : client: [12] opened from 127.0.0.1:58714
+Aug 18 00:25 : client: [13] opened from 127.0.0.1:58718
+Aug 18 00:25 : client: [14] opened from 127.0.0.1:58722
+Aug 18 00:25 : client: [10] closed
+Aug 18 00:25 : client: [11] closed
+Aug 18 00:25 : client: [14] closed
+Aug 18 00:25 : client: [12] closed
+Aug 18 00:25 : client: [13] closed
+Aug 18 00:25 : client: [15] opened from 127.0.0.1:58726
+Aug 18 00:25 : client: [16] opened from 127.0.0.1:58730
+Aug 18 00:25 : client: [17] opened from 127.0.0.1:58734
+Aug 18 00:25 : client: [18] opened from 127.0.0.1:58738
+Aug 18 00:25 : client: [19] opened from 127.0.0.1:58742
+Aug 18 00:25 : client: [15] closed
+Aug 18 00:25 : client: [16] closed
+Aug 18 00:25 : client: [18] closed
+Aug 18 00:25 : client: [19] closed
+Aug 18 00:25 : client: [17] closed
+Aug 18 00:25 : client: [20] opened from 127.0.0.1:58746
+Aug 18 00:25 : client: [20] closed
+Aug 18 00:25 : client: [21] opened from 127.0.0.1:58750
+Aug 18 00:25 : client: [21] closed
+Aug 18 00:25 : client: [22] opened from 127.0.0.1:58754
+Aug 18 00:25 : client: [22] closed
+Aug 18 00:25 : client: [23] opened from 127.0.0.1:58758
+Aug 18 00:25 : client: [23] closed
+Aug 18 00:25 : client: [24] opened from 127.0.0.1:58762
+Aug 18 00:25 : client: [24] closed
+Aug 18 00:25 : client: [25] opened from 127.0.0.1:58766
+Aug 18 00:25 : client: [25] closed
+Aug 18 00:25 : client: [26] opened from 127.0.0.1:58770
+Aug 18 00:25 : client: [26] closed
+Aug 18 00:25 : client: [27] opened from 127.0.0.1:58774
+Aug 18 00:25 : client: [27] closed
+Aug 18 00:25 : client: [28] opened from 127.0.0.1:58778
+Aug 18 00:25 : client: [28] closed
+Aug 18 00:25 : client: [29] opened from 127.0.0.1:58782
+Aug 18 00:25 : client: [29] closed
+Aug 18 00:25 : client: [30] opened from 127.0.0.1:58786
+Aug 18 00:25 : client: [30] closed
+Aug 18 00:26 : client: [4] closed
+Aug 18 00:26 : client: [31] opened from 127.0.0.1:58790
+Aug 18 00:26 : client: [31] closed
+Aug 18 00:27 : client: [32] opened from 127.0.0.1:58794
+Aug 18 00:33 : player: played "Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3"
+Aug 18 00:37 : client: [32] closed
+Aug 18 00:37 : client: [33] opened from 127.0.0.1:58828
+Aug 18 00:41 : client: [33] closed
+Aug 18 00:41 : client: [34] opened from 127.0.0.1:58832
+Aug 18 00:42 : client: [34] closed
+Aug 18 00:42 : client: [35] opened from 127.0.0.1:58836
+Aug 18 00:43 : player: played "Your Lie In April - Introduction and Rondo Capriccioso - Saint Saens.mp3"
+Aug 18 00:43 : client: [36] opened from 127.0.0.1:58840
+Aug 18 00:43 : client: [36] closed
+Aug 18 00:43 : client: [37] opened from 127.0.0.1:58844
+Aug 18 00:43 : client: [38] opened from 127.0.0.1:58848
+Aug 18 00:43 : client: [37] closed
+Aug 18 00:43 : client: [38] closed
+Aug 18 00:43 : client: [39] opened from 127.0.0.1:58852
+Aug 18 00:43 : client: [40] opened from 127.0.0.1:58856
+Aug 18 00:43 : client: [41] opened from 127.0.0.1:58860
+Aug 18 00:43 : client: [42] opened from 127.0.0.1:58864
+Aug 18 00:43 : client: [43] opened from 127.0.0.1:58868
+Aug 18 00:43 : client: [39] closed
+Aug 18 00:43 : client: [40] closed
+Aug 18 00:43 : client: [41] closed
+Aug 18 00:43 : client: [43] closed
+Aug 18 00:43 : client: [42] closed
+Aug 18 00:43 : client: [44] opened from 127.0.0.1:58872
+Aug 18 00:43 : client: [45] opened from 127.0.0.1:58876
+Aug 18 00:43 : client: [46] opened from 127.0.0.1:58880
+Aug 18 00:43 : client: [47] opened from 127.0.0.1:58884
+Aug 18 00:43 : client: [48] opened from 127.0.0.1:58888
+Aug 18 00:43 : client: [44] closed
+Aug 18 00:43 : client: [45] closed
+Aug 18 00:43 : client: [46] closed
+Aug 18 00:43 : client: [48] closed
+Aug 18 00:43 : client: [47] closed
+Aug 18 00:43 : client: [49] opened from 127.0.0.1:58892
+Aug 18 00:43 : client: [50] opened from 127.0.0.1:58896
+Aug 18 00:43 : client: [51] opened from 127.0.0.1:58900
+Aug 18 00:43 : client: [52] opened from 127.0.0.1:58904
+Aug 18 00:43 : client: [53] opened from 127.0.0.1:58908
+Aug 18 00:43 : client: [49] closed
+Aug 18 00:43 : client: [50] closed
+Aug 18 00:43 : client: [51] closed
+Aug 18 00:43 : client: [53] closed
+Aug 18 00:43 : client: [52] closed
+Aug 18 00:43 : client: [54] opened from 127.0.0.1:58912
+Aug 18 00:43 : client: [55] opened from 127.0.0.1:58916
+Aug 18 00:43 : client: [56] opened from 127.0.0.1:58920
+Aug 18 00:43 : client: [57] opened from 127.0.0.1:58924
+Aug 18 00:43 : client: [54] closed
+Aug 18 00:43 : client: [55] closed
+Aug 18 00:43 : client: [56] closed
+Aug 18 00:43 : client: [58] opened from 127.0.0.1:58928
+Aug 18 00:43 : client: [59] opened from 127.0.0.1:58932
+Aug 18 00:43 : client: [60] opened from 127.0.0.1:58936
+Aug 18 00:43 : client: [61] opened from 127.0.0.1:58940
+Aug 18 00:43 : client: [62] opened from 127.0.0.1:58944
+Aug 18 00:43 : client: [57] closed
+Aug 18 00:43 : client: [58] closed
+Aug 18 00:43 : client: [60] closed
+Aug 18 00:43 : client: [59] closed
+Aug 18 00:43 : client: [61] closed
+Aug 18 00:43 : client: [62] closed
+Aug 18 00:43 : client: [63] opened from 127.0.0.1:58948
+Aug 18 00:43 : client: [64] opened from 127.0.0.1:58952
+Aug 18 00:43 : client: [65] opened from 127.0.0.1:58956
+Aug 18 00:43 : client: [66] opened from 127.0.0.1:58960
+Aug 18 00:43 : client: [67] opened from 127.0.0.1:58964
+Aug 18 00:43 : client: [63] closed
+Aug 18 00:43 : client: [65] closed
+Aug 18 00:43 : client: [64] closed
+Aug 18 00:43 : client: [66] closed
+Aug 18 00:43 : client: [67] closed
+Aug 18 00:43 : client: [68] opened from 127.0.0.1:58968
+Aug 18 00:43 : client: [69] opened from 127.0.0.1:58972
+Aug 18 00:43 : client: [70] opened from 127.0.0.1:58976
+Aug 18 00:43 : client: [71] opened from 127.0.0.1:58980
+Aug 18 00:43 : client: [68] closed
+Aug 18 00:43 : client: [69] closed
+Aug 18 00:43 : client: [70] closed
+Aug 18 00:43 : client: [71] closed
+Aug 18 00:43 : client: [72] opened from 127.0.0.1:58984
+Aug 18 00:43 : client: [73] opened from 127.0.0.1:58988
+Aug 18 00:43 : client: [74] opened from 127.0.0.1:58992
+Aug 18 00:43 : client: [75] opened from 127.0.0.1:58996
+Aug 18 00:43 : client: [76] opened from 127.0.0.1:59000
+Aug 18 00:43 : client: [72] closed
+Aug 18 00:43 : client: [73] closed
+Aug 18 00:43 : client: [75] closed
+Aug 18 00:43 : client: [76] closed
+Aug 18 00:43 : client: [74] closed
+Aug 18 00:43 : client: [77] opened from 127.0.0.1:59004
+Aug 18 00:43 : client: [78] opened from 127.0.0.1:59008
+Aug 18 00:43 : client: [79] opened from 127.0.0.1:59012
+Aug 18 00:43 : client: [80] opened from 127.0.0.1:59016
+Aug 18 00:43 : client: [81] opened from 127.0.0.1:59020
+Aug 18 00:43 : client: [77] closed
+Aug 18 00:43 : client: [78] closed
+Aug 18 00:43 : client: [81] closed
+Aug 18 00:43 : client: [80] closed
+Aug 18 00:43 : client: [79] closed
+Aug 18 00:43 : client: [82] opened from 127.0.0.1:59024
+Aug 18 00:43 : client: [83] opened from 127.0.0.1:59028
+Aug 18 00:43 : client: [84] opened from 127.0.0.1:59032
+Aug 18 00:43 : client: [85] opened from 127.0.0.1:59036
+Aug 18 00:43 : client: [82] closed
+Aug 18 00:43 : client: [86] opened from 127.0.0.1:59040
+Aug 18 00:43 : client: [83] closed
+Aug 18 00:43 : client: [84] closed
+Aug 18 00:43 : client: [85] closed
+Aug 18 00:43 : client: [86] closed
+Aug 18 00:43 : client: [87] opened from 127.0.0.1:59044
+Aug 18 00:43 : client: [88] opened from 127.0.0.1:59048
+Aug 18 00:43 : client: [89] opened from 127.0.0.1:59052
+Aug 18 00:43 : client: [90] opened from 127.0.0.1:59056
+Aug 18 00:43 : client: [87] closed
+Aug 18 00:43 : client: [89] closed
+Aug 18 00:43 : client: [88] closed
+Aug 18 00:43 : client: [90] closed
+Aug 18 00:43 : client: [91] opened from 127.0.0.1:59060
+Aug 18 00:43 : client: [92] opened from 127.0.0.1:59064
+Aug 18 00:43 : client: [93] opened from 127.0.0.1:59068
+Aug 18 00:43 : client: [94] opened from 127.0.0.1:59072
+Aug 18 00:43 : client: [95] opened from 127.0.0.1:59076
+Aug 18 00:43 : client: [91] closed
+Aug 18 00:43 : client: [92] closed
+Aug 18 00:43 : client: [94] closed
+Aug 18 00:43 : client: [93] closed
+Aug 18 00:43 : client: [95] closed
+Aug 18 00:43 : client: [96] opened from 127.0.0.1:59080
+Aug 18 00:43 : client: [96] closed
+Aug 18 00:43 : client: [97] opened from 127.0.0.1:59084
+Aug 18 00:43 : client: [97] closed
+Aug 18 00:43 : client: [98] opened from 127.0.0.1:59088
+Aug 18 00:43 : client: [98] closed
+Aug 18 00:43 : client: [99] opened from 127.0.0.1:59092
+Aug 18 00:43 : client: [99] closed
+Aug 18 00:43 : client: [100] opened from 127.0.0.1:59096
+Aug 18 00:43 : client: [100] closed
+Aug 18 00:43 : client: [101] opened from 127.0.0.1:59100
+Aug 18 00:43 : client: [101] closed
+Aug 18 00:43 : client: [102] opened from 127.0.0.1:59104
+Aug 18 00:43 : client: [102] closed
+Aug 18 00:43 : client: [103] opened from 127.0.0.1:59108
+Aug 18 00:43 : client: [103] closed
+Aug 18 00:43 : client: [104] opened from 127.0.0.1:59112
+Aug 18 00:43 : client: [104] closed
+Aug 18 00:43 : client: [105] opened from 127.0.0.1:59116
+Aug 18 00:43 : client: [105] closed
+Aug 18 00:43 : client: [106] opened from 127.0.0.1:59120
+Aug 18 00:43 : client: [106] closed
+Aug 18 00:43 : client: [107] opened from 127.0.0.1:59124
+Aug 18 00:43 : client: [107] closed
+Aug 18 00:43 : client: [108] opened from 127.0.0.1:59128
+Aug 18 00:43 : client: [108] closed
+Aug 18 00:43 : client: [109] opened from 127.0.0.1:59132
+Aug 18 00:43 : client: [109] closed
+Aug 18 00:43 : client: [110] opened from 127.0.0.1:59136
+Aug 18 00:43 : client: [110] closed
+Aug 18 00:43 : client: [111] opened from 127.0.0.1:59140
+Aug 18 00:43 : client: [111] closed
+Aug 18 00:45 : client: [35] closed
+Aug 18 00:45 : client: [112] opened from 127.0.0.1:59146
+Aug 18 00:46 : player: played "Your Lie In April - Ballade no.1 in G minor op.23.mp3"
+Aug 18 00:47 : client: [112] closed
+Aug 18 00:47 : client: [113] opened from 127.0.0.1:59150
+Aug 18 00:48 : player: played "Your Lie In April - Ballade no.1 in G minor op.23.mp3"
+Aug 18 00:50 : player: played "Your Lie In April - Ballade no.1 in G minor op.23.mp3"
+Aug 18 00:51 : client: [113] closed
+Aug 18 00:51 : client: [114] opened from 127.0.0.1:59154
+Aug 18 00:51 : client: [114] closed
+Aug 18 00:51 : client: [115] opened from 127.0.0.1:59158
+Aug 18 00:52 : client: [115] closed
+Aug 18 00:52 : client: [116] opened from 127.0.0.1:59164
+Aug 18 00:52 : client: [116] closed
+Aug 18 00:52 : client: [117] opened from 127.0.0.1:59168
+Aug 18 00:52 : client: [117] closed
+Aug 18 00:52 : client: [118] opened from 127.0.0.1:59172
+Aug 18 00:52 : client: [118] closed
+Aug 18 00:52 : client: [119] opened from 127.0.0.1:59176
+Aug 18 00:53 : client: [119] closed
+Aug 18 00:53 : client: [120] opened from 127.0.0.1:59180
+Aug 18 00:53 : client: [120] closed
+Aug 18 00:53 : client: [121] opened from 127.0.0.1:59184
+Aug 18 00:53 : client: [121] closed
+Aug 18 00:55 : client: [122] opened from 127.0.0.1:59188
+Aug 18 00:55 : client: [122] closed
+Aug 18 00:55 : client: [123] opened from 127.0.0.1:59192
+Aug 18 00:56 : client: [123] closed
+Aug 18 00:56 : client: [124] opened from 127.0.0.1:59196
+Aug 18 00:57 : client: [124] closed
+Aug 18 00:57 : client: [125] opened from 127.0.0.1:59200
+Aug 18 00:59 : player: played "Your Lie In April - Ballade no.1 in G minor op.23.mp3"
+Aug 18 01:00 : client: [125] closed
+Aug 18 01:00 : client: [126] opened from 127.0.0.1:59204
+Aug 18 01:00 : client: [126] closed
+Aug 18 01:00 : client: [127] opened from 127.0.0.1:59208
+Aug 18 01:00 : client: [127] closed
+Aug 18 01:00 : client: [128] opened from 127.0.0.1:59212
+Aug 18 01:02 : client: [128] closed
+Aug 18 01:02 : client: [129] opened from 127.0.0.1:59216
+Aug 18 01:02 : client: [129] closed
+Aug 18 01:02 : client: [130] opened from 127.0.0.1:59220
+Aug 18 01:02 : client: [130] closed
+Aug 18 01:02 : client: [131] opened from 127.0.0.1:59224
+Aug 18 01:03 : client: [131] closed
+Aug 18 01:03 : client: [132] opened from 127.0.0.1:59228
+Aug 18 01:03 : player: played "Your Lie In April - Ballade no.1 in G minor op.23.mp3"
+Aug 18 01:09 : player: played "Your Lie In April - Ballade no.1 in G minor op.23.mp3"
+Aug 18 01:27 : client: [132] closed
+Aug 18 01:27 : client: [133] opened from 127.0.0.1:59240
+Aug 18 01:27 : client: [133] closed
+Aug 18 02:35 : client: [134] opened from 127.0.0.1:59306
+Aug 18 02:36 : client: [134] closed
+Aug 18 02:37 : client: [135] opened from 127.0.0.1:59310
+Aug 18 02:50 : client: [135] closed
+Aug 18 02:50 : client: [136] opened from 127.0.0.1:59374
+Aug 18 02:52 : client: [136] closed
+Aug 18 02:52 : client: [137] opened from 127.0.0.1:59394
+Aug 18 02:53 : client: [137] closed
+Aug 18 02:53 : client: [138] opened from 127.0.0.1:59398
+Aug 18 02:53 : client: [138] closed
+Aug 18 02:54 : client: [139] opened from 127.0.0.1:59402
+Aug 18 03:03 : client: [139] closed
+Aug 18 03:03 : client: [140] opened from 127.0.0.1:59406
+Aug 18 03:21 : client: [141] opened from 127.0.0.1:59464
+Aug 18 03:21 : client: [141] closed
+Aug 18 03:34 : player: played "Jake Hill - 38 to the Face.mp3"
+Aug 18 03:42 : update: updating /Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3
+Aug 18 03:42 : update: updating /Your Lie In April - Ballade no.1 in G minor op.23.mp3
+Aug 18 03:43 : update: updating /Your Lie In April - Introduction and Rondo Capriccioso - Saint Saens.mp3
+Aug 18 03:43 : update: updating /Chopin - Fantaisie Impromptu.mp3
+Aug 18 03:44 : update: updating /Rachmaninov - Piano Concerto no.2 - Plus Orchestra.mp3
+Aug 18 03:44 : update: updating /Mozart - Requiem.mp3
+Aug 18 03:44 : update: updating /Liszt - Totentanz.mp3
+Aug 18 03:58 : client: [140] closed
+Aug 18 04:01 : client: [142] opened from 127.0.0.1:59650
+Aug 18 04:01 : client: [142] closed
+Aug 18 04:01 : client: [143] opened from 127.0.0.1:59654
+Aug 18 04:14 : player: played "Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3"
+Aug 18 04:16 : client: [144] opened from 127.0.0.1:59768
+Aug 18 04:16 : client: [144] closed
