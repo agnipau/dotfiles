@@ -29,7 +29,7 @@ Neofetch.
 [polybar]:         https://github.com/jaagr/polybar
 [Iosevka]:         https://github.com/be5invis/Iosevka
 [Adapta]:          https://github.com/adapta-project/adapta-gtk-theme
-[Papirus]:         https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+[Papirus-Adapta]:  https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 [MPD]:             https://github.com/MusicPlayerDaemon/MPD
 [ncmpcpp]:         https://github.com/arybczak/ncmpcpp
 [pqiv]:            https://github.com/phillipberndt/pqiv
