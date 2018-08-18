@@ -960,8 +960,8 @@
   <application name="musica_cava">
     <decor>no</decor>
     <size>
-      <width>21%</width>
-      <height>33%</height>
+      <width>240</width>
+      <height>240</height>
     </size>
   </application>
   <application class="TelegramDesktop">
