@@ -1,8 +1,8 @@
-![normal scrot](https://0x0.st/s4KQ.png)
+![dirty scrot](https://0x0.st/sJ59.png)
 Dirty.
 
-![fullscreen scrot](https://0x0.st/s4KS.png)
-Fullscreen.
+![neofetch scrot](https://0x0.st/sJ5p.png)
+Neofetch.
 
 - OS: [Arch Linux], [Termux]
 - WM: [openbox-patched]
@@ -15,7 +15,7 @@ Fullscreen.
 - GUI Font: [Iosevka] SS07 (Monaco Style)
 - GTK Theme: [Adapta]
 - Icons: [Papirus-Adapta]
-- Music Player: [MPD] + [ncmpcpp], [cmus]
+- Music Player: [MPD] + [ncmpcpp]
 - Image Viewer: [pqiv]
 - Wallpaper Setter: [feh]
 
@@ -29,7 +29,7 @@ Fullscreen.
 [polybar]:         https://github.com/jaagr/polybar
 [Iosevka]:         https://github.com/be5invis/Iosevka
 [Adapta]:          https://github.com/adapta-project/adapta-gtk-theme
-[Papirus]:         https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+[Papirus-Adapta]:  https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 [MPD]:             https://github.com/MusicPlayerDaemon/MPD
 [ncmpcpp]:         https://github.com/arybczak/ncmpcpp
 [pqiv]:            https://github.com/phillipberndt/pqiv
