@@ -2762,3 +2762,15 @@ Aug 23 21:02 : update: added /Rachmaninov - Piano Concerto no.2 mvt.2 (Minus Orc
 Aug 23 21:02 : update: added /Chopin - Etude op.10 no.12 (Revolutionary).mp3
 Aug 23 21:02 : client: [0] opened from 127.0.0.1:50952
 Aug 23 21:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 21:05 : client: [1] opened from 127.0.0.1:50978
+Aug 23 21:05 : client: [1] closed
+Aug 23 21:05 : client: [2] opened from 127.0.0.1:50982
+Aug 23 21:05 : client: [2] closed
+Aug 23 21:05 : client: [3] opened from 127.0.0.1:50986
+Aug 23 21:05 : client: [3] closed
+Aug 23 21:05 : client: [4] opened from 127.0.0.1:50990
+Aug 23 21:05 : client: [4] closed
+Aug 23 21:11 : player: played "Chopin - Etude op.25 no.5 (Wrong Note).mp3"
+Aug 23 21:15 : player: played "Kreisler - Liebesleid (Love's Sorrow) (Piano & Violin).mp3"
+Aug 23 21:20 : player: played "Kreisler - Liebesleid (Love's Sorrow) (Piano).mp3"
+Aug 23 22:58 : client: [0] closed
