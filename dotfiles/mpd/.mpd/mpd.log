@@ -1286,3 +1286,1479 @@ Aug 18 04:14 : player: played "Your Lie In April - Violin Sonata no.9 - Kreutzer
 Aug 18 04:16 : client: [144] opened from 127.0.0.1:59768
 Aug 18 04:16 : client: [144] closed
 Aug 18 04:35 : client: [143] closed
+Aug 18 04:40 : player: played "Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3"
+Aug 18 14:02 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 18 14:02 : client: [0] opened from 127.0.0.1:51374
+Aug 18 14:07 : update: updating /Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3
+Aug 18 14:07 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 18 14:17 : player: played "Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3"
+Aug 18 14:23 : player: played "Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3"
+Aug 18 14:36 : player: played "Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3"
+Aug 18 14:46 : client: [0] closed
+Aug 18 14:46 : client: [1] opened from 127.0.0.1:51506
+Aug 18 14:48 : player: played "Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3"
+Aug 18 14:50 : client: [2] opened from 127.0.0.1:51514
+Aug 18 14:50 : client: [2] closed
+Aug 18 16:05 : client: [1] closed
+Aug 18 20:15 : player: played "Your Lie In April - Introduction and Rondo Capriccioso - Saint Saens.mp3"
+Aug 23 18:07 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 18:07 : client: [0] opened from 127.0.0.1:57970
+Aug 23 18:07 : update: updating /Mozart - Requiem.mp3
+Aug 23 18:07 : update: updating /Liszt - Totentanz.mp3
+Aug 23 18:07 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 18:08 : update: updating /Your Lie In April - Introduction and Rondo Capriccioso - Saint Saens.mp3
+Aug 23 18:08 : update: updating /Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3
+Aug 23 18:08 : update: updating /Your Lie In April - Introduction and Rondo Capriccioso - Saint Saens.mp3
+Aug 23 18:08 : update: updating /Rachmaninov - Piano Concerto no.2 - Plus Orchestra.mp3
+Aug 23 18:08 : update: updating /Chopin - Fantaisie Impromptu.mp3
+Aug 23 18:09 : update: updating /Your Lie In April - Ballade no.1 in G minor op.23.mp3
+Aug 23 18:09 : client: [0] closed
+Aug 23 18:13 : client: [1] opened from 127.0.0.1:57978
+Aug 23 18:14 : client: [1] closed
+Aug 23 18:14 : client: [2] opened from 127.0.0.1:57982
+Aug 23 18:15 : client: [2] closed
+Aug 23 18:15 : client: [3] opened from 127.0.0.1:58004
+Aug 23 18:16 : update: updating /2pac - All Eyez On Me.mp3
+Aug 23 18:16 : update: updating /2pac - Ambitionz az a ridah.mp3
+Aug 23 18:17 : update: updating /2pac - California Love.mp3
+Aug 23 18:17 : update: updating /2pac - Ghetto Gospel.mp3
+Aug 23 18:17 : update: updating /A R I Z O N A - Oceans Away.mp3
+Aug 23 18:17 : update: updating /Animenz - Attack on Titan - Guren no Yumiya [OP].mp3
+Aug 23 18:18 : update: updating /Animenz - Attack on Titan - OST.mp3
+Aug 23 18:18 : update: removing Animenz - Attack on Titan - Guren no Yumiya [OP].mp3
+Aug 23 18:18 : update: removing Animenz - Attack on Titan - OST.mp3
+Aug 23 18:18 : update: removing Animenz - Mirai Nikki - Kuusou Mesorogiwi [OP].mp3
+Aug 23 18:18 : update: removing Animenz - No Game No Life - This Game [OP].mp3
+Aug 23 18:19 : update: removing Animenz - Shigatsu wa Kimi no Uso - Hikaru Nara [OP].mp3
+Aug 23 18:19 : update: removing Animenz - Studio Ghibli - Medley.mp3
+Aug 23 18:19 : update: removing Animenz - Tokyo Ghoul - Unravel [OP].mp3
+Aug 23 18:19 : update: removing Another - Kyomu Densen [OP].mp3
+Aug 23 18:19 : update: removing Another - Track 7.mp3
+Aug 23 18:20 : update: removing Attack on Titan - Call of Silence - Piano.mp3
+Aug 23 18:20 : update: updating /Attack on Titan - Call of Silence.mp3
+Aug 23 18:20 : update: updating /Attack on Titan - Erens Armored Titan Transformation.mp3
+Aug 23 18:20 : update: updating /Attack on Titan - OP 1.mp3
+Aug 23 18:20 : update: updating /Attack on Titan - OP 2.mp3
+Aug 23 18:20 : update: updating /Attack on Titan - OP 3.mp3
+Aug 23 18:20 : update: updating /Attack on Titan - Piano Adlib.mp3
+Aug 23 18:21 : update: updating /Attack on Titan - The Reluctant Heroes.mp3
+Aug 23 18:21 : update: updating /Attack on Titan - Trasformazione Reiner e Bertold.mp3
+Aug 23 18:21 : update: updating /Attack on Titan - Vogel im Kafig.mp3
+Aug 23 18:21 : update: removing Attack on Titan - The Reluctant Heroes.mp3
+Aug 23 18:22 : update: updating /Bach - Aria sulla quarta corda - Piano.mp3
+Aug 23 18:22 : update: updating /Bach - Prelude in C major BWV 846.mp3
+Aug 23 18:22 : update: updating /Bach - Toccata e Fuga Re minore.mp3
+Aug 23 18:22 : update: updating /Beethoven - 5th Symphony in C minor.mp3
+Aug 23 18:22 : update: updating /Beethoven - 9th Symphony op.125.mp3
+Aug 23 18:23 : update: updating /Beethoven - Moonlight Sonata op.27 no.2 mvt.1-2-3.mp3
+Aug 23 18:23 : update: updating /Beethoven - Moonlight Sonata op.27 no.2 mvt.3.mp3
+Aug 23 18:23 : update: updating /Beethoven - Piano Sonata no.17 mvt.3 - Tempest.mp3
+Aug 23 18:24 : update: updating /Beethoven - Piano Sonata no.8 op.13 C minor - Pathetique.mp3
+Aug 23 18:24 : update: updating /Beethoven - Piano Sonata op.57 mvt.3 - Appassionata.mp3
+Aug 23 18:24 : update: updating /Beethoven - Rondo e Capriccio.mp3
+Aug 23 18:27 : update: removing Beethoven - Rondo e Capriccio.mp3
+Aug 23 18:28 : update: updating /Beethoven - String Quartet no.14 op.131 C sharp.mp3
+Aug 23 18:28 : update: added downloaded_music/Beethoven - Beethoven - Rondo e Capriccio.mp3
+Aug 23 18:28 : update: updating /Billie Eilish - Lovely.mp3
+Aug 23 18:28 : update: updating downloaded_music/Beethoven - Beethoven - Rondo e Capriccio.mp3
+Aug 23 18:29 : update: updating /Boku No Hero Academia - All Might vs All For One.mp3
+Aug 23 18:29 : update: updating /Boku No Hero Academia - My Hero.mp3
+Aug 23 18:29 : update: updating /Boku No Hero Academia - OP 1.mp3
+Aug 23 18:29 : update: updating /Boku No Hero Academia - OP 2.mp3
+Aug 23 18:29 : update: updating /Boku No Hero Academia - OP 3.mp3
+Aug 23 18:29 : update: updating /Boku No Hero Academia - You Say Run v2.mp3
+Aug 23 18:30 : update: updating /Camille Saint-Saens - Danse Macabre.mp3
+Aug 23 18:31 : update: updating /Camille Saint-Saens - Toccata op.72 no.3.mp3
+Aug 23 18:31 : update: updating /Chopin - Ballade no.1 in G minor op.23.mp3
+Aug 23 18:31 : update: updating /Chopin - Ballade no.1 in G minor op.23.mp3
+Aug 23 18:31 : update: updating /Chopin - Etude op.10 no.12 - Revolutionary.mp3
+Aug 23 18:31 : update: updating /Chopin - Etude op.10 no.4.mp3
+Aug 23 18:32 : update: updating /Chopin - Etude op.25 no.11 - Winter Wind.mp3
+Aug 23 18:32 : update: updating /Chopin - Fantaisie Impromptu.mp3
+Aug 23 18:32 : update: updating /Chopin - Nocturne in E flat major op.9 no.2 - Tiffany Poon.mp3
+Aug 23 18:32 : update: updating /Chopin - Piano Concerto in E minor op.11.mp3
+Aug 23 18:33 : update: updating /Chopin - Spring Waltz.mp3
+Aug 23 18:33 : update: updating /Chopin - Waltz in A minor op. posth.mp3
+Aug 23 18:33 : update: updating /City of the Sun - Ventura.mp3
+Aug 23 18:33 : update: updating /Claude Debussy - Claire de Lune.mp3
+Aug 23 18:34 : update: updating /Clem Leek - Why You're So Very Far Away.mp3
+Aug 23 18:34 : update: updating /Darling in the FranXX - Darling [ED 6].mp3
+Aug 23 18:34 : update: removing Darling in the FranXX - OP 1.mp3
+Aug 23 18:34 : update: removing Darling in the FranXX - OP 2.mp3
+Aug 23 18:34 : update: updating /Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 18:34 : update: updating /Darling in the FranXX - Vanquish.mp3
+Aug 23 18:34 : update: updating /Death Note - Kira's Theme.mp3
+Aug 23 18:34 : update: updating /Death Note - Kyrie.mp3
+Aug 23 18:35 : update: updating /Death Note - L's Theme.mp3
+Aug 23 18:35 : update: updating /Death Note - Light's Theme.mp3
+Aug 23 18:35 : update: updating /Death Note - Low of Solipsism.mp3
+Aug 23 18:35 : update: updating /Death Note - Near's Theme A B C.mp3
+Aug 23 18:35 : update: updating /Death Note - OP 1.mp3
+Aug 23 18:35 : update: updating /Death Note - OP 2.mp3
+Aug 23 18:35 : update: updating /Eevee - Seeds - Full BeatTape.mp3
+Aug 23 18:36 : update: updating /Eevee - Unexpected - Full BeatTape.mp3
+Aug 23 18:36 : update: removing Clem Leek - Why You're So Very Far Away.mp3
+Aug 23 18:36 : update: removing A R I Z O N A - Oceans Away.mp3
+Aug 23 18:36 : update: removing Ella Vos - In Your Corner.mp3
+Aug 23 18:36 : update: updating /Eminem - Framed.mp3
+Aug 23 18:36 : update: updating /Eminem - Lose Yourself.mp3
+Aug 23 18:36 : update: updating /Eminem - Mockingbird.mp3
+Aug 23 18:36 : update: updating /Eminem - My Name Is.mp3
+Aug 23 18:37 : update: updating /Eminem - Not Afraid.mp3
+Aug 23 18:37 : update: updating /Eminem - Rap God.mp3
+Aug 23 18:37 : update: updating /Eminem - Sing for the Moment.mp3
+Aug 23 18:37 : update: updating /Eminem - Till I Collapse.mp3
+Aug 23 18:37 : update: updating /Eminem - When I'm Gone.mp3
+Aug 23 18:37 : update: updating /Eminem - Without Me.mp3
+Aug 23 18:37 : update: updating /Eminem & Beyonce - Walk on Water.mp3
+Aug 23 18:37 : update: updating /Eminem & Dido - Stan.mp3
+Aug 23 18:37 : update: updating /Eminem & Ed Sheeran - River.mp3
+Aug 23 18:38 : update: updating /Eminem & Rihanna - Love The Way You Lie.mp3
+Aug 23 18:38 : update: updating /Eminem & Rihanna - The Monster.mp3
+Aug 23 18:38 : update: updating /Erik Satie - Gymnopedie no.1.mp3
+Aug 23 18:38 : update: removing Ermal Meta & Fabrizio Meta - Non mi avete fatto niente.mp3
+Aug 23 18:38 : update: removing Fonzi M - Darling in the FranXX - Kiss of Death [OP 1].mp3
+Aug 23 18:38 : update: updating /Fonzi M - Boku no Hero Academia - My Hero.mp3
+Aug 23 18:38 : update: updating /Fonzi M - Boku no Hero Academia - United States of Smash.mp3
+Aug 23 18:38 : update: updating /Fonzi M - Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 18:38 : update: removing Giovanni Allevi - Aria.mp3
+Aug 23 18:38 : update: removing Giovanni Allevi - Back to Life.mp3
+Aug 23 18:39 : update: updating /Giuseppe Verdi - Dies Irae.mp3
+Aug 23 18:39 : update: updating /Hans Zimmer - Inception - Time - Cello Version.mp3
+Aug 23 18:39 : update: updating /Hans Zimmer - Inception - Time - Normal Version.mp3
+Aug 23 18:39 : update: updating /Hans Zimmer - Interstellar - Main Theme - Piano Version.mp3
+Aug 23 18:39 : update: updating /Hellsing - Alucard's Theme.mp3
+Aug 23 18:39 : update: updating /Hellsing - Gradus Vita.mp3
+Aug 23 18:39 : update: updating /Hellsing - Monster of God.mp3
+Aug 23 18:40 : update: updating /Igor Stravinsky - Firebird Suite (Infernal Dance).mp3
+Aug 23 18:40 : update: updating /Jake Hill - 38 to the Face.mp3
+Aug 23 18:40 : update: removing Jake Hill - Rip X.mp3
+Aug 23 18:40 : update: updating /Jake Hill - Solitude.mp3
+Aug 23 18:40 : update: updating /Jake Hill - WAKE UP.mp3
+Aug 23 18:40 : update: updating /Jake Hill - We Die Too.mp3
+Aug 23 18:40 : update: updating /Jake Hill & Josh A - ANARCHY ACRES.mp3
+Aug 23 18:40 : update: updating /Jake Hill & Josh A - Better Of Dead.mp3
+Aug 23 18:41 : update: updating /Jake Hill & Josh A - Endless Nightmare.mp3
+Aug 23 18:41 : update: updating /Jake Hill & Josh A - GUCCI COFFIN.mp3
+Aug 23 18:41 : update: updating /Jake Hill & Josh A - NORTH KOREA.mp3
+Aug 23 18:41 : update: updating /Jake Hill & Josh A - Pennywise.mp3
+Aug 23 18:41 : update: updating /Jake Hill & Josh A - Suicidial Thoughts.mp3
+Aug 23 18:41 : update: updating /Jinsang - Confessions - Full BeatTape.mp3
+Aug 23 18:41 : update: updating /Jinsang - Life - Full BeatTape.mp3
+Aug 23 18:42 : update: updating /Jinsang - Solitude - Full BeatTape.mp3
+Aug 23 18:42 : update: updating /Joe Hisaishi - Laputa Castle in the Sky.mp3
+Aug 23 18:42 : update: updating /Joe Hisaishi - My Neighbor Totoro - Path of the Wind.mp3
+Aug 23 18:42 : update: updating /Joe Hisaishi - One Summer's Day.mp3
+Aug 23 18:42 : update: updating /Karol Szymanowski - Prelude op.1 no.1.mp3
+Aug 23 18:42 : update: updating /Kesha - Praying.mp3
+Aug 23 18:42 : update: updating /Kill la Kill - Ad la lib.mp3
+Aug 23 18:42 : update: removing Kill la Kill - Blumenkranz.mp3
+Aug 23 18:43 : update: removing Kill la Kill - Don't lose your way - Non Rap Version.mp3
+Aug 23 18:43 : update: updating /Kill la Kill - I Want to Know.mp3
+Aug 23 18:43 : player: played "Jake Hill - WAKE UP.mp3"
+Aug 23 18:43 : update: removing Kimi no Na wa - Main Theme OST.mp3
+Aug 23 18:43 : update: removing Klune & Napoleon - Forget About Them.mp3
+Aug 23 18:43 : update: updating /KWAYE - Cool Kids.mp3
+Aug 23 18:43 : update: updating /KWAYE - I Go.mp3
+Aug 23 18:43 : update: updating /KWAYE - Jasime.mp3
+Aug 23 18:43 : update: updating /KWAYE - Little Ones.mp3
+Aug 23 18:43 : update: updating /KWAYE - Lost In My Boots.mp3
+Aug 23 18:43 : update: updating /KWAYE - Sweetest Life.mp3
+Aug 23 18:43 : update: updating /Linkin Park - In The End.mp3
+Aug 23 18:44 : update: updating /Linkin Park - Numb.mp3
+Aug 23 18:44 : update: updating /Linkin Park - What I've Done.mp3
+Aug 23 18:44 : update: updating /Liszt - Hungarian Rhapsody no.2.mp3
+Aug 23 18:44 : update: updating /Liszt - Totentanz.mp3
+                                                                                                                                                                                                                                      Aug 23 18:47 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 18:48 : update: added /Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 18:48 : update: added /Your Lie In April - Ballade no.1 in G minor op.23.mp3
+Aug 23 18:48 : update: added /Mozart - Aria della regina della notte.mp3
+Aug 23 18:48 : update: added /Attack on Titan - OP 3.mp3
+Aug 23 18:48 : update: added /Mirai Nikki - OP 1.mp3
+Aug 23 18:48 : update: added /Giuseppe Verdi - Dies Irae.mp3
+Aug 23 18:48 : update: added /Eminem & Rihanna - Love The Way You Lie.mp3
+Aug 23 18:48 : update: added /Hans Zimmer - Interstellar - Main Theme - Piano Version.mp3
+Aug 23 18:48 : update: added /Eminem - Mockingbird.mp3
+Aug 23 18:48 : update: added /Luciano Pavarotti - O Sole Mio.mp3
+Aug 23 18:48 : update: added /Bach - Toccata e Fuga Re minore.mp3
+Aug 23 18:48 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.3.mp3
+Aug 23 18:48 : update: added /Mozart - Don Giovanni - Finale.mp3
+Aug 23 18:48 : update: added /Tokyo Ghoul - Re - ED.mp3
+Aug 23 18:48 : update: added /Jake Hill & Josh A - ANARCHY ACRES.mp3
+Aug 23 18:48 : update: added /Sword Art Online - We Have To Defeat It.mp3
+Aug 23 18:48 : update: added /Naruto - Sadness and Sorrow - Normal Version.mp3
+Aug 23 18:48 : update: added /Joe Hisaishi - My Neighbor Totoro - Path of the Wind.mp3
+Aug 23 18:48 : update: added /Eminem & Dido - Stan.mp3
+Aug 23 18:48 : update: added /Ludovico Einaudi - Experience.mp3
+Aug 23 18:48 : update: added /Chopin - Ballade no.1 in G minor op.23.mp3
+Aug 23 18:48 : update: added /Linkin Park - In The End.mp3
+Aug 23 18:48 : update: added /Theishter - Shigatsu wa Kimi no Uso - Hikaru Nara [OP].mp3
+Aug 23 18:48 : update: added /Theishter - One Punch Man - The Hero [OP].mp3
+Aug 23 18:48 : update: added /Theishter - Tokyo Ghoul VA - Kisetsu wa Tsugitsugi Shindeiku [ED].mp3
+Aug 23 18:48 : update: added /Bach - Prelude in C major BWV 846.mp3
+Aug 23 18:48 : update: added /Jake Hill & Josh A - Pennywise.mp3
+Aug 23 18:48 : update: added /Mob Psycho 100 - 99 [OP].mp3
+Aug 23 18:48 : update: added /Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3
+Aug 23 18:48 : update: added /Rachmaninov - Prelude op.23 no.5.mp3
+Aug 23 18:48 : update: added /Made in Abyss - OP.mp3
+Aug 23 18:48 : update: added /Jake Hill & Josh A - Endless Nightmare.mp3
+Aug 23 18:48 : update: added /Erik Satie - Gymnopedie no.1.mp3
+Aug 23 18:48 : update: added /Rachmaninov - Little Red Riding Hood - Etude Tableau.mp3
+Aug 23 18:48 : update: added /Darling in the FranXX - Vanquish.mp3
+Aug 23 18:48 : update: added /One Punch Man - Geno's Sound.mp3
+Aug 23 18:48 : update: added /2pac - All Eyez On Me.mp3
+Aug 23 18:48 : update: added /Attack on Titan - Erens Armored Titan Transformation.mp3
+Aug 23 18:48 : update: added /Chopin - Waltz in A minor op. posth.mp3
+Aug 23 18:48 : update: added /Theishter - Tokyo Ghoul Re - Asphyxia.mp3
+Aug 23 18:48 : update: added /Attack on Titan - OP 1.mp3
+Aug 23 18:48 : update: added /Chopin - Piano Concerto in E minor op.11.mp3
+Aug 23 18:48 : update: added /Rachmaninov - Piano Concerto no.2 mvt.2 - Minus Orchestra.mp3
+Aug 23 18:48 : update: added /Fonzi M - Boku no Hero Academia - United States of Smash.mp3
+Aug 23 18:48 : update: added /Pachelbel - Canon in D - Piano Version.mp3
+Aug 23 18:48 : update: added /Death Note - Light's Theme.mp3
+Aug 23 18:48 : update: added /Claude Debussy - Claire de Lune.mp3
+Aug 23 18:48 : update: added /Death Note - OP 1.mp3
+Aug 23 18:48 : update: added /KWAYE - Sweetest Life.mp3
+Aug 23 18:48 : update: added /Jinsang - Life - Full BeatTape.mp3
+Aug 23 18:48 : update: added /Death Note - Low of Solipsism.mp3
+Aug 23 18:48 : update: added /Mussorgsky - Night on Bald Mountain.mp3
+Aug 23 18:48 : update: added /Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 18:48 : update: added /Eevee - Unexpected - Full BeatTape.mp3
+Aug 23 18:48 : update: added /Attack on Titan - Trasformazione Reiner e Bertold.mp3
+Aug 23 18:48 : update: added /Eminem - Without Me.mp3
+Aug 23 18:48 : update: added /Eminem - Lose Yourself.mp3
+Aug 23 18:48 : update: added /One Punch Man - Main Theme.mp3
+Aug 23 18:48 : update: added /Karol Szymanowski - Prelude op.1 no.1.mp3
+Aug 23 18:48 : update: added /Jake Hill - Solitude.mp3
+Aug 23 18:48 : update: added /Chopin - Fantaisie Impromptu.mp3
+Aug 23 18:48 : update: added /Made in Abyss - Hanezeve Caradhina.mp3
+Aug 23 18:48 : update: added /Eminem & Ed Sheeran - River.mp3
+Aug 23 18:48 : update: added /Tokyo Ghoul - Re - Asphyxia [OP].mp3
+Aug 23 18:48 : update: added /Yiruma - Greatest Hits.mp3
+Aug 23 18:48 : update: added /Boku No Hero Academia - OP 2.mp3
+Aug 23 18:48 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.1-2-3.mp3
+Aug 23 18:48 : update: added /Tomppabeats - Arcade - Full BeatTape.mp3
+Aug 23 18:48 : update: added /Jinsang - Confessions - Full BeatTape.mp3
+Aug 23 18:48 : update: added /Paganini - La Campanella - Violin Version.mp3
+Aug 23 18:48 : update: added /Ludovico Einaudi - Le Onde.mp3
+Aug 23 18:48 : update: added /Bach - Aria sulla quarta corda - Piano.mp3
+Aug 23 18:48 : update: added /Sword Art Online - Overfly [ED 2].mp3
+Aug 23 18:48 : update: added /Tokyo Ghoul - Unravel Acoustic [OP].mp3
+Aug 23 18:48 : update: added /Wotaku ni Koi wa Muzukashii - OP.mp3
+Aug 23 18:48 : update: added /Beethoven - 9th Symphony op.125.mp3
+Aug 23 18:48 : update: added /Liszt - Hungarian Rhapsody no.2.mp3
+Aug 23 18:48 : update: added /Fonzi M - Boku no Hero Academia - My Hero.mp3
+Aug 23 18:48 : update: added /Jinsang - Solitude - Full BeatTape.mp3
+Aug 23 18:48 : update: added /Attack on Titan - Call of Silence.mp3
+Aug 23 18:48 : update: added /Linkin Park - Numb.mp3
+Aug 23 18:48 : update: added /Beethoven - Piano Sonata no.17 mvt.3 - Tempest.mp3
+Aug 23 18:48 : update: added /Beethoven - String Quartet no.14 op.131 C sharp.mp3
+Aug 23 18:48 : update: added /Ludovico Einaudi - Night.mp3
+Aug 23 18:48 : update: added /No Game No Life - The King's Plan.mp3
+Aug 23 18:48 : update: added /TRACE - Low.mp3
+Aug 23 18:48 : update: added /ZAYN & Sia - Dusk Till Dawn.mp3
+Aug 23 18:48 : update: added /Mirai Nikki - Here With You.mp3
+Aug 23 18:48 : update: added /Sword Art Online - Crossing Field [OP 1].mp3
+Aug 23 18:48 : update: added /Beethoven - 5th Symphony in C minor.mp3
+Aug 23 18:48 : update: added /Linkin Park - What I've Done.mp3
+Aug 23 18:48 : update: added /Eminem - Framed.mp3
+Aug 23 18:48 : update: added /Richard Wagner - Ride of the Valkyries.mp3
+Aug 23 18:48 : update: added /City of the Sun - Ventura.mp3
+Aug 23 18:48 : update: added /The War On Drugs - Knocked Down.mp3
+Aug 23 18:48 : update: added /Boku No Hero Academia - OP 3.mp3
+Aug 23 18:48 : update: added /Eminem - My Name Is.mp3
+Aug 23 18:48 : update: added /Jake Hill & Josh A - Suicidial Thoughts.mp3
+Aug 23 18:48 : update: added /Villagers - A Trick of the Light.mp3
+Aug 23 18:48 : update: added /Eevee - Seeds - Full BeatTape.mp3
+Aug 23 18:48 : update: added /LUME - Magnet.mp3
+Aug 23 18:48 : update: added /Hans Zimmer - Inception - Time - Cello Version.mp3
+Aug 23 18:48 : update: added /Your Lie In April - Love's Sorrow - Liebesleid - Rachmaninoff's Arr..mp3
+Aug 23 18:48 : update: added /Ludovico Einaudi - Nuvole Bianche.mp3
+Aug 23 18:48 : update: added /Death Note - Kyrie.mp3
+Aug 23 18:48 : update: added /Ludovico Einaudi - Elegy for the Arctic.mp3
+Aug 23 18:48 : update: added /Camille Saint-Saens - Toccata op.72 no.3.mp3
+Aug 23 18:48 : update: added /Kill la Kill - I Want to Know.mp3
+Aug 23 18:48 : update: added /Chopin - Etude op.10 no.12 - Revolutionary.mp3
+Aug 23 18:48 : update: added /Rachmaninov - Piano Concerto no.2 mvt.3 - Minus Orchestra.mp3
+Aug 23 18:48 : update: added /Ludovico Einaudi - Una Mattina.mp3
+Aug 23 18:48 : update: added /Chopin - Nocturne in E flat major op.9 no.2 - Tiffany Poon.mp3
+Aug 23 18:48 : update: added /Joe Hisaishi - Laputa Castle in the Sky.mp3
+Aug 23 18:48 : update: added /Vivaldi - Le Quattro Stagioni - Nigel Kennedy Version.mp3
+Aug 23 18:48 : update: added /Hellsing - Alucard's Theme.mp3
+Aug 23 18:48 : update: added /KWAYE - Little Ones.mp3
+Aug 23 18:48 : update: added /Mob Psycho 100 - Explosion of Mob Feelings.mp3
+Aug 23 18:48 : update: added /Hellsing - Monster of God.mp3
+Aug 23 18:48 : update: added /Boku No Hero Academia - All Might vs All For One.mp3
+Aug 23 18:48 : update: added /Fonzi M - Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 18:48 : update: added /Sword Art Online - Swordland.mp3
+Aug 23 18:48 : update: added /Chopin - Etude op.10 no.4.mp3
+Aug 23 18:48 : update: added /Eminem - Sing for the Moment.mp3
+Aug 23 18:48 : update: added /One Punch Man - OP.mp3
+Aug 23 18:48 : update: added /Megalo Box - Main Theme.mp3
+Aug 23 18:48 : update: added /KWAYE - Jasime.mp3
+Aug 23 18:48 : update: added /Eminem - Till I Collapse.mp3
+Aug 23 18:48 : update: added /Tchaikovsky - 1812 Overture - Full Version.mp3
+Aug 23 18:48 : update: added /Camille Saint-Saens - Danse Macabre.mp3
+Aug 23 18:48 : update: added /No Game No Life - OP.mp3
+Aug 23 18:48 : update: added /2pac - Ghetto Gospel.mp3
+Aug 23 18:48 : update: added /Chopin - Spring Waltz.mp3
+Aug 23 18:48 : update: added /Paganini - Capriccio no.5.mp3
+Aug 23 18:48 : update: added /KWAYE - Cool Kids.mp3
+Aug 23 18:48 : update: added /Yiruma - Reminiscent.mp3
+Aug 23 18:48 : update: added /Liszt - Transcendental Etude no.4 - Mazeppa.mp3
+Aug 23 18:48 : update: added /Megalo Box - Intermission.mp3
+Aug 23 18:48 : update: added /Rachmaninov - Piano Concerto no.3 mvt.1 - Minus Orchestra.mp3
+Aug 23 18:48 : update: added /Jake Hill - 38 to the Face.mp3
+Aug 23 18:48 : update: added /Attack on Titan - Piano Adlib.mp3
+Aug 23 18:48 : update: added /Liszt - Totentanz.mp3
+Aug 23 18:48 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 - Piano Arrangement.mp3
+Aug 23 18:48 : update: added /Death Note - Kira's Theme.mp3
+Aug 23 18:48 : update: added /Eminem - Rap God.mp3
+Aug 23 18:48 : update: added /Theishter - Kimi No Na Wa - Kataware Doki.mp3
+Aug 23 18:48 : update: added /Jake Hill - We Die Too.mp3
+Aug 23 18:48 : update: added /Theishter - Mirai Nikki - Here With You.mp3
+Aug 23 18:48 : update: added /Eminem & Rihanna - The Monster.mp3
+Aug 23 18:48 : update: added /Tokyo Ghoul - Unravel Normal [OP].mp3
+Aug 23 18:48 : update: added /Theishter - Boku No Hero Academia - You Can Become A Hero.mp3
+Aug 23 18:48 : update: added /Eminem & Beyonce - Walk on Water.mp3
+Aug 23 18:48 : update: added /Ludovico Einaudi - Divenire.mp3
+Aug 23 18:48 : update: added /Hans Zimmer - Inception - Time - Normal Version.mp3
+Aug 23 18:48 : update: added /Rachmaninov - Piano Concerto no.2 - Plus Orchestra.mp3
+Aug 23 18:48 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 - Minus Orchestra.mp3
+Aug 23 18:48 : update: added /KWAYE - I Go.mp3
+Aug 23 18:48 : update: added /Death Note - L's Theme.mp3
+Aug 23 18:48 : update: added /Joe Hisaishi - One Summer's Day.mp3
+Aug 23 18:48 : update: added /Yiruma - River flows in you.mp3
+Aug 23 18:48 : update: added /Mussorgsky - Pictures at an Exhibition.mp3
+Aug 23 18:48 : update: added /Beethoven - Piano Sonata op.57 mvt.3 - Appassionata.mp3
+Aug 23 18:48 : update: added /Boku No Hero Academia - OP 1.mp3
+Aug 23 18:48 : update: added /Tchaikovsky - The Nutcracker Suite op.71.mp3
+Aug 23 18:48 : update: added /Eminem - When I'm Gone.mp3
+Aug 23 18:48 : update: added /Yiruma & Henry - River flows in you.mp3
+Aug 23 18:48 : update: added /Mozart - Sinfonia no.40 in Sol minore.mp3
+Aug 23 18:48 : update: added /2pac - Ambitionz az a ridah.mp3
+Aug 23 18:48 : update: added /Yiruma - May Be.mp3
+Aug 23 18:48 : update: added /Schubert - Ave Maria.mp3
+Aug 23 18:48 : update: added /Death Note - Near's Theme A B C.mp3
+Aug 23 18:48 : update: added /Boku No Hero Academia - My Hero.mp3
+Aug 23 18:48 : update: added /Boku No Hero Academia - You Say Run v2.mp3
+Aug 23 18:48 : update: added /Jake Hill & Josh A - NORTH KOREA.mp3
+Aug 23 18:48 : update: added /Billie Eilish - Lovely.mp3
+Aug 23 18:48 : update: added /Mozart - Lacrimosa.mp3
+Aug 23 18:48 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto - Nigel Kennedy Version.mp3
+Aug 23 18:48 : update: added /Paganini & Liszt - La Campanella.mp3
+Aug 23 18:48 : update: added /Theishter - Tokyo Ghoul - Unravel [OP].mp3
+Aug 23 18:48 : update: added /Rossini - William Tell Overture - Full Version.mp3
+Aug 23 18:48 : update: added /Theishter - Kimi No Na Wa - Sparkle.mp3
+Aug 23 18:48 : update: added /Attack on Titan - OP 2.mp3
+Aug 23 18:48 : update: added /Rachmaninov - Prelude in C sharp.mp3
+Aug 23 18:48 : update: added /Mozart - Turkish March.mp3
+Aug 23 18:48 : update: added /Theishter - Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 18:48 : update: added /Kesha - Praying.mp3
+Aug 23 18:48 : update: added /Jake Hill & Josh A - Better Of Dead.mp3
+Aug 23 18:48 : update: added /Luciano Pavarotti - Nessun Dorma.mp3
+Aug 23 18:48 : update: added /Naruto - Sadness and Sorrow - Piano Version.mp3
+Aug 23 18:48 : update: added /Paganini & Liszt - Etude no.6.mp3
+Aug 23 18:48 : update: added /Jake Hill & Josh A - GUCCI COFFIN.mp3
+Aug 23 18:48 : update: added /Kill la Kill - Ad la lib.mp3
+Aug 23 18:48 : update: added /Naruto - Girei - Pain's Theme.mp3
+Aug 23 18:48 : update: added /2pac - California Love.mp3
+Aug 23 18:48 : update: added /Tomppabeats - Harbor - Full BeatTape.mp3
+Aug 23 18:48 : client: [0] opened from 127.0.0.1:40950
+Aug 23 18:48 : update: added /Tchaikovsky - 1812 Overture - Finale.mp3
+Aug 23 18:48 : update: added /Hellsing - Gradus Vita.mp3
+Aug 23 18:48 : update: added /Death Note - OP 2.mp3
+Aug 23 18:48 : update: added /Paganini & Liszt - La Campanella - Piano Version - Kissin.mp3
+Aug 23 18:48 : update: added /Eminem - Not Afraid.mp3
+Aug 23 18:48 : update: added /Darling in the FranXX - Darling [ED 6].mp3
+Aug 23 18:48 : update: added /Beethoven - Piano Sonata no.8 op.13 C minor - Pathetique.mp3
+Aug 23 18:48 : update: added /Igor Stravinsky - Firebird Suite (Infernal Dance).mp3
+Aug 23 18:48 : update: added /Yiruma - Loanna.mp3
+Aug 23 18:48 : update: added /KWAYE - Lost In My Boots.mp3
+Aug 23 18:48 : update: added /Rossini - William Tell Overture - Final.mp3
+Aug 23 18:48 : update: added downloaded_music/Beethoven - Beethoven - Rondo e Capriccio.mp3
+Aug 23 18:48 : update: added /Mozart - Requiem.mp3
+Aug 23 18:48 : update: added /Jake Hill - WAKE UP.mp3
+Aug 23 18:48 : update: added /Your Lie In April - Introduction and Rondo Capriccioso - Saint Saens.mp3
+Aug 23 18:48 : update: added /Tash Sultana - SALVATION.mp3
+Aug 23 18:48 : update: added /Paganini - Capriccio no.24.mp3
+Aug 23 18:48 : update: added /Attack on Titan - Vogel im Kafig.mp3
+Aug 23 18:48 : update: added /Chopin - Etude op.25 no.11 - Winter Wind.mp3
+Aug 23 18:48 : update: added /Yiruma - Kiss the Rain.mp3
+Aug 23 18:48 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto - Piano Version.mp3
+Aug 23 18:48 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 18:48 : update: removing Luciano Pavarotti - Nessun Dorma.mp3
+Aug 23 18:48 : update: removing Luciano Pavarotti - O Sole Mio.mp3
+Aug 23 18:48 : update: updating /Liszt - Totentanz.mp3
+Aug 23 18:48 : update: updating /Liszt - Transcendental Etude no.4 - Mazeppa.mp3
+Aug 23 18:49 : client: [0] closed
+Aug 23 18:49 : client: [1] opened from 127.0.0.1:40954
+Aug 23 18:49 : client: [1] closed
+Aug 23 18:59 : client: [2] opened from 127.0.0.1:40984
+Aug 23 18:59 : client: [2] closed
+Aug 23 19:06 : client: [3] opened from 127.0.0.1:41012
+Aug 23 19:06 : client: [3] closed
+Aug 23 19:06 : player: played "Liszt - Totentanz.mp3"
+Aug 23 19:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 19:06 : update: added /Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 19:06 : update: added /Your Lie In April - Ballade no.1 in G minor op.23.mp3
+Aug 23 19:06 : update: added /Mozart - Aria della regina della notte.mp3
+Aug 23 19:06 : update: added /Attack on Titan - OP 3.mp3
+Aug 23 19:06 : update: added /Mirai Nikki - OP 1.mp3
+Aug 23 19:06 : update: added /Giuseppe Verdi - Dies Irae.mp3
+Aug 23 19:06 : update: added /Eminem & Rihanna - Love The Way You Lie.mp3
+Aug 23 19:06 : update: added /Hans Zimmer - Interstellar - Main Theme - Piano Version.mp3
+Aug 23 19:06 : update: added /Eminem - Mockingbird.mp3
+Aug 23 19:06 : update: added /Bach - Toccata e Fuga Re minore.mp3
+Aug 23 19:06 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.3.mp3
+Aug 23 19:06 : update: added /Mozart - Don Giovanni - Finale.mp3
+Aug 23 19:06 : update: added /Tokyo Ghoul - Re - ED.mp3
+Aug 23 19:06 : update: added /Jake Hill & Josh A - ANARCHY ACRES.mp3
+Aug 23 19:06 : update: added /Sword Art Online - We Have To Defeat It.mp3
+Aug 23 19:06 : update: added /Naruto - Sadness and Sorrow - Normal Version.mp3
+Aug 23 19:06 : update: added /Joe Hisaishi - My Neighbor Totoro - Path of the Wind.mp3
+Aug 23 19:06 : update: added /Eminem & Dido - Stan.mp3
+Aug 23 19:06 : update: added /Ludovico Einaudi - Experience.mp3
+Aug 23 19:06 : update: added /Chopin - Ballade no.1 in G minor op.23.mp3
+Aug 23 19:06 : update: added /Linkin Park - In The End.mp3
+Aug 23 19:06 : update: added /Theishter - Shigatsu wa Kimi no Uso - Hikaru Nara [OP].mp3
+Aug 23 19:06 : update: added /Theishter - One Punch Man - The Hero [OP].mp3
+Aug 23 19:06 : update: added /Theishter - Tokyo Ghoul VA - Kisetsu wa Tsugitsugi Shindeiku [ED].mp3
+Aug 23 19:06 : update: added /Bach - Prelude in C major BWV 846.mp3
+Aug 23 19:06 : update: added /Jake Hill & Josh A - Pennywise.mp3
+Aug 23 19:06 : update: added /Mob Psycho 100 - 99 [OP].mp3
+Aug 23 19:06 : update: added /Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3
+Aug 23 19:06 : update: added /Rachmaninov - Prelude op.23 no.5.mp3
+Aug 23 19:06 : update: added /Made in Abyss - OP.mp3
+Aug 23 19:06 : update: added /Jake Hill & Josh A - Endless Nightmare.mp3
+Aug 23 19:06 : update: added /Erik Satie - Gymnopedie no.1.mp3
+Aug 23 19:06 : update: added /Rachmaninov - Little Red Riding Hood - Etude Tableau.mp3
+Aug 23 19:06 : update: added /Darling in the FranXX - Vanquish.mp3
+Aug 23 19:06 : update: added /One Punch Man - Geno's Sound.mp3
+Aug 23 19:06 : update: added /2pac - All Eyez On Me.mp3
+Aug 23 19:06 : update: added /Attack on Titan - Erens Armored Titan Transformation.mp3
+Aug 23 19:06 : update: added /Chopin - Waltz in A minor op. posth.mp3
+Aug 23 19:06 : update: added /Theishter - Tokyo Ghoul Re - Asphyxia.mp3
+Aug 23 19:06 : update: added /Attack on Titan - OP 1.mp3
+Aug 23 19:06 : update: added /Chopin - Piano Concerto in E minor op.11.mp3
+Aug 23 19:06 : update: added /Rachmaninov - Piano Concerto no.2 mvt.2 - Minus Orchestra.mp3
+Aug 23 19:06 : update: added /Fonzi M - Boku no Hero Academia - United States of Smash.mp3
+Aug 23 19:06 : update: added /Pachelbel - Canon in D - Piano Version.mp3
+Aug 23 19:06 : update: added /Death Note - Light's Theme.mp3
+Aug 23 19:06 : update: added /Claude Debussy - Claire de Lune.mp3
+Aug 23 19:06 : update: added /Death Note - OP 1.mp3
+Aug 23 19:06 : update: added /KWAYE - Sweetest Life.mp3
+Aug 23 19:06 : update: added /Jinsang - Life - Full BeatTape.mp3
+Aug 23 19:06 : update: added /Death Note - Low of Solipsism.mp3
+Aug 23 19:06 : update: added /Mussorgsky - Night on Bald Mountain.mp3
+Aug 23 19:06 : update: added /Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 19:06 : update: added /Eevee - Unexpected - Full BeatTape.mp3
+Aug 23 19:06 : update: added /Attack on Titan - Trasformazione Reiner e Bertold.mp3
+Aug 23 19:06 : update: added /Eminem - Without Me.mp3
+Aug 23 19:06 : update: added /Eminem - Lose Yourself.mp3
+Aug 23 19:06 : update: added /One Punch Man - Main Theme.mp3
+Aug 23 19:06 : update: added /Karol Szymanowski - Prelude op.1 no.1.mp3
+Aug 23 19:06 : update: added /Jake Hill - Solitude.mp3
+Aug 23 19:06 : update: added /Chopin - Fantaisie Impromptu.mp3
+Aug 23 19:06 : update: added /Made in Abyss - Hanezeve Caradhina.mp3
+Aug 23 19:06 : update: added /Eminem & Ed Sheeran - River.mp3
+Aug 23 19:06 : update: added /Tokyo Ghoul - Re - Asphyxia [OP].mp3
+Aug 23 19:06 : update: added /Yiruma - Greatest Hits.mp3
+Aug 23 19:06 : update: added /Boku No Hero Academia - OP 2.mp3
+Aug 23 19:06 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.1-2-3.mp3
+Aug 23 19:06 : update: added /Tomppabeats - Arcade - Full BeatTape.mp3
+Aug 23 19:06 : update: added /Jinsang - Confessions - Full BeatTape.mp3
+Aug 23 19:06 : update: added /Paganini - La Campanella - Violin Version.mp3
+Aug 23 19:06 : update: added /Ludovico Einaudi - Le Onde.mp3
+Aug 23 19:06 : update: added /Bach - Aria sulla quarta corda - Piano.mp3
+Aug 23 19:06 : update: added /Sword Art Online - Overfly [ED 2].mp3
+Aug 23 19:06 : update: added /Tokyo Ghoul - Unravel Acoustic [OP].mp3
+Aug 23 19:06 : update: added /Wotaku ni Koi wa Muzukashii - OP.mp3
+Aug 23 19:06 : update: added /Beethoven - 9th Symphony op.125.mp3
+Aug 23 19:06 : update: added /Liszt - Hungarian Rhapsody no.2.mp3
+Aug 23 19:06 : update: added /Fonzi M - Boku no Hero Academia - My Hero.mp3
+Aug 23 19:06 : update: added /Jinsang - Solitude - Full BeatTape.mp3
+Aug 23 19:06 : update: added /Attack on Titan - Call of Silence.mp3
+Aug 23 19:06 : update: added /Linkin Park - Numb.mp3
+Aug 23 19:06 : update: added /Beethoven - Piano Sonata no.17 mvt.3 - Tempest.mp3
+Aug 23 19:06 : update: added /Beethoven - String Quartet no.14 op.131 C sharp.mp3
+Aug 23 19:06 : update: added /Ludovico Einaudi - Night.mp3
+Aug 23 19:06 : update: added /No Game No Life - The King's Plan.mp3
+Aug 23 19:06 : update: added /TRACE - Low.mp3
+Aug 23 19:06 : update: added /ZAYN & Sia - Dusk Till Dawn.mp3
+Aug 23 19:06 : update: added /Mirai Nikki - Here With You.mp3
+Aug 23 19:06 : update: added /Sword Art Online - Crossing Field [OP 1].mp3
+Aug 23 19:06 : update: added /Beethoven - 5th Symphony in C minor.mp3
+Aug 23 19:06 : update: added /Linkin Park - What I've Done.mp3
+Aug 23 19:06 : update: added /Eminem - Framed.mp3
+Aug 23 19:06 : update: added /Richard Wagner - Ride of the Valkyries.mp3
+Aug 23 19:06 : update: added /City of the Sun - Ventura.mp3
+Aug 23 19:06 : update: added /The War On Drugs - Knocked Down.mp3
+Aug 23 19:06 : update: added /Boku No Hero Academia - OP 3.mp3
+Aug 23 19:06 : update: added /Eminem - My Name Is.mp3
+Aug 23 19:06 : update: added /Jake Hill & Josh A - Suicidial Thoughts.mp3
+Aug 23 19:06 : update: added /Villagers - A Trick of the Light.mp3
+Aug 23 19:06 : update: added /Eevee - Seeds - Full BeatTape.mp3
+Aug 23 19:06 : update: added /LUME - Magnet.mp3
+Aug 23 19:06 : update: added /Hans Zimmer - Inception - Time - Cello Version.mp3
+Aug 23 19:06 : update: added /Your Lie In April - Love's Sorrow - Liebesleid - Rachmaninoff's Arr..mp3
+Aug 23 19:06 : update: added /Ludovico Einaudi - Nuvole Bianche.mp3
+Aug 23 19:06 : update: added /Death Note - Kyrie.mp3
+Aug 23 19:06 : update: added /Ludovico Einaudi - Elegy for the Arctic.mp3
+Aug 23 19:06 : update: added /Camille Saint-Saens - Toccata op.72 no.3.mp3
+Aug 23 19:06 : update: added /Kill la Kill - I Want to Know.mp3
+Aug 23 19:06 : update: added /Chopin - Etude op.10 no.12 - Revolutionary.mp3
+Aug 23 19:06 : update: added /Rachmaninov - Piano Concerto no.2 mvt.3 - Minus Orchestra.mp3
+Aug 23 19:06 : update: added /Ludovico Einaudi - Una Mattina.mp3
+Aug 23 19:06 : update: added /Chopin - Nocturne in E flat major op.9 no.2 - Tiffany Poon.mp3
+Aug 23 19:06 : update: added /Joe Hisaishi - Laputa Castle in the Sky.mp3
+Aug 23 19:06 : update: added /Vivaldi - Le Quattro Stagioni - Nigel Kennedy Version.mp3
+Aug 23 19:06 : update: added /Hellsing - Alucard's Theme.mp3
+Aug 23 19:06 : update: added /KWAYE - Little Ones.mp3
+Aug 23 19:06 : update: added /Mob Psycho 100 - Explosion of Mob Feelings.mp3
+Aug 23 19:06 : update: added /Hellsing - Monster of God.mp3
+Aug 23 19:06 : update: added /Boku No Hero Academia - All Might vs All For One.mp3
+Aug 23 19:06 : update: added /Fonzi M - Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 19:06 : update: added /Sword Art Online - Swordland.mp3
+Aug 23 19:06 : update: added /Chopin - Etude op.10 no.4.mp3
+Aug 23 19:06 : update: added /Eminem - Sing for the Moment.mp3
+Aug 23 19:06 : update: added /One Punch Man - OP.mp3
+Aug 23 19:06 : update: added /Megalo Box - Main Theme.mp3
+Aug 23 19:06 : update: added /KWAYE - Jasime.mp3
+Aug 23 19:06 : update: added /Eminem - Till I Collapse.mp3
+Aug 23 19:06 : update: added /Tchaikovsky - 1812 Overture - Full Version.mp3
+Aug 23 19:06 : update: added /Camille Saint-Saens - Danse Macabre.mp3
+Aug 23 19:06 : update: added /No Game No Life - OP.mp3
+Aug 23 19:06 : update: added /2pac - Ghetto Gospel.mp3
+Aug 23 19:06 : update: added /Chopin - Spring Waltz.mp3
+Aug 23 19:06 : update: added /Paganini - Capriccio no.5.mp3
+Aug 23 19:06 : update: added /KWAYE - Cool Kids.mp3
+Aug 23 19:06 : update: added /Yiruma - Reminiscent.mp3
+Aug 23 19:06 : update: added /Liszt - Transcendental Etude no.4 - Mazeppa.mp3
+Aug 23 19:06 : update: added /Megalo Box - Intermission.mp3
+Aug 23 19:06 : update: added /Rachmaninov - Piano Concerto no.3 mvt.1 - Minus Orchestra.mp3
+Aug 23 19:06 : update: added /Jake Hill - 38 to the Face.mp3
+Aug 23 19:06 : update: added /Attack on Titan - Piano Adlib.mp3
+Aug 23 19:06 : update: added /Liszt - Totentanz.mp3
+Aug 23 19:06 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 - Piano Arrangement.mp3
+Aug 23 19:06 : update: added /Death Note - Kira's Theme.mp3
+Aug 23 19:06 : update: added /Eminem - Rap God.mp3
+Aug 23 19:06 : update: added /Theishter - Kimi No Na Wa - Kataware Doki.mp3
+Aug 23 19:06 : update: added /Jake Hill - We Die Too.mp3
+Aug 23 19:06 : update: added /Theishter - Mirai Nikki - Here With You.mp3
+Aug 23 19:06 : update: added /Eminem & Rihanna - The Monster.mp3
+Aug 23 19:06 : update: added /Tokyo Ghoul - Unravel Normal [OP].mp3
+Aug 23 19:06 : update: added /Theishter - Boku No Hero Academia - You Can Become A Hero.mp3
+Aug 23 19:06 : update: added /Eminem & Beyonce - Walk on Water.mp3
+Aug 23 19:06 : update: added /Ludovico Einaudi - Divenire.mp3
+Aug 23 19:06 : update: added /Hans Zimmer - Inception - Time - Normal Version.mp3
+Aug 23 19:06 : update: added /Rachmaninov - Piano Concerto no.2 - Plus Orchestra.mp3
+Aug 23 19:06 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 - Minus Orchestra.mp3
+Aug 23 19:06 : update: added /KWAYE - I Go.mp3
+Aug 23 19:06 : update: added /Death Note - L's Theme.mp3
+Aug 23 19:06 : update: added /Joe Hisaishi - One Summer's Day.mp3
+Aug 23 19:06 : update: added /Yiruma - River flows in you.mp3
+Aug 23 19:06 : update: added /Mussorgsky - Pictures at an Exhibition.mp3
+Aug 23 19:06 : update: added /Beethoven - Piano Sonata op.57 mvt.3 - Appassionata.mp3
+Aug 23 19:06 : update: added /Boku No Hero Academia - OP 1.mp3
+Aug 23 19:06 : update: added /Tchaikovsky - The Nutcracker Suite op.71.mp3
+Aug 23 19:06 : update: added /Eminem - When I'm Gone.mp3
+Aug 23 19:06 : update: added /Yiruma & Henry - River flows in you.mp3
+Aug 23 19:06 : update: added /Mozart - Sinfonia no.40 in Sol minore.mp3
+Aug 23 19:06 : update: added /2pac - Ambitionz az a ridah.mp3
+Aug 23 19:06 : update: added /Yiruma - May Be.mp3
+Aug 23 19:06 : update: added /Schubert - Ave Maria.mp3
+Aug 23 19:06 : update: added /Death Note - Near's Theme A B C.mp3
+Aug 23 19:06 : update: added /Boku No Hero Academia - My Hero.mp3
+Aug 23 19:06 : update: added /Boku No Hero Academia - You Say Run v2.mp3
+Aug 23 19:06 : update: added /Jake Hill & Josh A - NORTH KOREA.mp3
+Aug 23 19:06 : update: added /Billie Eilish - Lovely.mp3
+Aug 23 19:06 : update: added /Mozart - Lacrimosa.mp3
+Aug 23 19:06 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto - Nigel Kennedy Version.mp3
+Aug 23 19:06 : update: added /Paganini & Liszt - La Campanella.mp3
+Aug 23 19:06 : update: added /Theishter - Tokyo Ghoul - Unravel [OP].mp3
+Aug 23 19:06 : update: added /Rossini - William Tell Overture - Full Version.mp3
+Aug 23 19:06 : update: added /Theishter - Kimi No Na Wa - Sparkle.mp3
+Aug 23 19:06 : update: added /Attack on Titan - OP 2.mp3
+Aug 23 19:06 : update: added /Rachmaninov - Prelude in C sharp.mp3
+Aug 23 19:06 : update: added /Mozart - Turkish March.mp3
+Aug 23 19:06 : update: added /Theishter - Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 19:06 : update: added /Kesha - Praying.mp3
+Aug 23 19:06 : update: added /Jake Hill & Josh A - Better Of Dead.mp3
+Aug 23 19:06 : update: added /Naruto - Sadness and Sorrow - Piano Version.mp3
+Aug 23 19:06 : update: added /Paganini & Liszt - Etude no.6.mp3
+Aug 23 19:06 : update: added /Jake Hill & Josh A - GUCCI COFFIN.mp3
+Aug 23 19:06 : update: added /Kill la Kill - Ad la lib.mp3
+Aug 23 19:06 : update: added /Naruto - Girei - Pain's Theme.mp3
+Aug 23 19:06 : update: added /2pac - California Love.mp3
+Aug 23 19:06 : update: added /Tomppabeats - Harbor - Full BeatTape.mp3
+Aug 23 19:06 : update: added /Tchaikovsky - 1812 Overture - Finale.mp3
+Aug 23 19:06 : update: added /Hellsing - Gradus Vita.mp3
+Aug 23 19:06 : update: added /Death Note - OP 2.mp3
+Aug 23 19:06 : update: added /Paganini & Liszt - La Campanella - Piano Version - Kissin.mp3
+Aug 23 19:06 : update: added /Eminem - Not Afraid.mp3
+Aug 23 19:06 : update: added /Darling in the FranXX - Darling [ED 6].mp3
+Aug 23 19:06 : update: added /Beethoven - Piano Sonata no.8 op.13 C minor - Pathetique.mp3
+Aug 23 19:06 : update: added /Igor Stravinsky - Firebird Suite (Infernal Dance).mp3
+Aug 23 19:06 : update: added /Yiruma - Loanna.mp3
+Aug 23 19:06 : update: added /KWAYE - Lost In My Boots.mp3
+Aug 23 19:06 : update: added /Rossini - William Tell Overture - Final.mp3
+Aug 23 19:06 : update: added downloaded_music/Beethoven - Beethoven - Rondo e Capriccio.mp3
+Aug 23 19:06 : update: added /Mozart - Requiem.mp3
+Aug 23 19:06 : update: added /Jake Hill - WAKE UP.mp3
+Aug 23 19:06 : update: added /Your Lie In April - Introduction and Rondo Capriccioso - Saint Saens.mp3
+Aug 23 19:06 : update: added /Tash Sultana - SALVATION.mp3
+Aug 23 19:06 : update: added /Paganini - Capriccio no.24.mp3
+Aug 23 19:06 : update: added /Attack on Titan - Vogel im Kafig.mp3
+Aug 23 19:06 : update: added /Chopin - Etude op.25 no.11 - Winter Wind.mp3
+Aug 23 19:06 : update: added /Yiruma - Kiss the Rain.mp3
+Aug 23 19:06 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto - Piano Version.mp3
+Aug 23 19:06 : client: [0] opened from 127.0.0.1:41016
+Aug 23 19:07 : client: [0] closed
+Aug 23 19:07 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 19:07 : client: [0] opened from 127.0.0.1:41024
+Aug 23 19:09 : client: [1] opened from 127.0.0.1:41032
+Aug 23 19:09 : update: removing downloaded_music/Beethoven - Beethoven - Rondo e Capriccio.mp3
+Aug 23 19:09 : client: [1] closed
+Aug 23 19:09 : update: added /Beethoven - Beethoven - Rondo e Capriccio.mp3
+Aug 23 19:09 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 19:09 : update: updating /Igor Stravinsky - Firebird Suite (Infernal Dance).mp3
+Aug 23 19:11 : client: [0] closed
+Aug 23 19:13 : player: played "Igor Stravinsky - Firebird Suite (Infernal Dance).mp3"
+Aug 23 19:13 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 19:13 : update: added /Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 19:13 : update: added /Your Lie In April - Ballade no.1 in G minor op.23.mp3
+Aug 23 19:13 : update: added /Mozart - Aria della regina della notte.mp3
+Aug 23 19:13 : update: added /Attack on Titan - OP 3.mp3
+Aug 23 19:13 : update: added /Mirai Nikki - OP 1.mp3
+Aug 23 19:13 : update: added /Giuseppe Verdi - Dies Irae.mp3
+Aug 23 19:13 : update: added /Eminem & Rihanna - Love The Way You Lie.mp3
+Aug 23 19:13 : update: added /Hans Zimmer - Interstellar - Main Theme - Piano Version.mp3
+Aug 23 19:13 : update: added /Eminem - Mockingbird.mp3
+Aug 23 19:13 : update: added /Bach - Toccata e Fuga Re minore.mp3
+Aug 23 19:13 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.3.mp3
+Aug 23 19:13 : update: added /Mozart - Don Giovanni - Finale.mp3
+Aug 23 19:13 : update: added /Tokyo Ghoul - Re - ED.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - ANARCHY ACRES.mp3
+Aug 23 19:13 : update: added /Sword Art Online - We Have To Defeat It.mp3
+Aug 23 19:13 : update: added /Naruto - Sadness and Sorrow - Normal Version.mp3
+Aug 23 19:13 : update: added /Joe Hisaishi - My Neighbor Totoro - Path of the Wind.mp3
+Aug 23 19:13 : update: added /Eminem & Dido - Stan.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Experience.mp3
+Aug 23 19:13 : update: added /Chopin - Ballade no.1 in G minor op.23.mp3
+Aug 23 19:13 : update: added /Linkin Park - In The End.mp3
+Aug 23 19:13 : update: added /Theishter - Shigatsu wa Kimi no Uso - Hikaru Nara [OP].mp3
+Aug 23 19:13 : update: added /Theishter - One Punch Man - The Hero [OP].mp3
+Aug 23 19:13 : update: added /Theishter - Tokyo Ghoul VA - Kisetsu wa Tsugitsugi Shindeiku [ED].mp3
+Aug 23 19:13 : update: added /Bach - Prelude in C major BWV 846.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - Pennywise.mp3
+Aug 23 19:13 : update: added /Mob Psycho 100 - 99 [OP].mp3
+Aug 23 19:13 : update: added /Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Prelude op.23 no.5.mp3
+Aug 23 19:13 : update: added /Made in Abyss - OP.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - Endless Nightmare.mp3
+Aug 23 19:13 : update: added /Erik Satie - Gymnopedie no.1.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Little Red Riding Hood - Etude Tableau.mp3
+Aug 23 19:13 : update: added /Darling in the FranXX - Vanquish.mp3
+Aug 23 19:13 : update: added /One Punch Man - Geno's Sound.mp3
+Aug 23 19:13 : update: added /2pac - All Eyez On Me.mp3
+Aug 23 19:13 : update: added /Attack on Titan - Erens Armored Titan Transformation.mp3
+Aug 23 19:13 : update: added /Chopin - Waltz in A minor op. posth.mp3
+Aug 23 19:13 : update: added /Theishter - Tokyo Ghoul Re - Asphyxia.mp3
+Aug 23 19:13 : update: added /Attack on Titan - OP 1.mp3
+Aug 23 19:13 : update: added /Chopin - Piano Concerto in E minor op.11.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.2 mvt.2 - Minus Orchestra.mp3
+Aug 23 19:13 : update: added /Fonzi M - Boku no Hero Academia - United States of Smash.mp3
+Aug 23 19:13 : update: added /Pachelbel - Canon in D - Piano Version.mp3
+Aug 23 19:13 : update: added /Death Note - Light's Theme.mp3
+Aug 23 19:13 : update: added /Claude Debussy - Claire de Lune.mp3
+Aug 23 19:13 : update: added /Death Note - OP 1.mp3
+Aug 23 19:13 : update: added /KWAYE - Sweetest Life.mp3
+Aug 23 19:13 : update: added /Jinsang - Life - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Death Note - Low of Solipsism.mp3
+Aug 23 19:13 : update: added /Mussorgsky - Night on Bald Mountain.mp3
+Aug 23 19:13 : update: added /Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 19:13 : update: added /Eevee - Unexpected - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Attack on Titan - Trasformazione Reiner e Bertold.mp3
+Aug 23 19:13 : update: added /Eminem - Without Me.mp3
+Aug 23 19:13 : update: added /Eminem - Lose Yourself.mp3
+Aug 23 19:13 : update: added /One Punch Man - Main Theme.mp3
+Aug 23 19:13 : update: added /Karol Szymanowski - Prelude op.1 no.1.mp3
+Aug 23 19:13 : update: added /Jake Hill - Solitude.mp3
+Aug 23 19:13 : update: added /Chopin - Fantaisie Impromptu.mp3
+Aug 23 19:13 : update: added /Made in Abyss - Hanezeve Caradhina.mp3
+Aug 23 19:13 : update: added /Eminem & Ed Sheeran - River.mp3
+Aug 23 19:13 : update: added /Tokyo Ghoul - Re - Asphyxia [OP].mp3
+Aug 23 19:13 : update: added /Yiruma - Greatest Hits.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - OP 2.mp3
+Aug 23 19:13 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.1-2-3.mp3
+Aug 23 19:13 : update: added /Tomppabeats - Arcade - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Jinsang - Confessions - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Paganini - La Campanella - Violin Version.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Le Onde.mp3
+Aug 23 19:13 : update: added /Bach - Aria sulla quarta corda - Piano.mp3
+Aug 23 19:13 : update: added /Sword Art Online - Overfly [ED 2].mp3
+Aug 23 19:13 : update: added /Tokyo Ghoul - Unravel Acoustic [OP].mp3
+Aug 23 19:13 : update: added /Wotaku ni Koi wa Muzukashii - OP.mp3
+Aug 23 19:13 : update: added /Beethoven - 9th Symphony op.125.mp3
+Aug 23 19:13 : update: added /Liszt - Hungarian Rhapsody no.2.mp3
+Aug 23 19:13 : update: added /Fonzi M - Boku no Hero Academia - My Hero.mp3
+Aug 23 19:13 : update: added /Jinsang - Solitude - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Attack on Titan - Call of Silence.mp3
+Aug 23 19:13 : update: added /Linkin Park - Numb.mp3
+Aug 23 19:13 : update: added /Beethoven - Piano Sonata no.17 mvt.3 - Tempest.mp3
+Aug 23 19:13 : update: added /Beethoven - String Quartet no.14 op.131 C sharp.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Night.mp3
+Aug 23 19:13 : update: added /No Game No Life - The King's Plan.mp3
+Aug 23 19:13 : update: added /TRACE - Low.mp3
+Aug 23 19:13 : update: added /ZAYN & Sia - Dusk Till Dawn.mp3
+Aug 23 19:13 : update: added /Mirai Nikki - Here With You.mp3
+Aug 23 19:13 : update: added /Sword Art Online - Crossing Field [OP 1].mp3
+Aug 23 19:13 : update: added /Beethoven - 5th Symphony in C minor.mp3
+Aug 23 19:13 : update: added /Linkin Park - What I've Done.mp3
+Aug 23 19:13 : update: added /Eminem - Framed.mp3
+Aug 23 19:13 : update: added /Richard Wagner - Ride of the Valkyries.mp3
+Aug 23 19:13 : update: added /City of the Sun - Ventura.mp3
+Aug 23 19:13 : update: added /The War On Drugs - Knocked Down.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - OP 3.mp3
+Aug 23 19:13 : update: added /Eminem - My Name Is.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - Suicidial Thoughts.mp3
+Aug 23 19:13 : update: added /Villagers - A Trick of the Light.mp3
+Aug 23 19:13 : update: added /Eevee - Seeds - Full BeatTape.mp3
+Aug 23 19:13 : update: added /LUME - Magnet.mp3
+Aug 23 19:13 : update: added /Beethoven - Beethoven - Rondo e Capriccio.mp3
+Aug 23 19:13 : update: added /Hans Zimmer - Inception - Time - Cello Version.mp3
+Aug 23 19:13 : update: added /Your Lie In April - Love's Sorrow - Liebesleid - Rachmaninoff's Arr..mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Nuvole Bianche.mp3
+Aug 23 19:13 : update: added /Death Note - Kyrie.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Elegy for the Arctic.mp3
+Aug 23 19:13 : update: added /Camille Saint-Saens - Toccata op.72 no.3.mp3
+Aug 23 19:13 : update: added /Kill la Kill - I Want to Know.mp3
+Aug 23 19:13 : update: added /Chopin - Etude op.10 no.12 - Revolutionary.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.2 mvt.3 - Minus Orchestra.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Una Mattina.mp3
+Aug 23 19:13 : update: added /Chopin - Nocturne in E flat major op.9 no.2 - Tiffany Poon.mp3
+Aug 23 19:13 : update: added /Joe Hisaishi - Laputa Castle in the Sky.mp3
+Aug 23 19:13 : update: added /Vivaldi - Le Quattro Stagioni - Nigel Kennedy Version.mp3
+Aug 23 19:13 : update: added /Hellsing - Alucard's Theme.mp3
+Aug 23 19:13 : update: added /KWAYE - Little Ones.mp3
+Aug 23 19:13 : update: added /Mob Psycho 100 - Explosion of Mob Feelings.mp3
+Aug 23 19:13 : update: added /Hellsing - Monster of God.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - All Might vs All For One.mp3
+Aug 23 19:13 : update: added /Fonzi M - Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 19:13 : update: added /Sword Art Online - Swordland.mp3
+Aug 23 19:13 : update: added /Chopin - Etude op.10 no.4.mp3
+Aug 23 19:13 : update: added /Eminem - Sing for the Moment.mp3
+Aug 23 19:13 : update: added /One Punch Man - OP.mp3
+Aug 23 19:13 : update: added /Megalo Box - Main Theme.mp3
+Aug 23 19:13 : update: added /KWAYE - Jasime.mp3
+Aug 23 19:13 : update: added /Eminem - Till I Collapse.mp3
+Aug 23 19:13 : update: added /Tchaikovsky - 1812 Overture - Full Version.mp3
+Aug 23 19:13 : update: added /Camille Saint-Saens - Danse Macabre.mp3
+Aug 23 19:13 : update: added /No Game No Life - OP.mp3
+Aug 23 19:13 : update: added /2pac - Ghetto Gospel.mp3
+Aug 23 19:13 : update: added /Chopin - Spring Waltz.mp3
+Aug 23 19:13 : update: added /Paganini - Capriccio no.5.mp3
+Aug 23 19:13 : update: added /KWAYE - Cool Kids.mp3
+Aug 23 19:13 : update: added /Yiruma - Reminiscent.mp3
+Aug 23 19:13 : update: added /Liszt - Transcendental Etude no.4 - Mazeppa.mp3
+Aug 23 19:13 : update: added /Megalo Box - Intermission.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.3 mvt.1 - Minus Orchestra.mp3
+Aug 23 19:13 : update: added /Jake Hill - 38 to the Face.mp3
+Aug 23 19:13 : update: added /Attack on Titan - Piano Adlib.mp3
+Aug 23 19:13 : update: added /Liszt - Totentanz.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 - Piano Arrangement.mp3
+Aug 23 19:13 : update: added /Death Note - Kira's Theme.mp3
+Aug 23 19:13 : update: added /Eminem - Rap God.mp3
+Aug 23 19:13 : update: added /Theishter - Kimi No Na Wa - Kataware Doki.mp3
+Aug 23 19:13 : update: added /Jake Hill - We Die Too.mp3
+Aug 23 19:13 : update: added /Theishter - Mirai Nikki - Here With You.mp3
+Aug 23 19:13 : update: added /Eminem & Rihanna - The Monster.mp3
+Aug 23 19:13 : update: added /Tokyo Ghoul - Unravel Normal [OP].mp3
+Aug 23 19:13 : update: added /Theishter - Boku No Hero Academia - You Can Become A Hero.mp3
+Aug 23 19:13 : update: added /Eminem & Beyonce - Walk on Water.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Divenire.mp3
+Aug 23 19:13 : update: added /Hans Zimmer - Inception - Time - Normal Version.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.2 - Plus Orchestra.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 - Minus Orchestra.mp3
+Aug 23 19:13 : update: added /KWAYE - I Go.mp3
+Aug 23 19:13 : update: added /Death Note - L's Theme.mp3
+Aug 23 19:13 : update: added /Joe Hisaishi - One Summer's Day.mp3
+Aug 23 19:13 : update: added /Yiruma - River flows in you.mp3
+Aug 23 19:13 : update: added /Mussorgsky - Pictures at an Exhibition.mp3
+Aug 23 19:13 : update: added /Beethoven - Piano Sonata op.57 mvt.3 - Appassionata.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - OP 1.mp3
+Aug 23 19:13 : update: added /Tchaikovsky - The Nutcracker Suite op.71.mp3
+Aug 23 19:13 : update: added /Eminem - When I'm Gone.mp3
+Aug 23 19:13 : update: added /Yiruma & Henry - River flows in you.mp3
+Aug 23 19:13 : update: added /Mozart - Sinfonia no.40 in Sol minore.mp3
+Aug 23 19:13 : update: added /2pac - Ambitionz az a ridah.mp3
+Aug 23 19:13 : update: added /Yiruma - May Be.mp3
+Aug 23 19:13 : update: added /Schubert - Ave Maria.mp3
+Aug 23 19:13 : update: added /Death Note - Near's Theme A B C.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - My Hero.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - You Say Run v2.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - NORTH KOREA.mp3
+Aug 23 19:13 : update: added /Billie Eilish - Lovely.mp3
+Aug 23 19:13 : update: added /Mozart - Lacrimosa.mp3
+Aug 23 19:13 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto - Nigel Kennedy Version.mp3
+Aug 23 19:13 : update: added /Paganini & Liszt - La Campanella.mp3
+Aug 23 19:13 : update: added /Theishter - Tokyo Ghoul - Unravel [OP].mp3
+Aug 23 19:13 : update: added /Rossini - William Tell Overture - Full Version.mp3
+Aug 23 19:13 : update: added /Theishter - Kimi No Na Wa - Sparkle.mp3
+Aug 23 19:13 : update: added /Attack on Titan - OP 2.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Prelude in C sharp.mp3
+Aug 23 19:13 : update: added /Mozart - Turkish March.mp3
+Aug 23 19:13 : update: added /Theishter - Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 19:13 : update: added /Kesha - Praying.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - Better Of Dead.mp3
+Aug 23 19:13 : update: added /Naruto - Sadness and Sorrow - Piano Version.mp3
+Aug 23 19:13 : update: added /Paganini & Liszt - Etude no.6.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - GUCCI COFFIN.mp3
+Aug 23 19:13 : update: added /Kill la Kill - Ad la lib.mp3
+Aug 23 19:13 : update: added /Naruto - Girei - Pain's Theme.mp3
+Aug 23 19:13 : update: added /2pac - California Love.mp3
+Aug 23 19:13 : update: added /Tomppabeats - Harbor - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Tchaikovsky - 1812 Overture - Finale.mp3
+Aug 23 19:13 : update: added /Hellsing - Gradus Vita.mp3
+Aug 23 19:13 : update: added /Death Note - OP 2.mp3
+Aug 23 19:13 : update: added /Paganini & Liszt - La Campanella - Piano Version - Kissin.mp3
+Aug 23 19:13 : update: added /Eminem - Not Afraid.mp3
+Aug 23 19:13 : update: added /Darling in the FranXX - Darling [ED 6].mp3
+Aug 23 19:13 : update: added /Beethoven - Piano Sonata no.8 op.13 C minor - Pathetique.mp3
+Aug 23 19:13 : update: added /Igor Stravinsky - Firebird Suite (Infernal Dance).mp3
+Aug 23 19:13 : update: added /Yiruma - Loanna.mp3
+Aug 23 19:13 : update: added /KWAYE - Lost In My Boots.mp3
+Aug 23 19:13 : update: added /Rossini - William Tell Overture - Final.mp3
+Aug 23 19:13 : update: added /Mozart - Requiem.mp3
+Aug 23 19:13 : update: added /Jake Hill - WAKE UP.mp3
+Aug 23 19:13 : update: added /Your Lie In April - Introduction and Rondo Capriccioso - Saint Saens.mp3
+Aug 23 19:13 : update: added /Tash Sultana - SALVATION.mp3
+Aug 23 19:13 : update: added /Paganini - Capriccio no.24.mp3
+Aug 23 19:13 : update: added /Attack on Titan - Vogel im Kafig.mp3
+Aug 23 19:13 : update: added /Chopin - Etude op.25 no.11 - Winter Wind.mp3
+Aug 23 19:13 : update: added /Yiruma - Kiss the Rain.mp3
+Aug 23 19:13 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto - Piano Version.mp3
+Aug 23 19:13 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 19:13 : update: added /Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 19:13 : update: added /Your Lie In April - Ballade no.1 in G minor op.23.mp3
+Aug 23 19:13 : update: added /Mozart - Aria della regina della notte.mp3
+Aug 23 19:13 : update: added /Attack on Titan - OP 3.mp3
+Aug 23 19:13 : update: added /Mirai Nikki - OP 1.mp3
+Aug 23 19:13 : update: added /Giuseppe Verdi - Dies Irae.mp3
+Aug 23 19:13 : update: added /Eminem & Rihanna - Love The Way You Lie.mp3
+Aug 23 19:13 : update: added /Hans Zimmer - Interstellar - Main Theme - Piano Version.mp3
+Aug 23 19:13 : update: added /Eminem - Mockingbird.mp3
+Aug 23 19:13 : update: added /Bach - Toccata e Fuga Re minore.mp3
+Aug 23 19:13 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.3.mp3
+Aug 23 19:13 : update: added /Mozart - Don Giovanni - Finale.mp3
+Aug 23 19:13 : update: added /Tokyo Ghoul - Re - ED.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - ANARCHY ACRES.mp3
+Aug 23 19:13 : update: added /Sword Art Online - We Have To Defeat It.mp3
+Aug 23 19:13 : update: added /Naruto - Sadness and Sorrow - Normal Version.mp3
+Aug 23 19:13 : update: added /Joe Hisaishi - My Neighbor Totoro - Path of the Wind.mp3
+Aug 23 19:13 : update: added /Eminem & Dido - Stan.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Experience.mp3
+Aug 23 19:13 : update: added /Chopin - Ballade no.1 in G minor op.23.mp3
+Aug 23 19:13 : update: added /Linkin Park - In The End.mp3
+Aug 23 19:13 : update: added /Theishter - Shigatsu wa Kimi no Uso - Hikaru Nara [OP].mp3
+Aug 23 19:13 : update: added /Theishter - One Punch Man - The Hero [OP].mp3
+Aug 23 19:13 : update: added /Theishter - Tokyo Ghoul VA - Kisetsu wa Tsugitsugi Shindeiku [ED].mp3
+Aug 23 19:13 : update: added /Bach - Prelude in C major BWV 846.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - Pennywise.mp3
+Aug 23 19:13 : update: added /Mob Psycho 100 - 99 [OP].mp3
+Aug 23 19:13 : update: added /Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Prelude op.23 no.5.mp3
+Aug 23 19:13 : update: added /Made in Abyss - OP.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - Endless Nightmare.mp3
+Aug 23 19:13 : update: added /Erik Satie - Gymnopedie no.1.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Little Red Riding Hood - Etude Tableau.mp3
+Aug 23 19:13 : update: added /Darling in the FranXX - Vanquish.mp3
+Aug 23 19:13 : update: added /One Punch Man - Geno's Sound.mp3
+Aug 23 19:13 : update: added /2pac - All Eyez On Me.mp3
+Aug 23 19:13 : update: added /Attack on Titan - Erens Armored Titan Transformation.mp3
+Aug 23 19:13 : update: added /Chopin - Waltz in A minor op. posth.mp3
+Aug 23 19:13 : update: added /Theishter - Tokyo Ghoul Re - Asphyxia.mp3
+Aug 23 19:13 : update: added /Attack on Titan - OP 1.mp3
+Aug 23 19:13 : update: added /Chopin - Piano Concerto in E minor op.11.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.2 mvt.2 - Minus Orchestra.mp3
+Aug 23 19:13 : update: added /Fonzi M - Boku no Hero Academia - United States of Smash.mp3
+Aug 23 19:13 : update: added /Pachelbel - Canon in D - Piano Version.mp3
+Aug 23 19:13 : update: added /Death Note - Light's Theme.mp3
+Aug 23 19:13 : update: added /Claude Debussy - Claire de Lune.mp3
+Aug 23 19:13 : update: added /Death Note - OP 1.mp3
+Aug 23 19:13 : update: added /KWAYE - Sweetest Life.mp3
+Aug 23 19:13 : update: added /Jinsang - Life - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Death Note - Low of Solipsism.mp3
+Aug 23 19:13 : update: added /Mussorgsky - Night on Bald Mountain.mp3
+Aug 23 19:13 : update: added /Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 19:13 : update: added /Eevee - Unexpected - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Attack on Titan - Trasformazione Reiner e Bertold.mp3
+Aug 23 19:13 : update: added /Eminem - Without Me.mp3
+Aug 23 19:13 : update: added /Eminem - Lose Yourself.mp3
+Aug 23 19:13 : update: added /One Punch Man - Main Theme.mp3
+Aug 23 19:13 : update: added /Karol Szymanowski - Prelude op.1 no.1.mp3
+Aug 23 19:13 : update: added /Jake Hill - Solitude.mp3
+Aug 23 19:13 : update: added /Chopin - Fantaisie Impromptu.mp3
+Aug 23 19:13 : update: added /Made in Abyss - Hanezeve Caradhina.mp3
+Aug 23 19:13 : update: added /Eminem & Ed Sheeran - River.mp3
+Aug 23 19:13 : update: added /Tokyo Ghoul - Re - Asphyxia [OP].mp3
+Aug 23 19:13 : update: added /Yiruma - Greatest Hits.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - OP 2.mp3
+Aug 23 19:13 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.1-2-3.mp3
+Aug 23 19:13 : update: added /Tomppabeats - Arcade - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Jinsang - Confessions - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Paganini - La Campanella - Violin Version.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Le Onde.mp3
+Aug 23 19:13 : update: added /Bach - Aria sulla quarta corda - Piano.mp3
+Aug 23 19:13 : update: added /Sword Art Online - Overfly [ED 2].mp3
+Aug 23 19:13 : update: added /Tokyo Ghoul - Unravel Acoustic [OP].mp3
+Aug 23 19:13 : update: added /Wotaku ni Koi wa Muzukashii - OP.mp3
+Aug 23 19:13 : update: added /Beethoven - 9th Symphony op.125.mp3
+Aug 23 19:13 : update: added /Liszt - Hungarian Rhapsody no.2.mp3
+Aug 23 19:13 : update: added /Fonzi M - Boku no Hero Academia - My Hero.mp3
+Aug 23 19:13 : update: added /Jinsang - Solitude - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Attack on Titan - Call of Silence.mp3
+Aug 23 19:13 : update: added /Linkin Park - Numb.mp3
+Aug 23 19:13 : update: added /Beethoven - Piano Sonata no.17 mvt.3 - Tempest.mp3
+Aug 23 19:13 : update: added /Beethoven - String Quartet no.14 op.131 C sharp.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Night.mp3
+Aug 23 19:13 : update: added /No Game No Life - The King's Plan.mp3
+Aug 23 19:13 : update: added /TRACE - Low.mp3
+Aug 23 19:13 : update: added /ZAYN & Sia - Dusk Till Dawn.mp3
+Aug 23 19:13 : update: added /Mirai Nikki - Here With You.mp3
+Aug 23 19:13 : update: added /Sword Art Online - Crossing Field [OP 1].mp3
+Aug 23 19:13 : update: added /Beethoven - 5th Symphony in C minor.mp3
+Aug 23 19:13 : update: added /Linkin Park - What I've Done.mp3
+Aug 23 19:13 : update: added /Eminem - Framed.mp3
+Aug 23 19:13 : update: added /Richard Wagner - Ride of the Valkyries.mp3
+Aug 23 19:13 : update: added /City of the Sun - Ventura.mp3
+Aug 23 19:13 : update: added /The War On Drugs - Knocked Down.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - OP 3.mp3
+Aug 23 19:13 : update: added /Eminem - My Name Is.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - Suicidial Thoughts.mp3
+Aug 23 19:13 : update: added /Villagers - A Trick of the Light.mp3
+Aug 23 19:13 : update: added /Eevee - Seeds - Full BeatTape.mp3
+Aug 23 19:13 : update: added /LUME - Magnet.mp3
+Aug 23 19:13 : update: added /Beethoven - Beethoven - Rondo e Capriccio.mp3
+Aug 23 19:13 : update: added /Hans Zimmer - Inception - Time - Cello Version.mp3
+Aug 23 19:13 : update: added /Your Lie In April - Love's Sorrow - Liebesleid - Rachmaninoff's Arr..mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Nuvole Bianche.mp3
+Aug 23 19:13 : update: added /Death Note - Kyrie.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Elegy for the Arctic.mp3
+Aug 23 19:13 : update: added /Camille Saint-Saens - Toccata op.72 no.3.mp3
+Aug 23 19:13 : update: added /Kill la Kill - I Want to Know.mp3
+Aug 23 19:13 : update: added /Chopin - Etude op.10 no.12 - Revolutionary.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.2 mvt.3 - Minus Orchestra.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Una Mattina.mp3
+Aug 23 19:13 : update: added /Chopin - Nocturne in E flat major op.9 no.2 - Tiffany Poon.mp3
+Aug 23 19:13 : update: added /Joe Hisaishi - Laputa Castle in the Sky.mp3
+Aug 23 19:13 : update: added /Vivaldi - Le Quattro Stagioni - Nigel Kennedy Version.mp3
+Aug 23 19:13 : update: added /Hellsing - Alucard's Theme.mp3
+Aug 23 19:13 : update: added /KWAYE - Little Ones.mp3
+Aug 23 19:13 : update: added /Mob Psycho 100 - Explosion of Mob Feelings.mp3
+Aug 23 19:13 : update: added /Hellsing - Monster of God.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - All Might vs All For One.mp3
+Aug 23 19:13 : update: added /Fonzi M - Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 19:13 : update: added /Sword Art Online - Swordland.mp3
+Aug 23 19:13 : update: added /Chopin - Etude op.10 no.4.mp3
+Aug 23 19:13 : update: added /Eminem - Sing for the Moment.mp3
+Aug 23 19:13 : update: added /One Punch Man - OP.mp3
+Aug 23 19:13 : update: added /Megalo Box - Main Theme.mp3
+Aug 23 19:13 : update: added /KWAYE - Jasime.mp3
+Aug 23 19:13 : update: added /Eminem - Till I Collapse.mp3
+Aug 23 19:13 : update: added /Tchaikovsky - 1812 Overture - Full Version.mp3
+Aug 23 19:13 : update: added /Camille Saint-Saens - Danse Macabre.mp3
+Aug 23 19:13 : update: added /No Game No Life - OP.mp3
+Aug 23 19:13 : update: added /2pac - Ghetto Gospel.mp3
+Aug 23 19:13 : update: added /Chopin - Spring Waltz.mp3
+Aug 23 19:13 : update: added /Paganini - Capriccio no.5.mp3
+Aug 23 19:13 : update: added /KWAYE - Cool Kids.mp3
+Aug 23 19:13 : update: added /Yiruma - Reminiscent.mp3
+Aug 23 19:13 : update: added /Liszt - Transcendental Etude no.4 - Mazeppa.mp3
+Aug 23 19:13 : update: added /Megalo Box - Intermission.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.3 mvt.1 - Minus Orchestra.mp3
+Aug 23 19:13 : update: added /Jake Hill - 38 to the Face.mp3
+Aug 23 19:13 : update: added /Attack on Titan - Piano Adlib.mp3
+Aug 23 19:13 : update: added /Liszt - Totentanz.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 - Piano Arrangement.mp3
+Aug 23 19:13 : update: added /Death Note - Kira's Theme.mp3
+Aug 23 19:13 : update: added /Eminem - Rap God.mp3
+Aug 23 19:13 : update: added /Theishter - Kimi No Na Wa - Kataware Doki.mp3
+Aug 23 19:13 : update: added /Jake Hill - We Die Too.mp3
+Aug 23 19:13 : update: added /Theishter - Mirai Nikki - Here With You.mp3
+Aug 23 19:13 : update: added /Eminem & Rihanna - The Monster.mp3
+Aug 23 19:13 : update: added /Tokyo Ghoul - Unravel Normal [OP].mp3
+Aug 23 19:13 : update: added /Theishter - Boku No Hero Academia - You Can Become A Hero.mp3
+Aug 23 19:13 : update: added /Eminem & Beyonce - Walk on Water.mp3
+Aug 23 19:13 : update: added /Ludovico Einaudi - Divenire.mp3
+Aug 23 19:13 : update: added /Hans Zimmer - Inception - Time - Normal Version.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.2 - Plus Orchestra.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 - Minus Orchestra.mp3
+Aug 23 19:13 : update: added /KWAYE - I Go.mp3
+Aug 23 19:13 : update: added /Death Note - L's Theme.mp3
+Aug 23 19:13 : update: added /Joe Hisaishi - One Summer's Day.mp3
+Aug 23 19:13 : update: added /Yiruma - River flows in you.mp3
+Aug 23 19:13 : update: added /Mussorgsky - Pictures at an Exhibition.mp3
+Aug 23 19:13 : update: added /Beethoven - Piano Sonata op.57 mvt.3 - Appassionata.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - OP 1.mp3
+Aug 23 19:13 : update: added /Tchaikovsky - The Nutcracker Suite op.71.mp3
+Aug 23 19:13 : update: added /Eminem - When I'm Gone.mp3
+Aug 23 19:13 : update: added /Yiruma & Henry - River flows in you.mp3
+Aug 23 19:13 : update: added /Mozart - Sinfonia no.40 in Sol minore.mp3
+Aug 23 19:13 : update: added /2pac - Ambitionz az a ridah.mp3
+Aug 23 19:13 : update: added /Yiruma - May Be.mp3
+Aug 23 19:13 : update: added /Schubert - Ave Maria.mp3
+Aug 23 19:13 : update: added /Death Note - Near's Theme A B C.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - My Hero.mp3
+Aug 23 19:13 : update: added /Boku No Hero Academia - You Say Run v2.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - NORTH KOREA.mp3
+Aug 23 19:13 : update: added /Billie Eilish - Lovely.mp3
+Aug 23 19:13 : update: added /Mozart - Lacrimosa.mp3
+Aug 23 19:13 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto - Nigel Kennedy Version.mp3
+Aug 23 19:13 : update: added /Paganini & Liszt - La Campanella.mp3
+Aug 23 19:13 : update: added /Theishter - Tokyo Ghoul - Unravel [OP].mp3
+Aug 23 19:13 : update: added /Rossini - William Tell Overture - Full Version.mp3
+Aug 23 19:13 : update: added /Theishter - Kimi No Na Wa - Sparkle.mp3
+Aug 23 19:13 : update: added /Attack on Titan - OP 2.mp3
+Aug 23 19:13 : update: added /Rachmaninov - Prelude in C sharp.mp3
+Aug 23 19:13 : update: added /Mozart - Turkish March.mp3
+Aug 23 19:13 : update: added /Theishter - Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 19:13 : update: added /Kesha - Praying.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - Better Of Dead.mp3
+Aug 23 19:13 : update: added /Naruto - Sadness and Sorrow - Piano Version.mp3
+Aug 23 19:13 : update: added /Paganini & Liszt - Etude no.6.mp3
+Aug 23 19:13 : update: added /Jake Hill & Josh A - GUCCI COFFIN.mp3
+Aug 23 19:13 : update: added /Kill la Kill - Ad la lib.mp3
+Aug 23 19:13 : update: added /Naruto - Girei - Pain's Theme.mp3
+Aug 23 19:13 : update: added /2pac - California Love.mp3
+Aug 23 19:13 : update: added /Tomppabeats - Harbor - Full BeatTape.mp3
+Aug 23 19:13 : update: added /Tchaikovsky - 1812 Overture - Finale.mp3
+Aug 23 19:13 : update: added /Hellsing - Gradus Vita.mp3
+Aug 23 19:13 : update: added /Death Note - OP 2.mp3
+Aug 23 19:13 : update: added /Paganini & Liszt - La Campanella - Piano Version - Kissin.mp3
+Aug 23 19:13 : update: added /Eminem - Not Afraid.mp3
+Aug 23 19:13 : update: added /Darling in the FranXX - Darling [ED 6].mp3
+Aug 23 19:13 : update: added /Beethoven - Piano Sonata no.8 op.13 C minor - Pathetique.mp3
+Aug 23 19:13 : update: added /Igor Stravinsky - Firebird Suite (Infernal Dance).mp3
+Aug 23 19:13 : update: added /Yiruma - Loanna.mp3
+Aug 23 19:13 : update: added /KWAYE - Lost In My Boots.mp3
+Aug 23 19:13 : update: added /Rossini - William Tell Overture - Final.mp3
+Aug 23 19:13 : update: added /Mozart - Requiem.mp3
+Aug 23 19:13 : update: added /Jake Hill - WAKE UP.mp3
+Aug 23 19:13 : update: added /Your Lie In April - Introduction and Rondo Capriccioso - Saint Saens.mp3
+Aug 23 19:13 : update: added /Tash Sultana - SALVATION.mp3
+Aug 23 19:13 : update: added /Paganini - Capriccio no.24.mp3
+Aug 23 19:13 : update: added /Attack on Titan - Vogel im Kafig.mp3
+Aug 23 19:13 : update: added /Chopin - Etude op.25 no.11 - Winter Wind.mp3
+Aug 23 19:13 : update: added /Yiruma - Kiss the Rain.mp3
+Aug 23 19:13 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto - Piano Version.mp3
+Aug 23 19:13 : client: [0] opened from 127.0.0.1:41036
+Aug 23 19:14 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 19:14 : update: updating /Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3
+Aug 23 19:26 : player: played "Your Lie In April - Violin Sonata no.9 - Kreutzer.mp3"
+Aug 23 19:28 : client: [0] closed
+Aug 23 20:57 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 20:57 : update: added /Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 20:57 : update: added /Beethoven - Piano Sonata no.17 mvt.3 (Tempest).mp3
+Aug 23 20:57 : client: [0] opened from 127.0.0.1:50812
+Aug 23 20:57 : update: added /scarlxrd - scarlxrd - HEART ATTACK.mp3
+Aug 23 20:57 : update: added /Paganini & Liszt - La Campanella - Kissin.mp3
+Aug 23 20:57 : update: added /Mozart - Aria della regina della notte.mp3
+Aug 23 20:57 : update: added /Attack on Titan - OP 3.mp3
+Aug 23 20:57 : update: added /Tchaikovsky - 1812 Overture (Full).mp3
+Aug 23 20:57 : update: added /Tchaikovsky - 1812 Overture (Finale).mp3
+Aug 23 20:57 : update: added /Eminem & Rihanna - Love The Way You Lie.mp3
+Aug 23 20:57 : update: added /Eminem - Mockingbird.mp3
+Aug 23 20:57 : update: added /Bach - Toccata e Fuga Re minore.mp3
+Aug 23 20:57 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.3.mp3
+Aug 23 20:57 : update: added /Mozart - Don Giovanni - Finale.mp3
+Aug 23 20:57 : update: added /Jake Hill & Josh A - ANARCHY ACRES.mp3
+Aug 23 20:57 : update: added /Chopin - Chopin - Etude op.25 no.5 (Wrong Note).mp3
+Aug 23 20:57 : update: added /Sword Art Online - We Have To Defeat It.mp3
+Aug 23 20:57 : update: added /Joe Hisaishi - My Neighbor Totoro - Path of the Wind.mp3
+Aug 23 20:57 : update: added /Eminem & Dido - Stan.mp3
+Aug 23 20:57 : update: added /Linkin Park - In The End.mp3
+Aug 23 20:57 : update: added /Theishter - One Punch Man - The Hero [OP].mp3
+Aug 23 20:57 : update: added /Stravinsky - Firebird Suite (Infernal Dance).mp3
+Aug 23 20:57 : update: added /Bach - Prelude in C major BWV 846.mp3
+Aug 23 20:57 : update: added /Jake Hill & Josh A - Pennywise.mp3
+Aug 23 20:57 : update: added /Tomppabeats - Arcade (Full BeatTape).mp3
+Aug 23 20:57 : update: added /Rachmaninov - Prelude op.23 no.5.mp3
+Aug 23 20:57 : update: added /Jake Hill & Josh A - Endless Nightmare.mp3
+Aug 23 20:57 : update: added /Rachmaninov - Little Red Riding Hood - Etude Tableau.mp3
+Aug 23 20:57 : update: added /Darling in the FranXX - Vanquish.mp3
+Aug 23 20:57 : update: added /2pac - All Eyez On Me.mp3
+Aug 23 20:57 : update: added /Attack on Titan - Erens Armored Titan Transformation.mp3
+Aug 23 20:57 : update: added /Chopin - Waltz in A minor op. posth.mp3
+Aug 23 20:57 : update: added /Einaudi - Divenire.mp3
+Aug 23 20:57 : update: added /Attack on Titan - OP 1.mp3
+Aug 23 20:57 : update: added /Chopin - Piano Concerto in E minor op.11.mp3
+Aug 23 20:57 : update: added /Fonzi M - Boku no Hero Academia - United States of Smash.mp3
+Aug 23 20:57 : update: added /Death Note - Light's Theme.mp3
+Aug 23 20:57 : update: added /Death Note - OP 1.mp3
+Aug 23 20:57 : update: added /KWAYE - Sweetest Life.mp3
+Aug 23 20:57 : update: added /Death Note - Low of Solipsism.mp3
+Aug 23 20:57 : update: added /Mussorgsky - Night on Bald Mountain.mp3
+Aug 23 20:57 : update: added /Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 20:57 : update: added /Kreisler - Kreisler - Liebesleid (Love's Sorrow) (Piano & Violin).mp3
+Aug 23 20:57 : update: added /Jinsang - Confessions (Full BeatTape).mp3
+Aug 23 20:57 : update: added /Attack on Titan - Trasformazione Reiner e Bertold.mp3
+Aug 23 20:57 : update: added /Eminem - Without Me.mp3
+Aug 23 20:57 : update: added /Tomppabeats - Harbor (Full BeatTape).mp3
+Aug 23 20:57 : update: added /Eminem - Lose Yourself.mp3
+Aug 23 20:57 : update: added /Einaudi - Night.mp3
+Aug 23 20:57 : update: added /One Punch Man - Main Theme.mp3
+Aug 23 20:57 : update: added /Jake Hill - Solitude.mp3
+Aug 23 20:57 : update: added /Animenz - No Game No Life - This Game [OP].mp3
+Aug 23 20:57 : update: added /Naruto - Sadness and Sorrow (Normal).mp3
+Aug 23 20:57 : update: added /Made in Abyss - Hanezeve Caradhina.mp3
+Aug 23 20:57 : update: added /Animenz - Attack on Titan - OST.mp3
+Aug 23 20:57 : update: added /Eminem & Ed Sheeran - River.mp3
+Aug 23 20:57 : update: added /Yiruma - Greatest Hits.mp3
+Aug 23 20:57 : update: added /Boku No Hero Academia - OP 2.mp3
+Aug 23 20:57 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.1-2-3.mp3
+Aug 23 20:57 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto (Piano).mp3
+Aug 23 20:57 : update: added /Bach - Aria sulla quarta corda - Piano.mp3
+Aug 23 20:57 : update: added /Beethoven - 9th Symphony op.125.mp3
+Aug 23 20:57 : update: added /Liszt - Hungarian Rhapsody no.2.mp3
+Aug 23 20:57 : update: added /Einaudi - Le Onde.mp3
+Aug 23 20:57 : update: added /Fonzi M - Boku no Hero Academia - My Hero.mp3
+Aug 23 20:57 : update: added /Attack on Titan - Call of Silence.mp3
+Aug 23 20:57 : update: added /Linkin Park - Numb.mp3
+Aug 23 20:57 : update: added /Beethoven - String Quartet no.14 op.131 C sharp.mp3
+Aug 23 20:57 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto - Nigel Kennedy.mp3
+Aug 23 20:57 : update: added /ZAYN & Sia - Dusk Till Dawn.mp3
+Aug 23 20:57 : update: added /Mirai Nikki - Here With You.mp3
+Aug 23 20:57 : update: added /Beethoven - 5th Symphony in C minor.mp3
+Aug 23 20:57 : update: added /Linkin Park - What I've Done.mp3
+Aug 23 20:57 : update: added /Saint Saens - Toccata op.72 no.3.mp3
+Aug 23 20:57 : update: added /Eminem - Framed.mp3
+Aug 23 20:57 : update: added /Richard Wagner - Ride of the Valkyries.mp3
+Aug 23 20:57 : update: added /The War On Drugs - Knocked Down.mp3
+Aug 23 20:57 : update: added /Boku No Hero Academia - OP 3.mp3
+Aug 23 20:57 : update: added /Eminem - My Name Is.mp3
+Aug 23 20:57 : update: added /Rachmaninov - Piano Concerto no.3 mvt.1 (Minus Orchestra).mp3
+Aug 23 20:57 : update: added /Jake Hill & Josh A - Suicidial Thoughts.mp3
+Aug 23 20:57 : update: added /Beethoven - Beethoven - Rondo e Capriccio.mp3
+Aug 23 20:57 : update: added /Death Note - Kyrie.mp3
+Aug 23 20:57 : update: added /Chopin - Fantaisie Impromptu op.66.mp3
+Aug 23 20:57 : update: added /Kill la Kill - I Want to Know.mp3
+Aug 23 20:57 : update: added /Pachelbel - Canon in D (Piano).mp3
+Aug 23 20:57 : update: added /Chopin - Nocturne in E flat major op.9 no.2 - Tiffany Poon.mp3
+Aug 23 20:57 : update: added /Eevee - Unexpected (Full BeatTape).mp3
+Aug 23 20:57 : update: added /Rachmaninov - Piano Concerto no.2 mvt.3 (Minus Orchestra).mp3
+Aug 23 20:57 : update: added /Saint Saens - Danse Macabre.mp3
+Aug 23 20:57 : update: added /Joe Hisaishi - Laputa Castle in the Sky.mp3
+Aug 23 20:57 : update: added /Hellsing - Alucard's Theme.mp3
+Aug 23 20:57 : update: added /KWAYE - Little Ones.mp3
+Aug 23 20:57 : update: added /Tchaikovsky - Tchaikosvky - Sleeping Beauty (Piano 4 Hands) (Rachmaninov's arr.).mp3
+Aug 23 20:57 : update: added /Mob Psycho 100 - Explosion of Mob Feelings.mp3
+Aug 23 20:57 : update: added /Hellsing - Monster of God.mp3
+Aug 23 20:57 : update: added /Paganini - La Campanella - Vanessa Mae.mp3
+Aug 23 20:57 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 (Minus Orchestra).mp3
+Aug 23 20:57 : update: added /Boku No Hero Academia - All Might vs All For One.mp3
+Aug 23 20:57 : update: added /Fonzi M - Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 20:57 : update: added /Sword Art Online - Swordland.mp3
+Aug 23 20:57 : update: added /Another - Track 7.mp3
+Aug 23 20:57 : update: added /Eminem - Sing for the Moment.mp3
+Aug 23 20:57 : update: added /One Punch Man - OP.mp3
+Aug 23 20:57 : update: added /Megalo Box - Main Theme.mp3
+Aug 23 20:57 : update: added /KWAYE - Jasime.mp3
+Aug 23 20:57 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 (Piano Arrangement).mp3
+Aug 23 20:57 : update: added /Eminem - Till I Collapse.mp3
+Aug 23 20:57 : update: added /2pac - Ghetto Gospel.mp3
+Aug 23 20:57 : update: added /Paganini - Capriccio no.5.mp3
+Aug 23 20:57 : update: added /KWAYE - Cool Kids.mp3
+Aug 23 20:57 : update: added /Yiruma - Reminiscent.mp3
+Aug 23 20:57 : update: added /Liszt - Transcendental Etude no.4 - Mazeppa.mp3
+Aug 23 20:57 : update: added /Megalo Box - Intermission.mp3
+Aug 23 20:57 : update: added /Rachmaninov - Piano Concerto no.2 (Plus Orchestra).mp3
+Aug 23 20:57 : update: added /Saint Saens - Introduction and Rondo Capriccioso.mp3
+Aug 23 20:57 : update: added /Animenz - Studio Ghibli - Medley.mp3
+Aug 23 20:57 : update: added /Rossini - William Tell Overture (Full).mp3
+Aug 23 20:57 : update: added /Kreisler - Liebesleid (Love's Sorrow) (Piano).mp3
+Aug 23 20:57 : update: added /Jake Hill - 38 to the Face.mp3
+Aug 23 20:57 : update: added /Attack on Titan - Piano Adlib.mp3
+Aug 23 20:57 : update: added /Liszt - Totentanz.mp3
+Aug 23 20:57 : update: added /Death Note - Kira's Theme.mp3
+Aug 23 20:57 : update: added /Eminem - Rap God.mp3
+Aug 23 20:57 : update: added /Jake Hill - We Die Too.mp3
+Aug 23 20:57 : update: added /Eminem & Rihanna - The Monster.mp3
+Aug 23 20:57 : update: added /Paul de Senneville - Marriage d'amour.mp3
+Aug 23 20:57 : update: added /Vivaldi - Le Quattro Stagioni - Nigel Kennedy.mp3
+Aug 23 20:57 : update: added /Chopin - Etude op.10 no.4 (Torrent).mp3
+Aug 23 20:57 : update: added /Chopin - Etude op.25 no.11 (Winter Wind).mp3
+Aug 23 20:57 : update: added /Theishter - Boku No Hero Academia - You Can Become A Hero.mp3
+Aug 23 20:57 : update: added /Eminem & Beyonce - Walk on Water.mp3
+Aug 23 20:57 : update: added /Chopin - Ballade no.1 in G minor op.23 (Piano).mp3
+Aug 23 20:57 : update: added /KWAYE - I Go.mp3
+Aug 23 20:57 : update: added /Death Note - L's Theme.mp3
+Aug 23 20:57 : update: added /Einaudi - Experience.mp3
+Aug 23 20:57 : update: added /Joe Hisaishi - One Summer's Day.mp3
+Aug 23 20:57 : update: added /Yiruma - River flows in you.mp3
+Aug 23 20:57 : update: added /Mussorgsky - Pictures at an Exhibition.mp3
+Aug 23 20:57 : update: added /Boku No Hero Academia - OP 1.mp3
+Aug 23 20:57 : update: added /Tchaikovsky - The Nutcracker Suite op.71.mp3
+Aug 23 20:57 : update: added /Eminem - When I'm Gone.mp3
+Aug 23 20:57 : update: added /Yiruma & Henry - River flows in you.mp3
+Aug 23 20:57 : update: added /Mozart - Sinfonia no.40 in Sol minore.mp3
+Aug 23 20:57 : update: added /2pac - Ambitionz az a ridah.mp3
+Aug 23 20:57 : update: added /Einaudi - Nuvole Bianche.mp3
+Aug 23 20:57 : update: added /Yiruma - May Be.mp3
+Aug 23 20:57 : update: added /Einaudi - Una Mattina.mp3
+Aug 23 20:57 : update: added /Schubert - Ave Maria.mp3
+Aug 23 20:57 : update: added /Death Note - Near's Theme A B C.mp3
+Aug 23 20:57 : update: added /Boku No Hero Academia - My Hero.mp3
+Aug 23 20:57 : update: added /Eevee - Seeds (Full BeatTape).mp3
+Aug 23 20:57 : update: added /Boku No Hero Academia - You Say Run v2.mp3
+Aug 23 20:57 : update: added /Jake Hill & Josh A - NORTH KOREA.mp3
+Aug 23 20:57 : update: added /Hans Zimmer - Inception - Time (Cello).mp3
+Aug 23 20:57 : update: added /Billie Eilish - Lovely.mp3
+Aug 23 20:57 : update: added /Mozart - Lacrimosa.mp3
+Aug 23 20:57 : update: added /Paganini & Liszt - La Campanella.mp3
+Aug 23 20:57 : update: added /Naruto - Sadness and Sorrow (Piano).mp3
+Aug 23 20:57 : update: added /Satie - Gymnopedie no.1.mp3
+Aug 23 20:57 : update: added /Jinsang - Life (Full BeatTape).mp3
+Aug 23 20:57 : update: added /Attack on Titan - OP 2.mp3
+Aug 23 20:57 : update: added /Rachmaninov - Prelude in C sharp.mp3
+Aug 23 20:57 : update: added /Mozart - Turkish March.mp3
+Aug 23 20:57 : update: added /Theishter - Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 20:57 : update: added /Kesha - Praying.mp3
+Aug 23 20:57 : update: added /Szymanowski - Prelude op.1 no.1.mp3
+Aug 23 20:57 : update: added /Jake Hill & Josh A - Better Of Dead.mp3
+Aug 23 20:57 : update: added /Paganini & Liszt - Etude no.6.mp3
+Aug 23 20:57 : update: added /Jake Hill & Josh A - GUCCI COFFIN.mp3
+Aug 23 20:57 : update: added /Kill la Kill - Ad la lib.mp3
+Aug 23 20:57 : update: added /Naruto - Girei - Pain's Theme.mp3
+Aug 23 20:57 : update: added /2pac - California Love.mp3
+Aug 23 20:57 : update: added /Hans Zimmer - Interstellar - Main Theme (Piano).mp3
+Aug 23 20:57 : update: added /Rossini - William Tell Overture (Final).mp3
+Aug 23 20:57 : update: added /Hellsing - Gradus Vita.mp3
+Aug 23 20:57 : update: added /Death Note - OP 2.mp3
+Aug 23 20:57 : update: added /Eminem - Not Afraid.mp3
+Aug 23 20:57 : update: added /Einaudi - Elegy for the Arctic.mp3
+Aug 23 20:57 : update: added /Darling in the FranXX - Darling [ED 6].mp3
+Aug 23 20:57 : update: added /Debussy - Claire de Lune.mp3
+Aug 23 20:57 : update: added /Beethoven - Piano Sonata no.8 op.13 C minor (Pathetique).mp3
+Aug 23 20:57 : update: added /Yiruma - Loanna.mp3
+Aug 23 20:57 : update: added /KWAYE - Lost In My Boots.mp3
+Aug 23 20:57 : update: added /Chopin - Ballade no.1 in G minor op.23 (Piano & Violin).mp3
+Aug 23 20:57 : update: added /Mozart - Requiem.mp3
+Aug 23 20:57 : update: added /Hans Zimmer - Inception - Time (Normal).mp3
+Aug 23 20:57 : update: added /Beethoven - Violin Sonata no.9 (Kreutzer).mp3
+Aug 23 20:57 : update: added /Jinsang - Solitude (Full BeatTape).mp3
+Aug 23 20:57 : update: added /Animenz - Attack on Titan - Guren no Yumiya [OP].mp3
+Aug 23 20:57 : update: added /Jake Hill - WAKE UP.mp3
+Aug 23 20:57 : update: added /Scriabin - Scriabin - Etude op.8 no.12.mp3
+Aug 23 20:57 : update: added /Beethoven - Piano Sonata op.57 mvt.3 (Appassionata).mp3
+Aug 23 20:57 : update: added /Ravel - Ravel - Pavane pour une infante defunte.mp3
+Aug 23 20:57 : update: added /Verdi - Dies Irae.mp3
+Aug 23 20:57 : update: added /Paganini - Capriccio no.24.mp3
+Aug 23 20:57 : update: added /Attack on Titan - Vogel im Kafig.mp3
+Aug 23 20:57 : update: added /Yiruma - Kiss the Rain.mp3
+Aug 23 20:57 : update: added /Rachmaninov - Piano Concerto no.2 mvt.2 (Minus Orchestra).mp3
+Aug 23 20:57 : update: added /Chopin - Etude op.10 no.12 (Revolutionary).mp3
+Aug 23 20:58 : client: [0] closed
+Aug 23 21:02 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 23 21:02 : update: added /Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 21:02 : update: added /Beethoven - Piano Sonata no.17 mvt.3 (Tempest).mp3
+Aug 23 21:02 : update: added /Paganini & Liszt - La Campanella - Kissin.mp3
+Aug 23 21:02 : update: added /Mozart - Aria della regina della notte.mp3
+Aug 23 21:02 : update: added /Attack on Titan - OP 3.mp3
+Aug 23 21:02 : update: added /Tchaikovsky - 1812 Overture (Full).mp3
+Aug 23 21:02 : update: added /Tchaikovsky - 1812 Overture (Finale).mp3
+Aug 23 21:02 : update: added /Eminem & Rihanna - Love The Way You Lie.mp3
+Aug 23 21:02 : update: added /Eminem - Mockingbird.mp3
+Aug 23 21:02 : update: added /Bach - Toccata e Fuga Re minore.mp3
+Aug 23 21:02 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.3.mp3
+Aug 23 21:02 : update: added /Mozart - Don Giovanni - Finale.mp3
+Aug 23 21:02 : update: added /Jake Hill & Josh A - ANARCHY ACRES.mp3
+Aug 23 21:02 : update: added /Sword Art Online - We Have To Defeat It.mp3
+Aug 23 21:02 : update: added /Chopin - Etude op.25 no.5 (Wrong Note).mp3
+Aug 23 21:02 : update: added /Joe Hisaishi - My Neighbor Totoro - Path of the Wind.mp3
+Aug 23 21:02 : update: added /Eminem & Dido - Stan.mp3
+Aug 23 21:02 : update: added /Linkin Park - In The End.mp3
+Aug 23 21:02 : update: added /Theishter - One Punch Man - The Hero [OP].mp3
+Aug 23 21:02 : update: added /Stravinsky - Firebird Suite (Infernal Dance).mp3
+Aug 23 21:02 : update: added /Bach - Prelude in C major BWV 846.mp3
+Aug 23 21:02 : update: added /Jake Hill & Josh A - Pennywise.mp3
+Aug 23 21:02 : update: added /Tomppabeats - Arcade (Full BeatTape).mp3
+Aug 23 21:02 : update: added /Rachmaninov - Prelude op.23 no.5.mp3
+Aug 23 21:02 : update: added /Jake Hill & Josh A - Endless Nightmare.mp3
+Aug 23 21:02 : update: added /Rachmaninov - Little Red Riding Hood - Etude Tableau.mp3
+Aug 23 21:02 : update: added /Darling in the FranXX - Vanquish.mp3
+Aug 23 21:02 : update: added /2pac - All Eyez On Me.mp3
+Aug 23 21:02 : update: added /Attack on Titan - Erens Armored Titan Transformation.mp3
+Aug 23 21:02 : update: added /Chopin - Waltz in A minor op. posth.mp3
+Aug 23 21:02 : update: added /Einaudi - Divenire.mp3
+Aug 23 21:02 : update: added /Attack on Titan - OP 1.mp3
+Aug 23 21:02 : update: added /Chopin - Piano Concerto in E minor op.11.mp3
+Aug 23 21:02 : update: added /Fonzi M - Boku no Hero Academia - United States of Smash.mp3
+Aug 23 21:02 : update: added /Death Note - Light's Theme.mp3
+Aug 23 21:02 : update: added /Death Note - OP 1.mp3
+Aug 23 21:02 : update: added /KWAYE - Sweetest Life.mp3
+Aug 23 21:02 : update: added /Death Note - Low of Solipsism.mp3
+Aug 23 21:02 : update: added /Mussorgsky - Night on Bald Mountain.mp3
+Aug 23 21:02 : update: added /Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 21:02 : update: added /Jinsang - Confessions (Full BeatTape).mp3
+Aug 23 21:02 : update: added /Attack on Titan - Trasformazione Reiner e Bertold.mp3
+Aug 23 21:02 : update: added /Eminem - Without Me.mp3
+Aug 23 21:02 : update: added /Tomppabeats - Harbor (Full BeatTape).mp3
+Aug 23 21:02 : update: added /Eminem - Lose Yourself.mp3
+Aug 23 21:02 : update: added /Einaudi - Night.mp3
+Aug 23 21:02 : update: added /One Punch Man - Main Theme.mp3
+Aug 23 21:02 : update: added /Jake Hill - Solitude.mp3
+Aug 23 21:02 : update: added /Animenz - No Game No Life - This Game [OP].mp3
+Aug 23 21:02 : update: added /Naruto - Sadness and Sorrow (Normal).mp3
+Aug 23 21:02 : update: added /Made in Abyss - Hanezeve Caradhina.mp3
+Aug 23 21:02 : update: added /Animenz - Attack on Titan - OST.mp3
+Aug 23 21:02 : update: added /Eminem & Ed Sheeran - River.mp3
+Aug 23 21:02 : update: added /Yiruma - Greatest Hits.mp3
+Aug 23 21:02 : update: added /Boku No Hero Academia - OP 2.mp3
+Aug 23 21:02 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.1-2-3.mp3
+Aug 23 21:02 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto (Piano).mp3
+Aug 23 21:02 : update: added /Bach - Aria sulla quarta corda - Piano.mp3
+Aug 23 21:02 : update: added /Beethoven - 9th Symphony op.125.mp3
+Aug 23 21:02 : update: added /Liszt - Hungarian Rhapsody no.2.mp3
+Aug 23 21:02 : update: added /Einaudi - Le Onde.mp3
+Aug 23 21:02 : update: added /Fonzi M - Boku no Hero Academia - My Hero.mp3
+Aug 23 21:02 : update: added /Attack on Titan - Call of Silence.mp3
+Aug 23 21:02 : update: added /Linkin Park - Numb.mp3
+Aug 23 21:02 : update: added /Beethoven - String Quartet no.14 op.131 C sharp.mp3
+Aug 23 21:02 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto - Nigel Kennedy.mp3
+Aug 23 21:02 : update: added /ZAYN & Sia - Dusk Till Dawn.mp3
+Aug 23 21:02 : update: added /Mirai Nikki - Here With You.mp3
+Aug 23 21:02 : update: added /Beethoven - 5th Symphony in C minor.mp3
+Aug 23 21:02 : update: added /Linkin Park - What I've Done.mp3
+Aug 23 21:02 : update: added /Saint Saens - Toccata op.72 no.3.mp3
+Aug 23 21:02 : update: added /Eminem - Framed.mp3
+Aug 23 21:02 : update: added /Richard Wagner - Ride of the Valkyries.mp3
+Aug 23 21:02 : update: added /The War On Drugs - Knocked Down.mp3
+Aug 23 21:02 : update: added /Boku No Hero Academia - OP 3.mp3
+Aug 23 21:02 : update: added /Eminem - My Name Is.mp3
+Aug 23 21:02 : update: added /Rachmaninov - Piano Concerto no.3 mvt.1 (Minus Orchestra).mp3
+Aug 23 21:02 : update: added /Jake Hill & Josh A - Suicidial Thoughts.mp3
+Aug 23 21:02 : update: added /Beethoven - Rondo e Capriccio.mp3
+Aug 23 21:02 : update: added /Death Note - Kyrie.mp3
+Aug 23 21:02 : update: added /Chopin - Fantaisie Impromptu op.66.mp3
+Aug 23 21:02 : update: added /Kill la Kill - I Want to Know.mp3
+Aug 23 21:02 : update: added /Pachelbel - Canon in D (Piano).mp3
+Aug 23 21:02 : update: added /Chopin - Nocturne in E flat major op.9 no.2 - Tiffany Poon.mp3
+Aug 23 21:02 : update: added /Eevee - Unexpected (Full BeatTape).mp3
+Aug 23 21:02 : update: added /Rachmaninov - Piano Concerto no.2 mvt.3 (Minus Orchestra).mp3
+Aug 23 21:02 : update: added /Saint Saens - Danse Macabre.mp3
+Aug 23 21:02 : update: added /Joe Hisaishi - Laputa Castle in the Sky.mp3
+Aug 23 21:02 : update: added /Hellsing - Alucard's Theme.mp3
+Aug 23 21:02 : update: added /KWAYE - Little Ones.mp3
+Aug 23 21:02 : update: added /Tchaikovsky - Tchaikosvky - Sleeping Beauty (Piano 4 Hands) (Rachmaninov's arr.).mp3
+Aug 23 21:02 : update: added /Mob Psycho 100 - Explosion of Mob Feelings.mp3
+Aug 23 21:02 : update: added /Hellsing - Monster of God.mp3
+Aug 23 21:02 : update: added /Paganini - La Campanella - Vanessa Mae.mp3
+Aug 23 21:02 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 (Minus Orchestra).mp3
+Aug 23 21:02 : update: added /Boku No Hero Academia - All Might vs All For One.mp3
+Aug 23 21:02 : update: added /Fonzi M - Darling in the FranXX - Torikago [ED 1].mp3
+Aug 23 21:02 : update: added /Sword Art Online - Swordland.mp3
+Aug 23 21:02 : update: added /Another - Track 7.mp3
+Aug 23 21:02 : update: added /Eminem - Sing for the Moment.mp3
+Aug 23 21:02 : update: added /One Punch Man - OP.mp3
+Aug 23 21:02 : update: added /Ravel - Pavane pour une infante defunte.mp3
+Aug 23 21:02 : update: added /Megalo Box - Main Theme.mp3
+Aug 23 21:02 : update: added /KWAYE - Jasime.mp3
+Aug 23 21:02 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 (Piano Arrangement).mp3
+Aug 23 21:02 : update: added /Eminem - Till I Collapse.mp3
+Aug 23 21:02 : update: added /2pac - Ghetto Gospel.mp3
+Aug 23 21:02 : update: added /Paganini - Capriccio no.5.mp3
+Aug 23 21:02 : update: added /KWAYE - Cool Kids.mp3
+Aug 23 21:02 : update: added /Yiruma - Reminiscent.mp3
+Aug 23 21:02 : update: added /Liszt - Transcendental Etude no.4 - Mazeppa.mp3
+Aug 23 21:02 : update: added /Megalo Box - Intermission.mp3
+Aug 23 21:02 : update: added /Rachmaninov - Piano Concerto no.2 (Plus Orchestra).mp3
+Aug 23 21:02 : update: added /Saint Saens - Introduction and Rondo Capriccioso.mp3
+Aug 23 21:02 : update: added /Animenz - Studio Ghibli - Medley.mp3
+Aug 23 21:02 : update: added /Rossini - William Tell Overture (Full).mp3
+Aug 23 21:02 : update: added /Kreisler - Liebesleid (Love's Sorrow) (Piano).mp3
+Aug 23 21:02 : update: added /Jake Hill - 38 to the Face.mp3
+Aug 23 21:02 : update: added /Attack on Titan - Piano Adlib.mp3
+Aug 23 21:02 : update: added /Liszt - Totentanz.mp3
+Aug 23 21:02 : update: added /Death Note - Kira's Theme.mp3
+Aug 23 21:02 : update: added /Eminem - Rap God.mp3
+Aug 23 21:02 : update: added /Jake Hill - We Die Too.mp3
+Aug 23 21:02 : update: added /Eminem & Rihanna - The Monster.mp3
+Aug 23 21:02 : update: added /Paul de Senneville - Marriage d'amour.mp3
+Aug 23 21:02 : update: added /Vivaldi - Le Quattro Stagioni - Nigel Kennedy.mp3
+Aug 23 21:02 : update: added /Chopin - Etude op.10 no.4 (Torrent).mp3
+Aug 23 21:02 : update: added /Chopin - Etude op.25 no.11 (Winter Wind).mp3
+Aug 23 21:02 : update: added /Theishter - Boku No Hero Academia - You Can Become A Hero.mp3
+Aug 23 21:02 : update: added /Eminem & Beyonce - Walk on Water.mp3
+Aug 23 21:02 : update: added /Chopin - Ballade no.1 in G minor op.23 (Piano).mp3
+Aug 23 21:02 : update: added /KWAYE - I Go.mp3
+Aug 23 21:02 : update: added /Kreisler - Liebesleid (Love's Sorrow) (Piano & Violin).mp3
+Aug 23 21:02 : update: added /Death Note - L's Theme.mp3
+Aug 23 21:02 : update: added /Einaudi - Experience.mp3
+Aug 23 21:02 : update: added /Joe Hisaishi - One Summer's Day.mp3
+Aug 23 21:02 : update: added /Yiruma - River flows in you.mp3
+Aug 23 21:02 : update: added /Mussorgsky - Pictures at an Exhibition.mp3
+Aug 23 21:02 : update: added /Boku No Hero Academia - OP 1.mp3
+Aug 23 21:02 : update: added /Tchaikovsky - The Nutcracker Suite op.71.mp3
+Aug 23 21:02 : update: added /Eminem - When I'm Gone.mp3
+Aug 23 21:02 : update: added /Yiruma & Henry - River flows in you.mp3
+Aug 23 21:02 : update: added /Mozart - Sinfonia no.40 in Sol minore.mp3
+Aug 23 21:02 : update: added /2pac - Ambitionz az a ridah.mp3
+Aug 23 21:02 : update: added /Einaudi - Nuvole Bianche.mp3
+Aug 23 21:02 : update: added /Yiruma - May Be.mp3
+Aug 23 21:02 : update: added /Einaudi - Una Mattina.mp3
+Aug 23 21:02 : update: added /Schubert - Ave Maria.mp3
+Aug 23 21:02 : update: added /Death Note - Near's Theme A B C.mp3
+Aug 23 21:02 : update: added /Boku No Hero Academia - My Hero.mp3
+Aug 23 21:02 : update: added /Eevee - Seeds (Full BeatTape).mp3
+Aug 23 21:02 : update: added /Boku No Hero Academia - You Say Run v2.mp3
+Aug 23 21:02 : update: added /Jake Hill & Josh A - NORTH KOREA.mp3
+Aug 23 21:02 : update: added /Hans Zimmer - Inception - Time (Cello).mp3
+Aug 23 21:02 : update: added /Billie Eilish - Lovely.mp3
+Aug 23 21:02 : update: added /Mozart - Lacrimosa.mp3
+Aug 23 21:02 : update: added /Paganini & Liszt - La Campanella.mp3
+Aug 23 21:02 : update: added /Naruto - Sadness and Sorrow (Piano).mp3
+Aug 23 21:02 : update: added /Satie - Gymnopedie no.1.mp3
+Aug 23 21:02 : update: added /Jinsang - Life (Full BeatTape).mp3
+Aug 23 21:02 : update: added /Attack on Titan - OP 2.mp3
+Aug 23 21:02 : update: added /Rachmaninov - Prelude in C sharp.mp3
+Aug 23 21:02 : update: added /Mozart - Turkish March.mp3
+Aug 23 21:02 : update: added /Theishter - Tokyo Ghoul - Glassy Sky.mp3
+Aug 23 21:02 : update: added /scarlxrd - HEART ATTACK.mp3
+Aug 23 21:02 : update: added /Kesha - Praying.mp3
+Aug 23 21:02 : update: added /Szymanowski - Prelude op.1 no.1.mp3
+Aug 23 21:02 : update: added /Jake Hill & Josh A - Better Of Dead.mp3
+Aug 23 21:02 : update: added /Paganini & Liszt - Etude no.6.mp3
+Aug 23 21:02 : update: added /Jake Hill & Josh A - GUCCI COFFIN.mp3
+Aug 23 21:02 : update: added /Kill la Kill - Ad la lib.mp3
+Aug 23 21:02 : update: added /Naruto - Girei - Pain's Theme.mp3
+Aug 23 21:02 : update: added /2pac - California Love.mp3
+Aug 23 21:02 : update: added /Hans Zimmer - Interstellar - Main Theme (Piano).mp3
+Aug 23 21:02 : update: added /Rossini - William Tell Overture (Final).mp3
+Aug 23 21:02 : update: added /Hellsing - Gradus Vita.mp3
+Aug 23 21:02 : update: added /Death Note - OP 2.mp3
+Aug 23 21:02 : update: added /Eminem - Not Afraid.mp3
+Aug 23 21:02 : update: added /Einaudi - Elegy for the Arctic.mp3
+Aug 23 21:02 : update: added /Darling in the FranXX - Darling [ED 6].mp3
+Aug 23 21:02 : update: added /Debussy - Claire de Lune.mp3
+Aug 23 21:02 : update: added /Beethoven - Piano Sonata no.8 op.13 C minor (Pathetique).mp3
+Aug 23 21:02 : update: added /Yiruma - Loanna.mp3
+Aug 23 21:02 : update: added /KWAYE - Lost In My Boots.mp3
+Aug 23 21:02 : update: added /Chopin - Ballade no.1 in G minor op.23 (Piano & Violin).mp3
+Aug 23 21:02 : update: added /Mozart - Requiem.mp3
+Aug 23 21:02 : update: added /Hans Zimmer - Inception - Time (Normal).mp3
+Aug 23 21:02 : update: added /Beethoven - Violin Sonata no.9 (Kreutzer).mp3
+Aug 23 21:02 : update: added /Jinsang - Solitude (Full BeatTape).mp3
+Aug 23 21:02 : update: added /Animenz - Attack on Titan - Guren no Yumiya [OP].mp3
+Aug 23 21:02 : update: added /Jake Hill - WAKE UP.mp3
+Aug 23 21:02 : update: added /Scriabin - Scriabin - Etude op.8 no.12.mp3
+Aug 23 21:02 : update: added /Beethoven - Piano Sonata op.57 mvt.3 (Appassionata).mp3
+Aug 23 21:02 : update: added /Verdi - Dies Irae.mp3
+Aug 23 21:02 : update: added /Paganini - Capriccio no.24.mp3
+Aug 23 21:02 : update: added /Attack on Titan - Vogel im Kafig.mp3
+Aug 23 21:02 : update: added /Yiruma - Kiss the Rain.mp3
+Aug 23 21:02 : update: added /Rachmaninov - Piano Concerto no.2 mvt.2 (Minus Orchestra).mp3
+Aug 23 21:02 : update: added /Chopin - Etude op.10 no.12 (Revolutionary).mp3
+Aug 23 21:02 : client: [0] opened from 127.0.0.1:50952
+Aug 23 21:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted

@@ -13,7 +13,7 @@ prompt() {
   branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
   if [[ -z "$PREFIX" ]]; then
     printf "%s%s%s%s" "\\[\\e[1;33m\\]\\u " \
-                      "\\[\\e[3;32m\\]\\w\\[\\e[0m\\]" \
+                      "\\[\\e[3;31m\\]\\w\\[\\e[0m\\]" \
                       "\\[\\e[1;33m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
   elif [[ "$PREFIX" ]]; then
@@ -68,6 +68,8 @@ alias discord='beautifuldiscord --css "${HOME}/.cache/wal-discord/style.css"'
 alias down='curl -fsSLO'
 alias sdown='curl -fSLO#'
 alias sudo='sudo -p "$(tput bold)$(tput setaf 1)~~> $(tput sgr0)"'
+alias ore='date +%H:%M:%S'
+alias data='date "+%d %B %Y"'
 
 # Short aliases.
 alias m='alsamixer'
@@ -208,3 +210,5 @@ clone() {
 cclone() {
   git clone --depth 1 "$1.git"
 }
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
