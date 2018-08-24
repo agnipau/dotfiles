@@ -12,14 +12,14 @@ set -o vi
 prompt() {
   branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
   if [[ -z "$PREFIX" ]]; then
-    printf "%s%s%s%s" "\\[\\e[1;33m\\]\\u " \
+    printf "%s%s%s%s" "\\[\\e[1;32m\\]\\u " \
                       "\\[\\e[3;31m\\]\\w\\[\\e[0m\\]" \
-                      "\\[\\e[1;33m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
+                      "\\[\\e[1;32m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
   elif [[ "$PREFIX" ]]; then
-    printf "%s%s%s%s" "\\[\\e[1;33m\\]\\u " \
-                      "\\[\\e[3;32m\\]\\W\\[\\e[0m\\]" \
-                      "\\[\\e[1;33m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
+    printf "%s%s%s%s" "\\[\\e[1;32m\\]\\u " \
+                      "\\[\\e[3;31m\\]\\W\\[\\e[0m\\]" \
+                      "\\[\\e[1;32m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
   fi
 }
@@ -156,8 +156,9 @@ if [[ -z "$PREFIX" ]]; then
   alias ins='sudo pacman -S --needed --noconfirm --color auto'
   alias ains='aurman -S --needed --noconfirm'
   alias rem='sudo pacman -Rsu --noconfirm --color auto'
+  alias srem='sudo pacman -Rsnu --noconfirm --color auto'
   alias arem='aurman -Rsu --noconfirm'
-  alias autorem='sudo pacman -R $(pacman -Qdtq) --color auto'
+  alias autorem='sudo pacman -Rsu $(pacman -Qdtq) --color auto'
   alias src='pacman -Ss'
   alias asrc='aurman -Ss'
   alias dep='pacman -Qi'
@@ -191,11 +192,16 @@ export FZF_DEFAULT_OPTS="--multi --inline-info"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
 export FZF_CTRL_R_OPTS="--reverse"
 
-# Use escape sequences to change color17 to $color0_lighter_150.
+# Use escape sequences to change the value of color17.
 # I primarily need this trick for my wal.vim fork.
 if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
-  . "${HOME}/.cache/wal/colors.sh"
-  printf "\e]4;17;rgb:${color0_lighter_150:1:2}/${color0_lighter_150:3:2}/${color0_lighter_150:5:2}\e\\"
+  if [[ "$(<"${HOME}/.cache/wal/mode")" == dark ]]; then
+    . "${HOME}/.cache/wal/colors.sh"
+    printf "\e]4;17;rgb:${color0_lighter_150:1:2}/${color0_lighter_150:3:2}/${color0_lighter_150:5:2}\e\\"
+  elif [[ "$(<"${HOME}/.cache/wal/mode")" == light ]]; then
+    . "${HOME}/.cache/wal/colors.sh"
+    printf "\e]4;17;rgb:${color0_darker_20:1:2}/${color0_darker_20:3:2}/${color0_darker_20:5:2}\e\\"
+  fi
 fi
 
 [[ -f "${HOME}/.fzf.bash" ]] && . "${HOME}/.fzf.bash"

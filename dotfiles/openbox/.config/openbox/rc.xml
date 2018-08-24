@@ -714,7 +714,7 @@
       <action name="Unshade"/>
     </mousebind>
     <mousebind button="W-Left" action="DoubleClick">
-      <action name="Shade"/>
+      <action name="ToggleFullscreen"/>
     </mousebind>
     <mousebind button="W-Middle" action="Click">
       <action name="Focus"/>
@@ -792,7 +792,7 @@
       <action name="Raise"/>
     </mousebind>
     <mousebind button="Left" action="DoubleClick">
-      <action name="ToggleFullscreen"/>
+      <action name="ToggleShade"/>
     </mousebind>
     <mousebind button="Middle" action="Click">
       <action name="Focus"/>
