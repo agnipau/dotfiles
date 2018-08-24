@@ -32,7 +32,9 @@ cairo
 cantarell-fonts
 chromium
 cifs-utils
+clang
 colord
+compiler-rt
 compton
 coreutils
 cracklib
@@ -564,6 +566,9 @@ xf86-input-libinput
 xfconf
 xfsprogs
 xkeyboard-config
+xorg-bdftopcf
+xorg-mkfontdir
+xorg-mkfontscale
 xorg-server
 xorg-server-common
 xorg-setxkbmap

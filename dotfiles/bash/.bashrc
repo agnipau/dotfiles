@@ -216,5 +216,3 @@ clone() {
 cclone() {
   git clone --depth 1 "$1.git"
 }
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
