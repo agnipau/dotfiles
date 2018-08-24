@@ -3090,3 +3090,14 @@ Aug 24 12:20 : client: [6] closed
 Aug 24 12:23 : client: [7] opened from 127.0.0.1:41962
 Aug 24 12:23 : client: [7] closed
 Aug 24 12:26 : player: played "Chopin - Etude op.25 no.5 (Wrong Note).mp3"
+Aug 24 12:57 : player: played "Beethoven - Violin Sonata no.9 (Kreutzer).mp3"
+Aug 24 13:02 : client: [8] opened from 127.0.0.1:42166
+Aug 24 13:02 : client: [8] closed
+Aug 24 13:07 : player: played "Saint Saens - Introduction and Rondo Capriccioso.mp3"
+Aug 24 13:07 : client: [9] opened from 127.0.0.1:42186
+Aug 24 13:07 : exception: Not playing
+Aug 24 13:07 : client: [9] closed
+Aug 24 13:17 : player: played "Saint Saens - Introduction and Rondo Capriccioso.mp3"
+Aug 24 13:18 : client: [0] closed
+Aug 24 13:22 : client: [10] opened from 127.0.0.1:42384
+Aug 24 13:22 : client: [10] closed

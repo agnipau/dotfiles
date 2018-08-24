@@ -1099,12 +1099,16 @@
       <y>center</y>
     </position>
   </application>
+  <application class="Zathura">
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+  </application>
 
   <!-- Fullscreen apps. -->
   <application class="Gimp">
-    <fullscreen>yes</fullscreen>
-  </application>
-  <application class="Zathura">
     <fullscreen>yes</fullscreen>
   </application>
 </applications>
