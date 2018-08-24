@@ -1,8 +1,5 @@
 ![dirty scrot](https://0x0.st/sJ59.png)
-Dirty.
-
 ![neofetch scrot](https://0x0.st/sJ5p.png)
-Neofetch.
 
 - OS: [Arch Linux], [Termux]
 - WM: [openbox-patched]
@@ -11,8 +8,9 @@ Neofetch.
 - Terminal: [xst]
 - File Manager: [ranger]
 - Bar: [polybar]
+- Bar Icons: [FontAwesome]
 - Terminal Font: [Iosevka] Term SS07 (Monaco Style)
-- GUI Font: [Iosevka] SS07 (Monaco Style)
+- GUI Font: [Roboto]
 - GTK Theme: [Adapta]
 - Icons: [Papirus-Adapta]
 - Music Player: [MPD] + [ncmpcpp]
@@ -27,7 +25,9 @@ Neofetch.
 [xst]:             https://github.com/gnotclub/xst
 [ranger]:          https://github.com/ranger/ranger
 [polybar]:         https://github.com/jaagr/polybar
+[FontAwesome]:     https://github.com/FortAwesome/Font-Awesome
 [Iosevka]:         https://github.com/be5invis/Iosevka
+[Roboto]:          https://github.com/google/roboto
 [Adapta]:          https://github.com/adapta-project/adapta-gtk-theme
 [Papirus-Adapta]:  https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 [MPD]:             https://github.com/MusicPlayerDaemon/MPD
