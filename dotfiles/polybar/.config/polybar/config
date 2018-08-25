@@ -24,7 +24,7 @@ margin-bottom = 0
 monitor        = eDP-1-1
 bottom         = true
 fixed-center   = true
-width          = 47%
+width          = 48%
 height         = 40
 offset-x       = 35
 offset-y       = 30
@@ -61,9 +61,9 @@ label-connected               =      %downspeed%
 label-connected-background    = ${colors.background}
 label-connected-foreground    = ${colors.foreground}
 label-connected-padding       = 1
-label-disconnected            =        
-label-disconnected-background = ${colors.due}
-label-disconnected-foreground = ${colors.background}
+label-disconnected            =       
+label-disconnected-background = ${colors.background}
+label-disconnected-foreground = ${colors.foreground}
 label-disconnected-padding    = 1
 
 ; Display the date and time.

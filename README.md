@@ -1,5 +1,4 @@
-![dirty scrot](https://0x0.st/sJ59.png)
-![neofetch scrot](https://0x0.st/sJ5p.png)
+![dirty scrot](https://0x0.st/syDQ.png)
 
 - OS: [Arch Linux], [Termux]
 - WM: [openbox-patched]
