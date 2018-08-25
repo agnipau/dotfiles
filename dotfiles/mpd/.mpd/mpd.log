@@ -3102,3 +3102,89 @@ Aug 24 13:18 : client: [0] closed
 Aug 24 13:22 : client: [10] opened from 127.0.0.1:42384
 Aug 24 13:22 : client: [10] closed
 Aug 24 13:41 : player: played "Saint Saens - Introduction and Rondo Capriccioso.mp3"
+Aug 25 15:13 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 25 15:13 : client: [0] opened from 127.0.0.1:59618
+Aug 25 15:13 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 25 15:20 : client: [1] opened from 127.0.0.1:59682
+Aug 25 15:21 : client: [2] opened from 127.0.0.1:59686
+Aug 25 15:21 : client: [2] closed
+Aug 25 15:21 : client: [0] closed
+Aug 25 15:21 : player: played "Scriabin - Etude op.8 no.12.mp3"
+Aug 25 15:22 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 25 15:22 : client: [0] opened from 127.0.0.1:59708
+Aug 25 15:22 : client: [0] closed
+Aug 25 15:22 : client: [1] opened from 127.0.0.1:59710
+Aug 25 15:22 : client: [1] closed
+Aug 25 15:22 : client: [2] opened from 127.0.0.1:59712
+Aug 25 15:22 : client: [2] closed
+Aug 25 15:22 : client: [3] opened from 127.0.0.1:59714
+Aug 25 15:22 : client: [3] closed
+Aug 25 15:22 : client: [4] opened from 127.0.0.1:59716
+Aug 25 15:23 : client: [4] closed
+Aug 25 15:23 : client: [5] opened from 127.0.0.1:59718
+Aug 25 15:23 : client: [5] closed
+Aug 25 15:23 : client: [6] opened from 127.0.0.1:59724
+Aug 25 15:23 : client: [6] closed
+Aug 25 15:23 : client: [7] opened from 127.0.0.1:59726
+Aug 25 15:23 : client: [7] closed
+Aug 25 15:23 : client: [8] opened from 127.0.0.1:59728
+Aug 25 15:23 : client: [9] opened from 127.0.0.1:59732
+Aug 25 15:23 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 25 15:24 : client: [8] closed
+Aug 25 15:24 : client: [10] opened from 127.0.0.1:59734
+Aug 25 15:27 : client: [10] closed
+Aug 25 15:27 : client: [11] opened from 127.0.0.1:59738
+Aug 25 15:31 : client: [11] closed
+Aug 25 15:31 : client: [12] opened from 127.0.0.1:59740
+Aug 25 15:32 : client: [12] closed
+Aug 25 15:32 : client: [13] opened from 127.0.0.1:59742
+Aug 25 15:32 : client: [13] closed
+Aug 25 15:32 : client: [14] opened from 127.0.0.1:59744
+Aug 25 15:33 : client: [14] closed
+Aug 25 15:33 : client: [15] opened from 127.0.0.1:59746
+Aug 25 15:33 : client: [15] closed
+Aug 25 15:33 : client: [16] opened from 127.0.0.1:59748
+Aug 25 15:33 : client: [16] closed
+Aug 25 15:33 : client: [17] opened from 127.0.0.1:59750
+Aug 25 15:34 : client: [17] closed
+Aug 25 15:36 : player: played "Beethoven - Violin Sonata no.9 (Kreutzer).mp3"
+Aug 25 15:46 : client: [18] opened from 127.0.0.1:59790
+Aug 25 15:47 : client: [18] closed
+Aug 25 15:47 : client: [19] opened from 127.0.0.1:59792
+Aug 25 15:47 : client: [19] closed
+Aug 25 15:47 : client: [20] opened from 127.0.0.1:59794
+Aug 25 15:48 : client: [20] closed
+Aug 25 15:48 : client: [21] opened from 127.0.0.1:59796
+Aug 25 15:48 : player: played "Beethoven - Violin Sonata no.9 (Kreutzer).mp3"
+Aug 25 15:48 : client: [21] closed
+Aug 25 15:49 : client: [22] opened from 127.0.0.1:59798
+Aug 25 15:49 : client: [22] closed
+Aug 25 15:49 : client: [23] opened from 127.0.0.1:59800
+Aug 25 15:49 : client: [23] closed
+Aug 25 15:49 : client: [24] opened from 127.0.0.1:59802
+Aug 25 15:49 : client: [24] closed
+Aug 25 15:49 : client: [25] opened from 127.0.0.1:59804
+Aug 25 15:50 : client: [25] closed
+Aug 25 15:50 : client: [26] opened from 127.0.0.1:59806
+Aug 25 15:55 : client: [26] closed
+Aug 25 15:55 : client: [27] opened from 127.0.0.1:59820
+Aug 25 15:55 : client: [27] closed
+Aug 25 15:55 : client: [28] opened from 127.0.0.1:59822
+Aug 25 15:55 : client: [28] closed
+Aug 25 15:55 : client: [29] opened from 127.0.0.1:59824
+Aug 25 15:55 : client: [29] closed
+Aug 25 15:55 : client: [30] opened from 127.0.0.1:59826
+Aug 25 15:56 : client: [30] closed
+Aug 25 15:56 : client: [31] opened from 127.0.0.1:59832
+Aug 25 15:56 : client: [31] closed
+Aug 25 15:56 : client: [32] opened from 127.0.0.1:59834
+Aug 25 15:57 : client: [32] closed
+Aug 25 15:57 : client: [33] opened from 127.0.0.1:59836
+Aug 25 15:57 : client: [33] closed
+Aug 25 15:57 : client: [34] opened from 127.0.0.1:59838
+Aug 25 15:57 : client: [34] closed
+Aug 25 15:57 : client: [35] opened from 127.0.0.1:59840
+Aug 25 15:57 : client: [36] opened from 127.0.0.1:59844
+Aug 25 15:57 : client: [36] closed
+Aug 25 15:57 : client: [37] opened from 127.0.0.1:59848
+Aug 25 15:57 : client: [37] closed
