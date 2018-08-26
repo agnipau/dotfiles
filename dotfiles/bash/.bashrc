@@ -11,10 +11,24 @@ set -o vi
 # Prompt (modified version of Dylan Araps's prompt script).
 prompt() {
   branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
-  printf "%s%s%s%s" "\\[\\e[1;33m\\]➜  " \
-                    "\\[\\e[3;32m\\]\\W\\[\\e[0m\\]" \
-                    "\\[\\e[1;33m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
-                    "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+  if git status &>/dev/null; then
+    gslines="$(git status | wc -l)"
+    if [[ "$gslines" -eq 4 ]]; then
+      printf "%s%s%s%s" "\\[\\e[1;33m\\]➜  " \
+                        "\\[\\e[3;32m\\]\\W\\[\\e[0m\\]" \
+                        "\\[\\e[1;33m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
+                        "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+    else
+      printf "%s%s%s%s" "\\[\\e[1;33m\\]➜  " \
+                        "\\[\\e[3;32m\\]\\W\\[\\e[0m\\]" \
+                        "\\[\\e[1;33m\\]${branch:+ on  ${branch}} 🗙 \\[\\e[0m\\]" \
+                        "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+    fi
+  else
+    printf "%s%s%s%s" "\\[\\e[1;33m\\]➜  " \
+                      "\\[\\e[3;32m\\]\\W\\[\\e[0m\\]" \
+                      "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+  fi
 }
 
 #PS1='\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] '
