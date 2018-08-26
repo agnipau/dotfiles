@@ -1,9 +1,5 @@
 " Plugins {{{
 
-if &shell =~# 'fish$'
-  set shell=sh
-endif
-
 let mapleader=' '
 let maplocalleader=' '
 
@@ -101,8 +97,6 @@ Plug 'yuttie/comfortable-motion.vim'
   noremap  <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<cr>
 Plug 'lambdalisue/vim-manpager'
 Plug 'rhysd/open-pdf.vim'
-
-Plug 'dag/vim-fish'
 
 call plug#end()
 

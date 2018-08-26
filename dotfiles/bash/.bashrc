@@ -10,30 +10,53 @@ set -o vi
 
 # Prompt.
 prompt() {
-  if git status &>/dev/null; then
-    branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
-    gslines="$(git status | wc -l)"
+  if [[ -z "$PREFIX" ]]; then
+   if git status &>/dev/null; then
+     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+     gslines="$(git status | wc -l)"
 
-    if [[ "$gslines" -eq 4 ]]; then
-      printf "%s%s%s" "\\[\\e[1;31m\\]➜  " \
-                        "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-                        "\\[\\e[1;33m\\] on  ${branch}\\[\\e[0m\\]" \
-                        "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
-    else
-      printf "%s%s%s" "\\[\\e[1;31m\\]➜  " \
-                        "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-                        "\\[\\e[1;31m\\] on  ${branch} 🗙 \\[\\e[0m\\]" \
-                        "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
-    fi
+     if [[ "$gslines" -eq 4 ]]; then
+       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
+                         "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
+                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
+                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+     else
+       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
+                         "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
+                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
+                         "\\[\\e[1;36m\\] 🗙 \\[\\e[0m\\]" \
+                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+     fi
+   else
+     printf "%s%s%s%s" "\\[\\e[1;31m\\]\u " \
+                       "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
+                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+   fi
   else
-    printf "%s%s%s" "\\[\\e[1;31m\\]➜  " \
-                      "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-                      "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
+   if git status &>/dev/null; then
+     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+     gslines="$(git status | wc -l)"
+
+     if [[ "$gslines" -eq 4 ]]; then
+       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
+                         "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
+                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+     else
+       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
+                         "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
+                         "\\[\\e[1;36m\\] 🗙 \\[\\e[0m\\]" \
+                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+     fi
+   else
+     printf "%s%s%s%s" "\\[\\e[1;31m\\]\u " \
+                       "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+   fi
   fi
 }
 
-#PS1='\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] '
-#PS1='➜  '
 if [[ -z "$TMUX" ]]; then
   PROMPT_COMMAND='PS1=$(prompt); echo -ne "\033]0; \007"'
 else
