@@ -11,17 +11,10 @@ set -o vi
 # Prompt (modified version of Dylan Araps's prompt script).
 prompt() {
   branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
-  if [[ -z "$PREFIX" ]]; then
-    printf "%s%s%s%s" "\\[\\e[1;33m\\]\\u " \
-                      "\\[\\e[3;32m\\]\\w\\[\\e[0m\\]" \
-                      "\\[\\e[1;33m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
-                      "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-  elif [[ "$PREFIX" ]]; then
-    printf "%s%s%s%s" "\\[\\e[1;33m\\]\\u " \
-                      "\\[\\e[3;32m\\]\\W\\[\\e[0m\\]" \
-                      "\\[\\e[1;33m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
-                      "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-  fi
+  printf "%s%s%s%s" "\\[\\e[1;33m\\]➜  " \
+                    "\\[\\e[3;32m\\]\\W\\[\\e[0m\\]" \
+                    "\\[\\e[1;33m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
+                    "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
 }
 
 #PS1='\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] '
@@ -221,3 +214,5 @@ clone() {
 cclone() {
   git clone --depth 1 "$1.git"
 }
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

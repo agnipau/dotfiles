@@ -219,6 +219,7 @@ nnoremap <silent> <leader>co :call <SID>ToggleConceal()<cr>
 nnoremap <silent> <leader>cc :call <SID>ColorColumnToggle()<cr>
 nnoremap <silent> <leader>q  :call <SID>QuickfixToggle()<cr>
 nnoremap <silent> <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
+nnoremap <leader>.  :<bs>
 
 xnoremap , :
 xnoremap H 0
