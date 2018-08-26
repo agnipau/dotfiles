@@ -1,5 +1,9 @@
 " Plugins {{{
 
+if &shell =~# 'fish$'
+  set shell=sh
+endif
+
 let mapleader=' '
 let maplocalleader=' '
 
@@ -98,6 +102,8 @@ Plug 'yuttie/comfortable-motion.vim'
 Plug 'lambdalisue/vim-manpager'
 Plug 'rhysd/open-pdf.vim'
 
+Plug 'dag/vim-fish'
+
 call plug#end()
 
 " }}}
@@ -121,7 +127,7 @@ set noruler
 set laststatus=2
 set statusline=%#BarraVuota# 
 set noshowcmd
-set shortmess+=cs
+set shortmess+=csW
 set t_Co=256
 set notermguicolors
 colorscheme wal

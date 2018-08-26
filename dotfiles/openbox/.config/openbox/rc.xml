@@ -532,6 +532,26 @@
       <command>~/bin/style --current-grad-light</command>
     </action>
   </keybind>
+  <keybind key="W-v">
+    <action name="Execute">
+      <command>~/bin/style --quality-another-wal-dark</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-v">
+    <action name="Execute">
+      <command>~/bin/style --quality-another-wal-light</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-v">
+    <action name="Execute">
+      <command>~/bin/style --quality-another-grad-dark</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-S-v">
+    <action name="Execute">
+      <command>~/bin/style --quality-another-grad-light</command>
+    </action>
+  </keybind>
   <keybind key="W-space">
     <action name="Execute">
       <command>rofi -show run</command>
@@ -563,6 +583,11 @@
   <keybind key="W-u">
     <action name="Execute">
       <command>~/bin/zen</command>
+    </action>
+  </keybind>
+  <keybind key="W-m">
+    <action name="Execute">
+      <command>st -n musica -e musica-maestro</command>
     </action>
   </keybind>
   <keybind key="W-S-m">
