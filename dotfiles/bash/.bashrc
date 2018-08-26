@@ -8,26 +8,27 @@
 # Enable the vi mode.
 set -o vi
 
-# Prompt (modified version of Dylan Araps's prompt script).
+# Prompt.
 prompt() {
-  branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
   if git status &>/dev/null; then
+    branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
     gslines="$(git status | wc -l)"
+
     if [[ "$gslines" -eq 4 ]]; then
-      printf "%s%s%s%s" "\\[\\e[1;33m\\]➜  " \
-                        "\\[\\e[3;32m\\]\\W\\[\\e[0m\\]" \
-                        "\\[\\e[1;33m\\]${branch:+ on  ${branch}}\\[\\e[0m\\]" \
-                        "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+      printf "%s%s%s" "\\[\\e[1;31m\\]➜  " \
+                        "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+                        "\\[\\e[1;33m\\] on  ${branch}\\[\\e[0m\\]" \
+                        "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
     else
-      printf "%s%s%s%s" "\\[\\e[1;33m\\]➜  " \
-                        "\\[\\e[3;32m\\]\\W\\[\\e[0m\\]" \
-                        "\\[\\e[1;33m\\]${branch:+ on  ${branch}} 🗙 \\[\\e[0m\\]" \
-                        "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+      printf "%s%s%s" "\\[\\e[1;31m\\]➜  " \
+                        "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+                        "\\[\\e[1;31m\\] on  ${branch} 🗙 \\[\\e[0m\\]" \
+                        "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
     fi
   else
-    printf "%s%s%s%s" "\\[\\e[1;33m\\]➜  " \
-                      "\\[\\e[3;32m\\]\\W\\[\\e[0m\\]" \
-                      "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+    printf "%s%s%s" "\\[\\e[1;31m\\]➜  " \
+                      "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+                      "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
   fi
 }
 

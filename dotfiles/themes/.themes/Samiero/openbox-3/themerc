@@ -3,9 +3,9 @@
 # Samiero theme for Openbox.
 
 # Titlebar colors.
-window.*.title.bg.color:       #0E0D0E
-window.*.label.text.color:     #bdebbb
-window.*.button.*.image.color: #bdebbb
+window.*.title.bg.color:       #090501
+window.*.label.text.color:     #f3beaf
+window.*.button.*.image.color: #f3beaf
 
 # Titlebar.
 padding.width:             10
