@@ -1,9 +1,9 @@
 sw_volume: 100
 audio_device_state:1:PulseAudio Output
 audio_device_state:1:my_fifo
-state: play
-current: 8
-time: 3.989000
+state: pause
+current: 1
+time: 64.672000
 random: 0
 repeat: 1
 single: 1
@@ -12,19 +12,6 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Scriabin - Etude op.8 no.12.mp3
-1:Chopin - Etude op.25 no.5 (Wrong Note).mp3
-2:Beethoven - Violin Sonata no.9 (Kreutzer).mp3
-3:Saint Saens - Introduction and Rondo Capriccioso.mp3
-4:Eminem - Without Me.mp3
-5:Eminem - When I'm Gone.mp3
-6:Eminem - Framed.mp3
-7:Eminem - Lose Yourself.mp3
-8:Eminem - Mockingbird.mp3
-9:Eminem - My Name Is.mp3
-10:Eminem & Beyonce - Walk on Water.mp3
-11:Eminem & Dido - Stan.mp3
-12:Eminem & Ed Sheeran - River.mp3
-13:Eminem & Rihanna - Love The Way You Lie.mp3
-14:Eminem - Till I Collapse.mp3
+0:Chopin - Piano Concerto in E minor op.11.mp3
+1:Billie Eilish - Lovely.mp3
 playlist_end

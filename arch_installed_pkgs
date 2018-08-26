@@ -18,6 +18,7 @@ autoconf
 automake
 avahi
 bash
+bc
 binutils
 bison
 boost-libs
@@ -71,6 +72,7 @@ fftw
 file
 filesystem
 findutils
+fish
 flac
 flex
 fontconfig
@@ -468,6 +470,7 @@ qt5-imageformats
 qt5-location
 qt5-webchannel
 qt5-webengine
+qt5-x11extras
 qt5-xmlpatterns
 qutebrowser
 ranger
@@ -493,6 +496,7 @@ semver
 shadow
 shared-mime-info
 shellcheck
+simplescreenrecorder
 slock
 slop
 smbclient

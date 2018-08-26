@@ -26,7 +26,11 @@ prompt() {
 
 #PS1='\[\e[1;33m\]\u \[\e[3;32m\]\w\[\e[0m\] \[\e[1;31m\]>\[\e[0;37m\] '
 #PS1='➜  '
-PROMPT_COMMAND='PS1=$(prompt)'
+if [[ -z "$TMUX" ]]; then
+  PROMPT_COMMAND='PS1=$(prompt); echo -ne "\033]0; \007"'
+else
+  PROMPT_COMMAND='PS1=$(prompt)'
+fi
 
 # Envars.
 export HISTCONTROL="ignoredups"
@@ -56,7 +60,6 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 # Misc. aliases.
-alias spdtst='curl -o /dev/null http://test.kpnqwest.it/file2000.bin'
 alias ydb='cd ${HOME}/progetti/ydb && ./ydb'
 alias obapp='obxprop | grep ^_OB_APP_'
 alias app='xprop | grep ^WM_'
@@ -91,6 +94,8 @@ alias pd='pdflatex *.tex'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'
 alias rma='rm -rf ./*'
 alias lp='~/bin/arch-list-pkgs; ~/bin/aur-list-pkgs'
+alias wi='sudo wifi-menu'
+alias sp='curl -o /dev/null http://test.kpnqwest.it/file2000.bin'
 
 # Git aliases.
 alias ga='git add .'

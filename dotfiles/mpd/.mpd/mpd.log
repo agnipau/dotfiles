@@ -3524,3 +3524,171 @@ Aug 25 17:21 : client: [198] closed
 Aug 25 17:21 : client: [199] opened from 127.0.0.1:60532
 Aug 25 17:21 : client: [199] closed
 Aug 25 17:21 : client: [200] opened from 127.0.0.1:60534
+Aug 25 17:22 : player: played "Eminem - Mockingbird.mp3"
+Aug 25 17:26 : player: played "Eminem - Mockingbird.mp3"
+Aug 25 17:28 : client: [200] closed
+Aug 25 17:28 : client: [201] opened from 127.0.0.1:60622
+Aug 25 17:28 : client: [201] closed
+Aug 25 17:28 : client: [202] opened from 127.0.0.1:60624
+Aug 25 17:29 : client: [202] closed
+Aug 25 17:29 : client: [203] opened from 127.0.0.1:60626
+Aug 25 17:29 : client: [203] closed
+Aug 25 17:29 : client: [204] opened from 127.0.0.1:60628
+Aug 25 17:29 : client: [204] closed
+Aug 25 17:29 : client: [205] opened from 127.0.0.1:60630
+Aug 25 17:29 : client: [205] closed
+Aug 25 17:29 : client: [206] opened from 127.0.0.1:60632
+Aug 25 17:29 : client: [206] closed
+Aug 25 17:29 : client: [207] opened from 127.0.0.1:60634
+Aug 25 17:29 : client: [207] closed
+Aug 25 17:29 : client: [208] opened from 127.0.0.1:60636
+Aug 25 17:29 : client: [208] closed
+Aug 25 17:29 : client: [209] opened from 127.0.0.1:60638
+Aug 25 17:29 : client: [209] closed
+Aug 25 17:29 : client: [210] opened from 127.0.0.1:60640
+Aug 25 17:29 : client: [210] closed
+Aug 25 17:29 : client: [211] opened from 127.0.0.1:60642
+Aug 25 17:29 : client: [211] closed
+Aug 25 17:29 : client: [212] opened from 127.0.0.1:60644
+Aug 25 17:29 : client: [212] closed
+Aug 25 17:29 : client: [213] opened from 127.0.0.1:60654
+Aug 25 17:30 : client: [213] closed
+Aug 25 17:30 : client: [214] opened from 127.0.0.1:60656
+Aug 25 17:30 : client: [214] closed
+Aug 25 17:30 : client: [215] opened from 127.0.0.1:60658
+Aug 25 17:30 : client: [215] closed
+Aug 25 17:30 : client: [216] opened from 127.0.0.1:60660
+Aug 25 17:30 : client: [216] closed
+Aug 25 17:30 : client: [217] opened from 127.0.0.1:60662
+Aug 25 17:30 : client: [217] closed
+Aug 25 17:30 : client: [218] opened from 127.0.0.1:60664
+Aug 25 17:30 : client: [218] closed
+Aug 25 17:30 : client: [219] opened from 127.0.0.1:60666
+Aug 25 17:30 : client: [219] closed
+Aug 25 17:30 : client: [220] opened from 127.0.0.1:60668
+Aug 25 17:30 : client: [220] closed
+Aug 25 17:30 : client: [221] opened from 127.0.0.1:60670
+Aug 25 17:30 : client: [221] closed
+Aug 25 17:30 : client: [222] opened from 127.0.0.1:60672
+Aug 25 17:30 : client: [222] closed
+Aug 25 17:30 : client: [223] opened from 127.0.0.1:60674
+Aug 25 17:30 : client: [223] closed
+Aug 25 17:30 : client: [224] opened from 127.0.0.1:60676
+Aug 25 17:30 : client: [224] closed
+Aug 25 17:30 : client: [225] opened from 127.0.0.1:60678
+Aug 25 17:30 : client: [225] closed
+Aug 25 17:30 : client: [226] opened from 127.0.0.1:60680
+Aug 25 17:30 : client: [226] closed
+Aug 25 17:30 : client: [227] opened from 127.0.0.1:60682
+Aug 25 17:30 : client: [227] closed
+Aug 25 17:30 : client: [228] opened from 127.0.0.1:60684
+Aug 25 17:30 : player: played "Eminem - Mockingbird.mp3"
+Aug 25 17:30 : client: [228] closed
+Aug 25 17:30 : client: [229] opened from 127.0.0.1:60686
+Aug 25 17:30 : client: [229] closed
+Aug 25 17:30 : client: [230] opened from 127.0.0.1:60688
+Aug 25 17:31 : client: [230] closed
+Aug 25 17:31 : client: [231] opened from 127.0.0.1:60690
+Aug 25 17:31 : client: [231] closed
+Aug 25 17:31 : client: [232] opened from 127.0.0.1:60692
+Aug 25 17:35 : player: played "Eminem - Mockingbird.mp3"
+Aug 25 17:39 : player: played "Eminem - Mockingbird.mp3"
+Aug 25 17:43 : player: played "Eminem - Mockingbird.mp3"
+Aug 25 17:44 : exception: "PulseAudio Output" [pulse] failed to play: disconnected
+Aug 25 17:44 : player: played "Eminem - Mockingbird.mp3"
+Aug 25 21:33 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 25 21:33 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 25 21:33 : client: [0] opened from 127.0.0.1:43304
+Aug 25 21:33 : client: [1] opened from 127.0.0.1:43308
+Aug 25 21:38 : client: [0] closed
+Aug 25 21:38 : client: [2] opened from 127.0.0.1:43408
+Aug 25 21:38 : client: [2] closed
+Aug 25 21:38 : client: [3] opened from 127.0.0.1:43410
+Aug 25 21:38 : client: [3] closed
+Aug 25 21:38 : client: [4] opened from 127.0.0.1:43412
+Aug 25 21:39 : client: [4] closed
+Aug 25 21:39 : client: [5] opened from 127.0.0.1:43414
+Aug 25 21:39 : client: [5] closed
+Aug 25 21:39 : client: [6] opened from 127.0.0.1:43416
+Aug 25 21:39 : client: [6] closed
+Aug 25 21:39 : client: [7] opened from 127.0.0.1:43418
+Aug 25 21:39 : client: [7] closed
+Aug 25 21:39 : client: [8] opened from 127.0.0.1:43420
+Aug 25 21:42 : client: [9] opened from 127.0.0.1:43424
+Aug 25 21:42 : client: [9] closed
+Aug 25 21:45 : client: [10] opened from 127.0.0.1:43484
+Aug 25 21:45 : client: [10] closed
+Aug 25 21:45 : client: [11] opened from 127.0.0.1:43524
+Aug 25 21:45 : client: [11] closed
+Aug 25 21:50 : client: [12] opened from 127.0.0.1:43610
+Aug 25 21:50 : client: [12] closed
+Aug 25 21:50 : player: played "Saint Saens - Introduction and Rondo Capriccioso.mp3"
+Aug 25 22:00 : player: played "Saint Saens - Introduction and Rondo Capriccioso.mp3"
+Aug 25 22:03 : client: [8] closed
+Aug 25 22:03 : client: [13] opened from 127.0.0.1:43618
+Aug 25 22:08 : client: [14] opened from 127.0.0.1:43698
+Aug 25 22:08 : client: [14] closed
+Aug 25 22:08 : client: [15] opened from 127.0.0.1:43702
+Aug 25 22:08 : client: [15] closed
+Aug 25 22:08 : client: [16] opened from 127.0.0.1:43706
+Aug 25 22:08 : client: [16] closed
+Aug 25 22:08 : player: played "Saint Saens - Introduction and Rondo Capriccioso.mp3"
+Aug 25 22:17 : client: [13] closed
+Aug 25 22:17 : client: [17] opened from 127.0.0.1:43772
+Aug 25 22:20 : client: [17] closed
+Aug 25 22:20 : client: [18] opened from 127.0.0.1:43826
+Aug 25 22:23 : client: [1] closed
+Aug 25 22:23 : client: [19] opened from 127.0.0.1:43846
+Aug 25 22:34 : client: [20] opened from 127.0.0.1:44024
+Aug 25 22:34 : client: [20] closed
+Aug 25 22:50 : player: played "Billie Eilish - Lovely.mp3"
+Aug 25 22:53 : player: played "Billie Eilish - Lovely.mp3"
+Aug 25 22:57 : player: played "Billie Eilish - Lovely.mp3"
+Aug 25 22:58 : client: [21] opened from 127.0.0.1:44232
+Aug 25 22:58 : client: [21] closed
+Aug 26 00:19 : client: [19] closed
+Aug 26 00:19 : player: played "Billie Eilish - Lovely.mp3"
+Aug 26 13:44 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 26 13:44 : client: [0] opened from 127.0.0.1:40302
+Aug 26 13:45 : client: [0] closed
+Aug 26 13:45 : client: [1] opened from 127.0.0.1:40304
+Aug 26 13:45 : client: [1] closed
+Aug 26 13:45 : client: [2] opened from 127.0.0.1:40306
+Aug 26 13:45 : client: [2] closed
+Aug 26 13:45 : client: [3] opened from 127.0.0.1:40308
+Aug 26 13:47 : client: [3] closed
+Aug 26 13:47 : client: [4] opened from 127.0.0.1:40310
+Aug 26 13:49 : client: [4] closed
+Aug 26 13:49 : client: [5] opened from 127.0.0.1:40312
+Aug 26 13:51 : client: [5] closed
+Aug 26 13:51 : client: [6] opened from 127.0.0.1:40314
+Aug 26 13:51 : client: [6] closed
+Aug 26 13:51 : client: [7] opened from 127.0.0.1:40316
+Aug 26 13:51 : client: [7] closed
+Aug 26 13:51 : client: [8] opened from 127.0.0.1:40318
+Aug 26 13:52 : client: [8] closed
+Aug 26 13:52 : client: [9] opened from 127.0.0.1:40320
+Aug 26 13:53 : client: [9] closed
+Aug 26 13:53 : client: [10] opened from 127.0.0.1:40322
+Aug 26 13:53 : client: [10] closed
+Aug 26 13:53 : client: [11] opened from 127.0.0.1:40324
+Aug 26 13:53 : client: [12] opened from 127.0.0.1:40326
+Aug 26 13:53 : client: [11] closed
+Aug 26 13:53 : client: [12] closed
+Aug 26 13:53 : client: [13] opened from 127.0.0.1:40328
+Aug 26 13:54 : client: [13] closed
+Aug 26 13:54 : client: [14] opened from 127.0.0.1:40330
+Aug 26 13:54 : client: [14] closed
+Aug 26 13:54 : client: [15] opened from 127.0.0.1:40332
+Aug 26 13:54 : client: [15] closed
+Aug 26 13:54 : client: [16] opened from 127.0.0.1:40334
+Aug 26 13:54 : client: [16] closed
+Aug 26 13:54 : client: [17] opened from 127.0.0.1:40336
+Aug 26 13:54 : client: [17] closed
+Aug 26 13:54 : client: [18] opened from 127.0.0.1:40338
+Aug 26 13:55 : client: [18] closed
+Aug 26 13:55 : client: [19] opened from 127.0.0.1:40340
+Aug 26 13:55 : client: [19] closed
+Aug 26 13:55 : client: [20] opened from 127.0.0.1:40342
+Aug 26 13:56 : client: [20] closed
+Aug 26 13:56 : client: [21] opened from 127.0.0.1:40348

@@ -141,14 +141,19 @@
       <to>6</to>
     </action>
   </keybind>
-  <keybind key="W-A-h">
+  <keybind key="W-C-S-h">
     <action name="GoToDesktop">
       <to>left</to>
     </action>
   </keybind>
-  <keybind key="W-A-l">
+  <keybind key="W-C-S-l">
     <action name="GoToDesktop">
       <to>right</to>
+    </action>
+  </keybind>
+  <keybind key="W-o">
+    <action name="GoToDesktop">
+      <to>last</to>
     </action>
   </keybind>
 
@@ -240,7 +245,7 @@
     </action>
   </keybind>
 
-  <!-- Keybindings for window switching. -->
+  <!-- Keybindings for slow window switching. -->
   <keybind key="W-Tab">
     <action name="NextWindow">
       <dialog>none</dialog>
@@ -268,6 +273,25 @@
       <desktop>no</desktop>
       <linear>yes</linear>
       <interactive>yes</interactive>
+      <finalactions>
+	<action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </finalactions>
+    </action>
+  </keybind>
+
+  <!-- Keybindings for fast window switching. -->
+  <keybind key="W-n">
+    <action name="PreviousWindow">
+      <dialog>none</dialog>
+      <bar>no</bar>
+      <raise>no</raise>
+      <allDesktops>no</allDesktops>
+      <panels>no</panels>
+      <desktop>no</desktop>
+      <linear>no</linear>
+      <interactive>no</interactive>
       <finalactions>
 	<action name="Focus"/>
         <action name="Raise"/>
@@ -369,14 +393,11 @@
   </keybind>
 
   <!-- Keybindings to toggle some windows functionalities. -->
-  <keybind key="W-o">
+  <keybind key="W-s">
     <action name="ToggleOmnipresent"/>
   </keybind>
   <keybind key="W-a">
     <action name="ToggleAlwaysOnTop"/>
-  </keybind>
-  <keybind key="W-s">
-    <action name="ToggleShade"/>
   </keybind>
   <keybind key="W-x">
     <action name="ToggleMaximize">
@@ -511,12 +532,12 @@
       <command>~/bin/style --current-grad-light</command>
     </action>
   </keybind>
-  <keybind key="W-d">
+  <keybind key="W-space">
     <action name="Execute">
       <command>rofi -show run</command>
     </action>
   </keybind>
-  <keybind key="W-S-d">
+  <keybind key="W-S-space">
     <action name="Execute">
       <command>rofi -show window</command>
     </action>
@@ -526,9 +547,22 @@
       <command>~/bin/draw</command>
     </action>
   </keybind>
-  <keybind key="W-m">
+  <keybind key="W-d">
+    <action name="ToggleShowDesktop"/>
+  </keybind>
+  <keybind key="W-i">
     <action name="Execute">
-      <command>st -n musica -e ~/bin/musica-maestro</command>
+      <command>~/bin/blur</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-i">
+    <action name="Execute">
+      <command>~/bin/unblur</command>
+    </action>
+  </keybind>
+  <keybind key="W-u">
+    <action name="Execute">
+      <command>~/bin/zen</command>
     </action>
   </keybind>
   <keybind key="W-S-m">
@@ -544,16 +578,6 @@
   <keybind key="W-S-p">
     <action name="Execute">
       <command>~/bin/sscr</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-p">
-    <action name="Execute">
-      <command>~/bin/polyon</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-S-p">
-    <action name="Execute">
-      <command>~/bin/polyoff</command>
     </action>
   </keybind>
   <keybind key="W-w">
@@ -576,6 +600,41 @@
   <keybind key="W-C-F1">
     <action name="Execute">
       <command>poweroff</command>
+    </action>
+  </keybind>
+  <keybind key="W-F2">
+    <action name="Execute">
+      <command>~/bin/essid</command>
+    </action>
+  </keybind>
+  <keybind key="W-F3">
+    <action name="Execute">
+      <command>mpc stop</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-F3">
+    <action name="Execute">
+      <command>~/bin/spotify-control --pause</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-F3">
+    <action name="Execute">
+      <command>mpc seek 00:00:00</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-S-F3">
+    <action name="Execute">
+      <command>~/bin/spotify-control --play</command>
+    </action>
+  </keybind>
+  <keybind key="W-F4">
+    <action name="Execute">
+      <command>mpc toggle</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-F4">
+    <action name="Execute">
+      <command>~/bin/spotify-control --toggle</command>
     </action>
   </keybind>
   <keybind key="W-F5">
@@ -633,39 +692,24 @@
       <command>~/bin/pvol --cento</command>
     </action>
   </keybind>
-  <keybind key="W-Up">
+  <keybind key="W-Left">
     <action name="Execute">
-      <command>mpc stop</command>
+      <command>mpc seek -00:00:05</command>
     </action>
   </keybind>
-  <keybind key="W-C-Up">
+  <keybind key="W-Up">
     <action name="Execute">
-      <command>~/bin/spotify-control --pause</command>
+      <command>~/bin/polylefton</command>
     </action>
   </keybind>
   <keybind key="W-S-Up">
     <action name="Execute">
-      <command>mpc seek 00:00:00</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-S-Up">
-    <action name="Execute">
-      <command>~/bin/spotify-control --play</command>
+      <command>~/bin/polyrighton</command>
     </action>
   </keybind>
   <keybind key="W-Down">
     <action name="Execute">
-      <command>mpc toggle</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-Down">
-    <action name="Execute">
-      <command>~/bin/spotify-control --toggle</command>
-    </action>
-  </keybind>
-  <keybind key="W-Left">
-    <action name="Execute">
-      <command>mpc seek -00:00:05</command>
+      <command>~/bin/polyoff</command>
     </action>
   </keybind>
   <keybind key="W-S-Left">
@@ -739,7 +783,6 @@
   <context name="Client">
     <mousebind button="Left" action="Press">
       <action name="Focus"/>
-      <action name="Raise"/>
     </mousebind>
     <mousebind button="Middle" action="Press">
       <action name="Focus"/>
@@ -765,6 +808,11 @@
     </mousebind>
     <mousebind button="Middle" action="Click">
       <action name="Execute">
+        <command>skippy-xd</command>
+      </action>
+    </mousebind>
+    <mousebind button="W-Middle" action="Click">
+      <action name="Execute">
         <command>~/bin/draw</command>
       </action>
     </mousebind>
@@ -775,7 +823,7 @@
     </mousebind>
     <mousebind button="W-Right" action="Click">
       <action name="Execute">
-        <command>~/bin/draw</command>
+        <command>skippy-xd</command>
       </action>
     </mousebind>
   </context>
@@ -792,7 +840,7 @@
       <action name="Raise"/>
     </mousebind>
     <mousebind button="Left" action="DoubleClick">
-      <action name="ToggleShade"/>
+      <action name="ToggleMaximize"/>
     </mousebind>
     <mousebind button="Middle" action="Click">
       <action name="Focus"/>
