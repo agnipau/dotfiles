@@ -1,6 +1,6 @@
 # zle.zsh
 #
-# Some useful zle widgets.
+# Contains some useful zle widgets.
 
 # Open the results of fzf in NeoVim.
 _fzf-nvim() {
