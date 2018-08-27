@@ -152,6 +152,7 @@ exec              = printf '%s' label
 scroll-up         = ~/bin/style --current-wal-dark
 scroll-down       = ~/bin/style --current-wal-light
 click-left        = ~/bin/style --another-wal-dark
+click-medium      = ~/bin/style --quality-another-wal-dark
 click-right       = ~/bin/style --another-wal-light
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}

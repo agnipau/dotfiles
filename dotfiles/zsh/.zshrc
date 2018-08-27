@@ -1,71 +1,9 @@
-# .bashrc
+# .zshrc
 #
-# bash config file.
-
-# If not running interactively, don't do anything:
-[[ $- != *i* ]] && return
-
-# vi mode please.
-set -o vi
-
-# Prompt.
-prompt() {
-  if [[ -z "$PREFIX" ]]; then
-   if git status &>/dev/null; then
-     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
-     gslines="$(git status | wc -l)"
-
-     if [[ "$gslines" -eq 4 ]]; then
-       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-                         "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
-                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-     else
-       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-                         "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
-                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-                         "\\[\\e[1;36m\\] 🗙 \\[\\e[0m\\]" \
-                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-     fi
-   else
-     printf "%s%s%s%s" "\\[\\e[1;31m\\]\u " \
-                       "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
-                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-   fi
-  else
-   if git status &>/dev/null; then
-     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
-     gslines="$(git status | wc -l)"
-
-     if [[ "$gslines" -eq 4 ]]; then
-       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-                         "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-     else
-       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-                         "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-                         "\\[\\e[1;36m\\] 🗙 \\[\\e[0m\\]" \
-                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-     fi
-   else
-     printf "%s%s%s%s" "\\[\\e[1;31m\\]\u " \
-                       "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-   fi
-  fi
-}
-
-if [[ -z "$TMUX" ]]; then
-  PROMPT_COMMAND='PS1=$(prompt); echo -ne "\033]0; \007"'
-else
-  PROMPT_COMMAND='PS1=$(prompt)'
-fi
+# zsh config file.
 
 # Envars.
-export HISTCONTROL="ignoredups"
-export HISTSIZE=1000000
+export ZSH="${HOME}/.oh-my-zsh"
 export PATH="${HOME}/.phantomjs/bin:${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${PATH}"
 export VISUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
@@ -76,19 +14,82 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export SSH_KEY_PATH="${HOME}/.ssh/id_rsa"
 export RANGER_LOAD_DEFAULT_RC="false"
 export MANPAGER="nvim -c MANPAGER -"
-#export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 
-# Better tab completion.
-bind 'TAB: menu-complete'
-bind 'set show-all-if-ambiguous on'
-bind 'set completion-ignore-case on'
-bind 'set completion-map-case on'
-bind 'set page-completions off'
-bind 'set menu-complete-display-prefix on'
-bind 'set completion-query-items 0'
-bind 'set colored-stats on'
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+# Theme.
+ZSH_THEME="robbyrussell"
+
+# ZSH options.
+CASE_SENSITIVE="false"
+HYPHEN_INSENSITIVE="false"
+DISABLE_AUTO_UPDATE="false"
+export UPDATE_ZSH_DAYS=13
+DISABLE_LS_COLORS="false"
+DISABLE_AUTO_TITLE="true"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+HIST_STAMPS="dd/mm/yyyy"
+
+# Plugins.
+plugins=(
+  git
+)
+
+. "${ZSH}/oh-my-zsh.sh"
+
+# vi mode please.
+bindkey -v
+
+# Prompt.
+#prompt() {
+#  if [[ -z "$PREFIX" ]]; then
+#   if git status &>/dev/null; then
+#     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+#     gslines="$(git status | wc -l)"
+#
+#     if [[ "$gslines" -eq 4 ]]; then
+#       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
+#                         "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
+#                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
+#                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+#     else
+#       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
+#                         "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
+#                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
+#                         "\\[\\e[1;36m\\] 🗙 \\[\\e[0m\\]" \
+#                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+#     fi
+#   else
+#     printf "%s%s%s%s" "\\[\\e[1;31m\\]\u " \
+#                       "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
+#                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+#   fi
+#  else
+#   if git status &>/dev/null; then
+#     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+#     gslines="$(git status | wc -l)"
+#
+#     if [[ "$gslines" -eq 4 ]]; then
+#       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
+#                         "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+#                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
+#                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+#     else
+#       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
+#                         "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+#                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
+#                         "\\[\\e[1;36m\\] 🗙 \\[\\e[0m\\]" \
+#                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+#     fi
+#   else
+#     printf "%s%s%s%s" "\\[\\e[1;31m\\]\u " \
+#                       "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+#                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+#   fi
+#  fi
+#}
+
+#PROMPT_COMMAND='PS1=$(prompt)'
 
 # Misc. aliases.
 alias ydb='cd ${HOME}/progetti/ydb && ./ydb'
@@ -225,40 +226,6 @@ export LESS_TERMCAP_us=$'\e[0;32m'
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_DEFAULT_OPTS="--multi --inline-info --reverse --height 95%"
 
-# Custom fzf functions.
-fzf_nvim() {
-  [[ "$1" ]] && \
-    nvim "$@"
-}
-
-fzf_cd() {
-  clear
-  local FZF_DEFAULT_COMMAND="fd --type d --hidden --follow --exclude .git"
-  cd "$(fzf)"
-}
-
-fzf_history() {
-  clear
-  echo -n "$(cat "${HOME}/.bash_history" | fzf)" > .fzf_his.tmp
-  chmod +x .fzf_his.tmp
-  ./.fzf_his.tmp
-  rm -f .fzf_his*
-}
-
-fzf_general() {
-  clear
-  echo -n '$(fd --hidden --follow --exclude .git | fzf)' >> .fzf_cmd.tmp
-  chmod +x .fzf_cmd.tmp
-  ./.fzf_cmd.tmp
-  rm -f .fzf_cmd*
-}
-
-# Custom fzf bindings.
-bind -x '"\C-e": clear; fzf_nvim $(fzf)'
-bind -x '"\C-r": fzf_history'
-bind '"\ec": "fzf_cd\C-m"'
-bind '"\C-t": "\" > .fzf_cmd.tmp\e0iecho -n \"\C-mfzf_general\C-m'
-
 # Use escape sequences to change the value of color17.
 # I primarily need this trick for my wal.vim fork.
 if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
@@ -271,14 +238,14 @@ if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
   fi
 fi
 
+# Fix super annoying backspace bug in vi insert mode.
+bindkey '^?' backward-delete-char
+
+# Source zle widgets.
+[[ -f "${HOME}/.zsh/functions.zsh" ]] && . "${HOME}/.zsh/zle.zsh"
+
+# Source functions.
+[[ -f "${HOME}/.zsh/functions.zsh" ]] && . "${HOME}/.zsh/functions.zsh"
+
 # Run tmux every time a new terminal instance is opened.
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
-
-# Functions.
-clone() {
-  git clone --depth 1 "https://github.com/$1.git"
-}
-
-cclone() {
-  git clone --depth 1 "$1.git"
-}

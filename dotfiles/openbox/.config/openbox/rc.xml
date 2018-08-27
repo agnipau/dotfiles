@@ -246,7 +246,7 @@
   </keybind>
 
   <!-- Keybindings for slow window switching. -->
-  <keybind key="W-Tab">
+  <keybind key="W-n">
     <action name="NextWindow">
       <dialog>none</dialog>
       <bar>yes</bar>
@@ -257,13 +257,13 @@
       <linear>yes</linear>
       <interactive>yes</interactive>
       <finalactions>
-	<action name="Focus"/>
+        <action name="Focus"/>
         <action name="Raise"/>
         <action name="Unshade"/>
       </finalactions>
     </action>
   </keybind>
-  <keybind key="W-S-Tab">
+  <keybind key="W-S-n">
     <action name="PreviousWindow">
       <dialog>none</dialog>
       <bar>yes</bar>
@@ -274,7 +274,7 @@
       <linear>yes</linear>
       <interactive>yes</interactive>
       <finalactions>
-	<action name="Focus"/>
+        <action name="Focus"/>
         <action name="Raise"/>
         <action name="Unshade"/>
       </finalactions>
@@ -282,7 +282,7 @@
   </keybind>
 
   <!-- Keybindings for fast window switching. -->
-  <keybind key="W-n">
+  <keybind key="W-Tab">
     <action name="PreviousWindow">
       <dialog>none</dialog>
       <bar>no</bar>
@@ -293,7 +293,7 @@
       <linear>no</linear>
       <interactive>no</interactive>
       <finalactions>
-	<action name="Focus"/>
+        <action name="Focus"/>
         <action name="Raise"/>
         <action name="Unshade"/>
       </finalactions>
@@ -587,7 +587,7 @@
   </keybind>
   <keybind key="W-m">
     <action name="Execute">
-      <command>st -n musica -e musica-maestro</command>
+      <command>st -n musica -e ~/bin/musica-maestro</command>
     </action>
   </keybind>
   <keybind key="W-S-m">
