@@ -567,6 +567,21 @@
       <command>~/bin/draw</command>
     </action>
   </keybind>
+  <keybind key="W-y">
+    <action name="Execute">
+      <command>~/bin/polylefton</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-y">
+    <action name="Execute">
+      <command>~/bin/polyrighton</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-y">
+    <action name="Execute">
+      <command>~/bin/polyoff</command>
+    </action>
+  </keybind>
   <keybind key="W-d">
     <action name="ToggleShowDesktop"/>
   </keybind>
@@ -632,36 +647,6 @@
       <command>~/bin/essid</command>
     </action>
   </keybind>
-  <keybind key="W-F3">
-    <action name="Execute">
-      <command>mpc stop</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-F3">
-    <action name="Execute">
-      <command>~/bin/spotify-control --pause</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-F3">
-    <action name="Execute">
-      <command>mpc seek 00:00:00</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-S-F3">
-    <action name="Execute">
-      <command>~/bin/spotify-control --play</command>
-    </action>
-  </keybind>
-  <keybind key="W-F4">
-    <action name="Execute">
-      <command>mpc toggle</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-F4">
-    <action name="Execute">
-      <command>~/bin/spotify-control --toggle</command>
-    </action>
-  </keybind>
   <keybind key="W-F5">
     <action name="Execute">
       <command>sudo ~/bin/brightness --dec 10</command>
@@ -717,24 +702,39 @@
       <command>~/bin/pvol --cento</command>
     </action>
   </keybind>
-  <keybind key="W-Left">
-    <action name="Execute">
-      <command>mpc seek -00:00:05</command>
-    </action>
-  </keybind>
   <keybind key="W-Up">
     <action name="Execute">
-      <command>~/bin/polylefton</command>
+      <command>mpc stop</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-Up">
+    <action name="Execute">
+      <command>~/bin/spotify-control --pause</command>
     </action>
   </keybind>
   <keybind key="W-S-Up">
     <action name="Execute">
-      <command>~/bin/polyrighton</command>
+      <command>mpc seek 00:00:00</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-S-Up">
+    <action name="Execute">
+      <command>~/bin/spotify-control --play</command>
     </action>
   </keybind>
   <keybind key="W-Down">
     <action name="Execute">
-      <command>~/bin/polyoff</command>
+      <command>mpc toggle</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-Down">
+    <action name="Execute">
+      <command>~/bin/spotify-control --toggle</command>
+    </action>
+  </keybind>
+  <keybind key="W-Left">
+    <action name="Execute">
+      <command>mpc seek -00:00:05</command>
     </action>
   </keybind>
   <keybind key="W-S-Left">
