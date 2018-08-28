@@ -472,12 +472,12 @@
   <!-- st related keybindings. -->
   <keybind key="W-Return">
     <action name="Execute">
-      <command>st</command>
+      <command>urxvt</command>
     </action>
   </keybind>
   <keybind key="A-Return">
     <action name="Execute">
-      <command>st</command>
+      <command>urxvt</command>
     </action>
   </keybind>
   <keybind key="W-S-Return">
@@ -602,12 +602,12 @@
   </keybind>
   <keybind key="W-m">
     <action name="Execute">
-      <command>st -n musica -e ~/bin/musica-maestro</command>
+      <command>urxvt -name musica -e ~/bin/musica-maestro</command>
     </action>
   </keybind>
   <keybind key="W-S-m">
     <action name="Execute">
-      <command>st -n musica_cava -e cava</command>
+      <command>urxvt -name musica_cava -e cava</command>
     </action>
   </keybind>
   <keybind key="W-p">

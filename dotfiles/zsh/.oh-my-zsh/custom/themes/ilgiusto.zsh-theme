@@ -1,3 +1,6 @@
+# Disable urxvt title.
+echo -ne "\033]0; \007"
+
 # Workaround for using italic in zsh prompt.
 local lc=$'\e[' rc=m
 typeset -AHg fg_italic fg_no_italic
@@ -15,5 +18,6 @@ PROMPT='%{$fg_bold[red]%}%n %{$fg_italic[cyan]%}%~%{$reset_color%} $(git_prompt_
 # Options for $(git_prompt_info).
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[red]%}on  "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[cyan]%} 🗙 "
+#ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[cyan]%} 🗙 "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[cyan]%} ✘"
 ZSH_THEME_GIT_PROMPT_CLEAN=""

@@ -5,7 +5,6 @@
 # Open the results of fzf in NeoVim.
 _fzf-nvim() {
   clear
-  zle reset-prompt
 
   nvim $(fd --type f --hidden --follow --exclude .git \
         | fzf --multi --inline-info --reverse --height 95%)
@@ -19,7 +18,6 @@ bindkey '^e' _fzf-nvim
 # cd into the result of fzf.
 _fzf-cd() {
   clear
-  zle reset-prompt
 
   fzf_dir="$(fd --type d --hidden --follow --exclude .git \
             | fzf --multi --inline-info --reverse --height 95%)"
@@ -35,7 +33,6 @@ bindkey '\ec' _fzf-cd
 # Search with fd and fzf through the history.
 _fzf-history() {
   clear
-  zle reset-prompt
 
   BUFFER="$(cat "${HOME}/.bash_history" \
            | fzf --multi --inline-info --reverse --height 95%)"
@@ -48,7 +45,6 @@ bindkey '^r' _fzf-history
 _fzf-general() {
   OLD_BUFFER="$BUFFER"
   clear
-  zle reset-prompt
 
   fzf_result="$(fd --hidden --follow --exclude .git \
                | fzf --multi --inline-info --reverse --height 95%)"

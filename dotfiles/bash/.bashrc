@@ -57,7 +57,7 @@ prompt() {
   fi
 }
 
-if [[ -z "$TMUX" ]]; then
+if [[ -z "$PREFIX" ]]; then
   PROMPT_COMMAND='PS1=$(prompt); echo -ne "\033]0; \007"'
 else
   PROMPT_COMMAND='PS1=$(prompt)'
@@ -270,6 +270,9 @@ if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
     printf "\e]4;17;rgb:${color0_darker_20:1:2}/${color0_darker_20:3:2}/${color0_darker_20:5:2}\e\\"
   fi
 fi
+
+# Activate the fucking fuck.
+eval $(thefuck --alias)
 
 # Run tmux every time a new terminal instance is opened.
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
