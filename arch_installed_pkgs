@@ -15,11 +15,14 @@ atk
 attr
 audiofile
 autoconf
+autojump
 automake
 avahi
+babl
 bash
 binutils
 bison
+blas
 boost-libs
 brotli
 btrfs-progs
@@ -59,6 +62,7 @@ efivar
 egl-wayland
 eglexternalplatform
 enchant
+exiv2
 exo
 expac
 expat
@@ -87,11 +91,13 @@ gconf
 gcr
 gdbm
 gdk-pixbuf2
+gegl
 geoclue2
 gettext
 ghc-libs
 giblib
 giflib
+gimp
 girara
 git
 glew
@@ -111,6 +117,7 @@ grep
 groff
 grub
 gsettings-desktop-schemas
+gsfonts
 gsm
 gst-plugins-base-libs
 gstreamer
@@ -153,10 +160,12 @@ iana-etc
 icu
 id3lib
 id3v2
+ilmbase
 imagemagick
 imlib2
 inetutils
 iniparser
+intel-tbb
 iproute2
 iptables
 iputils
@@ -177,9 +186,12 @@ kmod
 krb5
 l-smash
 lame
+lapack
+lcms
 lcms2
 ldb
 ldns
+lensfun
 less
 libaio
 libao
@@ -210,6 +222,7 @@ libcups
 libcurl-gnutls
 libdaemon
 libdatrie
+libde265
 libdiscid
 libdrm
 libdvdnav
@@ -224,11 +237,14 @@ libffi
 libfontenc
 libgcrypt
 libgdata
+libgexiv2
+libglade
 libglvnd
 libgme
 libgpg-error
 libgudev
 libgusb
+libheif
 libibus
 libice
 libid3tag
@@ -249,6 +265,7 @@ libmnl
 libmodplug
 libmpc
 libmpdclient
+libmypaint
 libnfs
 libnftnl
 libnghttp2
@@ -266,6 +283,7 @@ libproxy
 libpsl
 libpulse
 libraqm
+libraw
 libraw1394
 librsvg
 libsamplerate
@@ -277,6 +295,7 @@ libsm
 libsndfile
 libsoup
 libsoxr
+libspiro
 libssh
 libssh2
 libsynctex
@@ -304,6 +323,7 @@ libvterm
 libwacom
 libwbclient
 libwebp
+libwmf
 libx11
 libxau
 libxaw
@@ -345,6 +365,7 @@ llvm-libs
 lm_sensors
 lmdb
 logrotate
+lua
 lua52
 luajit
 lvm2
@@ -357,6 +378,7 @@ man-db
 man-pages
 mdadm
 mesa
+metis
 minizip
 mkinitcpio
 mkinitcpio-busybox
@@ -366,6 +388,7 @@ mpfr
 mpv
 msgpack-c
 mtdev
+mypaint-brushes
 nano
 ncmpcpp
 ncurses
@@ -386,6 +409,7 @@ nvidia
 nvidia-utils
 openal
 opencore-amr
+openexr
 openjpeg2
 openresolv
 openssh
@@ -416,12 +440,15 @@ pinentry
 pixman
 pkgconf
 polkit
+poppler-data
 popt
 procps-ng
 protobuf
 psmisc
 pulseaudio
 pyalpm
+pygobject2-devel
+pygtk
 pyqt5-common
 python
 python-appdirs
@@ -430,6 +457,7 @@ python-cachecontrol
 python-chardet
 python-colorama
 python-dateutil
+python-decorator
 python-distlib
 python-distro
 python-feedparser
@@ -445,10 +473,12 @@ python-neovim
 python-packaging
 python-pip
 python-progress
+python-psutil
 python-pygments
 python-pyparsing
 python-pypeg2
 python-pyqt5
+python-pyte
 python-pytoml
 python-pywal
 python-regex
@@ -459,9 +489,12 @@ python-sgmllib
 python-sip-pyqt5
 python-six
 python-urllib3
+python-wcwidth
 python-webencodings
 python-yaml
 python2
+python2-cairo
+python2-gobject2
 qt5-base
 qt5-declarative
 qt5-imageformats
@@ -478,6 +511,7 @@ redshift
 reflector
 reiserfsprogs
 rest
+ripgrep
 rofi
 rsync
 rtkit
@@ -507,6 +541,7 @@ sqlite
 startup-notification
 stow
 sudo
+suitesparse
 sysfsutils
 systemd
 systemd-sysvcompat
@@ -518,6 +553,7 @@ telegram-desktop
 telepathy-glib
 tevent
 texinfo
+thefuck
 thin-provisioning-tools
 thunar
 thunar-archive-plugin
@@ -594,5 +630,6 @@ zathura-pdf-mupdf
 zita-alsa-pcmi
 zita-resampler
 zlib
+zsh
 zstd
 zziplib
