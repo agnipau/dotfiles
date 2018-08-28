@@ -9,6 +9,9 @@ _fzf-nvim() {
 
   nvim $(fd --type f --hidden --follow --exclude .git \
         | fzf --multi --inline-info --reverse --height 95%)
+  
+  BUFFER="clear"
+  zle accept-line
 }
 zle -N _fzf-nvim
 bindkey '^e' _fzf-nvim
@@ -58,3 +61,13 @@ _fzf-general() {
 }
 zle -N _fzf-general
 bindkey '^t' _fzf-general
+
+# A version of the oh-my-zsh sudo plugin that works in vi mode
+# (obv it works in every mode).
+_sudo() {
+  OLD_BUFFER="$BUFFER"
+  BUFFER="sudo $OLD_BUFFER"
+  zle end-of-line
+}
+zle -N _sudo
+bindkey '\e\e' _sudo

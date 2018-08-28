@@ -33,9 +33,22 @@ HIST_STAMPS="dd/mm/yyyy"
 # Plugins.
 plugins=(
   git
+  history-substring-search
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 . "${ZSH}/oh-my-zsh.sh"
+
+# Plugins options.
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=17'
+bindkey -M viins '\C ' autosuggest-execute
+bindkey -M viins '\e ' autosuggest-accept
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+# Better history searching.
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # vi mode please.
 bindkey -v
@@ -190,8 +203,17 @@ fi
 # Fix super annoying backspace bug in vi insert mode.
 bindkey '^?' backward-delete-char
 
+# Activate the fucking fuck.
+eval $(thefuck --alias)
+
+# Source fzf.
+[[ -f "${HOME}/.fzf.zsh" ]] && . "${HOME}/.fzf.zsh"
+
+# Source autojump.
+[[ -f /usr/share/autojump/autojump.zsh ]] && . /usr/share/autojump/autojump.zsh
+
 # Source zle widgets.
-[[ -f "${HOME}/.zsh/functions.zsh" ]] && . "${HOME}/.zsh/zle.zsh"
+[[ -f "${HOME}/.zsh/zle.zsh" ]] && . "${HOME}/.zsh/zle.zsh"
 
 # Source functions.
 [[ -f "${HOME}/.zsh/functions.zsh" ]] && . "${HOME}/.zsh/functions.zsh"

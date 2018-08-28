@@ -24,7 +24,7 @@ margin-bottom = 0
 monitor        = eDP-1-1
 bottom         = true
 fixed-center   = true
-width          = 45%
+width          = 47%
 height         = 40
 offset-x       = 35
 offset-y       = 30
@@ -36,7 +36,7 @@ module-margin  = 1
 font-0         = Iosevka Term SS07:size=12:antialias=true:autohint=false;3
 font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
 modules-left   = openbox_ws_good
-modules-center = down date_time pvol music mpd wal
+modules-center = essid date_time pvol music mpd wal
 locale         = it_IT.UTF-8
 
 ; Bar in the right side.
@@ -44,9 +44,9 @@ locale         = it_IT.UTF-8
 monitor        = eDP-1-1
 bottom         = true
 fixed-center   = true
-width          = 28%
+width          = 24%
 height         = 40
-offset-x       = 954
+offset-x       = 1008
 offset-y       = 30
 background     = ${colors.background}
 foreground     = ${colors.foreground}
@@ -55,7 +55,7 @@ padding        = 0
 module-margin  = 1
 font-0         = Iosevka Term SS07:size=12:antialias=true:autohint=false;3
 font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
-modules-center = essid battery brightness
+modules-center = down battery brightness
 locale         = it_IT.UTF-8
 
 ; bar-left modules.
@@ -71,17 +71,17 @@ format-foreground = ${colors.background}
 format-padding    = 3
 label             = %output%
 
-;; Show the downspeed.
-[module/down]
+;; Show the essid.
+[module/essid]
 type                          = internal/network
 interface                     = wlp3s0
 format-connected              = <label-connected>
 format-disconnected           = <label-disconnected>
-label-connected               =  %downspeed%
+label-connected               =  %essid%
 label-connected-background    = ${colors.background}
 label-connected-foreground    = ${colors.foreground}
 label-connected-padding       = 1
-label-disconnected            =  
+label-disconnected            =  
 label-disconnected-background = ${colors.background}
 label-disconnected-foreground = ${colors.foreground}
 label-disconnected-padding    = 1
@@ -159,17 +159,17 @@ format-foreground = ${colors.foreground}
 format-padding    = 0
 
 ; bar-right modules.
-;; Show the essid.
-[module/essid]
+;; Show the downspeed.
+[module/down]
 type                          = internal/network
 interface                     = wlp3s0
 format-connected              = <label-connected>
 format-disconnected           = <label-disconnected>
-label-connected               =  %essid%
+label-connected               =  %downspeed%
 label-connected-background    = ${colors.background}
 label-connected-foreground    = ${colors.foreground}
 label-connected-padding       = 1
-label-disconnected            =  
+label-disconnected            =  
 label-disconnected-background = ${colors.background}
 label-disconnected-foreground = ${colors.foreground}
 label-disconnected-padding    = 1
