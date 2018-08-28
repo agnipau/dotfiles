@@ -16,7 +16,7 @@ export RANGER_LOAD_DEFAULT_RC="false"
 export MANPAGER="nvim -c MANPAGER -"
 
 # Theme.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="ilgiusto"
 
 # ZSH options.
 CASE_SENSITIVE="false"
@@ -25,8 +25,8 @@ DISABLE_AUTO_UPDATE="false"
 export UPDATE_ZSH_DAYS=13
 DISABLE_LS_COLORS="false"
 DISABLE_AUTO_TITLE="true"
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
+ENABLE_CORRECTION="false"
+COMPLETION_WAITING_DOTS="false"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd/mm/yyyy"
 
@@ -40,65 +40,14 @@ plugins=(
 # vi mode please.
 bindkey -v
 
-# Prompt.
-#prompt() {
-#  if [[ -z "$PREFIX" ]]; then
-#   if git status &>/dev/null; then
-#     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
-#     gslines="$(git status | wc -l)"
-#
-#     if [[ "$gslines" -eq 4 ]]; then
-#       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-#                         "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
-#                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-#                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-#     else
-#       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-#                         "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
-#                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-#                         "\\[\\e[1;36m\\] 🗙 \\[\\e[0m\\]" \
-#                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-#     fi
-#   else
-#     printf "%s%s%s%s" "\\[\\e[1;31m\\]\u " \
-#                       "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
-#                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-#   fi
-#  else
-#   if git status &>/dev/null; then
-#     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
-#     gslines="$(git status | wc -l)"
-#
-#     if [[ "$gslines" -eq 4 ]]; then
-#       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-#                         "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-#                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-#                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-#     else
-#       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-#                         "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-#                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-#                         "\\[\\e[1;36m\\] 🗙 \\[\\e[0m\\]" \
-#                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-#     fi
-#   else
-#     printf "%s%s%s%s" "\\[\\e[1;31m\\]\u " \
-#                       "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-#                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-#   fi
-#  fi
-#}
-
-#PROMPT_COMMAND='PS1=$(prompt)'
-
 # Misc. aliases.
 alias ydb='cd ${HOME}/progetti/ydb && ./ydb'
 alias obapp='obxprop | grep ^_OB_APP_'
 alias app='xprop | grep ^WM_'
 alias nodebug='notify-send "Debug" "Debug message"'
 alias cnodebug='notify-send -h string:fgcolor:"$color1" "Debug" "Debug message"'
-alias grad='. ${HOME}/.bashrc; hsetroot -add "$color1" -add "$color2" -gradient 0'
-alias solid='. ${HOME}/.bashrc; hsetroot -solid "$color1"'
+alias grad='. ${HOME}/.zshrc; hsetroot -add "$color1" -add "$color2" -gradient 0'
+alias solid='. ${HOME}/.zshrc; hsetroot -solid "$color1"'
 alias discord='beautifuldiscord --css "${HOME}/.cache/wal-discord/style.css"'
 alias down='curl -fsSLO'
 alias sdown='curl -fSLO#'
@@ -156,7 +105,7 @@ alias pqiv='pqiv -i --box-colors="$color7":"$color0_lighter_90" --bind-key="@MON
 alias neo='clear; neofetch'
 
 # Aliases for editing configuration files.
-alias ebash='nvim "${HOME}/.bashrc"'
+alias ez='nvim "${HOME}/.zshrc"'
 alias envim='nvim "${HOME}/.config/nvim/init.vim"'
 alias rnvim='nvim README* || nvim readme*'
 alias tnvim='nvim *.tex'
@@ -166,7 +115,7 @@ alias emux='nvim "${HOME}/.tmux.conf"'
 alias ebar='nvim "${HOME}/.config/polybar/config"'
 
 # Aliases for sourcing configuration files.
-alias ibash='. "${HOME}/.bashrc"'
+alias iz='. "${HOME}/.zshrc"'
 alias ixres='xrdb "${HOME}/.Xresources"'
 alias ibox='openbox --reconfigure'
 alias imux='tmux source-file "${HOME}/.tmux.conf"'

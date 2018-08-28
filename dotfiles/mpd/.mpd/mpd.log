@@ -4806,3 +4806,13 @@ Aug 27 21:44 : client: [479] opened from 127.0.0.1:56404
 Aug 27 21:44 : client: [479] closed
 Aug 27 22:32 : client: [1] closed
 Aug 27 22:47 : player: played "Saint Saens - Introduction and Rondo Capriccioso.mp3"
+Aug 28 01:33 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 28 01:33 : client: [0] opened from 127.0.0.1:49722
+Aug 28 01:33 : client: [1] opened from 127.0.0.1:49724
+Aug 28 01:33 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 28 02:01 : client: [2] opened from 127.0.0.1:49934
+Aug 28 02:01 : client: [2] closed
+Aug 28 02:25 : player: played "Mozart - Requiem.mp3"
+Aug 28 02:34 : player: played "Mozart - Requiem.mp3"
+Aug 28 02:43 : player: played "Mozart - Requiem.mp3"
+Aug 28 02:50 : client: [0] closed
