@@ -24,7 +24,7 @@ margin-bottom = 0
 monitor        = eDP-1-1
 bottom         = true
 fixed-center   = true
-width          = 48%
+width          = 50%
 height         = 40
 offset-x       = 35
 offset-y       = 30
@@ -142,7 +142,7 @@ label-time                = %elapsed% / %total%
 format-offline            = <label-offline>
 format-offline-background = ${colors.background}
 format-offline-foreground = ${colors.foreground}
-label-offline             = .:. / .:.
+label-offline             = .:.. / .:..
 
 [module/wal]
 type              = custom/script

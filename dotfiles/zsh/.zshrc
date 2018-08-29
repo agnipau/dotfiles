@@ -3,7 +3,6 @@
 # zsh config file.
 
 # Envars.
-export ZSH="${HOME}/.oh-my-zsh"
 export PATH="${HOME}/.phantomjs/bin:${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${PATH}"
 export VISUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
@@ -15,30 +14,35 @@ export SSH_KEY_PATH="${HOME}/.ssh/id_rsa"
 export RANGER_LOAD_DEFAULT_RC="false"
 export MANPAGER="nvim -c MANPAGER -"
 
-# Theme.
-ZSH_THEME="ilgiusto"
+# oh-my-zsh options.
+#CASE_SENSITIVE="false"
+#HYPHEN_INSENSITIVE="false"
+#DISABLE_AUTO_UPDATE="false"
+#DISABLE_LS_COLORS="false"
+#DISABLE_AUTO_TITLE="true"
+#ENABLE_CORRECTION="false"
+#COMPLETION_WAITING_DOTS="false"
+#DISABLE_UNTRACKED_FILES_DIRTY="true"
+#HIST_STAMPS="dd/mm/yyyy"
 
-# ZSH options.
-CASE_SENSITIVE="false"
-HYPHEN_INSENSITIVE="false"
-DISABLE_AUTO_UPDATE="false"
-export UPDATE_ZSH_DAYS=13
-DISABLE_LS_COLORS="false"
-DISABLE_AUTO_TITLE="true"
-ENABLE_CORRECTION="false"
-COMPLETION_WAITING_DOTS="false"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-HIST_STAMPS="dd/mm/yyyy"
+# zplug.
+. "${HOME}/.zplug/init.zsh"
 
-# Plugins.
-plugins=(
-  git
-  history-substring-search
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
+zplug "zplug/zplug", hook-build:"zplug --self-manage"
+zplug "plugins/git", from:oh-my-zsh
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "~/.zsh", from:local
 
-. "${ZSH}/oh-my-zsh.sh"
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+
+zplug load
 
 # Plugins options.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=17'
@@ -49,6 +53,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # Better history searching.
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
+# Theme.
+. "${HOME}/.zsh/ilgiusto.zsh"
 
 # vi mode please.
 bindkey -v
@@ -200,6 +207,9 @@ if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
   fi
 fi
 
+# Remove the terminal title.
+echo -ne "\033]0; \007"
+
 # Fix super annoying backspace bug in vi insert mode.
 bindkey '^?' backward-delete-char
 
@@ -211,12 +221,6 @@ eval $(thefuck --alias)
 
 # Source autojump.
 [[ -f /usr/share/autojump/autojump.zsh ]] && . /usr/share/autojump/autojump.zsh
-
-# Source zle widgets.
-[[ -f "${HOME}/.zsh/zle.zsh" ]] && . "${HOME}/.zsh/zle.zsh"
-
-# Source functions.
-[[ -f "${HOME}/.zsh/functions.zsh" ]] && . "${HOME}/.zsh/functions.zsh"
 
 # Run tmux every time a new terminal instance is opened.
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2

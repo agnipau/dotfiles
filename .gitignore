@@ -11,4 +11,7 @@ dotfiles/cmus/.config/cmus/command-history
 dotfiles/cmus/.config/cmus/lib.pl
 dotfiles/cmus/.config/cmus/cache
 dotfiles/cmus/.config/cmus/autosave
+dotfiles/fish/.config/fish/functions/bass.fish
+dotfiles/fish/.config/fish/functions/__bass.py
+dotfiles/fish/.config/fish/functions/fisher.fish
 .uuid

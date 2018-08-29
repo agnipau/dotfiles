@@ -11,3 +11,9 @@ clone() {
 cclone() {
   git clone --depth 1 "$1.git"
 }
+
+# A shorter version of `pwd`.
+_short_pwd() {
+  printf "${PWD/$HOME/~}" \
+    | sed 's_\(\.*[^/]\)[^/]*/_\1/_g'
+}

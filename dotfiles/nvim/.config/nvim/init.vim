@@ -98,6 +98,8 @@ Plug 'yuttie/comfortable-motion.vim'
 Plug 'lambdalisue/vim-manpager'
 Plug 'rhysd/open-pdf.vim'
 
+Plug 'dag/vim-fish'
+
 call plug#end()
 
 " }}}

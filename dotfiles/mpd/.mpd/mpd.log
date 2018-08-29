@@ -4865,3 +4865,53 @@ Aug 28 04:40 : client: [24] opened from 127.0.0.1:50838
 Aug 28 05:40 : avahi: Client Disconnected, will reconnect shortly
 Aug 28 05:40 : avahi: Could not reconnect: An unexpected D-Bus error occurred
 Aug 28 05:40 : player: played "Mozart - Requiem.mp3"
+Aug 28 20:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 28 20:30 : client: [0] opened from 127.0.0.1:40296
+Aug 28 20:30 : client: [1] opened from 127.0.0.1:40300
+Aug 28 20:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 28 20:42 : player: played "Saint Saens - Introduction and Rondo Capriccioso.mp3"
+Aug 28 20:51 : player: played "Saint Saens - Introduction and Rondo Capriccioso.mp3"
+Aug 28 21:00 : client: [2] opened from 127.0.0.1:40374
+Aug 28 21:00 : client: [2] closed
+Aug 28 21:04 : client: [3] opened from 127.0.0.1:40378
+Aug 28 21:04 : client: [3] closed
+Aug 28 21:04 : client: [4] opened from 127.0.0.1:40382
+Aug 28 21:04 : client: [4] closed
+Aug 28 21:07 : player: played "Eminem - Till I Collapse.mp3"
+Aug 28 21:10 : client: [0] closed
+Aug 28 21:10 : client: [5] opened from 127.0.0.1:40390
+Aug 28 21:10 : client: [5] closed
+Aug 28 21:10 : client: [6] opened from 127.0.0.1:40392
+Aug 28 21:14 : player: played "Eminem - When I'm Gone.mp3"
+Aug 28 21:20 : player: played "Eminem - When I'm Gone.mp3"
+Aug 28 21:26 : player: played "Eminem - When I'm Gone.mp3"
+Aug 28 21:28 : client: [6] closed
+Aug 28 21:28 : client: [7] opened from 127.0.0.1:40404
+Aug 28 21:32 : player: played "Eminem - When I'm Gone.mp3"
+Aug 28 21:42 : player: played "Eminem - Mockingbird.mp3"
+Aug 28 21:46 : player: played "Eminem - Mockingbird.mp3"
+Aug 28 21:46 : client: [8] opened from 127.0.0.1:40508
+Aug 28 21:46 : client: [8] closed
+Aug 28 22:48 : client: [1] closed
+Aug 28 22:48 : player: played "Eminem - Mockingbird.mp3"
+Aug 29 09:11 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 29 09:11 : client: [0] opened from 127.0.0.1:39362
+Aug 29 09:11 : client: [1] opened from 127.0.0.1:39366
+Aug 29 09:11 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 29 09:14 : player: played "Chopin - Etude op.25 no.5 (Wrong Note).mp3"
+Aug 29 09:18 : player: played "Chopin - Etude op.25 no.5 (Wrong Note).mp3"
+Aug 29 09:21 : player: played "Chopin - Etude op.25 no.5 (Wrong Note).mp3"
+Aug 29 09:24 : player: played "Chopin - Etude op.25 no.5 (Wrong Note).mp3"
+Aug 29 09:33 : player: played "Chopin - Ballade no.1 in G minor op.23 (Piano & Violin).mp3"
+Aug 29 09:42 : player: played "Chopin - Ballade no.1 in G minor op.23 (Piano & Violin).mp3"
+Aug 29 09:54 : player: played "Eminem - Till I Collapse.mp3"
+Aug 29 09:57 : client: [2] opened from 127.0.0.1:39532
+Aug 29 09:57 : client: [2] closed
+Aug 29 09:57 : client: [3] opened from 127.0.0.1:39536
+Aug 29 09:57 : client: [3] closed
+Aug 29 10:00 : player: played "Eminem - Till I Collapse.mp3"
+Aug 29 10:04 : player: played "Eminem - Till I Collapse.mp3"
+Aug 29 10:12 : player: played "Eminem - When I'm Gone.mp3"
+Aug 29 10:20 : player: played "Eminem & Dido - Stan.mp3"
+Aug 29 10:21 : client: [4] opened from 127.0.0.1:39768
+Aug 29 10:21 : client: [4] closed
