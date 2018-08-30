@@ -1,1 +1,0 @@
-/home/matte/.config/fisherman/z/functions/z.awk
