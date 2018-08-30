@@ -3,7 +3,7 @@
 - OS: [Arch Linux], [Termux]
 - WM: [openbox-patched]
 - Editor: [neovim]
-- Shell: [bash]
+- Shell: [fish]
 - Terminal: [xst]
 - File Manager: [ranger]
 - Bar: [polybar]
@@ -20,7 +20,7 @@
 [Termux]:          https://termux.com/
 [openbox-patched]: https://github.com/dylanaraps/openbox-patched
 [neovim]:          https://neovim.io/
-[bash]:            https://www.gnu.org/software/bash/
+[fish]:            https://github.com/fish-shell/fish-shell
 [xst]:             https://github.com/gnotclub/xst
 [ranger]:          https://github.com/ranger/ranger
 [polybar]:         https://github.com/jaagr/polybar

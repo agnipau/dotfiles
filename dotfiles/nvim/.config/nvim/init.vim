@@ -66,15 +66,20 @@ Plug 'zchee/deoplete-clang'
 Plug 'wellle/tmux-complete.vim'
   let g:tmuxcomplete#trigger = ''
 Plug 'w0rp/ale'
-  let g:ale_echo_delay                       = 0
-  let g:ale_lint_on_save                     = 0
+  "let g:ale_echo_delay                      = 0
+  let g:ale_lint_on_save                     = 1
   let g:ale_lint_on_text_changed             = 0
-  let g:ale_lint_on_enter                    = 0
+  let g:ale_lint_on_enter                    = 1
+  let g:ale_linters_sh_shellcheck_exclusions = 'SC1090,SC2154'
   let g:ale_sign_error                       = '> '
   let g:ale_sign_warning                     = '! '
-  augroup ale_disable_on_startup
+  "augroup ale_disable_on_startup
+  "  autocmd!
+  "  autocmd BufReadPre * ALEDisable
+  "augroup END
+  augroup ale_disable_fish
     autocmd!
-    autocmd BufReadPre * ALEDisable
+    autocmd BufRead,BufNewFile *.fish ALEDisable
   augroup END
   nnoremap <leader>aa :ALEEnable<cr>
   nnoremap <leader>af :ALEDisable<cr>
@@ -201,6 +206,8 @@ nnoremap <silent> <leader>mo :nohlsearch<cr>
 nnoremap <silent> <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <silent> <leader>rr :source $MYVIMRC<cr>
 nnoremap <silent> <leader>n  :set number! cursorline!<cr>
+nnoremap <silent> <leader>vn :next<cr>
+nnoremap <silent> <leader>vp :previous<cr>
 nnoremap <silent> <c-h> :tabprevious<cr>
 nnoremap <silent> <c-l> :tabnext<cr>
 nnoremap <silent> <c-n> :cnext<cr>zz

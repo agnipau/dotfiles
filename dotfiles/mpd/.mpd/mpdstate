@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:PulseAudio Output
 audio_device_state:1:my_fifo
 state: pause
-current: 12
-time: 85.941000
+current: 4
+time: 3963.853000
 random: 0
 repeat: 1
 single: 1
@@ -12,17 +12,9 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Chopin - Piano Concerto in E minor op.11.mp3
-1:Billie Eilish - Lovely.mp3
-2:Chopin - Etude op.25 no.5 (Wrong Note).mp3
-3:Saint Saens - Introduction and Rondo Capriccioso.mp3
-4:Beethoven - Violin Sonata no.9 (Kreutzer).mp3
-5:Jake Hill - WAKE UP.mp3
-6:Jake Hill - We Die Too.mp3
-7:Eminem - Till I Collapse.mp3
-8:Chopin - Ballade no.1 in G minor op.23 (Piano & Violin).mp3
-9:Mozart - Requiem.mp3
-10:Eminem - When I'm Gone.mp3
-11:Eminem - Mockingbird.mp3
-12:Eminem & Dido - Stan.mp3
+0:Chopin - Etude op.25 no.5 (Wrong Note).mp3
+1:Saint Saens - Introduction and Rondo Capriccioso.mp3
+2:Eminem - When I'm Gone.mp3
+3:Eminem - Till I Collapse.mp3
+4:Beethoven - 9th Symphony op.125.mp3
 playlist_end

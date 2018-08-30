@@ -15,11 +15,11 @@ atk
 attr
 audiofile
 autoconf
-autojump
 automake
 avahi
 babl
 bash
+bc
 binutils
 bison
 blas
@@ -75,6 +75,7 @@ fftw
 file
 filesystem
 findutils
+fish
 flac
 flex
 fontconfig
@@ -153,6 +154,7 @@ haskell-vector
 hicolor-icon-theme
 hspell
 http-parser
+hub
 hunspell
 hwids
 hyphen
@@ -457,7 +459,6 @@ python-cachecontrol
 python-chardet
 python-colorama
 python-dateutil
-python-decorator
 python-distlib
 python-distro
 python-feedparser
@@ -473,12 +474,10 @@ python-neovim
 python-packaging
 python-pip
 python-progress
-python-psutil
 python-pygments
 python-pyparsing
 python-pypeg2
 python-pyqt5
-python-pyte
 python-pytoml
 python-pywal
 python-regex
@@ -489,7 +488,6 @@ python-sgmllib
 python-sip-pyqt5
 python-six
 python-urllib3
-python-wcwidth
 python-webencodings
 python-yaml
 python2
@@ -553,12 +551,12 @@ telegram-desktop
 telepathy-glib
 tevent
 texinfo
-thefuck
 thin-provisioning-tools
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
+time
 tmux
 tslib
 tzdata
@@ -630,6 +628,5 @@ zathura-pdf-mupdf
 zita-alsa-pcmi
 zita-resampler
 zlib
-zsh
 zstd
 zziplib

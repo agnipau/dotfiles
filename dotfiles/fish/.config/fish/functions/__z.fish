@@ -1,0 +1,1 @@
+/home/matte/.config/fisherman/z/functions/__z.fish

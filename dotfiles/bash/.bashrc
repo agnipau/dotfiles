@@ -10,50 +10,41 @@ set -o vi
 
 # Prompt.
 prompt() {
-  if [[ -z "$PREFIX" ]]; then
-   if git status &>/dev/null; then
-     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
-     gslines="$(git status | wc -l)"
+  if git rev-parse --is-inside-work-tree 2>/dev/null; then
+    gbranch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+    gdirty="$(git status --porcelain --ignore-submodules 2>/dev/null)"
 
-     if [[ "$gslines" -eq 4 ]]; then
-       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-                         "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
-                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-     else
-       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-                         "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
-                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-                         "\\[\\e[1;36m\\] 🗙 \\[\\e[0m\\]" \
-                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-     fi
-   else
-     printf "%s%s%s%s" "\\[\\e[1;31m\\]\u " \
-                       "\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
+    if [[ "$gdirty" ]]; then
+      if [[ "$PREFIX" ]]; then
+        printf "%s%s%s%s" "\\[\\e[1m\\]\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+                          "\\[\\e[1;31m\\] on  ${gbranch}\\[\\e[0m\\]" \
+                          "\\[\\e[1;36m\\] ✘\\[\\e[0m\\]" \
+                          "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+      else
+        printf "%s%s%s%s" "\\[\\e[1m\\]\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
+                          "\\[\\e[1;31m\\] on  ${gbranch}\\[\\e[0m\\]" \
+                          "\\[\\e[1;36m\\] ✘\\[\\e[0m\\]" \
+                          "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+      fi
+    else
+      if [[ "$PREFIX" ]]; then
+        printf "%s%s%s" "\\[\\e[1m\\]\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+                        "\\[\\e[1;31m\\] on  ${gbranch}\\[\\e[0m\\]" \
+                        "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+      else
+       printf "%s%s%s" "\\[\\e[1m\\]\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
+                       "\\[\\e[1;31m\\] on  ${gbranch}\\[\\e[0m\\]" \
                        "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-   fi
+      fi
+    fi
   else
-   if git status &>/dev/null; then
-     branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
-     gslines="$(git status | wc -l)"
-
-     if [[ "$gslines" -eq 4 ]]; then
-       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-                         "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-     else
-       printf "%s%s%s%s" "\\[\\e[1;31m\\]\\u " \
-                         "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-                         "\\[\\e[1;31m\\] on  ${branch}\\[\\e[0m\\]" \
-                         "\\[\\e[1;36m\\] 🗙 \\[\\e[0m\\]" \
-                         "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-     fi
-   else
-     printf "%s%s%s%s" "\\[\\e[1;31m\\]\u " \
-                       "\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
-                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
-   fi
+    if [[ "$PREFIX" ]]; then
+      printf "%s%s" "\\[\\e[1m\\]\\[\\e[3;36m\\]\\W\\[\\e[0m\\]" \
+                    "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+    else
+      printf "%s%s" "\\[\\e[1m\\]\\[\\e[3;36m\\]\\w\\[\\e[0m\\]" \
+                    "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+    fi
   fi
 }
 
@@ -151,6 +142,7 @@ alias df='df -h'
 alias du='du -h'
 alias ll='ls -Alh'
 alias mkdir='mkdir -p'
+#shellcheck disable=SC2142
 alias pqiv='pqiv -i --box-colors="$color7":"$color0_lighter_90" --bind-key="@MONTAGE { h { montage_mode_shift_x(-1) } }" --bind-key="@MONTAGE { j { montage_mode_shift_y(1) } }" --bind-key "@MONTAGE { k { montage_mode_shift_y(-1) } }" --bind-key "@MONTAGE { l { montage_mode_shift_x(1) } }" --bind-key="j { goto_file_relative(-1) }" --bind-key="k { goto_file_relative(1) }" --bind-key="h { goto_file_relative(-1) }" --bind-key="l { goto_file_relative(1) }" --bind-key="d { command(rm $1) }"'
 alias neo='clear; neofetch'
 
@@ -233,27 +225,32 @@ fzf_nvim() {
 
 fzf_cd() {
   clear
-  local FZF_DEFAULT_COMMAND="fd --type d --hidden --follow --exclude .git"
-  cd "$(fzf)"
+  dir="$(fd --type d --hidden --follow --exclude .git | fzf)"
+
+  [[ "$dir" ]] && \
+    cd "$dir" || exit 1
 }
 
 fzf_history() {
   clear
+  #shellcheck disable=SC2002
   echo -n "$(cat "${HOME}/.bash_history" | fzf)" > .fzf_his.tmp
-  chmod +x .fzf_his.tmp
-  ./.fzf_his.tmp
+  #shellcheck disable=SC1091
+  . ./.fzf_his.tmp
   rm -f .fzf_his*
 }
 
 fzf_general() {
   clear
+  #shellcheck disable=SC2016
   echo -n '$(fd --hidden --follow --exclude .git | fzf)' >> .fzf_cmd.tmp
-  chmod +x .fzf_cmd.tmp
-  ./.fzf_cmd.tmp
+  #shellcheck disable=SC1091
+  . ./.fzf_cmd.tmp
   rm -f .fzf_cmd*
 }
 
 # Custom fzf bindings.
+#shellcheck disable=SC2016
 bind -x '"\C-e": clear; fzf_nvim $(fzf)'
 bind -x '"\C-r": fzf_history'
 bind '"\ec": "fzf_cd\C-m"'
@@ -264,20 +261,17 @@ bind '"\C-t": "\" > .fzf_cmd.tmp\e0iecho -n \"\C-mfzf_general\C-m'
 if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
   if [[ "$(<"${HOME}/.cache/wal/mode")" == dark ]]; then
     . "${HOME}/.cache/wal/colors.sh"
-    printf "\e]4;17;rgb:${color0_lighter_150:1:2}/${color0_lighter_150:3:2}/${color0_lighter_150:5:2}\e\\"
+    printf '%b' "\\e]4;17;rgb:${color0_lighter_150:1:2}/${color0_lighter_150:3:2}/${color0_lighter_150:5:2}\\e\\"
   elif [[ "$(<"${HOME}/.cache/wal/mode")" == light ]]; then
     . "${HOME}/.cache/wal/colors.sh"
-    printf "\e]4;17;rgb:${color0_darker_20:1:2}/${color0_darker_20:3:2}/${color0_darker_20:5:2}\e\\"
+    printf '%b' "\\e]4;17;rgb:${color0_darker_20:1:2}/${color0_darker_20:3:2}/${color0_darker_20:5:2}\\e\\"
   fi
 fi
-
-# Activate the fucking fuck.
-eval $(thefuck --alias)
 
 # Run tmux every time a new terminal instance is opened.
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
 
-# Functions.
+# More complicated aliases / Misc. functions.
 clone() {
   git clone --depth 1 "https://github.com/$1.git"
 }
