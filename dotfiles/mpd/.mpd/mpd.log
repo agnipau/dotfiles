@@ -5236,3 +5236,18 @@ Aug 30 19:37 : client: [18] closed
 Aug 30 19:37 : client: [19] opened from 127.0.0.1:53060
 Aug 30 19:37 : client: [19] closed
 Aug 30 19:37 : client: [20] opened from 127.0.0.1:53062
+Aug 30 20:06 : client: [20] closed
+Aug 30 20:06 : client: [21] opened from 127.0.0.1:53218
+Aug 30 20:07 : client: [21] closed
+Aug 30 20:07 : client: [22] opened from 127.0.0.1:53220
+Aug 30 20:08 : client: [22] closed
+Aug 30 20:08 : client: [23] opened from 127.0.0.1:53222
+Aug 30 20:21 : client: [23] closed
+Aug 30 20:21 : client: [24] opened from 127.0.0.1:53230
+Aug 30 20:21 : client: [24] closed
+Aug 30 20:21 : client: [25] opened from 127.0.0.1:53232
+Aug 30 20:21 : client: [25] closed
+Aug 30 20:21 : client: [26] opened from 127.0.0.1:53234
+Aug 30 22:19 : avahi: Client Disconnected, will reconnect shortly
+Aug 30 22:19 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Aug 30 22:19 : player: played "Beethoven - 9th Symphony op.125.mp3"
