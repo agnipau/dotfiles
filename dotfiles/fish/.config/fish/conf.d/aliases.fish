@@ -72,6 +72,7 @@ alias rnvim 'nvim README*; or nvim readme*'
 alias tnvim 'nvim *.tex'
 alias exres 'nvim "$HOME/.Xresources"'
 alias ebox  'nvim "$HOME/.config/openbox/rc.xml"'
+alias emenu 'nvim "$HOME/.config/openbox/menu.xml"'
 alias emux  'nvim "$HOME/.tmux.conf"'
 alias ebar  'nvim "$HOME/.config/polybar/config"'
 

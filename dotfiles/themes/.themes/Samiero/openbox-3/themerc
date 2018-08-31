@@ -1,11 +1,9 @@
-# vim:ft=sh
-#
 # Samiero theme for Openbox.
 
 # Titlebar colors.
-window.*.title.bg.color:       #371741
-window.*.label.text.color:     #f4c9c3
-window.*.button.*.image.color: #f4c9c3
+window.*.title.bg.color:       #0E0F16
+window.*.label.text.color:     #e5cacb
+window.*.button.*.image.color: #e5cacb
 
 # Titlebar.
 padding.width:             10
@@ -18,3 +16,17 @@ window.label.text.justify: Center
 border.width:                0
 window.client.padding.width: 0
 window.handle.width:         0
+
+# Menu geometry.
+menu.border.width: 10
+menu.overlap.x:    -10
+
+# Menu colors.
+menu.items.bg:                Flat
+menu.items.bg.color:          #0E0F16
+menu.items.text.color:        #232537
+menu.items.active.bg:         Flat
+menu.items.active.bg.color:   #0E0F16
+menu.items.active.text.color: #F64E2A
+menu.border.color:            #0E0F16
+menu.separator.color:         #0E0F16

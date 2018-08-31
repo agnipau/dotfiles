@@ -81,6 +81,10 @@ Plug 'w0rp/ale'
     autocmd!
     autocmd BufRead,BufNewFile *.fish ALEDisable
   augroup END
+  augroup ale_disable_xml
+    autocmd!
+    autocmd BufRead,BufNewFile *.xml ALEDisable
+  augroup END
   nnoremap <leader>aa :ALEEnable<cr>
   nnoremap <leader>af :ALEDisable<cr>
   nmap <silent> <c-q> <plug>(ale_previous_wrap)

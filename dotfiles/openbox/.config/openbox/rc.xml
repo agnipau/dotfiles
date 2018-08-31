@@ -52,8 +52,8 @@
     <slant>normal</slant>
   </font>
   <font place="MenuItem">
-    <name>Roboto</name>
-    <size>11</size>
+    <name>Iosevka Term SS07</name>
+    <size>12</size>
     <weight>normal</weight>
     <slant>normal</slant>
   </font>
@@ -831,16 +831,6 @@
         <command>~/bin/draw</command>
       </action>
     </mousebind>
-    <mousebind button="Middle" action="Click">
-      <action name="Execute">
-        <command>skippy-xd</command>
-      </action>
-    </mousebind>
-    <mousebind button="W-Middle" action="Click">
-      <action name="Execute">
-        <command>~/bin/draw</command>
-      </action>
-    </mousebind>
     <mousebind button="Right" action="Click">
       <action name="GoToDesktop">
         <to>right</to>
@@ -849,6 +839,16 @@
     <mousebind button="W-Right" action="Click">
       <action name="Execute">
         <command>skippy-xd</command>
+      </action>
+    </mousebind>
+    <mousebind button="Up" action="Click">
+      <action name="Execute">
+        <command>skippy-xd</command>
+      </action>
+    </mousebind>
+    <mousebind button="Down" action="Click">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
       </action>
     </mousebind>
   </context>
@@ -1007,6 +1007,17 @@
     </mousebind>
   </context>
 </mouse>
+
+<!-- Menu. -->
+<menu>
+  <file>menu.xml</file>
+  <hideDelay>200</hideDelay>
+  <middle>no</middle>
+  <submenuShowDelay>50</submenuShowDelay>
+  <submenuHideDelay>100</submenuHideDelay>
+  <showIcons>no</showIcons>
+  <manageDesktops>yes</manageDesktops>
+</menu>
 
 <!-- Applications. -->
 <applications>
