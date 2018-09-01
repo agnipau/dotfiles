@@ -1,10 +1,11 @@
 acl
-adapta-gtk-theme
 adwaita-icon-theme
 alsa-lib
 alsa-utils
 android-tools
 aom
+arc-gtk-theme
+arc-icon-theme
 archlinux-keyring
 argon2
 aria2
@@ -426,7 +427,6 @@ pacman-mirrorlist
 pam
 pambase
 pango
-papirus-icon-theme
 parted
 patch
 pciutils
