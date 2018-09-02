@@ -31,7 +31,7 @@ font:
     family: Iosevka SS07
     style:  Italic
 
-  size: 11.0
+  size: 10.0
 
   offset:
     x: 0
@@ -47,46 +47,46 @@ font:
 
 render_timer: false
 
-custom_cursor_colors: false
+custom_cursor_colors: true
 
 colors:
   primary:
-    background: '0x0A080C'
-    foreground: '0xc7c8c7'
+    background: '0x100f0c'
+    foreground: '0xdac6c1'
 
   cursor:
-    text:   '0x0A080C'
-    cursor: '0xc7c8c7'
+    text:   '0x100f0c'
+    cursor: '0xdac6c1'
 
   normal:
-    black:   '0x0A080C'
-    red:     '0xCB9060'
-    green:   '0x566F8E'
-    yellow:  '0x7E7F82'
-    blue:    '0x4E93C1'
-    magenta: '0x64A1DC'
-    cyan:    '0x73ADEA'
-    white:   '0xc7c8c7'
+    black:   '0x100f0c'
+    red:     '0x5F5E5B'
+    green:   '0xA75E46'
+    yellow:  '0x9F8479'
+    blue:    '0x758A98'
+    magenta: '0x9D969C'
+    cyan:    '0xB9B1B6'
+    white:   '0xdac6c1'
 
   bright:
-    black:    '0x8b8c8b'
-    red:      '0xCB9060'
-    green:    '0x566F8E'
-    yellow:   '0x7E7F82'
-    blue:     '0x4E93C1'
-    magenta:  '0x64A1DC'
-    cyan:     '0x73ADEA'
-    white:    '0xc7c8c7'
+    black:    '0x988a87'
+    red:      '0x5F5E5B'
+    green:    '0xA75E46'
+    yellow:   '0x9F8479'
+    blue:     '0x758A98'
+    magenta:  '0x9D969C'
+    cyan:     '0xB9B1B6'
+    white:    '0xdac6c1'
 
   dim:
-    black:     '0x08070a'
-    red:       '0xa3744d'
-    green:     '0x455972'
-    yellow:    '0x656668'
-    blue:      '0x3f769b'
-    magenta:   '0x5081b0'
-    cyan:      '0x5c8bbc'
-    white:     '0xa0a0a0'
+    black:     '0x0d0c0a'
+    red:       '0x4c4c49'
+    green:     '0x864c38'
+    yellow:    '0x806a61'
+    blue:      '0x5e6f7a'
+    magenta:   '0x7e787d'
+    cyan:      '0x948e92'
+    white:     '0xaf9f9b'
 
 visual_bell:
   animation: EaseOutExpo
@@ -108,11 +108,11 @@ selection:
 
 dynamic_title: true
 
-hide_cursor_when_typing: true
+hide_cursor_when_typing: false
 
 cursor_style: Block
 
-unfocused_hollow_cursor: '0xc7c8c7'
+unfocused_hollow_cursor: '0xdac6c1'
 
 live_config_reload: true
 

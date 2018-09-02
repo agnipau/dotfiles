@@ -600,6 +600,11 @@
       <command>~/bin/zen</command>
     </action>
   </keybind>
+  <keybind key="W-t">
+    <action name="Execute">
+      <command>~/bin/ws-notify</command>
+    </action>
+  </keybind>
   <keybind key="W-m">
     <action name="Execute">
       <command>xst -n musica -e ~/bin/musica-maestro</command>
@@ -1036,9 +1041,13 @@
   </application>
   <application name="musica">
     <decor>no</decor>
+    <position force="yes">
+      <x>338</x>
+      <y>65</y>
+    </position>
     <size>
-      <width>41%</width>
-      <height>33%</height>
+      <width>51%</width>
+      <height>83%</height>
     </size>
   </application>
   <application name="musica_cava">

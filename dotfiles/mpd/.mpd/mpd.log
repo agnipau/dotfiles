@@ -5251,3 +5251,99 @@ Aug 30 20:21 : client: [26] opened from 127.0.0.1:53234
 Aug 30 22:19 : avahi: Client Disconnected, will reconnect shortly
 Aug 30 22:19 : avahi: Could not reconnect: An unexpected D-Bus error occurred
 Aug 30 22:19 : player: played "Beethoven - 9th Symphony op.125.mp3"
+Sep 01 16:09 : update: added /Wagner - Parsifal - Act 1 - Prelude.mp3
+Sep 01 16:09 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 01 16:09 : update: added /Gabriel Fauré - Pavane op. 50.mp3
+Sep 01 16:09 : update: added /Mahler - Quartet for Piano and Strings in A minor.mp3
+Sep 01 16:09 : update: added /Tchaikovsky - Hymn of the Cherubim.mp3
+Sep 01 16:09 : update: added /Ernesto Cortazar - Beethoven Silence.mp3
+Sep 01 16:09 : update: added /Rachmaninov - The Isle of the Dead - Symphonic poem op. 29.mp3
+Sep 01 16:09 : update: added /Tomaso Albinoni - Adagio.mp3
+Sep 01 16:09 : update: added /Maurice Ravel - Pavane for Dead Princess.mp3
+Sep 01 16:09 : update: added /Francisco Tárrega - Capricho árabe.mp3
+Sep 01 16:09 : update: added /Samuel Barber - Agnus Dei.mp3
+Sep 01 16:09 : update: added /Mahler - Adagietto Symphony no. 5 - Karajan.mp3
+Sep 01 16:09 : update: added /Eminem & Joyner Lucas - Lucky You.mp3
+Sep 01 16:09 : update: added /Wagner - Tristan und Isolde - Prelude.mp3
+Sep 01 16:09 : update: added /Eminem - Kamikaze.mp3
+Sep 01 16:09 : update: added /Gabriel Fauré - Sicilienne for Cello and Piano op. 78.mp3
+Sep 01 16:09 : update: added /Rachmaninov - Symphony no. 2 op. 27 III. Adagio - Adagio - in A Major.mp3
+Sep 01 16:09 : update: added /Gabriel Fauré - Requiem op. 48.mp3
+Sep 01 16:09 : update: added /Dvorak - Romance for Piano and Violin op. 11.mp3
+Sep 01 16:09 : update: added /Max Richter - On the Nature of Daylight.mp3
+Sep 01 16:09 : update: added /Gabriel Fauré - Apres un Reve for Cello and Piano.mp3
+Sep 01 16:09 : update: added /Wagner - Lohengrin - Prelude.mp3
+Sep 01 16:09 : update: added /Arnold Schoenberg - Verklarte Nacht op.4 - Boulez.mp3
+Sep 01 16:09 : update: added /Eminem - Fall.mp3
+Sep 01 16:09 : update: added /Wagner - Tannhauser Overture.mp3
+Sep 01 16:09 : client: [0] opened from 127.0.0.1:59304
+Sep 01 16:09 : client: [1] opened from 127.0.0.1:59308
+Sep 01 16:09 : client: [1] closed
+Sep 01 21:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 01 21:56 : client: [0] opened from 127.0.0.1:37514
+Sep 01 21:56 : client: [1] opened from 127.0.0.1:37518
+Sep 01 21:57 : client: [1] closed
+Sep 01 22:00 : client: [2] opened from 127.0.0.1:37530
+Sep 01 22:00 : client: [2] closed
+Sep 01 22:00 : client: [3] opened from 127.0.0.1:37534
+Sep 01 22:00 : client: [3] closed
+Sep 01 22:00 : client: [4] opened from 127.0.0.1:37538
+Sep 01 22:01 : client: [4] closed
+Sep 01 22:02 : client: [5] opened from 127.0.0.1:37568
+Sep 01 22:02 : client: [5] closed
+Sep 01 22:02 : client: [6] opened from 127.0.0.1:37572
+Sep 01 22:02 : client: [6] closed
+Sep 01 22:03 : client: [7] opened from 127.0.0.1:37576
+Sep 01 22:03 : client: [7] closed
+Sep 01 22:03 : client: [8] opened from 127.0.0.1:37580
+Sep 01 22:03 : client: [8] closed
+Sep 01 22:03 : client: [9] opened from 127.0.0.1:37584
+Sep 01 22:03 : client: [9] closed
+Sep 01 22:03 : client: [10] opened from 127.0.0.1:37588
+Sep 01 22:03 : client: [10] closed
+Sep 01 22:03 : client: [11] opened from 127.0.0.1:37592
+Sep 01 22:03 : client: [11] closed
+Sep 01 22:03 : client: [12] opened from 127.0.0.1:37596
+Sep 01 22:04 : client: [12] closed
+Sep 01 22:04 : client: [13] opened from 127.0.0.1:37600
+Sep 01 22:04 : client: [13] closed
+Sep 01 22:04 : client: [14] opened from 127.0.0.1:37604
+Sep 01 22:04 : client: [14] closed
+Sep 01 22:04 : client: [15] opened from 127.0.0.1:37608
+Sep 01 22:04 : client: [15] closed
+Sep 01 22:04 : client: [16] opened from 127.0.0.1:37612
+Sep 01 22:04 : client: [16] closed
+Sep 01 22:04 : client: [17] opened from 127.0.0.1:37616
+Sep 01 22:05 : client: [17] closed
+Sep 01 22:05 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 01 22:05 : update: added /Wagner - Parsifal - Act 1 - Prelude.mp3
+Sep 01 22:05 : update: added /Mahler - Quartet for Piano and Strings in A minor.mp3
+Sep 01 22:05 : update: added /Tchaikovsky - Hymn of the Cherubim.mp3
+Sep 01 22:05 : update: added /Ernesto Cortazar - Beethoven Silence.mp3
+Sep 01 22:05 : update: added /Rachmaninov - The Isle of the Dead - Symphonic poem op. 29.mp3
+Sep 01 22:05 : update: added /Tomaso Albinoni - Adagio.mp3
+Sep 01 22:05 : update: added /Maurice Ravel - Pavane for Dead Princess.mp3
+Sep 01 22:05 : update: added /Samuel Barber - Agnus Dei.mp3
+Sep 01 22:05 : update: added /Francisco Tarrega - Capricho arabe.mp3
+Sep 01 22:05 : update: added /Mahler - Adagietto Symphony no. 5 - Karajan.mp3
+Sep 01 22:05 : update: added /Gabriel Faure - Pavane op. 50.mp3
+Sep 01 22:05 : update: added /Gabriel Faure - Sicilienne for Cello and Piano op. 78.mp3
+Sep 01 22:05 : update: added /Gabriel Faure - Apres un Reve for Cello and Piano.mp3
+Sep 01 22:05 : update: added /Eminem & Joyner Lucas - Lucky You.mp3
+Sep 01 22:05 : update: added /Wagner - Tristan und Isolde - Prelude.mp3
+Sep 01 22:05 : update: added /Eminem - Kamikaze.mp3
+Sep 01 22:05 : update: added /Gabriel Faure - Requiem op. 48.mp3
+Sep 01 22:05 : update: added /Rachmaninov - Symphony no. 2 op. 27 III. Adagio - Adagio - in A Major.mp3
+Sep 01 22:05 : update: added /Dvorak - Romance for Piano and Violin op. 11.mp3
+Sep 01 22:05 : update: added /Max Richter - On the Nature of Daylight.mp3
+Sep 01 22:05 : update: added /Wagner - Lohengrin - Prelude.mp3
+Sep 01 22:05 : update: added /Arnold Schoenberg - Verklarte Nacht op.4 - Boulez.mp3
+Sep 01 22:05 : update: added /Eminem - Fall.mp3
+Sep 01 22:05 : update: added /Wagner - Tannhauser Overture.mp3
+Sep 01 22:05 : client: [0] opened from 127.0.0.1:37638
+Sep 01 22:05 : client: [1] opened from 127.0.0.1:37642
+Sep 01 22:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 01 22:12 : player: played "Max Richter - On the Nature of Daylight.mp3"
+Sep 01 22:17 : player: played "Eminem & Joyner Lucas - Lucky You.mp3"
+Sep 01 22:21 : client: [1] closed
+Sep 02 01:31 : player: played "Eminem - Fall.mp3"
