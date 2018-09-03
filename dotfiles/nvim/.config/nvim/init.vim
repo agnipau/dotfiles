@@ -28,12 +28,12 @@ Plug 'junegunn/fzf.vim'
   nnoremap <leader>fll :Lines<cr>
 Plug 'scrooloose/nerdtree'
   nnoremap <c-a> :NERDTreeToggle<cr>
-  let g:NERDTreeDirArrowExpandable  = '+'
-  let g:NERDTreeDirArrowCollapsible = '-'
+"  let g:NERDTreeDirArrowExpandable  = '+'
+"  let g:NERDTreeDirArrowCollapsible = '-'
   let g:NERDTreeStatusline          = ' '
   let g:NERDTreeMinimalUI           = 1
   let g:NERDTreeWinPos              = 'left'
-  let g:NERDTreeWinSize             = 20
+  let g:NERDTreeWinSize             = 25
   augroup nerdtree_close
     autocmd!
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -131,6 +131,7 @@ set noshowmode
 set noruler
 set laststatus=2
 set statusline=%#BarraVuota# 
+let g:sline_status = 0
 set noshowcmd
 set shortmess+=csW
 set t_Co=256
@@ -153,6 +154,17 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set autoindent
+
+set wildignore+=.git,.hg,.svn
+set wildignore+=*.aux,*.out,*.toc
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.rbc,*.class
+set wildignore+=*.ai,*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.psd,*.webp
+set wildignore+=*.avi,*.divx,*.mp4,*.webm,*.mov,*.m2ts,*.mkv,*.vob,*.mpg,*.mpeg
+set wildignore+=*.mp3,*.oga,*.ogg,*.wav,*.flac
+set wildignore+=*.eot,*.otf,*.ttf,*.woff
+set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
+set wildignore+=*.swp,.lock,.DS_Store,._*
 
 " }}}
 
@@ -226,6 +238,7 @@ nnoremap <silent> <leader>co :call <SID>ToggleConceal()<cr>
 nnoremap <silent> <leader>cc :call <SID>ColorColumnToggle()<cr>
 nnoremap <silent> <leader>q  :call <SID>QuickfixToggle()<cr>
 nnoremap <silent> <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
+nnoremap <silent> <leader>st :call <SID>ToggleStatusLine()<cr>
 nnoremap <leader>.  :<bs>
 
 xnoremap H 0
@@ -245,9 +258,34 @@ augroup filetype_vim
   autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
+" Restore cursor to where it was before closing NeoVim.
+augroup restore_cursor
+  autocmd!
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   execute "normal! g`\"" |
+    \ endif
+augroup END
+
 " }}}
 
 " Functions {{{
+
+" Toggle the Status Line.
+function! s:ToggleStatusLine()
+  if g:sline_status
+    set statusline=%#BarraVuota# 
+    let g:sline_status = 0
+  else
+    set statusline=
+    set statusline+=%=
+    set statusline+=\ %l\ /
+    set statusline+=\ %L\ 
+    set statusline+=\ %t\ 
+    set statusline+=%(%m%)
+    let g:sline_status = 1
+  endif
+endfunction
 
 " Toggle the final dot in the end of a sentence.
 function! s:ToggleFinalDot()
