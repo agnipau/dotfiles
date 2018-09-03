@@ -130,8 +130,13 @@ set shiftround
 set noshowmode
 set noruler
 set laststatus=2
-set statusline=%#BarraVuota# 
-let g:sline_status = 0
+set statusline=
+set statusline+=%=
+set statusline+=\ %l\ /
+set statusline+=\ %L\ 
+set statusline+=\ %t\ 
+set statusline+=%(%m%)
+let g:sline_status = 1
 set noshowcmd
 set shortmess+=csW
 set t_Co=256
