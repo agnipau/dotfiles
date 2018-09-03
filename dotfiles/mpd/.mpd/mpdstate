@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:PulseAudio Output
 audio_device_state:1:my_fifo
 state: pause
-current: 2
-time: 0.810000
+current: 3
+time: 629.718000
 random: 0
 repeat: 1
 single: 1
@@ -12,7 +12,12 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Max Richter - On the Nature of Daylight.mp3
-1:Eminem & Joyner Lucas - Lucky You.mp3
-2:Eminem - Fall.mp3
+0:Tchaikovsky - 1812 Overture.mp3
+1:Mahler - Quartet for Piano and Strings in A minor.mp3
+2:Dvorak - Romance for Piano and Violin op. 11.mp3
+3:Beethoven - Overture to Egmont.mp3
+4:Bizet - Carmen Opera.mp3
+5:Beethoven - Ode to Joy.mp3
+6:Beethoven - Fur Elise.mp3
+7:Beethoven - Allegro con brio.mp3
 playlist_end

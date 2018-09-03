@@ -5347,3 +5347,276 @@ Sep 01 22:12 : player: played "Max Richter - On the Nature of Daylight.mp3"
 Sep 01 22:17 : player: played "Eminem & Joyner Lucas - Lucky You.mp3"
 Sep 01 22:21 : client: [1] closed
 Sep 02 01:31 : player: played "Eminem - Fall.mp3"
+Sep 02 16:12 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 02 16:12 : client: [0] opened from 127.0.0.1:54392
+Sep 02 16:12 : client: [1] opened from 127.0.0.1:54396
+Sep 02 16:12 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 02 16:16 : player: played "Eminem & Joyner Lucas - Lucky You.mp3"
+Sep 02 16:20 : player: played "Eminem & Joyner Lucas - Lucky You.mp3"
+Sep 02 16:24 : player: played "Eminem & Joyner Lucas - Lucky You.mp3"
+Sep 02 16:32 : player: played "Eminem - Fall.mp3"
+Sep 02 16:36 : player: played "Eminem - Fall.mp3"
+Sep 02 16:37 : player: played "Eminem - Fall.mp3"
+Sep 02 16:42 : player: played "Francisco Tarrega - Capricho arabe.mp3"
+Sep 02 16:48 : player: played "Francisco Tarrega - Capricho arabe.mp3"
+Sep 02 16:49 : client: [2] opened from 127.0.0.1:54422
+Sep 02 16:49 : client: [2] closed
+Sep 02 16:51 : client: [3] opened from 127.0.0.1:54428
+Sep 02 16:51 : client: [3] closed
+Sep 02 16:55 : player: played "Francisco Tarrega - Capricho arabe.mp3"
+Sep 02 17:01 : player: played "Francisco Tarrega - Capricho arabe.mp3"
+Sep 02 17:06 : player: played "Francisco Tarrega - Capricho arabe.mp3"
+Sep 02 17:12 : player: played "Francisco Tarrega - Capricho arabe.mp3"
+Sep 02 17:17 : client: [4] opened from 127.0.0.1:54438
+Sep 02 17:17 : client: [4] closed
+Sep 02 17:18 : client: [5] opened from 127.0.0.1:54446
+Sep 02 17:18 : client: [5] closed
+Sep 02 17:28 : player: played "Mahler - Quartet for Piano and Strings in A minor.mp3"
+Sep 02 17:40 : client: [6] opened from 127.0.0.1:54472
+Sep 02 17:40 : client: [6] closed
+Sep 02 21:14 : client: [1] closed
+Sep 02 21:14 : player: played "Gabriel Faure - Requiem op. 48.mp3"
+Sep 03 15:46 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 03 15:46 : client: [0] opened from 127.0.0.1:53802
+Sep 03 15:46 : update: added /Wagner - Parsifal - Act 1 - Prelude.mp3
+Sep 03 15:46 : update: added /Vivaldi - Primavera.mp3
+Sep 03 15:46 : update: added /Beethoven - Allegro con brio.mp3
+Sep 03 15:46 : update: added /Mahler - Quartet for Piano and Strings in A minor.mp3
+Sep 03 15:46 : update: added /Vivaldi - Estate.mp3
+Sep 03 15:46 : update: added /Tchaikovsky - Hymn of the Cherubim.mp3
+Sep 03 15:46 : update: added /Chopin - Funeral march.mp3
+Sep 03 15:46 : update: added /Ernesto Cortazar - Beethoven Silence.mp3
+Sep 03 15:46 : update: added /Rachmaninov - The Isle of the Dead - Symphonic poem op. 29.mp3
+Sep 03 15:46 : update: added /Tomaso Albinoni - Adagio.mp3
+Sep 03 15:46 : update: added /Maurice Ravel - Pavane for Dead Princess.mp3
+Sep 03 15:46 : update: added /Samuel Barber - Agnus Dei.mp3
+Sep 03 15:46 : update: added /Tchaikovsky - Valse Sentimentale.mp3
+Sep 03 15:46 : update: added /Richard Strauss - Also Sprach Zarathustra.mp3
+Sep 03 15:46 : update: added /Beethoven - Fur Elise.mp3
+Sep 03 15:46 : update: added /Francisco Tarrega - Capricho arabe.mp3
+Sep 03 15:46 : update: added /Tchaikovsky - Waltz no. 9 op. 40.mp3
+Sep 03 15:46 : update: added /Mahler - Adagietto Symphony no. 5 - Karajan.mp3
+Sep 03 15:46 : update: added /Beethoven - Overture to Egmont.mp3
+Sep 03 15:46 : update: added /Gabriel Faure - Pavane op. 50.mp3
+Sep 03 15:46 : update: added /Shostakovich - Waltz no. 2.mp3
+Sep 03 15:46 : update: added /Gabriel Faure - Sicilienne for Cello and Piano op. 78.mp3
+Sep 03 15:46 : update: added /Bach - Cello Suite no. 1 in G Major BWV1007 mvt. 1-3 slash 6.mp3
+Sep 03 15:46 : update: added /Gabriel Faure - Apres un Reve for Cello and Piano.mp3
+Sep 03 15:46 : update: added /Eminem & Joyner Lucas - Lucky You.mp3
+Sep 03 15:46 : update: added /Wagner - Tristan und Isolde - Prelude.mp3
+Sep 03 15:46 : update: added /Eminem - Kamikaze.mp3
+Sep 03 15:46 : update: added /Vivaldi - Autunno.mp3
+Sep 03 15:46 : update: added /Gabriel Faure - Requiem op. 48.mp3
+Sep 03 15:46 : update: added /Bizet - Carmen Opera.mp3
+Sep 03 15:46 : update: added /Johann Strauss - The Blue Danube Waltz.mp3
+Sep 03 15:46 : update: added /Rachmaninov - Symphony no. 2 op. 27 III. Adagio - Adagio - in A Major.mp3
+Sep 03 15:46 : update: added /Tchaikovsky - 1812 Overture.mp3
+Sep 03 15:46 : update: added /Edvard Grieg - In the Hall of the Mountain King.mp3
+Sep 03 15:46 : update: added /Dvorak - Romance for Piano and Violin op. 11.mp3
+Sep 03 15:46 : update: added /Max Richter - On the Nature of Daylight.mp3
+Sep 03 15:46 : update: added /Edvard Grieg - Morning Mood.mp3
+Sep 03 15:46 : update: added /Wagner - Lohengrin - Prelude.mp3
+Sep 03 15:46 : update: added /Mozart - String Serenade no. 13 - Eine Kleine Nachtmusik.mp3
+Sep 03 15:46 : update: added /Vivaldi - Inverno.mp3
+Sep 03 15:46 : update: added /Tchaikovsky - The Nutcracker - Dance of the Sugarplum Fairy.mp3
+Sep 03 15:46 : client: [1] opened from 127.0.0.1:53806
+Sep 03 15:46 : update: added /Arnold Schoenberg - Verklarte Nacht op.4 - Boulez.mp3
+Sep 03 15:46 : update: added /Beethoven - Ode to Joy.mp3
+Sep 03 15:46 : update: added /Offenbach - Can can.mp3
+Sep 03 15:46 : update: added /Bizet - Les Toreadors.mp3
+Sep 03 15:46 : update: added /Eminem - Fall.mp3
+Sep 03 15:46 : update: added /Handel - Messiah.mp3
+Sep 03 15:46 : update: added /Wagner - Tannhauser Overture.mp3
+Sep 03 15:46 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 03 16:01 : player: played "Tchaikovsky - 1812 Overture.mp3"
+Sep 03 16:13 : player: played "Mahler - Quartet for Piano and Strings in A minor.mp3"
+Sep 03 16:23 : player: played "Mahler - Quartet for Piano and Strings in A minor.mp3"
+Sep 03 16:33 : client: [2] opened from 127.0.0.1:53928
+Sep 03 16:33 : client: [2] closed
+Sep 03 16:36 : client: [0] closed
+Sep 03 16:36 : client: [3] opened from 127.0.0.1:53934
+Sep 03 16:36 : client: [3] closed
+Sep 03 16:36 : client: [4] opened from 127.0.0.1:53936
+Sep 03 16:36 : client: [4] closed
+Sep 03 16:36 : client: [5] opened from 127.0.0.1:53938
+Sep 03 16:36 : client: [5] closed
+Sep 03 16:36 : client: [6] opened from 127.0.0.1:53940
+Sep 03 16:36 : client: [6] closed
+Sep 03 16:36 : client: [7] opened from 127.0.0.1:53942
+Sep 03 16:36 : client: [7] closed
+Sep 03 16:36 : client: [8] opened from 127.0.0.1:53944
+Sep 03 16:36 : client: [8] closed
+Sep 03 16:36 : client: [9] opened from 127.0.0.1:53946
+Sep 03 16:36 : client: [9] closed
+Sep 03 16:36 : client: [10] opened from 127.0.0.1:53948
+Sep 03 16:41 : client: [11] opened from 127.0.0.1:53958
+Sep 03 16:41 : client: [11] closed
+Sep 03 16:42 : client: [12] opened from 127.0.0.1:53962
+Sep 03 16:42 : client: [12] closed
+Sep 03 16:49 : player: played "Dvorak - Romance for Piano and Violin op. 11.mp3"
+Sep 03 17:11 : client: [13] opened from 127.0.0.1:54402
+Sep 03 17:11 : client: [13] closed
+Sep 03 17:36 : client: [14] opened from 127.0.0.1:54630
+Sep 03 17:36 : client: [14] closed
+Sep 03 18:09 : client: [15] opened from 127.0.0.1:54818
+Sep 03 18:09 : client: [15] closed
+Sep 03 18:10 : client: [16] opened from 127.0.0.1:54830
+Sep 03 18:10 : client: [16] closed
+Sep 03 18:13 : client: [17] opened from 127.0.0.1:54906
+Sep 03 18:13 : client: [17] closed
+Sep 03 18:13 : client: [18] opened from 127.0.0.1:54910
+Sep 03 18:13 : client: [18] closed
+Sep 03 18:18 : client: [19] opened from 127.0.0.1:54942
+Sep 03 18:18 : client: [19] closed
+Sep 03 18:23 : client: [20] opened from 127.0.0.1:54956
+Sep 03 18:23 : client: [20] closed
+Sep 03 18:34 : player: played "Beethoven - Overture to Egmont.mp3"
+Sep 03 18:35 : client: [21] opened from 127.0.0.1:55132
+Sep 03 18:35 : client: [21] closed
+Sep 03 20:44 : player: played "Beethoven - Allegro con brio.mp3"
+Sep 03 20:52 : player: played "Beethoven - Allegro con brio.mp3"
+Sep 03 20:57 : client: [22] opened from 127.0.0.1:55836
+Sep 03 20:57 : client: [22] closed
+Sep 03 20:57 : client: [23] opened from 127.0.0.1:55840
+Sep 03 20:57 : client: [23] closed
+Sep 03 20:57 : client: [24] opened from 127.0.0.1:55844
+Sep 03 20:57 : client: [24] closed
+Sep 03 20:57 : client: [25] opened from 127.0.0.1:55848
+Sep 03 20:57 : client: [25] closed
+Sep 03 20:57 : client: [26] opened from 127.0.0.1:55852
+Sep 03 20:57 : client: [26] closed
+Sep 03 20:57 : client: [27] opened from 127.0.0.1:55856
+Sep 03 20:57 : client: [27] closed
+Sep 03 20:57 : client: [28] opened from 127.0.0.1:55860
+Sep 03 20:57 : client: [28] closed
+Sep 03 20:57 : client: [29] opened from 127.0.0.1:55864
+Sep 03 20:57 : client: [29] closed
+Sep 03 20:57 : client: [30] opened from 127.0.0.1:55868
+Sep 03 20:57 : client: [30] closed
+Sep 03 20:57 : client: [31] opened from 127.0.0.1:55872
+Sep 03 20:57 : client: [31] closed
+Sep 03 20:57 : client: [32] opened from 127.0.0.1:55876
+Sep 03 20:57 : client: [32] closed
+Sep 03 20:57 : client: [33] opened from 127.0.0.1:55880
+Sep 03 20:57 : client: [33] closed
+Sep 03 20:57 : client: [34] opened from 127.0.0.1:55884
+Sep 03 20:57 : client: [34] closed
+Sep 03 20:57 : client: [35] opened from 127.0.0.1:55888
+Sep 03 20:57 : client: [35] closed
+Sep 03 20:57 : client: [36] opened from 127.0.0.1:55892
+Sep 03 20:57 : client: [36] closed
+Sep 03 20:57 : client: [37] opened from 127.0.0.1:55896
+Sep 03 20:57 : client: [37] closed
+Sep 03 21:07 : player: played "Beethoven - Overture to Egmont.mp3"
+Sep 03 21:07 : client: [38] opened from 127.0.0.1:56024
+Sep 03 21:07 : client: [38] closed
+Sep 03 21:07 : client: [39] opened from 127.0.0.1:56028
+Sep 03 21:07 : client: [39] closed
+Sep 03 21:07 : client: [40] opened from 127.0.0.1:56032
+Sep 03 21:07 : client: [40] closed
+Sep 03 21:07 : client: [41] opened from 127.0.0.1:56036
+Sep 03 21:07 : client: [41] closed
+Sep 03 21:07 : client: [42] opened from 127.0.0.1:56040
+Sep 03 21:07 : client: [42] closed
+Sep 03 21:07 : client: [43] opened from 127.0.0.1:56044
+Sep 03 21:07 : client: [43] closed
+Sep 03 21:07 : client: [44] opened from 127.0.0.1:56048
+Sep 03 21:07 : client: [44] closed
+Sep 03 21:07 : client: [45] opened from 127.0.0.1:56052
+Sep 03 21:07 : client: [45] closed
+Sep 03 21:07 : client: [46] opened from 127.0.0.1:56056
+Sep 03 21:07 : client: [46] closed
+Sep 03 21:07 : client: [47] opened from 127.0.0.1:56060
+Sep 03 21:07 : client: [47] closed
+Sep 03 21:07 : client: [48] opened from 127.0.0.1:56064
+Sep 03 21:07 : client: [48] closed
+Sep 03 21:07 : client: [49] opened from 127.0.0.1:56068
+Sep 03 21:07 : client: [49] closed
+Sep 03 21:07 : client: [50] opened from 127.0.0.1:56072
+Sep 03 21:07 : client: [50] closed
+Sep 03 21:07 : client: [51] opened from 127.0.0.1:56076
+Sep 03 21:07 : client: [51] closed
+Sep 03 21:07 : client: [52] opened from 127.0.0.1:56080
+Sep 03 21:07 : client: [52] closed
+Sep 03 21:07 : client: [53] opened from 127.0.0.1:56084
+Sep 03 21:07 : client: [53] closed
+Sep 03 21:07 : client: [54] opened from 127.0.0.1:56088
+Sep 03 21:07 : client: [54] closed
+Sep 03 21:07 : client: [55] opened from 127.0.0.1:56092
+Sep 03 21:07 : client: [55] closed
+Sep 03 21:07 : client: [56] opened from 127.0.0.1:56096
+Sep 03 21:07 : client: [56] closed
+Sep 03 21:07 : client: [57] opened from 127.0.0.1:56100
+Sep 03 21:07 : client: [57] closed
+Sep 03 21:07 : client: [58] opened from 127.0.0.1:56104
+Sep 03 21:07 : client: [58] closed
+Sep 03 21:07 : client: [59] opened from 127.0.0.1:56108
+Sep 03 21:07 : client: [59] closed
+Sep 03 21:07 : client: [60] opened from 127.0.0.1:56112
+Sep 03 21:07 : client: [60] closed
+Sep 03 21:07 : client: [61] opened from 127.0.0.1:56116
+Sep 03 21:07 : client: [61] closed
+Sep 03 21:07 : client: [62] opened from 127.0.0.1:56120
+Sep 03 21:07 : client: [62] closed
+Sep 03 21:07 : client: [63] opened from 127.0.0.1:56124
+Sep 03 21:07 : client: [63] closed
+Sep 03 21:14 : client: [64] opened from 127.0.0.1:56180
+Sep 03 21:14 : client: [64] closed
+Sep 03 21:19 : client: [65] opened from 127.0.0.1:56192
+Sep 03 21:19 : client: [65] closed
+Sep 03 21:22 : client: [66] opened from 127.0.0.1:56510
+Sep 03 21:22 : client: [66] closed
+Sep 03 21:39 : client: [10] closed
+Sep 03 21:39 : client: [67] opened from 127.0.0.1:57042
+Sep 03 21:39 : client: [67] closed
+Sep 03 21:39 : client: [68] opened from 127.0.0.1:57044
+Sep 03 21:39 : client: [68] closed
+Sep 03 21:39 : client: [69] opened from 127.0.0.1:57046
+Sep 03 21:39 : client: [69] closed
+Sep 03 21:39 : client: [70] opened from 127.0.0.1:57048
+Sep 03 21:39 : client: [70] closed
+Sep 03 21:39 : client: [71] opened from 127.0.0.1:57058
+Sep 03 21:54 : client: [1] closed
+Sep 03 21:57 : client: [71] closed
+Sep 03 21:57 : client: [72] opened from 127.0.0.1:57736
+Sep 03 21:57 : client: [72] closed
+Sep 03 21:57 : client: [73] opened from 127.0.0.1:57738
+Sep 03 21:58 : client: [73] closed
+Sep 03 21:58 : client: [74] opened from 127.0.0.1:57740
+Sep 03 21:58 : client: [74] closed
+Sep 03 21:58 : client: [75] opened from 127.0.0.1:57742
+Sep 03 21:58 : client: [75] closed
+Sep 03 21:58 : client: [76] opened from 127.0.0.1:57744
+Sep 03 21:59 : client: [76] closed
+Sep 03 21:59 : client: [77] opened from 127.0.0.1:57746
+Sep 03 21:59 : client: [77] closed
+Sep 03 21:59 : client: [78] opened from 127.0.0.1:57748
+Sep 03 21:59 : client: [78] closed
+Sep 03 21:59 : client: [79] opened from 127.0.0.1:57750
+Sep 03 21:59 : client: [79] closed
+Sep 03 21:59 : client: [80] opened from 127.0.0.1:57752
+Sep 03 21:59 : client: [80] closed
+Sep 03 21:59 : client: [81] opened from 127.0.0.1:57754
+Sep 03 21:59 : client: [81] closed
+Sep 03 21:59 : client: [82] opened from 127.0.0.1:57756
+Sep 03 22:00 : client: [82] closed
+Sep 03 22:00 : client: [83] opened from 127.0.0.1:57758
+Sep 03 22:00 : client: [83] closed
+Sep 03 22:00 : client: [84] opened from 127.0.0.1:57760
+Sep 03 22:01 : client: [84] closed
+Sep 03 22:01 : client: [85] opened from 127.0.0.1:57848
+Sep 03 22:01 : client: [85] closed
+Sep 03 22:01 : client: [86] opened from 127.0.0.1:57850
+Sep 03 22:01 : client: [86] closed
+Sep 03 22:01 : client: [87] opened from 127.0.0.1:57852
+Sep 03 22:01 : client: [87] closed
+Sep 03 22:01 : client: [88] opened from 127.0.0.1:57854
+Sep 03 22:01 : client: [88] closed
+Sep 03 22:01 : client: [89] opened from 127.0.0.1:57856
+Sep 03 22:01 : client: [89] closed
+Sep 03 22:01 : client: [90] opened from 127.0.0.1:57858
+Sep 03 22:01 : client: [90] closed
+Sep 03 22:01 : client: [91] opened from 127.0.0.1:57860
+Sep 03 22:01 : client: [91] closed
+Sep 03 22:01 : client: [92] opened from 127.0.0.1:57862
+Sep 03 22:02 : player: played "Beethoven - Overture to Egmont.mp3"
