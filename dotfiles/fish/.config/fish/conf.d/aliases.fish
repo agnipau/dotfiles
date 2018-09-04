@@ -117,7 +117,7 @@ else
   alias autorem 'sudo pacman -Rsu (pacman -Qdtq) --color auto'
   alias src     'pacman -Ss'
   alias asrc    'yay -Ss'
-  alias dep     'pacman -Qi'
+  alias info    'pacman -Qi'
 end
 
 # System management aliases.

@@ -189,7 +189,7 @@ if [[ -z "$PREFIX" ]]; then
   alias autorem='sudo pacman -Rsu $(pacman -Qdtq) --color auto'
   alias src='pacman -Ss'
   alias asrc='aurman -Ss'
-  alias dep='pacman -Qi'
+  alias info='pacman -Qi'
 elif [[ "$PREFIX" ]]; then
   # Termux aliases.
   alias upd='pkg update'
