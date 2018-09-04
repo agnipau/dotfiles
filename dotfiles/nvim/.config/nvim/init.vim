@@ -23,11 +23,11 @@ Plug 'junegunn/fzf.vim'
     autocmd FileType fzf set laststatus=0
     autocmd BufLeave <buffer> set laststatus=2
   augroup END
-  nnoremap <leader>ff  :FZF<cr>
-  nnoremap <leader>fbl :BLines<cr>
-  nnoremap <leader>fll :Lines<cr>
+  nnoremap <silent> <leader>ff  :FZF<cr>
+  nnoremap <silent> <leader>fbl :BLines<cr>
+  nnoremap <silent> <leader>fll :Lines<cr>
 Plug 'scrooloose/nerdtree'
-  nnoremap <c-n> :NERDTreeToggle<cr>
+  nnoremap <silent> <c-n> :NERDTreeToggle<cr>
 "  let g:NERDTreeDirArrowExpandable  = '+'
 "  let g:NERDTreeDirArrowCollapsible = '-'
   let g:NERDTreeStatusline          = ' '
@@ -235,7 +235,7 @@ nnoremap <silent> <c-h> :tabprevious<cr>
 nnoremap <silent> <c-l> :tabnext<cr>
 "nnoremap <silent> <c-n> :cnext<cr>zz
 "nnoremap <silent> <c-m> :cprevious<cr>zz
-nnoremap <silent> <c-w> :tabclose<cr>
+nnoremap <silent> <c-w> :q<cr>
 nnoremap <silent> <c-t> :tabnew<cr>
 
 nnoremap H 0
