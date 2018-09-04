@@ -27,7 +27,7 @@ Plug 'junegunn/fzf.vim'
   nnoremap <leader>fbl :BLines<cr>
   nnoremap <leader>fll :Lines<cr>
 Plug 'scrooloose/nerdtree'
-  nnoremap <c-a> :NERDTreeToggle<cr>
+  nnoremap <c-n> :NERDTreeToggle<cr>
 "  let g:NERDTreeDirArrowExpandable  = '+'
 "  let g:NERDTreeDirArrowCollapsible = '-'
   let g:NERDTreeStatusline          = ' '
@@ -41,7 +41,7 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'terryma/vim-multiple-cursors'
   let g:multi_cursor_use_default_mapping = 0
-  let g:multi_cursor_select_all_word_key = '<c-t>'
+  let g:multi_cursor_select_all_word_key = '<c-a>'
   let g:multi_cursor_next_key            = '<c-j>'
   let g:multi_cursor_prev_key            = '<c-k>'
   let g:multi_cursor_skip_key            = '<c-p>'
@@ -223,20 +223,26 @@ set tabline=%!MyTabLine()
 " Mappings {{{
 
 nnoremap <leader><leader> /
+
 nnoremap <silent> <leader>mo :nohlsearch<cr>
 nnoremap <silent> <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <silent> <leader>rr :source $MYVIMRC<cr>
 nnoremap <silent> <leader>n  :set number! cursorline!<cr>
 nnoremap <silent> <leader>vn :next<cr>
 nnoremap <silent> <leader>vp :previous<cr>
+
 nnoremap <silent> <c-h> :tabprevious<cr>
 nnoremap <silent> <c-l> :tabnext<cr>
-nnoremap <silent> <c-n> :cnext<cr>zz
-nnoremap <silent> <c-m> :cprevious<cr>zz
+"nnoremap <silent> <c-n> :cnext<cr>zz
+"nnoremap <silent> <c-m> :cprevious<cr>zz
+nnoremap <silent> <c-w> :tabclose<cr>
+nnoremap <silent> <c-t> :tabnew<cr>
+
 nnoremap H 0
 nnoremap L $
 nnoremap , :
 nnoremap è .
+
 nnoremap <silent> <leader>,  :call <SID>ToggleFinalDot()<cr>
 nnoremap <silent> <leader>w  :call <SID>ToggleTextWidth()<cr>
 nnoremap <silent> <leader>co :call <SID>ToggleConceal()<cr>
@@ -244,6 +250,7 @@ nnoremap <silent> <leader>cc :call <SID>ColorColumnToggle()<cr>
 nnoremap <silent> <leader>q  :call <SID>QuickfixToggle()<cr>
 nnoremap <silent> <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
 nnoremap <silent> <leader>st :call <SID>ToggleStatusLine()<cr>
+
 nnoremap <leader>.  :<bs>
 
 xnoremap H 0

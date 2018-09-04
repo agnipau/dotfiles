@@ -1,4 +1,5 @@
 acl
+adobe-source-code-pro-fonts
 adwaita-icon-theme
 alsa-lib
 alsa-utils
@@ -62,6 +63,7 @@ efibootmgr
 efivar
 egl-wayland
 eglexternalplatform
+emacs
 enchant
 exiv2
 exo
@@ -91,6 +93,7 @@ gcc
 gcc-libs
 gconf
 gcr
+gd
 gdbm
 gdk-pixbuf2
 gegl
@@ -261,6 +264,7 @@ libldap
 liblqr
 libmad
 libmagick
+libmagick6
 libmm-glib
 libmms
 libmng
@@ -278,6 +282,7 @@ libnsl
 liboauth
 libogg
 libomxil-bellagio
+libotf
 libpcap
 libpciaccess
 libpipeline
@@ -375,6 +380,8 @@ lvm2
 lxappearance
 lz4
 lzo
+m17n-db
+m17n-lib
 m4
 make
 man-db
