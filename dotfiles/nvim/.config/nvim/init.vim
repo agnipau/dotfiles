@@ -27,7 +27,7 @@ Plug 'junegunn/fzf.vim'
   nnoremap <silent> <leader>fbl :BLines<cr>
   nnoremap <silent> <leader>fll :Lines<cr>
 Plug 'scrooloose/nerdtree'
-  nnoremap <silent> <c-n> :NERDTreeToggle<cr>
+  nnoremap <silent> <c-a> :NERDTreeToggle<cr>
 "  let g:NERDTreeDirArrowExpandable  = '+'
 "  let g:NERDTreeDirArrowCollapsible = '-'
   let g:NERDTreeStatusline          = ' '
@@ -41,7 +41,7 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'terryma/vim-multiple-cursors'
   let g:multi_cursor_use_default_mapping = 0
-  let g:multi_cursor_select_all_word_key = '<c-a>'
+  let g:multi_cursor_select_all_word_key = '<c-t>'
   let g:multi_cursor_next_key            = '<c-j>'
   let g:multi_cursor_prev_key            = '<c-k>'
   let g:multi_cursor_skip_key            = '<c-p>'
@@ -130,13 +130,6 @@ set shiftround
 set noshowmode
 set noruler
 set laststatus=2
-set statusline=
-set statusline+=%=
-set statusline+=\ %l\ /
-set statusline+=\ %L\ 
-set statusline+=\ %t\ 
-set statusline+=%(%m%)
-let g:sline_status = 1
 set noshowcmd
 set shortmess+=csW
 set t_Co=256
@@ -233,10 +226,9 @@ nnoremap <silent> <leader>vp :previous<cr>
 
 nnoremap <silent> <c-h> :tabprevious<cr>
 nnoremap <silent> <c-l> :tabnext<cr>
-"nnoremap <silent> <c-n> :cnext<cr>zz
-"nnoremap <silent> <c-m> :cprevious<cr>zz
-nnoremap <silent> <c-w> :q<cr>
-nnoremap <silent> <c-t> :tabnew<cr>
+nnoremap <silent> <c-n> :cnext<cr>zz
+nnoremap <silent> <c-m> :cprevious<cr>zz
+nnoremap <silent> <leader>t :tabnew<cr>
 
 nnoremap H 0
 nnoremap L $
@@ -249,7 +241,8 @@ nnoremap <silent> <leader>co :call <SID>ToggleConceal()<cr>
 nnoremap <silent> <leader>cc :call <SID>ColorColumnToggle()<cr>
 nnoremap <silent> <leader>q  :call <SID>QuickfixToggle()<cr>
 nnoremap <silent> <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
-nnoremap <silent> <leader>st :call <SID>ToggleStatusLine()<cr>
+nnoremap <silent> <leader>st :call <SID>StatusLineOn()<cr>
+nnoremap <silent> <leader>so :setlocal statusline=%#BarraVuota#<cr>
 
 nnoremap <leader>.  :<bs>
 
@@ -284,20 +277,15 @@ augroup END
 " Functions {{{
 
 " Toggle the Status Line.
-function! s:ToggleStatusLine()
-  if g:sline_status
-    set statusline=%#BarraVuota# 
-    let g:sline_status = 0
-  else
-    set statusline=
-    set statusline+=%=
-    set statusline+=\ %l\ /
-    set statusline+=\ %L\ 
-    set statusline+=\ %t\ 
-    set statusline+=%(%m%)
-    let g:sline_status = 1
-  endif
+function! s:StatusLineOn()
+  setlocal statusline=
+  setlocal statusline+=%=
+  setlocal statusline+=\ %l\ /
+  setlocal statusline+=\ %L\ 
+  setlocal statusline+=\ %t\ 
+  setlocal statusline+=%(%m%)
 endfunction
+call <SID>StatusLineOn()
 
 " Toggle the final dot in the end of a sentence.
 function! s:ToggleFinalDot()
