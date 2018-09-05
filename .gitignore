@@ -20,4 +20,5 @@ dotfiles/fish/.config/fish/functions/zclean.awk
 dotfiles/fish/.config/fish/functions/__z_clean.fish
 dotfiles/fish/.config/fish/functions/__z_complete.fish
 dotfiles/fish/.config/fish/functions/__z.fish
+dotfiles/fish/.config/fish/functions/fzf_key_bindings.fish
 .uuid
