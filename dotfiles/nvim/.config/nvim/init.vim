@@ -108,6 +108,7 @@ Plug 'lambdalisue/vim-manpager'
 Plug 'rhysd/open-pdf.vim'
 
 Plug 'dag/vim-fish'
+Plug 'NerdyPepper/vim-colors-plain'
 
  call plug#end()
 
@@ -135,7 +136,8 @@ set noshowcmd
 set shortmess+=csW
 set t_Co=256
 set notermguicolors
-colorscheme wal
+set background=dark
+colorscheme plain
 set fillchars=fold:\ 
 set foldlevelstart=0
 set colorcolumn=0
