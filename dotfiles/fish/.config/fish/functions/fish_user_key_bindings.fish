@@ -86,7 +86,7 @@ end
 # Make accept-autosuggestion work in vi mode.
 for mode in (bind -L)
     bind -M $mode \e\  accept-autosuggestion execute
-    bind -M $mode \cl  accept-autosuggestion
+    bind -M $mode \el  accept-autosuggestion
 end
 
 # Port of the oh-my-zsh sudo plugin for fish.

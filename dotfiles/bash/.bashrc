@@ -256,18 +256,6 @@ bind -x '"\C-r": fzf_history'
 bind '"\ec": "fzf_cd\C-m"'
 bind '"\C-t": "\" > .fzf_cmd.tmp\e0iecho -n \"\C-mfzf_general\C-m'
 
-# Use escape sequences to change the value of color17.
-# I primarily need this trick for my wal.vim fork.
-if [[ -f "${HOME}/.cache/wal/colors.sh" ]]; then
-  if [[ "$(<"${HOME}/.cache/wal/mode")" == dark ]]; then
-    . "${HOME}/.cache/wal/colors.sh"
-    printf '%b' "\\e]4;17;rgb:${color0_lighter_150:1:2}/${color0_lighter_150:3:2}/${color0_lighter_150:5:2}\\e\\"
-  elif [[ "$(<"${HOME}/.cache/wal/mode")" == light ]]; then
-    . "${HOME}/.cache/wal/colors.sh"
-    printf '%b' "\\e]4;17;rgb:${color0_darker_20:1:2}/${color0_darker_20:3:2}/${color0_darker_20:5:2}\\e\\"
-  fi
-fi
-
 # Run tmux every time a new terminal instance is opened.
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
 

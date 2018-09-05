@@ -13,7 +13,7 @@ Plug 'matteoguarda/wal.vim'
 Plug 'junegunn/limelight.vim'
   nnoremap <leader>li :Limelight!!<cr>
 Plug 'Yggdroot/indentLine'
-  let g:indentLine_color_term = 17
+  let g:indentLine_color_term = 13
   let g:indentLine_char = '▏'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -122,6 +122,7 @@ syntax on
 filetype on
 filetype plugin indent on
 
+set shell=/usr/bin/fish
 set mouse=a
 set nonumber
 set nocursorline
@@ -236,6 +237,7 @@ nnoremap H 0
 nnoremap L $
 nnoremap , :
 nnoremap è .
+nnoremap ! :!
 
 nnoremap <silent> <leader>,  :call <SID>ToggleFinalDot()<cr>
 nnoremap <silent> <leader>w  :call <SID>ToggleTextWidth()<cr>

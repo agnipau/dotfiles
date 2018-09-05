@@ -3,10 +3,10 @@
 # My fish prompt.
 
 function fish_prompt
-  set -l last_status "$status"
+  set -l last_status $status
 
   set_color -oi cyan  # onii-chan
-  printf '%s ' (printf "$PWD" | sed "s:^$HOME:~:")
+  printf '%s ' (printf $PWD | sed "s:^$HOME:~:")
   set_color normal
 
   set -l grepo (git rev-parse --is-inside-work-tree ^/dev/null)
@@ -24,7 +24,7 @@ function fish_prompt
     end
   end
 
-  if test "$last_status" -eq 0
+  if test $last_status -eq 0
     set_color -o white
   else
     set_color -o red
