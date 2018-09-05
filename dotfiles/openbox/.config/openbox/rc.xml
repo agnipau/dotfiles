@@ -1199,6 +1199,13 @@
       <y>center</y>
     </position>
   </application>
+  <application class="Code">
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+  </application>
 
   <!-- Fullscreen apps. -->
   <application class="Gimp">

@@ -83,8 +83,8 @@ bind '"\e[B": history-search-forward'
 
 # Misc. aliases.
 alias ydb='cd ${HOME}/progetti/ydb && ./ydb'
-alias obapp='obxprop | grep ^_OB_APP_'
-alias app='xprop | grep ^WM_'
+alias obapp='obxprop | rg ^_OB_APP_'
+alias app='xprop | rg ^WM_'
 alias nodebug='notify-send "Debug" "Debug message"'
 alias cnodebug='notify-send -h string:fgcolor:"$color1" "Debug" "Debug message"'
 alias grad='. ${HOME}/.bashrc; hsetroot -add "$color1" -add "$color2" -gradient 0'
@@ -279,5 +279,3 @@ clone() {
 cclone() {
   git clone --depth 1 "$1.git"
 }
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

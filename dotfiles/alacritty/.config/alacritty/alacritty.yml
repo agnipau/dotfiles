@@ -51,42 +51,42 @@ custom_cursor_colors: true
 
 colors:
   primary:
-    background: '0xf3edea'
-    foreground: '0x3c3b3a'
+    background: '0x221312'
+    foreground: '0xc7c4c3'
 
   cursor:
-    text:   '0xf3edea'
-    cursor: '0x3c3b3a'
+    text:   '0x221312'
+    cursor: '0xc7c4c3'
 
   normal:
-    black:   '0xf3edea'
-    red:     '0xbe1208'
-    green:   '0xc64a05'
-    yellow:  '0xab5119'
-    blue:    '0xa68c64'
-    magenta: '0x6995a2'
-    cyan:    '0x1068b5'
-    white:   '0x3c3b3a'
+    black:   '0x221312'
+    red:     '0xae7e7c'
+    green:   '0xc2483b'
+    yellow:  '0xaa9c93'
+    blue:    '0xa99368'
+    magenta: '0x9d9caa'
+    cyan:    '0xbcb8c5'
+    white:   '0xc7c4c3'
 
   bright:
-    black:    '0xb6b1af'
-    red:      '0xbe1208'
-    green:    '0xc64a05'
-    yellow:   '0xab5119'
-    blue:     '0xa68c64'
-    magenta:  '0x6995a2'
-    cyan:     '0x1068b5'
-    white:    '0x3c3b3a'
+    black:    '0x594e4d'
+    red:      '0xae7e7c'
+    green:    '0xc2483b'
+    yellow:   '0xaa9c93'
+    blue:     '0xa99368'
+    magenta:  '0x9d9caa'
+    cyan:     '0xbcb8c5'
+    white:    '0xc7c4c3'
 
   dim:
-    black:     '0xffffff'
-    red:       '0xe41509'
-    green:     '0xed5806'
-    yellow:    '0xcd611e'
-    blue:      '0xc7a878'
-    magenta:   '0x7eb2c2'
-    cyan:      '0x137cd9'
-    white:     '0x484645'
+    black:     '0x1c100f'
+    red:       '0x8c6564'
+    green:     '0x9c3a30'
+    yellow:    '0x887d76'
+    blue:      '0x887654'
+    magenta:   '0x7e7d88'
+    cyan:      '0x97949e'
+    white:     '0xa09d9c'
 
 visual_bell:
   animation: EaseOutExpo
@@ -112,7 +112,7 @@ hide_cursor_when_typing: false
 
 cursor_style: Block
 
-unfocused_hollow_cursor: '0x3c3b3a'
+unfocused_hollow_cursor: '0xc7c4c3'
 
 live_config_reload: true
 

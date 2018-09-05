@@ -4,8 +4,8 @@
 
 # Misc. aliases.
 alias ydb      'cd $HOME/progetti/ydb; and ./ydb'
-alias obapp    'obxprop | grep ^_OB_APP_'
-alias app      'xprop | grep ^WM_'
+alias obapp    'obxprop | rg _OB_APP_'
+alias app      'xprop | rg WM_'
 alias nodebug  'notify-send "Debug" "Debug message"'
 alias cnodebug 'notify-send -h string:fgcolor:"$color1" "Debug" "Debug message"'
 alias grad     '. $HOME/.zshrc; hsetroot -add "$color1" -add "$color2" -gradient 0'
