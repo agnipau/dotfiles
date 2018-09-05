@@ -280,7 +280,7 @@ augroup END
 
 " Functions {{{
 
-" Toggle the Status Line.
+" Status Line.
 function! s:StatusLineOn()
   setlocal statusline=
   setlocal statusline+=%=
