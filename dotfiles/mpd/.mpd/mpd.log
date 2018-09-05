@@ -5766,3 +5766,8 @@ Sep 05 23:30 : client: [63] opened from 127.0.0.1:48444
 Sep 05 23:30 : client: [63] closed
 Sep 05 23:32 : client: [24] closed
 Sep 05 23:32 : client: [64] opened from 127.0.0.1:49320
+Sep 05 23:42 : client: [64] closed
+Sep 05 23:42 : client: [65] opened from 127.0.0.1:54140
+Sep 05 23:46 : player: played "Gabriel Faure - Requiem op. 48.mp3"
+Sep 05 23:46 : client: [66] opened from 127.0.0.1:55868
+Sep 05 23:46 : client: [66] closed

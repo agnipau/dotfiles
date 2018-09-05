@@ -8,6 +8,7 @@ function _fzf_nvim
 
   set fnfiles (fd --type f --hidden --follow --exclude .git \
               | fzf --multi --inline-info --reverse --height 95%)
+
   if test "$fnfiles"
     nvim $fnfiles
   end
@@ -15,9 +16,7 @@ function _fzf_nvim
   commandline -f repaint
 end
 
-for mode in (bind -L)
-  bind -M $mode \ce _fzf_nvim
-end
+bind \cn _fzf_nvim
 
 # Change directory quickly with fzf.
 function _fzf_cd
@@ -33,9 +32,7 @@ function _fzf_cd
   commandline -f repaint
 end
 
-for mode in (bind -L)
-  bind -M $mode \ec _fzf_cd
-end
+bind \ec _fzf_cd
 
 # Navigate through history quickly with fzf.
 function _fzf_history
@@ -49,9 +46,7 @@ function _fzf_history
   commandline -r "$hcmd"
 end
 
-for mode in (bind -L)
-  bind -M $mode \cr _fzf_history
-end
+bind \cr _fzf_history
 
 # General purpose fzf widget (searches for files).
 function _fzf_general_files
@@ -64,9 +59,7 @@ function _fzf_general_files
   commandline -a "$fgfiles"
 end
 
-for mode in (bind -L)
-  bind -M $mode \ct _fzf_general_files
-end
+bind \ct _fzf_general_files
 
 # General purpose fzf widget (searches for directories).
 function _fzf_general_dirs
@@ -79,15 +72,11 @@ function _fzf_general_dirs
   commandline -a "$fgdirs"
 end
 
-for mode in (bind -L)
-  bind -M $mode \et _fzf_general_dirs
-end
+bind \et _fzf_general_dirs
 
-# Make accept-autosuggestion work in vi mode.
-for mode in (bind -L)
-    bind -M $mode \e\  accept-autosuggestion execute
-    bind -M $mode \el  accept-autosuggestion
-end
+# Make accept-autosuggestion work better.
+bind \e\  accept-autosuggestion execute
+bind \el  accept-autosuggestion
 
 # Port of the oh-my-zsh sudo plugin for fish.
 function _desc_sudo
@@ -96,10 +85,4 @@ function _desc_sudo
     commandline -f end-of-line
 end
 
-for mode in (bind -L)
-    bind -M $mode \cs _desc_sudo
-end
-function fish_user_key_bindings
-end
-
-fzf_key_bindings
+bind \cs _desc_sudo
