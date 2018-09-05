@@ -109,7 +109,7 @@ Plug 'rhysd/open-pdf.vim'
 
 Plug 'dag/vim-fish'
 
-call plug#end()
+ call plug#end()
 
 " }}}
 
@@ -152,6 +152,8 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set autoindent
+set list
+set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<
 
 set wildignore+=.git,.hg,.svn
 set wildignore+=*.aux,*.out,*.toc

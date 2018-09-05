@@ -101,3 +101,5 @@ for mode in (bind -L)
 end
 function fish_user_key_bindings
 end
+
+fzf_key_bindings

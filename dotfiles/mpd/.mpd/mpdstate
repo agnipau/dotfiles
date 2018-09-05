@@ -1,9 +1,9 @@
 sw_volume: 100
 audio_device_state:1:PulseAudio Output
 audio_device_state:1:my_fifo
-state: pause
-current: 3
-time: 629.718000
+state: play
+current: 8
+time: 4.074000
 random: 0
 repeat: 1
 single: 1
@@ -20,4 +20,5 @@ playlist_begin
 5:Beethoven - Ode to Joy.mp3
 6:Beethoven - Fur Elise.mp3
 7:Beethoven - Allegro con brio.mp3
+8:Eminem & Joyner Lucas - Lucky You.mp3
 playlist_end
