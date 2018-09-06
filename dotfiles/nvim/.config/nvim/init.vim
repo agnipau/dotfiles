@@ -91,7 +91,7 @@ Plug 'w0rp/ale'
   nmap <silent> <c-e> <plug>(ale_next_wrap)
 
 Plug 'mattn/emmet-vim'
-  let g:user_emmet_leader_key = '<c-d>'
+  let g:user_emmet_leader_key = '<c-f>'
 Plug 'junegunn/vim-easy-align'
   xmap ga <plug>(EasyAlign)
   nmap ga <plug>(EasyAlign)
@@ -100,8 +100,8 @@ Plug 'machakann/vim-highlightedyank'
   let g:highlightedyank_highlight_duration = 200
 Plug 'yuttie/comfortable-motion.vim'
   let g:comfortable_motion_no_default_key_mappings = 1
-  nnoremap <silent> J                 :call comfortable_motion#flick(55)<cr>
-  nnoremap <silent> K                 :call comfortable_motion#flick(-55)<cr>
+  nnoremap <silent> <c-d>             :call comfortable_motion#flick(55)<cr>
+  nnoremap <silent> <c-u>             :call comfortable_motion#flick(-55)<cr>
   noremap  <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<cr>
   noremap  <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<cr>
 Plug 'lambdalisue/vim-manpager'
@@ -236,6 +236,8 @@ nnoremap <silent> <c-m> :cprevious<cr>zz
 nnoremap <silent> <leader>t :tabnew<cr>
 
 nnoremap H 0
+nnoremap J }
+nnoremap K {
 nnoremap L $
 nnoremap , :
 nnoremap è .
