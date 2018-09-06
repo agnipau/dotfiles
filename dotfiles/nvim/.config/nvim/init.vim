@@ -33,19 +33,12 @@ Plug 'scrooloose/nerdtree'
   let g:NERDTreeStatusline          = ' '
   let g:NERDTreeMinimalUI           = 1
   let g:NERDTreeWinPos              = 'left'
-  let g:NERDTreeWinSize             = 25
+  let g:NERDTreeWinSize             = 30
   augroup nerdtree_close
     autocmd!
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   augroup END
 
-Plug 'terryma/vim-multiple-cursors'
-  let g:multi_cursor_use_default_mapping = 0
-  let g:multi_cursor_select_all_word_key = '<c-t>'
-  let g:multi_cursor_next_key            = '<c-j>'
-  let g:multi_cursor_prev_key            = '<c-k>'
-  let g:multi_cursor_skip_key            = '<c-p>'
-  let g:multi_cursor_quit_key            = '<esc>'
 Plug 'terryma/vim-expand-region'
   xmap v <plug>(expand_region_expand)
   xmap <c-v> <plug>(expand_region_shrink)
@@ -137,7 +130,7 @@ set shortmess+=csW
 set t_Co=256
 set notermguicolors
 set background=dark
-colorscheme plain
+colorscheme wal
 set fillchars=fold:\ 
 set foldlevelstart=0
 set colorcolumn=0
@@ -272,13 +265,13 @@ augroup filetype_vim
 augroup END
 
 " Restore cursor to where it was before closing NeoVim.
-augroup restore_cursor
-  autocmd!
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   execute "normal! g`\"" |
-    \ endif
-augroup END
+"augroup restore_cursor
+"  autocmd!
+"  autocmd BufReadPost *
+"    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+"    \   execute "normal! g`\"" |
+"    \ endif
+"augroup END
 
 " }}}
 

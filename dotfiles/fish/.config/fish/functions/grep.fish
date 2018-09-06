@@ -1,3 +1,3 @@
-function rg
+function grep
   rg --smart-case $argv
 end
