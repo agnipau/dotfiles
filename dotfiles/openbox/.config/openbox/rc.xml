@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <openbox_config xmlns="http://openbox.org/3.4/rc"
-		xmlns:xi="http://www.w3.org/2001/XInclude">
+                xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <!-- Resistance. -->
 <resistance>
@@ -246,7 +246,7 @@
   </keybind>
 
   <!-- Keybindings for slow window switching. -->
-  <keybind key="W-n">
+  <keybind key="W-Tab">
     <action name="NextWindow">
       <dialog>none</dialog>
       <bar>yes</bar>
@@ -263,7 +263,7 @@
       </finalactions>
     </action>
   </keybind>
-  <keybind key="W-S-n">
+  <keybind key="W-S-Tab">
     <action name="PreviousWindow">
       <dialog>none</dialog>
       <bar>yes</bar>
@@ -282,7 +282,7 @@
   </keybind>
 
   <!-- Keybindings for fast window switching. -->
-  <keybind key="W-Tab">
+  <keybind key="W-n">
     <action name="PreviousWindow">
       <dialog>none</dialog>
       <bar>no</bar>

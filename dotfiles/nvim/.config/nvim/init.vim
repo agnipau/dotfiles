@@ -10,13 +10,18 @@ nnoremap <leader>pi :PlugInstall<cr>
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'matteoguarda/wal.vim'
+Plug 'matteoguarda/vim-colors-plain'
+
 Plug 'junegunn/limelight.vim'
   nnoremap <leader>li :Limelight!!<cr>
+  let g:limelight_conceal_ctermfg = 10
+
 Plug 'Yggdroot/indentLine'
-  let g:indentLine_color_term = 13
+  let g:indentLine_color_term = 10
   let g:indentLine_char = '▏'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 Plug 'junegunn/fzf.vim'
   augroup fzf_nost
     autocmd!
@@ -26,6 +31,7 @@ Plug 'junegunn/fzf.vim'
   nnoremap <silent> <leader>ff  :FZF<cr>
   nnoremap <silent> <leader>fbl :BLines<cr>
   nnoremap <silent> <leader>fll :Lines<cr>
+
 Plug 'scrooloose/nerdtree'
   nnoremap <silent> <c-a> :NERDTreeToggle<cr>
 "  let g:NERDTreeDirArrowExpandable  = '+'
@@ -39,25 +45,39 @@ Plug 'scrooloose/nerdtree'
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   augroup END
 
+Plug 'terryma/vim-multiple-cursors'
+  let g:multi_cursor_use_default_mapping = 0
+  let g:multi_cursor_start_word_key      = '<c-j>'
+  let g:multi_cursor_select_all_word_key = '<c-t>'
+  let g:multi_cursor_start_key           = 'g<c-j>'
+  let g:multi_cursor_select_all_key      = 'g<c-t>'
+  let g:multi_cursor_next_key            = '<c-j>'
+  let g:multi_cursor_prev_key            = '<c-k>'
+  let g:multi_cursor_skip_key            = '<c-p>'
+  let g:multi_cursor_quit_key            = '<esc>'
+
 Plug 'terryma/vim-expand-region'
   xmap v <plug>(expand_region_expand)
   xmap <c-v> <plug>(expand_region_shrink)
 
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-commentary'
+
 Plug 'tpope/vim-surround'
-Plug 'rstacruz/vim-closer'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
+
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   let g:deoplete#enable_at_startup = 1
   inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
   inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+
 Plug 'Shougo/neco-vim'
+
 Plug 'zchee/deoplete-clang'
+
 Plug 'wellle/tmux-complete.vim'
   let g:tmuxcomplete#trigger = ''
+
 Plug 'w0rp/ale'
   "let g:ale_echo_delay                      = 0
   let g:ale_lint_on_save                     = 1
@@ -85,25 +105,42 @@ Plug 'w0rp/ale'
 
 Plug 'mattn/emmet-vim'
   let g:user_emmet_leader_key = '<c-f>'
+
 Plug 'junegunn/vim-easy-align'
   xmap ga <plug>(EasyAlign)
   nmap ga <plug>(EasyAlign)
 
 Plug 'machakann/vim-highlightedyank'
   let g:highlightedyank_highlight_duration = 200
+
 Plug 'yuttie/comfortable-motion.vim'
   let g:comfortable_motion_no_default_key_mappings = 1
-  nnoremap <silent> <c-d>             :call comfortable_motion#flick(55)<cr>
-  nnoremap <silent> <c-u>             :call comfortable_motion#flick(-55)<cr>
+  nnoremap <silent> J                 :call comfortable_motion#flick(55)<cr>
+  nnoremap <silent> K                 :call comfortable_motion#flick(-55)<cr>
   noremap  <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<cr>
   noremap  <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<cr>
+
 Plug 'lambdalisue/vim-manpager'
-Plug 'rhysd/open-pdf.vim'
 
 Plug 'dag/vim-fish'
-Plug 'NerdyPepper/vim-colors-plain'
 
- call plug#end()
+Plug 'airblade/vim-gitgutter'
+  nnoremap <silent> +h :GitGutterNextHunk<cr>
+  nnoremap <silent> èh :GitGutterPrevHunk<cr>
+  nnoremap <silent> <leader>gg :set updatetime=100 <bar> GitGutterEnable<cr>
+  nnoremap <silent> <leader>go :GitGutterDisable <bar> set updatetime=4000<cr>
+  let g:gitgutter_enabled                        = 0
+  let g:gitgutter_override_sign_column_highlight = 0
+  let g:gitgutter_grep                           = 'rg'
+  let g:gitgutter_sign_added                     = '+'
+  let g:gitgutter_sign_modified                  = '±'
+  let g:gitgutter_sign_removed                   = '-'
+  let g:gitgutter_sign_removed_first_line        = '×'
+  let g:gitgutter_sign_modified_removed          = '×'
+
+Plug 'wellle/targets.vim'
+
+call plug#end()
 
 " }}}
 
@@ -129,8 +166,7 @@ set noshowcmd
 set shortmess+=csW
 set t_Co=256
 set notermguicolors
-set background=dark
-colorscheme wal
+colorscheme plain
 set fillchars=fold:\ 
 set foldlevelstart=0
 set colorcolumn=0
@@ -213,29 +249,34 @@ set tabline=%!MyTabLine()
 
 " Mappings {{{
 
+" Normal mode (with <leader>).
 nnoremap <leader><leader> /
-
 nnoremap <silent> <leader>mo :nohlsearch<cr>
 nnoremap <silent> <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <silent> <leader>rr :source $MYVIMRC<cr>
-nnoremap <silent> <leader>n  :set number! cursorline!<cr>
+nnoremap <silent> <leader>n  :set number! cursorline! relativenumber!<cr>
 nnoremap <silent> <leader>vn :next<cr>
 nnoremap <silent> <leader>vp :previous<cr>
+nnoremap <silent> <leader>te :terminal<cr>
+nnoremap <silent> <leader>tt :tabnew<cr>
+nnoremap <leader>.  :<bs>
 
+" Normal mode (with <c>).
 nnoremap <silent> <c-h> :tabprevious<cr>
 nnoremap <silent> <c-l> :tabnext<cr>
 nnoremap <silent> <c-n> :cnext<cr>zz
 nnoremap <silent> <c-m> :cprevious<cr>zz
-nnoremap <silent> <leader>t :tabnew<cr>
+nnoremap <c-d> }
+nnoremap <c-u> {
 
+" Normal mode (without <leader> and <c>).
 nnoremap H 0
-nnoremap J }
-nnoremap K {
 nnoremap L $
 nnoremap , :
 nnoremap è .
 nnoremap ! :!
 
+" Normal mode (calls of various functions).
 nnoremap <silent> <leader>,  :call <SID>ToggleFinalDot()<cr>
 nnoremap <silent> <leader>w  :call <SID>ToggleTextWidth()<cr>
 nnoremap <silent> <leader>co :call <SID>ToggleConceal()<cr>
@@ -245,14 +286,17 @@ nnoremap <silent> <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
 nnoremap <silent> <leader>st :call <SID>StatusLineOn()<cr>
 nnoremap <silent> <leader>so :setlocal statusline=%#BarraVuota#<cr>
 
-nnoremap <leader>.  :<bs>
-
+" Visual mode.
 xnoremap H 0
 xnoremap L $
 xnoremap <silent> <leader>g  :<c-u>call <SID>GrepOperator(visualmode())<cr>
 
+" Command line.
 cnoremap W w
 cnoremap Q q
+
+" Terminal.
+tnoremap <esc> <c-\><c-n>
 
 " }}}
 

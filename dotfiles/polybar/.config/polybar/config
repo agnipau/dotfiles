@@ -24,7 +24,7 @@ margin-bottom = 0
 monitor        = eDP-1-1
 bottom         = true
 fixed-center   = true
-width          = 50%
+width          = 58%
 height         = 40
 offset-x       = 35
 offset-y       = 30
@@ -36,7 +36,7 @@ module-margin  = 1
 font-0         = Iosevka Term SS07:size=12:antialias=true:autohint=false;3
 font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
 modules-left   = openbox_ws_good
-modules-center = essid date_time pvol music mpd wal
+modules-center = essid date_time pvol music mpd
 locale         = it_IT.UTF-8
 
 ; Bar in the right side.
@@ -44,9 +44,9 @@ locale         = it_IT.UTF-8
 monitor        = eDP-1-1
 bottom         = true
 fixed-center   = true
-width          = 24%
+width          = 26%
 height         = 40
-offset-x       = 1008
+offset-x       = 981
 offset-y       = 30
 background     = ${colors.background}
 foreground     = ${colors.foreground}
@@ -55,7 +55,7 @@ padding        = 0
 module-margin  = 1
 font-0         = Iosevka Term SS07:size=12:antialias=true:autohint=false;3
 font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
-modules-center = down battery brightness
+modules-center = down battery brightness wal
 locale         = it_IT.UTF-8
 
 ; bar-left modules.
@@ -90,8 +90,8 @@ label-disconnected-padding    = 1
 [module/date_time]
 type              = internal/date
 interval          = 1.0
-time              =  %H:%M
-time-alt          =  %H:%M:%S (%a %d %b)
+time              =  %a %d %b     %H:%M
+time-alt          =  %a %d %b     %H:%M:%S
 format            = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
