@@ -14,10 +14,10 @@ Plug 'matteoguarda/vim-colors-plain'
 
 Plug 'junegunn/limelight.vim'
   nnoremap <leader>li :Limelight!!<cr>
-  let g:limelight_conceal_ctermfg = 10
+  let g:limelight_conceal_ctermfg = 13
 
 Plug 'Yggdroot/indentLine'
-  let g:indentLine_color_term = 10
+  let g:indentLine_color_term = 13
   let g:indentLine_char = '▏'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
