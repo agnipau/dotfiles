@@ -1,4 +1,4 @@
-![dirty scrot](https://0x0.st/syDQ.png)
+![dirty scrot](https://0x0.st/sv07.png)
 
 - OS: [Arch Linux], [Termux]
 - WM: [openbox-patched]
