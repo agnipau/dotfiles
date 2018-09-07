@@ -7266,3 +7266,11 @@ Sep 07 22:37 : player: played "Mahler - Adagietto Symphony no. 5 - Karajan.mp3"
 Sep 07 22:48 : player: played "Beethoven - Overture to Egmont.mp3"
 Sep 07 22:51 : client: [95] closed
 Sep 07 22:51 : client: [96] opened from 127.0.0.1:58720
+Sep 07 23:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 07 23:03 : client: [0] opened from 127.0.0.1:58790
+Sep 07 23:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 07 23:03 : client: [0] opened from 127.0.0.1:58798
+Sep 07 23:03 : client: [1] opened from 127.0.0.1:58802
+Sep 07 23:04 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 07 23:04 : client: [1] closed
+Sep 07 23:04 : player: played "Boku No Hero Academia - OP 1.mp3"

@@ -2,12 +2,15 @@
 #
 # fish shell config file.
 
-# vi mode please.
-fish_vi_key_bindings
-function fish_mode_prompt; end
-set fish_cursor_default block
-set fish_cursor_insert  block
-set fish_cursor_visual  block
+# vi mode.
+#fish_vi_key_bindings
+#function fish_mode_prompt; end
+#set fish_cursor_default block
+#set fish_cursor_insert  block
+#set fish_cursor_visual  block
+
+# emacs mode.
+fish_default_key_bindings
 
 # Suppress the greeting messagge.
 set fish_greeting ""
@@ -16,40 +19,28 @@ set fish_greeting ""
 function fish_title; end
 
 # Envars.
-set -x PATH                   $HOME/bin $HOME/.gem/ruby/2.5.0/bin $PATH
-set -x VISUAL                 "/usr/bin/nvim"
-set -x EDITOR                 "/usr/bin/nvim"
-set -x BROWSER                "/usr/bin/chromium"
-set -x RTV_BROWSER            "/usr/bin/w3m"
-set -x LANG                   "it_IT.UTF-8"
-set -x XDG_CONFIG_HOME        "$HOME/.config"
-set -x SSH_KEY_PATH           "$HOME/.ssh/id_rsa"
-set -x RANGER_LOAD_DEFAULT_RC "false"
-set -x MANPAGER               "nvim -c MANPAGER -"
+set -x PATH                   /home/matte/.phantomjs/bin /home/matte/bin /home/matte/.gem/ruby/2.5.0/bin $PATH
+set -x VISUAL                 /usr/bin/nvim
+set -x EDITOR                 /usr/bin/nvim
+set -x BROWSER                /usr/bin/chromium
+set -x RTV_BROWSER            /usr/bin/w3m
+set -x LANG                   it_IT.UTF-8
+set -x XDG_CONFIG_HOME        $HOME/.config
+set -x SSH_KEY_PATH           $HOME/.ssh/id_rsa
+set -x RANGER_LOAD_DEFAULT_RC false
+set -x MANPAGER               'nvim -c MANPAGER -'
 
 # fzf options.
-set -x FZF_DEFAULT_COMMAND "fd --type f --hidden --follow --exclude .git"
-set -x FZF_DEFAULT_OPTS    "--multi --inline-info --reverse --height 95%"
+set -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
+set -x FZF_DEFAULT_OPTS    '--multi --inline-info --reverse --height 95%'
 
-# Use escape sequences to change the value of color17.
-# I primarily need this trick for my wal.vim fork.
-if test -f "$HOME/.cache/wal/colors.fish"
-  if test (cat "$HOME/.cache/wal/mode") = "dark"
-    . "$HOME/.cache/wal/colors.fish"
-    set cl1 (printf "$color0_lighter_150" | cut -c2-3)
-    set cl2 (printf "$color0_lighter_150" | cut -c4-5)
-    set cl3 (printf "$color0_lighter_150" | cut -c6-7)
-    printf "\e]4;17;rgb:$cl1/$cl2/$cl3\e\\"
-  else if test (cat "$HOME/.cache/wal/mode") = "light"
-    . "$HOME/.cache/wal/colors.fish"
-    set cd1 (printf "$color0_darker_20"   | cut -c2-3)
-    set cd2 (printf "$color0_darker_20"   | cut -c4-5)
-    set cd3 (printf "$color0_darker_20"   | cut -c6-7)
-    printf "\e]4;17;rgb:$cd1/$cd2/$cd3\e\\"
-  end
-end
+# Source themes colors.
+. $HOME/progetti/themes/sh/colors.fish
 
 # Highlight groups.
+set fish_term256   0
+set fish_term24bit 1
+
 ## Static colors.
 set fish_color_comment           --bold black
 set fish_color_operator          --bold bryellow
@@ -59,15 +50,18 @@ set fish_pager_color_prefix      --bold red
 set fish_pager_color_completion  --bold white
 
 ## Variable colors.
-set fish_color_autosuggestion    ffffff
-set fish_pager_color_progress    121312
-set fish_pager_color_description ffffff
+set fish_color_autosuggestion    525252
+set fish_pager_color_progress    212121
+set fish_pager_color_description 6f6f6f
 
-# Source fzf.
-test -f "$HOME/.fzf.fish";
-  and . "$HOME/.fzf.fish"
+# Auto calling functions.
+alias ls   'ls --group-directories-first --color=auto'
+alias sudo 'sudo -p (tput bold; tput setaf 1; printf ">> "; tput sgr0)'
+alias rg   'rg --smart-case'
+alias du   'du -h'
+alias pqiv 'pqiv -i --box-colors=$color7:$color0_lighter_90 --bind-key="@MONTAGE { h { montage_mode_shift_x(-1) } }" --bind-key="@MONTAGE { j { montage_mode_shift_y(1) } }" --bind-key "@MONTAGE { k { montage_mode_shift_y(-1) } }" --bind-key "@MONTAGE { l { montage_mode_shift_x(1) } }" --bind-key="j { goto_file_relative(-1) }" --bind-key="k { goto_file_relative(1) }" --bind-key="h { goto_file_relative(-1) }" --bind-key="l { goto_file_relative(1) }" --bind-key="d { command(rm $1) }" $argv'
 
 # Start tmux automatically whenever a new terminal instance is opened.
-test -z "$TMUX";
-  and test "$DISPLAY";
+test -z $TMUX;
+  and test $DISPLAY;
   and tmux -2
