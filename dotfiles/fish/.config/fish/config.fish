@@ -21,17 +21,22 @@ function fish_title; end
 # Envars.
 if test $PREFIX
   set -x PATH                 $HOME/bin $PATH
+  set -x VISUAL               /data/data/com.termux/files/usr/bin/nvim
+  set -x EDITOR               /data/data/com.termux/files/usr/bin/nvim
+  set -x RTV_BROWSER          /data/data/com.termux/files/usr/bin/w3m
+  set -x XDG_CONFIG_HOME      $HOME/.config
+  set -x SSH_KEY_PATH         $HOME/.ssh/id_rsa
 else
   set -x PATH                 /home/matte/.phantomjs/bin /home/matte/bin /home/matte/.gem/ruby/2.5.0/bin $PATH
+  set -x VISUAL               /usr/bin/nvim
+  set -x EDITOR               /usr/bin/nvim
+  set -x BROWSER              /usr/bin/chromium
+  set -x RTV_BROWSER          /usr/bin/w3m
+  set -x XDG_CONFIG_HOME      /home/matte/.config
+  set -x SSH_KEY_PATH         /home/matte/.ssh/id_rsa
 end
 
-set -x VISUAL                 /usr/bin/nvim
-set -x EDITOR                 /usr/bin/nvim
-set -x BROWSER                /usr/bin/chromium
-set -x RTV_BROWSER            /usr/bin/w3m
 set -x LANG                   it_IT.UTF-8
-set -x XDG_CONFIG_HOME        $HOME/.config
-set -x SSH_KEY_PATH           $HOME/.ssh/id_rsa
 set -x RANGER_LOAD_DEFAULT_RC false
 set -x MANPAGER               'nvim -c MANPAGER -'
 
