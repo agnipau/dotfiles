@@ -7260,3 +7260,9 @@ Sep 07 21:59 : client: [93] opened from 127.0.0.1:58356
 Sep 07 22:00 : client: [93] closed
 Sep 07 22:02 : client: [94] opened from 127.0.0.1:58398
 Sep 07 22:02 : client: [94] closed
+Sep 07 22:25 : player: played "Gabriel Faure - Requiem op. 48.mp3"
+Sep 07 22:28 : client: [95] opened from 127.0.0.1:58654
+Sep 07 22:37 : player: played "Mahler - Adagietto Symphony no. 5 - Karajan.mp3"
+Sep 07 22:48 : player: played "Beethoven - Overture to Egmont.mp3"
+Sep 07 22:51 : client: [95] closed
+Sep 07 22:51 : client: [96] opened from 127.0.0.1:58720

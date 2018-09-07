@@ -79,14 +79,14 @@ colors:
     white:    '0xffffff'
 
   dim:
-    black:     '0x0a090a'
-    red:       '0x1c4050'
-    green:     '0x494a4a'
-    yellow:    '0x924028'
-    blue:      '0x108417'
-    magenta:   '0xa87e3e'
-    cyan:      '0x135877'
-    white:     '0x7e8a9b'
+    black:     '0x080c0a'
+    red:       '0x054472'
+    green:     '0x095778'
+    yellow:    '0x12537c'
+    blue:      '0x065c8c'
+    magenta:   '0x435e6f'
+    cyan:      '0x055d9d'
+    white:     '0x6998a5'
 
 visual_bell:
   animation: EaseOutExpo
