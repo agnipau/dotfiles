@@ -1,5 +1,4 @@
 xrandr --dpi 96
 openbox --restart
 compton -b --config ~/.config/compton/compton.conf
-wal -c -q --backend colorz -i ~/progetti/wallpapers -o ~/bin/wal-set-dark
-~/bin/polylefton
+~/bin/fehrand

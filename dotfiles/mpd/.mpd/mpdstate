@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:PulseAudio Output
 audio_device_state:1:my_fifo
 state: play
-current: 1
-time: 4.144000
+current: 0
+time: 3.968000
 random: 0
 repeat: 1
 single: 1
@@ -14,4 +14,5 @@ mixrampdelay: -1.000000
 playlist_begin
 0:Gabriel Faure - Requiem op. 48.mp3
 1:Mahler - Adagietto Symphony no. 5 - Karajan.mp3
+2:Beethoven - Overture to Egmont.mp3
 playlist_end
