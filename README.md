@@ -1,10 +1,11 @@
-![dirty scrot](https://0x0.st/sv07.png)
+![dirty scrot](https://0x0.st/sv0F.png)
 
 - OS: [Arch Linux], [Termux]
 - WM: [openbox-patched]
 - Editor: [neovim]
 - Shell: [fish]
 - Terminal: [xst]
+- Colorscheme: material-darker
 - File Manager: [ranger]
 - Bar: [polybar]
 - Bar Icons: [FontAwesome]
