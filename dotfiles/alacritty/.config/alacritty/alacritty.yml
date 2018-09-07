@@ -51,42 +51,42 @@ custom_cursor_colors: true
 
 colors:
   primary:
-    background: '0x263238'
-    foreground: '0xeeffff'
+    background: '0x292d3e'
+    foreground: '0x959dcb'
 
   cursor:
-    text:   '0x263238'
-    cursor: '0xeeffff'
+    text:   '0x292d3e'
+    cursor: '0x959dcb'
 
   normal:
-    black:   '0x263238'
+    black:   '0x292d3e'
     red:     '0xf07178'
     green:   '0xc3e88d'
     yellow:  '0xffcb6b'
     blue:    '0x82aaff'
     magenta: '0xc792ea'
     cyan:    '0x89ddff'
-    white:   '0xeeffff'
+    white:   '0x959dcb'
 
   bright:
-    black:    '0x546e7a'
+    black:    '0x7b84b2'
     red:      '0xf07178'
     green:    '0xc3e88d'
     yellow:   '0xffcb6b'
     blue:     '0x82aaff'
-    magenta:  '0x546e7a'
+    magenta:  '0x66709b'
     cyan:     '0x89ddff'
     white:    '0xffffff'
 
   dim:
-    black:     '0x11120f'
-    red:       '0x868050'
-    green:     '0xa09146'
-    yellow:    '0x969c48'
-    blue:      '0xa0a055'
-    magenta:   '0x64666d'
-    cyan:      '0x8c8374'
-    white:     '0xafaaa2'
+    black:     '0xffffff'
+    red:       '0xc4622d'
+    green:     '0xff7015'
+    yellow:    '0xff7812'
+    blue:      '0xe6662d'
+    magenta:   '0xb87963'
+    cyan:      '0x6cb4c3'
+    white:     '0x0c0d0d'
 
 visual_bell:
   animation: EaseOutExpo
@@ -112,7 +112,7 @@ hide_cursor_when_typing: false
 
 cursor_style: Block
 
-unfocused_hollow_cursor: '0xeeffff'
+unfocused_hollow_cursor: '0x959dcb'
 
 live_config_reload: true
 

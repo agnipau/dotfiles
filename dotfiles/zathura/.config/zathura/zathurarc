@@ -14,5 +14,5 @@ set window-width          "690"
 set window-title-basename "true"
 set first-page-column     "1:1"
 
-# Source base16 colors.
+# Source themes colors.
 include "/home/matte/altri_progetti/zathura/colors.zathura"

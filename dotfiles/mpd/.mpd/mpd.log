@@ -6799,3 +6799,339 @@ Sep 07 16:26 : client: [99] closed
 Sep 07 16:26 : client: [100] opened from 127.0.0.1:57768
 Sep 07 19:26 : client: [100] closed
 Sep 07 19:26 : client: [101] opened from 127.0.0.1:57898
+Sep 07 19:57 : client: [101] closed
+Sep 07 19:57 : client: [102] opened from 127.0.0.1:57926
+Sep 07 19:58 : client: [103] opened from 127.0.0.1:57930
+Sep 07 19:58 : client: [103] closed
+Sep 07 19:58 : client: [104] opened from 127.0.0.1:57934
+Sep 07 19:58 : client: [104] closed
+Sep 07 20:21 : client: [102] closed
+Sep 07 20:21 : client: [105] opened from 127.0.0.1:57942
+Sep 07 20:21 : client: [105] closed
+Sep 07 20:21 : client: [106] opened from 127.0.0.1:57944
+Sep 07 20:23 : client: [106] closed
+Sep 07 20:23 : client: [107] opened from 127.0.0.1:57946
+Sep 07 20:27 : client: [107] closed
+Sep 07 20:27 : client: [108] opened from 127.0.0.1:57960
+Sep 07 20:28 : client: [108] closed
+Sep 07 20:28 : client: [109] opened from 127.0.0.1:57962
+Sep 07 20:28 : client: [109] closed
+Sep 07 20:28 : client: [110] opened from 127.0.0.1:57964
+Sep 07 20:28 : client: [110] closed
+Sep 07 20:28 : client: [111] opened from 127.0.0.1:57966
+Sep 07 20:30 : client: [111] closed
+Sep 07 20:30 : client: [112] opened from 127.0.0.1:57968
+Sep 07 20:30 : client: [112] closed
+Sep 07 20:30 : client: [113] opened from 127.0.0.1:57970
+Sep 07 20:31 : player: played "Mozart - Requiem.mp3"
+Sep 07 20:31 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 07 20:31 : client: [0] opened from 127.0.0.1:57984
+Sep 07 20:31 : client: [1] opened from 127.0.0.1:57988
+Sep 07 20:31 : update: added /Darling in the FranXX - Torikago [ED 1].mp3
+Sep 07 20:31 : update: added /Beethoven - Piano Sonata no.17 mvt.3 (Tempest).mp3
+Sep 07 20:31 : update: added /scarlxrd - scarlxrd - HEART ATTACK.mp3
+Sep 07 20:31 : update: added /Paganini & Liszt - La Campanella - Kissin.mp3
+Sep 07 20:31 : update: added /Wagner - Parsifal - Act 1 - Prelude.mp3
+Sep 07 20:31 : update: added /Mozart - Aria della regina della notte.mp3
+Sep 07 20:31 : update: added /Attack on Titan - OP 3.mp3
+Sep 07 20:31 : update: added /Tchaikovsky - 1812 Overture (Full).mp3
+Sep 07 20:31 : update: added /Tchaikovsky - 1812 Overture (Finale).mp3
+Sep 07 20:31 : update: added /Eminem & Rihanna - Love The Way You Lie.mp3
+Sep 07 20:31 : update: added /Eminem - Mockingbird.mp3
+Sep 07 20:31 : update: added /Bach - Toccata e Fuga Re minore.mp3
+Sep 07 20:31 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.3.mp3
+Sep 07 20:31 : update: added /Mozart - Don Giovanni - Finale.mp3
+Sep 07 20:31 : update: added /Jake Hill & Josh A - ANARCHY ACRES.mp3
+Sep 07 20:31 : update: added /Chopin - Chopin - Etude op.25 no.5 (Wrong Note).mp3
+Sep 07 20:31 : update: added /Sword Art Online - We Have To Defeat It.mp3
+Sep 07 20:31 : update: added /Joe Hisaishi - My Neighbor Totoro - Path of the Wind.mp3
+Sep 07 20:31 : update: added /Eminem & Dido - Stan.mp3
+Sep 07 20:31 : update: added /Vivaldi - Primavera.mp3
+Sep 07 20:31 : update: added /Linkin Park - In The End.mp3
+Sep 07 20:31 : update: added /Theishter - One Punch Man - The Hero [OP].mp3
+Sep 07 20:31 : update: added /Stravinsky - Firebird Suite (Infernal Dance).mp3
+Sep 07 20:31 : update: added /Bach - Prelude in C major BWV 846.mp3
+Sep 07 20:31 : update: added /Jake Hill & Josh A - Pennywise.mp3
+Sep 07 20:31 : update: added /Beethoven - Allegro con brio.mp3
+Sep 07 20:31 : update: added /Tomppabeats - Arcade (Full BeatTape).mp3
+Sep 07 20:31 : update: added /Rachmaninov - Prelude op.23 no.5.mp3
+Sep 07 20:31 : update: added /Jake Hill & Josh A - Endless Nightmare.mp3
+Sep 07 20:31 : update: added /Rachmaninov - Little Red Riding Hood - Etude Tableau.mp3
+Sep 07 20:31 : update: added /Darling in the FranXX - Vanquish.mp3
+Sep 07 20:31 : update: added /Mahler - Quartet for Piano and Strings in A minor.mp3
+Sep 07 20:31 : update: added /Vivaldi - Estate.mp3
+Sep 07 20:31 : update: added /2pac - All Eyez On Me.mp3
+Sep 07 20:31 : update: added /Tchaikovsky - Hymn of the Cherubim.mp3
+Sep 07 20:31 : update: added /Attack on Titan - Erens Armored Titan Transformation.mp3
+Sep 07 20:31 : update: added /Chopin - Funeral march.mp3
+Sep 07 20:31 : update: added /Chopin - Waltz in A minor op. posth.mp3
+Sep 07 20:31 : update: added /Ernesto Cortazar - Beethoven Silence.mp3
+Sep 07 20:31 : update: added /Einaudi - Divenire.mp3
+Sep 07 20:31 : update: added /Attack on Titan - OP 1.mp3
+Sep 07 20:31 : update: added /Chopin - Piano Concerto in E minor op.11.mp3
+Sep 07 20:31 : update: added /Rachmaninov - The Isle of the Dead - Symphonic poem op. 29.mp3
+Sep 07 20:31 : update: added /Tomaso Albinoni - Adagio.mp3
+Sep 07 20:31 : update: added /Fonzi M - Boku no Hero Academia - United States of Smash.mp3
+Sep 07 20:31 : update: added /Maurice Ravel - Pavane for Dead Princess.mp3
+Sep 07 20:31 : update: added /Death Note - Light's Theme.mp3
+Sep 07 20:31 : update: added /Death Note - OP 1.mp3
+Sep 07 20:31 : update: added /Samuel Barber - Agnus Dei.mp3
+Sep 07 20:31 : update: added /KWAYE - Sweetest Life.mp3
+Sep 07 20:31 : update: added /Death Note - Low of Solipsism.mp3
+Sep 07 20:31 : update: added /Mussorgsky - Night on Bald Mountain.mp3
+Sep 07 20:31 : update: added /Tchaikovsky - Valse Sentimentale.mp3
+Sep 07 20:31 : update: added /Tokyo Ghoul - Glassy Sky.mp3
+Sep 07 20:31 : update: added /Kreisler - Kreisler - Liebesleid (Love's Sorrow) (Piano & Violin).mp3
+Sep 07 20:31 : update: added /Jinsang - Confessions (Full BeatTape).mp3
+Sep 07 20:31 : update: added /Attack on Titan - Trasformazione Reiner e Bertold.mp3
+Sep 07 20:31 : update: added /Eminem - Without Me.mp3
+Sep 07 20:31 : update: added /Tomppabeats - Harbor (Full BeatTape).mp3
+Sep 07 20:31 : update: added /Eminem - Lose Yourself.mp3
+Sep 07 20:31 : update: added /Einaudi - Night.mp3
+Sep 07 20:31 : update: added /One Punch Man - Main Theme.mp3
+Sep 07 20:31 : update: added /Jake Hill - Solitude.mp3
+Sep 07 20:31 : update: added /Richard Strauss - Also Sprach Zarathustra.mp3
+Sep 07 20:31 : update: added /Animenz - No Game No Life - This Game [OP].mp3
+Sep 07 20:31 : update: added /Beethoven - Fur Elise.mp3
+Sep 07 20:31 : update: added /Naruto - Sadness and Sorrow (Normal).mp3
+Sep 07 20:31 : update: added /Francisco Tarrega - Capricho arabe.mp3
+Sep 07 20:31 : update: added /Made in Abyss - Hanezeve Caradhina.mp3
+Sep 07 20:31 : update: added /Animenz - Attack on Titan - OST.mp3
+Sep 07 20:31 : update: added /Eminem & Ed Sheeran - River.mp3
+Sep 07 20:31 : update: added /Yiruma - Greatest Hits.mp3
+Sep 07 20:31 : update: added /Boku No Hero Academia - OP 2.mp3
+Sep 07 20:31 : update: added /Beethoven - Moonlight Sonata op.27 no.2 mvt.1-2-3.mp3
+Sep 07 20:31 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto (Piano).mp3
+Sep 07 20:31 : update: added /Tchaikovsky - Waltz no. 9 op. 40.mp3
+Sep 07 20:31 : update: added /Bach - Aria sulla quarta corda - Piano.mp3
+Sep 07 20:31 : update: added /Mahler - Adagietto Symphony no. 5 - Karajan.mp3
+Sep 07 20:31 : update: added /Beethoven - 9th Symphony op.125.mp3
+Sep 07 20:31 : update: added /Liszt - Hungarian Rhapsody no.2.mp3
+Sep 07 20:31 : update: added /Einaudi - Le Onde.mp3
+Sep 07 20:31 : update: added /Beethoven - Overture to Egmont.mp3
+Sep 07 20:31 : update: added /Fonzi M - Boku no Hero Academia - My Hero.mp3
+Sep 07 20:31 : update: added /Attack on Titan - Call of Silence.mp3
+Sep 07 20:31 : update: added /Linkin Park - Numb.mp3
+Sep 07 20:31 : update: added /Gabriel Faure - Pavane op. 50.mp3
+Sep 07 20:31 : update: added /Shostakovich - Waltz no. 2.mp3
+Sep 07 20:31 : update: added /Beethoven - String Quartet no.14 op.131 C sharp.mp3
+Sep 07 20:31 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto - Nigel Kennedy.mp3
+Sep 07 20:31 : update: added /Gabriel Faure - Sicilienne for Cello and Piano op. 78.mp3
+Sep 07 20:31 : update: added /Mirai Nikki - Here With You.mp3
+Sep 07 20:31 : update: added /Beethoven - 5th Symphony in C minor.mp3
+Sep 07 20:31 : update: added /Linkin Park - What I've Done.mp3
+Sep 07 20:31 : update: added /Saint Saens - Toccata op.72 no.3.mp3
+Sep 07 20:31 : update: added /Eminem - Framed.mp3
+Sep 07 20:31 : update: added /Richard Wagner - Ride of the Valkyries.mp3
+Sep 07 20:31 : update: added /The War On Drugs - Knocked Down.mp3
+Sep 07 20:31 : update: added /Boku No Hero Academia - OP 3.mp3
+Sep 07 20:31 : update: added /Eminem - My Name Is.mp3
+Sep 07 20:31 : update: added /Rachmaninov - Piano Concerto no.3 mvt.1 (Minus Orchestra).mp3
+Sep 07 20:31 : update: added /Jake Hill & Josh A - Suicidial Thoughts.mp3
+Sep 07 20:31 : update: added /Beethoven - Beethoven - Rondo e Capriccio.mp3
+Sep 07 20:31 : update: added /Bach - Cello Suite no. 1 in G Major BWV1007 mvt. 1-3 slash 6.mp3
+Sep 07 20:31 : update: added /Death Note - Kyrie.mp3
+Sep 07 20:31 : update: added /Chopin - Fantaisie Impromptu op.66.mp3
+Sep 07 20:31 : update: added /Kill la Kill - I Want to Know.mp3
+Sep 07 20:31 : update: added /Pachelbel - Canon in D (Piano).mp3
+Sep 07 20:31 : update: added /Chopin - Nocturne in E flat major op.9 no.2 - Tiffany Poon.mp3
+Sep 07 20:31 : update: added /Eevee - Unexpected (Full BeatTape).mp3
+Sep 07 20:31 : update: added /Gabriel Faure - Apres un Reve for Cello and Piano.mp3
+Sep 07 20:31 : update: added /Rachmaninov - Piano Concerto no.2 mvt.3 (Minus Orchestra).mp3
+Sep 07 20:31 : update: added /Saint Saens - Danse Macabre.mp3
+Sep 07 20:31 : update: added /Eminem & Joyner Lucas - Lucky You.mp3
+Sep 07 20:31 : update: added /Joe Hisaishi - Laputa Castle in the Sky.mp3
+Sep 07 20:31 : update: added /Hellsing - Alucard's Theme.mp3
+Sep 07 20:31 : update: added /KWAYE - Little Ones.mp3
+Sep 07 20:31 : update: added /Tchaikovsky - Tchaikosvky - Sleeping Beauty (Piano 4 Hands) (Rachmaninov's arr.).mp3
+Sep 07 20:31 : update: added /Mob Psycho 100 - Explosion of Mob Feelings.mp3
+Sep 07 20:31 : update: added /Wagner - Tristan und Isolde - Prelude.mp3
+Sep 07 20:31 : update: added /Hellsing - Monster of God.mp3
+Sep 07 20:31 : update: added /Paganini - La Campanella - Vanessa Mae.mp3
+Sep 07 20:31 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 (Minus Orchestra).mp3
+Sep 07 20:31 : update: added /Boku No Hero Academia - All Might vs All For One.mp3
+Sep 07 20:31 : update: added /Fonzi M - Darling in the FranXX - Torikago [ED 1].mp3
+Sep 07 20:31 : update: added /Sword Art Online - Swordland.mp3
+Sep 07 20:31 : update: added /Another - Track 7.mp3
+Sep 07 20:31 : update: added /Eminem - Sing for the Moment.mp3
+Sep 07 20:31 : update: added /One Punch Man - OP.mp3
+Sep 07 20:31 : update: added /Megalo Box - Main Theme.mp3
+Sep 07 20:31 : update: added /KWAYE - Jasime.mp3
+Sep 07 20:31 : update: added /Rachmaninov - Piano Concerto no.2 mvt.1 (Piano Arrangement).mp3
+Sep 07 20:31 : update: added /Eminem - Till I Collapse.mp3
+Sep 07 20:31 : update: added /Eminem - Kamikaze.mp3
+Sep 07 20:31 : update: added /2pac - Ghetto Gospel.mp3
+Sep 07 20:31 : update: added /Paganini - Capriccio no.5.mp3
+Sep 07 20:31 : update: added /KWAYE - Cool Kids.mp3
+Sep 07 20:31 : update: added /Liszt - Transcendental Etude no.4 - Mazeppa.mp3
+Sep 07 20:31 : update: added /Megalo Box - Intermission.mp3
+Sep 07 20:31 : update: added /Rachmaninov - Piano Concerto no.2 (Plus Orchestra).mp3
+Sep 07 20:31 : update: added /Saint Saens - Introduction and Rondo Capriccioso.mp3
+Sep 07 20:31 : update: added /Animenz - Studio Ghibli - Medley.mp3
+Sep 07 20:31 : update: added /Vivaldi - Autunno.mp3
+Sep 07 20:31 : update: added /Rossini - William Tell Overture (Full).mp3
+Sep 07 20:31 : update: added /Kreisler - Liebesleid (Love's Sorrow) (Piano).mp3
+Sep 07 20:31 : update: added /Jake Hill - 38 to the Face.mp3
+Sep 07 20:31 : update: added /Attack on Titan - Piano Adlib.mp3
+Sep 07 20:31 : client: [1] closed
+Sep 07 20:31 : update: added /Liszt - Totentanz.mp3
+Sep 07 20:31 : update: added /Death Note - Kira's Theme.mp3
+Sep 07 20:31 : update: added /Eminem - Rap God.mp3
+Sep 07 20:31 : update: added /Jake Hill - We Die Too.mp3
+Sep 07 20:31 : update: added /Eminem & Rihanna - The Monster.mp3
+Sep 07 20:31 : update: added /Paul de Senneville - Marriage d'amour.mp3
+Sep 07 20:31 : update: added /Gabriel Faure - Requiem op. 48.mp3
+Sep 07 20:31 : update: added /Vivaldi - Le Quattro Stagioni - Nigel Kennedy.mp3
+Sep 07 20:31 : update: added /Chopin - Etude op.10 no.4 (Torrent).mp3
+Sep 07 20:31 : update: added /Chopin - Etude op.25 no.11 (Winter Wind).mp3
+Sep 07 20:31 : update: added /Theishter - Boku No Hero Academia - You Can Become A Hero.mp3
+Sep 07 20:31 : update: added /Eminem & Beyonce - Walk on Water.mp3
+Sep 07 20:31 : update: added /Chopin - Ballade no.1 in G minor op.23 (Piano).mp3
+Sep 07 20:31 : update: added /KWAYE - I Go.mp3
+Sep 07 20:31 : update: added /Death Note - L's Theme.mp3
+Sep 07 20:31 : update: added /Einaudi - Experience.mp3
+Sep 07 20:31 : update: added /Joe Hisaishi - One Summer's Day.mp3
+Sep 07 20:31 : update: added /Mussorgsky - Pictures at an Exhibition.mp3
+Sep 07 20:31 : update: added /Boku No Hero Academia - OP 1.mp3
+Sep 07 20:31 : update: added /Tchaikovsky - The Nutcracker Suite op.71.mp3
+Sep 07 20:31 : update: added /Bizet - Carmen Opera.mp3
+Sep 07 20:31 : update: added /Eminem - When I'm Gone.mp3
+Sep 07 20:31 : update: added /Mozart - Sinfonia no.40 in Sol minore.mp3
+Sep 07 20:31 : update: added /2pac - Ambitionz az a ridah.mp3
+Sep 07 20:31 : update: added /Dvorak - Symphony no. 9 mvt. 4 - Allegro con fuoco.mp3
+Sep 07 20:31 : update: added /Johann Strauss - The Blue Danube Waltz.mp3
+Sep 07 20:31 : update: added /Einaudi - Nuvole Bianche.mp3
+Sep 07 20:31 : update: added /Rachmaninov - Symphony no. 2 op. 27 III. Adagio - Adagio - in A Major.mp3
+Sep 07 20:31 : update: added /Einaudi - Una Mattina.mp3
+Sep 07 20:31 : update: added /Schubert - Ave Maria.mp3
+Sep 07 20:31 : update: added /Death Note - Near's Theme A B C.mp3
+Sep 07 20:31 : update: added /Boku No Hero Academia - My Hero.mp3
+Sep 07 20:31 : update: added /Eevee - Seeds (Full BeatTape).mp3
+Sep 07 20:31 : update: added /Boku No Hero Academia - You Say Run v2.mp3
+Sep 07 20:31 : update: added /Jake Hill & Josh A - NORTH KOREA.mp3
+Sep 07 20:31 : update: added /Hans Zimmer - Inception - Time (Cello).mp3
+Sep 07 20:31 : update: added /Tchaikovsky - 1812 Overture.mp3
+Sep 07 20:31 : update: added /Billie Eilish - Lovely.mp3
+Sep 07 20:31 : update: added /Mozart - Lacrimosa.mp3
+Sep 07 20:31 : update: added /Paganini & Liszt - La Campanella.mp3
+Sep 07 20:31 : update: added /Edvard Grieg - In the Hall of the Mountain King.mp3
+Sep 07 20:31 : update: added /Naruto - Sadness and Sorrow (Piano).mp3
+Sep 07 20:31 : update: added /Satie - Gymnopedie no.1.mp3
+Sep 07 20:31 : update: added /Jinsang - Life (Full BeatTape).mp3
+Sep 07 20:31 : update: added /Attack on Titan - OP 2.mp3
+Sep 07 20:31 : update: added /Rachmaninov - Prelude in C sharp.mp3
+Sep 07 20:31 : update: added /Mozart - Turkish March.mp3
+Sep 07 20:31 : update: added /Dvorak - Romance for Piano and Violin op. 11.mp3
+Sep 07 20:31 : update: added /Theishter - Tokyo Ghoul - Glassy Sky.mp3
+Sep 07 20:31 : update: added /Kesha - Praying.mp3
+Sep 07 20:31 : update: added /Szymanowski - Prelude op.1 no.1.mp3
+Sep 07 20:31 : update: added /Jake Hill & Josh A - Better Of Dead.mp3
+Sep 07 20:31 : update: added /Paganini & Liszt - Etude no.6.mp3
+Sep 07 20:31 : update: added /Max Richter - On the Nature of Daylight.mp3
+Sep 07 20:31 : update: added /Jake Hill & Josh A - GUCCI COFFIN.mp3
+Sep 07 20:31 : update: added /Kill la Kill - Ad la lib.mp3
+Sep 07 20:31 : update: added /Edvard Grieg - Morning Mood.mp3
+Sep 07 20:31 : update: added /Naruto - Girei - Pain's Theme.mp3
+Sep 07 20:31 : update: added /2pac - California Love.mp3
+Sep 07 20:31 : update: added /Hans Zimmer - Interstellar - Main Theme (Piano).mp3
+Sep 07 20:31 : update: added /Rossini - William Tell Overture (Final).mp3
+Sep 07 20:31 : update: added /Wagner - Lohengrin - Prelude.mp3
+Sep 07 20:31 : update: added /Hellsing - Gradus Vita.mp3
+Sep 07 20:31 : update: added /Death Note - OP 2.mp3
+Sep 07 20:31 : update: added /Eminem - Not Afraid.mp3
+Sep 07 20:31 : update: added /Einaudi - Elegy for the Arctic.mp3
+Sep 07 20:31 : update: added /Mozart - String Serenade no. 13 - Eine Kleine Nachtmusik.mp3
+Sep 07 20:31 : update: added /Vivaldi - Inverno.mp3
+Sep 07 20:31 : update: added /Darling in the FranXX - Darling [ED 6].mp3
+Sep 07 20:31 : update: added /Debussy - Claire de Lune.mp3
+Sep 07 20:31 : update: added /Beethoven - Piano Sonata no.8 op.13 C minor (Pathetique).mp3
+Sep 07 20:31 : update: added /KWAYE - Lost In My Boots.mp3
+Sep 07 20:31 : update: added /Tchaikovsky - The Nutcracker - Dance of the Sugarplum Fairy.mp3
+Sep 07 20:31 : update: added /Chopin - Ballade no.1 in G minor op.23 (Piano & Violin).mp3
+Sep 07 20:31 : update: added /Mozart - Requiem.mp3
+Sep 07 20:31 : update: added /Hans Zimmer - Inception - Time (Normal).mp3
+Sep 07 20:31 : update: added /Beethoven - Violin Sonata no.9 (Kreutzer).mp3
+Sep 07 20:31 : update: added /Jinsang - Solitude (Full BeatTape).mp3
+Sep 07 20:31 : update: added /Arnold Schoenberg - Verklarte Nacht op.4 - Boulez.mp3
+Sep 07 20:31 : update: added /Animenz - Attack on Titan - Guren no Yumiya [OP].mp3
+Sep 07 20:31 : update: added /Beethoven - Ode to Joy.mp3
+Sep 07 20:31 : update: added /Jake Hill - WAKE UP.mp3
+Sep 07 20:31 : update: added /Scriabin - Scriabin - Etude op.8 no.12.mp3
+Sep 07 20:31 : update: added /Offenbach - Can can.mp3
+Sep 07 20:31 : update: added /Beethoven - Piano Sonata op.57 mvt.3 (Appassionata).mp3
+Sep 07 20:31 : update: added /Ravel - Ravel - Pavane pour une infante defunte.mp3
+Sep 07 20:31 : update: added /Verdi - Dies Irae.mp3
+Sep 07 20:31 : update: added /Paganini - Capriccio no.24.mp3
+Sep 07 20:31 : update: added /Attack on Titan - Vogel im Kafig.mp3
+Sep 07 20:31 : update: added /Bizet - Les Toreadors.mp3
+Sep 07 20:31 : update: added /Eminem - Fall.mp3
+Sep 07 20:31 : update: added /Rachmaninov - Piano Concerto no.2 mvt.2 (Minus Orchestra).mp3
+Sep 07 20:31 : update: added /Handel - Messiah.mp3
+Sep 07 20:31 : update: added /Wagner - Tannhauser Overture.mp3
+Sep 07 20:31 : update: added /Chopin - Etude op.10 no.12 (Revolutionary).mp3
+Sep 07 20:31 : client: [2] opened from 127.0.0.1:57992
+Sep 07 20:32 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 07 20:32 : client: [2] closed
+Sep 07 20:37 : client: [3] opened from 127.0.0.1:57994
+Sep 07 20:37 : client: [0] closed
+Sep 07 20:37 : client: [3] closed
+Sep 07 20:37 : client: [4] opened from 127.0.0.1:57996
+Sep 07 20:37 : client: [4] closed
+Sep 07 20:37 : client: [5] opened from 127.0.0.1:57998
+Sep 07 20:37 : client: [5] closed
+Sep 07 20:37 : client: [6] opened from 127.0.0.1:58000
+Sep 07 20:40 : client: [6] closed
+Sep 07 20:40 : client: [7] opened from 127.0.0.1:58002
+Sep 07 20:41 : client: [7] closed
+Sep 07 20:41 : client: [8] opened from 127.0.0.1:58004
+Sep 07 20:41 : client: [8] closed
+Sep 07 20:41 : client: [9] opened from 127.0.0.1:58006
+Sep 07 20:41 : client: [9] closed
+Sep 07 20:41 : client: [10] opened from 127.0.0.1:58008
+Sep 07 20:41 : client: [10] closed
+Sep 07 20:41 : client: [11] opened from 127.0.0.1:58010
+Sep 07 20:41 : client: [11] closed
+Sep 07 20:41 : client: [12] opened from 127.0.0.1:58012
+Sep 07 20:41 : client: [12] closed
+Sep 07 20:41 : client: [13] opened from 127.0.0.1:58014
+Sep 07 20:41 : client: [13] closed
+Sep 07 20:41 : client: [14] opened from 127.0.0.1:58016
+Sep 07 20:43 : client: [15] opened from 127.0.0.1:58020
+Sep 07 20:47 : client: [14] closed
+Sep 07 20:47 : client: [16] opened from 127.0.0.1:58022
+Sep 07 20:47 : client: [16] closed
+Sep 07 20:47 : client: [17] opened from 127.0.0.1:58024
+Sep 07 20:53 : client: [17] closed
+Sep 07 20:53 : client: [18] opened from 127.0.0.1:58074
+Sep 07 20:53 : player: played "Mahler - Quartet for Piano and Strings in A minor.mp3"
+Sep 07 20:55 : client: [19] opened from 127.0.0.1:58080
+Sep 07 20:55 : client: [18] closed
+Sep 07 20:55 : client: [19] closed
+Sep 07 20:55 : client: [20] opened from 127.0.0.1:58082
+Sep 07 20:56 : client: [20] closed
+Sep 07 20:56 : client: [21] opened from 127.0.0.1:58084
+Sep 07 20:56 : client: [21] closed
+Sep 07 20:56 : client: [22] opened from 127.0.0.1:58086
+Sep 07 20:57 : client: [22] closed
+Sep 07 20:57 : client: [23] opened from 127.0.0.1:58088
+Sep 07 20:57 : client: [24] opened from 127.0.0.1:58090
+Sep 07 20:57 : client: [23] closed
+Sep 07 20:58 : client: [24] closed
+Sep 07 20:58 : client: [25] opened from 127.0.0.1:58104
+Sep 07 20:58 : client: [25] closed
+Sep 07 20:58 : client: [26] opened from 127.0.0.1:58106
+Sep 07 20:59 : client: [26] closed
+Sep 07 20:59 : client: [27] opened from 127.0.0.1:58112
+Sep 07 20:59 : client: [27] closed
+Sep 07 20:59 : client: [28] opened from 127.0.0.1:58114
+Sep 07 21:00 : client: [29] opened from 127.0.0.1:58116
+Sep 07 21:00 : client: [28] closed
+Sep 07 21:00 : client: [30] opened from 127.0.0.1:58118
+Sep 07 21:00 : client: [29] closed
+Sep 07 21:00 : player: played "Max Richter - On the Nature of Daylight.mp3"
+Sep 07 21:02 : client: [30] closed
+Sep 07 21:02 : client: [31] opened from 127.0.0.1:58120
+Sep 07 21:04 : client: [32] opened from 127.0.0.1:58122
+Sep 07 21:04 : client: [31] closed
+Sep 07 21:05 : client: [33] opened from 127.0.0.1:58124
+Sep 07 21:05 : client: [32] closed
