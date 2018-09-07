@@ -567,6 +567,16 @@
       <command>~/bin/draw</command>
     </action>
   </keybind>
+  <keybind key="W-e">
+    <action name="Execute">
+      <command>~/bin/fehrand</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-e">
+    <action name="Execute">
+      <command>~/bin/fehrand-obg</command>
+    </action>
+  </keybind>
   <keybind key="W-y">
     <action name="Execute">
       <command>~/bin/polylefton</command>

@@ -166,7 +166,7 @@ set noshowcmd
 set shortmess+=csW
 set t_Co=256
 set notermguicolors
-colorscheme plain
+colorscheme wal
 set fillchars=fold:\ 
 set foldlevelstart=0
 set colorcolumn=0
@@ -197,6 +197,35 @@ set wildignore+=*.eot,*.otf,*.ttf,*.woff
 set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
 set wildignore+=*.swp,.lock,.DS_Store,._*
+
+" }}}
+
+" Fix base16 {{{
+
+if 1
+"if 0
+"  let g:limelight_conceal_ctermfg = 08
+"  let g:indentLine_color_term     = 08
+"  highlight HighlightedyankRegion ctermbg=08   ctermfg=none
+"  highlight GitGutterAdd          ctermbg=none ctermfg=08
+"  highlight GitGutterChange       ctermbg=none ctermfg=08
+"  highlight GitGutterDelete       ctermbg=none ctermfg=08
+"  highlight GitGutterChangeDelete ctermbg=none ctermfg=08
+"  highlight GitGutterDeleteLine   ctermbg=none ctermfg=08
+"  highlight StatusLine            ctermbg=none ctermfg=08   cterm=none
+"  highlight StatusLineNC          ctermbg=none ctermfg=08   cterm=none
+"  highlight Comment               ctermbg=none ctermfg=08   cterm=italic
+"  highlight TabLine               ctermbg=none ctermfg=08   cterm=none
+"  highlight TabLineSel            ctermbg=none ctermfg=01   cterm=bold
+"  highlight LineNr                ctermbg=none ctermfg=08
+"  highlight Visual                ctermbg=08   ctermfg=none
+"  highlight Pmenu                 ctermbg=none ctermfg=08
+"  highlight PmenuSel              ctermbg=none ctermfg=01   cterm=bold
+"  highlight Folded                ctermbg=none ctermfg=08   cterm=bold
+"  highlight Search                ctermbg=08   ctermfg=none
+"  highlight MatchParen            ctermbg=08   ctermfg=none
+"  highlight Whitespace            ctermbg=none ctermfg=08
+endif
 
 " }}}
 
@@ -284,6 +313,7 @@ nnoremap <silent> <leader>cc :call <SID>ColorColumnToggle()<cr>
 nnoremap <silent> <leader>q  :call <SID>QuickfixToggle()<cr>
 nnoremap <silent> <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
 nnoremap <silent> <leader>st :call <SID>StatusLineOn()<cr>
+nnoremap <silent> <leader>th :call <SID>ToggleTheme()<cr>
 nnoremap <silent> <leader>so :setlocal statusline=%#BarraVuota#<cr>
 
 " Visual mode.
@@ -320,6 +350,15 @@ augroup END
 " }}}
 
 " Functions {{{
+
+" Toggle theme.
+function! s:ToggleTheme()
+  if g:colors_name ==# "wal"
+    colorscheme plain
+  elseif g:colors_name ==# "plain"
+    colorscheme wal
+  endif
+endfunction
 
 " Status Line.
 function! s:StatusLineOn()
