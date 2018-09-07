@@ -19,7 +19,12 @@ set fish_greeting ""
 function fish_title; end
 
 # Envars.
-set -x PATH                   /home/matte/.phantomjs/bin /home/matte/bin /home/matte/.gem/ruby/2.5.0/bin $PATH
+if test $PREFIX
+  set -x PATH                 $HOME/bin $PATH
+else
+  set -x PATH                 /home/matte/.phantomjs/bin /home/matte/bin /home/matte/.gem/ruby/2.5.0/bin $PATH
+end
+
 set -x VISUAL                 /usr/bin/nvim
 set -x EDITOR                 /usr/bin/nvim
 set -x BROWSER                /usr/bin/chromium
