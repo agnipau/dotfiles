@@ -1,0 +1,32 @@
+# Material Lighter theme for Openbox.
+
+# Titlebar colors.
+window.*.title.bg.color:       #FAFAFA
+window.*.label.text.color:     #90A4AE
+window.*.button.*.image.color: #90A4AE
+
+# Titlebar.
+padding.width:             9
+padding.height:            9
+window.*.title.bg:         Solid Flat
+window.*.*.bg:             Parentrelative
+window.label.text.justify: Center
+
+# Borders.
+border.width:                0
+window.client.padding.width: 0
+window.handle.width:         0
+
+# Menu geometry.
+menu.border.width: 10
+menu.overlap.x:    -10
+
+# Menu colors.
+menu.items.bg:                Flat
+menu.items.bg.color:          #FAFAFA
+menu.items.text.color:        #90A4AE
+menu.items.active.bg:         Flat
+menu.items.active.bg.color:   #FAFAFA
+menu.items.active.text.color: #91B859
+menu.border.color:            #FAFAFA
+menu.separator.color:         #FAFAFA

@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:PulseAudio Output
 audio_device_state:1:my_fifo
 state: pause
-current: 1
-time: 0.405000
+current: 8
+time: 1.429000
 random: 0
 repeat: 1
 single: 1
@@ -14,4 +14,11 @@ mixrampdelay: -1.000000
 playlist_begin
 0:2pac - All Eyez On Me.mp3
 1:Boku No Hero Academia - OP 1.mp3
+2:Chopin - Etude op.10 no.12 (Revolutionary).mp3
+3:Paganini & Liszt - Etude no.6.mp3
+4:Paganini & Liszt - La Campanella.mp3
+5:Paganini & Liszt - La Campanella - Kissin.mp3
+6:Paganini - La Campanella - Vanessa Mae.mp3
+7:Paganini - Capriccio no.24.mp3
+8:Gabriel Faure - Requiem op. 48.mp3
 playlist_end

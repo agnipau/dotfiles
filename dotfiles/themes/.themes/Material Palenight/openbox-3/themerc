@@ -1,0 +1,32 @@
+# Material Palenight theme for Openbox.
+
+# Titlebar colors.
+window.*.title.bg.color:       #292D3E
+window.*.label.text.color:     #A6ACCD
+window.*.button.*.image.color: #A6ACCD
+
+# Titlebar.
+padding.width:             9
+padding.height:            9
+window.*.title.bg:         Solid Flat
+window.*.*.bg:             Parentrelative
+window.label.text.justify: Center
+
+# Borders.
+border.width:                0
+window.client.padding.width: 0
+window.handle.width:         0
+
+# Menu geometry.
+menu.border.width: 10
+menu.overlap.x:    -10
+
+# Menu colors.
+menu.items.bg:                Flat
+menu.items.bg.color:          #292D3E
+menu.items.text.color:        #676E95
+menu.items.active.bg:         Flat
+menu.items.active.bg.color:   #292D3E
+menu.items.active.text.color: #C3E88D
+menu.border.color:            #292D3E
+menu.separator.color:         #292D3E

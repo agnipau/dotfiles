@@ -11,6 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'matteoguarda/wal.vim'
 Plug 'matteoguarda/vim-colors-plain'
+Plug 'chrisbra/Colorizer'
 
 Plug 'junegunn/limelight.vim'
   nnoremap <leader>li :Limelight!!<cr>
@@ -259,6 +260,7 @@ nnoremap <silent> <leader>vn :next<cr>
 nnoremap <silent> <leader>vp :previous<cr>
 nnoremap <silent> <leader>te :terminal<cr>
 nnoremap <silent> <leader>tt :tabnew<cr>
+nnoremap <silent> <leader>ct :set termguicolors! <bar> ColorToggle<cr>
 nnoremap <leader>.  :<bs>
 
 " Normal mode (with <c>).
