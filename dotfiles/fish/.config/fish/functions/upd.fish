@@ -1,7 +1,7 @@
 function upd
   if test $PREFIX
     pkg update
-    plg upgrade
+    pkg upgrade
   else
     sudo pacman -Syu --noconfirm --color auto
   end
