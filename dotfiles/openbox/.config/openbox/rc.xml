@@ -28,7 +28,7 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Material Palenight</name>
+  <name>Material Default</name>
   <titleLayout>L</titleLayout>
   <cornerRadius>2</cornerRadius>
   <keepBorder>no</keepBorder>
@@ -510,6 +510,11 @@
   <keybind key="W-S-C-c">
     <action name="Execute">
       <command>~/bin/material --ocean</command>
+    </action>
+  </keybind>
+  <keybind key="W-v">
+    <action name="Execute">
+      <command>~/bin/material --lighter</command>
     </action>
   </keybind>
   <keybind key="W-space">
