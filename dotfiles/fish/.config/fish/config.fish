@@ -42,10 +42,14 @@ set -x MANPAGER               'nvim -c MANPAGER -'
 
 # fzf options.
 set -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
-set -x FZF_DEFAULT_OPTS    '--multi --inline-info --reverse --height 95%'
+set -x FZF_DEFAULT_OPTS "
+  --multi --inline-info --reverse --height 95%
+  --color fg:8,hl:1,fg+:1,bg+:0,hl+:7
+  --color info:0,prompt:1,spinner:1,pointer:1,marker:1
+"
 
-# Source themes colors.
-. $HOME/progetti/themes/sh/colors.fish
+# Source material-default colors.
+. $HOME/progetti/themes/sh/material-default.fish
 
 # Highlight groups.
 set fish_term256   0
@@ -58,11 +62,6 @@ set fish_color_cancel            --bold red
 set fish_color_search_match      --background=red
 set fish_pager_color_prefix      --bold red
 set fish_pager_color_completion  --bold white
-
-## Variable colors.
-set fish_color_autosuggestion    525252
-set fish_pager_color_progress    212121
-set fish_pager_color_description 6f6f6f
 
 # Auto calling functions.
 alias ls   'ls --group-directories-first --color=auto'
