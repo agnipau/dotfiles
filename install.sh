@@ -4,7 +4,8 @@
 # because this will destroy all your dotfiles.
 
 # UnStow all configs.
-for config in ./dotfiles/*; do
+cd ./dotfiles
+for config in *; do
   stow -D "$config"
 done
 
@@ -32,8 +33,8 @@ rm -rf "${HOME}/.config/alacritty" \
        "${HOME}/.config/zathura"
 
 # Stow all configs except some system configs.
-for config in ./dotfiles/*; do
-  if [[ "$config" != "./dotfiles/systemd" ]]; then
+for config in *; do
+  if [[ "$config" != systemd ]]; then
     stow -t "$HOME" "$config"
   fi
 done
