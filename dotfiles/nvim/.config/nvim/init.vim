@@ -10,15 +10,13 @@ nnoremap <leader>pi :PlugInstall<cr>
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'matteoguarda/wal.vim'
-Plug 'matteoguarda/vim-colors-plain'
+Plug 'matteoguarda/material.vim'
 Plug 'chrisbra/Colorizer'
 
 Plug 'junegunn/limelight.vim'
   nnoremap <leader>li :Limelight!!<cr>
-  let g:limelight_conceal_ctermfg = 13
 
 Plug 'Yggdroot/indentLine'
-  let g:indentLine_color_term = 13
   let g:indentLine_char = '▏'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -166,8 +164,8 @@ set laststatus=2
 set noshowcmd
 set shortmess+=csW
 set t_Co=256
-set notermguicolors
-colorscheme wal
+let g:material_variant = 'palenight'
+colorscheme material
 set fillchars=fold:\ 
 set foldlevelstart=0
 set colorcolumn=0
@@ -260,7 +258,7 @@ nnoremap <silent> <leader>vn :next<cr>
 nnoremap <silent> <leader>vp :previous<cr>
 nnoremap <silent> <leader>te :terminal<cr>
 nnoremap <silent> <leader>tt :tabnew<cr>
-nnoremap <silent> <leader>ct :set termguicolors! <bar> ColorToggle<cr>
+nnoremap <silent> <leader>ct :ColorToggle<cr>
 nnoremap <leader>.  :<bs>
 
 " Normal mode (with <c>).
@@ -286,7 +284,6 @@ nnoremap <silent> <leader>cc :call <SID>ColorColumnToggle()<cr>
 nnoremap <silent> <leader>q  :call <SID>QuickfixToggle()<cr>
 nnoremap <silent> <leader>g  :set operatorfunc=<SID>GrepOperator<cr>g@
 nnoremap <silent> <leader>st :call <SID>StatusLineOn()<cr>
-nnoremap <silent> <leader>th :call <SID>ToggleTheme()<cr>
 nnoremap <silent> <leader>so :setlocal statusline=%#BarraVuota#<cr>
 
 " Visual mode.
@@ -324,17 +321,8 @@ augroup END
 
 " Functions {{{
 
-" Toggle theme.
-function! s:ToggleTheme()
-  if g:colors_name ==# "wal"
-    colorscheme plain
-  elseif g:colors_name ==# "plain"
-    colorscheme wal
-  endif
-endfunction
-
 " Status Line.
-function! s:StatusLineOn()
+function! s:StatusLineStyle()
   setlocal statusline=
   setlocal statusline+=%=
   setlocal statusline+=\ %l\ /
@@ -342,7 +330,7 @@ function! s:StatusLineOn()
   setlocal statusline+=\ %t\ 
   setlocal statusline+=%(%m%)
 endfunction
-call <SID>StatusLineOn()
+call <SID>StatusLineStyle()
 
 " Toggle the final dot in the end of a sentence.
 function! s:ToggleFinalDot()

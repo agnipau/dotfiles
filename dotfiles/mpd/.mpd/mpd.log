@@ -8127,3 +8127,55 @@ Sep 08 20:10 : client: [173] opened from 127.0.0.1:50536
 Sep 08 20:10 : client: [172] closed
 Sep 08 20:10 : client: [174] opened from 127.0.0.1:50538
 Sep 08 20:10 : client: [173] closed
+Sep 08 20:17 : client: [175] opened from 127.0.0.1:50550
+Sep 08 20:17 : client: [174] closed
+Sep 08 20:19 : client: [176] opened from 127.0.0.1:50572
+Sep 08 20:19 : client: [175] closed
+Sep 08 20:20 : client: [176] closed
+Sep 08 20:20 : client: [177] opened from 127.0.0.1:50574
+Sep 08 20:20 : client: [177] closed
+Sep 08 20:20 : client: [178] opened from 127.0.0.1:50576
+Sep 08 20:20 : client: [179] opened from 127.0.0.1:50578
+Sep 08 20:20 : client: [178] closed
+Sep 08 20:27 : client: [179] closed
+Sep 08 20:27 : client: [180] opened from 127.0.0.1:50582
+Sep 08 20:28 : client: [180] closed
+Sep 08 20:28 : client: [181] opened from 127.0.0.1:50584
+Sep 08 20:30 : client: [181] closed
+Sep 08 20:30 : client: [182] opened from 127.0.0.1:50586
+Sep 08 20:32 : client: [182] closed
+Sep 08 20:32 : client: [183] opened from 127.0.0.1:50588
+Sep 08 21:33 : client: [184] opened from 127.0.0.1:50744
+Sep 08 21:40 : player: played "Gabriel Faure - Pavane op. 50.mp3"
+Sep 08 21:47 : player: played "Gabriel Faure - Pavane op. 50.mp3"
+Sep 08 21:55 : player: played "Gabriel Faure - Pavane op. 50.mp3"
+Sep 08 21:55 : client: [185] opened from 127.0.0.1:50856
+Sep 08 21:55 : client: [185] closed
+Sep 08 22:05 : player: played "Mahler - Quartet for Piano and Strings in A minor.mp3"
+Sep 08 22:15 : player: played "Mahler - Quartet for Piano and Strings in A minor.mp3"
+Sep 08 22:21 : client: [186] opened from 127.0.0.1:50894
+Sep 08 22:21 : client: [186] closed
+Sep 09 00:56 : player: played "Mahler - Quartet for Piano and Strings in A minor.mp3"
+Sep 09 00:57 : client: [184] closed
+Sep 09 00:59 : client: [187] opened from 127.0.0.1:51932
+Sep 09 00:59 : client: [187] closed
+Sep 09 00:59 : client: [188] opened from 127.0.0.1:51936
+Sep 09 00:59 : client: [188] closed
+Sep 09 00:59 : client: [189] opened from 127.0.0.1:51940
+Sep 09 00:59 : client: [189] closed
+Sep 09 00:59 : client: [190] opened from 127.0.0.1:51944
+Sep 09 00:59 : client: [190] closed
+Sep 09 00:59 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 09 00:59 : client: [0] opened from 127.0.0.1:51948
+Sep 09 00:59 : client: [1] opened from 127.0.0.1:51952
+Sep 09 00:59 : client: [1] closed
+Sep 09 00:59 : client: [2] opened from 127.0.0.1:51956
+Sep 09 00:59 : client: [2] closed
+Sep 09 00:59 : client: [3] opened from 127.0.0.1:51960
+Sep 09 00:59 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 09 01:00 : client: [3] closed
+Sep 09 01:00 : client: [4] opened from 127.0.0.1:51964
+Sep 09 01:00 : client: [4] closed
+Sep 09 01:00 : client: [5] opened from 127.0.0.1:51968
+Sep 09 01:00 : client: [5] closed
+Sep 09 01:00 : player: played "Animenz - Attack on Titan - Guren no Yumiya [OP].mp3"
