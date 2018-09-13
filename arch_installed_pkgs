@@ -52,6 +52,7 @@ device-mapper
 dhcpcd
 dialog
 diffutils
+dkms
 dmraid
 dnssec-anchors
 dosfstools
@@ -358,6 +359,7 @@ licenses
 linux
 linux-api-headers
 linux-firmware
+linux-headers
 llvm-libs
 lm_sensors
 lmdb
@@ -483,6 +485,7 @@ python-urllib3
 python-webencodings
 python-yaml
 python2
+qt4
 qt5-base
 qt5-declarative
 qt5-imageformats
@@ -511,6 +514,7 @@ ruby-rdoc
 rubygems
 s-nail
 scrot
+sdl
 sdl2
 sdl2_image
 sed
@@ -564,6 +568,8 @@ vamp-plugin-sdk
 vi
 vid.stab
 viewnior
+virtualbox
+virtualbox-host-dkms
 volume_key
 vulkan-icd-loader
 w3m

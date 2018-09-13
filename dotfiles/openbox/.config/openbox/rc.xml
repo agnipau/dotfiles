@@ -1090,7 +1090,7 @@
     </position>
     <size>
       <width>1226</width>
-      <height>646</height>
+      <height>626</height>
     </size>
   </application>
   <application class="supertux2">
@@ -1101,8 +1101,26 @@
     </position>
     <size>
       <width>1226</width>
-      <height>646</height>
+      <height>626</height>
     </size>
+  </application>
+  <application class="VirtualBox Manager">
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>626</height>
+    </size>
+  </application>
+  <application class="VirtualBox">
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
   </application>
 
   <!-- Center apps. -->
