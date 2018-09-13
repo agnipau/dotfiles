@@ -2,8 +2,8 @@
 !
 ! Resource file for xrdb.
 
-! Include pywal colors.
-#include "/home/matte/.cache/wal/colors.Xresources"
+! Source material-default colors.
+#include "/home/matte/progetti/themes/xresources/material-default.Xresources"
 
 ! Xft settings.
 Xft.antialias: true
@@ -13,24 +13,27 @@ Xft.rgba:      rgb
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintslight
 
-! Rofi settings.
-rofi.theme:             .cache/wal/colors-rofi-dark.rasi
-rofi.font:              Iosevka SS07 16
-rofi.separator-style:   none
-rofi.hide-scrollbar:    true
-rofi.fullscreen:        false
-rofi.location:          1
-rofi.fake-transparency: true
-rofi.columns:           1
-rofi.lines:             5
-rofi.yoffset:           30
-rofi.xoffset:           30
-rofi.width:             300
-rofi.padding:           25
+! URxvt settings.
+URxvt.cursorBlink:     0
+URxvt.font:            xft:Iosevka Term SS07:size=12:antialias=true:autohint=true
+URxvt.geometry:        80x24
+URxvt.internalBorder:  25
+URxvt.lineSpace:       0
+URxvt.letterSpace:     0
+URxvt.scrollBar:       false
+URxvt.thickness:       5
+URxvt.cursorUnderline: false
+URxvt.titleBar:        false
+URxvt.intensityStyles: false
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher:    chromium
+URxvt.matcher.button:  1
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
 
 ! xst settings.
-st.termname:          st-256color
-st.shell:             /bin/bash
+st.termname:          xst-256color
+st.shell:             /usr/bin/fish
 st.font:              Iosevka Term SS07:size=12:antialias=true:autohint=true;
 st.borderpx:          25
 st.cursorshape:       2
@@ -46,3 +49,18 @@ st.blinktimeout:      800
 st.bellvolume:        0
 st.prompt_char:       $
 st.opacity:           255
+
+! Rofi settings.
+rofi.theme:             progetti/themes/rofi/material-default.rasi
+rofi.font:              Iosevka SS07 16
+rofi.separator-style:   none
+rofi.hide-scrollbar:    true
+rofi.fullscreen:        false
+rofi.location:          1
+rofi.fake-transparency: true
+rofi.columns:           1
+rofi.lines:             5
+rofi.yoffset:           30
+rofi.xoffset:           35
+rofi.width:             300
+rofi.padding:           25
