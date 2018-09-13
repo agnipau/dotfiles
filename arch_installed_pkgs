@@ -19,12 +19,10 @@ audiofile
 autoconf
 automake
 avahi
-babl
 bash
 bc
 binutils
 bison
-blas
 boost-libs
 brotli
 btrfs-progs
@@ -96,13 +94,11 @@ gcr
 gd
 gdbm
 gdk-pixbuf2
-gegl
 geoclue2
 gettext
 ghc-libs
 giblib
 giflib
-gimp
 girara
 git
 glew
@@ -123,7 +119,6 @@ grep
 groff
 grub
 gsettings-desktop-schemas
-gsfonts
 gsm
 gst-plugins-base-libs
 gstreamer
@@ -167,12 +162,10 @@ iana-etc
 icu
 id3lib
 id3v2
-ilmbase
 imagemagick
 imlib2
 inetutils
 iniparser
-intel-tbb
 iproute2
 iptables
 iputils
@@ -180,9 +173,14 @@ iso-codes
 iw
 jack
 jasper
+java-environment-common
+java-runtime-common
 jbig2dec
+jdk10-openjdk
 jemalloc
 jfsutils
+jre10-openjdk
+jre10-openjdk-headless
 js52
 json-c
 json-glib
@@ -193,12 +191,9 @@ kmod
 krb5
 l-smash
 lame
-lapack
-lcms
 lcms2
 ldb
 ldns
-lensfun
 less
 libaio
 libao
@@ -229,7 +224,6 @@ libcups
 libcurl-gnutls
 libdaemon
 libdatrie
-libde265
 libdiscid
 libdrm
 libdvdnav
@@ -244,14 +238,11 @@ libffi
 libfontenc
 libgcrypt
 libgdata
-libgexiv2
-libglade
 libglvnd
 libgme
 libgpg-error
 libgudev
 libgusb
-libheif
 libibus
 libice
 libid3tag
@@ -273,7 +264,7 @@ libmnl
 libmodplug
 libmpc
 libmpdclient
-libmypaint
+libnet
 libnfs
 libnftnl
 libnghttp2
@@ -292,7 +283,6 @@ libproxy
 libpsl
 libpulse
 libraqm
-libraw
 libraw1394
 librsvg
 libsamplerate
@@ -304,7 +294,6 @@ libsm
 libsndfile
 libsoup
 libsoxr
-libspiro
 libssh
 libssh2
 libsynctex
@@ -332,7 +321,6 @@ libvterm
 libwacom
 libwbclient
 libwebp
-libwmf
 libx11
 libxau
 libxaw
@@ -374,7 +362,6 @@ llvm-libs
 lm_sensors
 lmdb
 logrotate
-lua
 lua52
 luajit
 lvm2
@@ -389,7 +376,6 @@ man-db
 man-pages
 mdadm
 mesa
-metis
 minizip
 mkinitcpio
 mkinitcpio-busybox
@@ -399,7 +385,6 @@ mpfr
 mpv
 msgpack-c
 mtdev
-mypaint-brushes
 nano
 ncmpcpp
 ncurses
@@ -420,7 +405,7 @@ nvidia
 nvidia-utils
 openal
 opencore-amr
-openexr
+openjdk10-src
 openjpeg2
 openresolv
 openssh
@@ -446,20 +431,18 @@ perl-error
 perl-mailtools
 perl-timedate
 perl-uri
+physfs
 pinentry
 pixman
 pkgconf
 polkit
 poppler
-poppler-data
 popt
 procps-ng
 protobuf
 psmisc
 pulseaudio
 pyalpm
-pygobject2-devel
-pygtk
 pyqt5-common
 python
 python-appdirs
@@ -500,8 +483,6 @@ python-urllib3
 python-webencodings
 python-yaml
 python2
-python2-cairo
-python2-gobject2
 qt5-base
 qt5-declarative
 qt5-imageformats
@@ -531,6 +512,7 @@ rubygems
 s-nail
 scrot
 sdl2
+sdl2_image
 sed
 semver
 shadow
@@ -548,7 +530,7 @@ sqlite
 startup-notification
 stow
 sudo
-suitesparse
+supertux
 sysfsutils
 systemd
 systemd-sysvcompat
@@ -598,6 +580,7 @@ woff2
 wpa_supplicant
 x264
 x265
+xbitmaps
 xcb-proto
 xcb-util
 xcb-util-cursor
@@ -615,6 +598,7 @@ xfconf
 xfsprogs
 xkeyboard-config
 xorg-bdftopcf
+xorg-luit
 xorg-mkfontdir
 xorg-mkfontscale
 xorg-server
@@ -631,6 +615,7 @@ xorg-xrdb
 xorg-xset
 xorgproto
 xsel
+xterm
 xvidcore
 xz
 yajl

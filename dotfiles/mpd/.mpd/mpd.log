@@ -8179,3 +8179,8 @@ Sep 09 01:00 : client: [4] closed
 Sep 09 01:00 : client: [5] opened from 127.0.0.1:51968
 Sep 09 01:00 : client: [5] closed
 Sep 09 01:00 : player: played "Animenz - Attack on Titan - Guren no Yumiya [OP].mp3"
+Sep 13 16:08 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 13 16:08 : client: [0] opened from 127.0.0.1:56150
+Sep 13 16:08 : client: [1] opened from 127.0.0.1:56154
+Sep 13 16:08 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 13 16:08 : client: [1] closed

@@ -1082,12 +1082,6 @@
       <height>590</height>
     </size>
   </application>
-  <application name="flt_wifi">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-  </application>
   <application class="mpv">
     <decor>no</decor>
     <position force="yes">
@@ -1096,7 +1090,18 @@
     </position>
     <size>
       <width>1226</width>
-      <height>590</height>
+      <height>646</height>
+    </size>
+  </application>
+  <application class="supertux2">
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>646</height>
     </size>
   </application>
 
@@ -1104,8 +1109,8 @@
   <!--
   Can't do <application class="*">
                   <position force="yes">
-		    <x>center</x>
-		    <y>center</y>
+                    <x>center</x>
+                    <y>center</y>
                   </position>
                 </application>
   because in this way drawing terminals will not work.
@@ -1158,13 +1163,6 @@
     </position>
   </application>
   <application class="Zathura">
-    <decor>no</decor>
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-  </application>
-  <application class="Code">
     <decor>no</decor>
     <position force="yes">
       <x>center</x>
