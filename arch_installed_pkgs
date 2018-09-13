@@ -114,6 +114,7 @@ gmp
 gnome-online-accounts
 gnupg
 gnutls
+go-pie
 gpgme
 gpm
 gptfdisk
@@ -580,6 +581,7 @@ v4l-utils
 vamp-plugin-sdk
 vi
 vid.stab
+viewnior
 volume_key
 vulkan-icd-loader
 w3m

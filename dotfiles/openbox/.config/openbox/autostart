@@ -1,4 +1,5 @@
 xrandr --dpi 96
 openbox --restart
 compton -b --config ~/.config/compton/compton.conf
-~/bin/fehrand
+~/bin/material --default
+~/bin/polyon

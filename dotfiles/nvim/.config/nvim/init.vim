@@ -124,8 +124,8 @@ Plug 'lambdalisue/vim-manpager'
 Plug 'dag/vim-fish'
 
 Plug 'airblade/vim-gitgutter'
-  nnoremap <silent> +h :GitGutterNextHunk<cr>
-  nnoremap <silent> èh :GitGutterPrevHunk<cr>
+  nnoremap <silent> ìo :GitGutterNextHunk<cr>
+  nnoremap <silent> ìi :GitGutterPrevHunk<cr>
   nnoremap <silent> <leader>gg :set updatetime=100 <bar> GitGutterEnable<cr>
   nnoremap <silent> <leader>go :GitGutterDisable <bar> set updatetime=4000<cr>
   let g:gitgutter_enabled                        = 0
