@@ -16,7 +16,7 @@ fish_default_key_bindings
 set fish_greeting ""
 
 # Suppress the window title.
-function fish_title; end
+#function fish_title; end
 
 # Envars.
 if test $PREFIX

@@ -995,13 +995,14 @@
   <!-- Center apps and change size. -->
   <application class="Chromium">
     <desktop>2</desktop>
+    <decor>no</decor>
     <position force="yes">
       <x>center</x>
       <y>center</y>
     </position>
     <size>
       <width>1226</width>
-      <height>590</height>
+      <height>648</height>
     </size>
   </application>
   <application name="musica">
