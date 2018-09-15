@@ -16,7 +16,7 @@ function _fzf_nvim
   commandline -f repaint
 end
 
-bind \cn _fzf_nvim
+bind \ck _fzf_nvim
 
 # Change directory quickly with fzf.
 function _fzf_cd

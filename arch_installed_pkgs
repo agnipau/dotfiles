@@ -16,6 +16,7 @@ at-spi2-core
 atk
 attr
 audiofile
+audit
 autoconf
 automake
 avahi
@@ -159,6 +160,7 @@ hub
 hunspell
 hwids
 hyphen
+i3lock
 iana-etc
 icu
 id3lib
@@ -232,6 +234,7 @@ libdvdread
 libedit
 libelf
 libepoxy
+libev
 libevdev
 libevent
 libexif
@@ -384,6 +387,7 @@ mkinitcpio-busybox
 mpc
 mpd
 mpfr
+mps-youtube
 mpv
 msgpack-c
 mtdev
@@ -466,6 +470,7 @@ python-markupsafe
 python-msgpack
 python-neovim
 python-packaging
+python-pafy
 python-pip
 python-progress
 python-pygments
@@ -523,7 +528,6 @@ shadow
 shared-mime-info
 shellcheck
 simplescreenrecorder
-slock
 slop
 smbclient
 snappy

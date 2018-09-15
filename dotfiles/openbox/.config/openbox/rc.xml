@@ -599,7 +599,7 @@
   <!-- Special keys keybindings. -->
   <keybind key="W-F1">
     <action name="Execute">
-      <command>slock</command>
+      <command>~/bin/locker</command>
     </action>
   </keybind>
   <keybind key="W-S-F1">
