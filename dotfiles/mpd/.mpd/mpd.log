@@ -8695,3 +8695,417 @@ Sep 15 20:52 : client: [1] opened from 127.0.0.1:37432
 Sep 15 20:52 : client: [0] closed
 Sep 15 21:18 : client: [1] closed
 Sep 15 21:18 : client: [2] opened from 127.0.0.1:37484
+Sep 16 10:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 16 10:17 : update: added /Mozart - Aria della regina della notte.mp3
+Sep 16 10:17 : update: added /Vivaldi - La Follia.mp3
+Sep 16 10:17 : update: added /Liszt - Un Sospiro.mp3
+Sep 16 10:17 : update: added /Faure - Apres un Reve for Cello and Piano.mp3
+Sep 16 10:17 : update: added /Grieg - Peer Gynt Suite No. 1.mp3
+Sep 16 10:17 : update: added /Debussy - Reverie.mp3
+Sep 16 10:17 : client: [0] opened from 127.0.0.1:41030
+Sep 16 10:17 : update: added /Chopin - Piano Concerto in E minor Op. 11.mp3
+Sep 16 10:17 : update: added /Smetana - La Moldava.mp3
+Sep 16 10:17 : update: added /Bach - Toccata e Fuga Re minore.mp3
+Sep 16 10:17 : update: added /Beethoven - Symphony No. 2.mp3
+Sep 16 10:17 : update: added /Shostakovich - Waltz No. 2.mp3
+Sep 16 10:17 : update: added /Mahler - Piano Quartet in A minor.mp3
+Sep 16 10:17 : update: added /Beethoven - String Quartet No. 14 Op. 131 in C sharp.mp3
+Sep 16 10:17 : update: added /Stravinsky - Firebird Suite (Infernal Dance).mp3
+Sep 16 10:17 : update: added /Beethoven - Symphony No. 5.mp3
+Sep 16 10:17 : update: added /Liszt - Hungarian Rhapsody No. 2.mp3
+Sep 16 10:17 : update: added /Tchaikovsky - Waltz of the Flowers.mp3
+Sep 16 10:17 : update: added /Rachmaninov - Little Red Riding Hood - Etude Tableau.mp3
+Sep 16 10:17 : update: added /Vivaldi - Le Quattro Stagioni - Autunno.mp3
+Sep 16 10:17 : update: added /Paganini - Capriccio No. 5.mp3
+Sep 16 10:17 : update: added /Liszt - Etude No. 6.mp3
+Sep 16 10:17 : update: added /Paganini - Capriccio No. 24.mp3
+Sep 16 10:17 : update: added /Schubert - Serenade.mp3
+Sep 16 10:17 : update: added /Vivaldi - Cantata Cessate, omai cessate.mp3
+Sep 16 10:17 : update: added /Beethoven - Symphony No. 4.mp3
+Sep 16 10:17 : update: added /Rachmaninov - Symphony No. 2 Op. 27 Mvt. 3 - Adagio Adagio.mp3
+Sep 16 10:17 : update: added /Samuel Barber - Agnus Dei.mp3
+Sep 16 10:17 : update: added /Chopin - Etude Op. 25 No. 5 (Wrong Note).mp3
+Sep 16 10:17 : update: added /Mussorgsky - Night on Bald Mountain.mp3
+Sep 16 10:17 : update: added /Haendel - Sarabande.mp3
+Sep 16 10:17 : update: added /Tchaikovsky - Valse Sentimentale.mp3
+Sep 16 10:17 : update: added /Beethoven - Egmont Overture.mp3
+Sep 16 10:17 : update: added /Mozart - Sinfonia No. 40 in Sol minore.mp3
+Sep 16 10:17 : update: added /Johann Strauss II - The Blue Danube Waltz.mp3
+Sep 16 10:17 : update: added /Wagner - Faust.mp3
+Sep 16 10:17 : update: added /Brahms - Hungarian Dance No. 5 (Hungarian Symphony Orchestra Budapest).mp3
+Sep 16 10:17 : update: added /Satie - Gymnopedie No. 1.mp3
+Sep 16 10:17 : update: added /Chopin - Etude Op. 10 No. 4 (Torrent).mp3
+Sep 16 10:17 : update: added /Kreisler - Liebesleid (Love's Sorrow) (Piano and Violin).mp3
+Sep 16 10:17 : update: added /Chopin - Fantaisie Impromptu Op. 66.mp3
+Sep 16 10:17 : update: added /Tchaikovsky - The Nutcracker Suite Op. 71a.mp3
+Sep 16 10:17 : update: added /Mahler - Adagietto Symphony 5 (Karajan).mp3
+Sep 16 10:17 : update: added /Tchaikovsky - Sleeping Beauty (Piano 4 Hands) (Rachmaninov's arr.).mp3
+Sep 16 10:17 : client: [1] opened from 127.0.0.1:41034
+Sep 16 10:17 : update: added /Rossini - William Tell Overture.mp3
+Sep 16 10:17 : update: added /Tchaikovsky - Waltz Op. 40 No. 6.mp3
+Sep 16 10:17 : update: added /Chopin - Nocturne in E flat major Op. 9 No. 2 (Tiffany Poon).mp3
+Sep 16 10:17 : update: added /Scriabin - Scriabin - Etude Op. 8 No. 12.mp3
+Sep 16 10:17 : update: added /Beethoven - Symphony No. 1.mp3
+Sep 16 10:17 : update: added /Beethoven - Rondo e Capriccio.mp3
+Sep 16 10:17 : update: added /Giazotto - Adagio (Hauser).mp3
+Sep 16 10:17 : update: added /Beethoven - Symphony No. 7.mp3
+Sep 16 10:17 : update: added /Beethoven - Symphony No. 6.mp3
+Sep 16 10:17 : update: added /Chopin - Etude Op. 25 No. 11 (Winter Wind).mp3
+Sep 16 10:17 : update: added /Chopin - Ballade No. 1 in G minor Op. 23 (Piano and Violin).mp3
+Sep 16 10:17 : update: added /Pachelbel - Canon in D (Piano).mp3
+Sep 16 10:17 : update: added /Rachmaninov - Piano Concerto No. 2 (Kissin).mp3
+Sep 16 10:17 : update: added /Chopin - Waltz in A minor Op. Posth.mp3
+Sep 16 10:17 : update: added /Faure - Requiem Op. 48.mp3
+Sep 16 10:17 : update: added /Saint Saens - Danse Macabre.mp3
+Sep 16 10:17 : update: added /Wagner - Tristan und Isolde - Prelude.mp3
+Sep 16 10:17 : update: added /Rachmaninov - Prelude Op. 23 No. 5.mp3
+Sep 16 10:17 : update: added /Szymanowski - Prelude Op. 1 No. 1.mp3
+Sep 16 10:17 : update: added /Beethoven - Symphony No. 8.mp3
+Sep 16 10:17 : update: added /Vivaldi - Le Quattro Stagioni - Estate.mp3
+Sep 16 10:17 : update: added /Dvorak - Symphony No. 9 Mvt. 4 - Allegro con fuoco.mp3
+Sep 16 10:17 : update: added /Ravel - Pavane pour une infante defunte.mp3
+Sep 16 10:17 : update: added /Liszt - Liebestraum (Love Dream).mp3
+Sep 16 10:17 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto (Nigel Kennedy).mp3
+Sep 16 10:17 : update: added /Bach - Prelude in C major BWV846.mp3
+Sep 16 10:17 : update: added /Bach - Aria sulla quarta corda (Piano).mp3
+Sep 16 10:17 : update: added /Saint Saens - Toccata Op. 72 No. 3.mp3
+Sep 16 10:17 : update: added /Saint Saens - Introduction and Rondo Capriccioso.mp3
+Sep 16 10:17 : update: added /Beethoven - Piano Sonata Op. 57 Op. 3 (Appassionata).mp3
+Sep 16 10:17 : update: added /Kreisler - Liebesleid (Love's Sorrow) (Piano).mp3
+Sep 16 10:17 : update: added /Debussy - Arabesque No. 1 and No. 2.mp3
+Sep 16 10:17 : update: added /Liszt - Totentanz.mp3
+Sep 16 10:17 : update: added /Tarrega - Capricho arabe.mp3
+Sep 16 10:17 : update: added /Paul de Senneville - Marriage d'amour.mp3
+Sep 16 10:17 : update: added /Dvorak - The Water Goblin.mp3
+Sep 16 10:17 : update: added /Faure - Pavane Op. 50.mp3
+Sep 16 10:17 : update: added /Vivaldi - Violin Concerto in A Minor RV356.mp3
+Sep 16 10:17 : update: added /Vivaldi - Le Quattro Stagioni - Primavera.mp3
+Sep 16 10:17 : update: added /Mozart - Don Giovanni (Finale).mp3
+Sep 16 10:17 : update: added /Mussorgsky - Pictures at an Exhibition.mp3
+Sep 16 10:17 : update: added /Vivaldi - Concerto for 4 Violins in B minor RV580.mp3
+Sep 16 10:17 : update: added /Beethoven - Piano Sonata No. 17 Op. 3 (Tempest).mp3
+Sep 16 10:17 : update: added /Dvorak - Song to the Moon.mp3
+Sep 16 10:17 : update: added /Beethoven - Symphony No. 9.mp3
+Sep 16 10:17 : update: added /Tchaikovsky - Hymn of the Cherubim (USSR Ministry Of Culture Chamber Choir).mp3
+Sep 16 10:17 : update: added /Schubert - Ave Maria.mp3
+Sep 16 10:17 : update: added /Tchaikovsky - Pas de Deux (The Nutcracker).mp3
+Sep 16 10:17 : update: added /Chopin - Ballade No. 1 in G minor Op. 23 (Piano).mp3
+Sep 16 10:17 : update: added /Liszt - Transcendental Etude No. 4 (Mazeppa).mp3
+Sep 16 10:17 : update: added /Mozart - Lacrimosa.mp3
+Sep 16 10:17 : update: added /Beethoven - Moonlight Sonata Op. 27 No. 2 Op. 3.mp3
+Sep 16 10:17 : update: added /Rachmaninov - Romance.mp3
+Sep 16 10:17 : update: added /Rachmaninov - Prelude in C sharp.mp3
+Sep 16 10:17 : update: added /Mozart - Turkish March.mp3
+Sep 16 10:17 : update: added /Tchaikovsky - Waltz No. 9 Op. 40.mp3
+Sep 16 10:17 : update: added /Faure - Sicilienne for Cello and Piano Op. 78.mp3
+Sep 16 10:17 : update: added /Schoenberg - Verklarte Nacht Op. 4 - Boulez.mp3
+Sep 16 10:17 : update: added /Tchaikovsky - The Nutcracker Suite Op. 71.mp3
+Sep 16 10:17 : update: added /Max Richter - On the Nature of Daylight.mp3
+Sep 16 10:17 : update: added /Beethoven - Moonlight Sonata Op. 27 No. 2 Op. 1-2-3.mp3
+Sep 16 10:17 : update: added /Beethoven - Violin Sonata No. 9 (Kreutzer).mp3
+Sep 16 10:17 : update: added /Rachmaninov - The Isle of the Dead - Symphonic poem Op. 29.mp3
+Sep 16 10:17 : update: added /Wagner - Lohengrin - Prelude.mp3
+Sep 16 10:17 : update: added /Rachmaninov - Praise the Lord.mp3
+Sep 16 10:17 : update: added /Beethoven - Piano Sonata No. 8 Op. 13 in C minor (Pathetique).mp3
+Sep 16 10:17 : update: added /Tchaikovsky - 1812 Overture (Claudio Abbado).mp3
+Sep 16 10:17 : update: added /Debussy - Claire de Lune.mp3
+Sep 16 10:17 : update: added /Vivaldi - Le Quattro Stagioni - Inverno.mp3
+Sep 16 10:17 : update: added /Paganini - La Campanella (Vanessa Mae).mp3
+Sep 16 10:17 : update: added /Vivaldi - Concerto for Two Violins in A Minor RV522.mp3
+Sep 16 10:17 : update: added /Mozart - Requiem.mp3
+Sep 16 10:17 : update: added /Wagner - Ride of the Valkyries.mp3
+Sep 16 10:17 : update: added /Chopin - Etude Op. 10 No. 12 (Revolutionary).mp3
+Sep 16 10:17 : update: added /Beethoven - Symphony No. 3.mp3
+Sep 16 10:17 : update: added /Verdi - Dies Irae.mp3
+Sep 16 10:17 : update: added /Vivaldi - Filiae maestae Jerusalem RV638.mp3
+Sep 16 10:17 : update: added /Liszt - La Campanella - Kissin.mp3
+Sep 16 10:17 : update: added /Wagner - Tannhauser Overture.mp3
+Sep 16 10:17 : update: added /Vivaldi - Le Quattro Stagioni (Nigel Kennedy).mp3
+Sep 16 10:17 : client: [1] closed
+Sep 16 10:17 : client: [2] opened from 127.0.0.1:41054
+Sep 16 10:17 : client: [2] closed
+Sep 16 10:17 : client: [3] opened from 127.0.0.1:41058
+Sep 16 10:17 : client: [3] closed
+Sep 16 10:18 : client: [4] opened from 127.0.0.1:41062
+Sep 16 10:18 : client: [4] closed
+Sep 16 10:18 : client: [5] opened from 127.0.0.1:41066
+Sep 16 10:18 : client: [5] closed
+Sep 16 10:18 : client: [6] opened from 127.0.0.1:41070
+Sep 16 10:18 : client: [6] closed
+Sep 16 10:18 : client: [7] opened from 127.0.0.1:41074
+Sep 16 10:19 : client: [7] closed
+Sep 16 10:19 : client: [8] opened from 127.0.0.1:41078
+Sep 16 10:19 : client: [8] closed
+Sep 16 10:19 : client: [9] opened from 127.0.0.1:41082
+Sep 16 10:19 : client: [9] closed
+Sep 16 10:19 : client: [10] opened from 127.0.0.1:41086
+Sep 16 10:19 : client: [10] closed
+Sep 16 10:19 : client: [11] opened from 127.0.0.1:41090
+Sep 16 10:19 : client: [11] closed
+Sep 16 10:19 : client: [12] opened from 127.0.0.1:41094
+Sep 16 10:19 : client: [12] closed
+Sep 16 10:19 : client: [13] opened from 127.0.0.1:41098
+Sep 16 10:19 : client: [13] closed
+Sep 16 10:19 : client: [14] opened from 127.0.0.1:41102
+Sep 16 10:19 : client: [14] closed
+Sep 16 10:19 : client: [15] opened from 127.0.0.1:41106
+Sep 16 10:19 : client: [15] closed
+Sep 16 10:20 : client: [16] opened from 127.0.0.1:41110
+Sep 16 10:20 : client: [16] closed
+Sep 16 10:20 : client: [17] opened from 127.0.0.1:41114
+Sep 16 10:20 : client: [17] closed
+Sep 16 10:20 : client: [18] opened from 127.0.0.1:41118
+Sep 16 10:20 : client: [18] closed
+Sep 16 10:20 : client: [19] opened from 127.0.0.1:41122
+Sep 16 10:20 : client: [19] closed
+Sep 16 10:20 : client: [20] opened from 127.0.0.1:41126
+Sep 16 10:20 : client: [20] closed
+Sep 16 10:20 : client: [21] opened from 127.0.0.1:41130
+Sep 16 10:20 : client: [21] closed
+Sep 16 10:20 : client: [22] opened from 127.0.0.1:41134
+Sep 16 10:20 : client: [22] closed
+Sep 16 10:20 : client: [23] opened from 127.0.0.1:41138
+Sep 16 10:21 : client: [23] closed
+Sep 16 10:21 : client: [24] opened from 127.0.0.1:41142
+Sep 16 10:21 : client: [24] closed
+Sep 16 10:21 : client: [25] opened from 127.0.0.1:41146
+Sep 16 10:21 : client: [25] closed
+Sep 16 10:21 : client: [26] opened from 127.0.0.1:41150
+Sep 16 10:21 : client: [26] closed
+Sep 16 10:21 : client: [27] opened from 127.0.0.1:41154
+Sep 16 10:21 : client: [27] closed
+Sep 16 10:21 : client: [28] opened from 127.0.0.1:41158
+Sep 16 10:21 : client: [28] closed
+Sep 16 10:21 : client: [29] opened from 127.0.0.1:41162
+Sep 16 10:21 : client: [29] closed
+Sep 16 10:21 : client: [30] opened from 127.0.0.1:41166
+Sep 16 10:21 : client: [30] closed
+Sep 16 10:21 : client: [31] opened from 127.0.0.1:41170
+Sep 16 10:21 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 16 10:31 : player: played "Vivaldi - Concerto for Two Violins in A Minor RV522.mp3"
+Sep 16 10:34 : client: [32] opened from 127.0.0.1:41506
+Sep 16 10:34 : client: [32] closed
+Sep 16 10:40 : client: [33] opened from 127.0.0.1:41570
+Sep 16 10:40 : client: [33] closed
+Sep 16 10:48 : player: played "Vivaldi - Concerto for Two Violins in A Minor RV522.mp3"
+Sep 16 11:05 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 16 14:19 : client: [34] opened from 127.0.0.1:42738
+Sep 16 14:19 : client: [34] closed
+Sep 16 14:21 : client: [0] closed
+Sep 16 14:28 : player: played "Vivaldi - Concerto for Two Violins in A Minor RV522.mp3"
+Sep 16 14:29 : client: [35] opened from 127.0.0.1:42860
+Sep 16 14:29 : client: [35] closed
+Sep 16 14:38 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"
+Sep 16 14:48 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"
+Sep 16 14:53 : client: [36] opened from 127.0.0.1:42976
+Sep 16 15:03 : client: [36] closed
+Sep 16 15:03 : client: [37] opened from 127.0.0.1:43168
+Sep 16 15:03 : client: [37] closed
+Sep 16 15:04 : client: [38] opened from 127.0.0.1:43170
+Sep 16 15:04 : client: [38] closed
+Sep 16 15:04 : client: [39] opened from 127.0.0.1:43178
+Sep 16 15:06 : client: [39] closed
+Sep 16 15:06 : client: [40] opened from 127.0.0.1:43180
+Sep 16 15:06 : client: [40] closed
+Sep 16 15:06 : client: [41] opened from 127.0.0.1:43182
+Sep 16 15:07 : client: [41] closed
+Sep 16 15:07 : client: [42] opened from 127.0.0.1:43184
+Sep 16 15:07 : client: [42] closed
+Sep 16 15:07 : client: [43] opened from 127.0.0.1:43186
+Sep 16 15:07 : client: [43] closed
+Sep 16 15:07 : client: [44] opened from 127.0.0.1:43188
+Sep 16 15:07 : client: [44] closed
+Sep 16 15:07 : client: [45] opened from 127.0.0.1:43190
+Sep 16 15:07 : client: [45] closed
+Sep 16 15:07 : client: [46] opened from 127.0.0.1:43192
+Sep 16 15:07 : client: [46] closed
+Sep 16 15:07 : client: [47] opened from 127.0.0.1:43194
+Sep 16 15:07 : client: [47] closed
+Sep 16 15:07 : client: [48] opened from 127.0.0.1:43196
+Sep 16 15:07 : client: [48] closed
+Sep 16 15:07 : client: [49] opened from 127.0.0.1:43198
+Sep 16 15:08 : client: [49] closed
+Sep 16 15:08 : client: [50] opened from 127.0.0.1:43200
+Sep 16 15:08 : client: [50] closed
+Sep 16 15:08 : client: [51] opened from 127.0.0.1:43202
+Sep 16 15:08 : client: [51] closed
+Sep 16 15:08 : client: [52] opened from 127.0.0.1:43212
+Sep 16 15:27 : player: played "Vivaldi - Le Quattro Stagioni (Nigel Kennedy).mp3"
+Sep 16 15:50 : client: [52] closed
+Sep 16 15:56 : client: [53] opened from 127.0.0.1:43282
+Sep 16 15:56 : client: [53] closed
+Sep 16 15:57 : client: [54] opened from 127.0.0.1:43304
+Sep 16 15:57 : client: [54] closed
+Sep 16 16:09 : player: played "Vivaldi - Le Quattro Stagioni (Nigel Kennedy).mp3"
+Sep 16 16:18 : client: [55] opened from 127.0.0.1:43378
+Sep 16 16:18 : client: [55] closed
+Sep 16 16:18 : client: [56] opened from 127.0.0.1:43380
+Sep 16 16:19 : client: [56] closed
+Sep 16 16:19 : client: [57] opened from 127.0.0.1:43382
+Sep 16 16:19 : client: [57] closed
+Sep 16 16:19 : client: [58] opened from 127.0.0.1:43392
+Sep 16 16:20 : player: played "Vivaldi - Le Quattro Stagioni - Autunno.mp3"
+Sep 16 16:20 : client: [58] closed
+Sep 16 16:20 : client: [59] opened from 127.0.0.1:43394
+Sep 16 16:20 : client: [59] closed
+Sep 16 16:20 : client: [60] opened from 127.0.0.1:43396
+Sep 16 16:20 : client: [60] closed
+Sep 16 16:21 : client: [61] opened from 127.0.0.1:43398
+Sep 16 16:21 : client: [61] closed
+Sep 16 16:21 : client: [62] opened from 127.0.0.1:43400
+Sep 16 16:23 : client: [62] closed
+Sep 16 16:23 : client: [63] opened from 127.0.0.1:43402
+Sep 16 16:24 : client: [63] closed
+Sep 16 16:24 : client: [64] opened from 127.0.0.1:43404
+Sep 16 16:25 : client: [64] closed
+Sep 16 16:25 : client: [65] opened from 127.0.0.1:43406
+Sep 16 16:26 : client: [65] closed
+Sep 16 16:26 : client: [66] opened from 127.0.0.1:43416
+Sep 16 16:26 : client: [67] opened from 127.0.0.1:43420
+Sep 16 16:26 : client: [67] closed
+Sep 16 16:26 : client: [68] opened from 127.0.0.1:43424
+Sep 16 16:26 : client: [68] closed
+Sep 16 16:26 : client: [66] closed
+Sep 16 16:26 : client: [69] opened from 127.0.0.1:43426
+Sep 16 16:26 : client: [69] closed
+Sep 16 16:27 : client: [70] opened from 127.0.0.1:43428
+Sep 16 16:27 : client: [70] closed
+Sep 16 16:27 : client: [71] opened from 127.0.0.1:43430
+Sep 16 16:27 : client: [71] closed
+Sep 16 16:27 : client: [72] opened from 127.0.0.1:43432
+Sep 16 16:27 : client: [72] closed
+Sep 16 16:27 : client: [73] opened from 127.0.0.1:43434
+Sep 16 16:27 : client: [73] closed
+Sep 16 16:27 : client: [74] opened from 127.0.0.1:43436
+Sep 16 16:27 : client: [74] closed
+Sep 16 16:27 : client: [75] opened from 127.0.0.1:43438
+Sep 16 16:27 : client: [75] closed
+Sep 16 16:27 : client: [76] opened from 127.0.0.1:43440
+Sep 16 16:27 : client: [76] closed
+Sep 16 16:27 : client: [77] opened from 127.0.0.1:43442
+Sep 16 16:27 : client: [77] closed
+Sep 16 16:27 : client: [78] opened from 127.0.0.1:43444
+Sep 16 16:27 : client: [79] opened from 127.0.0.1:43446
+Sep 16 16:27 : client: [78] closed
+Sep 16 16:27 : client: [79] closed
+Sep 16 16:27 : client: [80] opened from 127.0.0.1:43448
+Sep 16 16:27 : client: [80] closed
+Sep 16 16:27 : client: [81] opened from 127.0.0.1:43450
+Sep 16 16:27 : client: [81] closed
+Sep 16 16:27 : client: [82] opened from 127.0.0.1:43452
+Sep 16 16:27 : client: [82] closed
+Sep 16 16:27 : client: [83] opened from 127.0.0.1:43454
+Sep 16 16:27 : client: [83] closed
+Sep 16 16:27 : client: [84] opened from 127.0.0.1:43456
+Sep 16 16:27 : client: [84] closed
+Sep 16 16:27 : client: [85] opened from 127.0.0.1:43458
+Sep 16 16:27 : client: [85] closed
+Sep 16 16:27 : client: [86] opened from 127.0.0.1:43460
+Sep 16 16:27 : client: [86] closed
+Sep 16 16:27 : client: [87] opened from 127.0.0.1:43462
+Sep 16 16:28 : client: [87] closed
+Sep 16 16:28 : client: [88] opened from 127.0.0.1:43464
+Sep 16 16:28 : client: [88] closed
+Sep 16 16:28 : client: [89] opened from 127.0.0.1:43466
+Sep 16 16:28 : client: [90] opened from 127.0.0.1:43468
+Sep 16 16:28 : client: [89] closed
+Sep 16 16:28 : client: [90] closed
+Sep 16 16:28 : client: [91] opened from 127.0.0.1:43470
+Sep 16 16:28 : client: [91] closed
+Sep 16 16:28 : client: [92] opened from 127.0.0.1:43472
+Sep 16 16:29 : client: [92] closed
+Sep 16 16:29 : client: [93] opened from 127.0.0.1:43474
+Sep 16 16:29 : player: played "Vivaldi - La Follia.mp3"
+Sep 16 16:30 : client: [93] closed
+Sep 16 16:30 : client: [94] opened from 127.0.0.1:43476
+Sep 16 16:31 : client: [94] closed
+Sep 16 16:31 : client: [95] opened from 127.0.0.1:43486
+Sep 16 16:31 : client: [95] closed
+Sep 16 16:31 : client: [96] opened from 127.0.0.1:43488
+Sep 16 16:32 : client: [96] closed
+Sep 16 16:32 : client: [97] opened from 127.0.0.1:43490
+Sep 16 16:32 : client: [97] closed
+Sep 16 16:32 : client: [98] opened from 127.0.0.1:43492
+Sep 16 16:33 : player: played "Vivaldi - Le Quattro Stagioni - Estate - Presto (Nigel Kennedy).mp3"
+Sep 16 16:33 : client: [98] closed
+Sep 16 16:33 : client: [99] opened from 127.0.0.1:43494
+Sep 16 16:33 : client: [100] opened from 127.0.0.1:43498
+Sep 16 16:33 : client: [100] closed
+Sep 16 16:34 : client: [99] closed
+Sep 16 16:34 : client: [101] opened from 127.0.0.1:43500
+Sep 16 16:34 : client: [101] closed
+Sep 16 16:34 : client: [102] opened from 127.0.0.1:43502
+Sep 16 16:34 : client: [102] closed
+Sep 16 16:34 : client: [103] opened from 127.0.0.1:43504
+Sep 16 16:39 : client: [103] closed
+Sep 16 16:39 : client: [104] opened from 127.0.0.1:43514
+Sep 16 16:40 : client: [104] closed
+Sep 16 16:40 : client: [105] opened from 127.0.0.1:43516
+Sep 16 16:40 : client: [105] closed
+Sep 16 16:40 : client: [106] opened from 127.0.0.1:43518
+Sep 16 16:40 : client: [106] closed
+Sep 16 16:40 : client: [107] opened from 127.0.0.1:43520
+Sep 16 16:40 : client: [107] closed
+Sep 16 16:40 : client: [108] opened from 127.0.0.1:43522
+Sep 16 16:40 : client: [108] closed
+Sep 16 16:40 : client: [109] opened from 127.0.0.1:43524
+Sep 16 16:40 : client: [109] closed
+Sep 16 16:40 : client: [110] opened from 127.0.0.1:43526
+Sep 16 16:40 : client: [110] closed
+Sep 16 16:40 : client: [111] opened from 127.0.0.1:43528
+Sep 16 16:40 : client: [111] closed
+Sep 16 16:40 : client: [112] opened from 127.0.0.1:43530
+Sep 16 16:41 : client: [113] opened from 127.0.0.1:43532
+Sep 16 16:41 : client: [112] closed
+Sep 16 16:41 : client: [114] opened from 127.0.0.1:43536
+Sep 16 16:41 : client: [114] closed
+Sep 16 16:56 : client: [113] closed
+Sep 16 16:56 : client: [115] opened from 127.0.0.1:43554
+Sep 16 16:56 : client: [115] closed
+Sep 16 16:56 : client: [116] opened from 127.0.0.1:43556
+Sep 16 16:56 : client: [116] closed
+Sep 16 16:56 : client: [117] opened from 127.0.0.1:43558
+Sep 16 16:56 : client: [117] closed
+Sep 16 16:56 : client: [118] opened from 127.0.0.1:43560
+Sep 16 16:57 : client: [119] opened from 127.0.0.1:43562
+Sep 16 16:57 : client: [118] closed
+Sep 16 16:57 : client: [119] closed
+Sep 16 16:57 : client: [120] opened from 127.0.0.1:43564
+Sep 16 16:58 : client: [120] closed
+Sep 16 16:58 : client: [121] opened from 127.0.0.1:43566
+Sep 16 16:58 : client: [122] opened from 127.0.0.1:43568
+Sep 16 16:58 : client: [121] closed
+Sep 16 16:58 : client: [123] opened from 127.0.0.1:43570
+Sep 16 16:58 : client: [122] closed
+Sep 16 16:59 : client: [123] closed
+Sep 16 16:59 : client: [124] opened from 127.0.0.1:43572
+Sep 16 16:59 : client: [124] closed
+Sep 16 16:59 : client: [125] opened from 127.0.0.1:43574
+Sep 16 16:59 : client: [126] opened from 127.0.0.1:43576
+Sep 16 16:59 : client: [125] closed
+Sep 16 17:00 : client: [126] closed
+Sep 16 17:00 : client: [127] opened from 127.0.0.1:43578
+Sep 16 17:01 : client: [127] closed
+Sep 16 17:01 : client: [128] opened from 127.0.0.1:43580
+Sep 16 17:01 : client: [128] closed
+Sep 16 17:01 : client: [129] opened from 127.0.0.1:43582
+Sep 16 17:01 : client: [129] closed
+Sep 16 17:01 : client: [130] opened from 127.0.0.1:43584
+Sep 16 17:01 : client: [130] closed
+Sep 16 17:01 : client: [131] opened from 127.0.0.1:43586
+Sep 16 17:01 : client: [131] closed
+Sep 16 17:01 : client: [132] opened from 127.0.0.1:43588
+Sep 16 17:01 : client: [132] closed
+Sep 16 17:01 : client: [133] opened from 127.0.0.1:43590
+Sep 16 17:02 : client: [133] closed
+Sep 16 17:02 : client: [134] opened from 127.0.0.1:43592
+Sep 16 17:02 : client: [134] closed
+Sep 16 17:02 : client: [135] opened from 127.0.0.1:43594
+Sep 16 17:02 : client: [135] closed
+Sep 16 17:02 : client: [136] opened from 127.0.0.1:43596
+Sep 16 17:02 : client: [136] closed
+Sep 16 17:02 : client: [137] opened from 127.0.0.1:43598
+Sep 16 17:04 : client: [137] closed
+Sep 16 17:04 : client: [138] opened from 127.0.0.1:43600
+Sep 16 17:04 : client: [138] closed
+Sep 16 17:05 : client: [139] opened from 127.0.0.1:43602

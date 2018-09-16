@@ -1002,18 +1002,18 @@
     </position>
     <size>
       <width>1226</width>
-      <height>648</height>
+      <height>628</height>
     </size>
   </application>
   <application name="musica">
     <decor>no</decor>
     <position force="yes">
       <x>338</x>
-      <y>65</y>
+      <y>81</y>
     </position>
     <size>
       <width>51%</width>
-      <height>83%</height>
+      <height>570</height>
     </size>
   </application>
   <application name="musica_cava">

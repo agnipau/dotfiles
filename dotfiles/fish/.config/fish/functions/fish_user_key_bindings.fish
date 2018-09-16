@@ -76,7 +76,7 @@ bind \et _fzf_general_dirs
 
 # Make accept-autosuggestion work better.
 bind \e\  accept-autosuggestion execute
-bind \el  accept-autosuggestion
+bind \cl  accept-autosuggestion
 
 # Port of the oh-my-zsh sudo plugin for fish.
 function _desc_sudo
