@@ -9136,3 +9136,22 @@ Sep 18 22:47 : player: played "Vivaldi - La Follia.mp3"
 Sep 18 22:57 : player: played "Vivaldi - La Follia.mp3"
 Sep 18 23:06 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"
 Sep 18 23:09 : client: [1] closed
+Sep 18 23:10 : player: played "Vivaldi - La Follia.mp3"
+Sep 20 20:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 20 20:56 : client: [0] opened from 127.0.0.1:48152
+Sep 20 20:56 : client: [1] opened from 127.0.0.1:48156
+Sep 20 20:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 20 21:06 : player: played "Vivaldi - La Follia.mp3"
+Sep 20 21:07 : client: [2] opened from 127.0.0.1:48310
+Sep 20 21:07 : client: [2] closed
+Sep 20 21:16 : player: played "Vivaldi - Concerto for Two Violins in A Minor RV522.mp3"
+Sep 20 21:26 : player: played "Vivaldi - La Follia.mp3"
+Sep 20 21:36 : player: played "Vivaldi - La Follia.mp3"
+Sep 20 22:17 : player: played "Vivaldi - Le Quattro Stagioni (Nigel Kennedy).mp3"
+Sep 20 22:22 : player: played "Bach - Aria sulla quarta corda (Piano).mp3"
+Sep 20 22:32 : player: played "Vivaldi - Concerto for Two Violins in A Minor RV522.mp3"
+Sep 20 22:50 : player: played "Saint Saens - Introduction and Rondo Capriccioso.mp3"
+Sep 20 23:00 : player: played "Saint Saens - Introduction and Rondo Capriccioso.mp3"
+Sep 20 23:01 : client: [3] opened from 127.0.0.1:48354
+Sep 20 23:01 : client: [3] closed
+Sep 20 23:10 : client: [1] closed
