@@ -96,6 +96,7 @@ gcr
 gd
 gdbm
 gdk-pixbuf2
+gendesk
 geoclue2
 gettext
 ghc-libs
@@ -200,6 +201,7 @@ ldns
 less
 libaio
 libao
+libappindicator-gtk2
 libarchive
 libass
 libassuan
@@ -227,6 +229,8 @@ libcups
 libcurl-gnutls
 libdaemon
 libdatrie
+libdbusmenu-glib
+libdbusmenu-gtk2
 libdiscid
 libdrm
 libdvdnav
@@ -253,6 +257,7 @@ libid3tag
 libidn
 libidn2
 libiec61883
+libindicator-gtk2
 libinput
 libjpeg-turbo
 libksba
