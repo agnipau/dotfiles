@@ -1,0 +1,81 @@
+# netwmpager config file.
+
+# Desktop layout.
+cols      = -1
+rows      = -1
+desk_cols = -1
+desk_rows = -1
+
+# Window geometry.
+geometry               = "248x35+559-30"
+geometry_tray          = "248x35+559-30"
+geometry_transient     = "248x35+559-30"
+border_width           = 2
+border_width_tray      = 0
+border_width_transient = 2
+win_shift_x            = 4
+win_shift_y            = 22
+
+# Auto-hide feature.
+auto_hide = false
+
+# Border commands.
+# Border names: left, right, top, bottom
+# Syntax "border1,min1,max1,cmd1|border2,min2,max2,cmd2| ..." 
+# (min, max = fraction of total length)
+# (cmd = <any bash command> ; cmd = & : raise netwmpager itself)
+#
+#border_commands = "left,0.97,1.0,&|bottom,0,0.02,&|right,0.25,0.75,if test \"`pidof wbar`\" = \"\" ; then wbar --above-desk --always-ontop --isize 36 --pos right --leave & fi|right,0,0.25,killall -9 wbar|right,0.75,1.0,killall -9 wbar"
+
+# Zoom.
+zoom        = 4
+zoom_factor = 1.04663513939
+
+# Delay between switching desktops (in ms).
+switch_delay = 100
+
+# Mouse button mappings (permutation of 123).
+action_buttons = 132
+
+# Show window title popups?
+show_popups = true
+
+# Show sticky windows in pager?
+#show_sticky = false
+
+# Show window titles in pager?
+show_titles = true
+
+# Below, normal, commute, above.
+layer = "commute"
+
+# Opacity 0.0 = transparent, 1.0 = normal
+# Requires Xcomposite extension in X and
+# xcompmgr or composition manager in WM.
+opacity = 1.00
+
+# Allow other windows to cover pager?
+#allow_cover = false
+
+# Fonts.
+popup_font  = "Roboto:size=11"
+window_font = "Roboto:size=11"
+
+# Colors.
+active_page_color   = "rgb:26/32/38"
+inactive_page_color = "rgb:26/32/38"
+
+win_border_color   = "rgb:26/32/38"
+pager_border_color = "rgb:26/32/38"
+
+grid_color      = "rgb:26/32/38"
+desk_grid_color = "rgb:26/32/38"
+
+active_win_color      = "rgb:82/aa/ff"
+active_win_font_color = "rgb:26/32/38"
+
+inactive_win_color      = "rgb:37/47/4f"
+inactive_win_font_color = "rgb:ee/ff/ff"
+
+popup_color      = "rgb:26/32/38"
+popup_font_color = "rgb:26/32/38"
