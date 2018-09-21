@@ -165,7 +165,7 @@ set laststatus=2
 set noshowcmd
 set shortmess+=csW
 set t_Co=256
-let g:material_variant = 'default'
+let g:material_variant = 'palenight'
 colorscheme material
 set fillchars=fold:\ 
 set foldlevelstart=0

@@ -28,7 +28,7 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Material Default</name>
+  <name>Material Palenight</name>
   <titleLayout>L</titleLayout>
   <cornerRadius>2</cornerRadius>
   <keepBorder>no</keepBorder>
