@@ -9372,3 +9372,11 @@ Sep 23 00:15 : client: [69] closed
 Sep 23 00:15 : client: [70] opened from 127.0.0.1:55554
 Sep 23 00:16 : client: [70] closed
 Sep 23 00:16 : client: [71] opened from 127.0.0.1:55556
+Sep 23 00:18 : client: [71] closed
+Sep 23 00:18 : client: [72] opened from 127.0.0.1:55560
+Sep 23 00:18 : client: [72] closed
+Sep 23 00:18 : client: [73] opened from 127.0.0.1:55562
+Sep 23 00:18 : player: played "Bach - Aria sulla quarta corda (Piano).mp3"
+Sep 23 00:18 : client: [73] closed
+Sep 23 00:18 : client: [74] opened from 127.0.0.1:55564
+Sep 23 00:18 : client: [50] closed

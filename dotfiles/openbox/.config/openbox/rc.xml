@@ -539,17 +539,22 @@
   </keybind>
   <keybind key="W-y">
     <action name="Execute">
-      <command>~/bin/polyon</command>
+      <command>~/bin/polylefton</command>
     </action>
   </keybind>
   <keybind key="W-S-y">
     <action name="Execute">
-      <command>~/bin/netwmpager-toggle</command>
+      <command>~/bin/polyrighton</command>
     </action>
   </keybind>
   <keybind key="W-C-y">
     <action name="Execute">
       <command>~/bin/polyoff</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-S-y">
+    <action name="Execute">
+      <command>~/bin/netwmpager-toggle</command>
     </action>
   </keybind>
   <keybind key="W-d">
