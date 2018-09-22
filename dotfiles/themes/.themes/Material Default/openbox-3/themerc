@@ -5,6 +5,12 @@ window.*.title.bg.color:       #263238
 window.*.label.text.color:     #263238
 window.*.button.*.image.color: #EEFFFF
 
+# Handle colors.
+window.active.handle.bg:         Solid Flat
+window.active.handle.bg.color:   #F78C6C
+window.inactive.handle.bg:       Solid Flat
+window.inactive.handle.bg.color: #37474F
+
 # Titlebar.
 padding.width:             9
 padding.height:            9
@@ -15,11 +21,11 @@ window.label.text.justify: Center
 # Borders.
 border.width:                0
 window.client.padding.width: 0
-window.handle.width:         0
+window.handle.width:         9
 
 # Menu geometry.
-menu.border.width: 10
-menu.overlap.x:    -10
+menu.border.width: 9
+menu.overlap.x:    -9
 
 # Menu colors.
 menu.items.bg:                Flat
@@ -27,6 +33,6 @@ menu.items.bg.color:          #263238
 menu.items.text.color:        #546E7A
 menu.items.active.bg:         Flat
 menu.items.active.bg.color:   #263238
-menu.items.active.text.color: #C3E88D
+menu.items.active.text.color: #82AAFF
 menu.border.color:            #263238
 menu.separator.color:         #263238

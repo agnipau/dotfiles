@@ -5,6 +5,12 @@ window.*.title.bg.color:       #FAFAFA
 window.*.label.text.color:     #FAFAFA
 window.*.button.*.image.color: #90A4AE
 
+# Handle colors.
+window.active.handle.bg:         Solid Flat
+window.active.handle.bg.color:   #F78C6C
+window.inactive.handle.bg:       Solid Flat
+window.inactive.handle.bg.color: #B0BEC5
+
 # Titlebar.
 padding.width:             9
 padding.height:            9
@@ -18,8 +24,8 @@ window.client.padding.width: 0
 window.handle.width:         0
 
 # Menu geometry.
-menu.border.width: 10
-menu.overlap.x:    -10
+menu.border.width: 9
+menu.overlap.x:    -9
 
 # Menu colors.
 menu.items.bg:                Flat
@@ -27,6 +33,6 @@ menu.items.bg.color:          #FAFAFA
 menu.items.text.color:        #90A4AE
 menu.items.active.bg:         Flat
 menu.items.active.bg.color:   #FAFAFA
-menu.items.active.text.color: #91B859
+menu.items.active.text.color: #6182B8
 menu.border.color:            #FAFAFA
 menu.separator.color:         #FAFAFA
