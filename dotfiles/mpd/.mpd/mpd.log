@@ -9380,3 +9380,7 @@ Sep 23 00:18 : player: played "Bach - Aria sulla quarta corda (Piano).mp3"
 Sep 23 00:18 : client: [73] closed
 Sep 23 00:18 : client: [74] opened from 127.0.0.1:55564
 Sep 23 00:18 : client: [50] closed
+Sep 23 00:23 : client: [75] opened from 127.0.0.1:55598
+Sep 23 00:23 : client: [75] closed
+Sep 23 00:25 : client: [74] closed
+Sep 23 00:25 : client: [76] opened from 127.0.0.1:55654
