@@ -33,7 +33,7 @@ margin-bottom = 0
 monitor        = eDP-1-1
 bottom         = true
 fixed-center   = true
-width          = 50%
+width          = 45%
 height         = 40
 offset-x       = 35
 offset-y       = 30
@@ -45,7 +45,7 @@ module-margin  = 1
 font-0         = Iosevka Term SS07:size=12:antialias=true:autohint=false;3
 font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
 modules-left   = openbox_ws_good
-modules-center = essid date_time pvol music mpd wal
+modules-center = essid date_time pvol music mpd
 locale         = it_IT.UTF-8
 
 ; Bar in the right side.
@@ -53,7 +53,7 @@ locale         = it_IT.UTF-8
 monitor        = eDP-1-1
 bottom         = true
 fixed-center   = true
-width          = 24%
+width          = 23%
 height         = 40
 offset-x       = 1008
 offset-y       = 30
@@ -75,7 +75,7 @@ type              = custom/script
 exec              = ~/bin/polybar-workspaces 2>/dev/null
 interval          = 0.1
 format            = <label>
-format-background = ${colors.uno}
+format-background = ${colors.cinque}
 format-foreground = ${colors.background}
 format-padding    = 3
 label             = %output%
@@ -152,20 +152,6 @@ format-offline            = <label-offline>
 format-offline-background = ${colors.background}
 format-offline-foreground = ${colors.foreground}
 label-offline             = .:.. / .:..
-
-[module/wal]
-type              = custom/script
-format-text       = label
-label             = " "
-exec              = printf '%s' label
-scroll-up         = ~/bin/style --current-wal-dark
-scroll-down       = ~/bin/style --current-wal-light
-click-left        = ~/bin/style --another-wal-dark
-click-medium      = ~/bin/style --quality-another-wal-dark
-click-right       = ~/bin/style --another-wal-light
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-format-padding    = 0
 
 ; bar-right modules.
 ;; Show the downspeed.
