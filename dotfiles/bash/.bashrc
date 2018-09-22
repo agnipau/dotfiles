@@ -10,7 +10,7 @@ set -o vi
 
 # Prompt.
 prompt() {
-  if git rev-parse --is-inside-work-tree 2>/dev/null; then
+  if git rev-parse --is-inside-work-tree &>/dev/null; then
     gbranch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
     gdirty="$(git status --porcelain --ignore-submodules 2>/dev/null)"
 
