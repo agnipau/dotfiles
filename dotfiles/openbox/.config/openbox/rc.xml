@@ -28,7 +28,7 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Material Default</name>
+  <name>Material Darker</name>
   <titleLayout>L</titleLayout>
   <cornerRadius>2</cornerRadius>
   <keepBorder>no</keepBorder>
@@ -250,7 +250,7 @@
     <action name="NextWindow">
       <dialog>none</dialog>
       <bar>yes</bar>
-      <raise>no</raise>
+      <raise>yes</raise>
       <allDesktops>no</allDesktops>
       <panels>no</panels>
       <desktop>no</desktop>
@@ -267,7 +267,7 @@
     <action name="PreviousWindow">
       <dialog>none</dialog>
       <bar>yes</bar>
-      <raise>no</raise>
+      <raise>yes</raise>
       <allDesktops>no</allDesktops>
       <panels>no</panels>
       <desktop>no</desktop>

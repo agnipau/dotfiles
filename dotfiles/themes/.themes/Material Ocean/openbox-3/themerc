@@ -21,7 +21,7 @@ window.label.text.justify: Center
 # Borders.
 border.width:                0
 window.client.padding.width: 0
-window.handle.width:         0
+window.handle.width:         9
 
 # Menu geometry.
 menu.border.width: 9

@@ -4,7 +4,7 @@
 # because this will destroy all your dotfiles.
 
 # UnStow all configs.
-cd ./dotfiles
+cd ./dotfiles || exit 1
 for config in *; do
   stow -D "$config"
 done

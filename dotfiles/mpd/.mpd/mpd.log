@@ -9247,3 +9247,36 @@ Sep 22 17:25 : client: [13] opened from 127.0.0.1:52180
 Sep 22 17:25 : client: [13] closed
 Sep 22 17:25 : client: [14] opened from 127.0.0.1:52184
 Sep 22 17:25 : client: [14] closed
+Sep 22 17:28 : client: [15] opened from 127.0.0.1:52220
+Sep 22 17:28 : client: [15] closed
+Sep 22 17:35 : client: [16] opened from 127.0.0.1:52232
+Sep 22 17:35 : client: [16] closed
+Sep 22 17:35 : client: [17] opened from 127.0.0.1:52236
+Sep 22 17:39 : client: [18] opened from 127.0.0.1:52274
+Sep 22 17:39 : client: [18] closed
+Sep 22 17:44 : client: [17] closed
+Sep 22 22:08 : client: [19] opened from 127.0.0.1:53774
+Sep 22 22:15 : client: [20] opened from 127.0.0.1:53906
+Sep 22 22:15 : client: [20] closed
+Sep 22 22:16 : client: [21] opened from 127.0.0.1:53910
+Sep 22 22:16 : client: [21] closed
+Sep 22 22:18 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 22 22:27 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 22 22:37 : player: played "Vivaldi - Concerto for Two Violins in A Minor RV522.mp3"
+Sep 22 22:46 : player: played "Vivaldi - La Follia.mp3"
+Sep 22 22:50 : client: [22] opened from 127.0.0.1:54472
+Sep 22 22:50 : client: [22] closed
+Sep 22 22:53 : client: [23] opened from 127.0.0.1:54508
+Sep 22 22:53 : client: [23] closed
+Sep 22 22:58 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"
+Sep 22 23:08 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"
+Sep 22 23:17 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"
+Sep 22 23:23 : player: played "Bach - Aria sulla quarta corda (Piano).mp3"
+Sep 22 23:30 : client: [19] closed
+Sep 22 23:30 : client: [24] opened from 127.0.0.1:55138
+Sep 22 23:34 : client: [0] closed
+Sep 22 23:34 : client: [25] opened from 127.0.0.1:55150
+Sep 22 23:34 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 22 23:37 : client: [26] opened from 127.0.0.1:55160
+Sep 22 23:37 : client: [25] closed
+Sep 22 23:39 : client: [24] closed

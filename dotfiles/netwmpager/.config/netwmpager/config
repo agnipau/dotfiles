@@ -35,7 +35,7 @@ zoom_factor = 1.04663513939
 switch_delay = 100
 
 # Mouse button mappings (permutation of 123).
-action_buttons = 132
+action_buttons = 121
 
 # Show window title popups?
 show_popups = true
@@ -62,20 +62,20 @@ popup_font  = "Roboto:size=11"
 window_font = "Roboto:size=11"
 
 # Colors.
-active_page_color   = "rgb:26/32/38"
-inactive_page_color = "rgb:26/32/38"
+active_page_color   = "rgb:21/21/21"
+inactive_page_color = "rgb:21/21/21"
 
-win_border_color   = "rgb:26/32/38"
-pager_border_color = "rgb:26/32/38"
+win_border_color   = "rgb:21/21/21"
+pager_border_color = "rgb:21/21/21"
 
-grid_color      = "rgb:26/32/38"
-desk_grid_color = "rgb:26/32/38"
+grid_color      = "rgb:21/21/21"
+desk_grid_color = "rgb:21/21/21"
 
 active_win_color      = "rgb:82/aa/ff"
-active_win_font_color = "rgb:26/32/38"
+active_win_font_color = "rgb:21/21/21"
 
-inactive_win_color      = "rgb:37/47/4f"
+inactive_win_color      = "rgb:42/42/42"
 inactive_win_font_color = "rgb:ee/ff/ff"
 
 popup_color      = "rgb:f7/8c/6c"
-popup_font_color = "rgb:26/32/38"
+popup_font_color = "rgb:21/21/21"
