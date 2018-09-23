@@ -9398,3 +9398,10 @@ Sep 23 10:42 : client: [3] closed
 Sep 23 10:42 : client: [4] opened from 127.0.0.1:49392
 Sep 23 10:57 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
 Sep 23 11:07 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 23 11:17 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 23 11:20 : client: [1] closed
+Sep 23 11:26 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 23 12:48 : client: [4] closed
+Sep 23 12:48 : client: [5] opened from 127.0.0.1:55358
+Sep 23 12:48 : client: [5] closed
+Sep 23 12:48 : client: [6] opened from 127.0.0.1:55360
