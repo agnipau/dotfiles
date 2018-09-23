@@ -28,38 +28,59 @@ quindici    = ${xrdb:color15}
 margin-top    = 0
 margin-bottom = 0
 
-; Bar in the bottom.
-[bar/bar-bottom]
+; Bar in the left side.
+[bar/bar-left]
 monitor        = eDP-1-1
 bottom         = true
 fixed-center   = true
-width          = 100%
-height         = 35
-offset-x       = 0
-offset-y       = 0
+width          = 48%
+height         = 40
+offset-x       = 35
+offset-y       = 30
 background     = ${colors.background}
 foreground     = ${colors.foreground}
-radius         = 0.0
-padding        = 2
+radius         = 4.0
+padding        = 0
 module-margin  = 1
 font-0         = Iosevka Term SS07:size=12:antialias=true:autohint=false;3
 font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
-modules-left   = openbox_ws_good essid down date_time pvol music mpd battery brightness wal
+modules-left   = openbox_ws_good
+modules-center = essid date_time pvol music mpd
 locale         = it_IT.UTF-8
 
-; This is way better than the xworkspaces module, but you need the script.
-; And of course you can see what workspaces are active and what are inactive.
+; Bar in the right side.
+[bar/bar-right]
+monitor        = eDP-1-1
+bottom         = true
+fixed-center   = true
+width          = 23%
+height         = 40
+offset-x       = 1008
+offset-y       = 30
+background     = ${colors.background}
+foreground     = ${colors.foreground}
+radius         = 4.0
+padding        = 0
+module-margin  = 1
+font-0         = Iosevka Term SS07:size=12:antialias=true:autohint=false;3
+font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
+modules-center = down battery brightness
+locale         = it_IT.UTF-8
+
+; bar-left modules.
+;; This is way better than the xworkspaces module, but you need the script.
+;; And of course you can see what workspaces are active and what are inactive.
 [module/openbox_ws_good]
 type              = custom/script
 exec              = ~/bin/polybar-workspaces 2>/dev/null
 interval          = 0.1
 format            = <label>
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
+format-background = ${colors.cinque}
+format-foreground = ${colors.background}
 format-padding    = 3
 label             = %output%
 
-; Show the essid.
+;; Show the essid.
 [module/essid]
 type                          = internal/network
 interface                     = wlp3s0
@@ -74,27 +95,12 @@ label-disconnected-background = ${colors.background}
 label-disconnected-foreground = ${colors.foreground}
 label-disconnected-padding    = 1
 
-; Show the downspeed.
-[module/down]
-type                          = internal/network
-interface                     = wlp3s0
-format-connected              = <label-connected>
-format-disconnected           = <label-disconnected>
-label-connected               =  %downspeed%
-label-connected-background    = ${colors.background}
-label-connected-foreground    = ${colors.foreground}
-label-connected-padding       = 3
-label-disconnected            =  
-label-disconnected-background = ${colors.background}
-label-disconnected-foreground = ${colors.foreground}
-label-disconnected-padding    = 3
-
-; Display the date and time.
+;; Display the date and time.
 [module/date_time]
 type              = internal/date
 interval          = 1.0
-time              =  %a %d %b       %H:%M
-time-alt          =  %a %d %b       %H:%M:%S
+time              =  %H:%M
+time-alt          =  %H:%M:%S (%a %d %b)
 format            = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
@@ -103,7 +109,7 @@ label             = %time%
 label-background  = ${colors.background}
 label-foreground  = ${colors.foreground}
 
-; PulseAudio volume (with pulse you can set volume to over 100%).
+;; PulseAudio volume (with pulse you can set volume to over 100%).
 [module/pvol]
 type              = custom/script
 exec              = ~/bin/pvol --current
@@ -111,18 +117,18 @@ interval          = 0.1
 format            = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
-format-padding    = 4
+format-padding    = 1
 label             = %output%
 scroll-up         = ~/bin/pvol --volup 2
 scroll-down       = ~/bin/pvol --voldown 2
 click-left        = ~/bin/pvol --toggle
 click-right       = ~/bin/pvol --cento
 
-; Display a music button that toggle some functions when you click on it.
+;; Display a music button that toggle some functions when you click on it.
 [module/music]
 type              = custom/script
 format-text       = label
-label             = 
+label             = " "
 exec              = printf '%s' label
 scroll-up         = mpc seek +5
 scroll-down       = mpc seek -5
@@ -133,7 +139,7 @@ format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-padding    = 0
 
-; Display the time of the currently playing song.
+;; Display the time of the currently playing song.
 [module/mpd]
 type                      = internal/mpd
 host                      = 127.0.0.1
@@ -141,24 +147,38 @@ port                      = 6600
 format-online             = <label-time>
 format-online-background  = ${colors.background}
 format-online-foreground  = ${colors.foreground}
-format-online-padding     = 0
 label-time                = %elapsed% / %total%
 format-offline            = <label-offline>
 format-offline-background = ${colors.background}
 format-offline-foreground = ${colors.foreground}
-format-offline-padding    = 0
 label-offline             = .:.. / .:..
 
-; Display battery stats.
+; bar-right modules.
+;; Show the downspeed.
+[module/down]
+type                          = internal/network
+interface                     = wlp3s0
+format-connected              = <label-connected>
+format-disconnected           = <label-disconnected>
+label-connected               =  %downspeed%
+label-connected-background    = ${colors.background}
+label-connected-foreground    = ${colors.foreground}
+label-connected-padding       = 1
+label-disconnected            =  
+label-disconnected-background = ${colors.background}
+label-disconnected-foreground = ${colors.foreground}
+label-disconnected-padding    = 1
+
+;; Display battery stats.
 [module/battery]
 type                         = internal/battery
 battery                      = BAT0
 adapter                      = AC0
 full-at                      = 100
 format-charging              = <ramp-capacity> <label-charging>
-format-charging-padding      = 4
+format-charging-padding      = 1
 format-discharging           = <ramp-capacity> <label-discharging>
-format-discharging-padding   = 4
+format-discharging-padding   = 1
 label-charging               =  %percentage%%
 label-charging-background    = ${colors.background}
 label-charging-foreground    = ${colors.foreground}
@@ -184,7 +204,7 @@ ramp-capacity-4              = 
 ramp-capacity-4-background   = ${colors.background}
 ramp-capacity-4-foreground   = ${colors.foreground}
 
-; xbacklight doesn't work in my laptop, so I wrote a script to do the same thing.
+;; xbacklight doesn't work in my laptop, so I wrote a script to do the same thing.
 [module/brightness]
 type              = custom/script
 exec              = ~/bin/brightness --current
@@ -192,27 +212,15 @@ interval          = 0.1
 format            = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
-format-padding    = 0
+format-padding    = 1
 label             =  %output%
 scroll-up         = sudo ~/bin/brightness --inc 5
 scroll-down       = sudo ~/bin/brightness --dec 5
 click-left        = redshift -PO 4500
 click-right       = redshift -x
 
-[module/wal]
-type              = custom/script
-format-text       = label
-exec              = printf '%s' "  $(<"${HOME}/.current-theme")"
-scroll-up         = ~/bin/material --darker
-scroll-down       = ~/bin/material --palenight
-click-left        = ~/bin/material --default
-click-medium      = ~/bin/material --lighter
-click-right       = ~/bin/material --ocean
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-format-padding    = 3
-
-; ALSA volume.
+; Currently unused modules.
+;; ALSA volume.
 [module/avol]
 type              = custom/script
 exec              = ~/bin/avol --current
@@ -220,7 +228,7 @@ interval          = 0.1
 format            = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
-format-padding    = 2
+format-padding    = 1
 label             = %output%
 scroll-up         = ~/bin/pvol --volup 2
 scroll-down       = ~/bin/pvol --voldown 2
