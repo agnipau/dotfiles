@@ -9384,3 +9384,17 @@ Sep 23 00:23 : client: [75] opened from 127.0.0.1:55598
 Sep 23 00:23 : client: [75] closed
 Sep 23 00:25 : client: [74] closed
 Sep 23 00:25 : client: [76] opened from 127.0.0.1:55654
+Sep 23 00:29 : player: played "Bach - Aria sulla quarta corda (Piano).mp3"
+Sep 23 10:39 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 23 10:39 : client: [0] opened from 127.0.0.1:49292
+Sep 23 10:39 : client: [1] opened from 127.0.0.1:49296
+Sep 23 10:39 : player: played "Bach - Aria sulla quarta corda (Piano).mp3"
+Sep 23 10:39 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 23 10:42 : client: [0] closed
+Sep 23 10:42 : client: [2] opened from 127.0.0.1:49388
+Sep 23 10:42 : client: [2] closed
+Sep 23 10:42 : client: [3] opened from 127.0.0.1:49390
+Sep 23 10:42 : client: [3] closed
+Sep 23 10:42 : client: [4] opened from 127.0.0.1:49392
+Sep 23 10:57 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 23 11:07 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
