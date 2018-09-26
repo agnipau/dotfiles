@@ -19,7 +19,6 @@
   separator_color     = frame
   sort                = yes
   idle_threshold      = 120
-  corner_radius       = 2
 
   # Text.
   font                 = Iosevka Term SS07 13
