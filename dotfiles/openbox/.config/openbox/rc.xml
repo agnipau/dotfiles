@@ -30,7 +30,7 @@
 <theme>
   <name>Material Default</name>
   <titleLayout>L</titleLayout>
-  <cornerRadius>2</cornerRadius>
+  <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
   <font place="ActiveWindow">
