@@ -5,9 +5,6 @@
 # If not running interactively, don't do anything:
 [[ $- != *i* ]] && return
 
-# vi mode please.
-set -o vi
-
 # Prompt.
 prompt() {
   if git rev-parse --is-inside-work-tree &>/dev/null; then
