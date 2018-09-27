@@ -2,8 +2,8 @@
 !
 ! Resource file for xrdb.
 
-! Source material-palenight colors.
-#include "/home/matte/progetti/themes/xresources/material-palenight.Xresources"
+! Source material-default colors.
+#include "/home/matte/progetti/themes/xresources/material-default.Xresources"
 
 ! Xft settings.
 Xft.antialias: true
@@ -51,7 +51,7 @@ st.prompt_char:       $
 st.opacity:           255
 
 ! Rofi settings.
-rofi.theme:             progetti/themes/rofi/material-palenight.rasi
+rofi.theme:             progetti/themes/rofi/material-default.rasi
 rofi.font:              Iosevka SS07 16
 rofi.separator-style:   none
 rofi.hide-scrollbar:    true
