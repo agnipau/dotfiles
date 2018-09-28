@@ -140,6 +140,16 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'wellle/targets.vim'
 
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
+  nnoremap <silent> <leader>pm :MarkdownPreview<cr>
+  nnoremap <silent> <leader>po :MarkdownPreviewStop<cr>
+
+"Plug 'ap/vim-buftabline'
+"  set hidden
+"  nnoremap <c-n> :bnext<cr>
+"  nnoremap <c-m> :bprev<cr>
+
 call plug#end()
 
 " }}}
@@ -220,7 +230,7 @@ function! MyTabLine()
     let s .= '%' . (i + 1) . 'T'
 
     " the label is made by MyTabLabel()
-    let s .= ' %{MyTabLabel(' . (i + 1) . ')} '
+    let s .= ' {%{MyTabLabel(' . (i + 1) . ')}} '
   endfor
 
   " after the last tab fill with TabLineFill and reset tab page nr

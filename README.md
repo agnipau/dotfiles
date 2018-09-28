@@ -16,6 +16,7 @@
 - Music Player: [MPD] + [ncmpcpp]
 - Image Viewer: [pqiv]
 - Wallpaper Setter: [feh]
+- Ciao io mi chiamo Luis
 
 [Arch Linux]:      https://www.archlinux.org/
 [Termux]:          https://termux.com/

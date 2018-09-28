@@ -30,7 +30,7 @@ margin-bottom = 0
 
 ; Bar in the bottom.
 [bar/bar-bottom]
-monitor        = eDP-1-1
+monitor        = eDP-1
 bottom         = true
 fixed-center   = true
 width          = 100%
