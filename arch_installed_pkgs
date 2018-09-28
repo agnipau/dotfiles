@@ -497,7 +497,6 @@ minizip
 mkinitcpio
 mkinitcpio-busybox
 mono
-mono-addins
 mpc
 mpd
 mpfr
@@ -559,7 +558,6 @@ perl-timedate
 perl-uri
 physfs
 pinentry
-pinta
 pixman
 pkgconf
 polkit
