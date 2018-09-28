@@ -473,6 +473,7 @@ libxkbcommon-x11
 libxkbfile
 libxml2
 libxmu
+libxnvctrl-390xx
 libxpm
 libxrandr
 libxrender
@@ -542,8 +543,9 @@ npth
 nspr
 nss
 ntfs-3g
-nvidia
-nvidia-utils
+nvidia-390xx
+nvidia-390xx-settings
+nvidia-390xx-utils
 openal
 opencore-amr
 openjdk10-src
@@ -673,6 +675,7 @@ python-urllib3
 python-webencodings
 python-yaml
 python2
+python2-xdg
 qpdf
 qt4
 qt5-base
