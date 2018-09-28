@@ -21471,3 +21471,22 @@ Sep 27 20:35 : client: [3] closed
 Sep 27 20:42 : player: played "Vivaldi - La Follia.mp3"
 Sep 27 20:52 : player: played "Vivaldi - La Follia.mp3"
 Sep 27 23:03 : client: [1] closed
+Sep 28 14:45 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 28 14:45 : client: [0] opened from 127.0.0.1:50062
+Sep 28 14:45 : client: [1] opened from 127.0.0.1:50066
+Sep 28 14:45 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 28 14:54 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 28 15:08 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 28 15:18 : player: played "Vivaldi - La Follia.mp3"
+Sep 28 15:28 : player: played "Vivaldi - La Follia.mp3"
+Sep 28 15:36 : client: [2] opened from 127.0.0.1:50154
+Sep 28 15:36 : client: [2] closed
+Sep 28 15:39 : client: [3] opened from 127.0.0.1:50170
+Sep 28 15:39 : client: [3] closed
+Sep 28 15:41 : client: [4] opened from 127.0.0.1:50172
+Sep 28 15:41 : client: [0] closed
+Sep 28 15:41 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"
+Sep 28 15:51 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"
+Sep 28 17:00 : client: [4] closed
+Sep 28 17:00 : client: [5] opened from 127.0.0.1:51202
+Sep 28 18:07 : client: [1] closed

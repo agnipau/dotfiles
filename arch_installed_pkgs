@@ -29,6 +29,7 @@ boost-libs
 brasero
 brotli
 btrfs-progs
+bubblewrap
 bzip2
 c-ares
 ca-certificates
@@ -41,13 +42,18 @@ cdrtools
 chromium
 cifs-utils
 clang
+clutter
+clutter-gtk
 cmark-gfm
+cogl
 colord
 compiler-rt
 compton
 coreutils
 cracklib
 cryptsetup
+cups
+cups-filters
 curl
 db
 dbus
@@ -69,7 +75,6 @@ efibootmgr
 efivar
 egl-wayland
 eglexternalplatform
-emacs
 enchant
 exiv2
 exo
@@ -99,7 +104,6 @@ gcc
 gcc-libs
 gconf
 gcr
-gd
 gdbm
 gdk-pixbuf2
 geoclue2
@@ -115,6 +119,9 @@ glib2
 glibc
 glu
 gmp
+gnome-autoar
+gnome-calculator
+gnome-desktop
 gnome-online-accounts
 gnupg
 gnutls
@@ -131,9 +138,12 @@ gsm
 gst-plugins-base-libs
 gst-plugins-good
 gstreamer
+gthumb
+gtk-sharp-2
 gtk-update-icon-cache
 gtk2
 gtk3
+gtksourceview3
 guile
 gvfs
 gvfs-goa
@@ -248,6 +258,7 @@ iana-etc
 icu
 id3lib
 id3v2
+ijs
 imagemagick
 imlib2
 inetutils
@@ -327,6 +338,9 @@ libffi
 libfontenc
 libgcrypt
 libgdata
+libgdiplus
+libgexiv2
+libglade
 libglvnd
 libgme
 libgpg-error
@@ -341,12 +355,13 @@ libiec61883
 libimobiledevice
 libinput
 libjpeg-turbo
+libkeybinder3
 libksba
 libldap
+liblouis
 liblqr
 libmad
 libmagick
-libmagick6
 libmm-glib
 libmms
 libmng
@@ -354,6 +369,7 @@ libmnl
 libmodplug
 libmpc
 libmpdclient
+libnautilus-extension
 libnet
 libnfs
 libnftnl
@@ -365,7 +381,7 @@ libnsl
 liboauth
 libogg
 libomxil-bellagio
-libotf
+libpaper
 libpcap
 libpciaccess
 libpipeline
@@ -471,8 +487,6 @@ lvm2
 lxappearance
 lz4
 lzo
-m17n-db
-m17n-lib
 m4
 make
 man-db
@@ -482,6 +496,8 @@ mesa
 minizip
 mkinitcpio
 mkinitcpio-busybox
+mono
+mono-addins
 mpc
 mpd
 mpfr
@@ -491,6 +507,8 @@ mpv
 msgpack-c
 mtdev
 nano
+nautilus
+nautilus-sendto
 ncmpcpp
 ncurses
 ndctl
@@ -531,6 +549,8 @@ patch
 pciutils
 pcre
 pcre2
+pdfmod
+peek
 pepper-flash
 perl
 perl-error
@@ -539,10 +559,12 @@ perl-timedate
 perl-uri
 physfs
 pinentry
+pinta
 pixman
 pkgconf
 polkit
 poppler
+poppler-glib
 popt
 procps-ng
 protobuf
@@ -590,12 +612,12 @@ python-urllib3
 python-webencodings
 python-yaml
 python2
+qpdf
 qt4
 qt5-base
 qt5-declarative
 qt5-imageformats
 qt5-location
-qt5-tools
 qt5-webchannel
 qt5-webengine
 qt5-x11extras
@@ -618,6 +640,7 @@ ruby
 ruby-docs
 ruby-rdoc
 rubygems
+run-parts
 s-nail
 scrot
 sdl
@@ -652,10 +675,6 @@ telepathy-glib
 tevent
 texinfo
 thin-provisioning-tools
-thunar
-thunar-archive-plugin
-thunar-media-tags-plugin
-thunar-volman
 time
 tmux
 totem-plparser
@@ -738,6 +757,7 @@ yajl
 youtube-dl
 zathura
 zathura-pdf-mupdf
+zip
 zita-alsa-pcmi
 zita-resampler
 zlib

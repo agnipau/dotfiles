@@ -766,7 +766,7 @@
       <action name="Unshade"/>
       <action name="MoveResizeTo">
         <x>center</x>
-	<y>center</y>
+        <y>center</y>
       </action>
     </mousebind>
     <mousebind button="W-Right" action="Press">
@@ -783,6 +783,7 @@
   <context name="Client">
     <mousebind button="Left" action="Press">
       <action name="Focus"/>
+      <action name="Raise"/>
     </mousebind>
     <mousebind button="Middle" action="Press">
       <action name="Focus"/>
