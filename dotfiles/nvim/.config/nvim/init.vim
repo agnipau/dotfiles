@@ -150,7 +150,7 @@ Plug 'iamcco/markdown-preview.vim'
 "  nnoremap <c-n> :bnext<cr>
 "  nnoremap <c-m> :bprev<cr>
 
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -177,7 +177,7 @@ set laststatus=2
 set noshowcmd
 set shortmess+=csW
 set t_Co=256
-let g:material_variant = 'palenight'
+let g:material_variant = 'default'
 colorscheme material
 set fillchars=fold:\ 
 set foldlevelstart=0
@@ -232,7 +232,7 @@ function! MyTabLine()
     let s .= '%' . (i + 1) . 'T'
 
     " the label is made by MyTabLabel()
-    let s .= ' {%{MyTabLabel(' . (i + 1) . ')}} '
+    let s .= '%{MyTabLabel(' . (i + 1) . ')}   '
   endfor
 
   " after the last tab fill with TabLineFill and reset tab page nr
