@@ -150,6 +150,8 @@ Plug 'iamcco/markdown-preview.vim'
 "  nnoremap <c-n> :bnext<cr>
 "  nnoremap <c-m> :bprev<cr>
 
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 " }}}
@@ -175,7 +177,7 @@ set laststatus=2
 set noshowcmd
 set shortmess+=csW
 set t_Co=256
-let g:material_variant = 'default'
+let g:material_variant = 'palenight'
 colorscheme material
 set fillchars=fold:\ 
 set foldlevelstart=0

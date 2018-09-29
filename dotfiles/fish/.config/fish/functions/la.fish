@@ -1,3 +1,3 @@
 function la
-  ls --group-directories-first --color=auto -A
+  ls --group-directories-first -Alh
 end

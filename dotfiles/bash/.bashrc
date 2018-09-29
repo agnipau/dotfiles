@@ -175,17 +175,17 @@ alias fgrep='fgrep --color=auto'
 if [[ -z "$PREFIX" ]]; then
   # Arch Linux aliases.
   alias pacman='pacman --color auto'
-  alias aurman='aurman --color always'
+  alias yay='yay --color always'
   alias upd='sudo pacman -Syu --noconfirm --color auto'
-  alias aupd='aurman -Syu --noconfirm'
+  alias aupd='yay -Syu --noconfirm'
   alias ins='sudo pacman -S --needed --noconfirm --color auto'
-  alias ains='aurman -S --needed --noconfirm'
+  alias ains='yay -S --needed --noconfirm'
   alias rem='sudo pacman -Rsu --noconfirm --color auto'
   alias srem='sudo pacman -Rsnu --noconfirm --color auto'
-  alias arem='aurman -Rsu --noconfirm'
+  alias arem='yay -Rsu --noconfirm'
   alias autorem='sudo pacman -Rsu $(pacman -Qdtq) --color auto'
   alias src='pacman -Ss'
-  alias asrc='aurman -Ss'
+  alias asrc='yay -Ss'
   alias info='pacman -Qi'
 elif [[ "$PREFIX" ]]; then
   # Termux aliases.

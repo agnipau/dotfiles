@@ -14,5 +14,5 @@ set window-width          "690"
 set window-title-basename "true"
 set first-page-column     "1:1"
 
-# Source material-default colors.
-include "/home/matte/progetti/themes/zathura/material-default.zathura"
+# Source material-palenight colors.
+include "/home/matte/progetti/themes/zathura/material-palenight.zathura"

@@ -28,7 +28,7 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Material Default</name>
+  <name>Material Palenight</name>
   <titleLayout>L</titleLayout>
   <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
@@ -442,8 +442,8 @@
     <action name="MoveResizeTo">
       <x>center</x>
       <y>center</y>
-      <width>51%</width>
-      <height>83%</height>
+      <width>52%</width>
+      <height>78%</height>
     </action>
   </keybind>
   <keybind key="W-g">
@@ -474,6 +474,9 @@
     <action name="Execute">
       <command>xst</command>
     </action>
+    <action name="Execute">
+      <command>~/bin/xst-def-geom</command>
+    </action>
   </keybind>
   <keybind key="A-Return">
     <action name="Execute">
@@ -484,10 +487,11 @@
     <action name="Focus"/>
     <action name="Raise"/>
     <action name="MoveResizeTo">
-      <x>center</x>
-      <y>0</y>
-      <width>51%</width>
-      <height>50%</height>
+      <width>52%</width>
+      <height>52%</height>
+    </action>
+    <action name="Execute">
+      <command>~/bin/raise</command>
     </action>
   </keybind>
 
@@ -1018,7 +1022,7 @@
       <y>81</y>
     </position>
     <size>
-      <width>51%</width>
+      <width>52%</width>
       <height>570</height>
     </size>
   </application>
