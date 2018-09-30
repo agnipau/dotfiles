@@ -1017,17 +1017,6 @@
       <height>628</height>
     </size>
   </application>
-  <application class="GeoGebra">
-    <decor>no</decor>
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>628</height>
-    </size>
-  </application>
   <application name="musica">
     <decor>no</decor>
     <position force="yes">
@@ -1047,6 +1036,26 @@
     </size>
   </application>
   <application class="TelegramDesktop">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>590</height>
+    </size>
+  </application>
+  <application class="GeoGebra">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>590</height>
+    </size>
+  </application>
+  <application class="libreoffice-startcenter">
     <position force="yes">
       <x>center</x>
       <y>center</y>

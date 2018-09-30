@@ -54,7 +54,8 @@ fi
 # Envars.
 export HISTCONTROL="ignoredups"
 export HISTSIZE=1000000
-export PATH="${HOME}/.phantomjs/bin:${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${PATH}"
+export GOPATH="${HOME}/go"
+export PATH="${GOPATH}:${GOPATH}/bin:${HOME}/.phantomjs/bin:${HOME}/bin:${HOME}/.gem/ruby/2.5.0/bin:${PATH}"
 export VISUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
 export BROWSER="/usr/bin/chromium"

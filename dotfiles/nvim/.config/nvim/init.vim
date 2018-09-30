@@ -10,8 +10,11 @@ nnoremap <leader>pi :PlugInstall<cr>
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'matteoguarda/wal.vim'
+
 Plug 'matteoguarda/material.vim'
+
 Plug 'matteoguarda/gruvbox.vim'
+
 Plug 'chrisbra/Colorizer'
 
 Plug 'junegunn/limelight.vim'
@@ -154,7 +157,12 @@ Plug 'iamcco/markdown-preview.vim'
 "Plug 'ryanoasis/vim-devicons'
 
 Plug 'rhysd/clever-f.vim'
+
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
+Plug 'mattn/webapi-vim'
+
+Plug 'mattn/gist-vim'
 
 call plug#end()
 
