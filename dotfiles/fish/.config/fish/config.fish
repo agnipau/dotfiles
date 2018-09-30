@@ -48,8 +48,8 @@ set -x FZF_DEFAULT_OPTS "
   --color info:0,prompt:1,spinner:1,pointer:1,marker:1
 "
 
-# Source material-default colors.
-. $HOME/progetti/themes/sh/material-default.fish
+# Source gruvbox-dark colors.
+. $HOME/progetti/themes/sh/gruvbox-dark.fish
 
 # Highlight groups.
 set fish_term256   0

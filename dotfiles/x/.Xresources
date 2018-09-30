@@ -2,8 +2,8 @@
 !
 ! Resource file for xrdb.
 
-! Source material-default colors.
-#include "/home/matte/progetti/themes/xresources/material-default.Xresources"
+! Source gruvbox-dark colors.
+#include "/home/matte/progetti/themes/xresources/gruvbox-dark.Xresources"
 
 ! Xft settings.
 Xft.antialias: true
@@ -51,7 +51,7 @@ st.prompt_char:       $
 st.opacity:           255
 
 ! Rofi settings.
-rofi.theme:             progetti/themes/rofi/material-default.rasi
+rofi.theme:             progetti/themes/rofi/gruvbox-dark.rasi
 rofi.font:              Iosevka SS07 16
 rofi.separator-style:   none
 rofi.hide-scrollbar:    true
