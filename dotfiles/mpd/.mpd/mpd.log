@@ -21531,3 +21531,15 @@ Sep 29 22:28 : client: [16] closed
 Sep 29 22:51 : client: [13] closed
 Sep 29 22:51 : client: [17] opened from 127.0.0.1:54922
 Sep 30 00:23 : player: played "Faure - Requiem Op. 48.mp3"
+Sep 30 17:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 30 17:17 : client: [0] opened from 127.0.0.1:51908
+Sep 30 17:17 : client: [1] opened from 127.0.0.1:51912
+Sep 30 17:17 : player: played "Faure - Requiem Op. 48.mp3"
+Sep 30 17:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 30 17:17 : client: [1] closed
+Sep 30 17:17 : client: [2] opened from 127.0.0.1:51918
+Sep 30 17:22 : client: [2] closed
+Sep 30 17:26 : client: [0] closed
+Sep 30 17:26 : client: [3] opened from 127.0.0.1:52062
+Sep 30 17:29 : client: [3] closed
+Sep 30 17:29 : client: [4] opened from 127.0.0.1:52074
