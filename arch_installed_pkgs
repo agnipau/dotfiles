@@ -1,6 +1,5 @@
 aalib
 acl
-adobe-source-code-pro-fonts
 adwaita-icon-theme
 alsa-lib
 alsa-utils
@@ -851,7 +850,6 @@ v4l-utils
 vamp-plugin-sdk
 vi
 vid.stab
-viewnior
 virtualbox
 virtualbox-host-dkms
 volume_key
