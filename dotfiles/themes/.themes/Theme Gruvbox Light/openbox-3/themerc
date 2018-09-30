@@ -1,15 +1,15 @@
-# Material Default theme for Openbox.
+# Gruvbox Light theme for Openbox.
 
 # Titlebar colors.
-window.*.title.bg.color:       #263238
-window.*.label.text.color:     #263238
-window.*.button.*.image.color: #EEFFFF
+window.*.title.bg.color:       #fbf1c7
+window.*.label.text.color:     #fbf1c7
+window.*.button.*.image.color: #3c3836
 
 # Handle colors.
 window.active.handle.bg:         Solid Flat
-window.active.handle.bg.color:   #F78C6C
+window.active.handle.bg.color:   #af3a03
 window.inactive.handle.bg:       Solid Flat
-window.inactive.handle.bg.color: #37474F
+window.inactive.handle.bg.color: #d5c4a1
 
 # Titlebar.
 padding.width:             9
@@ -29,10 +29,10 @@ menu.overlap.x:    -9
 
 # Menu colors.
 menu.items.bg:                Flat
-menu.items.bg.color:          #263238
-menu.items.text.color:        #546E7A
+menu.items.bg.color:          #fbf1c7
+menu.items.text.color:        #928374
 menu.items.active.bg:         Flat
-menu.items.active.bg.color:   #263238
-menu.items.active.text.color: #82AAFF
-menu.border.color:            #263238
-menu.separator.color:         #263238
+menu.items.active.bg.color:   #fbf1c7
+menu.items.active.text.color: #076678
+menu.border.color:            #fbf1c7
+menu.separator.color:         #fbf1c7

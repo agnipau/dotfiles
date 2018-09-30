@@ -1,15 +1,15 @@
-# Material Darker theme for Openbox.
+# Material Palenight theme for Openbox.
 
 # Titlebar colors.
-window.*.title.bg.color:       #212121
-window.*.label.text.color:     #212121
-window.*.button.*.image.color: #EEFFFF
+window.*.title.bg.color:       #292d3e
+window.*.label.text.color:     #292d3e
+window.*.button.*.image.color: #a6accd
 
 # Handle colors.
 window.active.handle.bg:         Solid Flat
-window.active.handle.bg.color:   #F78C6C
+window.active.handle.bg.color:   #f78c6c
 window.inactive.handle.bg:       Solid Flat
-window.inactive.handle.bg.color: #424242
+window.inactive.handle.bg.color: #4e5579
 
 # Titlebar.
 padding.width:             9
@@ -29,10 +29,10 @@ menu.overlap.x:    -9
 
 # Menu colors.
 menu.items.bg:                Flat
-menu.items.bg.color:          #212121
-menu.items.text.color:        #545454
+menu.items.bg.color:          #292d3e
+menu.items.text.color:        #676e95
 menu.items.active.bg:         Flat
-menu.items.active.bg.color:   #212121
-menu.items.active.text.color: #82AAFF
-menu.border.color:            #212121
-menu.separator.color:         #212121
+menu.items.active.bg.color:   #292d3e
+menu.items.active.text.color: #82aaff
+menu.border.color:            #292d3e
+menu.separator.color:         #292d3e

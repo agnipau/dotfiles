@@ -28,7 +28,7 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Material Default</name>
+  <name>Theme Gruvbox Dark</name>
   <titleLayout>L</titleLayout>
   <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
@@ -495,27 +495,37 @@
   <!-- Keybindings for running applications. -->
   <keybind key="W-c">
     <action name="Execute">
-      <command>~/bin/material --default</command>
+      <command>~/bin/theme --material-default</command>
     </action>
   </keybind>
   <keybind key="W-S-c">
     <action name="Execute">
-      <command>~/bin/material --palenight</command>
+      <command>~/bin/theme --material-palenight</command>
     </action>
   </keybind>
   <keybind key="W-C-c">
     <action name="Execute">
-      <command>~/bin/material --darker</command>
+      <command>~/bin/theme --material-darker</command>
     </action>
   </keybind>
   <keybind key="W-S-C-c">
     <action name="Execute">
-      <command>~/bin/material --ocean</command>
+      <command>~/bin/theme --material-ocean</command>
     </action>
   </keybind>
   <keybind key="W-v">
     <action name="Execute">
-      <command>~/bin/material --lighter</command>
+      <command>~/bin/theme --gruvbox-dark</command>
+    </action>
+  </keybind>
+  <keybind key="W-b">
+    <action name="Execute">
+      <command>~/bin/theme --material-lighter</command>
+    </action>
+  </keybind>
+  <keybind key="W-b">
+    <action name="Execute">
+      <command>~/bin/theme --gruvbox-light</command>
     </action>
   </keybind>
   <keybind key="W-space">
@@ -541,11 +551,6 @@
   <keybind key="W-y">
     <action name="Execute">
       <command>~/bin/polyon</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-y">
-    <action name="Execute">
-      <command>~/bin/netwmpager-toggle</command>
     </action>
   </keybind>
   <keybind key="W-C-y">

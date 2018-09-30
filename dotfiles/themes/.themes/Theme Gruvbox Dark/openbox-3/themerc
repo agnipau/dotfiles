@@ -1,15 +1,15 @@
-# Material Palenight theme for Openbox.
+# Gruvbox Dark theme for Openbox.
 
 # Titlebar colors.
-window.*.title.bg.color:       #292D3E
-window.*.label.text.color:     #292D3E
-window.*.button.*.image.color: #A6ACCD
+window.*.title.bg.color:       #282828
+window.*.label.text.color:     #282828
+window.*.button.*.image.color: #ebdbb2
 
 # Handle colors.
 window.active.handle.bg:         Solid Flat
-window.active.handle.bg.color:   #F78C6C
+window.active.handle.bg.color:   #fe8019
 window.inactive.handle.bg:       Solid Flat
-window.inactive.handle.bg.color: #4E5579
+window.inactive.handle.bg.color: #504945
 
 # Titlebar.
 padding.width:             9
@@ -29,10 +29,10 @@ menu.overlap.x:    -9
 
 # Menu colors.
 menu.items.bg:                Flat
-menu.items.bg.color:          #292D3E
-menu.items.text.color:        #676E95
+menu.items.bg.color:          #282828
+menu.items.text.color:        #928374
 menu.items.active.bg:         Flat
-menu.items.active.bg.color:   #292D3E
-menu.items.active.text.color: #82AAFF
-menu.border.color:            #292D3E
-menu.separator.color:         #292D3E
+menu.items.active.bg.color:   #282828
+menu.items.active.text.color: #83a598
+menu.border.color:            #282828
+menu.separator.color:         #282828

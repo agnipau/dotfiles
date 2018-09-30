@@ -11,6 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'matteoguarda/wal.vim'
 Plug 'matteoguarda/material.vim'
+Plug 'matteoguarda/gruvbox.vim'
 Plug 'chrisbra/Colorizer'
 
 Plug 'junegunn/limelight.vim'
@@ -152,6 +153,9 @@ Plug 'iamcco/markdown-preview.vim'
 
 "Plug 'ryanoasis/vim-devicons'
 
+Plug 'rhysd/clever-f.vim'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
 call plug#end()
 
 " }}}
@@ -176,9 +180,12 @@ set noruler
 set laststatus=2
 set noshowcmd
 set shortmess+=csW
+
 set t_Co=256
 let g:material_variant = 'default'
-colorscheme material
+let g:gruvbox_variant  = 'dark'
+colorscheme gruvbox
+
 set fillchars=fold:\ 
 set foldlevelstart=0
 set colorcolumn=0
