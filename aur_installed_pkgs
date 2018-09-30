@@ -13,6 +13,7 @@ gnomecanvas-perl
 goocanvas1
 gtk3-nocsd-git
 hsetroot
+insect
 lazygit
 libbonobo
 libbonoboui
@@ -20,7 +21,6 @@ libc++
 libgnome
 libgnome-data
 libgnomeui
-netwmpager
 openbox-patched
 orbit2
 perl-cpanel-json-xs
