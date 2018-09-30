@@ -21569,3 +21569,12 @@ Sep 30 19:07 : client: [12] closed
 Sep 30 19:07 : exception: "PulseAudio Output" [pulse] failed to play: disconnected
 Sep 30 19:07 : client: [14] opened from 127.0.0.1:53402
 Sep 30 19:07 : client: [15] opened from 127.0.0.1:53406
+Sep 30 19:09 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 30 19:16 : client: [16] opened from 127.0.0.1:53652
+Sep 30 19:16 : client: [16] closed
+Sep 30 19:18 : client: [17] opened from 127.0.0.1:53692
+Sep 30 19:18 : client: [17] closed
+Sep 30 19:21 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 30 19:21 : player: played "Bach - Aria sulla quarta corda (Piano).mp3"
+Sep 30 19:31 : player: played "Vivaldi - La Follia.mp3"
+Sep 30 20:00 : client: [15] closed
