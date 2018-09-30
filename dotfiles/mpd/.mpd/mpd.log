@@ -21544,3 +21544,28 @@ Sep 30 17:26 : client: [3] opened from 127.0.0.1:52062
 Sep 30 17:29 : client: [3] closed
 Sep 30 17:29 : client: [4] opened from 127.0.0.1:52074
 Sep 30 18:47 : client: [5] opened from 127.0.0.1:52804
+Sep 30 18:56 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Sep 30 18:59 : client: [5] closed
+Sep 30 18:59 : client: [4] closed
+Sep 30 18:59 : exception: "PulseAudio Output" [pulse] failed to pause: failed to connect the stream: Connection terminated
+Sep 30 18:59 : client: [6] opened from 127.0.0.1:53188
+Sep 30 18:59 : client: [7] opened from 127.0.0.1:53224
+Sep 30 19:00 : client: [7] closed
+Sep 30 19:00 : client: [6] closed
+Sep 30 19:00 : exception: "PulseAudio Output" [pulse] failed to pause: failed to connect the stream: Connection terminated
+Sep 30 19:01 : client: [8] opened from 127.0.0.1:53260
+Sep 30 19:03 : client: [8] closed
+Sep 30 19:03 : client: [9] opened from 127.0.0.1:53262
+Sep 30 19:03 : client: [9] closed
+Sep 30 19:03 : client: [10] opened from 127.0.0.1:53264
+Sep 30 19:03 : client: [11] opened from 127.0.0.1:53288
+Sep 30 19:05 : client: [11] closed
+Sep 30 19:05 : client: [10] closed
+Sep 30 19:05 : exception: "PulseAudio Output" [pulse] failed to pause: failed to connect the stream: Connection terminated
+Sep 30 19:05 : client: [12] opened from 127.0.0.1:53372
+Sep 30 19:06 : client: [13] opened from 127.0.0.1:53400
+Sep 30 19:07 : client: [13] closed
+Sep 30 19:07 : client: [12] closed
+Sep 30 19:07 : exception: "PulseAudio Output" [pulse] failed to play: disconnected
+Sep 30 19:07 : client: [14] opened from 127.0.0.1:53402
+Sep 30 19:07 : client: [15] opened from 127.0.0.1:53406
