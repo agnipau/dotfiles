@@ -1,1 +1,1 @@
-complete -c material --no-files -l default -l darker -l palenight -l ocean -l lighter
+complete -c material --no-files -l material-default -l material-darker -l material-palenight -l material-ocean -l material-lighter -l gruvbox-dark -l gruvbox-light
