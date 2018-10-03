@@ -9,4 +9,4 @@ add control = Caps_Lock Control_L Control_R
 keysym Caps_Lock = Control_L Caps_Lock NoSymbol NoSymbol
 
 ! Make Menu output tilde (~).
-keysym ISO_Level3_Shift = U007E
+keysym Control_R = U007E
