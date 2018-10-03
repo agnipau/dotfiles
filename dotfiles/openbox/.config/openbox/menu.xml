@@ -3,6 +3,11 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://openbox.org/">
     <menu id="root-menu" label="openbox">
+      <item label="Files">
+        <action name="Execute">
+          <execute>nautilus</execute>
+        </action>
+      </item>
       <item label="Terminale">
         <action name="Execute">
           <execute>~/bin/draw</execute>

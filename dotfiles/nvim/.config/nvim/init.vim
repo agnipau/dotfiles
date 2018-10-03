@@ -78,6 +78,8 @@ Plug 'Shougo/neco-vim'
 
 Plug 'zchee/deoplete-clang'
 
+Plug 'zchee/deoplete-jedi'
+
 Plug 'wellle/tmux-complete.vim'
   let g:tmuxcomplete#trigger = ''
 
