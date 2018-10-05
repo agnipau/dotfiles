@@ -28,7 +28,7 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Theme Material Default</name>
+  <name>Theme Gruvbox Dark</name>
   <titleLayout>L</titleLayout>
   <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
@@ -141,12 +141,12 @@
       <to>6</to>
     </action>
   </keybind>
-  <keybind key="W-C-S-h">
+  <keybind key="W-M-h">
     <action name="GoToDesktop">
       <to>left</to>
     </action>
   </keybind>
-  <keybind key="W-C-S-l">
+  <keybind key="W-M-l">
     <action name="GoToDesktop">
       <to>right</to>
     </action>
