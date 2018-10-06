@@ -5,7 +5,7 @@ state: stop
 random: 0
 repeat: 1
 single: 1
-consume: 1
+consume: 0
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000

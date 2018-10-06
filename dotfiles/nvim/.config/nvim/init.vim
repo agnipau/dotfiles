@@ -9,7 +9,7 @@ nnoremap <leader>pi :PlugInstall<cr>
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'matteoguarda/wal.vim'
+"Plug 'matteoguarda/wal.vim'
 
 Plug 'matteoguarda/material.vim'
 
@@ -144,9 +144,9 @@ Plug 'airblade/vim-gitgutter'
   let g:gitgutter_sign_removed_first_line        = '×'
   let g:gitgutter_sign_modified_removed          = '×'
 
-Plug 'wellle/targets.vim'
+"Plug 'wellle/targets.vim'
 
-Plug 'iamcco/mathjax-support-for-mkdp'
+"Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
   nnoremap <silent> <leader>pm :MarkdownPreview<cr>
   nnoremap <silent> <leader>po :MarkdownPreviewStop<cr>
@@ -162,9 +162,9 @@ Plug 'rhysd/clever-f.vim'
 
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
-Plug 'mattn/webapi-vim'
+"Plug 'mattn/webapi-vim'
 
-Plug 'mattn/gist-vim'
+"Plug 'mattn/gist-vim'
 
 call plug#end()
 
@@ -194,7 +194,7 @@ set shortmess+=csW
 set t_Co=256
 let g:material_variant = 'default'
 let g:gruvbox_variant  = 'dark'
-colorscheme gruvbox
+colorscheme material
 
 set fillchars=fold:\ 
 set foldlevelstart=0

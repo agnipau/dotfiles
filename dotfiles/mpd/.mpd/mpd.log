@@ -21739,3 +21739,310 @@ Oct 03 18:31 : client: [5] opened from 127.0.0.1:40408
 Oct 03 18:35 : player: played "Mozart - Requiem - Introit & Kyrie.mp3"
 Oct 03 18:36 : player: played "Mozart - Requiem - Sanctus.mp3"
 Oct 03 19:15 : client: [5] closed
+Oct 06 15:39 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 06 15:39 : client: [0] opened from 127.0.0.1:37644
+Oct 06 15:40 : client: [1] opened from 127.0.0.1:37648
+Oct 06 15:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 06 15:40 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 15:40 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 15:41 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 15:42 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 15:42 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 15:47 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 15:47 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 15:48 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 15:53 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 15:58 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 15:58 : client: [1] closed
+Oct 06 15:58 : client: [2] opened from 127.0.0.1:37858
+Oct 06 15:59 : client: [2] closed
+Oct 06 15:59 : client: [3] opened from 127.0.0.1:37862
+Oct 06 16:03 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 16:08 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 06 16:13 : player: played "Mozart - Requiem - Domine Jesu.mp3"
+Oct 06 16:17 : player: played "Mozart - Requiem - Domine Jesu.mp3"
+Oct 06 16:32 : client: [4] opened from 127.0.0.1:38016
+Oct 06 16:32 : client: [4] closed
+Oct 06 16:34 : client: [5] opened from 127.0.0.1:38020
+Oct 06 16:34 : client: [5] closed
+Oct 06 16:45 : client: [6] opened from 127.0.0.1:38034
+Oct 06 16:45 : client: [6] closed
+Oct 06 17:00 : client: [3] closed
+Oct 06 17:00 : player: played "Dvorak - Symphony No. 9 Mvt. 4 - Allegro con fuoco.mp3"
+Oct 06 17:00 : client: [7] opened from 127.0.0.1:38056
+Oct 06 17:00 : client: [7] closed
+Oct 06 17:00 : player: played "Dvorak - Symphony No. 9 Mvt. 4 - Allegro con fuoco.mp3"
+Oct 06 17:00 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 06 17:00 : update: added /Mozart - Aria della regina della notte.mp3
+Oct 06 17:00 : update: added /Vivaldi - La Follia.mp3
+Oct 06 17:00 : update: added /Liszt - Un Sospiro.mp3
+Oct 06 17:00 : update: added /Faure - Apres un Reve for Cello and Piano.mp3
+Oct 06 17:00 : update: added /Grieg - Peer Gynt Suite No. 1.mp3
+Oct 06 17:00 : update: added /Debussy - Reverie.mp3
+Oct 06 17:00 : update: added /Chopin - Piano Concerto in E minor Op. 11.mp3
+Oct 06 17:00 : update: added /Smetana - La Moldava.mp3
+Oct 06 17:00 : update: added /Bach - Toccata e Fuga Re minore.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 2.mp3
+Oct 06 17:00 : update: added /Shostakovich - Waltz No. 2.mp3
+Oct 06 17:00 : update: added /Mahler - Piano Quartet in A minor.mp3
+Oct 06 17:00 : update: added /Beethoven - String Quartet No. 14 Op. 131 in C sharp.mp3
+Oct 06 17:00 : update: added /Stravinsky - Firebird Suite (Infernal Dance).mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 5.mp3
+Oct 06 17:00 : update: added /Liszt - Hungarian Rhapsody No. 2.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Waltz of the Flowers.mp3
+Oct 06 17:00 : update: added /Mozart - Requiem - Domine Jesu.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Little Red Riding Hood - Etude Tableau.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni - Autunno.mp3
+Oct 06 17:00 : update: added /Paganini - Capriccio No. 5.mp3
+Oct 06 17:00 : update: added /Liszt - Etude No. 6.mp3
+Oct 06 17:00 : update: added /Paganini - Capriccio No. 24.mp3
+Oct 06 17:00 : update: added /Schubert - Serenade.mp3
+Oct 06 17:00 : update: added /Vivaldi - Cantata Cessate, omai cessate.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 4.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Symphony No. 2 Op. 27 Mvt. 3 - Adagio Adagio.mp3
+Oct 06 17:00 : update: added /Samuel Barber - Agnus Dei.mp3
+Oct 06 17:00 : update: added /Chopin - Etude Op. 25 No. 5 (Wrong Note).mp3
+Oct 06 17:00 : update: added /Mussorgsky - Night on Bald Mountain.mp3
+Oct 06 17:00 : update: added /Haendel - Sarabande.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Valse Sentimentale.mp3
+Oct 06 17:00 : update: added /Beethoven - Egmont Overture.mp3
+Oct 06 17:00 : update: added /Mozart - Sinfonia No. 40 in Sol minore.mp3
+Oct 06 17:00 : update: added /Johann Strauss II - The Blue Danube Waltz.mp3
+Oct 06 17:00 : update: added /Wagner - Faust.mp3
+Oct 06 17:00 : update: added /Brahms - Hungarian Dance No. 5 (Hungarian Symphony Orchestra Budapest).mp3
+Oct 06 17:00 : update: added /Satie - Gymnopedie No. 1.mp3
+Oct 06 17:00 : update: added /Chopin - Etude Op. 10 No. 4 (Torrent).mp3
+Oct 06 17:00 : update: added /Kreisler - Liebesleid (Love's Sorrow) (Piano and Violin).mp3
+Oct 06 17:00 : update: added /Chopin - Fantaisie Impromptu Op. 66.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - The Nutcracker Suite Op. 71a.mp3
+Oct 06 17:00 : update: added /Mahler - Adagietto Symphony 5 (Karajan).mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Sleeping Beauty (Piano 4 Hands) (Rachmaninov's arr.).mp3
+Oct 06 17:00 : update: added /Rossini - William Tell Overture.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Waltz Op. 40 No. 6.mp3
+Oct 06 17:00 : update: added /Chopin - Nocturne in E flat major Op. 9 No. 2 (Tiffany Poon).mp3
+Oct 06 17:00 : update: added /Scriabin - Scriabin - Etude Op. 8 No. 12.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 1.mp3
+Oct 06 17:00 : update: added /Beethoven - Rondo e Capriccio.mp3
+Oct 06 17:00 : update: added /Giazotto - Adagio (Hauser).mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 7.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 6.mp3
+Oct 06 17:00 : client: [0] opened from 127.0.0.1:38074
+Oct 06 17:00 : update: added /Chopin - Etude Op. 25 No. 11 (Winter Wind).mp3
+Oct 06 17:00 : update: added /Chopin - Ballade No. 1 in G minor Op. 23 (Piano and Violin).mp3
+Oct 06 17:00 : update: added /Pachelbel - Canon in D (Piano).mp3
+Oct 06 17:00 : update: added /Rachmaninov - Piano Concerto No. 2 (Kissin).mp3
+Oct 06 17:00 : update: added /Chopin - Waltz in A minor Op. Posth.mp3
+Oct 06 17:00 : update: added /Faure - Requiem Op. 48.mp3
+Oct 06 17:00 : update: added /Saint Saens - Danse Macabre.mp3
+Oct 06 17:00 : update: added /Wagner - Tristan und Isolde - Prelude.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Prelude Op. 23 No. 5.mp3
+Oct 06 17:00 : update: added /Szymanowski - Prelude Op. 1 No. 1.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 8.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni - Estate.mp3
+Oct 06 17:00 : update: added /Dvorak - Symphony No. 9 Mvt. 4 - Allegro con fuoco.mp3
+Oct 06 17:00 : update: added /Ravel - Pavane pour une infante defunte.mp3
+Oct 06 17:00 : update: added /Liszt - Liebestraum (Love Dream).mp3
+Oct 06 17:00 : update: added /Mozart - Requiem - Sanctus.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto (Nigel Kennedy).mp3
+Oct 06 17:00 : update: added /Bach - Prelude in C major BWV846.mp3
+Oct 06 17:00 : client: [1] opened from 127.0.0.1:38078
+Oct 06 17:00 : update: added /Bach - Aria sulla quarta corda (Piano).mp3
+Oct 06 17:00 : update: added /Saint Saens - Toccata Op. 72 No. 3.mp3
+Oct 06 17:00 : update: added /Saint Saens - Introduction and Rondo Capriccioso.mp3
+Oct 06 17:00 : update: added /Beethoven - Piano Sonata Op. 57 Op. 3 (Appassionata).mp3
+Oct 06 17:00 : update: added /Kreisler - Liebesleid (Love's Sorrow) (Piano).mp3
+Oct 06 17:00 : update: added /Debussy - Arabesque No. 1 and No. 2.mp3
+Oct 06 17:00 : update: added /Liszt - Totentanz.mp3
+Oct 06 17:00 : update: added /Tarrega - Capricho arabe.mp3
+Oct 06 17:00 : update: added /Mozart - Requiem - Introit & Kyrie.mp3
+Oct 06 17:00 : update: added /Paul de Senneville - Marriage d'amour.mp3
+Oct 06 17:00 : update: added /Dvorak - The Water Goblin.mp3
+Oct 06 17:00 : update: added /Faure - Pavane Op. 50.mp3
+Oct 06 17:00 : update: added /Vivaldi - Violin Concerto in A Minor RV356.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni - Primavera.mp3
+Oct 06 17:00 : update: added /Mozart - Don Giovanni (Finale).mp3
+Oct 06 17:00 : update: added /Mussorgsky - Pictures at an Exhibition.mp3
+Oct 06 17:00 : update: added /Vivaldi - Concerto for 4 Violins in B minor RV580.mp3
+Oct 06 17:00 : update: added /Beethoven - Piano Sonata No. 17 Op. 3 (Tempest).mp3
+Oct 06 17:00 : update: added /Dvorak - Song to the Moon.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 9.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Hymn of the Cherubim (USSR Ministry Of Culture Chamber Choir).mp3
+Oct 06 17:00 : update: added /Schubert - Ave Maria.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Pas de Deux (The Nutcracker).mp3
+Oct 06 17:00 : update: added /Chopin - Ballade No. 1 in G minor Op. 23 (Piano).mp3
+Oct 06 17:00 : update: added /Liszt - Transcendental Etude No. 4 (Mazeppa).mp3
+Oct 06 17:00 : update: added /Mozart - Lacrimosa.mp3
+Oct 06 17:00 : update: added /Mozart - Requiem - Hostias.mp3
+Oct 06 17:00 : update: added /Beethoven - Moonlight Sonata Op. 27 No. 2 Op. 3.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Romance.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Prelude in C sharp.mp3
+Oct 06 17:00 : update: added /Mozart - Turkish March.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Waltz No. 9 Op. 40.mp3
+Oct 06 17:00 : update: added /Faure - Sicilienne for Cello and Piano Op. 78.mp3
+Oct 06 17:00 : update: added /Schoenberg - Verklarte Nacht Op. 4 - Boulez.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - The Nutcracker Suite Op. 71.mp3
+Oct 06 17:00 : update: added /Max Richter - On the Nature of Daylight.mp3
+Oct 06 17:00 : update: added /Beethoven - Moonlight Sonata Op. 27 No. 2 Op. 1-2-3.mp3
+Oct 06 17:00 : update: added /Beethoven - Violin Sonata No. 9 (Kreutzer).mp3
+Oct 06 17:00 : update: added /Rachmaninov - The Isle of the Dead - Symphonic poem Op. 29.mp3
+Oct 06 17:00 : update: added /Wagner - Lohengrin - Prelude.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Praise the Lord.mp3
+Oct 06 17:00 : update: added /Beethoven - Piano Sonata No. 8 Op. 13 in C minor (Pathetique).mp3
+Oct 06 17:00 : update: added /Tchaikovsky - 1812 Overture (Claudio Abbado).mp3
+Oct 06 17:00 : update: added /Debussy - Claire de Lune.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni - Inverno.mp3
+Oct 06 17:00 : update: added /Paganini - La Campanella (Vanessa Mae).mp3
+Oct 06 17:00 : update: added /Vivaldi - Concerto for Two Violins in A Minor RV522.mp3
+Oct 06 17:00 : update: added downloaded_music/Dvorak - Romance for Piano and Violin op. 11.mp3
+Oct 06 17:00 : update: added /Mozart - Requiem.mp3
+Oct 06 17:00 : update: added /Wagner - Ride of the Valkyries.mp3
+Oct 06 17:00 : update: added /Chopin - Etude Op. 10 No. 12 (Revolutionary).mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 3.mp3
+Oct 06 17:00 : update: added /Verdi - Dies Irae.mp3
+Oct 06 17:00 : update: added /Vivaldi - Filiae maestae Jerusalem RV638.mp3
+Oct 06 17:00 : update: added /Liszt - La Campanella - Kissin.mp3
+Oct 06 17:00 : update: added /Wagner - Tannhauser Overture.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni (Nigel Kennedy).mp3
+Oct 06 17:00 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 06 17:00 : client: [1] closed
+Oct 06 17:00 : player: played "Rachmaninov - Romance.mp3"
+Oct 06 17:00 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 06 17:00 : update: added /Mozart - Aria della regina della notte.mp3
+Oct 06 17:00 : update: added /Vivaldi - La Follia.mp3
+Oct 06 17:00 : update: added /Liszt - Un Sospiro.mp3
+Oct 06 17:00 : update: added /Faure - Apres un Reve for Cello and Piano.mp3
+Oct 06 17:00 : update: added /Grieg - Peer Gynt Suite No. 1.mp3
+Oct 06 17:00 : update: added /Debussy - Reverie.mp3
+Oct 06 17:00 : update: added /Chopin - Piano Concerto in E minor Op. 11.mp3
+Oct 06 17:00 : update: added /Smetana - La Moldava.mp3
+Oct 06 17:00 : update: added /Bach - Toccata e Fuga Re minore.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 2.mp3
+Oct 06 17:00 : update: added /Shostakovich - Waltz No. 2.mp3
+Oct 06 17:00 : update: added /Mahler - Piano Quartet in A minor.mp3
+Oct 06 17:00 : update: added /Beethoven - String Quartet No. 14 Op. 131 in C sharp.mp3
+Oct 06 17:00 : update: added /Stravinsky - Firebird Suite (Infernal Dance).mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 5.mp3
+Oct 06 17:00 : update: added /Liszt - Hungarian Rhapsody No. 2.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Waltz of the Flowers.mp3
+Oct 06 17:00 : update: added /Mozart - Requiem - Domine Jesu.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Little Red Riding Hood - Etude Tableau.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni - Autunno.mp3
+Oct 06 17:00 : update: added /Paganini - Capriccio No. 5.mp3
+Oct 06 17:00 : update: added /Liszt - Etude No. 6.mp3
+Oct 06 17:00 : update: added /Paganini - Capriccio No. 24.mp3
+Oct 06 17:00 : update: added /Schubert - Serenade.mp3
+Oct 06 17:00 : update: added /Vivaldi - Cantata Cessate, omai cessate.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 4.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Symphony No. 2 Op. 27 Mvt. 3 - Adagio Adagio.mp3
+Oct 06 17:00 : update: added /Samuel Barber - Agnus Dei.mp3
+Oct 06 17:00 : update: added /Chopin - Etude Op. 25 No. 5 (Wrong Note).mp3
+Oct 06 17:00 : update: added /Mussorgsky - Night on Bald Mountain.mp3
+Oct 06 17:00 : update: added /Haendel - Sarabande.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Valse Sentimentale.mp3
+Oct 06 17:00 : update: added /Beethoven - Egmont Overture.mp3
+Oct 06 17:00 : update: added /Mozart - Sinfonia No. 40 in Sol minore.mp3
+Oct 06 17:00 : update: added /Johann Strauss II - The Blue Danube Waltz.mp3
+Oct 06 17:00 : update: added /Wagner - Faust.mp3
+Oct 06 17:00 : update: added /Brahms - Hungarian Dance No. 5 (Hungarian Symphony Orchestra Budapest).mp3
+Oct 06 17:00 : update: added /Satie - Gymnopedie No. 1.mp3
+Oct 06 17:00 : update: added /Chopin - Etude Op. 10 No. 4 (Torrent).mp3
+Oct 06 17:00 : update: added /Kreisler - Liebesleid (Love's Sorrow) (Piano and Violin).mp3
+Oct 06 17:00 : update: added /Chopin - Fantaisie Impromptu Op. 66.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - The Nutcracker Suite Op. 71a.mp3
+Oct 06 17:00 : update: added /Mahler - Adagietto Symphony 5 (Karajan).mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Sleeping Beauty (Piano 4 Hands) (Rachmaninov's arr.).mp3
+Oct 06 17:00 : update: added /Rossini - William Tell Overture.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Waltz Op. 40 No. 6.mp3
+Oct 06 17:00 : update: added /Chopin - Nocturne in E flat major Op. 9 No. 2 (Tiffany Poon).mp3
+Oct 06 17:00 : update: added /Scriabin - Scriabin - Etude Op. 8 No. 12.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 1.mp3
+Oct 06 17:00 : update: added /Beethoven - Rondo e Capriccio.mp3
+Oct 06 17:00 : update: added /Giazotto - Adagio (Hauser).mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 7.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 6.mp3
+Oct 06 17:00 : update: added /Chopin - Etude Op. 25 No. 11 (Winter Wind).mp3
+Oct 06 17:00 : update: added /Chopin - Ballade No. 1 in G minor Op. 23 (Piano and Violin).mp3
+Oct 06 17:00 : update: added /Pachelbel - Canon in D (Piano).mp3
+Oct 06 17:00 : update: added /Rachmaninov - Piano Concerto No. 2 (Kissin).mp3
+Oct 06 17:00 : update: added /Chopin - Waltz in A minor Op. Posth.mp3
+Oct 06 17:00 : update: added /Faure - Requiem Op. 48.mp3
+Oct 06 17:00 : update: added /Saint Saens - Danse Macabre.mp3
+Oct 06 17:00 : update: added /Wagner - Tristan und Isolde - Prelude.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Prelude Op. 23 No. 5.mp3
+Oct 06 17:00 : update: added /Szymanowski - Prelude Op. 1 No. 1.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 8.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni - Estate.mp3
+Oct 06 17:00 : update: added /Dvorak - Symphony No. 9 Mvt. 4 - Allegro con fuoco.mp3
+Oct 06 17:00 : update: added /Ravel - Pavane pour une infante defunte.mp3
+Oct 06 17:00 : update: added /Liszt - Liebestraum (Love Dream).mp3
+Oct 06 17:00 : update: added /Mozart - Requiem - Sanctus.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni - Estate - Presto (Nigel Kennedy).mp3
+Oct 06 17:00 : update: added /Bach - Prelude in C major BWV846.mp3
+Oct 06 17:00 : update: added /Bach - Aria sulla quarta corda (Piano).mp3
+Oct 06 17:00 : update: added /Saint Saens - Toccata Op. 72 No. 3.mp3
+Oct 06 17:00 : update: added /Saint Saens - Introduction and Rondo Capriccioso.mp3
+Oct 06 17:00 : update: added /Beethoven - Piano Sonata Op. 57 Op. 3 (Appassionata).mp3
+Oct 06 17:00 : update: added /Kreisler - Liebesleid (Love's Sorrow) (Piano).mp3
+Oct 06 17:00 : update: added /Debussy - Arabesque No. 1 and No. 2.mp3
+Oct 06 17:00 : update: added /Liszt - Totentanz.mp3
+Oct 06 17:00 : update: added /Tarrega - Capricho arabe.mp3
+Oct 06 17:00 : update: added /Mozart - Requiem - Introit & Kyrie.mp3
+Oct 06 17:00 : update: added /Paul de Senneville - Marriage d'amour.mp3
+Oct 06 17:00 : update: added /Dvorak - The Water Goblin.mp3
+Oct 06 17:00 : update: added /Faure - Pavane Op. 50.mp3
+Oct 06 17:00 : update: added /Vivaldi - Violin Concerto in A Minor RV356.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni - Primavera.mp3
+Oct 06 17:00 : update: added /Mozart - Don Giovanni (Finale).mp3
+Oct 06 17:00 : update: added /Mussorgsky - Pictures at an Exhibition.mp3
+Oct 06 17:00 : update: added /Vivaldi - Concerto for 4 Violins in B minor RV580.mp3
+Oct 06 17:00 : update: added /Beethoven - Piano Sonata No. 17 Op. 3 (Tempest).mp3
+Oct 06 17:00 : update: added /Dvorak - Song to the Moon.mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 9.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Hymn of the Cherubim (USSR Ministry Of Culture Chamber Choir).mp3
+Oct 06 17:00 : update: added /Schubert - Ave Maria.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Pas de Deux (The Nutcracker).mp3
+Oct 06 17:00 : update: added /Chopin - Ballade No. 1 in G minor Op. 23 (Piano).mp3
+Oct 06 17:00 : update: added /Liszt - Transcendental Etude No. 4 (Mazeppa).mp3
+Oct 06 17:00 : update: added /Mozart - Lacrimosa.mp3
+Oct 06 17:00 : update: added /Mozart - Requiem - Hostias.mp3
+Oct 06 17:00 : update: added /Beethoven - Moonlight Sonata Op. 27 No. 2 Op. 3.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Romance.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Prelude in C sharp.mp3
+Oct 06 17:00 : update: added /Mozart - Turkish March.mp3
+Oct 06 17:00 : update: added /Dvorak - Romance for Piano and Violin op. 11.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - Waltz No. 9 Op. 40.mp3
+Oct 06 17:00 : update: added /Faure - Sicilienne for Cello and Piano Op. 78.mp3
+Oct 06 17:00 : update: added /Schoenberg - Verklarte Nacht Op. 4 - Boulez.mp3
+Oct 06 17:00 : update: added /Tchaikovsky - The Nutcracker Suite Op. 71.mp3
+Oct 06 17:00 : update: added /Max Richter - On the Nature of Daylight.mp3
+Oct 06 17:00 : update: added /Beethoven - Moonlight Sonata Op. 27 No. 2 Op. 1-2-3.mp3
+Oct 06 17:00 : update: added /Beethoven - Violin Sonata No. 9 (Kreutzer).mp3
+Oct 06 17:00 : update: added /Rachmaninov - The Isle of the Dead - Symphonic poem Op. 29.mp3
+Oct 06 17:00 : update: added /Wagner - Lohengrin - Prelude.mp3
+Oct 06 17:00 : update: added /Rachmaninov - Praise the Lord.mp3
+Oct 06 17:00 : update: added /Beethoven - Piano Sonata No. 8 Op. 13 in C minor (Pathetique).mp3
+Oct 06 17:00 : update: added /Tchaikovsky - 1812 Overture (Claudio Abbado).mp3
+Oct 06 17:00 : update: added /Debussy - Claire de Lune.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni - Inverno.mp3
+Oct 06 17:00 : update: added /Paganini - La Campanella (Vanessa Mae).mp3
+Oct 06 17:00 : update: added /Vivaldi - Concerto for Two Violins in A Minor RV522.mp3
+Oct 06 17:00 : update: added /Mozart - Requiem.mp3
+Oct 06 17:00 : update: added /Wagner - Ride of the Valkyries.mp3
+Oct 06 17:00 : update: added /Chopin - Etude Op. 10 No. 12 (Revolutionary).mp3
+Oct 06 17:00 : update: added /Beethoven - Symphony No. 3.mp3
+Oct 06 17:00 : update: added /Verdi - Dies Irae.mp3
+Oct 06 17:00 : update: added /Vivaldi - Filiae maestae Jerusalem RV638.mp3
+Oct 06 17:00 : update: added /Liszt - La Campanella - Kissin.mp3
+Oct 06 17:00 : update: added /Wagner - Tannhauser Overture.mp3
+Oct 06 17:00 : update: added /Vivaldi - Le Quattro Stagioni (Nigel Kennedy).mp3
+Oct 06 17:00 : client: [0] opened from 127.0.0.1:38090
+Oct 06 17:01 : client: [1] opened from 127.0.0.1:38094
+Oct 06 17:01 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 06 17:12 : client: [2] opened from 127.0.0.1:38100
+Oct 06 17:12 : client: [2] closed
+Oct 06 23:53 : player: played "Tchaikovsky - Waltz No. 9 Op. 40.mp3"
+Oct 06 23:58 : player: played "Tchaikovsky - Waltz No. 9 Op. 40.mp3"
+Oct 07 00:03 : player: played "Tchaikovsky - Waltz No. 9 Op. 40.mp3"
+Oct 07 00:04 : player: played "Tchaikovsky - Waltz No. 9 Op. 40.mp3"
+Oct 07 00:09 : player: played "Dvorak - Romance for Piano and Violin op. 11.mp3"
+Oct 07 00:09 : client: [1] closed

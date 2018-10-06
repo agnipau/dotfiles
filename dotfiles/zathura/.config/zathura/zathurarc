@@ -13,6 +13,7 @@ set window-height         "566"
 set window-width          "690"
 set window-title-basename "true"
 set first-page-column     "1:1"
+set selection-clipboard   clipboard
 
-# Source gruvbox-dark colors.
-include "/home/matte/progetti/themes/zathura/gruvbox-dark.zathura"
+# Source material-default colors.
+include "/home/matte/progetti/themes/zathura/material-default.zathura"
