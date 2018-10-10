@@ -22253,3 +22253,81 @@ Oct 07 23:06 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
 Oct 07 23:06 : client: [19] closed
 Oct 07 23:06 : client: [20] opened from 127.0.0.1:45678
 Oct 07 23:11 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 07 23:12 : exception: "PulseAudio Output" [pulse] failed to play: disconnected
+Oct 07 23:12 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 10 17:28 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 10 17:28 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 10 17:28 : client: [0] opened from 127.0.0.1:44786
+Oct 10 17:28 : client: [1] opened from 127.0.0.1:44790
+Oct 10 17:28 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 10 18:21 : client: [0] closed
+Oct 10 18:21 : client: [2] opened from 127.0.0.1:45034
+Oct 10 18:25 : player: played "Brahms - Hungarian Dance No. 5 (Hungarian Symphony Orchestra Budapest).mp3"
+Oct 10 18:28 : player: played "Brahms - Hungarian Dance No. 5 (Hungarian Symphony Orchestra Budapest).mp3"
+Oct 10 18:32 : player: played "Brahms - Hungarian Dance No. 5 (Hungarian Symphony Orchestra Budapest).mp3"
+Oct 10 18:36 : player: played "Brahms - Hungarian Dance No. 5 (Hungarian Symphony Orchestra Budapest).mp3"
+Oct 10 18:37 : client: [1] closed
+Oct 10 19:13 : player: played "Faure - Requiem Op. 48.mp3"
+Oct 10 19:22 : client: [2] closed
+Oct 10 19:22 : client: [3] opened from 127.0.0.1:46982
+Oct 10 19:25 : client: [4] opened from 127.0.0.1:47142
+Oct 10 19:25 : client: [4] closed
+Oct 10 19:30 : client: [5] opened from 127.0.0.1:47478
+Oct 10 19:32 : client: [3] closed
+Oct 10 19:32 : client: [6] opened from 127.0.0.1:47496
+Oct 10 19:34 : client: [6] closed
+Oct 10 19:34 : client: [7] opened from 127.0.0.1:47516
+Oct 10 19:37 : player: played "Max Richter - On the Nature of Daylight.mp3"
+Oct 10 19:43 : player: played "Max Richter - On the Nature of Daylight.mp3"
+Oct 10 19:45 : client: [5] closed
+Oct 10 19:49 : player: played "Max Richter - On the Nature of Daylight.mp3"
+Oct 10 19:56 : player: played "Max Richter - On the Nature of Daylight.mp3"
+Oct 10 19:58 : client: [8] opened from 127.0.0.1:48340
+Oct 10 19:59 : client: [8] closed
+Oct 10 20:08 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Oct 10 20:08 : client: [9] opened from 127.0.0.1:48456
+Oct 10 20:11 : client: [10] opened from 127.0.0.1:48532
+Oct 10 20:11 : client: [10] closed
+Oct 10 21:34 : client: [11] opened from 127.0.0.1:48622
+Oct 10 21:34 : client: [11] closed
+Oct 10 21:47 : client: [12] opened from 127.0.0.1:52088
+Oct 10 21:47 : client: [12] closed
+Oct 10 21:48 : client: [13] opened from 127.0.0.1:52678
+Oct 10 21:48 : client: [13] closed
+Oct 10 21:48 : client: [14] opened from 127.0.0.1:52682
+Oct 10 21:48 : client: [14] closed
+Oct 10 21:48 : client: [15] opened from 127.0.0.1:52694
+Oct 10 21:48 : client: [15] closed
+Oct 10 21:48 : client: [16] opened from 127.0.0.1:52698
+Oct 10 21:48 : client: [16] closed
+Oct 10 21:48 : client: [17] opened from 127.0.0.1:52702
+Oct 10 21:48 : client: [17] closed
+Oct 10 21:48 : client: [18] opened from 127.0.0.1:52706
+Oct 10 21:48 : client: [18] closed
+Oct 10 21:48 : client: [19] opened from 127.0.0.1:52710
+Oct 10 21:48 : client: [19] closed
+Oct 10 21:48 : client: [20] opened from 127.0.0.1:52714
+Oct 10 21:48 : client: [20] closed
+Oct 10 21:48 : client: [21] opened from 127.0.0.1:52726
+Oct 10 21:48 : client: [21] closed
+Oct 10 21:48 : client: [22] opened from 127.0.0.1:52806
+Oct 10 21:48 : client: [22] closed
+Oct 10 21:48 : client: [23] opened from 127.0.0.1:52810
+Oct 10 21:48 : client: [23] closed
+Oct 10 21:49 : client: [24] opened from 127.0.0.1:52982
+Oct 10 21:49 : client: [24] closed
+Oct 10 21:49 : client: [25] opened from 127.0.0.1:53394
+Oct 10 21:49 : client: [25] closed
+Oct 10 21:50 : client: [26] opened from 127.0.0.1:53462
+Oct 10 21:50 : client: [26] closed
+Oct 10 21:50 : client: [27] opened from 127.0.0.1:53810
+Oct 10 21:50 : client: [27] closed
+Oct 10 21:58 : player: played "Mozart - Requiem - Introit & Kyrie.mp3"
+Oct 10 22:05 : player: played "Mozart - Requiem - Introit & Kyrie.mp3"
+Oct 10 22:05 : client: [28] opened from 127.0.0.1:32770
+Oct 10 22:05 : client: [28] closed
+Oct 10 22:06 : client: [9] closed
+Oct 10 22:23 : client: [29] opened from 127.0.0.1:41268
+Oct 10 22:23 : client: [29] closed
+Oct 10 22:23 : client: [30] opened from 127.0.0.1:41288
+Oct 10 22:23 : client: [30] closed

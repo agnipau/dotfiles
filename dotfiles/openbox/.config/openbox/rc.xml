@@ -28,7 +28,7 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Theme Material Default</name>
+  <name>Theme Material Darker</name>
   <titleLayout>L</titleLayout>
   <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
@@ -1038,6 +1038,16 @@
     <size>
       <width>240</width>
       <height>240</height>
+    </size>
+  </application>
+  <application class="Code">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>590</height>
     </size>
   </application>
   <application class="TelegramDesktop">
