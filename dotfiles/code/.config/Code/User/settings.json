@@ -1,0 +1,71 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "sync.gist": "cabc0dd945255f7d34d8f114e19df4a5",
+    "sync.quietSync": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.forceDownload": false,
+    "editor.fontFamily": "'Iosevka SS07', 'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 16,
+    "editor.smoothScrolling": true,
+    "editor.tabCompletion": "on",
+    "editor.cursorBlinking": "smooth",
+    "editor.fontLigatures": true,
+    "workbench.statusBar.feedback.visible": false,
+    "window.menuBarVisibility": "toggle",
+    "search.smartCase": true,
+    "searchRipgrep.enable": true,
+    "vim.leader": "<space>",
+    "vim.hlsearch": true,
+    "vim.easymotionMarkerFontFamily": "'Iosevka SS07', 'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "vim.enableNeovim": true,
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "<leader>"],
+            "after": ["/"]
+        },
+        {
+            "before": ["<leader>", "m", "o"],
+            "commands": [":nohlsearch"]
+        },
+        {
+            "before": ["<c-d>"],
+            "after": ["}"]
+        },
+        {
+            "before": ["<c-u>"],
+            "after": ["{"]
+        },
+        {
+            "before": ["J"],
+            "after": ["j", "j", "j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["k", "k", "k"]
+        },
+        {
+            "before": ["H"],
+            "after": ["0"]
+        },
+        {
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+            "before": [","],
+            "after": [":"]
+        },
+        {
+            "before": ["è"],
+            "after": ["."]
+        },
+        {
+            "before": ["!"],
+            "after": [":", "!"]
+        }
+    ],
+}
