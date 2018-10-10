@@ -207,7 +207,6 @@ haskell-digest
 haskell-dlist
 haskell-doctemplates
 haskell-exceptions
-haskell-foundation
 haskell-glob
 haskell-haddock-library
 haskell-hashable
@@ -274,7 +273,6 @@ hicolor-icon-theme
 hspell
 htop
 http-parser
-hub
 hunspell
 hwids
 hyphen
