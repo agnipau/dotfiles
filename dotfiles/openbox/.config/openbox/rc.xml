@@ -28,8 +28,8 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Theme Material Darker</name>
-  <titleLayout>L</titleLayout>
+  <name>Agnipau Material Darker</name>
+  <titleLayout>LIMC</titleLayout>
   <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
@@ -1012,14 +1012,15 @@
   <!-- Center apps and change size. -->
   <application class="Chromium">
     <desktop>2</desktop>
-    <decor>no</decor>
+    <decor>yes</decor>
     <position force="yes">
       <x>center</x>
       <y>center</y>
     </position>
     <size>
       <width>1226</width>
-      <height>628</height>
+      <!--height>628</height-->
+      <height>570</height>
     </size>
   </application>
   <application name="musica">

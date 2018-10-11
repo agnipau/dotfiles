@@ -24,6 +24,11 @@
         </action>
       </item>
       <menu id="Programmi" label="Programmi">
+        <item label="Code">
+          <action name="Execute">
+            <execute>code</execute>
+          </action>
+        </item>
         <item label="Telegram">
           <action name="Execute">
             <execute>telegram-desktop</execute>
