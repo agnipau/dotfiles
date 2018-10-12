@@ -28,7 +28,7 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Theme Material Default</name>
+  <name>Theme Material Darker</name>
   <titleLayout>L</titleLayout>
   <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
