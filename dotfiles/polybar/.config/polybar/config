@@ -6,6 +6,8 @@
 [colors]
 background  = ${xrdb:color0}
 foreground  = ${xrdb:color7}
+;background  = #007bcd
+;foreground  = #ffffff
 
 uno         = ${xrdb:color1}
 due         = ${xrdb:color2}
@@ -95,11 +97,11 @@ type                          = internal/network
 interface                     = wlp3s0
 format-connected              = <label-connected>
 format-disconnected           = <label-disconnected>
-label-connected               =  %local_ip%
+label-connected               =  %local_ip%
 label-connected-background    = ${colors.background}
 label-connected-foreground    = ${colors.foreground}
 label-connected-padding       = 4
-label-disconnected            =  
+label-disconnected            =  
 label-disconnected-background = ${colors.background}
 label-disconnected-foreground = ${colors.foreground}
 label-disconnected-padding    = 4

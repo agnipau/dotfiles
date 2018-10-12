@@ -28,7 +28,7 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Theme Material Darker</name>
+  <name>Theme Dark+</name>
   <titleLayout>L</titleLayout>
   <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
@@ -513,15 +513,20 @@
   </keybind>
   <keybind key="W-v">
     <action name="Execute">
+      <command>~/bin/theme --dark+</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-v">
+    <action name="Execute">
       <command>~/bin/theme --gruvbox-dark</command>
     </action>
   </keybind>
-  <keybind key="W-b">
+  <keybind key="W-C-v">
     <action name="Execute">
       <command>~/bin/theme --material-lighter</command>
     </action>
   </keybind>
-  <keybind key="W-b">
+  <keybind key="W-S-C-v">
     <action name="Execute">
       <command>~/bin/theme --gruvbox-light</command>
     </action>

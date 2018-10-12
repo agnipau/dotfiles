@@ -51,32 +51,32 @@ custom_cursor_colors: true
 
 colors:
   primary:
-    background: '0x212121'
-    foreground: '0xeeffff'
+    background: '0x1e1e1e'
+    foreground: '0xd4d4d4'
 
   cursor:
-    text:   '0x212121'
-    cursor: '0xeeffff'
+    text:   '0x1e1e1e'
+    cursor: '0xd4d4d4'
 
   normal:
-    black:   '0x212121'
-    red:     '0xf07178'
-    green:   '0xc3e88d'
-    yellow:  '0xffcb6b'
-    blue:    '0x82aaff'
-    magenta: '0xc792ea'
-    cyan:    '0x89ddff'
-    white:   '0xeeffff'
+    black:   '0x1e1e1e'
+    red:     '0xf44747'
+    green:   '0x608b4e'
+    yellow:  '0xdcdcaa'
+    blue:    '0x569cd6'
+    magenta: '0xc586c0'
+    cyan:    '0x9cdcfe'
+    white:   '0xd4d4d4'
 
   bright:
-    black:    '0x545454'
-    red:      '0xf78c6c'
-    green:    '0xc3e88d'
-    yellow:   '0xffcb6b'
-    blue:     '0x82aaff'
-    magenta:  '0x424242'
-    cyan:     '0x89ddff'
-    white:    '0xeeffff'
+    black:    '0x808080'
+    red:      '0xce9178'
+    green:    '0x608b4e'
+    yellow:   '0xdcdcaa'
+    blue:     '0x569cd6'
+    magenta:  '0x343434'
+    cyan:     '0x9cdcfe'
+    white:    '0xd4d4d4'
 
   dim:
     black:     '0x080c0a'
@@ -112,7 +112,7 @@ hide_cursor_when_typing: false
 
 cursor_style: Block
 
-unfocused_hollow_cursor: '0xeeffff'
+unfocused_hollow_cursor: '0xd4d4d4'
 
 live_config_reload: true
 
