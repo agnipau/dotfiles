@@ -192,7 +192,7 @@ set noshowcmd
 set shortmess+=csW
 
 set t_Co=256
-let g:material_variant = 'darker'
+let g:material_variant = 'default'
 let g:gruvbox_variant  = 'dark'
 colorscheme material
 

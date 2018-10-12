@@ -51,15 +51,15 @@ custom_cursor_colors: true
 
 colors:
   primary:
-    background: '0x212121'
+    background: '0x263238'
     foreground: '0xeeffff'
 
   cursor:
-    text:   '0x212121'
+    text:   '0x263238'
     cursor: '0xeeffff'
 
   normal:
-    black:   '0x212121'
+    black:   '0x263238'
     red:     '0xf07178'
     green:   '0xc3e88d'
     yellow:  '0xffcb6b'
@@ -69,12 +69,12 @@ colors:
     white:   '0xeeffff'
 
   bright:
-    black:    '0x545454'
+    black:    '0x546e7a'
     red:      '0xf78c6c'
     green:    '0xc3e88d'
     yellow:   '0xffcb6b'
     blue:     '0x82aaff'
-    magenta:  '0x424242'
+    magenta:  '0x37474f'
     cyan:     '0x89ddff'
     white:    '0xeeffff'
 
