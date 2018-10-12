@@ -1,5 +1,5 @@
 {
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "eq-material-theme-icons",
     "sync.gist": "cabc0dd945255f7d34d8f114e19df4a5",
     "sync.quietSync": false,
     "sync.removeExtensions": true,
@@ -128,5 +128,6 @@
             "before": ["!"],
             "after": [":", "!"]
         }
-    ]
+    ],
+    "workbench.colorTheme": "Material Theme"
 }
