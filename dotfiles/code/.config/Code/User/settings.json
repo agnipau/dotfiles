@@ -129,5 +129,7 @@
             "after": [":", "!"]
         }
     ],
-    "workbench.colorTheme": "Material Theme"
+    "workbench.colorTheme": "Material Theme",
+    "git.confirmSync": false,
+    "git.autofetch": true
 }
