@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:PulseAudio Output
 audio_device_state:1:my_fifo
 state: pause
-current: 12
-time: 14.527000
+current: 0
+time: 0.576000
 random: 0
 repeat: 1
 single: 1
@@ -12,17 +12,5 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Beethoven - Symphony No. 3.mp3
-1:Dvorak - Romance for Piano and Violin op. 11.mp3
-2:Brahms - Hungarian Dance No. 5 (Hungarian Symphony Orchestra Budapest).mp3
-3:Faure - Requiem Op. 48.mp3
-4:Max Richter - On the Nature of Daylight.mp3
-5:Vivaldi - Concerto for 4 Violins in B minor RV580.mp3
-6:Bach - Toccata e Fuga Re minore.mp3
-7:Vivaldi - Le Quattro Stagioni - Inverno.mp3
-8:Wagner - Lohengrin - Prelude.mp3
-9:Schoenberg - Verklarte Nacht Op. 4 - Boulez.mp3
-10:Mozart - Requiem - Domine Jesu.mp3
-11:Mozart - Requiem - Hostias.mp3
-12:Mozart - Requiem - Introit & Kyrie.mp3
+0:Chopin - Ballade No. 1 in G minor Op. 23 (Piano and Violin).mp3
 playlist_end

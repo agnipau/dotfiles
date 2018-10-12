@@ -28,8 +28,8 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Agnipau Material Darker</name>
-  <titleLayout>LIMC</titleLayout>
+  <name>Theme Material Darker</name>
+  <titleLayout>L</titleLayout>
   <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
@@ -259,7 +259,6 @@
       <finalactions>
         <action name="Focus"/>
         <action name="Raise"/>
-        <action name="Unshade"/>
       </finalactions>
     </action>
   </keybind>
@@ -276,7 +275,6 @@
       <finalactions>
         <action name="Focus"/>
         <action name="Raise"/>
-        <action name="Unshade"/>
       </finalactions>
     </action>
   </keybind>
@@ -544,9 +542,7 @@
     </action>
   </keybind>
   <keybind key="W-e">
-    <action name="Execute">
-      <command>~/bin/fehrand</command>
-    </action>
+    <action name="ToggleShade"/>
   </keybind>
   <keybind key="W-y">
     <action name="Execute">
@@ -854,14 +850,17 @@
     <mousebind button="Left" action="DoubleClick">
       <action name="ToggleMaximize"/>
     </mousebind>
-    <mousebind button="Middle" action="Click">
+    <!--mousebind button="Middle" action="Click">
       <action name="Focus"/>
       <action name="Raise"/>
       <action name="Unshade"/>
       <action name="MoveResizeTo">
         <x>center</x>
-	<y>center</y>
+        <y>center</y>
       </action>
+    </mousebind-->
+    <mousebind button="Middle" action="Click">
+      <action name="ToggleShade"/>
     </mousebind>
     <mousebind button="Right" action="Drag">
       <action name="Focus"/>
@@ -1019,8 +1018,8 @@
     </position>
     <size>
       <width>1226</width>
-      <!--height>628</height-->
-      <height>570</height>
+      <height>628</height>
+      <!--height>570</height-->
     </size>
   </application>
   <application name="musica">

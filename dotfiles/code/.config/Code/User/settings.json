@@ -10,7 +10,6 @@
     "editor.fontFamily": "'Iosevka SS07', 'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 16,
     "editor.smoothScrolling": true,
-    "editor.tabCompletion": "on",
     "editor.cursorBlinking": "smooth",
     "editor.fontLigatures": true,
     "workbench.statusBar.feedback.visible": false,
@@ -38,6 +37,14 @@
         {
             "before": ["<c-u>"],
             "after": ["{"]
+        },
+        {
+            "before": ["Z", "Z"],
+            "commands": [":w"]
+        },
+        {
+            "before": ["Z", "Q"],
+            "commands": [":q!"]
         },
         {
             "before": ["J"],
@@ -68,4 +75,58 @@
             "after": [":", "!"]
         }
     ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "<leader>"],
+            "after": ["/"]
+        },
+        {
+            "before": ["<leader>", "m", "o"],
+            "commands": [":nohlsearch"]
+        },
+        {
+            "before": ["<c-d>"],
+            "after": ["}"]
+        },
+        {
+            "before": ["<c-u>"],
+            "after": ["{"]
+        },
+        {
+            "before": ["Z", "Z"],
+            "commands": [":w"]
+        },
+        {
+            "before": ["Z", "Q"],
+            "commands": [":q!"]
+        },
+        {
+            "before": ["J"],
+            "after": ["j", "j", "j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["k", "k", "k"]
+        },
+        {
+            "before": ["H"],
+            "after": ["0"]
+        },
+        {
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+            "before": [","],
+            "after": [":"]
+        },
+        {
+            "before": ["è"],
+            "after": ["."]
+        },
+        {
+            "before": ["!"],
+            "after": [":", "!"]
+        }
+    ]
 }

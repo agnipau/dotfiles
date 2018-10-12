@@ -44,7 +44,7 @@ padding        = 2
 module-margin  = 1
 font-0         = Iosevka SS07:size=12:antialias=true:autohint=false;3
 font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
-modules-left   = openbox_ws_good essid down date_time pvol music mpd battery brightness wal
+modules-left   = openbox_ws_good essid down date_time pvol music mpd battery brightness ip
 locale         = it_IT.UTF-8
 
 ; This is way better than the xworkspaces module, but you need the script.
@@ -56,7 +56,7 @@ interval          = 0.1
 format            = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
-format-padding    = 3
+format-padding    = 2
 label             = %output%
 
 ; Show the essid.
@@ -88,6 +88,21 @@ label-disconnected            =  
 label-disconnected-background = ${colors.background}
 label-disconnected-foreground = ${colors.foreground}
 label-disconnected-padding    = 3
+
+; Show the IP adress.
+[module/ip]
+type                          = internal/network
+interface                     = wlp3s0
+format-connected              = <label-connected>
+format-disconnected           = <label-disconnected>
+label-connected               =  %local_ip%
+label-connected-background    = ${colors.background}
+label-connected-foreground    = ${colors.foreground}
+label-connected-padding       = 4
+label-disconnected            =  
+label-disconnected-background = ${colors.background}
+label-disconnected-foreground = ${colors.foreground}
+label-disconnected-padding    = 4
 
 ; Display the date and time.
 [module/date_time]
@@ -199,7 +214,8 @@ scroll-down       = sudo ~/bin/brightness --dec 5
 click-left        = redshift -PO 4500
 click-right       = redshift -x
 
-[module/wal]
+; Display what theme is in use.
+[module/theme]
 type              = custom/script
 format-text       = label
 exec              = printf '%s' "  $(<"${HOME}/.current-theme")"
