@@ -15,5 +15,5 @@ set window-title-basename "true"
 set first-page-column     "1:1"
 set selection-clipboard   clipboard
 
-# Source dark+ colors.
-include "/home/matte/progetti/themes/zathura/dark+.zathura"
+# Source material-default colors.
+include "/home/matte/progetti/themes/zathura/material-default.zathura"

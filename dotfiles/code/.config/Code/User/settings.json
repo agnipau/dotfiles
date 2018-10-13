@@ -1,5 +1,5 @@
 {
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "eq-material-theme-icons",
     "sync.gist": "cabc0dd945255f7d34d8f114e19df4a5",
     "sync.quietSync": false,
     "sync.removeExtensions": true,
@@ -21,6 +21,9 @@
     "vim.easymotionMarkerFontFamily": "'Iosevka SS07', 'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "vim.enableNeovim": true,
     "vim.useSystemClipboard": true,
+    "gitProjectManager.baseProjectsFolders": [
+        "/home/matte/progetti"
+    ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<leader>", "<leader>"],
@@ -130,5 +133,7 @@
         }
     ],
     "git.confirmSync": false,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "gitlens.defaultDateFormat": "D MMMM YYYY, HH:mm",
+    "workbench.colorTheme": "Material Theme"
 }
