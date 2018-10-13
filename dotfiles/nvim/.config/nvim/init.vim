@@ -191,7 +191,7 @@ set noshowmode
 set noruler
 set laststatus=2
 set noshowcmd
-set shortmess+=csW
+set shortmess+=csIW
 
 set t_Co=256
 let g:material_variant = 'default'

@@ -22529,3 +22529,18 @@ Oct 12 18:10 : client: [25] opened from 127.0.0.1:46772
 Oct 12 18:21 : client: [26] opened from 127.0.0.1:47244
 Oct 12 18:21 : client: [25] closed
 Oct 12 18:23 : player: played "Chopin - Ballade No. 1 in G minor Op. 23 (Piano and Violin).mp3"
+Oct 13 14:43 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 13 14:43 : client: [0] opened from 127.0.0.1:47896
+Oct 13 14:43 : client: [1] opened from 127.0.0.1:47900
+Oct 13 14:43 : player: played "Chopin - Ballade No. 1 in G minor Op. 23 (Piano and Violin).mp3"
+Oct 13 14:43 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 13 14:50 : player: played "Mozart - Requiem - Introit & Kyrie.mp3"
+Oct 13 14:57 : player: played "Mozart - Requiem - Introit & Kyrie.mp3"
+Oct 13 15:05 : player: played "Mozart - Requiem - Introit & Kyrie.mp3"
+Oct 13 15:12 : player: played "Mozart - Requiem - Introit & Kyrie.mp3"
+Oct 13 15:19 : player: played "Mozart - Requiem - Introit & Kyrie.mp3"
+Oct 13 15:26 : player: played "Mozart - Requiem - Introit & Kyrie.mp3"
+Oct 13 16:00 : client: [2] opened from 127.0.0.1:48234
+Oct 13 16:00 : client: [2] closed
+Oct 13 16:01 : client: [3] opened from 127.0.0.1:48238
+Oct 13 16:01 : client: [3] closed
