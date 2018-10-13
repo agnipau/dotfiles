@@ -213,7 +213,11 @@ export LESS_TERMCAP_us=$'\e[0;32m'
 
 # fzf options.
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
-export FZF_DEFAULT_OPTS="--multi --inline-info --reverse --height 95%"
+export FZF_DEFAULT_OPTS="
+  --multi --inline-info --reverse --height 95%
+  --color fg:8,hl:1,fg+:1,bg+:0,hl+:7
+  --color info:0,prompt:1,spinner:1,pointer:1,marker:1
+"
 
 # Custom fzf functions.
 fzf_nvim() {
@@ -249,7 +253,7 @@ fzf_general() {
 
 # Custom fzf bindings.
 #shellcheck disable=SC2016
-bind -x '"\C-e": clear; fzf_nvim $(fzf)'
+bind -x '"\C-k": clear; fzf_nvim $(fzf)'
 bind -x '"\C-r": fzf_history'
 bind '"\ec": "fzf_cd\C-m"'
 bind '"\C-t": "\" > .fzf_cmd.tmp\e0iecho -n \"\C-mfzf_general\C-m'
