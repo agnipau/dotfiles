@@ -22544,3 +22544,25 @@ Oct 13 16:00 : client: [2] opened from 127.0.0.1:48234
 Oct 13 16:00 : client: [2] closed
 Oct 13 16:01 : client: [3] opened from 127.0.0.1:48238
 Oct 13 16:01 : client: [3] closed
+Oct 13 16:12 : client: [4] opened from 127.0.0.1:48272
+Oct 13 16:12 : client: [4] closed
+Oct 13 17:37 : player: played "Mozart - Requiem - Full.mp3"
+Oct 13 17:39 : client: [0] closed
+Oct 13 17:39 : client: [5] opened from 127.0.0.1:48682
+Oct 13 17:45 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
+Oct 13 17:54 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
+Oct 13 18:02 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
+Oct 13 18:02 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
+Oct 13 18:02 : client: [1] closed
+Oct 13 18:02 : client: [6] opened from 127.0.0.1:48892
+Oct 13 18:02 : client: [6] closed
+Oct 13 18:03 : client: [7] opened from 127.0.0.1:48896
+Oct 13 18:03 : client: [7] closed
+Oct 13 18:03 : client: [8] opened from 127.0.0.1:48900
+Oct 13 18:10 : player: played "Giazotto - Adagio (Hauser).mp3"
+Oct 13 18:17 : player: played "Giazotto - Adagio (Hauser).mp3"
+Oct 13 18:22 : client: [8] closed
+Oct 13 18:22 : client: [9] opened from 127.0.0.1:49008
+Oct 13 18:22 : client: [9] closed
+Oct 13 19:06 : exception: "PulseAudio Output" [pulse] failed to pause: failed to connect the stream: Connection terminated
+Oct 13 19:06 : player: played "Giazotto - Adagio (Hauser).mp3"
