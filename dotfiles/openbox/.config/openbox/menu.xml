@@ -23,6 +23,7 @@
           <execute>xst -n musica -e ~/bin/musica-maestro</execute>
         </action>
       </item>
+      <separator/>
       <menu id="Programmi" label="Programmi">
         <item label="Code">
           <action name="Execute">
@@ -39,14 +40,51 @@
             <execute>spotify</execute>
           </action>
         </item>
-        <item label="Thunar">
+        <item label="Calc">
           <action name="Execute">
-            <execute>thunar</execute>
+            <execute>gnome-calculator</execute>
+          </action>
+        </item>
+      </menu>
+      <menu id="Office" label="Office">
+        <item label="Writer">
+          <action name="Execute">
+            <execute>libreoffice --writer</execute>
           </action>
         </item>
         <item label="Calc">
           <action name="Execute">
-            <execute>gnome-calculator</execute>
+            <execute>libreoffice --calc</execute>
+          </action>
+        </item>
+        <item label="Draw">
+          <action name="Execute">
+            <execute>libreoffice --draw</execute>
+          </action>
+        </item>
+        <item label="Impress">
+          <action name="Execute">
+            <execute>libreoffice --impress</execute>
+          </action>
+        </item>
+        <item label="Base">
+          <action name="Execute">
+            <execute>libreoffice --base</execute>
+          </action>
+        </item>
+        <item label="Global">
+          <action name="Execute">
+            <execute>libreoffice --global</execute>
+          </action>
+        </item>
+        <item label="Math">
+          <action name="Execute">
+            <execute>libreoffice --math</execute>
+          </action>
+        </item>
+        <item label="Web">
+          <action name="Execute">
+            <execute>libreoffice --web</execute>
           </action>
         </item>
       </menu>
@@ -56,12 +94,12 @@
           <action name="Execute">
             <execute>slock</execute>
           </action>
-        </item>			
+        </item>
         <item label="Sospendi">
           <action name="Execute">
             <execute>systemctl suspend</execute>
           </action>
-        </item>			
+        </item>
         <item label="Riavvia">
           <action name="Execute">
             <execute>reboot</execute>
@@ -73,7 +111,6 @@
           </action>
         </item>
       </menu>
-      <separator/>
       <menu id="Openbox" label="Openbox">
         <item label="Esci">
           <action name="Exit"/>

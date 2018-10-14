@@ -135,5 +135,6 @@
     "git.confirmSync": false,
     "git.autofetch": true,
     "gitlens.defaultDateFormat": "D MMMM YYYY, HH:mm",
-    "workbench.colorTheme": "Material Theme"
+    "workbench.colorTheme": "Material Theme",
+    "explorer.confirmDelete": false
 }

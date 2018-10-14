@@ -582,6 +582,11 @@
       <command>~/bin/ws-notify</command>
     </action>
   </keybind>
+  <keybind key="W-f">
+    <action name="Execute">
+      <command>nautilus</command>
+    </action>
+  </keybind>
   <keybind key="W-m">
     <action name="Execute">
       <command>xst -n musica -e ~/bin/musica-maestro</command>
@@ -810,8 +815,8 @@
       </action>
     </mousebind>
     <mousebind button="W-Left" action="Click">
-      <action name="Execute">
-        <command>~/bin/draw</command>
+      <action name="GoToDesktop">
+        <to>1</to>
       </action>
     </mousebind>
     <mousebind button="Middle" action="Click">
@@ -825,8 +830,8 @@
       </action>
     </mousebind>
     <mousebind button="W-Right" action="Click">
-      <action name="Execute">
-        <command>skippy-xd</command>
+      <action name="GoToDesktop">
+        <to>6</to>
       </action>
     </mousebind>
     <mousebind button="Up" action="Click">
