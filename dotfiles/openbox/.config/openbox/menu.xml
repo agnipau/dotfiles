@@ -44,6 +44,11 @@
             <execute>thunar</execute>
           </action>
         </item>
+        <item label="Calc">
+          <action name="Execute">
+            <execute>gnome-calculator</execute>
+          </action>
+        </item>
       </menu>
       <separator/>
       <menu id="Alimentazione" label="Alimentazione">
