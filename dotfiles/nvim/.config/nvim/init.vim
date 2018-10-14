@@ -168,6 +168,8 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 "Plug 'mattn/gist-vim'
 
+Plug 'triglav/vim-visual-increment'
+
 call plug#end()
 
 " }}}

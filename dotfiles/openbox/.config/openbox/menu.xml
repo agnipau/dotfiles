@@ -47,14 +47,14 @@
         </item>
       </menu>
       <menu id="Office" label="Office">
-        <item label="Writer">
-          <action name="Execute">
-            <execute>libreoffice --writer</execute>
-          </action>
-        </item>
         <item label="Calc">
           <action name="Execute">
             <execute>libreoffice --calc</execute>
+          </action>
+        </item>
+        <item label="Writer">
+          <action name="Execute">
+            <execute>libreoffice --writer</execute>
           </action>
         </item>
         <item label="Draw">

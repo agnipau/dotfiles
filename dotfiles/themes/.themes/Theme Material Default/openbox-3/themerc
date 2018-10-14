@@ -24,8 +24,8 @@ window.client.padding.width: 0
 window.handle.width:         0
 
 # Menu geometry.
-menu.border.width: 9
-menu.overlap.x:    -9
+menu.border.width: 12
+menu.overlap.x:    -15
 
 # Menu colors.
 menu.items.bg:                Flat
