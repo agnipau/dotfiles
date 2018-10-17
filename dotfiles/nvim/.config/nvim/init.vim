@@ -69,6 +69,8 @@ Plug 'tpope/vim-repeat'
 
 Plug 'tpope/vim-surround'
 
+Plug 'tpope/vim-commentary'
+
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -81,6 +83,8 @@ Plug 'Shougo/neco-vim'
 Plug 'zchee/deoplete-clang'
 
 Plug 'zchee/deoplete-jedi'
+
+Plug 'Shougo/deoppet.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'wellle/tmux-complete.vim'
   let g:tmuxcomplete#trigger = ''
@@ -110,7 +114,7 @@ Plug 'w0rp/ale'
   nmap <silent> <c-q> <plug>(ale_previous_wrap)
   nmap <silent> <c-e> <plug>(ale_next_wrap)
 
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': ['*html', '*css', 'vue'] }
   let g:user_emmet_leader_key = '<c-f>'
 
 Plug 'junegunn/vim-easy-align'
@@ -124,6 +128,8 @@ Plug 'yuttie/comfortable-motion.vim'
   let g:comfortable_motion_no_default_key_mappings = 1
   nnoremap <silent> J                 :call comfortable_motion#flick(55)<cr>
   nnoremap <silent> K                 :call comfortable_motion#flick(-55)<cr>
+  xnoremap <silent> J                 jjj<cr>
+  xnoremap <silent> K                 kkk<cr>
   noremap  <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<cr>
   noremap  <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<cr>
 
