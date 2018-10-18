@@ -23176,3 +23176,15 @@ Oct 18 22:22 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
 Oct 18 22:27 : client: [6] closed
 Oct 18 22:27 : client: [10] closed
 Oct 18 22:27 : client: [12] opened from 127.0.0.1:47172
+Oct 18 22:30 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
+Oct 18 22:31 : client: [12] closed
+Oct 18 22:31 : client: [13] opened from 127.0.0.1:47190
+Oct 18 22:38 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
+Oct 18 22:42 : client: [14] opened from 127.0.0.1:47250
+Oct 18 22:44 : client: [15] opened from 127.0.0.1:47256
+Oct 18 22:44 : client: [15] closed
+Oct 18 22:45 : client: [16] opened from 127.0.0.1:47264
+Oct 18 22:45 : client: [16] closed
+Oct 18 22:50 : player: played "Mozart - Serenade no.13.mp3"
+Oct 18 22:54 : client: [17] opened from 127.0.0.1:47278
+Oct 18 22:54 : client: [13] closed
