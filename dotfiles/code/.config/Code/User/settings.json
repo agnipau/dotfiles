@@ -1,5 +1,5 @@
 {
-    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.iconTheme": "vscode-icons",
     "sync.gist": "cabc0dd945255f7d34d8f114e19df4a5",
     "sync.quietSync": false,
     "sync.removeExtensions": true,
@@ -135,6 +135,6 @@
     "git.confirmSync": false,
     "git.autofetch": true,
     "gitlens.defaultDateFormat": "D MMMM YYYY, HH:mm",
-    "workbench.colorTheme": "Material Theme",
+    "workbench.colorTheme": "One Dark Pro",
     "explorer.confirmDelete": false
 }
