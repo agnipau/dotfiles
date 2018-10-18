@@ -23140,3 +23140,39 @@ Oct 18 00:58 : client: [30] opened from 127.0.0.1:58500
 Oct 18 00:58 : client: [30] closed
 Oct 18 01:00 : client: [1] closed
 Oct 18 01:00 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"
+Oct 18 19:50 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 18 19:50 : client: [0] opened from 127.0.0.1:42356
+Oct 18 19:50 : client: [1] opened from 127.0.0.1:42360
+Oct 18 19:50 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"
+Oct 18 19:50 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 18 19:50 : client: [1] closed
+Oct 18 20:06 : player: played "Satie - Once Upon a Time in Paris.mp3"
+Oct 18 20:21 : player: played "Satie - Once Upon a Time in Paris.mp3"
+Oct 18 20:23 : client: [0] closed
+Oct 18 20:23 : client: [2] opened from 127.0.0.1:44756
+Oct 18 20:37 : player: played "Satie - Once Upon a Time in Paris.mp3"
+Oct 18 20:37 : client: [3] opened from 127.0.0.1:46264
+Oct 18 20:37 : client: [3] closed
+Oct 18 20:56 : client: [4] opened from 127.0.0.1:46282
+Oct 18 20:56 : client: [4] closed
+Oct 18 21:11 : player: played "Satie - Once Upon a Time in Paris.mp3"
+Oct 18 21:27 : player: played "Satie - Once Upon a Time in Paris.mp3"
+Oct 18 21:35 : client: [5] opened from 127.0.0.1:46636
+Oct 18 21:35 : client: [5] closed
+Oct 18 21:52 : client: [6] opened from 127.0.0.1:46828
+Oct 18 21:52 : player: played "Satie - Once Upon a Time in Paris.mp3"
+Oct 18 21:59 : client: [7] opened from 127.0.0.1:46880
+Oct 18 21:59 : client: [7] closed
+Oct 18 22:03 : client: [8] opened from 127.0.0.1:46898
+Oct 18 22:03 : client: [8] closed
+Oct 18 22:05 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
+Oct 18 22:10 : client: [9] opened from 127.0.0.1:46914
+Oct 18 22:10 : client: [9] closed
+Oct 18 22:17 : client: [2] closed
+Oct 18 22:17 : client: [10] opened from 127.0.0.1:46932
+Oct 18 22:19 : client: [11] opened from 127.0.0.1:46938
+Oct 18 22:19 : client: [11] closed
+Oct 18 22:22 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
+Oct 18 22:27 : client: [6] closed
+Oct 18 22:27 : client: [10] closed
+Oct 18 22:27 : client: [12] opened from 127.0.0.1:47172

@@ -28,7 +28,7 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Theme Material Default</name>
+  <name>Theme One Dark</name>
   <titleLayout>L</titleLayout>
   <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
@@ -506,14 +506,14 @@
       <command>~/bin/theme --material-darker</command>
     </action>
   </keybind>
-  <keybind key="W-S-C-c">
+  <keybind key="W-C-S-c">
     <action name="Execute">
       <command>~/bin/theme --material-ocean</command>
     </action>
   </keybind>
   <keybind key="W-v">
     <action name="Execute">
-      <command>~/bin/theme --dark+</command>
+      <command>~/bin/theme --one-dark</command>
     </action>
   </keybind>
   <keybind key="W-S-v">
@@ -526,7 +526,7 @@
       <command>~/bin/theme --material-lighter</command>
     </action>
   </keybind>
-  <keybind key="W-S-C-v">
+  <keybind key="W-C-S-v">
     <action name="Execute">
       <command>~/bin/theme --gruvbox-light</command>
     </action>

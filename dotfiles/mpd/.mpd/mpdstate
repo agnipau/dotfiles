@@ -1,9 +1,9 @@
 sw_volume: 100
 audio_device_state:1:PulseAudio Output
 audio_device_state:1:my_fifo
-state: pause
-current: 5
-time: 0.074000
+state: play
+current: 0
+time: 4.010000
 random: 0
 repeat: 1
 single: 1
@@ -12,10 +12,5 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Chopin - Ballade No. 1 in G minor Op. 23 (Piano and Violin).mp3
-1:Chopin - Etude Op. 10 No. 12 (Revolutionary).mp3
-2:Chopin - Etude Op. 25 No. 5 (Wrong Note).mp3
-3:Vivaldi - Concerto for 4 Violins in B minor RV580.mp3
-4:Vivaldi - Concerto for Two Violins in A Minor RV522.mp3
-5:Vivaldi - Le Quattro Stagioni - Inverno.mp3
+0:Mozart - Sinfonia No. 40 in Sol minore.mp3
 playlist_end

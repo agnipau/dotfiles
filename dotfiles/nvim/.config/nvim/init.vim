@@ -17,6 +17,8 @@ Plug 'matteoguarda/gruvbox.vim'
 
 Plug 'matteoguarda/dark-plus.vim'
 
+Plug 'matteoguarda/one-dark.vim'
+
 Plug 'chrisbra/Colorizer'
 
 Plug 'junegunn/limelight.vim'
@@ -204,7 +206,7 @@ set shortmess+=csIW
 set t_Co=256
 let g:material_variant = 'default'
 let g:gruvbox_variant  = 'dark'
-colorscheme material
+colorscheme one-dark
 
 set fillchars=fold:\ 
 set foldlevelstart=0
