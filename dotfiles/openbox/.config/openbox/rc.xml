@@ -619,10 +619,15 @@
   </keybind>
   <keybind key="W-m">
     <action name="Execute">
-      <command>xst -n musica -e ~/bin/musica-maestro</command>
+      <command>xfmpc</command>
     </action>
   </keybind>
   <keybind key="W-S-m">
+    <action name="Execute">
+      <command>xst -n musica -e ~/bin/musica-maestro</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-m">
     <action name="Execute">
       <command>xst -n musica_cava -e cava</command>
     </action>
