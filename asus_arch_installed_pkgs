@@ -160,6 +160,7 @@ gspell
 gst-libav
 gst-plugins-base-libs
 gst-plugins-good
+gst-python
 gstreamer
 gthumb
 gtk-sharp-2
@@ -358,6 +359,7 @@ libdaemon
 libdatrie
 libde265
 libdiscid
+libdmx
 libdrm
 libdv
 libdvdnav
@@ -538,6 +540,7 @@ libxss
 libxt
 libxtst
 libxv
+libxxf86dga
 libxxf86vm
 libyaml
 libzmf
@@ -696,6 +699,7 @@ protobuf
 psmisc
 pulseaudio
 pyalpm
+pygobject-devel
 pygobject2-devel
 pygtk
 pyqt5-common
@@ -706,9 +710,13 @@ python-cachecontrol
 python-chardet
 python-colorama
 python-dateutil
+python-dbus
+python-dbus-common
 python-distlib
 python-distro
+python-docopt
 python-feedparser
+python-gobject
 python-greenlet
 python-html5lib
 python-idna
@@ -864,6 +872,8 @@ wireless_tools
 wmctrl
 woff2
 wpa_supplicant
+wxgtk-common
+wxgtk2
 x264
 x265
 xbitmaps
@@ -892,6 +902,7 @@ xorg-server
 xorg-server-common
 xorg-setxkbmap
 xorg-xauth
+xorg-xdpyinfo
 xorg-xfd
 xorg-xinit
 xorg-xkbcomp

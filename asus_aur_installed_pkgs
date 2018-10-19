@@ -1,5 +1,6 @@
 aic94xx-firmware
 aurvote
+blockify
 cava
 discord
 dunst-round-corners-git
@@ -19,6 +20,7 @@ libc++
 libgnome
 libgnome-data
 libgnomeui
+moeditor-bin
 openbox-patched
 orbit2
 perl-cpanel-json-xs
@@ -32,8 +34,10 @@ pqiv
 python-pdftotext
 shutter
 skippy-xd-git
+spotify
 virtualbox-ext-oracle
 visual-studio-code-bin
 wd719x-firmware
+woeusb
 xst-git
 yay
