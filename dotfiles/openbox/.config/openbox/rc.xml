@@ -594,12 +594,22 @@
   </keybind>
   <keybind key="W-t">
     <action name="Execute">
-      <command>~/bin/ore-notify</command>
+      <command>rtile --all</command>
     </action>
   </keybind>
   <keybind key="W-S-t">
     <action name="Execute">
-      <command>~/bin/ws-notify</command>
+      <command>rtile --cycle</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-t">
+    <action name="Execute">
+      <command>rtile --swap-biggest</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-S-t">
+    <action name="Execute">
+      <command>rtile --all-auto</command>
     </action>
   </keybind>
   <keybind key="W-f">

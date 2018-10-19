@@ -23281,3 +23281,8 @@ Oct 19 23:53 : player: played "Bach - Toccata e Fuga Re minore.mp3"
 Oct 20 00:01 : client: [35] closed
 Oct 20 00:01 : client: [36] opened from 127.0.0.1:54928
 Oct 20 00:02 : player: played "Bach - Toccata e Fuga Re minore.mp3"
+Oct 20 00:06 : player: played "Bach - Toccata e Fuga Re minore.mp3"
+Oct 20 00:36 : client: [37] opened from 127.0.0.1:55218
+Oct 20 00:36 : client: [37] closed
+Oct 20 00:45 : player: played "Mozart - Requiem - Full.mp3"
+Oct 20 00:45 : client: [30] closed
