@@ -245,7 +245,7 @@
     </action>
   </keybind>
 
-  <!-- Keybindings for slow window switching. -->
+  <!-- Keybindings for general window switching. -->
   <keybind key="W-Tab">
     <action name="NextWindow">
       <dialog>none</dialog>
@@ -279,21 +279,36 @@
     </action>
   </keybind>
 
-  <!-- Keybindings for fast window switching. -->
+  <!-- Same keybindings as above but better when using Vim. -->
   <keybind key="W-n">
-    <action name="PreviousWindow">
+    <action name="NextWindow">
       <dialog>none</dialog>
-      <bar>no</bar>
-      <raise>no</raise>
+      <bar>yes</bar>
+      <raise>yes</raise>
       <allDesktops>no</allDesktops>
       <panels>no</panels>
       <desktop>no</desktop>
-      <linear>no</linear>
-      <interactive>no</interactive>
+      <linear>yes</linear>
+      <interactive>yes</interactive>
       <finalactions>
         <action name="Focus"/>
         <action name="Raise"/>
-        <action name="Unshade"/>
+      </finalactions>
+    </action>
+  </keybind>
+  <keybind key="W-S-n">
+    <action name="PreviousWindow">
+      <dialog>none</dialog>
+      <bar>yes</bar>
+      <raise>yes</raise>
+      <allDesktops>no</allDesktops>
+      <panels>no</panels>
+      <desktop>no</desktop>
+      <linear>yes</linear>
+      <interactive>yes</interactive>
+      <finalactions>
+        <action name="Focus"/>
+        <action name="Raise"/>
       </finalactions>
     </action>
   </keybind>
