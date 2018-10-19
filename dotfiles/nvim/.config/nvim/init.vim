@@ -178,6 +178,8 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 Plug 'triglav/vim-visual-increment'
 
+Plug 'equalsraf/neovim-gui-shim'
+
 call plug#end()
 
 " }}}

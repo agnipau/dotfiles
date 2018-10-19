@@ -1,3 +1,3 @@
 function asrc
-  yay --color always -Ss $argv
+  yay --color=auto -Ss $argv
 end

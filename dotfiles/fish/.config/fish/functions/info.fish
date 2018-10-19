@@ -1,4 +1,4 @@
 function info
-  pacman --color auto -Qi $argv
+  pacman --color=auto -Qi $argv
 end
 

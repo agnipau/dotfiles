@@ -1,3 +1,3 @@
 function arem
-  yay --color always -Rsu --noconfirm $argv
+  yay --color=auto -Rsu --noconfirm $argv
 end

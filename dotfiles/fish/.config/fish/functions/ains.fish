@@ -1,3 +1,3 @@
 function ains
-  yay --color always -S --needed --noconfirm $argv
+  yay --color=auto -S --needed --noconfirm $argv
 end

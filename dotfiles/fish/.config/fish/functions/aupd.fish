@@ -1,3 +1,3 @@
 function aupd
-  yay --color always -Syu --noconfirm
+  yay --color=auto -Syu --noconfirm
 end

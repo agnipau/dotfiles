@@ -1,3 +1,3 @@
 function srem
-  sudo pacman -Rsnu --noconfirm --color auto $argv
+  sudo pacman -Rsnu --noconfirm --color=auto $argv
 end
