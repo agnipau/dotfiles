@@ -2,7 +2,7 @@
 
 # Titlebar colors.
 window.*.title.bg.color:       #212121
-window.*.label.text.color:     #eeffff
+window.*.label.text.color:     #212121
 window.*.button.*.image.color: #eeffff
 
 # Handle colors.
