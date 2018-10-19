@@ -23192,3 +23192,9 @@ Oct 18 22:55 : player: played "Mozart - Serenade no.13.mp3"
 Oct 18 22:55 : client: [14] closed
 Oct 19 15:00 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Oct 19 15:00 : client: [0] opened from 127.0.0.1:50754
+Oct 19 16:12 : client: [1] opened from 127.0.0.1:51714
+Oct 19 16:12 : client: [1] closed
+Oct 19 16:12 : client: [0] closed
+Oct 19 16:12 : client: [2] opened from 127.0.0.1:51716
+Oct 19 16:13 : client: [2] closed
+Oct 19 16:13 : client: [3] opened from 127.0.0.1:51720

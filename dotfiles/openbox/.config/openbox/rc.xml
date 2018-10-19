@@ -612,6 +612,16 @@
       <command>~/bin/sscr</command>
     </action>
   </keybind>
+  <keybind key="W-C-p">
+    <action name="Execute">
+      <command>~/bin/rec</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-S-p">
+    <action name="Execute">
+      <command>~/bin/norec</command>
+    </action>
+  </keybind>
   <keybind key="W-w">
     <action name="Execute">
       <command>skippy-xd</command>
