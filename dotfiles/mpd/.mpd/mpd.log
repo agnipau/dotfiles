@@ -23211,3 +23211,73 @@ Oct 19 22:37 : client: [7] opened from 127.0.0.1:54090
 Oct 19 22:37 : client: [7] closed
 Oct 19 22:38 : client: [8] opened from 127.0.0.1:54096
 Oct 19 22:38 : client: [8] closed
+Oct 19 22:50 : client: [3] closed
+Oct 19 22:58 : player: played "Beethoven - Egmont Overture.mp3"
+Oct 19 23:11 : client: [9] opened from 127.0.0.1:54540
+Oct 19 23:11 : client: [9] closed
+Oct 19 23:15 : client: [10] opened from 127.0.0.1:54600
+Oct 19 23:15 : client: [11] opened from 127.0.0.1:54604
+Oct 19 23:15 : client: [11] closed
+Oct 19 23:15 : client: [12] opened from 127.0.0.1:54608
+Oct 19 23:15 : client: [12] closed
+Oct 19 23:15 : client: [13] opened from 127.0.0.1:54612
+Oct 19 23:15 : client: [13] closed
+Oct 19 23:15 : client: [14] opened from 127.0.0.1:54616
+Oct 19 23:15 : client: [15] opened from 127.0.0.1:54620
+Oct 19 23:15 : client: [14] closed
+Oct 19 23:15 : client: [15] closed
+Oct 19 23:15 : client: [16] opened from 127.0.0.1:54624
+Oct 19 23:15 : client: [16] closed
+Oct 19 23:15 : client: [17] opened from 127.0.0.1:54628
+Oct 19 23:15 : client: [18] opened from 127.0.0.1:54632
+Oct 19 23:15 : client: [17] closed
+Oct 19 23:15 : client: [18] closed
+Oct 19 23:15 : client: [19] opened from 127.0.0.1:54636
+Oct 19 23:15 : client: [19] closed
+Oct 19 23:15 : client: [10] closed
+Oct 19 23:16 : client: [20] opened from 127.0.0.1:54644
+Oct 19 23:16 : exception: Failed to open /home/matte/musica/Favoriti.m3u: No such file or directory
+Oct 19 23:16 : exception: No such playlist
+Oct 19 23:17 : client: [20] closed
+Oct 19 23:18 : client: [21] opened from 127.0.0.1:54674
+Oct 19 23:18 : client: [21] closed
+Oct 19 23:18 : client: [22] opened from 127.0.0.1:54692
+Oct 19 23:19 : player: played "Beethoven - Egmont Overture.mp3"
+Oct 19 23:20 : client: [22] closed
+Oct 19 23:20 : client: [23] opened from 127.0.0.1:54706
+Oct 19 23:20 : client: [23] closed
+Oct 19 23:21 : client: [24] opened from 127.0.0.1:54722
+Oct 19 23:21 : exception: Failed to open /home/matte/musica/Favoriti.m3u: No such file or directory
+Oct 19 23:21 : exception: No such playlist
+Oct 19 23:21 : client: [24] closed
+Oct 19 23:21 : client: [25] opened from 127.0.0.1:54728
+Oct 19 23:21 : exception: Failed to open /home/matte/musica/Favoriti.m3u: No such file or directory
+Oct 19 23:21 : exception: No such playlist
+Oct 19 23:21 : client: [25] closed
+Oct 19 23:21 : client: [26] opened from 127.0.0.1:54736
+Oct 19 23:22 : client: [26] closed
+Oct 19 23:23 : client: [27] opened from 127.0.0.1:54744
+Oct 19 23:23 : player: played "Tchaikovsky - Pas de Deux (The Nutcracker).mp3"
+Oct 19 23:25 : client: [27] closed
+Oct 19 23:27 : client: [28] opened from 127.0.0.1:54758
+Oct 19 23:27 : client: [28] closed
+Oct 19 23:30 : client: [29] opened from 127.0.0.1:54778
+Oct 19 23:30 : client: [29] closed
+Oct 19 23:34 : player: played "Bach - Toccata e Fuga Re minore.mp3"
+Oct 19 23:34 : player: played "Bach - Toccata e Fuga Re minore.mp3"
+Oct 19 23:34 : client: [4] closed
+Oct 19 23:34 : client: [30] opened from 127.0.0.1:54830
+Oct 19 23:43 : player: played "Bach - Toccata e Fuga Re minore.mp3"
+Oct 19 23:45 : client: [31] opened from 127.0.0.1:54876
+Oct 19 23:50 : client: [31] closed
+Oct 19 23:50 : client: [32] opened from 127.0.0.1:54896
+Oct 19 23:50 : client: [32] closed
+Oct 19 23:50 : client: [33] opened from 127.0.0.1:54898
+Oct 19 23:51 : client: [33] closed
+Oct 19 23:51 : client: [34] opened from 127.0.0.1:54904
+Oct 19 23:52 : client: [34] closed
+Oct 19 23:52 : client: [35] opened from 127.0.0.1:54914
+Oct 19 23:53 : player: played "Bach - Toccata e Fuga Re minore.mp3"
+Oct 20 00:01 : client: [35] closed
+Oct 20 00:01 : client: [36] opened from 127.0.0.1:54928
+Oct 20 00:02 : player: played "Bach - Toccata e Fuga Re minore.mp3"
