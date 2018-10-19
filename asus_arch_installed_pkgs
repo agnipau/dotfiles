@@ -163,7 +163,6 @@ gst-plugins-good
 gst-python
 gstreamer
 gthumb
-gtk-sharp-2
 gtk-update-icon-cache
 gtk2
 gtk2-perl
@@ -380,7 +379,6 @@ libfontenc
 libfreehand
 libgcrypt
 libgdata
-libgdiplus
 libgexiv2
 libglade
 libglvnd
@@ -419,6 +417,7 @@ libmng
 libmnl
 libmodplug
 libmpc
+libmpd
 libmpdclient
 libmspub
 libmwaw
@@ -553,6 +552,7 @@ llvm-libs
 lm_sensors
 lmdb
 logrotate
+lollypop
 lpsolve
 lua
 lua-lgi
@@ -577,7 +577,6 @@ metis
 minizip
 mkinitcpio
 mkinitcpio-busybox
-mono
 mpc
 mpd
 mpfr
@@ -634,7 +633,6 @@ patch
 pciutils
 pcre
 pcre2
-pdfmod
 peek
 pepper-flash
 perl
@@ -706,7 +704,9 @@ pyqt5-common
 python
 python-appdirs
 python-attrs
+python-beautifulsoup4
 python-cachecontrol
+python-cairo
 python-chardet
 python-colorama
 python-dateutil
@@ -720,6 +720,7 @@ python-gobject
 python-greenlet
 python-html5lib
 python-idna
+python-isodate
 python-jinja
 python-lockfile
 python-lxml
@@ -731,10 +732,13 @@ python-packaging
 python-pafy
 python-pip
 python-progress
+python-pycountry
+python-pycryptodome
 python-pygments
 python-pyparsing
 python-pypeg2
 python-pyqt5
+python-pysocks
 python-pytoml
 python-pywal
 python-regex
@@ -746,6 +750,8 @@ python-sip-pyqt5
 python-six
 python-urllib3
 python-webencodings
+python-websocket-client
+python-xlib
 python-yaml
 python2
 python2-cairo
@@ -777,7 +783,9 @@ rsync
 rtkit
 rtmpdump
 rubberband
+ruby
 ruby-docs
+rubygems
 run-parts
 s-nail
 scrot
@@ -799,6 +807,7 @@ speexdsp
 sqlite
 startup-notification
 stow
+streamlink
 sudo
 suitesparse
 supertux
@@ -835,6 +844,7 @@ texlive-publishers
 texlive-science
 thin-provisioning-tools
 time
+tint2
 tmux
 totem-plparser
 tracker
@@ -891,6 +901,7 @@ xdg-utils
 xdotool
 xf86-input-libinput
 xfconf
+xfmpc
 xfsprogs
 xkeyboard-config
 xmlsec
