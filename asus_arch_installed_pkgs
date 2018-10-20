@@ -98,6 +98,7 @@ feh
 ffmpeg
 fftw
 file
+file-roller
 filesystem
 findutils
 fish
@@ -120,6 +121,7 @@ gdbm
 gdk-pixbuf2
 gegl
 geoclue2
+geocode-glib
 geogebra
 gettext
 ghc-libs
@@ -138,6 +140,7 @@ glu
 gmp
 gnome-autoar
 gnome-calculator
+gnome-clocks
 gnome-desktop
 gnome-online-accounts
 -perl
@@ -156,6 +159,7 @@ grub
 gsettings-desktop-schemas
 gsfonts
 gsm
+gsound
 gspell
 gst-libav
 gst-plugins-base-libs
@@ -390,6 +394,7 @@ ui
 libgpg-error
 libgudev
 libgusb
+libgweather
 libgxps
 libheif
 libibus
@@ -554,6 +559,7 @@ lmdb
 logrotate
 lollypop
 lpsolve
+lrzip
 lua
 lua-lgi
 lua52
@@ -854,6 +860,7 @@ twolame
 tzdata
 uchardet
 udisks2
+unace
 unibilium
 unoconv
 unrar
