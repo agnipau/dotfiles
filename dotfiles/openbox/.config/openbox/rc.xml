@@ -620,6 +620,11 @@
       <command>nautilus</command>
     </action>
   </keybind>
+  <keybind key="W-S-f">
+    <action name="Execute">
+      <command>file-roller</command>
+    </action>
+  </keybind>
   <keybind key="W-m">
     <action name="Execute">
       <command>xfmpc</command>

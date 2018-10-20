@@ -3,14 +3,19 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://openbox.org/">
     <menu id="root-menu" label="openbox">
-      <item label="Files">
+      <item label="Terminale">
+        <action name="Execute">
+          <execute>~/bin/draw</execute>
+        </action>
+      </item>
+      <item label="File">
         <action name="Execute">
           <execute>nautilus</execute>
         </action>
       </item>
-      <item label="Terminale">
+      <item label="Archivi">
         <action name="Execute">
-          <execute>~/bin/draw</execute>
+          <execute>file-roller</execute>
         </action>
       </item>
       <item label="Musica">
@@ -38,6 +43,11 @@
         <item label="Calcolatrice">
           <action name="Execute">
             <execute>gnome-calculator</execute>
+          </action>
+        </item>
+        <item label="Orologio">
+          <action name="Execute">
+            <execute>gnome-clocks</execute>
           </action>
         </item>
       </menu>
