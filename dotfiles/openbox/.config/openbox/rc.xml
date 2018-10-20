@@ -1090,6 +1090,17 @@
       <!--height>570</height-->
     </size>
   </application>
+  <application class="Xfmpc">
+    <decor>yes</decor>
+    <position force="yes">
+      <x>1032</x>
+      <y>20</y>
+    </position>
+    <size>
+      <width>23%</width>
+      <height>60%</height>
+    </size>
+  </application>
   <application name="musica">
     <decor>no</decor>
     <position force="yes">
