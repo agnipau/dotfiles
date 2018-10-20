@@ -13,14 +13,9 @@
           <execute>~/bin/draw</execute>
         </action>
       </item>
-      <item label="Chromium">
-        <action name="Execute">
-          <execute>chromium</execute>
-        </action>
-      </item>
       <item label="Musica">
         <action name="Execute">
-          <execute>xst -n musica -e ~/bin/musica-maestro</execute>
+          <execute>xfmpc</execute>
         </action>
       </item>
       <separator/>
@@ -40,7 +35,7 @@
             <execute>spotify</execute>
           </action>
         </item>
-        <item label="Calc">
+        <item label="Calcolatrice">
           <action name="Execute">
             <execute>gnome-calculator</execute>
           </action>
