@@ -562,6 +562,9 @@
     </action>
   </keybind>
   <keybind key="W-e">
+    <action name="Iconify"/>
+  </keybind>
+  <keybind key="W-S-e">
     <action name="ToggleShade"/>
   </keybind>
   <keybind key="W-y">

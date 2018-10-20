@@ -44,7 +44,7 @@ padding        = 2
 module-margin  = 1
 font-0         = Iosevka SS07:size=12:antialias=true:autohint=false;3
 font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
-modules-left   = openbox_ws_good essid down date_time pvol music mpd battery brightness ip
+modules-left   = openbox_ws_good essid down date_time pvol music mpd battery brightness scrot skippy-xd power
 locale         = it_IT.UTF-8
 
 ; This is way better than the xworkspaces module, but you need the script.
@@ -103,6 +103,35 @@ label-disconnected            =  
 label-disconnected-background = ${colors.background}
 label-disconnected-foreground = ${colors.foreground}
 label-disconnected-padding    = 4
+
+; Module that starts scrot when clicked.
+[module/scrot]
+type               = custom/text
+content            = "      "
+content-background = ${colors.background}
+content-foreground = ${colors.foreground}
+content-padding    = 0
+click-left         = ~/bin/scr
+
+; Module that starts skippy-xd when clicked.
+[module/skippy-xd]
+type               = custom/text
+content            = "   "
+content-background = ${colors.background}
+content-foreground = ${colors.foreground}
+content-padding    = 0
+click-left         = skippy-xd
+
+; Module that starts Rofi when clicked.
+[module/power]
+type               = custom/text
+content            = " "
+content-background = ${colors.background}
+content-foreground = ${colors.foreground}
+content-padding    = 0
+click-left         = ~/bin/locker
+click-middle       = poweroff
+click-right        = systemctl suspend
 
 ; Display the date and time.
 [module/date_time]
