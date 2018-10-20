@@ -23300,3 +23300,6 @@ Oct 20 18:25 : player: played "Bach - Toccata e Fuga Re minore.mp3"
 Oct 20 18:25 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Oct 20 18:36 : client: [2] opened from 127.0.0.1:45068
 Oct 20 18:36 : client: [2] closed
+Oct 20 18:53 : client: [1] closed
+Oct 20 18:53 : client: [0] closed
+Oct 20 18:53 : player: played "Tchaikovsky - The Nutcracker.mp3"
