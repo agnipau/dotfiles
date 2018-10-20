@@ -23286,3 +23286,10 @@ Oct 20 00:36 : client: [37] opened from 127.0.0.1:55218
 Oct 20 00:36 : client: [37] closed
 Oct 20 00:45 : player: played "Mozart - Requiem - Full.mp3"
 Oct 20 00:45 : client: [30] closed
+Oct 20 14:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 20 14:06 : client: [0] opened from 127.0.0.1:56870
+Oct 20 14:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 20 14:15 : player: played "Bach - Toccata e Fuga Re minore.mp3"
+Oct 20 14:21 : client: [0] closed
+Oct 20 14:28 : avahi: Client Disconnected, will reconnect shortly
+Oct 20 14:28 : avahi: Could not reconnect: An unexpected D-Bus error occurred
