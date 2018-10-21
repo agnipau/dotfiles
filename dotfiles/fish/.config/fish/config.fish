@@ -74,7 +74,7 @@ alias mkdir 'mkdir -p'
 alias pqiv  'pqiv -i --box-colors=$color7:$color13 --bind-key="@MONTAGE { h { montage_mode_shift_x(-1) } }" --bind-key="@MONTAGE { j { montage_mode_shift_y(1) } }" --bind-key "@MONTAGE { k { montage_mode_shift_y(-1) } }" --bind-key "@MONTAGE { l { montage_mode_shift_x(1) } }" --bind-key="j { goto_file_relative(-1) }" --bind-key="k { goto_file_relative(1) }" --bind-key="h { goto_file_relative(-1) }" --bind-key="l { goto_file_relative(1) }" --bind-key="d { command(rm $1) }" $argv'
 
 # Start rbenv automatically.
-#status --is-interactive; and source (rbenv init -|psub)
+status --is-interactive; and source (rbenv init -|psub)
 
 # Start tmux automatically whenever a new terminal instance is opened.
 test -z $TMUX;

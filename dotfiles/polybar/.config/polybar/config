@@ -120,7 +120,9 @@ content            = "   "
 content-background = ${colors.background}
 content-foreground = ${colors.foreground}
 content-padding    = 0
-click-left         = skippy-xd
+click-left         = ~/bin/desk-left
+click-middle       = skippy-xd
+click-right        = ~/bin/desk-right
 
 ; Module that starts Rofi when clicked.
 [module/power]
