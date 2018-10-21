@@ -23,3 +23,16 @@ dotfiles/fish/.config/fish/functions/__z.fish
 dotfiles/fish/.config/fish/functions/fzf_key_bindings.fish
 dotfiles/fish/.config/fish/completions/fisher.fish
 .uuid
+dotfiles/code/.config/Code/Backups
+dotfiles/code/.config/Code/Cache
+dotfiles/code/.config/Code/CachedData
+dotfiles/code/.config/Code/CachedExtensions
+dotfiles/code/.config/Code/Cookies
+dotfiles/code/.config/Code/Cookies-journal
+dotfiles/code/.config/Code/GPUCache
+dotfiles/code/.config/Code/Local Storage
+dotfiles/code/.config/Code/Preferences
+dotfiles/code/.config/Code/languagepacks.json
+dotfiles/code/.config/Code/logs
+dotfiles/code/.config/Code/machineid
+dotfiles/code/.config/Code/storage.json

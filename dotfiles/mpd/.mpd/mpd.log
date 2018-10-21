@@ -23303,3 +23303,18 @@ Oct 20 18:36 : client: [2] closed
 Oct 20 18:53 : client: [1] closed
 Oct 20 18:53 : client: [0] closed
 Oct 20 18:53 : player: played "Tchaikovsky - The Nutcracker.mp3"
+Oct 21 15:12 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 21 15:12 : exception: Failed to decode /home/matte/musica/Tchaikovsky - The Nutcracker.mp3
+Oct 21 15:12 : exception: nested: Failed to open /home/matte/musica/Tchaikovsky - The Nutcracker.mp3: No such file or directory
+Oct 21 15:12 : player: played "Tchaikovsky - The Nutcracker.mp3"
+Oct 21 15:12 : client: [0] opened from 127.0.0.1:41356
+Oct 21 15:14 : client: [0] closed
+Oct 21 15:14 : client: [1] opened from 127.0.0.1:41358
+Oct 21 15:15 : client: [1] closed
+Oct 21 15:15 : client: [2] opened from 127.0.0.1:41360
+Oct 21 15:15 : client: [2] closed
+Oct 21 15:15 : client: [3] opened from 127.0.0.1:41362
+Oct 21 15:15 : client: [3] closed
+Oct 21 15:15 : client: [4] opened from 127.0.0.1:41364
+Oct 21 15:44 : client: [5] opened from 127.0.0.1:41666
+Oct 21 15:44 : client: [5] closed
