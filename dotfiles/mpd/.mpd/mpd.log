@@ -23498,3 +23498,26 @@ Oct 21 19:14 : client: [1] closed
 Oct 21 19:14 : client: [5] opened from 127.0.0.1:45234
 Oct 21 19:18 : client: [5] closed
 Oct 21 19:18 : client: [6] opened from 127.0.0.1:45240
+Oct 21 20:32 : client: [7] opened from 127.0.0.1:45408
+Oct 21 20:32 : client: [7] closed
+Oct 21 20:32 : client: [8] opened from 127.0.0.1:45412
+Oct 21 20:32 : client: [8] closed
+Oct 21 20:32 : client: [9] opened from 127.0.0.1:45416
+Oct 21 20:32 : player: played "Mozart - Requiem - Full.mp3"
+Oct 21 20:32 : client: [9] closed
+Oct 21 20:32 : client: [10] opened from 127.0.0.1:45420
+Oct 21 20:32 : client: [10] closed
+Oct 21 20:32 : client: [11] opened from 127.0.0.1:45424
+Oct 21 20:32 : exception: Not playing
+Oct 21 20:32 : client: [11] closed
+Oct 21 20:32 : client: [12] opened from 127.0.0.1:45428
+Oct 21 20:32 : client: [12] closed
+Oct 21 20:32 : client: [13] opened from 127.0.0.1:45432
+Oct 21 20:32 : client: [13] closed
+Oct 21 21:28 : player: played "Mozart - Requiem - Full.mp3"
+Oct 21 21:59 : client: [14] opened from 127.0.0.1:47204
+Oct 21 21:59 : client: [14] closed
+Oct 21 21:59 : client: [15] opened from 127.0.0.1:47208
+Oct 21 21:59 : client: [15] closed
+Oct 21 22:00 : client: [16] opened from 127.0.0.1:47220
+Oct 21 22:00 : client: [16] closed
