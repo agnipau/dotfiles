@@ -26,6 +26,7 @@ avahi
 awesome
 babl
 bash
+bash-completion
 bc
 binutils
 bison
@@ -104,7 +105,6 @@ findutils
 fish
 flac
 flex
-fontconfig
 freetype2
 fribidi
 fuse-common
@@ -212,6 +212,7 @@ haskell-digest
 haskell-dlist
 haskell-doctemplates
 haskell-exceptions
+haskell-foundation
 haskell-glob
 haskell-haddock-library
 haskell-hashable
@@ -326,6 +327,7 @@ ldb
 ldns
 lensfun
 less
+lhasa
 libabw
 libaio
 libao
@@ -625,6 +627,7 @@ openssl
 openssl-1.0
 opus
 orc
+os-prober
 p11-kit
 p7zip
 pacman

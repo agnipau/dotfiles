@@ -11,11 +11,11 @@ call plug#begin('~/.config/nvim/plugged')
 
 "Plug 'matteoguarda/wal.vim'
 
-Plug 'matteoguarda/material.vim'
+"Plug 'matteoguarda/material.vim'
 
-Plug 'matteoguarda/gruvbox.vim'
+"Plug 'matteoguarda/gruvbox.vim'
 
-Plug 'matteoguarda/dark-plus.vim'
+"Plug 'matteoguarda/dark-plus.vim'
 
 Plug 'matteoguarda/one-dark.vim'
 
@@ -172,13 +172,11 @@ Plug 'rhysd/clever-f.vim'
 
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
-"Plug 'mattn/webapi-vim'
+Plug 'mattn/webapi-vim'
 
-"Plug 'mattn/gist-vim'
+Plug 'mattn/gist-vim'
 
 Plug 'triglav/vim-visual-increment'
-
-Plug 'equalsraf/neovim-gui-shim'
 
 call plug#end()
 

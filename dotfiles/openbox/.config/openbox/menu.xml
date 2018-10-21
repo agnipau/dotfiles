@@ -8,6 +8,11 @@
           <execute>~/bin/draw</execute>
         </action>
       </item>
+      <item label="WWW">
+        <action name="Execute">
+          <execute>chromium</execute>
+        </action>
+      </item>
       <item label="File">
         <action name="Execute">
           <execute>nautilus</execute>

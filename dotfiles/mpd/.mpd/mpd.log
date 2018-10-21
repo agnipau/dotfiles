@@ -23482,3 +23482,12 @@ Oct 21 16:04 : client: [12] closed
 Oct 21 16:04 : client: [13] opened from 127.0.0.1:43084
 Oct 21 16:05 : client: [14] opened from 127.0.0.1:43088
 Oct 21 16:05 : client: [14] closed
+Oct 21 16:05 : player: played "Mozart - Requiem - Full.mp3"
+Oct 21 17:35 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 21 17:35 : client: [0] opened from 127.0.0.1:44446
+Oct 21 17:35 : client: [1] opened from 127.0.0.1:44448
+Oct 21 17:35 : client: [2] opened from 127.0.0.1:44452
+Oct 21 17:35 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 21 17:35 : client: [2] closed
+Oct 21 17:53 : client: [3] opened from 127.0.0.1:44640
+Oct 21 17:53 : client: [3] closed
