@@ -36,3 +36,6 @@ dotfiles/code/.config/Code/languagepacks.json
 dotfiles/code/.config/Code/logs
 dotfiles/code/.config/Code/machineid
 dotfiles/code/.config/Code/storage.json
+dotfiles/code/.config/Code/User/gpm-recentItems.json
+dotfiles/code/.config/Code/User/syncLocalSettings.json
+dotfiles/code/.config/Code/User/workspaceStorage/
