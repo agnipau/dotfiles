@@ -21,7 +21,7 @@ set fish_greeting ""
 # Envars.
 if test $PREFIX
   set -x GOPATH               $HOME/go
-  set -x PATH                 $HOME/altro $HOME/.rbenv/bin $GOPATH $GOPATH/bin $HOME/bin $PATH
+  set -x PATH                 $HOME/altro $HOME/bin $PATH
   set -x VISUAL               /data/data/com.termux/files/usr/bin/nvim
   set -x EDITOR               /data/data/com.termux/files/usr/bin/nvim
   set -x RTV_BROWSER          /data/data/com.termux/files/usr/bin/w3m
