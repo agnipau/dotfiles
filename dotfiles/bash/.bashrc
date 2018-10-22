@@ -259,7 +259,7 @@ bind '"\ec": "fzf_cd\C-m"'
 bind '"\C-t": "\" > .fzf_cmd.tmp\e0iecho -n \"\C-mfzf_general\C-m'
 
 # Start rbenv automatically.
-eval "$(rbenv init -)"
+[[ -z "$PREFIX" ]] && eval "$(rbenv init -)"
 
 # Run tmux every time a new terminal instance is opened.
 [[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
