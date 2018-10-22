@@ -16,6 +16,7 @@ aspell
 at-spi2-atk
 at-spi2-core
 atk
+atkmm
 atool
 attr
 audiofile
@@ -43,6 +44,7 @@ ca-certificates-mozilla
 ca-certificates-utils
 cairo
 cairo-perl
+cairomm
 cantarell-fonts
 cblas
 cdrdao
@@ -136,6 +138,7 @@ glib-networking
 glib-perl
 glib2
 glibc
+glibmm
 glu
 gmp
 gnome-autoar
@@ -158,6 +161,7 @@ groff
 grub
 gsettings-desktop-schemas
 gsfonts
+gsl
 gsm
 gsound
 gspell
@@ -172,7 +176,9 @@ gtk2
 gtk2-perl
 gtk3
 gtkimageview
+gtkmm
 gtksourceview3
+gtkspell
 guile
 gvfs
 gvfs-goa
@@ -294,6 +300,7 @@ imagemagick
 imlib2
 inetutils
 iniparser
+inkscape
 intel-tbb
 iproute2
 iptables
@@ -418,6 +425,7 @@ liblouis
 liblqr
 libmad
 libmagick
+libmagick6
 libmm-glib
 libmms
 libmng
@@ -468,6 +476,7 @@ libsasl
 libseccomp
 libsecret
 libshout
+libsigc++
 libsigsegv
 libsm
 libsndfile
@@ -637,6 +646,7 @@ pambase
 pandoc
 pango
 pango-perl
+pangomm
 parted
 patch
 pciutils
@@ -859,6 +869,7 @@ totem-plparser
 tracker
 tree
 tslib
+ttf-dejavu
 twolame
 tzdata
 uchardet
@@ -916,6 +927,7 @@ xfsprogs
 xkeyboard-config
 xmlsec
 xorg-bdftopcf
+xorg-fonts-encodings
 xorg-luit
 xorg-mkfontdir
 xorg-mkfontscale

@@ -23521,3 +23521,8 @@ Oct 21 21:59 : client: [15] opened from 127.0.0.1:47208
 Oct 21 21:59 : client: [15] closed
 Oct 21 22:00 : client: [16] opened from 127.0.0.1:47220
 Oct 21 22:00 : client: [16] closed
+Oct 21 22:05 : client: [17] opened from 127.0.0.1:47408
+Oct 21 22:05 : client: [17] closed
+Oct 21 22:06 : avahi: Client Disconnected, will reconnect shortly
+Oct 21 22:06 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Oct 21 22:06 : player: played "Mozart - Requiem - Full.mp3"

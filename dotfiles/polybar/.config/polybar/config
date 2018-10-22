@@ -29,7 +29,7 @@ margin-top    = 0
 margin-bottom = 0
 
 ; Bar in the bottom.
-[bar/bar-bottom]
+[bar/bar]
 monitor        = eDP-1-1
 bottom         = false
 fixed-center   = true
