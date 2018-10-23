@@ -14,10 +14,12 @@ dpkg
 fd
 ffmpeg
 file
+findutils
 fish
 flex
 fontconfig
 freetype
+fzf
 gdbm
 git
 glib
@@ -88,6 +90,7 @@ libx265
 libxml2
 littlecms
 m4
+make
 man
 mpv
 ncurses
@@ -101,6 +104,7 @@ openal-soft
 openjpeg
 openssh
 openssl
+openssl-dev
 pcre
 pcre2
 perl
@@ -111,6 +115,7 @@ python
 python-dev
 ranger
 readline
+readline-dev
 ripgrep
 stow
 tar
@@ -123,6 +128,7 @@ texlive
 texlive-bin
 texlive-tlmgr
 tmux
+tsu
 w3m
 wget
 xvidcore
