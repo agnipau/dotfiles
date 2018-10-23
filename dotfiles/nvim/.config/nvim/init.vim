@@ -168,7 +168,7 @@ Plug 'iamcco/markdown-preview.vim'
 
 "Plug 'ryanoasis/vim-devicons'
 
-Plug 'rhysd/clever-f.vim'
+"Plug 'rhysd/clever-f.vim'
 
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
