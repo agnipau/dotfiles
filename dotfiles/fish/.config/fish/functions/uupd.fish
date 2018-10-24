@@ -1,6 +1,12 @@
 function uupd
-  upd
-  aupd
-  autorem
-  unvim
+  if test -z $PREFIX
+    upd
+    aupd
+    autorem
+    unvim
+  else
+    upd
+    autorem
+    unvim
+  end
 end

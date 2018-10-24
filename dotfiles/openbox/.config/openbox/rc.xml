@@ -565,7 +565,14 @@
     <action name="Iconify"/>
   </keybind>
   <keybind key="W-S-e">
-    <action name="ToggleShade"/>
+    <action name="Execute">
+      <command>tint2</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-e">
+    <action name="Execute">
+      <command>killall -q tint2</command>
+    </action>
   </keybind>
   <keybind key="W-y">
     <action name="Execute">

@@ -65,6 +65,10 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export SSH_KEY_PATH="${HOME}/.ssh/id_rsa"
 export RANGER_LOAD_DEFAULT_RC="false"
 export MANPAGER="nvim -c MANPAGER -"
+export FFF_FAV1="${HOME}/progetti"
+export FFF_FAV2="${HOME}/roba"
+export FFF_FAV5="/media"
+export FFF_FAV6="/mnt"
 #export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 
 # Better tab completion.
@@ -109,6 +113,7 @@ alias p='ping google.com'
 alias g='gcc a.c'
 alias a='./a.out'
 alias n='nvim a.c'
+alias f='fff'
 alias wp='while true; do sleep 1s; ping -c 3 google.com && break; done'
 alias pd='pdflatex *.tex'
 alias ist='cd ${HOME}/srcs/st && sudo make clean install && exit'

@@ -41,6 +41,10 @@ end
 set -x LANG                   it_IT.UTF-8
 set -x RANGER_LOAD_DEFAULT_RC false
 set -x MANPAGER               'nvim -c MANPAGER -'
+set -x FFF_FAV1               ~/progetti
+set -x FFF_FAV2               ~/roba
+set -x FFF_FAV5               /media
+set -x FFF_FAV6               /mnt
 
 # fzf options.
 set -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
