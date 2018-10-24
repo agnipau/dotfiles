@@ -548,12 +548,12 @@
   </keybind>
   <keybind key="W-space">
     <action name="Execute">
-      <command>~/bin/rofi-run</command>
+      <command>rofi -show run</command>
     </action>
   </keybind>
   <keybind key="W-S-space">
     <action name="Execute">
-      <command>rofi -show run</command>
+      <command>~/bin/rofi-run</command>
     </action>
   </keybind>
   <keybind key="W-z">
@@ -604,12 +604,12 @@
   </keybind>
   <keybind key="W-S-u">
     <action name="Execute">
-      <command>~/bin/hide</command>
+      <command>~/bin/show</command>
     </action>
   </keybind>
   <keybind key="W-C-u">
     <action name="Execute">
-      <command>~/bin/show</command>
+      <command>~/bin/hide</command>
     </action>
   </keybind>
   <keybind key="W-t">
