@@ -2,6 +2,5 @@ xrandr --dpi 96
 openbox --restart
 compton -b --config ~/.config/compton/compton.conf
 ~/bin/theme --one-dark
-feh --bg-fill ~/progetti/wallpapers/sfondo-3.jpg
 ~/bin/polyon
 tint2
