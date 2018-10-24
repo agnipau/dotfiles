@@ -65,6 +65,7 @@ cracklib
 cryptsetup
 cups
 cups-filters
+cups-pdf
 curl
 db
 dbus
