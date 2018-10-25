@@ -116,7 +116,7 @@ Plug 'w0rp/ale'
   nmap <silent> <c-q> <plug>(ale_previous_wrap)
   nmap <silent> <c-e> <plug>(ale_next_wrap)
 
-Plug 'mattn/emmet-vim', { 'for': ['*html', '*css', 'vue'] }
+Plug 'mattn/emmet-vim'
   let g:user_emmet_leader_key = '<c-f>'
 
 Plug 'junegunn/vim-easy-align'
