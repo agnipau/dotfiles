@@ -23526,3 +23526,416 @@ Oct 21 22:05 : client: [17] closed
 Oct 21 22:06 : avahi: Client Disconnected, will reconnect shortly
 Oct 21 22:06 : avahi: Could not reconnect: An unexpected D-Bus error occurred
 Oct 21 22:06 : player: played "Mozart - Requiem - Full.mp3"
+Oct 25 16:38 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 25 16:38 : client: [0] opened from 127.0.0.1:44856
+Oct 25 16:38 : client: [1] opened from 127.0.0.1:44858
+Oct 25 16:39 : player: played "Mozart - Requiem - Full.mp3"
+Oct 25 16:39 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 25 16:57 : player: played "Mussorgsky - Pictures at an Exhibition.mp3"
+Oct 25 16:57 : client: [2] opened from 127.0.0.1:46124
+Oct 25 16:57 : client: [2] closed
+Oct 25 16:57 : client: [3] opened from 127.0.0.1:46128
+Oct 25 16:57 : client: [3] closed
+Oct 25 16:57 : client: [4] opened from 127.0.0.1:46132
+Oct 25 16:57 : client: [4] closed
+Oct 25 16:57 : client: [5] opened from 127.0.0.1:46136
+Oct 25 16:57 : client: [5] closed
+Oct 25 16:57 : client: [6] opened from 127.0.0.1:46140
+Oct 25 16:57 : client: [7] opened from 127.0.0.1:46144
+Oct 25 16:57 : client: [8] opened from 127.0.0.1:46148
+Oct 25 16:57 : client: [9] opened from 127.0.0.1:46152
+Oct 25 16:57 : client: [7] closed
+Oct 25 16:57 : client: [6] closed
+Oct 25 16:57 : client: [8] closed
+Oct 25 16:57 : client: [9] closed
+Oct 25 16:57 : client: [10] opened from 127.0.0.1:46156
+Oct 25 16:57 : client: [11] opened from 127.0.0.1:46160
+Oct 25 16:57 : client: [12] opened from 127.0.0.1:46164
+Oct 25 16:57 : client: [10] closed
+Oct 25 16:57 : client: [12] closed
+Oct 25 16:57 : client: [11] closed
+Oct 25 16:57 : client: [13] opened from 127.0.0.1:46168
+Oct 25 16:57 : client: [13] closed
+Oct 25 16:57 : client: [14] opened from 127.0.0.1:46172
+Oct 25 16:57 : client: [14] closed
+Oct 25 16:57 : client: [15] opened from 127.0.0.1:46176
+Oct 25 16:57 : client: [16] opened from 127.0.0.1:46180
+Oct 25 16:57 : client: [17] opened from 127.0.0.1:46184
+Oct 25 16:57 : client: [18] opened from 127.0.0.1:46188
+Oct 25 16:57 : client: [19] opened from 127.0.0.1:46192
+Oct 25 16:57 : client: [15] closed
+Oct 25 16:57 : client: [16] closed
+Oct 25 16:57 : client: [17] closed
+Oct 25 16:57 : client: [18] closed
+Oct 25 16:57 : client: [19] closed
+Oct 25 16:57 : client: [20] opened from 127.0.0.1:46196
+Oct 25 16:57 : client: [21] opened from 127.0.0.1:46200
+Oct 25 16:57 : client: [22] opened from 127.0.0.1:46204
+Oct 25 16:57 : client: [23] opened from 127.0.0.1:46208
+Oct 25 16:57 : client: [24] opened from 127.0.0.1:46212
+Oct 25 16:57 : client: [20] closed
+Oct 25 16:57 : client: [21] closed
+Oct 25 16:57 : client: [24] closed
+Oct 25 16:57 : client: [23] closed
+Oct 25 16:57 : client: [22] closed
+Oct 25 16:57 : client: [25] opened from 127.0.0.1:46216
+Oct 25 16:57 : client: [26] opened from 127.0.0.1:46220
+Oct 25 16:57 : client: [27] opened from 127.0.0.1:46224
+Oct 25 16:57 : client: [28] opened from 127.0.0.1:46228
+Oct 25 16:57 : client: [29] opened from 127.0.0.1:46232
+Oct 25 16:57 : client: [25] closed
+Oct 25 16:57 : client: [26] closed
+Oct 25 16:57 : client: [28] closed
+Oct 25 16:57 : client: [27] closed
+Oct 25 16:57 : client: [29] closed
+Oct 25 16:57 : client: [30] opened from 127.0.0.1:46236
+Oct 25 16:57 : client: [30] closed
+Oct 25 16:57 : client: [31] opened from 127.0.0.1:46240
+Oct 25 16:57 : client: [32] opened from 127.0.0.1:46244
+Oct 25 16:57 : client: [31] closed
+Oct 25 16:57 : client: [32] closed
+Oct 25 16:57 : client: [33] opened from 127.0.0.1:46248
+Oct 25 16:57 : client: [34] opened from 127.0.0.1:46252
+Oct 25 16:57 : client: [35] opened from 127.0.0.1:46256
+Oct 25 16:57 : client: [36] opened from 127.0.0.1:46260
+Oct 25 16:57 : client: [33] closed
+Oct 25 16:57 : client: [34] closed
+Oct 25 16:57 : client: [36] closed
+Oct 25 16:57 : client: [35] closed
+Oct 25 16:57 : client: [37] opened from 127.0.0.1:46264
+Oct 25 16:57 : client: [38] opened from 127.0.0.1:46268
+Oct 25 16:57 : client: [39] opened from 127.0.0.1:46272
+Oct 25 16:57 : client: [40] opened from 127.0.0.1:46276
+Oct 25 16:57 : client: [41] opened from 127.0.0.1:46280
+Oct 25 16:57 : client: [37] closed
+Oct 25 16:57 : client: [41] closed
+Oct 25 16:57 : client: [39] closed
+Oct 25 16:57 : client: [40] closed
+Oct 25 16:57 : client: [38] closed
+Oct 25 16:57 : client: [42] opened from 127.0.0.1:46284
+Oct 25 16:57 : client: [43] opened from 127.0.0.1:46288
+Oct 25 16:57 : client: [44] opened from 127.0.0.1:46292
+Oct 25 16:57 : client: [45] opened from 127.0.0.1:46296
+Oct 25 16:57 : client: [46] opened from 127.0.0.1:46300
+Oct 25 16:57 : client: [42] closed
+Oct 25 16:57 : client: [43] closed
+Oct 25 16:57 : client: [45] closed
+Oct 25 16:57 : client: [44] closed
+Oct 25 16:57 : client: [46] closed
+Oct 25 16:57 : client: [47] opened from 127.0.0.1:46304
+Oct 25 16:57 : client: [48] opened from 127.0.0.1:46308
+Oct 25 16:57 : client: [49] opened from 127.0.0.1:46312
+Oct 25 16:57 : client: [50] opened from 127.0.0.1:46316
+Oct 25 16:57 : client: [47] closed
+Oct 25 16:57 : client: [51] opened from 127.0.0.1:46320
+Oct 25 16:57 : client: [49] closed
+Oct 25 16:57 : client: [48] closed
+Oct 25 16:57 : client: [50] closed
+Oct 25 16:57 : client: [51] closed
+Oct 25 16:57 : client: [52] opened from 127.0.0.1:46324
+Oct 25 16:57 : client: [53] opened from 127.0.0.1:46328
+Oct 25 16:57 : client: [54] opened from 127.0.0.1:46332
+Oct 25 16:57 : client: [55] opened from 127.0.0.1:46336
+Oct 25 16:57 : client: [52] closed
+Oct 25 16:57 : client: [55] closed
+Oct 25 16:57 : client: [54] closed
+Oct 25 16:57 : client: [53] closed
+Oct 25 16:57 : client: [56] opened from 127.0.0.1:46340
+Oct 25 16:57 : client: [57] opened from 127.0.0.1:46344
+Oct 25 16:57 : client: [58] opened from 127.0.0.1:46348
+Oct 25 16:57 : client: [59] opened from 127.0.0.1:46352
+Oct 25 16:57 : client: [60] opened from 127.0.0.1:46356
+Oct 25 16:57 : client: [60] closed
+Oct 25 16:57 : client: [58] closed
+Oct 25 16:57 : client: [56] closed
+Oct 25 16:57 : client: [57] closed
+Oct 25 16:57 : client: [59] closed
+Oct 25 16:57 : client: [61] opened from 127.0.0.1:46360
+Oct 25 16:57 : client: [62] opened from 127.0.0.1:46364
+Oct 25 16:57 : client: [63] opened from 127.0.0.1:46368
+Oct 25 16:57 : client: [64] opened from 127.0.0.1:46372
+Oct 25 16:57 : client: [61] closed
+Oct 25 16:57 : client: [62] closed
+Oct 25 16:57 : client: [63] closed
+Oct 25 16:57 : client: [64] closed
+Oct 25 16:57 : client: [65] opened from 127.0.0.1:46376
+Oct 25 16:57 : client: [65] closed
+Oct 25 16:57 : client: [66] opened from 127.0.0.1:46380
+Oct 25 16:57 : client: [66] closed
+Oct 25 16:57 : client: [67] opened from 127.0.0.1:46384
+Oct 25 16:57 : client: [67] closed
+Oct 25 16:57 : client: [68] opened from 127.0.0.1:46388
+Oct 25 16:57 : client: [68] closed
+Oct 25 16:57 : client: [69] opened from 127.0.0.1:46392
+Oct 25 16:57 : client: [69] closed
+Oct 25 16:57 : client: [70] opened from 127.0.0.1:46396
+Oct 25 16:57 : client: [71] opened from 127.0.0.1:46400
+Oct 25 16:57 : client: [72] opened from 127.0.0.1:46404
+Oct 25 16:57 : client: [73] opened from 127.0.0.1:46408
+Oct 25 16:57 : client: [70] closed
+Oct 25 16:57 : client: [71] closed
+Oct 25 16:57 : client: [72] closed
+Oct 25 16:57 : client: [73] closed
+Oct 25 16:57 : client: [74] opened from 127.0.0.1:46412
+Oct 25 16:57 : client: [75] opened from 127.0.0.1:46416
+Oct 25 16:57 : client: [76] opened from 127.0.0.1:46420
+Oct 25 16:57 : client: [77] opened from 127.0.0.1:46424
+Oct 25 16:57 : client: [74] closed
+Oct 25 16:57 : client: [75] closed
+Oct 25 16:57 : client: [78] opened from 127.0.0.1:46428
+Oct 25 16:57 : client: [76] closed
+Oct 25 16:57 : client: [77] closed
+Oct 25 16:57 : client: [78] closed
+Oct 25 16:57 : client: [79] opened from 127.0.0.1:46432
+Oct 25 16:57 : client: [80] opened from 127.0.0.1:46436
+Oct 25 16:57 : client: [81] opened from 127.0.0.1:46440
+Oct 25 16:57 : client: [82] opened from 127.0.0.1:46444
+Oct 25 16:57 : client: [79] closed
+Oct 25 16:57 : client: [82] closed
+Oct 25 16:57 : client: [80] closed
+Oct 25 16:57 : client: [81] closed
+Oct 25 16:57 : client: [83] opened from 127.0.0.1:46448
+Oct 25 16:57 : client: [84] opened from 127.0.0.1:46452
+Oct 25 16:57 : client: [85] opened from 127.0.0.1:46456
+Oct 25 16:57 : client: [86] opened from 127.0.0.1:46460
+Oct 25 16:57 : client: [87] opened from 127.0.0.1:46464
+Oct 25 16:57 : client: [83] closed
+Oct 25 16:57 : client: [84] closed
+Oct 25 16:57 : client: [85] closed
+Oct 25 16:57 : client: [87] closed
+Oct 25 16:57 : client: [86] closed
+Oct 25 16:57 : client: [88] opened from 127.0.0.1:46468
+Oct 25 16:57 : client: [89] opened from 127.0.0.1:46472
+Oct 25 16:57 : client: [90] opened from 127.0.0.1:46476
+Oct 25 16:57 : client: [91] opened from 127.0.0.1:46480
+Oct 25 16:57 : client: [92] opened from 127.0.0.1:46484
+Oct 25 16:57 : client: [88] closed
+Oct 25 16:57 : client: [89] closed
+Oct 25 16:57 : client: [90] closed
+Oct 25 16:57 : client: [92] closed
+Oct 25 16:57 : client: [91] closed
+Oct 25 16:57 : client: [93] opened from 127.0.0.1:46488
+Oct 25 16:57 : client: [94] opened from 127.0.0.1:46492
+Oct 25 16:57 : client: [95] opened from 127.0.0.1:46496
+Oct 25 16:57 : client: [96] opened from 127.0.0.1:46500
+Oct 25 16:57 : client: [97] opened from 127.0.0.1:46504
+Oct 25 16:57 : client: [93] closed
+Oct 25 16:57 : client: [94] closed
+Oct 25 16:57 : client: [95] closed
+Oct 25 16:57 : client: [96] closed
+Oct 25 16:57 : client: [97] closed
+Oct 25 16:57 : client: [98] opened from 127.0.0.1:46508
+Oct 25 16:57 : client: [99] opened from 127.0.0.1:46512
+Oct 25 16:57 : client: [100] opened from 127.0.0.1:46516
+Oct 25 16:57 : client: [101] opened from 127.0.0.1:46520
+Oct 25 16:57 : client: [102] opened from 127.0.0.1:46524
+Oct 25 16:57 : client: [98] closed
+Oct 25 16:57 : client: [100] closed
+Oct 25 16:57 : client: [99] closed
+Oct 25 16:57 : client: [101] closed
+Oct 25 16:57 : client: [102] closed
+Oct 25 16:57 : client: [103] opened from 127.0.0.1:46528
+Oct 25 16:57 : client: [104] opened from 127.0.0.1:46532
+Oct 25 16:57 : client: [105] opened from 127.0.0.1:46536
+Oct 25 16:57 : client: [106] opened from 127.0.0.1:46540
+Oct 25 16:57 : client: [103] closed
+Oct 25 16:57 : client: [106] closed
+Oct 25 16:57 : client: [105] closed
+Oct 25 16:57 : client: [104] closed
+Oct 25 16:57 : client: [107] opened from 127.0.0.1:46544
+Oct 25 16:57 : client: [108] opened from 127.0.0.1:46548
+Oct 25 16:57 : client: [109] opened from 127.0.0.1:46552
+Oct 25 16:57 : client: [110] opened from 127.0.0.1:46556
+Oct 25 16:57 : client: [111] opened from 127.0.0.1:46560
+Oct 25 16:57 : client: [107] closed
+Oct 25 16:57 : client: [108] closed
+Oct 25 16:57 : client: [111] closed
+Oct 25 16:57 : client: [109] closed
+Oct 25 16:57 : client: [110] closed
+Oct 25 16:57 : client: [112] opened from 127.0.0.1:46564
+Oct 25 16:57 : client: [113] opened from 127.0.0.1:46568
+Oct 25 16:57 : client: [114] opened from 127.0.0.1:46572
+Oct 25 16:57 : client: [115] opened from 127.0.0.1:46576
+Oct 25 16:57 : client: [116] opened from 127.0.0.1:46580
+Oct 25 16:57 : client: [112] closed
+Oct 25 16:57 : client: [113] closed
+Oct 25 16:57 : client: [114] closed
+Oct 25 16:57 : client: [115] closed
+Oct 25 16:57 : client: [116] closed
+Oct 25 16:57 : client: [117] opened from 127.0.0.1:46584
+Oct 25 16:57 : client: [118] opened from 127.0.0.1:46588
+Oct 25 16:57 : client: [119] opened from 127.0.0.1:46592
+Oct 25 16:57 : client: [120] opened from 127.0.0.1:46596
+Oct 25 16:57 : client: [117] closed
+Oct 25 16:57 : client: [121] opened from 127.0.0.1:46600
+Oct 25 16:57 : client: [118] closed
+Oct 25 16:57 : client: [120] closed
+Oct 25 16:57 : client: [119] closed
+Oct 25 16:57 : client: [121] closed
+Oct 25 16:57 : client: [122] opened from 127.0.0.1:46604
+Oct 25 16:57 : client: [123] opened from 127.0.0.1:46608
+Oct 25 16:57 : client: [124] opened from 127.0.0.1:46612
+Oct 25 16:57 : client: [125] opened from 127.0.0.1:46616
+Oct 25 16:57 : client: [122] closed
+Oct 25 16:57 : client: [124] closed
+Oct 25 16:57 : client: [125] closed
+Oct 25 16:57 : client: [123] closed
+Oct 25 16:57 : client: [126] opened from 127.0.0.1:46620
+Oct 25 16:57 : client: [127] opened from 127.0.0.1:46624
+Oct 25 16:57 : client: [128] opened from 127.0.0.1:46628
+Oct 25 16:57 : client: [129] opened from 127.0.0.1:46632
+Oct 25 16:57 : client: [130] opened from 127.0.0.1:46636
+Oct 25 16:57 : client: [126] closed
+Oct 25 16:57 : client: [127] closed
+Oct 25 16:57 : client: [129] closed
+Oct 25 16:57 : client: [130] closed
+Oct 25 16:57 : client: [128] closed
+Oct 25 16:57 : client: [131] opened from 127.0.0.1:46640
+Oct 25 16:57 : client: [132] opened from 127.0.0.1:46644
+Oct 25 16:57 : client: [133] opened from 127.0.0.1:46648
+Oct 25 16:57 : client: [134] opened from 127.0.0.1:46652
+Oct 25 16:57 : client: [131] closed
+Oct 25 16:57 : client: [135] opened from 127.0.0.1:46656
+Oct 25 16:57 : client: [133] closed
+Oct 25 16:57 : client: [132] closed
+Oct 25 16:57 : client: [134] closed
+Oct 25 16:57 : client: [135] closed
+Oct 25 16:57 : client: [136] opened from 127.0.0.1:46660
+Oct 25 16:57 : client: [137] opened from 127.0.0.1:46664
+Oct 25 16:57 : client: [138] opened from 127.0.0.1:46668
+Oct 25 16:57 : client: [139] opened from 127.0.0.1:46672
+Oct 25 16:57 : client: [136] closed
+Oct 25 16:57 : client: [140] opened from 127.0.0.1:46676
+Oct 25 16:57 : client: [137] closed
+Oct 25 16:57 : client: [139] closed
+Oct 25 16:57 : client: [138] closed
+Oct 25 16:57 : client: [140] closed
+Oct 25 16:57 : client: [141] opened from 127.0.0.1:46680
+Oct 25 16:57 : client: [142] opened from 127.0.0.1:46684
+Oct 25 16:57 : client: [143] opened from 127.0.0.1:46688
+Oct 25 16:57 : client: [144] opened from 127.0.0.1:46692
+Oct 25 16:57 : client: [141] closed
+Oct 25 16:57 : client: [144] closed
+Oct 25 16:57 : client: [143] closed
+Oct 25 16:57 : client: [142] closed
+Oct 25 16:57 : client: [145] opened from 127.0.0.1:46696
+Oct 25 16:57 : client: [146] opened from 127.0.0.1:46700
+Oct 25 16:57 : client: [147] opened from 127.0.0.1:46704
+Oct 25 16:57 : client: [148] opened from 127.0.0.1:46708
+Oct 25 16:57 : client: [149] opened from 127.0.0.1:46712
+Oct 25 16:57 : client: [145] closed
+Oct 25 16:57 : client: [146] closed
+Oct 25 16:57 : client: [148] closed
+Oct 25 16:57 : client: [149] closed
+Oct 25 16:57 : client: [147] closed
+Oct 25 16:57 : client: [150] opened from 127.0.0.1:46716
+Oct 25 16:57 : client: [151] opened from 127.0.0.1:46720
+Oct 25 16:57 : client: [152] opened from 127.0.0.1:46724
+Oct 25 16:57 : client: [153] opened from 127.0.0.1:46728
+Oct 25 16:57 : client: [154] opened from 127.0.0.1:46732
+Oct 25 16:57 : client: [152] closed
+Oct 25 16:57 : client: [150] closed
+Oct 25 16:57 : client: [151] closed
+Oct 25 16:57 : client: [153] closed
+Oct 25 16:57 : client: [154] closed
+Oct 25 16:57 : client: [155] opened from 127.0.0.1:46736
+Oct 25 16:57 : client: [156] opened from 127.0.0.1:46740
+Oct 25 16:57 : client: [157] opened from 127.0.0.1:46744
+Oct 25 16:57 : client: [158] opened from 127.0.0.1:46748
+Oct 25 16:57 : client: [159] opened from 127.0.0.1:46752
+Oct 25 16:57 : client: [155] closed
+Oct 25 16:57 : client: [156] closed
+Oct 25 16:57 : client: [157] closed
+Oct 25 16:57 : client: [158] closed
+Oct 25 16:57 : client: [159] closed
+Oct 25 16:57 : client: [160] opened from 127.0.0.1:46756
+Oct 25 16:57 : client: [161] opened from 127.0.0.1:46760
+Oct 25 16:57 : client: [162] opened from 127.0.0.1:46764
+Oct 25 16:57 : client: [163] opened from 127.0.0.1:46768
+Oct 25 16:57 : client: [160] closed
+Oct 25 16:57 : client: [164] opened from 127.0.0.1:46772
+Oct 25 16:57 : client: [161] closed
+Oct 25 16:57 : client: [162] closed
+Oct 25 16:57 : client: [163] closed
+Oct 25 16:57 : client: [164] closed
+Oct 25 16:57 : client: [165] opened from 127.0.0.1:46776
+Oct 25 16:57 : client: [166] opened from 127.0.0.1:46780
+Oct 25 16:57 : client: [167] opened from 127.0.0.1:46784
+Oct 25 16:57 : client: [168] opened from 127.0.0.1:46788
+Oct 25 16:57 : client: [165] closed
+Oct 25 16:57 : client: [166] closed
+Oct 25 16:57 : client: [168] closed
+Oct 25 16:57 : client: [167] closed
+Oct 25 16:57 : client: [169] opened from 127.0.0.1:46792
+Oct 25 16:57 : client: [170] opened from 127.0.0.1:46796
+Oct 25 16:57 : client: [171] opened from 127.0.0.1:46800
+Oct 25 16:57 : client: [172] opened from 127.0.0.1:46804
+Oct 25 16:57 : client: [173] opened from 127.0.0.1:46808
+Oct 25 16:57 : client: [169] closed
+Oct 25 16:57 : client: [171] closed
+Oct 25 16:57 : client: [170] closed
+Oct 25 16:57 : client: [173] closed
+Oct 25 16:57 : client: [172] closed
+Oct 25 16:57 : client: [174] opened from 127.0.0.1:46812
+Oct 25 16:57 : client: [175] opened from 127.0.0.1:46816
+Oct 25 16:57 : client: [176] opened from 127.0.0.1:46820
+Oct 25 16:57 : client: [177] opened from 127.0.0.1:46824
+Oct 25 16:57 : client: [174] closed
+Oct 25 16:57 : client: [178] opened from 127.0.0.1:46828
+Oct 25 16:57 : client: [175] closed
+Oct 25 16:57 : client: [176] closed
+Oct 25 16:57 : client: [178] closed
+Oct 25 16:57 : client: [177] closed
+Oct 25 16:57 : client: [179] opened from 127.0.0.1:46832
+Oct 25 16:57 : client: [180] opened from 127.0.0.1:46836
+Oct 25 16:57 : client: [181] opened from 127.0.0.1:46840
+Oct 25 16:57 : client: [182] opened from 127.0.0.1:46844
+Oct 25 16:57 : client: [179] closed
+Oct 25 16:57 : client: [181] closed
+Oct 25 16:57 : client: [180] closed
+Oct 25 16:57 : client: [182] closed
+Oct 25 16:57 : client: [183] opened from 127.0.0.1:46848
+Oct 25 16:57 : client: [184] opened from 127.0.0.1:46852
+Oct 25 16:57 : client: [185] opened from 127.0.0.1:46856
+Oct 25 16:57 : client: [186] opened from 127.0.0.1:46860
+Oct 25 16:57 : client: [187] opened from 127.0.0.1:46864
+Oct 25 16:57 : client: [183] closed
+Oct 25 16:57 : client: [184] closed
+Oct 25 16:57 : client: [186] closed
+Oct 25 16:57 : client: [185] closed
+Oct 25 16:57 : client: [187] closed
+Oct 25 16:57 : client: [188] opened from 127.0.0.1:46868
+Oct 25 16:57 : client: [189] opened from 127.0.0.1:46872
+Oct 25 16:57 : client: [190] opened from 127.0.0.1:46876
+Oct 25 16:57 : client: [191] opened from 127.0.0.1:46880
+Oct 25 16:57 : client: [188] closed
+Oct 25 16:57 : client: [192] opened from 127.0.0.1:46884
+Oct 25 16:57 : client: [189] closed
+Oct 25 16:57 : client: [190] closed
+Oct 25 16:57 : client: [191] closed
+Oct 25 16:57 : client: [192] closed
+Oct 25 16:57 : client: [193] opened from 127.0.0.1:46888
+Oct 25 16:57 : client: [194] opened from 127.0.0.1:46892
+Oct 25 16:57 : client: [193] closed
+Oct 25 16:57 : client: [194] closed
+Oct 25 17:00 : player: played "Mussorgsky - Pictures at an Exhibition.mp3"
+Oct 25 17:00 : player: played "Mussorgsky - Pictures at an Exhibition.mp3"
+Oct 25 17:00 : player: played "Mussorgsky - Pictures at an Exhibition.mp3"
+Oct 25 17:00 : player: played "Mussorgsky - Pictures at an Exhibition.mp3"
+Oct 25 17:00 : player: played "Mussorgsky - Pictures at an Exhibition.mp3"
+Oct 25 17:00 : player: played "Mussorgsky - Pictures at an Exhibition.mp3"
+Oct 25 17:14 : player: played "Mussorgsky - Night on Bald Mountain.mp3"
+Oct 25 17:45 : client: [195] opened from 127.0.0.1:49822
+Oct 25 17:45 : client: [195] closed
+Oct 25 18:07 : player: played "Beethoven - Symphony No. 1.mp3"
+Oct 25 18:35 : player: played "Beethoven - Symphony No. 1.mp3"
+Oct 25 18:48 : player: played "Beethoven - Symphony No. 1.mp3"
+Oct 25 18:56 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
+Oct 25 19:04 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
+Oct 25 19:05 : player: played "Mozart - Sinfonia No. 40 in Sol minore.mp3"
+Oct 25 19:12 : player: played "Mozart - Serenade no.13.mp3"
+Oct 25 19:15 : player: played "Mozart - Serenade no.13.mp3"
+Oct 25 19:15 : exception: Negative value not allowed: -9
+Oct 25 19:25 : client: [196] opened from 127.0.0.1:51354
+Oct 25 19:25 : client: [196] closed
+Oct 25 19:26 : client: [1] closed

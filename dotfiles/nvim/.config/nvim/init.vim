@@ -156,7 +156,7 @@ Plug 'airblade/vim-gitgutter'
 
 "Plug 'wellle/targets.vim'
 
-"Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
   nnoremap <silent> <leader>pm :MarkdownPreview<cr>
   nnoremap <silent> <leader>po :MarkdownPreviewStop<cr>
