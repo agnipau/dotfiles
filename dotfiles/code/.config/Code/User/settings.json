@@ -134,7 +134,7 @@
     "git.confirmSync": false,
     "git.autofetch": true,
     "gitlens.defaultDateFormat": "D MMMM YYYY, HH:mm",
-    "workbench.colorTheme": "One Dark Pro",
     "explorer.confirmDelete": false,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "One Dark Pro"
 }
