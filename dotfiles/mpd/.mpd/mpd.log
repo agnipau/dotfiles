@@ -24105,3 +24105,4 @@ Oct 26 20:18 : exception: OutputThread could not get realtime scheduling, contin
 Oct 26 20:19 : client: [5] opened from 127.0.0.1:36088
 Oct 26 20:19 : client: [3] closed
 Oct 26 20:24 : client: [4] closed
+Oct 26 20:25 : player: played "Mozart - Requiem - Introit & Kyrie.mp3"

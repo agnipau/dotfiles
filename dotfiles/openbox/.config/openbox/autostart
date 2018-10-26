@@ -3,4 +3,3 @@ openbox --restart
 compton -b --config ~/.config/compton/compton.conf
 ~/bin/theme --one-dark
 ~/bin/polyon
-tint2

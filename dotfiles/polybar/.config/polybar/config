@@ -4,7 +4,8 @@
 
 ; Colors loaded from ~/.Xresources.
 [colors]
-background  = ${xrdb:color0}
+;background  = ${xrdb:color0}
+background  = #00000000
 foreground  = ${xrdb:color7}
 
 uno         = ${xrdb:color1}
@@ -36,7 +37,7 @@ fixed-center   = true
 width          = 100%
 height         = 35
 offset-x       = 0
-offset-y       = 0
+offset-y       = 4
 background     = ${colors.background}
 foreground     = ${colors.foreground}
 radius         = 0.0
