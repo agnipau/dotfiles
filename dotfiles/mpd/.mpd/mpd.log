@@ -24098,3 +24098,9 @@ Oct 26 19:10 : update: added /Mahler - Piano Quartet in A minor.mp3
 Oct 26 19:33 : client: [2] opened from 127.0.0.1:33118
 Oct 26 19:33 : client: [2] closed
 Oct 26 19:39 : client: [0] closed
+Oct 26 19:43 : client: [1] closed
+Oct 26 19:43 : client: [3] opened from 127.0.0.1:36040
+Oct 26 20:18 : client: [4] opened from 127.0.0.1:36086
+Oct 26 20:18 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 26 20:19 : client: [5] opened from 127.0.0.1:36088
+Oct 26 20:19 : client: [3] closed
