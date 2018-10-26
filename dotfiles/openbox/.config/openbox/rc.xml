@@ -935,7 +935,7 @@
     <mousebind button="Left" action="DoubleClick">
       <action name="ToggleMaximize"/>
     </mousebind>
-    <!--mousebind button="Middle" action="Click">
+    <mousebind button="Middle" action="Click">
       <action name="Focus"/>
       <action name="Raise"/>
       <action name="Unshade"/>
@@ -943,10 +943,10 @@
         <x>center</x>
         <y>center</y>
       </action>
-    </mousebind-->
-    <mousebind button="Middle" action="Click">
-      <action name="ToggleShade"/>
     </mousebind>
+    <!-- <mousebind button="Middle" action="Click"> -->
+    <!--   <action name="ToggleShade"/> -->
+    <!-- </mousebind> -->
     <mousebind button="Right" action="Drag">
       <action name="Focus"/>
       <action name="Raise"/>
