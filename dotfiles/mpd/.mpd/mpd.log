@@ -24104,3 +24104,4 @@ Oct 26 20:18 : client: [4] opened from 127.0.0.1:36086
 Oct 26 20:18 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Oct 26 20:19 : client: [5] opened from 127.0.0.1:36088
 Oct 26 20:19 : client: [3] closed
+Oct 26 20:24 : client: [4] closed
