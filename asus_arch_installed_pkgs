@@ -32,6 +32,7 @@ bc
 binutils
 bison
 blas
+bluez-libs
 boost-libs
 brasero
 brotli
@@ -47,8 +48,11 @@ cairo-perl
 cairomm
 cantarell-fonts
 cblas
+cdparanoia
 cdrdao
 cdrtools
+celt
+chromaprint
 chromium
 cifs-utils
 clang
@@ -95,6 +99,7 @@ exiv2
 exo
 expac
 expat
+faac
 faad2
 fakeroot
 fd
@@ -156,6 +161,7 @@ gperf
 gpgme
 gpm
 gptfdisk
+graphene
 graphite
 grep
 groff
@@ -166,10 +172,14 @@ gsl
 gsm
 gsound
 gspell
+gst-editing-services
 gst-libav
+gst-plugins-bad
+gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
 gst-python
+gst-transcoder
 gstreamer
 gtk-update-icon-cache
 gtk2
@@ -327,6 +337,7 @@ keyutils
 kmod
 krb5
 l-smash
+ladspa
 lame
 lapack
 lcms2
@@ -349,6 +360,7 @@ libavc1394
 libblockdev
 libbluray
 ui
+libbs2b
 libbsd
 libbytesize
 abi
@@ -369,6 +381,8 @@ libcups
 libcurl-gnutls
 libdaemon
 libdatrie
+libdc1394
+libdca
 libde265
 libdiscid
 libdmx
@@ -387,6 +401,7 @@ libevdev
 libevent
 libexif
 libexttextcat
+libfdk-aac
 libffi
 libfontenc
 libfreehand
@@ -431,9 +446,12 @@ libmms
 libmng
 libmnl
 libmodplug
+libmp4v2
 libmpc
+libmpcdec
 libmpd
 libmpdclient
+libmpeg2
 libmspub
 libmwaw
 libmypaint
@@ -442,6 +460,7 @@ libnet
 libnfs
 libnftnl
 libnghttp2
+libnice
 libnl
 libnm
 libnotify
@@ -449,6 +468,7 @@ libnsl
 libnumbertext
 liboauth
 libodfgen
+libofa
 libogg
 libomxil-bellagio
 liborcus
@@ -484,6 +504,7 @@ libsoup
 libsoxr
 libspectre
 libspiro
+libsrtp
 libssh
 libssh2
 libstaroffice
@@ -510,6 +531,7 @@ libuv
 libva
 libvdpau
 libvisio
+libvisual
 libvoikko
 libvorbis
 libvpx
@@ -592,6 +614,7 @@ mdadm
 mesa
 metis
 minizip
+mjpegtools
 mkinitcpio
 mkinitcpio-busybox
 mpc
@@ -703,6 +726,7 @@ perl-xml-simple
 perl-xml-twig
 physfs
 pinentry
+pitivi
 pixman
 pkgconf
 polkit
@@ -728,6 +752,7 @@ python-cachecontrol
 python-cairo
 python-chardet
 python-colorama
+python-cycler
 python-dateutil
 python-dbus
 python-dbus-common
@@ -741,9 +766,11 @@ python-html5lib
 python-idna
 python-isodate
 python-jinja
+python-kiwisolver
 python-lockfile
 python-lxml
 python-markupsafe
+python-matplotlib
 python-msgpack
 python-neovim
 python-numpy
@@ -759,6 +786,7 @@ python-pypeg2
 python-pyqt5
 python-pysocks
 python-pytoml
+python-pytz
 python-pywal
 python-regex
 python-requests
@@ -807,6 +835,7 @@ ruby-docs
 rubygems
 run-parts
 s-nail
+sbc
 scrot
 sdl
 sdl2
@@ -821,9 +850,12 @@ slop
 smbclient
 snappy
 sound-theme-freedesktop
+soundtouch
+spandsp
 speex
 speexdsp
 sqlite
+srt
 startup-notification
 stow
 streamlink
@@ -899,6 +931,7 @@ webkit2gtk
 webrtc-audio-processing
 wget
 which
+wildmidi
 wireless_tools
 wmctrl
 woff2
@@ -959,4 +992,5 @@ zita-alsa-pcmi
 zita-resampler
 zlib
 zstd
+zvbi
 zziplib
