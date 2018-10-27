@@ -33,6 +33,6 @@ menu.items.bg.color:          #282c34
 menu.items.text.color:        #4b5263
 menu.items.active.bg:         Flat
 menu.items.active.bg.color:   #282c34
-menu.items.active.text.color: #e38766
+menu.items.active.text.color: #e5c07b
 menu.border.color:            #282c34
 menu.separator.color:         #282c34

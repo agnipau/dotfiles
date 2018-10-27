@@ -5,7 +5,7 @@
 function fish_prompt
   set -l last_status $status
 
-  set_color -oi cyan  # onii-chan
+  set_color -oi blue
   printf '%s ' (printf $PWD | sed "s:^$HOME:~:")
   set_color normal
 
@@ -15,7 +15,7 @@ function fish_prompt
     set -l gbranch (git rev-parse --abbrev-ref HEAD ^/dev/null)
     set -l gdirty (git status --porcelain --ignore-submodules ^/dev/null)
 
-    set_color -o red
+    set_color -o green
     printf '%s %s ' 'on ' "$gbranch"
 
     if test "$gdirty"
@@ -27,7 +27,7 @@ function fish_prompt
   if test $last_status -eq 0
     set_color -o white
   else
-    set_color -o red
+    set_color -o green
   end
   printf '%s ' '::'
 
