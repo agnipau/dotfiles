@@ -27,7 +27,7 @@ function fish_prompt
   if test $last_status -eq 0
     set_color -o white
   else
-    set_color -o green
+    set_color -o red
   end
   printf '%s ' '::'
 
