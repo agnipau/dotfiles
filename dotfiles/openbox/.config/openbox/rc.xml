@@ -473,12 +473,24 @@
       <height>80%</height>
     </action>
   </keybind>
+
+  <!-- For terminal. -->
   <keybind key="W-C-g">
     <action name="MoveResizeTo">
       <x>center</x>
       <y>center</y>
       <width>90%</width>
       <height>92%</height>
+    </action>
+  </keybind>
+
+  <!-- For other applications than terminal. -->
+  <keybind key="W-b">
+    <action name="MoveResizeTo">
+      <x>center</x>
+      <y>center</y>
+      <width>1226</width>
+      <height>630</height>
     </action>
   </keybind>
 
@@ -1093,7 +1105,7 @@
 <!-- Applications. -->
 <applications>
 
-  <!-- Center apps and change size. -->
+  <!-- Applications with Arc titlebar. -->
   <application class="Chromium">
     <desktop>2</desktop>
     <decor>yes</decor>
@@ -1103,10 +1115,155 @@
     </position>
     <size>
       <width>1226</width>
-      <height>628</height>
-      <!--height>570</height-->
+      <height>668</height>
     </size>
   </application>
+
+  <!-- Applications with Openbox titlebar. -->
+  <application class="Code">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="TelegramDesktop">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="Gimp">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="GeoGebra">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="libreoffice-startcenter">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="Telegram-desktop">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="Spotify">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="discord">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="Auryo">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="Youtube-dl-gui">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+  <application class="mpv">
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>32</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>630</height>
+    </size>
+  </application>
+
+  <!-- Applications without titlebar. -->
+  <application class="supertux2">
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>664</height>
+    </size>
+  </application>
+  <application class="VirtualBox Manager">
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>664</height>
+    </size>
+  </application>
+  <application class="VirtualBox">
+    <decor>no</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+  </application>
+
+  <!-- Strange applications. -->
   <application class="Xfmpc">
     <decor>yes</decor>
     <position force="yes">
@@ -1136,148 +1293,8 @@
       <height>240</height>
     </size>
   </application>
-  <application class="Code">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>590</height>
-    </size>
-  </application>
-  <application class="TelegramDesktop">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>590</height>
-    </size>
-  </application>
-  <application class="Gimp">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>590</height>
-    </size>
-  </application>
-  <application class="GeoGebra">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>590</height>
-    </size>
-  </application>
-  <application class="libreoffice-startcenter">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>590</height>
-    </size>
-  </application>
-  <application class="Telegram-desktop">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>590</height>
-    </size>
-  </application>
-  <application class="Spotify">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>590</height>
-    </size>
-  </application>
-  <application class="discord">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>590</height>
-    </size>
-  </application>
-  <application class="Auryo">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>590</height>
-    </size>
-  </application>
-  <application class="Youtube-dl-gui">
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>590</height>
-    </size>
-  </application>
-  <application class="mpv">
-    <decor>no</decor>
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>626</height>
-    </size>
-  </application>
-  <application class="supertux2">
-    <decor>no</decor>
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>626</height>
-    </size>
-  </application>
-  <application class="VirtualBox Manager">
-    <decor>no</decor>
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-    <size>
-      <width>1226</width>
-      <height>626</height>
-    </size>
-  </application>
-  <application class="VirtualBox">
-    <decor>no</decor>
-    <position force="yes">
-      <x>center</x>
-      <y>center</y>
-    </position>
-  </application>
 
-  <!-- Center apps. -->
+  <!-- Applications that only need centering. -->
   <!--
   Can't do <application class="*">
                   <position force="yes">
@@ -1312,7 +1329,7 @@
     </position>
   </application>
 
-  <!-- No decor and position. -->
+  <!-- Applications that only need centering and have no titlebar. -->
   <application class="Viewnior">
     <decor>no</decor>
     <position force="yes">
