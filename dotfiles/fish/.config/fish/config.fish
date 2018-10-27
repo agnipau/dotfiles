@@ -50,7 +50,7 @@ set -x FFF_FAV6               /mnt
 set -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 set -x FZF_DEFAULT_OPTS "
   --multi --inline-info --reverse --height 95%
-  --color fg:8,hl:1,fg+:1,bg+:0,hl+:7
+  --color fg:8,hl:7,fg+:1,bg+:0,hl+:7
   --color info:0,prompt:1,spinner:1,pointer:1,marker:1
 "
 
