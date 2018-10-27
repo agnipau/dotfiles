@@ -1156,6 +1156,16 @@
       <height>590</height>
     </size>
   </application>
+  <application class="Gimp">
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>590</height>
+    </size>
+  </application>
   <application class="GeoGebra">
     <position force="yes">
       <x>center</x>
@@ -1330,11 +1340,6 @@
       <x>center</x>
       <y>center</y>
     </position>
-  </application>
-
-  <!-- Fullscreen apps. -->
-  <application class="Gimp">
-    <fullscreen>yes</fullscreen>
   </application>
 </applications>
 
