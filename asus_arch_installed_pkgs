@@ -171,7 +171,6 @@ gst-plugins-base-libs
 gst-plugins-good
 gst-python
 gstreamer
-gthumb
 gtk-update-icon-cache
 gtk2
 gtk2-perl
