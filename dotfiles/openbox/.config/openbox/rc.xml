@@ -1115,7 +1115,19 @@
     </position>
     <size>
       <width>1226</width>
-      <height>668</height>
+      <height>667</height>
+    </size>
+  </application>
+  <application class="Pitivi">
+    <desktop>2</desktop>
+    <decor>yes</decor>
+    <position force="yes">
+      <x>center</x>
+      <y>center</y>
+    </position>
+    <size>
+      <width>1226</width>
+      <height>667</height>
     </size>
   </application>
 
@@ -1230,6 +1242,9 @@
       <width>1226</width>
       <height>630</height>
     </size>
+  </application>
+  <application class="Inkscape">
+    <maximized>yes</maximized>
   </application>
 
   <!-- Applications without titlebar. -->
