@@ -29,7 +29,7 @@
 <!-- Theme. -->
 <theme>
   <name>Theme One Dark</name>
-  <titleLayout>L</titleLayout>
+  <titleLayout>LSIMC</titleLayout>
   <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
   <animateIconify>no</animateIconify>
@@ -401,7 +401,13 @@
   </keybind>
 
   <!-- Keybindings to toggle some windows functionalities. -->
+  <keybind key="W-e">
+    <action name="Iconify"/>
+  </keybind>
   <keybind key="W-s">
+    <action name="ToggleShade"/>
+  </keybind>
+  <keybind key="W-s-o">
     <action name="ToggleOmnipresent"/>
   </keybind>
   <keybind key="W-a">
@@ -532,9 +538,6 @@
     <action name="Execute">
       <command>~/bin/draw</command>
     </action>
-  </keybind>
-  <keybind key="W-e">
-    <action name="Iconify"/>
   </keybind>
   <keybind key="W-S-e">
     <action name="Execute">

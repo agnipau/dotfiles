@@ -334,8 +334,8 @@ xnoremap L $
 xnoremap <silent> <leader>g  :<c-u>call <SID>GrepOperator(visualmode())<cr>
 
 " Command line.
-cnoremap W w
-cnoremap Q q
+"cnoremap W w
+"cnoremap Q q
 
 " Terminal.
 tnoremap <esc> <c-\><c-n>
