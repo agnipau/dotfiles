@@ -24127,3 +24127,14 @@ Oct 27 18:01 : client: [1] closed
 Oct 27 18:08 : client: [7] opened from 127.0.0.1:60368
 Oct 27 18:08 : client: [7] closed
 Oct 27 18:08 : player: played "Mozart - Requiem - Full.mp3"
+Oct 28 17:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 28 17:30 : client: [0] opened from 127.0.0.1:53976
+Oct 28 17:30 : player: played "Mozart - Requiem - Full.mp3"
+Oct 28 17:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 28 17:30 : client: [0] closed
+Oct 28 17:39 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Oct 28 17:48 : client: [1] opened from 127.0.0.1:53980
+Oct 28 17:48 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Oct 28 18:00 : client: [1] closed
+Oct 28 18:02 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"
+Oct 28 18:09 : player: played "Vivaldi - Le Quattro Stagioni - Inverno.mp3"

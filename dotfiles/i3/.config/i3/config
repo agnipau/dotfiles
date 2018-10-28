@@ -1,0 +1,186 @@
+# i3 config file.
+
+# Colors and customization.
+set_from_resource $c0   color0
+set_from_resource $c1   color1
+set_from_resource $c2   color2
+set_from_resource $c3   color3
+set_from_resource $c4   color4
+set_from_resource $c5   color5
+set_from_resource $c6   color6
+set_from_resource $c7   color7
+set_from_resource $c8   color8
+set_from_resource $c9   color9
+set_from_resource $c10  color10
+set_from_resource $c11  color11
+set_from_resource $c12  color12
+set_from_resource $c13  color13
+set_from_resource $c14  color14
+set_from_resource $c15  color15
+set               $dark #21252b
+
+#                       class border backgr. text indicator
+client.focused          $c0   $c0    $c7     $c7
+client.focused_inactive $c0   $c0    $c7     $c7
+client.unfocused        $dark $dark  $c8     $c8
+client.urgent           $c1   $c1    $c0     $c0
+
+for_window [class="^.*"] border pixel 0
+
+# Font used by i3.
+font pango:Iosevka SS07 12
+
+# Variables.
+set $mod  Mod4
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
+set $ws10 "10"
+
+# Kill the focused window.
+bindsym $mod+q kill
+
+# Change focus.
+bindsym $mod+h     focus left
+bindsym $mod+j     focus down
+bindsym $mod+k     focus up
+bindsym $mod+l     focus right
+
+# Move focused window.
+bindsym $mod+Shift+h     move left
+bindsym $mod+Shift+j     move down
+bindsym $mod+Shift+k     move up
+bindsym $mod+Shift+l     move right
+
+# Orientation for splitting.
+bindsym $mod+t split toggle
+bindsym $mod+o split h
+bindsym $mod+v split v
+
+# Fullscreen mode.
+bindsym $mod+x fullscreen toggle
+
+# Container layout.
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Floating.
+floating_modifier $mod
+bindsym $mod+d floating toggle
+bindsym $mod+Shift+d focus mode_toggle
+
+# Parent/child focus.
+#bindsym $mod+a focus parent
+#bindsym $mod+d focus child
+
+# Resizing.
+bindsym $mod+Control+h       resize shrink width  5 px or 5 ppt
+bindsym $mod+Control+j       resize grow   height 5 px or 5 ppt
+bindsym $mod+Control+k       resize shrink height 5 px or 5 ppt
+bindsym $mod+Control+l       resize grow   width  5 px or 5 ppt
+bindsym $mod+Control+Shift+h resize shrink width  1 px or 1 ppt
+bindsym $mod+Control+Shift+j resize grow   height 1 px or 1 ppt
+bindsym $mod+Control+Shift+k resize shrink height 1 px or 1 ppt
+bindsym $mod+Control+Shift+l resize grow   width  1 px or 1 ppt
+
+# Gaps.
+gaps inner 10
+gaps outer 0
+
+bindsym $mod+minus       gaps inner all minus 5
+bindsym $mod+plus        gaps inner all plus  5
+bindsym $mod+Shift+minus gaps outer all minus 5
+bindsym $mod+Shift+plus  gaps outer all plus  5
+
+# Workspaces.
+## Switch to workspace.
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+## Move focused container to workspace.
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# i3-related keybindings.
+bindsym $mod+r reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Control+q exec --no-startup-id i3-msg exit
+
+# F-keys keybindings.
+bindsym $mod+F1               exec --no-startup-id ~/bin/locker
+bindsym $mod+Shift+F1         exec --no-startup-id systemctl suspend
+bindsym $mod+Control+F1       exec --no-startup-id poweroff
+bindsym $mod+Control+Shift+F1 exec --no-startup-id reboot
+bindsym $mod+F2               exec --no-startup-id ~/bin/essid
+bindsym $mod+F5               exec --no-startup-id sudo ~/bin/brightness --dec 10
+bindsym $mod+Shift+F5         exec --no-startup-id sudo ~/bin/brightness --min
+bindsym $mod+F6               exec --no-startup-id sudo ~/bin/brightness --inc 10
+bindsym $mod+Shift+F6         exec --no-startup-id sudo ~/bin/brightness --max
+bindsym $mod+F7               exec --no-startup-id redshift -PO 4500
+bindsym $mod+Shift+F7         exec --no-startup-id redshift -x
+bindsym $mod+F10              exec --no-startup-id ~/bin/pvol --toggle
+bindsym $mod+F11              exec --no-startup-id ~/bin/pvol --voldown 2
+bindsym $mod+Shift+F11        exec --no-startup-id ~/bin/pvol --zero
+bindsym $mod+F12              exec --no-startup-id ~/bin/pvol --volup 2
+bindsym $mod+Shift+F12        exec --no-startup-id ~/bin/pvol --cento
+bindsym $mod+Up               exec --no-startup-id mpc stop
+bindsym $mod+Control+Up       exec --no-startup-id ~/bin/spotify-control --pause
+bindsym $mod+Shift+Up         exec --no-startup-id mpc seek 00:00:00
+bindsym $mod+Control+Shift+Up exec --no-startup-id ~/bin/spotify-control --play
+bindsym $mod+Down             exec --no-startup-id mpc toggle
+bindsym $mod+Control+Down     exec --no-startup-id ~/bin/spotify-control --toggle
+bindsym $mod+Left             exec --no-startup-id mpc seek -00:00:05
+bindsym $mod+Shift+Left       exec --no-startup-id mpc prev
+bindsym $mod+Control+Left     exec --no-startup-id ~/bin/spotify-control --prev
+bindsym $mod+Right            exec --no-startup-id mpc seek +00:00:05
+bindsym $mod+Shift+Right      exec --no-startup-id mpc next
+bindsym $mod+Control+Right    exec --no-startup-id ~/bin/spotify-control --next
+
+# Other keybindings.
+bindsym $mod+Return            exec --no-startup-id xst
+bindsym $mod+space             exec --no-startup-id rofi -show run
+bindsym $mod+Shift+space       exec --no-startup-id ~/bin/rofi-run
+bindsym $mod+c                 exec --no-startup-id ~/bin/theme
+bindsym $mod+y                 exec --no-startup-id ~/bin/polyon
+bindsym $mod+Control+y         exec --no-startup-id ~/bin/polyoff
+bindsym $mod+i                 exec --no-startup-id ~/bin/blur
+bindsym $mod+Shift+i           exec --no-startup-id ~/bin/unblur
+bindsym $mod+u                 exec --no-startup-id ~/bin/zen
+bindsym $mod+f                 exec --no-startup-id nautilus
+bindsym $mod+Shift+f           exec --no-startup-id file-roller
+bindsym $mod+m                 exec --no-startup-id xfmpc
+bindsym $mod+Shift+m           exec --no-startup-id xst -n musica -e ~/bin/musica-maestro
+bindsym $mod+Control+m         exec --no-startup-id xst -n musica_cava -e cava
+bindsym $mod+p                 exec --no-startup-id ~/bin/scr
+bindsym $mod+Shift+p           exec --no-startup-id ~/bin/sscr
+bindsym $mod+Control+p         exec --no-startup-id ~/bin/rec
+bindsym $mod+Control+Shift+p   exec --no-startup-id ~/bin/norec
+
+# Autostart.
+exec --no-startup-id xrandr --dpi 96
+exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
+exec --no-startup-id ~/bin/theme
+exec --no-startup-id ~/bin/polyon

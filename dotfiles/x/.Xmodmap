@@ -10,3 +10,5 @@ keysym Caps_Lock = Control_L Caps_Lock NoSymbol NoSymbol
 
 ! Make Menu output tilde (~).
 keysym Menu = U007E
+! Make Num_Lock output something really useful in italian (È).
+keysym Num_Lock = U00C8

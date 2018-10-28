@@ -520,42 +520,7 @@
   <!-- Keybindings for running applications. -->
   <keybind key="W-c">
     <action name="Execute">
-      <command>~/bin/theme --material-default</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-c">
-    <action name="Execute">
-      <command>~/bin/theme --material-palenight</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-c">
-    <action name="Execute">
-      <command>~/bin/theme --material-darker</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-S-c">
-    <action name="Execute">
-      <command>~/bin/theme --material-ocean</command>
-    </action>
-  </keybind>
-  <keybind key="W-v">
-    <action name="Execute">
-      <command>~/bin/theme --one-dark</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-v">
-    <action name="Execute">
-      <command>~/bin/theme --gruvbox-dark</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-v">
-    <action name="Execute">
-      <command>~/bin/theme --material-lighter</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-S-v">
-    <action name="Execute">
-      <command>~/bin/theme --gruvbox-light</command>
+      <command>~/bin/theme</command>
     </action>
   </keybind>
   <keybind key="W-space">
