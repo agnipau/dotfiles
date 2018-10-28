@@ -394,11 +394,6 @@
   <keybind key="W-S-r">
     <action name="Restart"/>
   </keybind>
-  <keybind key="W-C-r">
-    <action name="Execute">
-      <command>reboot</command>
-    </action>
-  </keybind>
   <keybind key="W-C-q">
     <action name="Execute">
       <command>openbox --exit</command>
