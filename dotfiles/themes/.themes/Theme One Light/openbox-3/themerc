@@ -1,0 +1,45 @@
+# One Light theme for Openbox.
+
+# Titlebar colors.
+window.*.title.bg.color:       #fafafa
+window.*.label.text.color:     #fafafa
+window.*.button.*.image.color: #90959e
+
+# Color trick for the buttons.
+window.active.button.*.hover.image.color:         #7a7f8b
+window.active.button.close.pressed.image.color:   #f13039
+window.active.button.close.unpressed.image.color: #f46067
+window.active.button.close.hover.image.color:     #f68086
+window.inactive.button.*.unpressed.image.color:   #babdc4
+
+# Handle colors.
+window.active.handle.bg:         Solid Flat
+window.active.handle.bg.color:   #d75f00
+window.inactive.handle.bg:       Solid Flat
+window.inactive.handle.bg.color: #a0a1a7
+
+# Titlebar.
+padding.width:             9
+padding.height:            9
+window.*.title.bg:         Solid Flat
+window.*.*.bg:             Parentrelative
+window.label.text.justify: Center
+
+# Borders.
+border.width:                0
+window.client.padding.width: 0
+window.handle.width:         0
+
+# Menu geometry.
+menu.border.width: 9
+menu.overlap.x:    -9
+
+# Menu colors.
+menu.items.bg:                Flat
+menu.items.bg.color:          #fafafa
+menu.items.text.color:        #a0a1a7
+menu.items.active.bg:         Flat
+menu.items.active.bg.color:   #fafafa
+menu.items.active.text.color: #c18401
+menu.border.color:            #fafafa
+menu.separator.color:         #fafafa

@@ -521,7 +521,12 @@
   <!-- Keybindings for running applications. -->
   <keybind key="W-c">
     <action name="Execute">
-      <command>~/bin/theme</command>
+      <command>~/bin/theme --one-dark</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-c">
+    <action name="Execute">
+      <command>~/bin/theme --one-light</command>
     </action>
   </keybind>
   <keybind key="W-space">

@@ -3,14 +3,14 @@
 # Titlebar colors.
 window.*.title.bg.color:       #282c34
 window.*.label.text.color:     #282c34
-window.*.button.*.image.color: #91949b
+window.*.button.*.image.color: #90939a
 
 # Color trick for the buttons.
-window.active.button.*.hover.image.color:         #c5c8cd
-window.active.button.close.pressed.image.color:   #bf353f
-window.active.button.close.unpressed.image.color: #cd565d
-window.active.button.close.hover.image.color:     #d8797e
-window.inactive.button.*.unpressed.image.color:   #686c77
+window.active.button.*.hover.image.color:         #c4c7cc
+window.active.button.close.pressed.image.color:   #be3841
+window.active.button.close.unpressed.image.color: #cc575d
+window.active.button.close.hover.image.color:     #d7787d
+window.inactive.button.*.unpressed.image.color:   #686c76
 
 # Handle colors.
 window.active.handle.bg:         Solid Flat

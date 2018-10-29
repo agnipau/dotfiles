@@ -163,7 +163,8 @@ bindsym $mod+Control+Right    exec --no-startup-id ~/bin/spotify-control --next
 bindsym $mod+Return            exec --no-startup-id xst
 bindsym $mod+space             exec --no-startup-id rofi -show run
 bindsym $mod+Shift+space       exec --no-startup-id ~/bin/rofi-run
-bindsym $mod+c                 exec --no-startup-id ~/bin/theme
+bindsym $mod+c                 exec --no-startup-id ~/bin/theme --one-dark
+bindsym $mod+Shift+c           exec --no-startup-id ~/bin/theme --one-light
 bindsym $mod+y                 exec --no-startup-id ~/bin/polyon
 bindsym $mod+Control+y         exec --no-startup-id ~/bin/polyoff
 bindsym $mod+i                 exec --no-startup-id ~/bin/blur

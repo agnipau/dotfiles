@@ -2,7 +2,6 @@
 
 # Background.
 border_width = 0
-#background_color = #21252b 100
 background_color = #282c34 100
 background_color_hover = #4b5263 100
 

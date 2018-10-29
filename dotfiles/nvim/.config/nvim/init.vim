@@ -19,6 +19,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'matteoguarda/one-dark.vim'
 
+Plug 'matteoguarda/one-light.vim'
+
 Plug 'chrisbra/Colorizer'
 
 Plug 'junegunn/limelight.vim'
