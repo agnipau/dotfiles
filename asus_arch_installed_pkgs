@@ -299,6 +299,7 @@ hunspell
 hwids
 hyphen
 i2c-tools
+i3-gaps
 i3lock
 iana-etc
 icu
@@ -834,6 +835,7 @@ ruby
 ruby-docs
 rubygems
 run-parts
+rust
 s-nail
 sbc
 scrot
@@ -969,6 +971,7 @@ xorg-server-common
 xorg-setxkbmap
 xorg-xauth
 xorg-xdpyinfo
+xorg-xev
 xorg-xfd
 xorg-xinit
 xorg-xkbcomp
