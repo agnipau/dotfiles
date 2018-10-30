@@ -529,6 +529,11 @@
       <command>~/bin/theme --one-light</command>
     </action>
   </keybind>
+  <keybind key="W-C-c">
+    <action name="Execute">
+      <command>~/bin/xcolor-notify</command>
+    </action>
+  </keybind>
   <keybind key="W-space">
     <action name="Execute">
       <command>rofi -show run</command>

@@ -45,8 +45,8 @@ padding        = 2
 module-margin  = 1
 font-0         = Iosevka SS07:size=12:antialias=true:autohint=false;3
 font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
-modules-left   = ws essid down date_time
-modules-right  = pvol music mpd battery scrot skippy-xd power
+modules-left   = ws essid down date_time pvol battery
+modules-right  = cmus scrot skippy-xd power
 locale         = it_IT.UTF-8
 
 ; Less powerful and less resource hungry.
@@ -156,8 +156,8 @@ click-right        = systemctl suspend
 [module/date_time]
 type              = internal/date
 interval          = 1.0
-time              =  %H:%M
-time-alt          =  %a %d %b   %H:%M:%S
+time              =  %a %d %b    %H:%M
+time-alt          =  %a %d %b    %H:%M:%S
 format            = <label>
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
@@ -181,8 +181,23 @@ scroll-down       = ~/bin/pvol --voldown 2
 click-left        = ~/bin/pvol --toggle
 click-right       = ~/bin/pvol --cento
 
-; Display a music button that toggle some functions when you click on it.
-[module/music]
+; Display a music button that toggle some functions when you click on it (cmus).
+[module/cmus]
+type              = custom/script
+format-text       = label
+label             = " "
+exec              = printf '%s' label
+scroll-up         = cmus --seek +5
+scroll-down       = cmus --seek -5
+click-left        = cmus --pause || ~/bin/spotify-control --toggle
+click-right       = cmus --play  || ~/bin/spotify-control --prev
+click-middle      = cmus --next  || ~/bin/spotify-control --next
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-padding    = 0
+
+; Display a music button that toggle some functions when you click on it (mpc).
+[module/mpc]
 type              = custom/script
 format-text       = label
 label             = 
@@ -219,9 +234,9 @@ battery                      = BAT0
 adapter                      = AC0
 full-at                      = 100
 format-charging              = <ramp-capacity> <label-charging>
-format-charging-padding      = 1
+format-charging-padding      = 0
 format-discharging           = <ramp-capacity> <label-discharging>
-format-discharging-padding   = 1
+format-discharging-padding   = 0
 label-charging               =  %percentage%%
 label-charging-background    = ${colors.background}
 label-charging-foreground    = ${colors.foreground}
