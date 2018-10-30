@@ -9,6 +9,8 @@ android-tools
 aom
 arc-gtk-theme
 arc-icon-theme
+arch-install-scripts
+archiso
 archlinux-keyring
 argon2
 aria2
@@ -153,7 +155,6 @@ gnome-calculator
 gnome-clocks
 gnome-desktop
 gnome-online-accounts
--perl
 gnupg
 gnutls
 go-pie
@@ -360,12 +361,10 @@ libatomic_ops
 libavc1394
 libblockdev
 libbluray
-ui
 libbs2b
 libbsd
+libburn
 libbytesize
-abi
-experimental
 libcaca
 libcanberra
 libcap
@@ -412,10 +411,8 @@ libgexiv2
 libglade
 libglvnd
 libgme
--data
--keyring
-canvas
-ui
+libgnome-keyring
+libgnomecanvas
 libgpg-error
 libgudev
 libgusb
@@ -431,6 +428,8 @@ libidn2
 libiec61883
 libimobiledevice
 libinput
+libisoburn
+libisofs
 libixion
 libjpeg-turbo
 libkeybinder3
@@ -605,6 +604,7 @@ lua52-socket
 luajit
 lvm2
 lxappearance
+lynx
 lz4
 lzo
 m4
@@ -856,6 +856,7 @@ spandsp
 speex
 speexdsp
 sqlite
+squashfs-tools
 srt
 startup-notification
 stow
