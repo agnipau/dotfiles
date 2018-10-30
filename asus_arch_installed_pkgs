@@ -26,6 +26,7 @@ automake
 avahi
 awesome
 babl
+bamf
 bash
 bash-completion
 bc
@@ -408,6 +409,7 @@ libfontenc
 libfreehand
 libgcrypt
 libgdata
+libgee
 libgexiv2
 libglade
 libglvnd
@@ -417,6 +419,7 @@ libgme
 canvas
 ui
 libgpg-error
+libgtop
 libgudev
 libgusb
 libgweather
@@ -542,6 +545,7 @@ libwbclient
 libwebp
 libwmf
 libwnck
+libwnck3
 libwpd
 libwpg
 libwps
@@ -671,6 +675,7 @@ pandoc
 pango
 pango-perl
 pangomm
+papirus-icon-theme
 parted
 patch
 pciutils
@@ -730,6 +735,7 @@ pinentry
 pitivi
 pixman
 pkgconf
+plank
 polkit
 poppler
 poppler-data
