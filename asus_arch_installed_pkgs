@@ -26,7 +26,6 @@ automake
 avahi
 awesome
 babl
-bamf
 bash
 bash-completion
 bc
@@ -229,7 +228,6 @@ haskell-digest
 haskell-dlist
 haskell-doctemplates
 haskell-exceptions
-haskell-foundation
 haskell-glob
 haskell-haddock-library
 haskell-hashable
@@ -409,7 +407,6 @@ libfontenc
 libfreehand
 libgcrypt
 libgdata
-libgee
 libgexiv2
 libglade
 libglvnd
@@ -419,7 +416,6 @@ libgme
 canvas
 ui
 libgpg-error
-libgtop
 libgudev
 libgusb
 libgweather
@@ -545,7 +541,6 @@ libwbclient
 libwebp
 libwmf
 libwnck
-libwnck3
 libwpd
 libwpg
 libwps
@@ -735,7 +730,6 @@ pinentry
 pitivi
 pixman
 pkgconf
-plank
 polkit
 poppler
 poppler-data
@@ -793,7 +787,6 @@ python-pypeg2
 python-pyqt5
 python-pysocks
 python-pytoml
-python-pytz
 python-pywal
 python-regex
 python-requests

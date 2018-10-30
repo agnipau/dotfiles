@@ -156,7 +156,7 @@ click-right        = systemctl suspend
 [module/date_time]
 type              = internal/date
 interval          = 1.0
-time              =  %a %d %b   %H:%M
+time              =  %H:%M
 time-alt          =  %a %d %b   %H:%M:%S
 format            = <label>
 format-background = ${colors.background}
