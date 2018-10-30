@@ -531,7 +531,32 @@
   </keybind>
   <keybind key="W-C-c">
     <action name="Execute">
-      <command>~/bin/xcolor-notify</command>
+      <command>~/bin/theme --gruvbox-dark</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-S-c">
+    <action name="Execute">
+      <command>~/bin/theme --dark-plus</command>
+    </action>
+  </keybind>
+  <keybind key="W-v">
+    <action name="Execute">
+      <command>~/bin/theme --material-default</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-v">
+    <action name="Execute">
+      <command>~/bin/theme --material-palenight</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-v">
+    <action name="Execute">
+      <command>~/bin/theme --material-darker</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-S-v">
+    <action name="Execute">
+      <command>~/bin/theme --material-ocean</command>
     </action>
   </keybind>
   <keybind key="W-space">
@@ -545,6 +570,11 @@
     </action>
   </keybind>
   <keybind key="W-z">
+    <action name="Execute">
+      <command>~/bin/xcolor-notify</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-z">
     <action name="Execute">
       <command>~/bin/draw</command>
     </action>

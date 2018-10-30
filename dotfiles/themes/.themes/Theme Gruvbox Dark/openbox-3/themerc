@@ -1,0 +1,45 @@
+# Gruvbox Dark theme for Openbox.
+
+# Titlebar colors.
+window.*.title.bg.color:       #282828
+window.*.label.text.color:     #282828
+window.*.button.*.image.color: #90939a
+
+# Color trick for the buttons.
+window.active.button.*.hover.image.color:         #c4c7cc
+window.active.button.close.pressed.image.color:   #be3841
+window.active.button.close.unpressed.image.color: #cc575d
+window.active.button.close.hover.image.color:     #d7787d
+window.inactive.button.*.unpressed.image.color:   #686c76
+
+# Handle colors.
+window.active.handle.bg:         Solid Flat
+window.active.handle.bg.color:   #fe8019
+window.inactive.handle.bg:       Solid Flat
+window.inactive.handle.bg.color: #504945
+
+# Titlebar.
+padding.width:             9
+padding.height:            9
+window.*.title.bg:         Solid Flat
+window.*.*.bg:             Parentrelative
+window.label.text.justify: Center
+
+# Borders.
+border.width:                0
+window.client.padding.width: 0
+window.handle.width:         0
+
+# Menu geometry.
+menu.border.width: 9
+menu.overlap.x:    -9
+
+# Menu colors.
+menu.items.bg:                Flat
+menu.items.bg.color:          #282828
+menu.items.text.color:        #504945
+menu.items.active.bg:         Flat
+menu.items.active.bg.color:   #282828
+menu.items.active.text.color: #fabd2f
+menu.border.color:            #282828
+menu.separator.color:         #282828

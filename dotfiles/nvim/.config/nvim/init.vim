@@ -11,11 +11,11 @@ call plug#begin('~/.config/nvim/plugged')
 
 "Plug 'matteoguarda/wal.vim'
 
-"Plug 'matteoguarda/material.vim'
+Plug 'matteoguarda/material.vim'
 
-"Plug 'matteoguarda/gruvbox.vim'
+Plug 'matteoguarda/gruvbox.vim'
 
-"Plug 'matteoguarda/dark-plus.vim'
+Plug 'matteoguarda/dark-plus.vim'
 
 Plug 'matteoguarda/one-dark.vim'
 

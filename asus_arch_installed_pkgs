@@ -567,7 +567,7 @@ libxkbcommon-x11
 libxkbfile
 libxml2
 libxmu
-libxnvctrl-390xx
+libxnvctrl
 libxpm
 libxrandr
 libxrender
@@ -646,9 +646,9 @@ npth
 nspr
 nss
 ntfs-3g
-nvidia-390xx
-nvidia-390xx-settings
-nvidia-390xx-utils
+nvidia
+nvidia-settings
+nvidia-utils
 openal
 opencore-amr
 openexr

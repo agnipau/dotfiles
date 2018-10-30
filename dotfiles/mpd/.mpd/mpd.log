@@ -24186,3 +24186,5 @@ Oct 30 13:16 : client: [3] opened from 127.0.0.1:54472
 Oct 30 13:16 : client: [3] closed
 Oct 30 13:16 : client: [4] opened from 127.0.0.1:54506
 Oct 30 13:18 : client: [4] closed
+Oct 30 13:33 : exception: "PulseAudio Output" [pulse] failed to pause: failed to connect the stream: Connection terminated
+Oct 30 13:33 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
