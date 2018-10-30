@@ -565,16 +565,6 @@
     </action>
   </keybind>
   <keybind key="W-d">
-    <action name="Execute">
-      <command>plank</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-d">
-    <action name="Execute">
-      <command>killall -q plank</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-d">
     <action name="ToggleShowDesktop"/>
   </keybind>
   <keybind key="W-i">
@@ -633,16 +623,6 @@
     </action>
   </keybind>
   <keybind key="W-m">
-    <action name="Execute">
-      <command>xfmpc</command>
-    </action>
-  </keybind>
-  <keybind key="W-S-m">
-    <action name="Execute">
-      <command>xst -n musica -e ~/bin/musica-maestro</command>
-    </action>
-  </keybind>
-  <keybind key="W-C-m">
     <action name="Execute">
       <command>xst -n musica_cava -e cava</command>
     </action>
@@ -754,9 +734,73 @@
       <command>~/bin/pvol --cento</command>
     </action>
   </keybind>
+
+  <!-- mpd + ncmpcpp. -->
+  <!-- <keybind key="W-Up"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>mpc stop</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="W-C-Up"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>~/bin/spotify-control -pa</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="W-S-Up"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>mpc seek 00:00:00</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="W-C-S-Up"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>~/bin/spotify-control -pl</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="W-Down"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>mpc toggle</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="W-C-Down"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>~/bin/spotify-control -t</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="W-Left"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>mpc seek -00:00:05</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="W-S-Left"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>mpc prev</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="W-C-Left"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>~/bin/spotify-control -p</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="W-Right"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>mpc seek +00:00:05</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="W-S-Right"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>mpc next</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+  <!-- <keybind key="W-C-Right"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>~/bin/spotify-control -n</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
+
+  <!-- cmus. -->
   <keybind key="W-Up">
     <action name="Execute">
-      <command>mpc stop</command>
+      <command>cmus-remote --stop</command>
     </action>
   </keybind>
   <keybind key="W-C-Up">
@@ -766,7 +810,7 @@
   </keybind>
   <keybind key="W-S-Up">
     <action name="Execute">
-      <command>mpc seek 00:00:00</command>
+      <command>cmus-remote --play</command>
     </action>
   </keybind>
   <keybind key="W-C-S-Up">
@@ -776,7 +820,7 @@
   </keybind>
   <keybind key="W-Down">
     <action name="Execute">
-      <command>mpc toggle</command>
+      <command>cmus-remote --pause</command>
     </action>
   </keybind>
   <keybind key="W-C-Down">
@@ -786,12 +830,12 @@
   </keybind>
   <keybind key="W-Left">
     <action name="Execute">
-      <command>mpc seek -00:00:05</command>
+      <command>cmus-remote --seek -5</command>
     </action>
   </keybind>
   <keybind key="W-S-Left">
     <action name="Execute">
-      <command>mpc prev</command>
+      <command>cmus-remote --prev</command>
     </action>
   </keybind>
   <keybind key="W-C-Left">
@@ -801,12 +845,12 @@
   </keybind>
   <keybind key="W-Right">
     <action name="Execute">
-      <command>mpc seek +00:00:05</command>
+      <command>cmus-remote --seek +5</command>
     </action>
   </keybind>
   <keybind key="W-S-Right">
     <action name="Execute">
-      <command>mpc next</command>
+      <command>cmus-remote --next</command>
     </action>
   </keybind>
   <keybind key="W-C-Right">
