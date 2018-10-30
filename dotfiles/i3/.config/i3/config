@@ -17,7 +17,7 @@ set_from_resource $c12  color12
 set_from_resource $c13  color13
 set_from_resource $c14  color14
 set_from_resource $c15  color15
-set               $dark #21252b
+set               $dark #192227
 
 #                       class border backgr. text indicator
 client.focused          $c0   $c0    $c7     $c7

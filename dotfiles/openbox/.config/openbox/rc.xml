@@ -28,7 +28,7 @@
 
 <!-- Theme. -->
 <theme>
-  <name>Theme One Dark</name>
+  <name>Theme Material Default</name>
   <titleLayout>LSIMC</titleLayout>
   <cornerRadius menu="no">2</cornerRadius>
   <keepBorder>no</keepBorder>
