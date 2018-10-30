@@ -565,6 +565,16 @@
     </action>
   </keybind>
   <keybind key="W-d">
+    <action name="Execute">
+      <command>plank</command>
+    </action>
+  </keybind>
+  <keybind key="W-S-d">
+    <action name="Execute">
+      <command>killall -q plank</command>
+    </action>
+  </keybind>
+  <keybind key="W-C-d">
     <action name="ToggleShowDesktop"/>
   </keybind>
   <keybind key="W-i">
