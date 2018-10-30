@@ -60,6 +60,7 @@ clucene
 clutter
 clutter-gtk
 cmark-gfm
+cmus
 cogl
 colord
 compiler-rt
@@ -955,7 +956,6 @@ xdg-utils
 xdotool
 xf86-input-libinput
 xfconf
-xfmpc
 xfsprogs
 xkeyboard-config
 xmlsec

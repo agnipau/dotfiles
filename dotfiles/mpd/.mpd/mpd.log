@@ -24178,3 +24178,6 @@ Oct 30 12:41 : client: [0] opened from 127.0.0.1:37536
 Oct 30 12:41 : client: [1] opened from 127.0.0.1:37548
 Oct 30 12:41 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Oct 30 12:43 : client: [1] closed
+Oct 30 12:50 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Oct 30 12:50 : client: [2] opened from 127.0.0.1:42284
+Oct 30 12:50 : client: [2] closed
