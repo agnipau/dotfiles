@@ -208,7 +208,7 @@ set shortmess+=csIW
 set t_Co=256
 let g:material_variant = 'default'
 let g:gruvbox_variant  = 'dark'
-colorscheme material
+colorscheme one-dark
 
 set fillchars=fold:\ 
 set foldlevelstart=0

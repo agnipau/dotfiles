@@ -24188,3 +24188,7 @@ Oct 30 13:16 : client: [4] opened from 127.0.0.1:54506
 Oct 30 13:18 : client: [4] closed
 Oct 30 13:33 : exception: "PulseAudio Output" [pulse] failed to pause: failed to connect the stream: Connection terminated
 Oct 30 13:33 : player: played "Vivaldi - Concerto for 4 Violins in B minor RV580.mp3"
+Oct 31 19:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 31 19:06 : client: [0] opened from 127.0.0.1:33436
+Oct 31 19:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 31 19:09 : client: [0] closed
