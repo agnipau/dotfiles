@@ -7,4 +7,6 @@ function gsa
     git status
     cd ..; or exit 1
   end
+
+  cd -
 end
