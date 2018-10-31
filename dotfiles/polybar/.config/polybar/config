@@ -48,6 +48,7 @@ font-1         = FontAwesome:size=12:antialias=true:autohint=false;3
 modules-left   = ws essid down date_time pvol battery
 modules-right  = cmus scrot skippy-xd power
 locale         = it_IT.UTF-8
+;tray-position  = right
 
 ; Less powerful and less resource hungry.
 [module/ws]
