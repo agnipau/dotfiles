@@ -1,3 +1,4 @@
+a52dec
 aalib
 acl
 adwaita-icon-theme
@@ -14,6 +15,7 @@ archiso
 archlinux-keyring
 argon2
 aria2
+aribb24
 aspell
 at-spi2-atk
 at-spi2-core
@@ -387,9 +389,11 @@ libdiscid
 libdmx
 libdrm
 libdv
+libdvbpsi
 libdvdnav
 libdvdread
 libe-book
+libebml
 libedit
 libelf
 libepoxy
@@ -440,6 +444,7 @@ liblqr
 libmad
 libmagick
 libmagick6
+libmatroska
 libmm-glib
 libmms
 libmng
@@ -476,6 +481,7 @@ libpaper
 libpcap
 libpciaccess
 libpipeline
+libplacebo
 libplist
 libpng
 libproxy
@@ -510,6 +516,7 @@ libstaroffice
 libstemmer
 libsynctex
 libsystemd
+libtar
 libtasn1
 libtermkey
 libthai
@@ -807,6 +814,7 @@ qt5-base
 qt5-declarative
 qt5-imageformats
 qt5-location
+qt5-svg
 qt5-webchannel
 qt5-webengine
 qt5-x11extras
@@ -920,6 +928,7 @@ vi
 vid.stab
 virtualbox
 virtualbox-host-dkms
+vlc
 volume_key
 vulkan-icd-loader
 w3m
