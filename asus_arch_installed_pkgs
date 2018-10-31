@@ -99,7 +99,6 @@ electron
 enchant
 evince
 exiv2
-exo
 expac
 expat
 faac
@@ -554,8 +553,6 @@ libxdamage
 libxdg-basedir
 libxdmcp
 libxext
-libxfce4ui
-libxfce4util
 libxfixes
 libxfont2
 libxft
@@ -956,7 +953,6 @@ xdg-user-dirs
 xdg-utils
 xdotool
 xf86-input-libinput
-xfconf
 xfsprogs
 xkeyboard-config
 xmlsec

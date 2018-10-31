@@ -17,7 +17,8 @@ xrdb ~/.Xresources
 xmodmap ~/.Xmodmap
 
 # The rest can be found in ~/.config/openbox/autostart
-exec openbox-session
+#exec openbox-session
 #exec openbox-kde-session
 #exec openbox-gnome-session
 #exec i3
+exec startxfce4
