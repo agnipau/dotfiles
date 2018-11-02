@@ -99,7 +99,6 @@ egl-wayland
 eglexternalplatform
 electron
 enchant
-evince
 exiv2
 expac
 expat
@@ -174,7 +173,6 @@ gsfonts
 gsl
 gsm
 gsound
-gspell
 gst-editing-services
 gst-libav
 gst-plugins-bad
@@ -420,7 +418,6 @@ libgpg-error
 libgudev
 libgusb
 libgweather
-libgxps
 libheif
 libibus
 libice
@@ -507,7 +504,6 @@ libsm
 libsndfile
 libsoup
 libsoxr
-libspectre
 libspiro
 libsrtp
 libssh
@@ -623,7 +619,6 @@ mjpegtools
 mkinitcpio
 mkinitcpio-busybox
 mpc
-mpd
 mpfr
 mpg123
 mps-youtube
@@ -634,7 +629,6 @@ mypaint-brushes
 nano
 nautilus
 nautilus-sendto
-ncmpcpp
 ncurses
 ndctl
 neofetch
