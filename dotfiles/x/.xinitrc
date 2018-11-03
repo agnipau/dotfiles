@@ -17,5 +17,7 @@ xrdb ~/.Xresources
 xmodmap ~/.Xmodmap
 
 # The rest can be found in ~/.config/openbox/autostart
-exec openbox-session
+#exec openbox-session
 #exec i3
+export GDK_BACKEND=x11
+exec gnome-session

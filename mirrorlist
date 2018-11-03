@@ -1,0 +1,39 @@
+#
+# Arch Linux repository mirrorlist
+# Generated on 2018-08-20
+#
+
+# Germany
+Server = https://appuals.com/archlinux/$repo/os/$arch
+Server = https://mirror.bethselamin.de/$repo/os/$arch
+Server = https://mirror.checkdomain.de/archlinux/$repo/os/$arch
+Server = https://arch.eckner.net/archlinux/$repo/os/$arch
+Server = https://mirror.f4st.host/archlinux/$repo/os/$arch
+Server = https://ftp.fau.de/archlinux/$repo/os/$arch
+Server = https://mirror.hactar.xyz/$repo/os/$arch
+Server = https://repo.itmettke.de/archlinux/$repo/os/$arch
+Server = https://mirror.jankoppe.de/archlinux/$repo/os/$arch
+Server = https://arch.jensgutermuth.de/$repo/os/$arch
+Server = https://k42.ch/mirror/archlinux/$repo/os/$arch
+Server = https://archlinux.layer8.fail/$repo/os/$arch
+Server = https://mirror.fra10.de.leaseweb.net/archlinux/$repo/os/$arch
+Server = https://mirror.metalgamer.eu/archlinux/$repo/os/$arch
+Server = https://mirrors.n-ix.net/archlinux/$repo/os/$arch
+Server = https://mirror.netcologne.de/archlinux/$repo/os/$arch
+Server = https://mirrors.niyawe.de/archlinux/$repo/os/$arch
+Server = https://archlinux.nullpointer.io/$repo/os/$arch
+Server = https://mirror.orbit-os.com/archlinux/$repo/os/$arch
+Server = https://packages.oth-regensburg.de/archlinux/$repo/os/$arch
+Server = https://mirror.pseudoform.org/$repo/os/$arch
+Server = https://www.ratenzahlung.de/mirror/archlinux/$repo/os/$arch
+Server = https://ftp.halifax.rwth-aachen.de/archlinux/$repo/os/$arch
+Server = https://ftp.spline.inf.fu-berlin.de/mirrors/archlinux/$repo/os/$arch
+Server = https://archlinux.thaller.ws/$repo/os/$arch
+Server = https://archlinux.thelinuxnetworx.rocks/$repo/os/$arch
+Server = https://mirror.thomaskilian.net/archlinux/$repo/os/$arch
+Server = https://mirror.ubrco.de/archlinux/$repo/os/$arch
+Server = https://ftp.wrz.de/pub/archlinux/$repo/os/$arch
+
+# Italy
+Server = https://archlinux.beccacervello.it/archlinux/$repo/os/$arch
+
