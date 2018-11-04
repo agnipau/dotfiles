@@ -2,4 +2,4 @@
 #
 # Recover the dconf settings from an ini file.
 
-dconf-settings.ini >dconf load /
+dconf load / <<< "$(cat ./dconf-settings.ini)"
