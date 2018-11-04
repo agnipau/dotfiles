@@ -194,7 +194,7 @@ filetype on
 filetype plugin indent on
 
 set shell=/usr/bin/fish
-set mouse=a
+"set mouse=a
 set nonumber
 set nocursorline
 set wrap
@@ -303,6 +303,7 @@ nnoremap <silent> <leader>vp :previous<cr>
 nnoremap <silent> <leader>te :terminal<cr>
 nnoremap <silent> <leader>tt :tabnew<cr>
 nnoremap <silent> <leader>ct :ColorToggle<cr>
+nnoremap <silent> <leader>gq :norm ggVGgq<cr><c-o><c-o>
 nnoremap <leader>.  :<bs>
 
 " Normal mode (with <c>).
