@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Exec=/home/matte/progetti/bin/x
+Name=x
+Comment=Do some things that are also specified in my .xinitrc and that get executed in other WMs
+Terminal=false
+OnlyShowIn=GNOME
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true
