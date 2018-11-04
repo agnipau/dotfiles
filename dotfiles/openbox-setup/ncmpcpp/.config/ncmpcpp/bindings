@@ -1,0 +1,49 @@
+# bindings
+#
+# ncmpcpp bindings config file.
+
+# Searching.
+def_key "t"
+  find
+def_key "t"
+  find_item_forward
+def_key "n"
+  next_found_item
+def_key "N"
+  previous_found_item
+
+# Basic movement.
+def_key "h"
+  previous_column
+def_key "j"
+  scroll_down
+def_key "k"
+  scroll_up
+def_key "l"
+  next_column
+def_key "ctrl-u"
+  page_up
+#push_characters "kkkkkkkkkkkkkkk"
+def_key "ctrl-d"
+  page_down
+#push_characters "jjjjjjjjjjjjjjj"
+
+# Move items.
+def_key "J"
+  move_selected_items_down
+def_key "K"
+  move_selected_items_up
+
+# Select item.
+def_key "H"
+  select_item
+
+# Lyrics.
+def_key "."
+  show_lyrics
+
+# Delete items.
+def_key "d"
+  delete_playlist_items
+def_key "d"
+  delete_browser_items
