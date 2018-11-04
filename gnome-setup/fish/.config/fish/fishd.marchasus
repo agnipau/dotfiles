@@ -18,3 +18,4 @@ SET fish_color_redirection:brblue
 SET fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SET fish_color_user:brgreen
 SET fish_color_valid_path:\x2d\x2dunderline
+SET fish_user_paths:/home/matte/\x2efzf/bin
