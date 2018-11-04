@@ -130,6 +130,7 @@ flac
 flex
 folks
 fontconfig
+foomatic-db-engine
 freerdp
 freetype2
 frei0r-plugins
@@ -358,6 +359,7 @@ haskell-xml
 haskell-zip-archive
 haskell-zlib
 hicolor-icon-theme
+hplip
 hspell
 http-parser
 hunspell
@@ -734,9 +736,15 @@ pcre
 pcre2
 peek
 perl
+perl-clone
+perl-dbi
 perl-error
 perl-mailtools
 perl-timedate
+perl-xml-libxml
+perl-xml-namespacesupport
+perl-xml-sax
+perl-xml-sax-base
 phodav
 pinentry
 pipewire
@@ -898,6 +906,7 @@ wayland
 wayland-protocols
 webkit2gtk
 webrtc-audio-processing
+wget
 which
 wildmidi
 wireless_tools
