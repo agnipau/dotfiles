@@ -41,6 +41,7 @@ bluez
 bluez-libs
 bolt
 boost-libs
+brasero
 brltty
 brotli
 btrfs-progs
@@ -54,6 +55,7 @@ cairo
 cairomm
 cantarell-fonts
 cdparanoia
+cdrdao
 cdrtools
 celt
 celt0.5.1
@@ -101,6 +103,7 @@ dnssec-anchors
 dosfstools
 dotconf
 double-conversion
+dvd+rw-tools
 e2fsprogs
 efibootmgr
 efivar
@@ -672,7 +675,6 @@ llvm-libs
 lm_sensors
 lmdb
 logrotate
-lollypop
 lpsolve
 lua
 lua52
@@ -690,6 +692,7 @@ make
 man-db
 man-pages
 mdadm
+media-player-info
 mesa
 metis
 minizip
@@ -787,7 +790,6 @@ pygtk
 python
 python-appdirs
 python-atspi
-python-beautifulsoup4
 python-cairo
 python-chardet
 python-dbus
@@ -831,6 +833,7 @@ redland
 redshift
 reiserfsprogs
 rest
+rhythmbox
 ripgrep
 rpcbind
 rsync
