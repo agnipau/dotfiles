@@ -64,6 +64,7 @@ chrome-gnome-shell
 chromium
 cifs-utils
 clang
+clucene
 clutter
 clutter-gst
 clutter-gtk
@@ -161,6 +162,7 @@ giflib
 gimp
 git
 gjs
+glew
 glib-networking
 glib2
 glibc
@@ -401,6 +403,7 @@ ldns
 lensfun
 less
 leveldb
+libabw
 libaio
 libao
 libarchive
@@ -426,6 +429,7 @@ libcdio
 libcdio-paranoia
 libcdr
 libchamplain
+libcmis
 libcroco
 libcryptui
 libcue
@@ -443,16 +447,21 @@ libdv
 libdvbpsi
 libdvdnav
 libdvdread
+libe-book
 libebml
 libedit
 libelf
 libepoxy
+libepubgen
+libetonyek
 libevdev
 libevent
 libexif
+libexttextcat
 libfdk-aac
 libffi
 libfontenc
+libfreehand
 libgcrypt
 libgdata
 libgdm
@@ -486,9 +495,11 @@ libimobiledevice
 libinput
 libiptcdata
 libiscsi
+libixion
 libjpeg-turbo
 libkeybinder3
 libksba
+liblangtag
 libldap
 liblouis
 liblqr
@@ -506,8 +517,10 @@ libmp4v2
 libmpc
 libmpcdec
 libmpeg2
+libmspub
 libmtp
 libmusicbrainz5
+libmwaw
 libmypaint
 libnautilus-extension
 libndp
@@ -523,12 +536,16 @@ libnm-gtk
 libnma
 libnotify
 libnsl
+libnumbertext
 liboauth
+libodfgen
 libofa
 libogg
 libomxil-bellagio
+liborcus
 libosinfo
 libpackagekit-glib
+libpagemaker
 libpaper
 libpcap
 libpciaccess
@@ -546,9 +563,11 @@ libpulse
 libpwquality
 libquvi
 libquvi-scripts
+libqxp
 libraqm
 libraw
 libraw1394
+libreoffice-fresh
 librevenge
 librsvg
 libsamplerate
@@ -569,6 +588,7 @@ libspiro
 libsrtp
 libssh
 libssh2
+libstaroffice
 libstemmer
 libsynctex
 libsystemd
@@ -580,6 +600,7 @@ libthai
 libtheora
 libtiff
 libtirpc
+libtommath
 libtool
 libtorrent-rasterbar
 libunistring
@@ -595,6 +616,7 @@ libva
 libvdpau
 libvirt
 libvirt-glib
+libvisio
 libvisual
 libvncserver
 libvoikko
@@ -606,6 +628,8 @@ libwbclient
 libwebp
 libwmf
 libwpd
+libwpg
+libwps
 libx11
 libxau
 libxaw
@@ -639,6 +663,7 @@ libxxf86vm
 libyaml
 libytnef
 libzapojit
+libzmf
 licenses
 linux
 linux-api-headers
@@ -648,6 +673,7 @@ lm_sensors
 lmdb
 logrotate
 lollypop
+lpsolve
 lua
 lua52
 lua52-bitop
@@ -797,8 +823,11 @@ qt5-imageformats
 qt5-svg
 qt5-x11extras
 ranger
+raptor
+rasqal
 re2
 readline
+redland
 redshift
 reiserfsprogs
 rest
@@ -825,6 +854,7 @@ shellcheck
 simple-scan
 simplescreenrecorder
 slang
+slop
 smbclient
 snappy
 sound-theme-freedesktop
