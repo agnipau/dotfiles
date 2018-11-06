@@ -70,6 +70,7 @@ libogg
 libopus
 libpixman
 libpng
+libpopt
 libpulseaudio
 libsndfile
 libsoxr
@@ -117,6 +118,7 @@ ranger
 readline
 readline-dev
 ripgrep
+rsync
 stow
 tar
 teckit

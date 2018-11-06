@@ -1,0 +1,3 @@
+function po
+  poweroff
+end
