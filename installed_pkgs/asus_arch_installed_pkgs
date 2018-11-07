@@ -54,6 +54,7 @@ ca-certificates-utils
 cairo
 cairomm
 cantarell-fonts
+caribou
 cdparanoia
 cdrdao
 cdrtools
@@ -140,6 +141,7 @@ frei0r-plugins
 fribidi
 fuse-common
 fuse2
+fuse3
 gamin
 gavl
 gawk
@@ -800,6 +802,7 @@ python-idna
 python-isodate
 python-lxml
 python-msgpack
+python-nautilus
 python-neovim
 python-packaging
 python-pycountry
@@ -870,6 +873,7 @@ spice
 spice-gtk
 sqlite
 srt
+sshfs
 startup-notification
 stow
 streamlink

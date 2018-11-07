@@ -194,7 +194,7 @@ filetype on
 filetype plugin indent on
 
 set shell=/usr/bin/fish
-"set mouse=a
+set mouse=a
 set nonumber
 set nocursorline
 set wrap
