@@ -1,3 +1,3 @@
 function autorem
-  apt autoremove
+  sudo apt autoremove
 end
