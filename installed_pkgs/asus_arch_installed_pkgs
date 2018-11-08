@@ -118,6 +118,7 @@ evince
 evolution
 evolution-data-server
 exempi
+exfat-utils
 exiv2
 expat
 faac
@@ -732,6 +733,7 @@ noto-fonts-emoji
 npth
 nspr
 nss
+ntfs-3g
 numactl
 nvidia
 nvidia-utils
