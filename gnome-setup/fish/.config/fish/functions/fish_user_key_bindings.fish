@@ -86,3 +86,5 @@ function _desc_sudo
 end
 
 bind \cs _desc_sudo
+
+fzf_key_bindings
