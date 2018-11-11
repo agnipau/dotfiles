@@ -103,6 +103,9 @@ dmraid
 dnssec-anchors
 dosfstools
 dotconf
+dotnet-host
+dotnet-runtime
+dotnet-sdk
 double-conversion
 dvd+rw-tools
 e2fsprogs
@@ -125,6 +128,7 @@ faac
 faad2
 fakeroot
 fd
+fff
 ffmpeg
 fftw
 file
@@ -282,6 +286,7 @@ haskell-attoparsec
 haskell-base-compat
 haskell-base64-bytestring
 haskell-basement
+haskell-bitarray
 haskell-blaze-builder
 haskell-blaze-html
 haskell-blaze-markup
@@ -354,6 +359,7 @@ haskell-th-abstraction
 haskell-time-locale-compat
 haskell-tls
 haskell-transformers-compat
+haskell-unicode-transforms
 haskell-unordered-containers
 haskell-utf8-string
 haskell-uuid-types
@@ -760,6 +766,7 @@ pambase
 pandoc
 pango
 pangomm
+papirus-icon-theme
 parted
 patch
 pciutils
