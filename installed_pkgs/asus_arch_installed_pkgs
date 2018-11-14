@@ -71,6 +71,7 @@ clucene
 clutter
 clutter-gst
 clutter-gtk
+cmake
 cmark-gfm
 cogl
 colord
@@ -251,6 +252,7 @@ gst-plugins-base-libs
 gst-plugins-good
 gstreamer
 gtk-engine-murrine
+gtk-sharp-2
 gtk-update-icon-cache
 gtk-vnc
 gtk2
@@ -379,6 +381,8 @@ hwids
 hyphen
 iana-etc
 icu
+id3lib
+id3v2
 ijs
 ilmbase
 imagemagick
@@ -401,6 +405,7 @@ js52
 js60
 json-c
 json-glib
+jsoncpp
 kbd
 keyutils
 kmod
@@ -476,6 +481,7 @@ libfontenc
 libfreehand
 libgcrypt
 libgdata
+libgdiplus
 libgdm
 libgee
 libgepub
@@ -710,6 +716,8 @@ mkinitcpio
 mkinitcpio-busybox
 mobile-broadband-provider-info
 mod_dnssd
+mono
+mono-addins
 mousetweaks
 mpfr
 mpg123
@@ -845,6 +853,7 @@ redland
 redshift
 reiserfsprogs
 rest
+rhash
 rhythmbox
 ripgrep
 rpcbind
@@ -952,6 +961,7 @@ woff2
 wpa_supplicant
 x264
 x265
+xbitmaps
 xcb-proto
 xcb-util
 xcb-util-image
@@ -970,6 +980,7 @@ xorg-bdftopcf
 xorg-font-util
 xorg-font-utils
 xorg-fonts-encodings
+xorg-luit
 xorg-mkfontdir
 xorg-mkfontscale
 xorg-server
@@ -982,6 +993,7 @@ xorg-xmodmap
 xorg-xrdb
 xorg-xset
 xorgproto
+xterm
 xvidcore
 xz
 yajl
