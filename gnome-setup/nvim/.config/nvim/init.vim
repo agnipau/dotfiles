@@ -180,6 +180,8 @@ Plug 'mattn/gist-vim'
 
 Plug 'triglav/vim-visual-increment'
 
+Plug 'OmniSharp/omnisharp-vim'
+
 call plug#end()
 
 " }}}
