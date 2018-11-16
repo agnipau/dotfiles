@@ -1,5 +1,5 @@
 function gsa
-  cd $HOME/progetti; or exit 1
+  cd /mnt/c/Users/matte/progetti; or exit 1
 
   for i in *
     printf '\n%s\n' $i
