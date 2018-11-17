@@ -19,7 +19,7 @@ set fish_greeting ""
 #function fish_title; end
 
 # Envars.
-set -x PATH                 /home/matte/altro /home/matte/.phantomjs/bin /home/matte/bin $PATH
+set -x PATH                 /mnt/c/Users/matte/progetti/altro /home/matte/.phantomjs /mnt/c/Users/matte/progetti/bin $PATH
 set -x VISUAL               /usr/bin/nvim
 set -x EDITOR               /usr/bin/nvim
 set -x BROWSER              /usr/bin/chromium
@@ -30,10 +30,6 @@ set -x SSH_KEY_PATH         /home/matte/.ssh/id_rsa
 set -x LANG                   it_IT.UTF-8
 set -x RANGER_LOAD_DEFAULT_RC false
 set -x MANPAGER               'nvim -c MANPAGER -'
-set -x FFF_FAV1               ~/progetti
-set -x FFF_FAV2               ~/roba
-set -x FFF_FAV5               /media
-set -x FFF_FAV6               /mnt
 
 # fzf options.
 set -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
@@ -44,7 +40,7 @@ set -x FZF_DEFAULT_OPTS "
 "
 
 # Source one-dark colors.
-. $HOME/progetti/themes/sh/one-dark.fish
+. /mnt/c/users/matte/progetti/themes/sh/one-dark.fish
 
 # Highlight groups.
 set fish_term256   0
