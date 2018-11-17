@@ -801,6 +801,7 @@ pciutils
 pcre
 pcre2
 peek
+pepper-flash
 perl
 perl-error
 perl-mailtools
@@ -994,6 +995,7 @@ volume_key
 vte-common
 vte3
 vulkan-icd-loader
+w3m
 wavpack
 wayland
 wayland-protocols
