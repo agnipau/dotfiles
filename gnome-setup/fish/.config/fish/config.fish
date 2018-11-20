@@ -55,8 +55,8 @@ set -x FZF_DEFAULT_OPTS "
   --color info:0,prompt:1,spinner:1,pointer:1,marker:1
 "
 
-# Source one-dark colors.
-. $HOME/progetti/themes/sh/one-dark.fish
+# Source dark-plus colors.
+. $HOME/progetti/themes/sh/dark-plus.fish
 
 # Highlight groups.
 set fish_term256   0

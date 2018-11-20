@@ -29,6 +29,7 @@ atkmm
 attica
 attr
 audacity
+audiofile
 audit
 augeas
 autoconf
@@ -136,6 +137,7 @@ faac
 faad2
 fakeroot
 fd
+feh
 fff
 ffmpeg
 fftw
@@ -146,6 +148,7 @@ findutils
 fish
 flac
 flex
+fluidsynth
 folks
 fontconfig
 freerdp
@@ -178,6 +181,7 @@ ghc-libs
 ghostscript
 giflib
 gimp
+girara
 git
 gjs
 glew
@@ -386,6 +390,7 @@ http-parser
 hunspell
 hwids
 hyphen
+i3-gaps
 iana-etc
 icu
 id3lib
@@ -509,6 +514,7 @@ libebur128
 libedit
 libelf
 libepoxy
+libev
 libevdev
 libevent
 libexif
@@ -559,6 +565,7 @@ libmagick
 libmagick6
 libmatroska
 libmediaart
+libmikmod
 libmm-glib
 libmms
 libmng
@@ -567,6 +574,7 @@ libmodplug
 libmp4v2
 libmpc
 libmpcdec
+libmpdclient
 libmpeg2
 libmtp
 libmusicbrainz5
@@ -675,6 +683,7 @@ libxcb
 libxcomposite
 libxcursor
 libxdamage
+libxdg-basedir
 libxdmcp
 libxext
 libxfixes
@@ -688,6 +697,7 @@ libxkbfile
 libxklavier
 libxml2
 libxmu
+libxnvctrl
 libxpm
 libxrandr
 libxrender
@@ -721,6 +731,7 @@ lua52-socket
 luajit
 lv2
 lvm2
+lxappearance
 lz4
 lzo
 m4
@@ -739,6 +750,8 @@ mlt
 mobile-broadband-provider-info
 mod_dnssd
 mousetweaks
+mpc
+mpd
 mpfr
 mpg123
 mpv
@@ -750,6 +763,7 @@ mypaint-brushes
 nano
 nautilus
 nautilus-sendto
+ncmpcpp
 ncurses
 ndctl
 neon
@@ -770,6 +784,7 @@ nss
 ntfs-3g
 numactl
 nvidia
+nvidia-settings
 nvidia-utils
 oath-toolkit
 openal
@@ -891,6 +906,7 @@ rest
 rhash
 rhythmbox
 ripgrep
+rofi
 rpcbind
 rsync
 rtkit
@@ -962,6 +978,7 @@ texinfo
 texlive-bin
 texlive-core
 thin-provisioning-tools
+tint2
 tmux
 totem
 totem-plparser
@@ -969,8 +986,10 @@ tracker
 tracker-miners
 tslib
 ttf-dejavu
+ttf-fira-code
 ttf-fira-mono
 ttf-fira-sans
+ttf-roboto
 twolame
 tzdata
 uchardet
@@ -1014,10 +1033,12 @@ x265
 xbitmaps
 xcb-proto
 xcb-util
+xcb-util-cursor
 xcb-util-image
 xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
+xcb-util-xrm
 xclip
 xdg-user-dirs
 xdg-user-dirs-gtk
@@ -1050,6 +1071,8 @@ yajl
 yelp
 yelp-xsl
 youtube-dl
+zathura
+zathura-pdf-mupdf
 zenity
 zeromq
 zip
