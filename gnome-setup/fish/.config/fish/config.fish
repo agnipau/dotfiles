@@ -29,7 +29,7 @@ if test $PREFIX
   set -x SSH_KEY_PATH         $HOME/.ssh/id_rsa
 else
   set -x GOPATH               /home/matte/go
-  set -x PATH                 /home/matte/altro /home/matte/.rbenv/bin $GOPATH $GOPATH/bin /home/matte/.phantomjs/bin /home/matte/bin $PATH
+  set -x PATH                 /home/matte/altro /home/matte/.rbenv/bin $GOPATH $GOPATH/bin /home/matte/bin $PATH
   set -x VISUAL               /usr/bin/nvim
   set -x EDITOR               /usr/bin/nvim
   set -x BROWSER              /usr/bin/chromium
