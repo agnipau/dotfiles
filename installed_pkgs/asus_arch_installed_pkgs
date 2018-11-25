@@ -494,6 +494,7 @@ libffi
 libfontenc
 libgcrypt
 libgdata
+libgdiplus
 libgdm
 libgee
 libgepub
@@ -722,6 +723,7 @@ mkinitcpio-busybox
 mlt
 mobile-broadband-provider-info
 mod_dnssd
+mono
 mousetweaks
 movit
 mpc
