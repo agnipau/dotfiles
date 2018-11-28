@@ -750,10 +750,12 @@ netctl
 nettle
 networkmanager
 nm-connection-editor
+node-gyp
 nodejs
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 npth
 nspr
 nss
@@ -903,13 +905,13 @@ sdl
 sdl2
 seabios
 sed
+semver
 serd
 shaderc
 shadow
 shared-color-targets
 shared-mime-info
 shellcheck
-shotcut
 simple-scan
 simplescreenrecorder
 slang
@@ -966,6 +968,7 @@ ttf-dejavu
 ttf-fira-code
 ttf-fira-mono
 ttf-fira-sans
+ttf-ibm-plex
 ttf-roboto
 twolame
 tzdata
