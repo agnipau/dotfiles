@@ -2,7 +2,6 @@ a52dec
 aalib
 accountsservice
 acl
-adapta-gtk-theme
 adwaita-icon-theme
 alacritty
 alembic
@@ -16,7 +15,6 @@ appstream-glib
 apr
 apr-util
 arc-gtk-theme
-arc-solid-gtk-theme
 archlinux-keyring
 argon2
 aria2
@@ -264,7 +262,6 @@ gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
 gstreamer
-gtk-engine-murrine
 gtk-update-icon-cache
 gtk-vnc
 gtk2
