@@ -692,6 +692,7 @@ lm_sensors
 lmdb
 log4cplus
 logrotate
+lollypop
 lua
 lua52
 lua52-bitop
@@ -710,7 +711,6 @@ make
 man-db
 man-pages
 mdadm
-media-player-info
 mesa
 metis
 minizip
@@ -831,6 +831,7 @@ pygtk
 python
 python-appdirs
 python-atspi
+python-beautifulsoup4
 python-cairo
 python-chardet
 python-dbus
@@ -884,7 +885,6 @@ redshift
 reiserfsprogs
 rest
 rhash
-rhythmbox
 ripgrep
 rofi
 rpcbind
