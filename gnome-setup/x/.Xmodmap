@@ -8,5 +8,5 @@ clear control
 add control = Caps_Lock Control_L Control_R
 keysym Caps_Lock = Control_L Caps_Lock NoSymbol NoSymbol
 
-! Make ç (useless) output something really common in italian (È).
-keysym 0xe7 = U007E
+! Make Menu (useless) output something really common in italian (È).
+keysym Menu = U00C8
