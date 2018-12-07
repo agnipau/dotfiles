@@ -1,0 +1,12 @@
+! .Xmodmap
+!
+! xmodmap config file.
+
+! Make Lock act like Control.
+clear lock
+clear control
+add control = Caps_Lock Control_L Control_R
+keysym Caps_Lock = Control_L Caps_Lock NoSymbol NoSymbol
+
+! Make Menu (useless) output something really common in italian (È).
+keysym Menu = U00C8

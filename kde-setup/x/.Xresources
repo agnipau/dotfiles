@@ -1,0 +1,66 @@
+! .Xresources
+!
+! Resource file for xrdb.
+
+! Source one-dark colors.
+#include "/home/matte/progetti/themes/xresources/one-dark.Xresources"
+
+! Xft settings.
+Xft.antialias: true
+Xft.hinting:   true
+Xft.autohint:  false
+Xft.rgba:      rgb
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+
+! URxvt settings.
+URxvt.cursorBlink:     0
+URxvt.font:            xft:Iosevka Term SS07:size=12:antialias=true:autohint=true
+URxvt.geometry:        80x24
+URxvt.internalBorder:  25
+URxvt.lineSpace:       0
+URxvt.letterSpace:     0
+URxvt.scrollBar:       false
+URxvt.thickness:       5
+URxvt.cursorUnderline: false
+URxvt.titleBar:        false
+URxvt.intensityStyles: false
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher:    chromium
+URxvt.matcher.button:  1
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
+
+! xst settings.
+st.termname:          xst-256color
+st.shell:             /usr/bin/fish
+st.font:              Iosevka Term SS07:size=12:antialias=true:autohint=true;
+st.borderpx:          25
+st.cursorshape:       2
+st.cursorthickness:   2
+st.cursorblinkstyle:  0
+st.cursorblinkontype: 1
+st.bold_font:         1
+st.xfps:              120
+st.actionfps:         30
+st.chscale:           1.0
+st.cwscale:           1.0
+st.blinktimeout:      800
+st.bellvolume:        0
+st.prompt_char:       $
+st.opacity:           255
+
+! Rofi settings.
+rofi.theme:             progetti/themes/rofi/one-dark.rasi
+rofi.font:              Iosevka SS07 16
+rofi.separator-style:   none
+rofi.hide-scrollbar:    true
+rofi.fullscreen:        false
+rofi.location:          1
+rofi.fake-transparency: true
+rofi.columns:           1
+rofi.lines:             5
+rofi.yoffset:           90
+rofi.xoffset:           20
+rofi.width:             300
+rofi.padding:           25
