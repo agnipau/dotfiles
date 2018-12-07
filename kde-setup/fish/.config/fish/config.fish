@@ -36,7 +36,7 @@ else
   set -x RTV_BROWSER          /usr/bin/w3m
   set -x XDG_CONFIG_HOME      /home/matte/.config
   set -x SSH_KEY_PATH         /home/matte/.ssh/id_rsa
-  set -x MSBuildSDKsPath      /opt/dotnet/sdk/2.1.500/Sdks
+  set -x MSBuildSDKsPath      /opt/dotnet/sdk/2.2.100/Sdks
 end
 
 set -x LANG                   it_IT.UTF-8
