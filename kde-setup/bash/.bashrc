@@ -267,7 +267,7 @@ bind '"\C-t": "\" > .fzf_cmd.tmp\e0iecho -n \"\C-mfzf_general\C-m'
 [[ -z "$PREFIX" ]] && eval "$(rbenv init -)"
 
 # Run tmux every time a new terminal instance is opened.
-[[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
+#[[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
 
 # More complicated aliases / Misc. functions.
 clone() {
@@ -277,5 +277,3 @@ clone() {
 cclone() {
   git clone --depth 1 "$1.git"
 }
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

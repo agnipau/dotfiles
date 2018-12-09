@@ -1,11 +1,19 @@
 [Desktop Entry]
-Comment=Do some things that are also specified in my .xinitrc and that get executed in other WMs
-Encoding=UTF-8
-Exec=/home/matte/progetti/bin/x
-Hidden=false
+Comment[it_IT]=
+Comment=
+Exec=/home/matte/bin/x
+GenericName[it_IT]=
+GenericName=
+Icon=system-run
+MimeType=
+Name[it_IT]=x
 Name=x
-OnlyShowIn=GNOME
-StartupNotify=false
+Path=
+StartupNotify=true
 Terminal=false
+TerminalOptions=
 Type=Application
-X-GNOME-Autostart-enabled=true
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

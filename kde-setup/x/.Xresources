@@ -3,7 +3,7 @@
 ! Resource file for xrdb.
 
 ! Source one-dark colors.
-#include "/home/matte/progetti/themes/xresources/one-dark.Xresources"
+#include "/home/matte/progetti/themes/xresources/dark-plus.Xresources"
 
 ! Xft settings.
 Xft.antialias: true
@@ -43,6 +43,7 @@ st.cursorblinkontype: 1
 st.bold_font:         1
 st.xfps:              120
 st.actionfps:         30
+st.mouseScrollLines:  1
 st.chscale:           1.0
 st.cwscale:           1.0
 st.blinktimeout:      800

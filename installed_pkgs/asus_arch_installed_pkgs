@@ -119,6 +119,8 @@ ebook-tools
 editorconfig-core-c
 efibootmgr
 efivar
+egl-wayland
+eglexternalplatform
 enchant
 eventviews
 exiv2
@@ -164,6 +166,7 @@ gettext
 ghc-libs
 ghostscript
 giflib
+gifski
 gimp
 girara
 git
@@ -208,6 +211,7 @@ gtkmm
 gtkspell
 guile
 guile2.0
+gvfs
 gwenview
 gzip
 harfbuzz
@@ -443,6 +447,7 @@ kinfocenter
 kinit
 kio
 kio-extras
+kio-gdrive
 kirigami2
 kiriki
 kitemmodels
@@ -613,6 +618,7 @@ libffi
 libfontenc
 libfreehand
 libgcrypt
+libgdiplus
 libgexiv2
 libgit2
 libglade
@@ -643,6 +649,7 @@ libkdegames
 libkdepim
 libkeduvocdocument
 libkexiv2
+libkeybinder3
 libkgapi
 libkipi
 libkleo
@@ -726,6 +733,7 @@ libsecret
 libshout
 libsigc++
 libsignon-glib
+libsigsegv
 libsm
 libsndfile
 libsodium
@@ -853,6 +861,7 @@ mobile-broadband-provider-info
 modemmanager
 modemmanager-qt
 molequeue
+mono
 mpfr
 mpg123
 mpv
@@ -875,6 +884,8 @@ npth
 nspr
 nss
 ntfs-3g
+nvidia
+nvidia-utils
 okular
 openal
 openbabel
@@ -905,10 +916,18 @@ patch
 pciutils
 pcre
 pcre2
+peek
 perl
 perl-error
+perl-file-which
+perl-locale-gettext
 perl-mailtools
+perl-net-dbus
+perl-text-iconv
 perl-timedate
+perl-x11-protocol
+perl-xml-parser
+perl-xml-twig
 phonon-qt5
 phonon-qt5-gstreamer
 picmi
@@ -1068,6 +1087,7 @@ sysfsutils
 systemd
 systemd-sysvcompat
 systemsettings
+t1lib
 taglib
 talloc
 tar
@@ -1094,6 +1114,19 @@ telepathy-mission-control
 telepathy-qt
 tevent
 texinfo
+texlive-bibtexextra
+texlive-bin
+texlive-core
+texlive-fontsextra
+texlive-formatsextra
+texlive-games
+texlive-humanities
+texlive-latexextra
+texlive-music
+texlive-pictures
+texlive-pstricks
+texlive-publishers
+texlive-science
 thin-provisioning-tools
 threadweaver
 tmux
@@ -1150,7 +1183,6 @@ xdg-user-dirs
 xdg-utils
 xerces-c
 xf86-input-libinput
-xf86-video-nouveau
 xfsprogs
 xkeyboard-config
 xmlsec
@@ -1187,3 +1219,4 @@ zita-resampler
 zlib
 zstd
 zvbi
+zziplib
