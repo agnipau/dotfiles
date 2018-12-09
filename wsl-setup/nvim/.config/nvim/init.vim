@@ -11,15 +11,15 @@ call plug#begin('~/.config/nvim/plugged')
 
 "Plug 'matteoguarda/wal.vim'
 
-Plug 'matteoguarda/material.vim'
+"Plug 'matteoguarda/material.vim'
 
-Plug 'matteoguarda/gruvbox.vim'
+"Plug 'matteoguarda/gruvbox.vim'
 
 Plug 'matteoguarda/dark-plus.vim'
 
-Plug 'matteoguarda/one-dark.vim'
+"Plug 'matteoguarda/one-dark.vim'
 
-Plug 'matteoguarda/one-light.vim'
+"Plug 'matteoguarda/one-light.vim'
 
 Plug 'chrisbra/Colorizer'
 
@@ -208,7 +208,7 @@ set shortmess+=csIW
 set t_Co=256
 let g:material_variant = 'default'
 let g:gruvbox_variant  = 'dark'
-colorscheme one-dark
+colorscheme dark+
 
 set fillchars=fold:\ 
 set foldlevelstart=0
