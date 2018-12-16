@@ -121,6 +121,7 @@ efibootmgr
 efivar
 egl-wayland
 eglexternalplatform
+elisa
 enchant
 eventviews
 exfat-utils
@@ -312,6 +313,7 @@ haskell-x509-validation
 haskell-xml
 haskell-zip-archive
 haskell-zlib
+hdparm
 hicolor-icon-theme
 hspell
 hunspell
@@ -1153,6 +1155,7 @@ texlive-publishers
 texlive-science
 thin-provisioning-tools
 threadweaver
+tlp
 tmux
 tslib
 ttf-caladea
