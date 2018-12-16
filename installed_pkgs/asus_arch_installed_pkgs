@@ -80,6 +80,7 @@ chromium
 cifs-utils
 clang
 clucene
+cmake
 cmark-gfm
 colord
 compiler-rt
@@ -314,7 +315,6 @@ haskell-zip-archive
 haskell-zlib
 hicolor-icon-theme
 hspell
-http-parser
 hunspell
 hwids
 hyphen
@@ -345,6 +345,7 @@ jre-openjdk-headless
 js52
 json-c
 json-glib
+jsoncpp
 juk
 k3b
 kaccounts-integration
@@ -398,6 +399,7 @@ kde-dev-scripts
 kde-dev-utils
 kdebugsettings
 kdeclarative
+kdeconnect
 kdecoration
 kded
 kdeedu-data
@@ -556,7 +558,6 @@ l-smash
 ladspa
 lame
 lapack
-latte-dock
 lcms2
 ldb
 ldns
@@ -617,6 +618,7 @@ libevdev
 libevent
 libexif
 libexttextcat
+libfakekey
 libfdk-aac
 libffi
 libfontenc
@@ -699,6 +701,8 @@ libnice
 libnl
 libnm
 libnm-glib
+libnm-gtk
+libnma
 libnotify
 libnsl
 libnumbertext
@@ -881,8 +885,10 @@ neovim
 net-snmp
 netctl
 nettle
+network-manager-applet
 networkmanager
 networkmanager-qt
+nm-connection-editor
 nodejs
 noto-fonts
 npth
@@ -1053,6 +1059,7 @@ readline
 redland
 reiserfsprogs
 rest
+rhash
 ripgrep
 rocs
 rsync
@@ -1187,6 +1194,7 @@ wxgtk2
 x264
 x265
 xapian-core
+xbitmaps
 xcb-proto
 xcb-util
 xcb-util-cursor
@@ -1207,6 +1215,7 @@ xorg-bdftopcf
 xorg-font-util
 xorg-font-utils
 xorg-fonts-encodings
+xorg-luit
 xorg-mkfontdir
 xorg-mkfontscale
 xorg-server
@@ -1222,6 +1231,7 @@ xorg-xrdb
 xorg-xset
 xorg-xsetroot
 xorgproto
+xterm
 xvidcore
 xz
 yakuake
