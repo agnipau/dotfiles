@@ -14,7 +14,6 @@ akonadi-notes
 akonadi-search
 akonadiconsole
 akregator
-alacritty
 alsa-lib
 analitza
 android-tools
@@ -1137,6 +1136,7 @@ telepathy-logger-qt
 telepathy-mission-control
 telepathy-qt
 tevent
+tex-gyre-fonts
 texinfo
 texlive-bibtexextra
 texlive-bin
@@ -1155,11 +1155,17 @@ thin-provisioning-tools
 threadweaver
 tmux
 tslib
+ttf-caladea
+ttf-carlito
 ttf-dejavu
+ttf-droid
 ttf-fira-code
 ttf-hack
 ttf-ibm-plex
+ttf-liberation
+ttf-opensans
 ttf-roboto
+ttf-ubuntu-font-family
 twolame
 tzdata
 uchardet
@@ -1214,7 +1220,9 @@ xmlsec
 xorg-bdftopcf
 xorg-font-util
 xorg-font-utils
+xorg-fonts-alias
 xorg-fonts-encodings
+xorg-fonts-misc
 xorg-luit
 xorg-mkfontdir
 xorg-mkfontscale
