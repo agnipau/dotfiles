@@ -9,17 +9,17 @@ nnoremap <leader>pi :PlugInstall<cr>
 
 call plug#begin('~/.config/nvim/plugged')
 
-"Plug 'matteoguarda/wal.vim'
+"Plug 'matgua/wal.vim'
 
-"Plug 'matteoguarda/material.vim'
+"Plug 'matgua/material.vim'
 
-"Plug 'matteoguarda/gruvbox.vim'
+"Plug 'matgua/gruvbox.vim'
 
-Plug 'matteoguarda/dark-plus.vim'
+Plug 'matgua/dark-plus.vim'
 
-"Plug 'matteoguarda/one-dark.vim'
+"Plug 'matgua/one-dark.vim'
 
-"Plug 'matteoguarda/one-light.vim'
+"Plug 'matgua/one-light.vim'
 
 Plug 'chrisbra/Colorizer'
 

@@ -18,6 +18,7 @@ alsa-lib
 analitza
 android-tools
 aom
+apm
 appstream
 appstream-qt
 archlinux-appstream-data
@@ -31,6 +32,7 @@ at-spi2-atk
 at-spi2-core
 atk
 atkmm
+atom
 attica
 attr
 audiocd-kio
@@ -121,6 +123,7 @@ efibootmgr
 efivar
 egl-wayland
 eglexternalplatform
+electron
 elisa
 enchant
 eventviews
@@ -316,12 +319,14 @@ haskell-zlib
 hdparm
 hicolor-icon-theme
 hspell
+http-parser
 hunspell
 hwids
 hyphen
 iana-etc
 icu
 id3lib
+id3v2
 ijs
 ilmbase
 imlib2
@@ -842,6 +847,7 @@ lua
 lua52
 luajit
 lvm2
+lxappearance
 lz4
 lzo
 m4
@@ -890,8 +896,10 @@ network-manager-applet
 networkmanager
 networkmanager-qt
 nm-connection-editor
+node-gyp
 nodejs
 noto-fonts
+npm
 npth
 nspr
 nss
@@ -1076,6 +1084,7 @@ sddm-kcm
 sdl
 sdl2
 sed
+semver
 shaderc
 shadow
 shared-mime-info

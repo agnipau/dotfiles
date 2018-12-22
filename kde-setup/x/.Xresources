@@ -2,8 +2,8 @@
 !
 ! Resource file for xrdb.
 
-! Source one-dark colors.
-#include "/home/matte/progetti/themes/xresources/dark-plus.Xresources"
+! Source material-darker colors.
+#include "/home/matte/progetti/themes/xresources/material-darker.Xresources"
 
 ! Xft settings.
 Xft.antialias: true
