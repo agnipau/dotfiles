@@ -24,6 +24,7 @@ appstream-qt
 archlinux-appstream-data
 archlinux-keyring
 argon2
+aria2
 aribb24
 ark
 artikulate
@@ -81,7 +82,6 @@ chromium
 cifs-utils
 clang
 clucene
-cmake
 cmark-gfm
 colord
 compiler-rt
@@ -124,7 +124,6 @@ efivar
 egl-wayland
 eglexternalplatform
 electron
-elisa
 enchant
 eventviews
 exfat-utils
@@ -171,7 +170,6 @@ gettext
 ghc-libs
 ghostscript
 giflib
-gifski
 gimp
 girara
 git
@@ -326,7 +324,6 @@ hyphen
 iana-etc
 icu
 id3lib
-id3v2
 ijs
 ilmbase
 imlib2
@@ -351,7 +348,6 @@ jre-openjdk-headless
 js52
 json-c
 json-glib
-jsoncpp
 juk
 k3b
 kaccounts-integration
@@ -400,27 +396,40 @@ kcrash
 kcron
 kdav
 kdbusaddons
+kde-applications-meta
 kde-cli-tools
 kde-dev-scripts
 kde-dev-utils
+kdeaccessibility-meta
+kdeadmin-meta
+kdebase-meta
 kdebugsettings
 kdeclarative
-kdeconnect
 kdecoration
 kded
 kdeedu-data
+kdeedu-meta
+kdegames-meta
+kdegraphics-meta
 kdegraphics-mobipocket
+kdegraphics-thumbnailers
 kdelibs4support
+kdemultimedia-meta
 kdenetwork-filesharing
+kdenetwork-meta
 kdenlive
 kdepim-addons
 kdepim-apps-libs
+kdepim-meta
 kdepim-runtime
 kdeplasma-addons
 kdesdk-kioslaves
+kdesdk-meta
 kdesdk-thumbnailers
 kdesu
+kdeutils-meta
 kdevelop
+kdewebdev-meta
 kdf
 kdiagram
 kdialog
@@ -459,7 +468,7 @@ kinfocenter
 kinit
 kio
 kio-extras
-kio-gdrive
+kirigami-gallery
 kirigami2
 kiriki
 kitemmodels
@@ -484,6 +493,7 @@ kmbox
 kmenuedit
 kmime
 kmines
+kmix
 kmod
 kmousetool
 kmouth
@@ -492,6 +502,7 @@ knavalbattle
 knetattach
 knetwalk
 knewstuff
+knights
 knotes
 knotifications
 knotifyconfig
@@ -520,7 +531,6 @@ krdc
 kreversi
 krfb
 kross
-kross-interpreters
 kruler
 krunner
 kscreen
@@ -624,7 +634,6 @@ libevdev
 libevent
 libexif
 libexttextcat
-libfakekey
 libfdk-aac
 libffi
 libfontenc
@@ -661,7 +670,6 @@ libkdegames
 libkdepim
 libkeduvocdocument
 libkexiv2
-libkeybinder3
 libkgapi
 libkipi
 libkleo
@@ -773,6 +781,7 @@ libtiff
 libtirpc
 libtommath
 libtool
+libtorrent-rasterbar
 libunistring
 libunwind
 libupnp
@@ -817,6 +826,7 @@ libxkbcommon-x11
 libxkbfile
 libxml2
 libxmu
+libxnvctrl
 libxpm
 libxrandr
 libxrender
@@ -847,7 +857,6 @@ lua
 lua52
 luajit
 lvm2
-lxappearance
 lz4
 lzo
 m4
@@ -905,6 +914,7 @@ nspr
 nss
 ntfs-3g
 nvidia
+nvidia-settings
 nvidia-utils
 okular
 openal
@@ -921,7 +931,6 @@ orc
 os-prober
 oxygen
 p11-kit
-p7zip
 pacman
 pacman-mirrorlist
 palapeli
@@ -936,18 +945,11 @@ patch
 pciutils
 pcre
 pcre2
-peek
 perl
 perl-error
 perl-file-which
-perl-locale-gettext
 perl-mailtools
-perl-net-dbus
-perl-text-iconv
 perl-timedate
-perl-x11-protocol
-perl-xml-parser
-perl-xml-twig
 phonon-qt5
 phonon-qt5-gstreamer
 picmi
@@ -1036,6 +1038,7 @@ python-zope-interface
 python2
 python2-cairo
 python2-gobject2
+qbittorrent
 qca
 qgpgme
 qhull
@@ -1068,10 +1071,8 @@ readline
 redland
 reiserfsprogs
 rest
-rhash
 ripgrep
 rocs
-rsync
 rtkit
 rtmpdump
 rubberband
@@ -1092,7 +1093,6 @@ signon-kwallet-extension
 signon-plugin-oauth2
 signon-ui
 signond
-simplescreenrecorder
 slang
 smbclient
 snappy
@@ -1114,6 +1114,7 @@ stow
 streamlink
 sudo
 suitesparse
+svgpart
 sweeper
 syndication
 syntax-highlighting
@@ -1140,6 +1141,7 @@ telepathy-kde-contact-runner
 telepathy-kde-desktop-applets
 telepathy-kde-filetransfer-handler
 telepathy-kde-integration-module
+telepathy-kde-meta
 telepathy-kde-send-file
 telepathy-kde-text-ui
 telepathy-logger
@@ -1207,12 +1209,9 @@ which
 wildmidi
 wireless_tools
 wpa_supplicant
-wxgtk-common
-wxgtk2
 x264
 x265
 xapian-core
-xbitmaps
 xcb-proto
 xcb-util
 xcb-util-cursor
@@ -1235,7 +1234,6 @@ xorg-font-utils
 xorg-fonts-alias
 xorg-fonts-encodings
 xorg-fonts-misc
-xorg-luit
 xorg-mkfontdir
 xorg-mkfontscale
 xorg-server
@@ -1251,7 +1249,6 @@ xorg-xrdb
 xorg-xset
 xorg-xsetroot
 xorgproto
-xterm
 xvidcore
 xz
 yakuake
