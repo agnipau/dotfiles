@@ -171,7 +171,6 @@ ghc-libs
 ghostscript
 giflib
 gimp
-girara
 git
 glew
 glib-networking
@@ -916,6 +915,7 @@ ntfs-3g
 nvidia
 nvidia-settings
 nvidia-utils
+obs-studio
 okular
 openal
 openbabel
@@ -990,6 +990,7 @@ procps-ng
 psmisc
 pulseaudio
 purpose
+pv
 pygobject2-devel
 pygtk
 pyqt5-common
@@ -1073,6 +1074,7 @@ reiserfsprogs
 rest
 ripgrep
 rocs
+rsync
 rtkit
 rtmpdump
 rubberband
@@ -1168,6 +1170,7 @@ thin-provisioning-tools
 threadweaver
 tlp
 tmux
+trash-cli
 tslib
 ttf-caladea
 ttf-carlito
@@ -1186,7 +1189,6 @@ uchardet
 udisks2
 umbrello
 unibilium
-unrar
 unzip
 upower
 usbmuxd
@@ -1253,8 +1255,6 @@ xvidcore
 xz
 yakuake
 youtube-dl
-zathura
-zathura-pdf-mupdf
 zeroconf-ioslave
 zeromq
 zip
