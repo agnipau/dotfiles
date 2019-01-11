@@ -226,8 +226,8 @@ set directory=~/.config/nvim/tmp,~/.vim/tmp,.
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set expandtab
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set autoindent
 set list
 set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<
