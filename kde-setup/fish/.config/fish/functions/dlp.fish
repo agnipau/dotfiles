@@ -1,4 +1,4 @@
 function dlp
-  ~/bin/arch-list-pkgs --dell
-  ~/bin/aur-list-pkgs  --dell
+  ~/bin/archListPkgs --dell
+  ~/bin/aurListPkgs  --dell
 end

@@ -1,4 +1,4 @@
 function avp
-  ~/bin/arch-view-pkgs --asus
-  ~/bin/aur-view-pkgs  --asus
+  ~/bin/archViewPkgs --asus
+  ~/bin/aurViewPkgs  --asus
 end

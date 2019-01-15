@@ -1,4 +1,4 @@
 function alp
-  ~/bin/arch-list-pkgs --asus
-  ~/bin/aur-list-pkgs  --asus
+  ~/bin/archListPkgs --asus
+  ~/bin/aurListPkgs  --asus
 end
