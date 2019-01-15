@@ -10,4 +10,7 @@ xset m 1/1
 xrdb ~/.Xresources
 xmodmap ~/.Xmodmap
 
+xrandr --setprovideroutputsource modesetting NVIDIA -0
+xrandr --auto
+
 exec startkde
