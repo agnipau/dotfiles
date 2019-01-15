@@ -3,14 +3,14 @@
 # fish shell config file.
 
 # vi mode.
-#fish_vi_key_bindings
-#function fish_mode_prompt; end
-#set fish_cursor_default block
-#set fish_cursor_insert  block
-#set fish_cursor_visual  block
+fish_vi_key_bindings
+function fish_mode_prompt; end
+set fish_cursor_default block
+set fish_cursor_insert  block
+set fish_cursor_visual  block
 
 # emacs mode.
-fish_default_key_bindings
+#fish_default_key_bindings
 
 # Suppress the greeting messagge.
 set fish_greeting ""

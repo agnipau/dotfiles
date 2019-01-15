@@ -130,10 +130,10 @@ Plug 'machakann/vim-highlightedyank'
 
 Plug 'yuttie/comfortable-motion.vim'
   let g:comfortable_motion_no_default_key_mappings = 1
-  nnoremap <silent> J                 :call comfortable_motion#flick(55)<cr>
-  nnoremap <silent> K                 :call comfortable_motion#flick(-55)<cr>
-  xnoremap <silent> J                 jjj<cr>
-  xnoremap <silent> K                 kkk<cr>
+  "nnoremap <silent> J                 :call comfortable_motion#flick(55)<cr>
+  "nnoremap <silent> K                 :call comfortable_motion#flick(-55)<cr>
+  "xnoremap <silent> J                 jjj<cr>
+  "xnoremap <silent> K                 kkk<cr>
   noremap  <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<cr>
   noremap  <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<cr>
 
@@ -318,6 +318,8 @@ nnoremap <c-u> {
 
 " Normal mode (without <leader> and <c>).
 nnoremap H 0
+nnoremap J 3j
+nnoremap K 3k
 nnoremap L $
 nnoremap , :
 nnoremap è .

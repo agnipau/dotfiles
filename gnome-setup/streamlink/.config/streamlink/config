@@ -1,3 +1,0 @@
-player=mpv
-default-stream=720p60,720p,480p,best
-ringbuffer-size=6M
