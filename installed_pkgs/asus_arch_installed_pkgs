@@ -307,6 +307,7 @@ jre8-openjdk-headless
 js52
 json-c
 json-glib
+k3b
 kaccounts-integration
 kaccounts-providers
 kactivities
@@ -332,6 +333,7 @@ kdeconnect
 kdecoration
 kded
 kdelibs4support
+kdenlive
 kdeplasma-addons
 kdesu
 kdnssd
@@ -414,6 +416,7 @@ libavc1394
 libblockdev
 libbluray
 libbsd
+libburn
 libbytesize
 libcanberra
 libcanberra-pulse
@@ -435,8 +438,11 @@ libde265
 libdmtx
 libdrm
 libdvbpsi
+libdvdcss
+libdvdread
 libe-book
 libebml
+libebur128
 libedit
 libelf
 libepoxy
@@ -470,6 +476,7 @@ libimobiledevice
 libinput
 libixion
 libjpeg-turbo
+libkcddb
 libkdcraw
 libkexiv2
 libkipi
@@ -494,6 +501,7 @@ libmpcdec
 libmpeg2
 libmspub
 libmtp
+libmusicbrainz5
 libmwaw
 libmypaint
 libndp
@@ -648,6 +656,7 @@ milou
 minizip
 mkinitcpio
 mkinitcpio-busybox
+mlt
 mobile-broadband-provider-info
 modemmanager
 modemmanager-qt
@@ -817,6 +826,7 @@ s-nail
 sbc
 sddm
 sddm-kcm
+sdl
 sdl2
 sed
 semver
@@ -888,6 +898,8 @@ util-linux
 v4l-utils
 vi
 vid.stab
+virtualbox
+virtualbox-host-modules-arch
 vlc
 volume_key
 vulkan-icd-loader
