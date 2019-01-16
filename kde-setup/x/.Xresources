@@ -3,7 +3,7 @@
 ! Resource file for xrdb.
 
 ! Source material-darker colors.
-#include "/home/matte/progetti/themes/xresources/material-darker-breeze.Xresources"
+#include "/home/matte/progetti/themes/xresources/material-darker.Xresources"
 
 ! Xft settings.
 Xft.antialias: true

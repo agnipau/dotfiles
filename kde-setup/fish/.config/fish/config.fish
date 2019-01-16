@@ -3,11 +3,12 @@
 # fish shell config file.
 
 # vi mode.
-fish_vi_key_bindings
+function fish_vi_cursor; end
 function fish_mode_prompt; end
-set fish_cursor_default block
-set fish_cursor_insert  block
-set fish_cursor_visual  block
+fish_vi_key_bindings
+#set fish_cursor_default block
+#set fish_cursor_insert  block
+#set fish_cursor_visual  block
 
 # emacs mode.
 #fish_default_key_bindings
