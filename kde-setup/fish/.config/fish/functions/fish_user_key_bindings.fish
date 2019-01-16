@@ -16,7 +16,7 @@ function _fzf_nvim
   commandline -f repaint
 end
 
-bind \ck _fzf_nvim
+bind -M insert \ck _fzf_nvim
 
 # Change directory quickly with fzf.
 function _fzf_cd
@@ -32,7 +32,7 @@ function _fzf_cd
   commandline -f repaint
 end
 
-bind \ec _fzf_cd
+bind -M insert \ec _fzf_cd
 
 # Navigate through history quickly with fzf.
 function _fzf_history
@@ -46,7 +46,7 @@ function _fzf_history
   commandline -r "$hcmd"
 end
 
-bind \cr _fzf_history
+bind -M insert \cr _fzf_history
 
 # General purpose fzf widget (searches for files).
 function _fzf_general_files
@@ -54,12 +54,12 @@ function _fzf_general_files
 
   set fgfiles (fd --type f --hidden --follow --exclude .git \
               | fzf --multi --inline-info --reverse --height 95%)
-  
+
   commandline -f repaint end-of-line
   commandline -a "$fgfiles"
 end
 
-bind \ct _fzf_general_files
+bind -M insert \ct _fzf_general_files
 
 # General purpose fzf widget (searches for directories).
 function _fzf_general_dirs
@@ -67,16 +67,16 @@ function _fzf_general_dirs
 
   set fgdirs (fd --type d --hidden --follow --exclude .git \
              | fzf --multi --inline-info --reverse --height 95%)
-  
+
   commandline -f repaint end-of-line
   commandline -a "$fgdirs"
 end
 
-bind \et _fzf_general_dirs
+bind -M insert \et _fzf_general_dirs
 
 # Make accept-autosuggestion work better.
-bind \e\  accept-autosuggestion execute
-bind \cl  accept-autosuggestion
+bind -M insert \e\  accept-autosuggestion execute
+bind -M insert \cl  accept-autosuggestion
 
 # Port of the oh-my-zsh sudo plugin for fish.
 function _desc_sudo
@@ -85,4 +85,4 @@ function _desc_sudo
     commandline -f end-of-line
 end
 
-bind \cs _desc_sudo
+bind -M insert \cs _desc_sudo

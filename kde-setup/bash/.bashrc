@@ -55,7 +55,7 @@ fi
 export HISTCONTROL="ignoredups"
 export HISTSIZE=1000000
 export GOPATH="${HOME}/go"
-export PATH="${HOME}/.rbenv/bin:${GOPATH}:${GOPATH}/bin:${HOME}/.phantomjs/bin:${HOME}/bin:${PATH}"
+export PATH="${GOPATH}:${GOPATH}/bin:${HOME}/.phantomjs/bin:${HOME}/bin:${PATH}"
 export VISUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
 export BROWSER="/usr/bin/chromium"
@@ -262,9 +262,6 @@ bind -x '"\C-k": clear; fzf_nvim $(fzf)'
 bind -x '"\C-r": fzf_history'
 bind '"\ec": "fzf_cd\C-m"'
 bind '"\C-t": "\" > .fzf_cmd.tmp\e0iecho -n \"\C-mfzf_general\C-m'
-
-# Start rbenv automatically.
-[[ -z "$PREFIX" ]] && eval "$(rbenv init -)"
 
 # Run tmux every time a new terminal instance is opened.
 #[[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2

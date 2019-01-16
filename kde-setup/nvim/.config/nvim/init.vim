@@ -208,8 +208,7 @@ set noshowcmd
 set shortmess+=csIW
 
 set t_Co=256
-let g:material_variant = 'darker'
-let g:gruvbox_variant  = 'dark'
+let g:material_variant = 'darker_breeze'
 colorscheme material
 
 set fillchars=fold:\ 
