@@ -4,6 +4,7 @@ accountsservice
 acl
 adwaita-icon-theme
 alsa-lib
+alsa-utils
 android-tools
 aom
 apm
@@ -39,6 +40,7 @@ bluedevil
 bluez
 bluez-libs
 bluez-qt
+bluez-utils
 boost-libs
 breeze
 breeze-gtk
@@ -54,7 +56,6 @@ cairomm
 cantarell-fonts
 cdparanoia
 cfitsio
-chromium
 cifs-utils
 clucene
 cmark-gfm
@@ -103,7 +104,6 @@ faad2
 fakeroot
 fd
 ffmpeg
-ffmpegthumbs
 fftw
 file
 filesystem
@@ -123,6 +123,7 @@ gawk
 gc
 gcc
 gcc-libs
+gconf
 gcr
 gd
 gdb
@@ -137,7 +138,6 @@ ghc-libs
 ghostscript
 giflib
 gimp
-girara
 git
 glib-networking
 glib2
@@ -165,6 +165,7 @@ gsl
 gsm
 gst-plugins-base
 gst-plugins-base-libs
+gst-python
 gstreamer
 gtk-update-icon-cache
 gtk2
@@ -211,6 +212,7 @@ haskell-data-default-instances-old-locale
 haskell-digest
 haskell-dlist
 haskell-doctemplates
+haskell-erf
 haskell-exceptions
 haskell-glob
 haskell-haddock-library
@@ -282,8 +284,6 @@ hwids
 hyphen
 iana-etc
 icu
-id3lib
-id3v2
 ijs
 ilmbase
 imagemagick
@@ -334,7 +334,6 @@ kdeclarative
 kdeconnect
 kdecoration
 kded
-kdegraphics-thumbnailers
 kdelibs4support
 kdenlive
 kdeplasma-addons
@@ -377,7 +376,6 @@ kparts
 kpeople
 kpty
 krb5
-kross
 kruler
 krunner
 kscreen
@@ -387,7 +385,6 @@ ksshaskpass
 ksysguard
 ktexteditor
 ktextwidgets
-ktorrent
 kunitconversion
 kwallet
 kwallet-pam
@@ -434,6 +431,7 @@ libcdr
 libcmis
 libcroco
 libcups
+libcurl-gnutls
 libdaemon
 libdatrie
 libdbusmenu-qt5
@@ -466,6 +464,7 @@ libgexiv2
 libgit2
 libglade
 libglvnd
+libgnome-keyring
 libgpg-error
 libgudev
 libgusb
@@ -488,7 +487,6 @@ libkomparediff2
 libksba
 libkscreen
 libksysguard
-libktorrent
 liblangtag
 libldap
 liblqr
@@ -575,6 +573,7 @@ libtiff
 libtirpc
 libtommath
 libtool
+libtorrent-rasterbar
 libunistring
 libunwind
 libupnp
@@ -715,6 +714,7 @@ patch
 pciutils
 pcre
 pcre2
+pepper-flash
 perl
 perl-error
 perl-mailtools
@@ -763,6 +763,7 @@ python-dbus
 python-dbus-common
 python-distlib
 python-distro
+python-docopt
 python-gobject
 python-greenlet
 python-html5lib
@@ -791,6 +792,7 @@ python-websocket-client
 python2
 python2-cairo
 python2-gobject2
+qbittorrent
 qca
 qqc2-desktop-style
 qrencode
@@ -875,7 +877,6 @@ texlive-core
 thin-provisioning-tools
 threadweaver
 tmux
-trash-cli
 tslib
 ttf-caladea
 ttf-carlito
@@ -912,6 +913,7 @@ webrtc-audio-processing
 wget
 which
 wireless_tools
+wmctrl
 wpa_supplicant
 x264
 x265
@@ -991,8 +993,6 @@ xvidcore
 xz
 yakuake
 youtube-dl
-zathura
-zathura-pdf-mupdf
 zeromq
 zip
 zita-alsa-pcmi
