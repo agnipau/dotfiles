@@ -1,0 +1,17 @@
+[Favorites-org.kde.plasma.kicker.favorites.instance-28-fcd3643f-cd42-430a-9d1f-6faa1546d652]
+ordering=preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover
+
+[Favorites-org.kde.plasma.kicker.favorites.instance-28-global]
+ordering=preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover
+
+[Favorites-org.kde.plasma.kicker.favorites.instance-29-fcd3643f-cd42-430a-9d1f-6faa1546d652]
+ordering=preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover
+
+[Favorites-org.kde.plasma.kicker.favorites.instance-29-global]
+ordering=preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-fcd3643f-cd42-430a-9d1f-6faa1546d652]
+ordering=preferred://browser,applications:org.kde.dolphin.desktop,applications:org.kde.konsole.desktop,applications:code-oss.desktop,applications:telegramdesktop.desktop,applications:vlc.desktop,applications:spotify.desktop,applications:gimp.desktop,applications:inkscape.desktop,applications:org.kde.kate.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:atom.desktop,applications:systemsettings.desktop,applications:org.kde.discover.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-global]
+ordering=preferred://browser,applications:org.kde.dolphin.desktop,applications:org.kde.konsole.desktop,applications:code-oss.desktop,applications:telegramdesktop.desktop,applications:vlc.desktop,applications:spotify.desktop,applications:gimp.desktop,applications:inkscape.desktop,applications:org.kde.kate.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:atom.desktop,applications:systemsettings.desktop,applications:org.kde.discover.desktop

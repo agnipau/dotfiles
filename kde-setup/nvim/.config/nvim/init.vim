@@ -311,6 +311,7 @@ nnoremap <leader>.  :<bs>
 nnoremap <silent> <c-h> :tabprevious<cr>
 nnoremap <silent> <c-l> :tabnext<cr>
 nnoremap <silent> <c-n> :cnext<cr>zz
+nnoremap <silent> <c-s> :w<cr>
 nnoremap <silent> <c-m> :cprevious<cr>zz
 nnoremap <c-d> }
 nnoremap <c-u> {

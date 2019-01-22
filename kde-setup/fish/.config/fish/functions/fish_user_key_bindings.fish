@@ -2,7 +2,7 @@
 #
 # Some useful bindings.
 
-# Open files in NeoVim quickly with fzf.
+# Open files in NeoVim quickly with fzf
 function _fzf_nvim
   clear
 
@@ -18,7 +18,7 @@ end
 
 bind -M insert \ck _fzf_nvim
 
-# Change directory quickly with fzf.
+# Change directory quickly with fzf
 function _fzf_cd
   clear
 
@@ -34,7 +34,7 @@ end
 
 bind -M insert \ec _fzf_cd
 
-# Navigate through history quickly with fzf.
+# Navigate through history quickly with fzf
 function _fzf_history
   clear
 
@@ -48,7 +48,7 @@ end
 
 bind -M insert \cr _fzf_history
 
-# General purpose fzf widget (searches for files).
+# General purpose fzf widget (searches for files)
 function _fzf_general_files
   clear
 
@@ -61,7 +61,7 @@ end
 
 bind -M insert \ct _fzf_general_files
 
-# General purpose fzf widget (searches for directories).
+# General purpose fzf widget (searches for directories)
 function _fzf_general_dirs
   clear
 
@@ -74,11 +74,11 @@ end
 
 bind -M insert \et _fzf_general_dirs
 
-# Make accept-autosuggestion work better.
+# Make accept-autosuggestion work better
 bind -M insert \e\  accept-autosuggestion execute
-bind -M insert \cl  accept-autosuggestion
+bind -M insert \cn  accept-autosuggestion
 
-# Port of the oh-my-zsh sudo plugin for fish.
+# Port of the oh-my-zsh sudo plugin for fish
 function _desc_sudo
     commandline -C 0
     commandline -i 'sudo '
