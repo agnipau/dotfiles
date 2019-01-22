@@ -33,7 +33,7 @@ else
   set -x PATH                 $GOPATH $GOPATH/bin /home/matte/bin $PATH
   set -x VISUAL               /usr/bin/nvim
   set -x EDITOR               /usr/bin/nvim
-  set -x BROWSER              /usr/bin/chromium
+  set -x BROWSER              /usr/bin/brave
   set -x RTV_BROWSER          /usr/bin/w3m
   set -x XDG_CONFIG_HOME      /home/matte/.config
   set -x SSH_KEY_PATH         /home/matte/.ssh/id_rsa

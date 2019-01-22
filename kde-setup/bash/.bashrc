@@ -16,31 +16,31 @@ prompt() {
         printf "%s%s%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\W\\[\\e[0m\\]" \
                           "\\[\\e[1;32m\\] on  ${gbranch}\\[\\e[0m\\]" \
                           "\\[\\e[1;34m\\] ✘\\[\\e[0m\\]" \
-                          "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                          "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
       else
         printf "%s%s%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\w\\[\\e[0m\\]" \
                           "\\[\\e[1;32m\\] on  ${gbranch}\\[\\e[0m\\]" \
                           "\\[\\e[1;34m\\] ✘\\[\\e[0m\\]" \
-                          "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                          "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
       fi
     else
       if [[ "$PREFIX" ]]; then
         printf "%s%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\W\\[\\e[0m\\]" \
                         "\\[\\e[1;32m\\] on  ${gbranch}\\[\\e[0m\\]" \
-                        "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                        "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
       else
        printf "%s%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\w\\[\\e[0m\\]" \
                        "\\[\\e[1;32m\\] on  ${gbranch}\\[\\e[0m\\]" \
-                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                       "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
       fi
     fi
   else
     if [[ "$PREFIX" ]]; then
       printf "%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\W\\[\\e[0m\\]" \
-                    "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                    "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
     else
       printf "%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\w\\[\\e[0m\\]" \
-                    "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                    "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
     fi
   fi
 }
@@ -58,7 +58,7 @@ export GOPATH="${HOME}/go"
 export PATH="${GOPATH}:${GOPATH}/bin:${HOME}/.phantomjs/bin:${HOME}/bin:${PATH}"
 export VISUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
-export BROWSER="/usr/bin/chromium"
+export BROWSER="/usr/bin/brave"
 export RTV_BROWSER="/usr/bin/w3m"
 export LANG="it_IT.UTF-8"
 export XDG_CONFIG_HOME="${HOME}/.config"
@@ -275,5 +275,3 @@ clone() {
 cclone() {
   git clone --depth 1 "$1.git"
 }
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
