@@ -82,6 +82,7 @@ dmraid
 dnssec-anchors
 dolphin
 dosfstools
+dotconf
 dotnet-host
 dotnet-runtime
 dotnet-sdk
@@ -280,6 +281,7 @@ hicolor-icon-theme
 hspell
 http-parser
 hunspell
+hunspell-en_US
 hwids
 hyphen
 iana-etc
@@ -287,6 +289,7 @@ icu
 ijs
 ilmbase
 imagemagick
+imlib2
 inetutils
 inkscape
 intel-tbb
@@ -409,6 +412,7 @@ libabw
 libaccounts-glib
 libaccounts-qt
 libaio
+libao
 libarchive
 libass
 libassuan
@@ -420,6 +424,7 @@ libblockdev
 libbluray
 libbsd
 libbytesize
+libcaca
 libcanberra
 libcanberra-pulse
 libcap
@@ -442,6 +447,8 @@ libdmx
 libdrm
 libdvbpsi
 libdvdcss
+libdvdnav
+libdvdread
 libe-book
 libebml
 libebur128
@@ -472,6 +479,7 @@ libheif
 libibus
 libical
 libice
+libid3tag
 libidn
 libidn2
 libiec61883
@@ -556,6 +564,7 @@ libsodium
 libsoup
 libsoxr
 libspectre
+libspeechd
 libspiro
 libssh
 libssh2
@@ -643,6 +652,7 @@ lmdb
 logrotate
 lpsolve
 lua
+lua52
 luajit
 lvm2
 lz4
@@ -665,6 +675,7 @@ modemmanager
 modemmanager-qt
 mono
 mpfr
+mpv
 msgpack-c
 mtdev
 mypaint-brushes
@@ -789,6 +800,7 @@ python-six
 python-urllib3
 python-webencodings
 python-websocket-client
+python-xdg
 python2
 python2-cairo
 python2-gobject2
@@ -813,6 +825,7 @@ qt5-webchannel
 qt5-webengine
 qt5-webkit
 qt5-x11extras
+ranger
 raptor
 rasqal
 re2
@@ -825,6 +838,7 @@ ripgrep
 rsync
 rtkit
 rtmpdump
+rubberband
 run-parts
 s-nail
 sbc
@@ -850,6 +864,7 @@ solid
 sonnet
 sound-theme-freedesktop
 spectacle
+speech-dispatcher
 speedcrunch
 speex
 speexdsp
@@ -890,6 +905,7 @@ ttf-opensans
 ttf-roboto
 ttf-ubuntu-font-family
 tzdata
+uchardet
 udisks2
 unibilium
 unrar
@@ -900,6 +916,7 @@ usbutils
 user-manager
 util-linux
 v4l-utils
+vamp-plugin-sdk
 vi
 vid.stab
 virtualbox
