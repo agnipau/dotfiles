@@ -7,9 +7,12 @@ alsa-lib
 alsa-utils
 android-tools
 aom
+apache
 apm
 appstream
 appstream-qt
+apr
+apr-util
 archlinux-appstream-data
 archlinux-keyring
 argon2
@@ -55,8 +58,9 @@ cairo
 cairomm
 cantarell-fonts
 cdparanoia
+cdrdao
+cdrtools
 cfitsio
-chromium
 cifs-utils
 clucene
 cmark-gfm
@@ -71,6 +75,7 @@ db
 dbus
 dbus-glib
 dconf
+dee
 desktop-file-utils
 device-mapper
 dhcpcd
@@ -89,6 +94,7 @@ dotnet-runtime
 dotnet-sdk
 double-conversion
 drkonqi
+dvd+rw-tools
 e2fsprogs
 ebook-tools
 editorconfig-core-c
@@ -105,10 +111,12 @@ expat
 extundelete
 faad2
 fakeroot
+falkon
 fd
 ffmpeg
 fftw
 file
+filelight
 filesystem
 findutils
 fish
@@ -118,10 +126,12 @@ flex
 fontconfig
 frameworkintegration
 freetype2
+frei0r-plugins
 fribidi
 fuse-common
 fuse2
 gamin
+gavl
 gawk
 gc
 gcc
@@ -136,6 +146,7 @@ gdk-pixbuf2
 gegl
 geoclue2
 geocode-glib
+geogebra
 gettext
 ghc-libs
 ghostscript
@@ -312,6 +323,7 @@ jre8-openjdk-headless
 js52
 json-c
 json-glib
+k3b
 kaccounts-integration
 kaccounts-providers
 kactivities
@@ -322,6 +334,7 @@ kate
 kauth
 kbd
 kbookmarks
+kcalc
 kcalcore
 kcmutils
 kcodecs
@@ -350,13 +363,16 @@ keyutils
 kfilemetadata
 kfind
 kgamma5
+kget
 kglobalaccel
 kguiaddons
 kholidays
 khotkeys
+khtml
 ki18n
 kiconthemes
 kidletime
+kile
 kinfocenter
 kinit
 kio
@@ -383,6 +399,8 @@ kpeople
 kpmcore
 kpty
 krb5
+krename
+kronometer
 kruler
 krunner
 kscreen
@@ -390,8 +408,10 @@ kscreenlocker
 kservice
 ksshaskpass
 ksysguard
+ksystemlog
 ktexteditor
 ktextwidgets
+ktimer
 kunitconversion
 kwallet
 kwallet-pam
@@ -427,6 +447,7 @@ libavc1394
 libblockdev
 libbluray
 libbsd
+libburn
 libbytesize
 libcaca
 libcanberra
@@ -443,6 +464,7 @@ libcups
 libcurl-gnutls
 libdaemon
 libdatrie
+libdbusmenu-glib
 libdbusmenu-qt5
 libdca
 libde265
@@ -490,6 +512,7 @@ libimobiledevice
 libinput
 libixion
 libjpeg-turbo
+libkcddb
 libkdcraw
 libkexiv2
 libkgapi
@@ -515,6 +538,7 @@ libmpcdec
 libmpeg2
 libmspub
 libmtp
+libmusicbrainz5
 libmwaw
 libmypaint
 libndp
@@ -617,6 +641,7 @@ libxcb
 libxcomposite
 libxcursor
 libxdamage
+libxdg-basedir
 libxdmcp
 libxext
 libxfixes
@@ -664,6 +689,9 @@ m4
 make
 man-db
 man-pages
+mariadb
+mariadb-clients
+mariadb-libs
 mdadm
 media-player-info
 mesa
@@ -702,6 +730,7 @@ ntfs-3g
 nvidia
 nvidia-settings
 nvidia-utils
+okteta
 okular
 openal
 opencore-amr
@@ -736,6 +765,7 @@ perl-mailtools
 perl-timedate
 phonon-qt5
 phonon-qt5-gstreamer
+php
 pinentry
 pipewire
 pixman
@@ -750,6 +780,7 @@ plasma-sdk
 plasma-vault
 plasma-workspace
 plasma-workspace-wallpapers
+podofo
 polkit
 polkit-kde-agent
 polkit-qt5
@@ -810,6 +841,7 @@ python2-cairo
 python2-gobject2
 qbittorrent
 qca
+qgpgme
 qqc2-desktop-style
 qrencode
 qt5-base
@@ -869,15 +901,16 @@ sonnet
 sound-theme-freedesktop
 spectacle
 speech-dispatcher
-speedcrunch
 speex
 speexdsp
 spirv-tools
 sqlite
+startup-notification
 stow
 streamlink
 sudo
 suitesparse
+sweeper
 syntax-highlighting
 sysfsutils
 systemd
@@ -901,6 +934,7 @@ ttf-dejavu
 ttf-fira-code
 ttf-hack
 ttf-ibm-plex
+ttf-liberation
 ttf-opensans
 ttf-roboto
 tzdata
@@ -930,6 +964,7 @@ wget
 which
 wireless_tools
 wmctrl
+wordpress
 wpa_supplicant
 x264
 x265
