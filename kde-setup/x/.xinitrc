@@ -13,4 +13,5 @@ xmodmap ~/.Xmodmap
 xrandr --setprovideroutputsource modesetting NVIDIA -0
 xrandr --auto
 
-exec startkde
+#exec startkde
+exec openbox-session
