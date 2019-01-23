@@ -1,4 +1,4 @@
 function dvp
-  ~/bin/arch-view-pkgs --dell
-  ~/bin/aur-view-pkgs  --dell
+  ~/bin/archViewPkgs --dell
+  ~/bin/aurViewPkgs  --dell
 end

@@ -13,13 +13,13 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'matgua/material.vim'
 
-Plug 'matgua/gruvbox.vim'
+"Plug 'matgua/gruvbox.vim'
 
-Plug 'matgua/dark-plus.vim'
+"Plug 'matgua/dark-plus.vim'
 
-Plug 'matgua/one-dark.vim'
+"Plug 'matgua/one-dark.vim'
 
-Plug 'matgua/one-light.vim'
+"Plug 'matgua/one-light.vim'
 
 Plug 'chrisbra/Colorizer'
 
@@ -130,10 +130,10 @@ Plug 'machakann/vim-highlightedyank'
 
 Plug 'yuttie/comfortable-motion.vim'
   let g:comfortable_motion_no_default_key_mappings = 1
-  nnoremap <silent> J                 :call comfortable_motion#flick(55)<cr>
-  nnoremap <silent> K                 :call comfortable_motion#flick(-55)<cr>
-  xnoremap <silent> J                 jjj<cr>
-  xnoremap <silent> K                 kkk<cr>
+  "nnoremap <silent> J                 :call comfortable_motion#flick(55)<cr>
+  "nnoremap <silent> K                 :call comfortable_motion#flick(-55)<cr>
+  "xnoremap <silent> J                 jjj<cr>
+  "xnoremap <silent> K                 kkk<cr>
   noremap  <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<cr>
   noremap  <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<cr>
 
@@ -180,6 +180,8 @@ Plug 'mattn/gist-vim'
 
 Plug 'triglav/vim-visual-increment'
 
+"Plug 'OmniSharp/omnisharp-vim'
+
 call plug#end()
 
 " }}}
@@ -206,9 +208,8 @@ set noshowcmd
 set shortmess+=csIW
 
 set t_Co=256
-let g:material_variant = 'default'
-let g:gruvbox_variant  = 'dark'
-colorscheme one-dark
+let g:material_variant = 'darker'
+colorscheme material
 
 set fillchars=fold:\ 
 set foldlevelstart=0
@@ -224,8 +225,8 @@ set directory=~/.config/nvim/tmp,~/.vim/tmp,.
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set expandtab
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set autoindent
 set list
 set listchars=tab:│\ ,nbsp:␣,trail:∙,extends:>,precedes:<
@@ -303,18 +304,22 @@ nnoremap <silent> <leader>vp :previous<cr>
 nnoremap <silent> <leader>te :terminal<cr>
 nnoremap <silent> <leader>tt :tabnew<cr>
 nnoremap <silent> <leader>ct :ColorToggle<cr>
+nnoremap <silent> <leader>gq :norm ggVGgq<cr><c-o><c-o>
 nnoremap <leader>.  :<bs>
 
 " Normal mode (with <c>).
 nnoremap <silent> <c-h> :tabprevious<cr>
 nnoremap <silent> <c-l> :tabnext<cr>
 nnoremap <silent> <c-n> :cnext<cr>zz
+nnoremap <silent> <c-s> :w<cr>
 nnoremap <silent> <c-m> :cprevious<cr>zz
 nnoremap <c-d> }
 nnoremap <c-u> {
 
 " Normal mode (without <leader> and <c>).
 nnoremap H 0
+nnoremap J 3j
+nnoremap K 3k
 nnoremap L $
 nnoremap , :
 nnoremap è .

@@ -1,3 +1,3 @@
 function lp
-  ~/bin/termux-list-pkgs
+  ~/bin/termuxListPkgs
 end

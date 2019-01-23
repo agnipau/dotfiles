@@ -3,14 +3,15 @@
 # fish shell config file.
 
 # vi mode.
-#fish_vi_key_bindings
-#function fish_mode_prompt; end
+function fish_vi_cursor; end
+function fish_mode_prompt; end
+fish_vi_key_bindings
 #set fish_cursor_default block
 #set fish_cursor_insert  block
 #set fish_cursor_visual  block
 
 # emacs mode.
-fish_default_key_bindings
+#fish_default_key_bindings
 
 # Suppress the greeting messagge.
 set fish_greeting ""
@@ -21,7 +22,7 @@ set fish_greeting ""
 # Envars.
 if test $PREFIX
   set -x GOPATH               $HOME/go
-  set -x PATH                 $HOME/altro $HOME/bin $PATH
+  set -x PATH                 $HOME/bin $PATH
   set -x VISUAL               /data/data/com.termux/files/usr/bin/nvim
   set -x EDITOR               /data/data/com.termux/files/usr/bin/nvim
   set -x RTV_BROWSER          /data/data/com.termux/files/usr/bin/w3m
@@ -29,13 +30,14 @@ if test $PREFIX
   set -x SSH_KEY_PATH         $HOME/.ssh/id_rsa
 else
   set -x GOPATH               /home/matte/go
-  set -x PATH                 /home/matte/altro /home/matte/.rbenv/bin $GOPATH $GOPATH/bin /home/matte/.phantomjs/bin /home/matte/bin $PATH
+  set -x PATH                 $GOPATH $GOPATH/bin /home/matte/bin $PATH
   set -x VISUAL               /usr/bin/nvim
   set -x EDITOR               /usr/bin/nvim
-  set -x BROWSER              /usr/bin/chromium
+  set -x BROWSER              /usr/bin/brave
   set -x RTV_BROWSER          /usr/bin/w3m
   set -x XDG_CONFIG_HOME      /home/matte/.config
   set -x SSH_KEY_PATH         /home/matte/.ssh/id_rsa
+  set -x MSBuildSDKsPath      /opt/dotnet/sdk/2.2.100/Sdks
 end
 
 set -x LANG                   it_IT.UTF-8
@@ -54,8 +56,8 @@ set -x FZF_DEFAULT_OPTS "
   --color info:0,prompt:1,spinner:1,pointer:1,marker:1
 "
 
-# Source one-dark colors.
-. $HOME/progetti/themes/sh/one-dark.fish
+# Source dark-plus colors.
+. $HOME/progetti/themes/sh/dark-plus.fish
 
 # Highlight groups.
 set fish_term256   0
@@ -76,10 +78,6 @@ alias rg    'rg --smart-case'
 alias du    'du -h'
 alias mkdir 'mkdir -p'
 alias pq    'pqiv -i --box-colors=$color7:$color13 --bind-key="@MONTAGE { h { montage_mode_shift_x(-1) } }" --bind-key="@MONTAGE { j { montage_mode_shift_y(1) } }" --bind-key "@MONTAGE { k { montage_mode_shift_y(-1) } }" --bind-key "@MONTAGE { l { montage_mode_shift_x(1) } }" --bind-key="j { goto_file_relative(-1) }" --bind-key="k { goto_file_relative(1) }" --bind-key="h { goto_file_relative(-1) }" --bind-key="l { goto_file_relative(1) }" --bind-key="d { command(rm $1) }" $argv'
-
-# Start rbenv automatically.
-test -z $PREFIX;
-  and status --is-interactive; and source (rbenv init -|psub)
 
 # Start tmux automatically whenever a new terminal instance is opened.
 test -z $TMUX;

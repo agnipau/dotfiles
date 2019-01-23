@@ -3,10 +3,8 @@ function uupd
     upd
     aupd
     autorem
-    unvim
   else
     upd
     autorem
-    unvim
   end
 end

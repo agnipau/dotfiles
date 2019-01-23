@@ -8,7 +8,6 @@ clear control
 add control = Caps_Lock Control_L Control_R
 keysym Caps_Lock = Control_L Caps_Lock NoSymbol NoSymbol
 
-! Make Menu output tilde (~).
-keysym Menu = U007E
-! Make Num_Lock output something really useful in italian (È).
-keysym Num_Lock = U00C8
+! Make Menu (useless) and Scroll_Lock (useless) output something really common in italian (È).
+keysym Menu = U00C8
+keysym Scroll_Lock = U00C8

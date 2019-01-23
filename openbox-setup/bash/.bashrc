@@ -16,31 +16,31 @@ prompt() {
         printf "%s%s%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\W\\[\\e[0m\\]" \
                           "\\[\\e[1;32m\\] on  ${gbranch}\\[\\e[0m\\]" \
                           "\\[\\e[1;34m\\] ✘\\[\\e[0m\\]" \
-                          "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                          "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
       else
         printf "%s%s%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\w\\[\\e[0m\\]" \
                           "\\[\\e[1;32m\\] on  ${gbranch}\\[\\e[0m\\]" \
                           "\\[\\e[1;34m\\] ✘\\[\\e[0m\\]" \
-                          "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                          "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
       fi
     else
       if [[ "$PREFIX" ]]; then
         printf "%s%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\W\\[\\e[0m\\]" \
                         "\\[\\e[1;32m\\] on  ${gbranch}\\[\\e[0m\\]" \
-                        "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                        "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
       else
        printf "%s%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\w\\[\\e[0m\\]" \
                        "\\[\\e[1;32m\\] on  ${gbranch}\\[\\e[0m\\]" \
-                       "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                       "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
       fi
     fi
   else
     if [[ "$PREFIX" ]]; then
       printf "%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\W\\[\\e[0m\\]" \
-                    "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                    "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
     else
       printf "%s%s" "\\[\\e[1m\\]\\[\\e[3;34m\\]\\w\\[\\e[0m\\]" \
-                    "\\[\\e[1;3\${?/#0/7}m\\] :: \\[\\e[0;37m\\]"
+                    "\\[\\e[1;3\${?/#0/7}m\\] > \\[\\e[0;37m\\]"
     fi
   fi
 }
@@ -55,10 +55,10 @@ fi
 export HISTCONTROL="ignoredups"
 export HISTSIZE=1000000
 export GOPATH="${HOME}/go"
-export PATH="${HOME}/.rbenv/bin:${GOPATH}:${GOPATH}/bin:${HOME}/.phantomjs/bin:${HOME}/bin:${PATH}"
+export PATH="${GOPATH}:${GOPATH}/bin:${HOME}/.phantomjs/bin:${HOME}/bin:${PATH}"
 export VISUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
-export BROWSER="/usr/bin/chromium"
+export BROWSER="/usr/bin/brave"
 export RTV_BROWSER="/usr/bin/w3m"
 export LANG="it_IT.UTF-8"
 export XDG_CONFIG_HOME="${HOME}/.config"
@@ -186,8 +186,8 @@ if [[ -z "$PREFIX" ]]; then
   alias aupd='yay -Syu --noconfirm'
   alias ins='sudo pacman -S --needed --noconfirm --color=auto'
   alias ains='yay -S --needed --noconfirm'
-  alias rem='sudo pacman -Rsu --noconfirm --color=auto'
-  alias srem='sudo pacman -Rsnu --noconfirm --color=auto'
+  alias rem='sudo pacman -Rnsu --noconfirm --color=auto'
+  alias srem='sudo pacman -Rnu --noconfirm --color=auto'
   alias arem='yay -Rsu --noconfirm'
   alias autorem='sudo pacman -Rsu $(pacman -Qdtq) --color=auto'
   alias src='pacman -Ss'
@@ -261,13 +261,11 @@ fzf_general() {
 bind -x '"\C-k": clear; fzf_nvim $(fzf)'
 bind -x '"\C-r": fzf_history'
 bind '"\ec": "fzf_cd\C-m"'
-bind '"\C-t": "\" > .fzf_cmd.tmp\e0iecho -n \"\C-mfzf_general\C-m'
-
-# Start rbenv automatically.
-[[ -z "$PREFIX" ]] && eval "$(rbenv init -)"
+# TODO: sistemare
+#bind '"\C-t": "\" > .fzf_cmd.tmp\e0iecho -n \"\C-mfzf_general\C-m'
 
 # Run tmux every time a new terminal instance is opened.
-[[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
+#[[ -z "$TMUX" && "$DISPLAY" ]] && tmux -2
 
 # More complicated aliases / Misc. functions.
 clone() {

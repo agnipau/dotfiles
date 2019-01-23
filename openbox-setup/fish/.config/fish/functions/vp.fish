@@ -1,3 +1,3 @@
 function vp
-  ~/bin/termux-view-pkgs
+  ~/bin/termuxViewPkgs
 end
