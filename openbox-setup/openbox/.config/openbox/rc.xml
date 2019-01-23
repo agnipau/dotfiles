@@ -498,12 +498,12 @@
   <!-- st related keybindings. -->
   <keybind key="W-Return">
     <action name="Execute">
-      <command>xst</command>
+      <command>konsole</command>
     </action>
   </keybind>
   <keybind key="A-Return">
     <action name="Execute">
-      <command>xst</command>
+      <command>konsole</command>
     </action>
   </keybind>
   <keybind key="W-S-Return">
