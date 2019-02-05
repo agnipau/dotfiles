@@ -127,15 +127,15 @@
     "workbench.iconTheme": "eq-material-theme-icons-darker",
     "csharp.format.enable": false,
     "extensions.ignoreRecommendations": false,
-    "terminal.integrated.fontFamily": "Iosevka Term SS07",
+    "terminal.integrated.fontFamily": "'Iosevka Term SS07'",
     "workbench.sideBar.location": "left",
     "workbench.colorTheme": "Material Theme Darker",
     "todo-tree.defaultHighlight": {},
     "window.titleBarStyle": "native",
-    "editor.fontFamily": "'Roboto Mono', 'IBM Plex Mono', 'SF Mono', 'Fira Code', 'Iosevka SS07', 'Operator Mono Lig Book', Menlo, Consolas, DejaVu Sans Mono, monospace",
+    "editor.fontFamily": "'Iosevka SS07', 'Roboto Mono', 'IBM Plex Mono', 'SF Mono', 'Fira Code', 'Operator Mono Lig Book', Menlo, Consolas, DejaVu Sans Mono, monospace",
     "vim.easymotionMarkerFontSize": "13",
     "vim.easymotionMarkerFontFamily": "'IBM Plex Mono Medium', 'Roboto Mono Medium', 'Fira Code Medium', 'Iosevka SS07 Medium', Menlo, Consolas, DejaVu Sans Mono, monospace",
     "editor.lineNumbers": "relative",
-    "editor.fontSize": 15,
+    "editor.fontSize": 16,
     "terminal.integrated.fontSize": 16
 }
