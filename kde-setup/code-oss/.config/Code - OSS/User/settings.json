@@ -5,6 +5,7 @@
     "workbench.statusBar.feedback.visible": false,
     "window.menuBarVisibility": "toggle",
     "search.smartCase": true,
+    "vim.neovimPath": "/usr/bin/nvim",
     "vim.leader": "<space>",
     "vim.hlsearch": true,
     "vim.enableNeovim": true,
@@ -133,9 +134,9 @@
     "todo-tree.defaultHighlight": {},
     "window.titleBarStyle": "native",
     "editor.fontFamily": "'Iosevka SS07', 'Roboto Mono', 'IBM Plex Mono', 'SF Mono', 'Fira Code', 'Operator Mono Lig Book', Menlo, Consolas, DejaVu Sans Mono, monospace",
-    "vim.easymotionMarkerFontSize": "13",
-    "vim.easymotionMarkerFontFamily": "'IBM Plex Mono Medium', 'Roboto Mono Medium', 'Fira Code Medium', 'Iosevka SS07 Medium', Menlo, Consolas, DejaVu Sans Mono, monospace",
+    "vim.easymotionMarkerFontFamily": "'Iosevka SS07', 'Roboto Mono', 'IBM Plex Mono', 'SF Mono', 'Fira Code', 'Operator Mono Lig Book', Menlo, Consolas, DejaVu Sans Mono, monospace",
     "editor.lineNumbers": "relative",
     "editor.fontSize": 16,
-    "terminal.integrated.fontSize": 16
+    "terminal.integrated.fontSize": 16,
+    "vim.easymotionMarkerFontSize": "16"
 }
