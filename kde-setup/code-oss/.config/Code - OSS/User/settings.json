@@ -5,6 +5,7 @@
     "workbench.statusBar.feedback.visible": false,
     "window.menuBarVisibility": "toggle",
     "search.smartCase": true,
+    "vim.neovimPath": "/usr/bin/nvim",
     "vim.leader": "<space>",
     "vim.hlsearch": true,
     "vim.enableNeovim": true,

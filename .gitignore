@@ -21,4 +21,21 @@
 */fish/.config/fish/functions/__z.fish
 */fish/.config/fish/functions/fzf_key_bindings.fish
 */fish/.config/fish/completions/fisher.fish
+*/code-oss/.config/Code - OSS/Backups
+*/code-oss/.config/Code - OSS/Cache
+*/code-oss/.config/Code - OSS/CachedData
+*/code-oss/.config/Code - OSS/CachedExtensions
+*/code-oss/.config/Code - OSS/Cookies
+*/code-oss/.config/Code - OSS/Cookies-journal
+*/code-oss/.config/Code - OSS/GPUCache
+*/code-oss/.config/Code - OSS/Local Storage
+*/code-oss/.config/Code - OSS/Preferences
+*/code-oss/.config/Code - OSS/User/workspaceStorage
+*/code-oss/.config/Code - OSS/User/globalStorage
+*/code-oss/.config/Code - OSS/User/snippets
+*/code-oss/.config/Code - OSS/clp
+*/code-oss/.config/Code - OSS/languagepacks.json
+*/code-oss/.config/Code - OSS/logs
+*/code-oss/.config/Code - OSS/machineid
+*/code-oss/.config/Code - OSS/storage.json
 .uuid
