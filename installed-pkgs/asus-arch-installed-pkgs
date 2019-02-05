@@ -13,7 +13,6 @@ appstream-qt
 archlinux-appstream-data
 archlinux-keyring
 argon2
-aria2
 aribb24
 ark
 aspell
@@ -56,9 +55,11 @@ cairomm
 cantarell-fonts
 cdparanoia
 cfitsio
+chromium
 cifs-utils
 clucene
 cmark-gfm
+code
 colord
 convertlit
 coreutils
@@ -91,9 +92,8 @@ ebook-tools
 editorconfig-core-c
 efibootmgr
 efivar
-egl-wayland
-eglexternalplatform
 electron
+electron2
 enchant
 exfat-utils
 exiv2
@@ -111,7 +111,6 @@ flac
 flex
 fontconfig
 frameworkintegration
-freeglut
 freetype2
 fribidi
 fuse-common
@@ -136,7 +135,6 @@ giflib
 gimp
 girara
 git
-glew
 glib-networking
 glib2
 glibc
@@ -144,6 +142,7 @@ glibmm
 glslang
 glu
 gmp
+gnome-keyring
 gnupg
 gnutls
 go
@@ -281,19 +280,17 @@ hwids
 hyphen
 iana-etc
 icu
-id3lib
-id3v2
 ijs
 ilmbase
 imlib2
 inetutils
 inkscape
 intel-tbb
+intel-ucode
 iproute2
 iptables
 iputils
 iso-codes
-iw
 jack
 jansson
 jasper
@@ -441,6 +438,7 @@ libcdr
 libcmis
 libcroco
 libcups
+libcurl-compat
 libcurl-gnutls
 libdaemon
 libdatrie
@@ -465,10 +463,12 @@ libevent
 libexif
 libexttextcat
 libfakekey
+libfbclient
 libffi
 libfontenc
 libfreehand
 libgcrypt
+libgdiplus
 libgexiv2
 libgit2
 libglade
@@ -587,6 +587,7 @@ libtorrent-rasterbar
 libunistring
 libunwind
 libupnp
+liburcu
 libusb
 libusbmuxd
 libutempter
@@ -626,7 +627,6 @@ libxkbcommon-x11
 libxkbfile
 libxml2
 libxmu
-libxnvctrl
 libxpm
 libxrandr
 libxrender
@@ -637,6 +637,7 @@ libxss
 libxt
 libxtst
 libxv
+libxvmc
 libxxf86vm
 libyaml
 libzip
@@ -651,7 +652,6 @@ lm_sensors
 lmdb
 logrotate
 lpsolve
-lsof
 lua
 lua52
 luajit
@@ -665,7 +665,6 @@ man-pages
 mdadm
 media-player-info
 mesa
-mesa-demos
 metis
 milou
 minizip
@@ -675,6 +674,7 @@ mlt
 mobile-broadband-provider-info
 modemmanager
 modemmanager-qt
+mono
 mpfr
 mpv
 msgpack-c
@@ -697,9 +697,7 @@ npth
 nspr
 nss
 ntfs-3g
-nvidia
-nvidia-settings
-nvidia-utils
+okteta
 okular
 openal
 opencore-amr
@@ -713,8 +711,8 @@ opus
 orc
 oxygen
 p11-kit
-p7zip
 pacman
+pacman-contrib
 pacman-mirrorlist
 pam
 pambase
@@ -729,6 +727,7 @@ pcre
 pcre2
 perl
 perl-error
+perl-file-which
 perl-mailtools
 perl-timedate
 phonon-qt5
@@ -836,6 +835,7 @@ redland
 reiserfsprogs
 rest
 ripgrep
+rsync
 rtkit
 rtmpdump
 rubberband
@@ -855,6 +855,7 @@ signon-kwallet-extension
 signon-plugin-oauth2
 signon-ui
 signond
+simplescreenrecorder
 slang
 smbclient
 snappy
@@ -886,11 +887,23 @@ telegram-desktop
 tevent
 tex-gyre-fonts
 texinfo
+texlive-bibtexextra
 texlive-bin
 texlive-core
+texlive-fontsextra
+texlive-formatsextra
+texlive-games
+texlive-humanities
+texlive-latexextra
+texlive-music
+texlive-pictures
+texlive-pstricks
+texlive-publishers
+texlive-science
 thin-provisioning-tools
 threadweaver
 tmux
+trash-cli
 tslib
 ttf-caladea
 ttf-carlito
@@ -924,9 +937,7 @@ vulkan-icd-loader
 wayland
 wayland-protocols
 webrtc-audio-processing
-wget
 which
-wireless_tools
 wmctrl
 wpa_supplicant
 x264
@@ -943,6 +954,7 @@ xdg-desktop-portal-kde
 xdg-user-dirs
 xdg-utils
 xf86-input-libinput
+xf86-video-intel
 xfsprogs
 xkeyboard-config
 xmlsec
