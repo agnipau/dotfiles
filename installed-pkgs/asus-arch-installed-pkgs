@@ -13,6 +13,7 @@ breeze
 breeze-gtk
 bzip2
 chromium
+clang
 code
 coreutils
 cryptsetup
@@ -34,10 +35,12 @@ file
 filesystem
 findutils
 fish
+flameshot
 flex
 gawk
 gcc
 gcc-libs
+geogebra
 gettext
 gimp
 git
@@ -51,6 +54,8 @@ gvfs
 gvfs-mtp
 gwenview
 gzip
+hunspell-en_US
+hunspell-it
 inetutils
 inkscape
 intel-ucode
@@ -115,6 +120,7 @@ milou
 mono
 mpv
 nano
+nasm
 neofetch
 neovim
 netctl
@@ -195,6 +201,9 @@ virtualbox
 virtualbox-host-modules-arch
 vlc
 which
+wine-mono
+wine-staging
+wine_gecko
 wpa_supplicant
 xclip
 xdg-desktop-portal-kde
