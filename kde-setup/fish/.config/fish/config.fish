@@ -37,7 +37,7 @@ else
   set -x RTV_BROWSER          /usr/bin/w3m
   set -x XDG_CONFIG_HOME      /home/matte/.config
   set -x SSH_KEY_PATH         /home/matte/.ssh/id_rsa
-  set -x MSBuildSDKsPath      /opt/dotnet/sdk/2.2.100/Sdks
+  set -x MSBuildSDKsPath      /opt/dotnet/sdk/2.2.102/Sdks
 end
 
 set -x LANG                   it_IT.UTF-8
@@ -56,8 +56,8 @@ set -x FZF_DEFAULT_OPTS "
   --color info:0,prompt:1,spinner:1,pointer:1,marker:1
 "
 
-# Source gruvbox-dark colors.
-. /home/matte/progetti/themes/sh/gruvbox-dark.fish
+# Source material-darker colors.
+. /home/matte/progetti/themes/sh/material-darker.fish
 
 # Highlight groups.
 set fish_term256   0

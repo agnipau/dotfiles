@@ -11,9 +11,9 @@ call plug#begin('~/.config/nvim/plugged')
 
 "Plug 'matgua/wal.vim'
 
-"Plug 'matgua/material.vim'
+Plug 'matgua/material.vim'
 
-Plug 'matgua/gruvbox.vim'
+"Plug 'matgua/gruvbox.vim'
 
 "Plug 'matgua/dark-plus.vim'
 
@@ -208,8 +208,8 @@ set noshowcmd
 set shortmess+=csIW
 
 set t_Co=256
-let g:gruvbox_variant = 'dark'
-colorscheme gruvbox
+let g:material_variant = 'darker'
+colorscheme material
 
 set fillchars=fold:\ 
 set foldlevelstart=0

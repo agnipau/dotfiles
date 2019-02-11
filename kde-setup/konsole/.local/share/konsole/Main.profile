@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=gruvbox-dark
+ColorScheme=material-darker
 
 [General]
 Name=Main
