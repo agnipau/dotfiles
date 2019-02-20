@@ -1,0 +1,3 @@
+function reb
+  reboot
+end
