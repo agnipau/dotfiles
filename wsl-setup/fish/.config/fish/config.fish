@@ -81,4 +81,5 @@ alias pq    'pqiv -i --box-colors=$color7:$color13 --bind-key="@MONTAGE { h { mo
 
 # Start tmux automatically whenever a new terminal instance is opened.
 test -z $TMUX;
+  and test $DISPLAY
   and tmux -2
