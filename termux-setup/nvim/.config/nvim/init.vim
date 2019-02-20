@@ -13,13 +13,13 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'matgua/material.vim'
 
-Plug 'matgua/gruvbox.vim'
+"Plug 'matgua/gruvbox.vim'
 
-Plug 'matgua/dark-plus.vim'
+"Plug 'matgua/dark-plus.vim'
 
-Plug 'matgua/one-dark.vim'
+"Plug 'matgua/one-dark.vim'
 
-Plug 'matgua/one-light.vim'
+"Plug 'matgua/one-light.vim'
 
 Plug 'chrisbra/Colorizer'
 
@@ -206,8 +206,7 @@ set noshowcmd
 set shortmess+=csIW
 
 set t_Co=256
-let g:material_variant = 'darker'
-let g:gruvbox_variant  = 'dark'
+let g:material_variant = 'default'
 colorscheme material
 
 set fillchars=fold:\ 
