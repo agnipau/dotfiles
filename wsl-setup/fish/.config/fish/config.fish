@@ -56,8 +56,8 @@ set -x FZF_DEFAULT_OPTS "
   --color info:0,prompt:1,spinner:1,pointer:1,marker:1
 "
 
-# Source material-darker colors.
-. /home/matte/progetti/themes/sh/material-darker.fish
+# Source material-default colors.
+. /home/matte/progetti/themes/sh/material-default.fish
 
 # Highlight groups.
 set fish_term256   0
@@ -81,5 +81,4 @@ alias pq    'pqiv -i --box-colors=$color7:$color13 --bind-key="@MONTAGE { h { mo
 
 # Start tmux automatically whenever a new terminal instance is opened.
 test -z $TMUX;
-  and test $DISPLAY
   and tmux -2
