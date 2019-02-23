@@ -29,14 +29,14 @@ if test $PREFIX
   set -x XDG_CONFIG_HOME      $HOME/.config
   set -x SSH_KEY_PATH         $HOME/.ssh/id_rsa
 else
-  set -x GOPATH               /home/matte/go
-  set -x PATH                 $GOPATH $GOPATH/bin /home/matte/bin $PATH
+  set -x GOPATH               /root/go
+  set -x PATH                 $GOPATH $GOPATH/bin /root/bin $PATH
   set -x VISUAL               /usr/bin/nvim
   set -x EDITOR               /usr/bin/nvim
   set -x BROWSER              /usr/bin/brave
   set -x RTV_BROWSER          /usr/bin/w3m
-  set -x XDG_CONFIG_HOME      /home/matte/.config
-  set -x SSH_KEY_PATH         /home/matte/.ssh/id_rsa
+  set -x XDG_CONFIG_HOME      /root/.config
+  set -x SSH_KEY_PATH         /root/.ssh/id_rsa
   set -x MSBuildSDKsPath      /opt/dotnet/sdk/2.2.102/Sdks
 end
 
@@ -57,7 +57,7 @@ set -x FZF_DEFAULT_OPTS "
 "
 
 # Source material-default colors.
-. /home/matte/progetti/themes/sh/material-default.fish
+. /root/progetti/themes/sh/material-default.fish
 
 # Highlight groups.
 set fish_term256   0
