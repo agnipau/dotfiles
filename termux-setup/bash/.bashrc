@@ -261,7 +261,7 @@ fzf_general() {
 bind -x '"\C-k": clear; fzf_nvim $(fzf)'
 bind -x '"\C-r": fzf_history'
 bind '"\ec": "fzf_cd\C-m"'
-bind '"\C-t": "\" > .fzf_cmd.tmp\e0iecho -n \"\C-mfzf_general\C-m'
+bind '"\C-t": "\" > .fzf_cmd.tmp\e0iecho -n \"\C-mfzf_general\C-m"'
 
 # Start rbenv automatically.
 [[ -z "$PREFIX" ]] && eval "$(rbenv init -)"
