@@ -210,7 +210,7 @@ set shortmess+=csIW
 set t_Co=256
 "let g:material_variant = 'default'
 let g:monokai_pro_variant = 'pro'
-colorscheme monokai_pro
+colorscheme monokai-pro
 
 set fillchars=fold:\ 
 set foldlevelstart=0
