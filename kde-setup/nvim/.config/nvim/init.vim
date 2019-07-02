@@ -11,7 +11,9 @@ call plug#begin('~/.config/nvim/plugged')
 
 "Plug 'matgua/wal.vim'
 
-Plug 'matgua/material.vim'
+Plug 'matgua/monokai-pro.vim'
+
+"Plug 'matgua/material.vim'
 
 "Plug 'matgua/gruvbox.vim'
 
@@ -208,8 +210,9 @@ set noshowcmd
 set shortmess+=csIW
 
 set t_Co=256
-let g:material_variant = 'default'
-colorscheme material
+"let g:material_variant = 'default'
+let g:monokai_pro_variant = 'pro'
+colorscheme monokai_pro
 
 set fillchars=fold:\ 
 set foldlevelstart=0
