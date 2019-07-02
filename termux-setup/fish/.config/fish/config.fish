@@ -54,7 +54,7 @@ set -x FZF_DEFAULT_OPTS "
   --color info:0,prompt:1,spinner:1,pointer:1,marker:1
 "
 
-# Source material-default colors.
+# Source monokai-pro colors.
 . $HOME/progetti/themes/sh/monokai-pro.fish
 
 # Highlight groups.
