@@ -55,7 +55,7 @@ set -x FZF_DEFAULT_OPTS "
 "
 
 # Source material-default colors.
-. $HOME/progetti/themes/sh/material-default.fish
+. $HOME/progetti/themes/sh/monokai-pro.fish
 
 # Highlight groups.
 set fish_term256   0
