@@ -56,8 +56,8 @@ set -x FZF_DEFAULT_OPTS "
   --color info:0,prompt:1,spinner:1,pointer:1,marker:1
 "
 
-# Source material-default colors.
-. /home/matte/progetti/themes/sh/material-default.fish
+# Source monokai-pro colors.
+. /home/matte/progetti/themes/sh/monokai-pro.fish
 
 # Highlight groups.
 set fish_term256   0
