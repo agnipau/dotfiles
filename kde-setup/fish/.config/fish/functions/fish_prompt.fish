@@ -29,7 +29,7 @@ function fish_prompt
   else
     set_color -o red
   end
-  printf '%s ' '|>'
+  printf '%s ' '::'
 
   set_color normal
 end
