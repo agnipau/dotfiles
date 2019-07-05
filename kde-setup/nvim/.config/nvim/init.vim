@@ -210,7 +210,7 @@ set noshowcmd
 set shortmess+=csIW
 
 set t_Co=256
-let g:material_variant = 'default'
+let g:material_variant = 'darker'
 " let g:monokai_pro_variant = 'pro'
 colorscheme material
 
