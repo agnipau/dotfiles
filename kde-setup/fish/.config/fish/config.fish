@@ -22,7 +22,7 @@ set fish_greeting ""
 # Envars.
 if test $PREFIX
   set -x GOPATH               $HOME/go
-  set -x PATH                 $HOME/bin $PATH
+  set -x PATH                 $HOME/.cargo/bin $HOME/bin $PATH
   set -x VISUAL               /data/data/com.termux/files/usr/bin/nvim
   set -x EDITOR               /data/data/com.termux/files/usr/bin/nvim
   set -x RTV_BROWSER          /data/data/com.termux/files/usr/bin/w3m
@@ -30,7 +30,7 @@ if test $PREFIX
   set -x SSH_KEY_PATH         $HOME/.ssh/id_rsa
 else
   set -x GOPATH               /home/matte/go
-  set -x PATH                 /home/matte/bin $PATH
+  set -x PATH                 /home/matte/dev/flutter/bin /home/matte/.cargo/bin /home/matte/bin $PATH
   set -x VISUAL               /usr/bin/nvim
   set -x EDITOR               /usr/bin/nvim
   set -x BROWSER              /usr/bin/brave
