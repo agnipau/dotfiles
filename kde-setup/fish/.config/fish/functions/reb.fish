@@ -1,3 +1,0 @@
-function reb
-  reboot
-end

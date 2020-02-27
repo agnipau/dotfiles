@@ -1,3 +1,0 @@
-function re
-  reboot
-end

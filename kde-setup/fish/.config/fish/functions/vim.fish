@@ -1,3 +1,0 @@
-function vim
-  nvim
-end
