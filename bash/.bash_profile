@@ -4,4 +4,5 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export PATH="$HOME/.cargo/bin:$PATH"
+source /home/matte/.config/broot/launcher/bash/br
+

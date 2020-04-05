@@ -1,0 +1,33 @@
+{
+  "languageserver": {
+    "lua": {
+      "command": "lua-lsp",
+      "filetypes": ["lua"]
+    },
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+      "filetypes": ["c", "cpp", "objc", "objcpp"]
+    }
+  },
+  "tsserver.log": "verbose",
+  "tsserver.trace.server": "verbose",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "html",
+    "css",
+    "Markdown",
+    "graphql",
+    "json",
+    "yaml",
+    "python",
+    "rust",
+    "cpp",
+    "c",
+    "objc",
+    "objcpp"
+  ]
+}

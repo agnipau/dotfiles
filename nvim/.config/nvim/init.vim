@@ -7,15 +7,18 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'machakann/vim-highlightedyank'
     let g:highlightedyank_highlight_duration = 200
 
+" Plug 'unblevable/quick-scope'
+Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'jiangmiao/auto-pairs'
 Plug 'andymass/vim-matchup'
 Plug 'terryma/vim-multiple-cursors'
-    let g:multi_cursor_start_word_key      = '<C-j>'
-    let g:multi_cursor_select_all_word_key = '<A-t>'
-    let g:multi_cursor_start_key           = 'g<C-j>'
-    let g:multi_cursor_select_all_key      = 'g<A-t>'
-    let g:multi_cursor_next_key            = '<C-j>'
-    let g:multi_cursor_prev_key            = '<C-k>'
-    let g:multi_cursor_skip_key            = '<C-l>'
+    let g:multi_cursor_start_word_key      = '<c-j>'
+    let g:multi_cursor_select_all_word_key = '<c-t>'
+    let g:multi_cursor_start_key           = 'g<c-j>'
+    let g:multi_cursor_select_all_key      = 'g<c-t>'
+    let g:multi_cursor_next_key            = '<c-j>'
+    let g:multi_cursor_prev_key            = '<c-k>'
+    let g:multi_cursor_skip_key            = '<c-l>'
     let g:multi_cursor_quit_key            = '<Esc>'
 
 Plug 'editorconfig/editorconfig-vim'
@@ -24,6 +27,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
+    let g:user_emmet_leader_key = '<c-f>'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }, 'branch': 'release'}
 
 " tpope
@@ -32,17 +36,19 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
 " Syntax
-" Plug 'leafgarland/typescript-vim'
-Plug 'dag/vim-fish'
 Plug 'mxw/vim-jsx'
 " Plug 'pangloss/vim-javascript'
 Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'cespare/vim-toml'
+Plug 'dag/vim-fish'
+" Plug 'leafgarland/typescript-vim'
 
 " Colorschemes
-Plug 'morhetz/gruvbox'
-
+" Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
 " TextEdit might fail if hidden is not set.
@@ -171,7 +177,8 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 set number
 set relativenumber
 set list
-set listchars=tab:┊\ ,nbsp:␣,space:·,trail:·,extends:>,precedes:<
+" set listchars=tab:┊\ ,nbsp:␣,space:·,trail:·,extends:>,precedes:<
+set listchars=tab:┊\ ,nbsp:␣,trail:·,extends:>,precedes:<
 set fillchars=vert:\│
 set ignorecase
 set smartcase
@@ -181,15 +188,21 @@ set hlsearch
 set backspace=indent,eol,start
 set wildmenu
 set complete=.,w,b,i,u,t,
-set background=dark
 set mouse=a
 set grepprg=rg\ --vimgrep\ --no-heading
 set grepformat=%f:%l:%c:%m,%f:%l:%m
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set clipboard=unnamedplus
+set colorcolumn=80
+set ff=unix
+set undofile
+set undodir=~/.config/nvim/undodir
+set guifont=Input\ Mono\ Narrow\ Regular:h18
 
 set t_Co=256
+set background=dark
 set termguicolors
 colorscheme gruvbox
 " Colorscheme customizations
@@ -217,4 +230,7 @@ xnoremap K 3k
 xnoremap L $
 
 inoremap <c-z> <c-o>:u<cr>
+inoremap <c-e> <esc><c-e>a
+
+au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal colorcolumn&
 
