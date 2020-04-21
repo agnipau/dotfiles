@@ -5,7 +5,7 @@ root = true
 [*]
 indent_style = space
 indent_size = 2
-end_of_line = crlf
+end_of_line = lf
 insert_final_newline = true
 
 "

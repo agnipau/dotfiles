@@ -374,6 +374,8 @@ local globalkeys = gears.table.join(
     -- launcher
     awful.key({ modkey }, "d", function () awful.spawn("rofi -show run") end,
               { description = "open rofi", group = "launcher" }),
+    awful.key({ modkey }, "t", function () awful.spawn("telegram-desktop") end,
+              { description = "open telegram", group = "launcher" }),
     awful.key({ modkey, "Shift" }, "s", function () awful.spawn("flameshot gui") end,
               { description = "open flameshot", group = "launcher" }),
     awful.key({ modkey, "Shift" }, "c",

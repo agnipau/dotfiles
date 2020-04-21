@@ -80,7 +80,7 @@ alias cbash="nvim ~/.bashrc"
 alias ctmux="nvim ~/.tmux.conf"
 alias stmux="tmux source-file ~/.tmux.conf"
 alias calacritty="nvim ~/.config/alacritty/alacritty.yml"
-alias cd="z"
+# alias cd="z"
 alias dmenu="dmenu -fn 'Input Mono Narrow' -nf '#545454' -sf '#ffffff' -sb '#212121'"
 
 # # Start tmux automatically whenever a new terminal instance is opened.

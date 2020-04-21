@@ -21,7 +21,7 @@ end
 
 set -x EDITOR /usr/bin/nvim
 set -x BROWSER /usr/bin/chromium
-set -x PAGER /usr/bin/nvim
+set -e PAGER
 set -x SUDO_ASKPASS /home/matte/bin/rofiecho
 set -x GOPATH /home/matte/go
 set -x TERMINAL /usr/bin/alacritty
@@ -61,6 +61,7 @@ abbr mkdir "mkdir -p"
 abbr installed "yay --color=never -Qe | nvim"
 abbr src "yay --color=always -Ss"
 abbr ins "yay -S --needed --noconfirm"
+abbr pygm "pygmentize -f png -O 'font_name=Input Mono Narrow,font_size=32' -o pygmentscreen.png script.py"
 abbr pinfo "yay -Qi --color=always"
 abbr rpinfo "yay -Si --color=always"
 abbr rem "yay -R --noconfirm"
@@ -79,7 +80,7 @@ abbr rme "trash-empty"
 abbr k "xset r rate 200 40; setxkbmap -model pc105 -layout us -variant intl -option caps:none"
 abbr airpods "bluetoothctl -- connect 7C:9A:1D:C1:32:5F"
 abbr reboot "read -P 'Sei sicuro di volere riavviare? ' && systemctl reboot"
-abbr poweroff "read -P 'Sei sicuro di volere spegnere? ' && systemctl shutdown"
+abbr poweroff "read -P 'Sei sicuro di volere spegnere? ' && systemctl poweroff"
 abbr suspend "read -P 'Sei sicuro di volere sospendere? ' && systemctl suspend"
 abbr bar "polybar main &disown"
 abbr cpolybar "nvim ~/.config/polybar/config"
@@ -87,6 +88,7 @@ abbr spolybar "pkill polybar; polybar main &disown"
 # TODO: si3
 abbr ci3 "nvim ~/.config/i3/config"
 abbr cnvim "nvim ~/.config/nvim/init.vim"
+abbr shc "shellcheck --enable=all"
 abbr cfish "nvim ~/.config/fish/config.fish"
 abbr sfish "source ~/.config/fish/config.fish"
 abbr cbash "nvim ~/.bashrc"
@@ -123,6 +125,8 @@ set fish_color_cancel            --bold red
 set fish_pager_color_completion  --bold white
 set fish_pager_color_description $color_grey
 set fish_pager_color_prefix      --bold yellow
+
+bass (ssh-agent -s) >/dev/null
 
 # # Start tmux automatically whenever a new terminal instance is opened.
 # test -z $TMUX;
