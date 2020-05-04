@@ -41,3 +41,4 @@
 */code-oss/.config/Code - OSS/Workspaces
 */code-oss/.config/Code - OSS/Network Persistent State
 .uuid
+nvim/.config/nvim/undodir

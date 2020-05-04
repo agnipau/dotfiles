@@ -124,15 +124,15 @@ awful.screen.connect_for_each_screen(function (s)
         { "main", "www", "telegram", "spotify", "5", "6", "7", "8", "9" },
         s,
         {
-            l.tile.left,
-            l.tile.left,
-            l.tile.left,
-            l.tile.left,
-            l.tile.left,
-            l.tile.left,
-            l.tile.left,
-            l.tile.left,
-            l.tile.left
+            l.tile.right,
+            l.tile.right,
+            l.tile.right,
+            l.tile.right,
+            l.tile.right,
+            l.tile.right,
+            l.tile.right,
+            l.tile.right,
+            l.tile.right
         }
     )
 

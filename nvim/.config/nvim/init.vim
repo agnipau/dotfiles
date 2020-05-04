@@ -21,9 +21,11 @@ Plug 'terryma/vim-multiple-cursors'
     let g:multi_cursor_skip_key            = '<c-l>'
     let g:multi_cursor_quit_key            = '<Esc>'
 
+Plug 'Yggdroot/indentLine'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
+Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
@@ -47,7 +49,6 @@ Plug 'dag/vim-fish'
 " Plug 'leafgarland/typescript-vim'
 
 " Colorschemes
-" Plug 'morhetz/gruvbox'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
@@ -206,7 +207,6 @@ set background=dark
 set termguicolors
 colorscheme gruvbox
 " Colorscheme customizations
-" hi HighlightedyankRegion guibg=#3c3836
 hi HighlightedyankRegion guibg=#504945
 hi NonText guifg=#504945 gui=none
 hi Visual guibg=#504945 gui=none
@@ -233,4 +233,6 @@ inoremap <c-z> <c-o>:u<cr>
 inoremap <c-e> <esc><c-e>a
 
 au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal colorcolumn&
+au BufReadPost,BufNewFile *.rs setlocal colorcolumn=100
+au BufReadPost,BufNewFile *.cpp setlocal tabstop=2 | setlocal shiftwidth=2
 

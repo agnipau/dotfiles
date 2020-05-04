@@ -65,8 +65,8 @@ abbr pygm "pygmentize -f png -O 'font_name=Input Mono Narrow,font_size=32' -o py
 abbr pinfo "yay -Qi --color=always"
 abbr rpinfo "yay -Si --color=always"
 abbr rem "yay -R --noconfirm"
-abbr ls "exa -lh"
-abbr la "exa -lah"
+abbr ls "exa -lh -s type"
+abbr la "exa -lah -s type"
 abbr t "tmux -u"
 abbr bon "bluetoothctl power on"
 abbr dl "curl -LOC -"
@@ -74,6 +74,7 @@ abbr cpp "rsync -ah --progress"
 abbr rmf "rm"
 abbr glog "git log --no-color"
 abbr rm "trash"
+abbr q "exit"
 abbr rml "trash-list"
 abbr rmr "trash-restore"
 abbr rme "trash-empty"
@@ -128,10 +129,10 @@ set fish_pager_color_prefix      --bold yellow
 
 bass (ssh-agent -s) >/dev/null
 
-# # Start tmux automatically whenever a new terminal instance is opened.
-# test -z $TMUX;
-#   and test $DISPLAY;
-#   and tmux -u
+# Start tmux automatically whenever a new terminal instance is opened.
+test -z $TMUX;
+  and test $DISPLAY;
+  and tmux -u
 
 # Start X automatically only if in tty1
 test -z $DISPLAY;
