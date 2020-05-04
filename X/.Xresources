@@ -108,6 +108,11 @@ rofi.hide-scrollbar: true
 rofi.padding: 32
 rofi.bw: 2
 
+! sxiv
+Sxiv.font: Input Mono Narrow 16
+Sxiv.background: #282828
+Sxiv.foreground: #ebdbb2
+
 ! General
 Xft.autohint: 1
 Xft.antialias: 1
