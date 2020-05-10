@@ -223,6 +223,7 @@ nnoremap H 0
 nnoremap J 3j
 nnoremap K 3k
 nnoremap L $
+nnoremap <silent> <leader>i :IndentLinesToggle<cr>
 
 xnoremap H 0
 xnoremap J 3j

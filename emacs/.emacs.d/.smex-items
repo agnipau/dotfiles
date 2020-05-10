@@ -1,0 +1,22 @@
+
+;; ----- smex-history -----
+(
+ shell
+ eshell
+ rainbow-mode
+ describe-bindings
+ evil-next-visual-line
+ evil-next-line
+ cd
+)
+
+;; ----- smex-data -----
+(
+ (evil-next-line . 1)
+ (describe-bindings . 4)
+ (evil-next-visual-line . 2)
+ (lsp-rust-server . 1)
+ (rainbow-mode . 1)
+ (eshell . 2)
+ (shell . 1)
+)

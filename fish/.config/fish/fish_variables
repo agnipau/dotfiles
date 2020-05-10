@@ -20,7 +20,7 @@ SETUVAR _fish_abbr_dmenu:dmenu\x20\x2dfn\x20\x27Input\x20Mono\x20Narrow\x27\x20\
 SETUVAR _fish_abbr_glog:git\x20log\x20\x2d\x2dno\x2dcolor
 SETUVAR _fish_abbr_ins:yay\x20\x2dS\x20\x2d\x2dneeded\x20\x2d\x2dnoconfirm
 SETUVAR _fish_abbr_installed:yay\x20\x2d\x2dcolor\x3dnever\x20\x2dQe\x20\x7c\x20nvim
-SETUVAR _fish_abbr_k:xset\x20r\x20rate\x20200\x2040\x3b\x20setxkbmap\x20\x2dmodel\x20pc105\x20\x2dlayout\x20us\x20\x2dvariant\x20intl\x20\x2doption\x20caps\x3anone
+SETUVAR _fish_abbr_k:xset\x20r\x20rate\x20200\x2040\x3b\x20setxkbmap\x20\x2dmodel\x20pc105\x20\x2dlayout\x20us\x20\x2dvariant\x20intl\x20\x2doption\x20ctrl\x3anocaps
 SETUVAR _fish_abbr_la:exa\x20\x2dlah\x20\x2ds\x20type
 SETUVAR _fish_abbr_lbar:lemon\x20\x7c\x20lemonbar\x20\x2dg\x202560x70\x20\x2db\x20\x2dB\x20\x27\x23ff1d2021\x27\x20\x2dF\x20\x27\x23ffebdbb2\x27\x20\x2dp\x20\x2df\x20\x27Input\x20Mono\x20Narrow\x3asize\x3d13\x27\x20\x2do\x20\x2d20\x20\x7c\x20sh
 SETUVAR _fish_abbr_lcd:cd
@@ -49,6 +49,7 @@ SETUVAR _fish_abbr_suspend:read\x20\x2dP\x20\x27Sei\x20sicuro\x20di\x20volere\x2
 SETUVAR _fish_abbr_t:tmux\x20\x2du
 SETUVAR _fish_abbr_upd:yay\x20\x2d\x2dcolor\x3dalways\x20\x2dSyuv
 SETUVAR _fish_abbr_uupd:yay\x20\x2d\x2dcolor\x3dalways\x20\x2dSyyuv
+SETUVAR _fish_abbr_vim:nvim
 SETUVAR _fish_abbr_za:zoxide\x20add
 SETUVAR _fish_abbr_zi:z\x20\x2di
 SETUVAR _fish_abbr_zq:zoxide\x20query
