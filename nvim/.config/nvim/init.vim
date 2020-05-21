@@ -22,6 +22,12 @@ xnoremap L $
 inoremap <c-z> <c-o>:u<cr>
 inoremap <c-e> <esc><c-e>a
 
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set backspace=indent,eol,start
+
 if !exists('g:vscode')
   call plug#begin('~/.local/share/nvim/plugged')
   " Plug 'airblade/vim-gitgutter'
@@ -204,12 +210,7 @@ if !exists('g:vscode')
   " set listchars=tab:┊\ ,nbsp:␣,space:·,trail:·,extends:>,precedes:<
   set listchars=tab:┊\ ,nbsp:␣,trail:·,extends:>,precedes:<
   set fillchars=vert:\│
-  set ignorecase
-  set smartcase
   set sidescroll=40
-  set incsearch
-  set hlsearch
-  set backspace=indent,eol,start
   set wildmenu
   set complete=.,w,b,i,u,t,
   set mouse=a
