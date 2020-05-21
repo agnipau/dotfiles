@@ -1,3 +1,10 @@
 emacs/.emacs.d/straight
 emacs/.emacs.d/projectile-bookmarks.eld
+emacs/.emacs.d/elpy
+emacs/.emacs.d/snippets
+emacs/.emacs.d/.lsp-session-v1
+emacs/.emacs.d/.smex-items
+emacs/.emacs.d/auto-save-list
+emacs/.emacs.d/recentf
 nvim/.config/nvim/undodir
+nvim/.config/nvim/.netrwhist
