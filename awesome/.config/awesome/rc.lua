@@ -1,5 +1,5 @@
 -- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
+-- found (e.g. lgi). If LuaRocks is not installed, do nothing
 pcall(require, "luarocks.loader")
 
 -- Standard awesome library
@@ -17,7 +17,22 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
--- {{{ Error handling
+-- Returns true if `x` is inside `list`, `false` otherwise
+local function contains(list, x)
+	for _, v in pairs(list) do
+		if v == x then return true end
+	end
+	return false
+end
+
+-- Create rounded rectangle shape
+local function rrect(radius)
+    return function(cr, width, height)
+        gears.shape.rounded_rect(cr, width, height, radius)
+    end
+end
+
+-- Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
@@ -40,9 +55,8 @@ do
         in_error = false
     end)
 end
--- }}}
 
--- {{{ Variable definitions
+-- Variable definitions
 beautiful.init("/home/matte/.config/awesome/theme.lua")
 
 local terminal = os.getenv("TERMINAL") or "alacritty"
@@ -67,9 +81,13 @@ awful.layout.layouts = {
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
 }
--- }}}
 
--- {{{ Wibar
+-- Set the wallpaper in all screens
+for s = 1, screen.count() do
+	gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+end
+
+-- Wibar
 -- Create a textclock widget
 local time_formats = {
     normal = "  %d %B %H:%M  ",
@@ -101,96 +119,129 @@ end)
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
-                    awful.button({ }, 1, function (t) t:view_only() end),
-                    awful.button({ modkey }, 1, function (t)
-                                              if client.focus then
-                                                  client.focus:move_to_tag(t)
-                                              end
-                                          end),
-                    awful.button({ }, 3, awful.tag.viewtoggle),
-                    awful.button({ modkey }, 3, function (t)
-                                              if client.focus then
-                                                  client.focus:toggle_tag(t)
-                                              end
-                                          end),
-                    awful.button({ }, 4, function (t) awful.tag.viewnext(t.screen) end),
-                    awful.button({ }, 5, function (t) awful.tag.viewprev(t.screen) end)
-                )
-
+    awful.button({ }, 1, function (t) t:view_only() end),
+    awful.button({ modkey }, 1, function (t)
+                              if client.focus then
+                                  client.focus:move_to_tag(t)
+                              end
+                          end),
+    awful.button({ }, 3, awful.tag.viewtoggle),
+    awful.button({ modkey }, 3, function (t)
+                              if client.focus then
+                                  client.focus:toggle_tag(t)
+                              end
+                          end),
+    awful.button({ }, 4, function (t) awful.tag.viewnext(t.screen) end),
+    awful.button({ }, 5, function (t) awful.tag.viewprev(t.screen) end)
+)
+local workspaces = { "main", "www", "telegram", "spotify", "cinque", "sei", "sette", "otto", "nove" }
+local nobar_workspaces = { }
 awful.screen.connect_for_each_screen(function (s)
-    -- Each screen has its own tag table
-    local l = awful.layout.suit
-    awful.tag(
-        { "main", "www", "telegram", "spotify", "5", "6", "7", "8", "9" },
-        s,
-        {
-            l.tile.right,
-            l.tile.right,
-            l.tile.right,
-            l.tile.right,
-            l.tile.right,
-            l.tile.right,
-            l.tile.right,
-            l.tile.right,
-            l.tile.right
+        -- Each screen has its own tag table
+        local l = awful.layout.suit
+        awful.tag(
+            workspaces,
+            s,
+            {
+                l.tile.right,
+                l.tile.right,
+                l.tile.right,
+                l.tile.right,
+                l.tile.right,
+                l.tile.right,
+                l.tile.right,
+                l.tile.right,
+                l.tile.right
+            }
+        )
+
+        -- Create an imagebox widget which will contain an icon indicating which
+        -- layout we're using
+        s.layoutbox = awful.widget.layoutbox(s)
+        -- Iterate layout: left click or wheel up to increment, right click or
+        -- wheel down to decrement
+        s.layoutbox:buttons(gears.table.join(
+                               awful.button({ }, 1, function () awful.layout.inc(1) end),
+                               awful.button({ }, 3, function () awful.layout.inc(-1) end),
+                               awful.button({ }, 4, function () awful.layout.inc(1) end),
+                               awful.button({ }, 5, function () awful.layout.inc(-1) end)))
+
+        s.taglist = awful.widget.taglist {
+            screen = s,
+            filter = awful.widget.taglist.filter.all,
+            style = {
+                shape = gears.shape.rounded_bar
+            },
+            layout  = wibox.layout.fixed.horizontal,
+            buttons = taglist_buttons
         }
-    )
 
-    -- Create an imagebox widget which will contain an icon indicating which
-    -- layout we're using
-    s.layoutbox = awful.widget.layoutbox(s)
-    -- Iterate layout: left click or wheel up to increment, right click or
-    -- wheel down to decrement
-    s.layoutbox:buttons(gears.table.join(
-                           awful.button({ }, 1, function () awful.layout.inc( 1) end),
-                           awful.button({ }, 3, function () awful.layout.inc(-1) end),
-                           awful.button({ }, 4, function () awful.layout.inc( 1) end),
-                           awful.button({ }, 5, function () awful.layout.inc(-1) end)))
+        local sgeo = s.geometry
+        s.wibar = awful.wibar {
+            position = "bottom",
+            screen = s,
+            opacity = 0,
+            width = sgeo.width - 60,
+            height = beautiful.get_font_height(nil) * 1.5 + 20,
+        }
 
-    s.taglist = awful.widget.taglist {
-        screen  = s,
-        filter  = awful.widget.taglist.filter.all,
-        buttons = taglist_buttons
-    }
+        s.bar_left = true and wibox.container { widget = s.taglist } or wibox {
+            screen = s,
+            x = 30,
+            y = sgeo.height - 80,
+            border_width = 10,
+            width = 300,
+            border_color = beautiful.bg_normal,
+            height = beautiful.get_font_height(nil) * 1.5,
+            shape = rrect(beautiful.border_radius * 2),
+            type = "dock",
+            widget = s.taglist
+        }
 
-    s.wibox = awful.wibar {
-        position = "bottom",
-        screen = s,
-        border_width = 14,
-        border_color = beautiful.bg_normal
-    }
+        local systray = wibox.widget.systray()
+        systray.set_base_size(30)
 
-    s.wibox:setup {
-        layout = wibox.layout.align.horizontal,
-        -- Left Widgets
-        {
-            layout = wibox.layout.fixed.horizontal,
-            s.taglist,
-        },
-        -- Center
-        nil,
-        -- Right
-        {
-            layout = wibox.layout.fixed.horizontal,
-            volumebar,
-            wibox.widget.systray(),
-            textclock,
-            s.layoutbox,
-        },
-    }
-end)
--- }}}
+        s.bar_right = wibox {
+            screen = s,
+            x = sgeo.width - 450,
+            y = sgeo.height - 80,
+            width = 400,
+            border_width = 10,
+            border_color = beautiful.bg_normal,
+            height = beautiful.get_font_height(nil) * 1.5,
+            shape = rrect(beautiful.border_radius * 2),
+            type = "dock",
+            widget = wibox.widget {
+                volumebar,
+                -- systray,
+                textclock,
+                s.layoutbox,
+                layout = wibox.layout.fixed.horizontal,
+            },
+        }
 
--- {{{ Mouse bindings
+        -- Hide bar on some workspaces
+        screen[1]:connect_signal("tag::history::update", function ()
+            local name = awful.tag.selected(1).name
+            if contains(nobar_workspaces, name) then
+                s.bar_left.visible = false
+                s.bar_right.visible = false
+            else
+                s.bar_left.visible = true
+                s.bar_right.visible = true
+            end
+        end)
+    end)
+
+-- Mouse bindings
 root.buttons(gears.table.join(
     -- awful.button({ }, 3, awful.tag.viewnext),
     -- awful.button({ }, 1, awful.tag.viewprev),
     awful.button({ }, 4, awful.tag.viewnext),
     awful.button({ }, 5, awful.tag.viewprev)
 ))
--- }}}
 
--- {{{ Key bindings
+-- Key bindings
 local globalkeys = gears.table.join(
     -- awesome
     awful.key({ modkey }, "s", hotkeys_popup.show_help,
@@ -559,9 +610,8 @@ local clientbuttons = gears.table.join(
 )
 
 root.keys(globalkeys)
--- }}}
 
--- {{{ Rules
+-- Rules
 -- Rules to apply to new clients (through the "manage" signal)
 awful.rules.rules = {
     -- All clients will match this rule
@@ -611,12 +661,11 @@ awful.rules.rules = {
     -- Add titlebars to normal clients and dialogs
     {
         rule_any = { type = { "normal", "dialog" } },
-        properties = { titlebars_enabled = false }
+        properties = { titlebars_enabled = true }
     },
 }
--- }}}
 
--- {{{ Signals
+-- Signals
 -- Signal function to execute when a new client appears
 client.connect_signal("manage", function (c)
     -- Set the windows at the slave,
@@ -631,48 +680,16 @@ client.connect_signal("manage", function (c)
     end
 end)
 
+local function add_titlebar(c)
+    awful.titlebar(c, { size = 8 })
+end
+
 -- Add a titlebar if titlebars_enabled is set to true in the rules
 client.connect_signal("request::titlebars", function (c)
-    -- buttons for the titlebar
-    local buttons = gears.table.join(
-        awful.button({ }, 1, function ()
-            c:emit_signal("request::activate", "titlebar", { raise = true })
-            awful.mouse.client.move(c)
-        end),
-        awful.button({ }, 3, function ()
-            c:emit_signal("request::activate", "titlebar", { raise = true })
-            awful.mouse.client.resize(c)
-        end)
-    )
-
-    awful.titlebar(c) : setup {
-        -- Left
-        {
-            awful.titlebar.widget.iconwidget(c),
-            buttons = buttons,
-            layout = wibox.layout.fixed.horizontal
-        },
-        -- Middle
-        {
-            -- Title
-            {
-                align = "center",
-                widget = awful.titlebar.widget.titlewidget(c)
-            },
-            buttons = buttons,
-            layout = wibox.layout.flex.horizontal
-        },
-        -- Right
-        {
-            awful.titlebar.widget.floatingbutton(c),
-            awful.titlebar.widget.maximizedbutton(c),
-            awful.titlebar.widget.stickybutton(c),
-            awful.titlebar.widget.ontopbutton(c),
-            awful.titlebar.widget.closebutton(c),
-            layout = wibox.layout.fixed.horizontal()
-        },
-        layout = wibox.layout.align.horizontal
-    }
+    add_titlebar(c)
+    -- if c.maximized or c.fullscreen or not c.floating then
+    --     awful.titlebar.hide(c)
+    -- end
 end)
 
 -- Enable sloppy focus, so that focus follows mouse
@@ -682,4 +699,19 @@ end)
 
 client.connect_signal("focus", function (c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function (c) c.border_color = beautiful.border_normal end)
--- }}}
+
+-- Apply rounded corners to clients if needed
+if beautiful.border_radius > 0 then
+    client.connect_signal("property::floating", function (c)
+        if not c.maximized and not c.fullscreen then
+            awful.titlebar.show(c)
+            c.shape = rrect(beautiful.border_radius)
+        else
+            awful.titlebar.hide(c)
+            c.shape = gears.shape.rectangle
+        end
+    end)
+else
+    beautiful.snap_shape = gears.shape.rectangle
+end
+

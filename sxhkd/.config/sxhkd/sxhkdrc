@@ -4,30 +4,26 @@
 
 super + Return
     $TERMINAL
+super + shift + Return
+    floating-term
 super + d
     rofi -show run
 super + shift + d
     desktops
-super + w
+uper + w
     $BROWSER
 super + 0
-    today
+    /home/matte/.cargo/bin/xcursorlocate
 super + shift + s
     flameshot gui
-super + shift + x
-    prompt "Shutdown computer?" "systemctl poweroff"
 super + BackSpace
-    prompt "Suspend computer?" "systemctl suspend"
-super + shift + BackSpace
-    prompt "Reboot computer?" "systemctl reboot"
-super + shift + Escape
-    prompt "Leave Xorg?" 'killall Xorg'
+    poweroff-menu
 super + shift + c
     xcolor | tr -d '\n' | xclip -sel clipboard
 super + x
     command -v slock && (slock & xset dpms force off)
-ctrl + Escape
-    xcursorlocate
+super + shift + t
+    telegram-desktop
 # Reload sxhkd
 super + Escape
     pkill -USR1 -x sxhkd
@@ -134,10 +130,10 @@ super + ctrl + shift + space
 # MOVE / RESIZE
 
 # Expand a window by moving one of its side outward
-ctrl + alt + {h,j,k,l}
+super + alt + {h,j,k,l}
     bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 # Contract a window by moving one of its side inward
-ctrl + alt + shift + {h,j,k,l}
+super + alt + shift + {h,j,k,l}
     bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 # Move a floating window
 super + {Left,Down,Up,Right}

@@ -1,0 +1,221 @@
+[colors]
+masiero = #ff0
+
+[bar/main]
+override-redirect = true
+wm-restack = bspwm
+width = 100%
+height = 4%
+fixed-center = false
+bottom = true
+dpi = ${xrdb:Xft.dpi:-1}
+
+background = ${xrdb:color0}
+foreground = ${xrdb:color7}
+
+radius = 0
+line-size = 2
+padding = 4
+module-margin = 1
+
+font-0 = "Product Sans:size=12;0"
+font-1 = "Font Awesome 5 Free:style=Regular:size=12;0"
+font-2 = "Font Awesome 5 Free:style=Solid:size=12;0"
+font-3 = "Font Awesome 5 Brands:size=12;0"
+
+modules-left = date separator bspwm
+modules-right = spotify separator wlan empty-separator pulseaudio empty-separator cpu empty-separator memory empty-separator battery separator bluetooth screenshot
+
+; tray-position = right
+; tray-padding = 2
+; tray-maxsize = 24
+
+[module/separator]
+type = custom/text
+content = |
+content-foreground = ${xrdb:color8}
+content-padding = 1
+
+[module/empty-separator]
+type = custom/text
+content = " "
+content-foreground = ${xrdb:color8}
+content-padding = 0
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = @DEFAULT_SINK@
+use-ui-max = true
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+format-muted = <label-muted>
+
+ramp-volume-0 = "    "
+ramp-volume-1 = "   "
+ramp-volume-2 = " "
+
+ramp-volume-foreground = ${xrdb:color8}
+
+format-muted-prefix = "   "
+format-muted-prefix-foreground = ${xrdb:color8}
+
+[global/wm]
+margin-top = 0
+
+[module/xwindow]
+type = internal/xwindow
+; label = %title:0:30:...%
+label = %title%
+
+[module/spotify]
+type = custom/script
+interval = 1
+format = <label>
+exec = spinfos
+click-left = playerctl previous
+click-middle = playerctl play-pause
+click-right = playerctl next
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+inline-mode = false
+enable-click = true
+enable-scroll = true
+reverse-scroll = false
+fuzzy-match = true
+
+format = <label-state> <label-mode>
+label-monitor = %name%
+
+label-focused = %name%
+label-focused-foreground = ${xrdb:color2}
+
+label-occupied = %name%
+label-occupied-foreground = ${xrdb:color7}
+
+label-urgent = %name%
+label-urgent-foreground = ${xrdb:color1}
+
+label-empty = %name%
+label-empty-foreground = ${xrdb:color8}
+
+; I tried to use variables, like ${xrdb:colorX} and ${colors.Y}, but it doesn't
+; work
+label-monocle = "  %{F#3a434d}|  %{F#f5faff}MO%{F-}"
+label-tiled = "  %{F#3a434d}|  %{F#f5faff}T%{F-}"
+label-fullscreen = "  %{F#3a434d}|  %{F#f5faff}FS%{F-}"
+label-floating = "  %{F#3a434d}|  %{F#f5faff}FL%{F-}"
+label-pseudotiled = "  %{F#3a434d}|  %{F#f5faff}PT%{F-}"
+label-locked = "  %{F#3a434d}|  %{F#f5faff}L%{F-}"
+label-sticky = "  %{F#3a434d}|  %{F#f5faff}S%{F-}"
+label-private = "  %{F#3a434d}|  %{F#f5faff}P%{F-}"
+label-marked = "  %{F#3a434d}|  %{F#f5faff}MA%{F-}"
+
+label-separator = " "
+label-separator-padding = 1
+
+[module/ewmh]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+
+label-active = " %name% "
+label-active-foreground = ${xrdb:color2}
+
+label-occupied = " %name% "
+label-occupied-foreground = ${xrdb:color7}
+
+label-urgent = " %name% "
+label-urgent-foreground = ${xrdb:color1}
+
+label-empty = " %name% "
+label-empty-foreground = ${xrdb:color8}
+
+[module/cpu]
+type = internal/cpu
+interval = 2.0
+format-prefix = " "
+format-prefix-foreground = ${xrdb:color8}
+format-foreground = ${xrdb:color7}
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2.0
+format-prefix = "  "
+format-prefix-foreground = ${xrdb:color8}
+format-foreground = ${xrdb:color7}
+label = %percentage_used:2%%
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 5.0
+
+format-connected = <ramp-signal> <label-connected>
+; label-connected = %essid%
+label-connected = "%{A1:network:}%essid%%{A}"
+label-connected-foreground = ${xrdb:color7}
+
+label-disconnected = "No Wi-Fi"
+label-disconnected-foreground = ${xrdb:color7}
+
+ramp-signal-0 = 1/5
+ramp-signal-1 = 2/5
+ramp-signal-2 = 3/5
+ramp-signal-3 = 4/5
+ramp-signal-4 = 5/5
+ramp-signal-foreground = ${xrdb:color8}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = "%A %d"
+date-alt = %A %B %d
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+label = %{A3:calendar-term:}%date% %time%%{A}
+
+[module/screenshot]
+type = custom/text
+content = %{A1:flameshot gui:}%{A}
+content-foreground = ${xrdb:color7}
+content-padding = 1
+
+[module/bluetooth]
+type = custom/text
+content = %{A1:blueman-manager:}%{A}
+content-foreground = ${xrdb:color7}
+content-padding = 1
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 88
+
+format-charging = <ramp-capacity> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+
+ramp-capacity-0 = "  "
+ramp-capacity-1 = "  "
+ramp-capacity-2 = "  "
+ramp-capacity-3 = "  "
+ramp-capacity-foreground = ${xrdb:color8}
+
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = Full
+
+[settings]
+screenchange-reload = true
+
+; vim:ft=dosini
+

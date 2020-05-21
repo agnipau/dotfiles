@@ -1,3 +1,22 @@
+! Anirak
+#define alpha_bg argb:c80c0d10
+#define base00 #0c0d10
+#define base01 #ff4766
+#define base02 #17ff93
+#define base03 #ffdc69
+#define base04 #3743ee
+#define base05 #4a8ffd
+#define base06 #75abff
+#define base07 #f5faff
+#define base08 #3a434d
+#define base09 #ff8398
+#define base0A #71faba
+#define base0B #ffe388
+#define base0C #6485f1
+#define base0D #7aadff
+#define base0E #bad3ff
+#define base0F #ffffff
+
 ! ! Doom spacegrey
 ! #define base00 #2b303b
 ! #define base01 #bf616a
@@ -13,26 +32,26 @@
 ! #define base0B #ecbe7b
 ! #define base0C #8fa1b3
 ! #define base0D #c678dd
-! #define base0E #46d9ff
+! #define base0E #5699af
 ! #define base0F #c0c5ce
 
-! Doom one dark
-#define base00 #282c34
-#define base01 #ff6c6b
-#define base02 #98be65
-#define base03 #ecbe7b
-#define base04 #51afef
-#define base05 #c678dd
-#define base06 #46d9ff
-#define base07 #bbc2cf
-#define base08 #5b6268
-#define base09 #ff6c6b
-#define base0A #98be65
-#define base0B #ecbe7b
-#define base0C #51afef
-#define base0D #c678dd
-#define base0E #46d9ff
-#define base0F #bbc2cf
+! ! Doom one dark
+! #define base00 #282c34
+! #define base01 #ff6c6b
+! #define base02 #98be65
+! #define base03 #ecbe7b
+! #define base04 #51afef
+! #define base05 #c678dd
+! #define base06 #46d9ff
+! #define base07 #bbc2cf
+! #define base08 #5b6268
+! #define base09 #ff6c6b
+! #define base0A #98be65
+! #define base0B #ecbe7b
+! #define base0C #51afef
+! #define base0D #c678dd
+! #define base0E #46d9ff
+! #define base0F #bbc2cf
 
 ! ! Gruvbox Dark
 ! #define base00 #282828
@@ -131,18 +150,22 @@ URxvt.url-launcher: chromium
 URxvt.matcher.button: 1
 
 ! Rofi
-rofi.color-window: base00 , base07 , base00 , base00 , base03
-rofi.color-normal: base00 , base08 , base00 , base00 , base07
-rofi.color-active: base08 , base0E , base00 , base0B , base00
-rofi.color-urgent: base00 , base08 , base00 , base00 , base08
+rofi.color-window: base00, base07, base00, base00, base03
+rofi.color-normal: base00, base08, base00, base00, base07
+rofi.color-active: base08, base0E, base00, base0B, base00
+rofi.color-urgent: base00, base08, base00, base00, base08
 
-rofi.font: Input Mono Narrow 13
-rofi.matching: fuzzy
+rofi.font: Input Mono Narrow 18
+! rofi.matching: fuzzy
 rofi.levenshtein-sort: true
 rofi.separator-style: none
 rofi.hide-scrollbar: true
-rofi.padding: 32
-rofi.bw: 2
+rofi.columns: 4
+rofi.eh: 1
+rofi.padding: 400
+rofi.bw: 0
+rofi.fullscreen: true
+rofi.opacity: 50
 
 ! sxiv
 Sxiv.font: Input Mono Narrow 16

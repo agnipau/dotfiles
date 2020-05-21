@@ -62,11 +62,12 @@
   :after expand-region
   :init
   (setq evil-want-Y-yank-to-eol t)
+  (setq evil-want-keybinding nil)
   :config
   (dolist (mode '(dired-mode special-mode compilation-mode))
     (add-to-list 'evil-emacs-state-modes mode))
   (evil-mode 1)
-  (evil-define-key '(visual normal) 'global
+  (evil-define-key '(normal visual) 'global
     "H" 'evil-beginning-of-line
     "L" 'evil-end-of-line)
   (require 'expand-region)
@@ -85,7 +86,14 @@
   (evil-ex-define-cmd "Q" "q")
   (evil-ex-define-cmd "Wq" "wq")
   (evil-ex-define-cmd "WQ" "wq")
-  (evil-ex-define-cmd "Wqa" "wqa"))
+  (evil-ex-define-cmd "Wqa" "wqa")
+  (setq evil-emacs-state-modes (delq 'dired-mode evil-emacs-state-modes)))
+
+(use-package evil-collection
+  :straight t
+  :after evil
+  :config
+  (evil-collection-init))
 
 (use-package evil-mc
   :straight t
@@ -116,7 +124,7 @@
 
 (use-package doom-themes
   :straight t
-  :hook ((emacs-startup . (lambda () (load-theme 'doom-one t))))
+  :hook ((emacs-startup . (lambda () (load-theme 'doom-spacegrey t))))
   :config
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t

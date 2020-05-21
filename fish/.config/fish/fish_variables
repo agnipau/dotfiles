@@ -20,7 +20,7 @@ SETUVAR _fish_abbr_dmenu:dmenu\x20\x2dfn\x20\x27Input\x20Mono\x20Narrow\x27\x20\
 SETUVAR _fish_abbr_glog:git\x20log\x20\x2d\x2dno\x2dcolor
 SETUVAR _fish_abbr_ins:yay\x20\x2dS\x20\x2d\x2dneeded\x20\x2d\x2dnoconfirm
 SETUVAR _fish_abbr_installed:yay\x20\x2d\x2dcolor\x3dnever\x20\x2dQe\x20\x7c\x20nvim
-SETUVAR _fish_abbr_k:xset\x20r\x20rate\x20200\x2040\x3b\x20setxkbmap\x20\x2dmodel\x20pc105\x20\x2dlayout\x20us\x20\x2dvariant\x20intl\x20\x2doption\x20ctrl\x3anocaps
+SETUVAR _fish_abbr_k:xset\x20r\x20rate\x20200\x2040\x3b\x20sudo\x20localectl\x20set\x2dx11\x2dkeymap\x20us\x20pc105\x20intl\x20caps\x3actrl_modifier
 SETUVAR _fish_abbr_la:exa\x20\x2dlah\x20\x2ds\x20type
 SETUVAR _fish_abbr_lbar:lemon\x20\x7c\x20lemonbar\x20\x2dg\x202560x70\x20\x2db\x20\x2dB\x20\x27\x23ff1d2021\x27\x20\x2dF\x20\x27\x23ffebdbb2\x27\x20\x2dp\x20\x2df\x20\x27Input\x20Mono\x20Narrow\x3asize\x3d13\x27\x20\x2do\x20\x2d20\x20\x7c\x20sh
 SETUVAR _fish_abbr_lcd:cd
@@ -67,3 +67,4 @@ SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_user_paths:/home/matte/\x2efzf/bin

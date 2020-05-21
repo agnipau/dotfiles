@@ -11,6 +11,7 @@
     }
   },
   "tsserver.log": "verbose",
+  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
   "tsserver.trace.server": "verbose",
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",

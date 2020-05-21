@@ -6,8 +6,12 @@ dunst &
 flameshot &
 nm-applet &
 unclutter &
-# sxhkd &
-hsetroot -solid '#282c34'
-# exec bspwm
-exec awesome
+udiskie &
+sxhkd &
+xsetroot -cursor_name left_ptr
+polybar main &
+~/.fehbg &
+blueman-applet &
+exec bspwm
+# exec awesome
 

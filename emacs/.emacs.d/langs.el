@@ -14,6 +14,11 @@
   :hook ((go-mode . (lambda () (add-hook 'before-save-hook
 					 #'gofmt-before-save)))))
 
+(use-package elpy
+  :straight t
+  :init
+  (elpy-enable))
+
 (use-package fish-mode
   :straight t
   :mode "\\.fish\\'"

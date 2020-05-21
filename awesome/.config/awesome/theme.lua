@@ -1,3 +1,4 @@
+local gears = require('gears')
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
@@ -9,7 +10,7 @@ local current_theme = xresources.get_current_theme()
 
 local theme = {}
 
-theme.font = "Input Mono Narrow 11"
+theme.font = "Product Sans 14"
 
 theme.bg_normal = current_theme.color0
 theme.bg_focus = current_theme.color10
@@ -22,11 +23,13 @@ theme.fg_focus = theme.fg_normal
 theme.fg_urgent = theme.fg_normal
 theme.fg_minimize = theme.fg_normal
 
-theme.useless_gap = dpi(0)
-theme.border_width = dpi(1.5)
+theme.useless_gap = dpi(14)
+theme.border_width = dpi(0)
 theme.border_normal = theme.bg_normal
 theme.border_focus = theme.fg_normal
 theme.border_marked = theme.bg_urgent
+-- Rounded corners
+theme.border_radius = dpi(6)
 
 -- There are other variable sets
 -- overriding the default one when
@@ -38,6 +41,11 @@ theme.border_marked = theme.bg_urgent
 -- mouse_finder_[color|timeout|animate_timeout|radius|factor]
 -- prompt_[fg|bg|fg_cursor|bg_cursor|font]
 -- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
+
+theme.titlebar_bg_focus = theme.fg_normal
+theme.titlebar_fg_focus = theme.bg_normal
+theme.titlebar_bg_normal = current_theme.color8
+theme.titlebar_fg_normal = current_theme.color7
 
 theme.taglist_bg_focus = theme.bg_normal
 theme.taglist_fg_focus = theme.bg_focus
@@ -59,8 +67,15 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- notification_[bg|fg]
 -- notification_[width|height|margin]
 -- notification_[border_color|border_width|shape|opacity]
+local rrect = function (radius)
+    return function (cr, width, height)
+        gears.shape.rounded_rect(cr, width, height, radius)
+    end
+end
+theme.notification_border_color = theme.bg_normal
+theme.notification_shape = rrect(theme.border_radius)
 
--- theme.wallpaper = themes_path .. "default/background.png"
+theme.wallpaper = "/home/matte/.config/awesome/wallpaper.jpg"
 
 -- Layout icons
 theme.layout_fairh = themes_path .. "default/layouts/fairhw.png"

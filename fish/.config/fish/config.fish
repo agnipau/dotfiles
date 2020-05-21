@@ -78,7 +78,7 @@ abbr q "exit"
 abbr rml "trash-list"
 abbr rmr "trash-restore"
 abbr rme "trash-empty"
-abbr k "xset r rate 200 40; setxkbmap -model pc105 -layout us -variant intl -option ctrl:nocaps"
+abbr k "xset r rate 200 40; sudo localectl set-x11-keymap us pc105 intl caps:ctrl_modifier"
 abbr airpods "bluetoothctl -- connect 7C:9A:1D:C1:32:5F"
 abbr reboot "read -P 'Sei sicuro di volere riavviare? ' && systemctl reboot"
 abbr poweroff "read -P 'Sei sicuro di volere spegnere? ' && systemctl poweroff"
@@ -104,10 +104,13 @@ abbr dmenu "dmenu -fn 'Input Mono Narrow' -nf '#545454' -sf '#ffffff' -sb '#2121
 
 zoxide init fish | source
 
+# Anirak
+set color_grey = "757c87"
+set selection_color = "15194c"
 # # Doom spacegrey
 # set color_grey = "65737e"
-# Doom one dark
-set color_grey = "5b6268"
+# # Doom one dark
+# set color_grey = "5b6268"
 # Gruvbox dark
 # set color_grey = "a89984"
 # Nord
@@ -123,14 +126,14 @@ set fish_color_end               --bold black
 set fish_color_error             red
 set fish_color_param             white
 set fish_color_comment           --bold black
-set fish_color_search_match      --background=$color_grey
+set fish_color_search_match      --background=blue
 set fish_color_operator          --bold yellow
 set fish_color_escape            magenta
 set fish_color_autosuggestion    $color_grey
 set fish_color_cancel            --bold red
-set fish_pager_color_completion  --bold white
+set fish_pager_color_completion  $color_grey
 set fish_pager_color_description $color_grey
-set fish_pager_color_prefix      --bold yellow
+set fish_pager_color_prefix      --bold white
 
 bass (ssh-agent -s) >/dev/null
 
