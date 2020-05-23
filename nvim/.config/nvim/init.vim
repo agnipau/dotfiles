@@ -1,22 +1,16 @@
 let mapleader=' '
 let maplocalleader=' '
 
-:command! WQ wq
-:command! Wq wq
-:command! Wqa wqa
-:command! W w
-:command! Q q
-
 nnoremap <leader><leader> /
 nnoremap <silent> <leader>mo :nohlsearch<cr>
 nnoremap H 0
-nnoremap J 3j
-nnoremap K 3k
+" nnoremap J 3j
+" nnoremap K 3k
 nnoremap L $
 
 xnoremap H 0
-xnoremap J 3j
-xnoremap K 3k
+" xnoremap J 3j
+" xnoremap K 3k
 xnoremap L $
 
 inoremap <c-z> <c-o>:u<cr>
@@ -236,6 +230,12 @@ if !exists('g:vscode')
   " hi NonText guifg=#504945 gui=none
   " hi Visual guibg=#504945 gui=none
 
+  command! WQ wq
+  command! Wq wq
+  command! Wqa wqa
+  command! W w
+  command! Q q
+
   nnoremap <silent> <leader>i :IndentLinesToggle<cr>
 
   au BufReadPost,BufNewFile *.md,*.txt,*.tex setlocal colorcolumn&
@@ -248,18 +248,29 @@ else
   omap gc  <Plug>VSCodeCommentary
   nmap gcc <Plug>VSCodeCommentaryLine
 
+  function! s:saveAndClose() abort
+      call VSCodeCall('workbench.action.files.save')
+      call VSCodeNotify('workbench.action.closeActiveEditor')
+  endfunction
+
+  function! s:saveAllAndClose() abort
+      call VSCodeCall('workbench.action.files.saveAll')
+      call VSCodeNotify('workbench.action.closeAllEditors')
+  endfunction
+
+  command! -bang Saveas call VSCodeNotify('workbench.action.files.saveAs')
+  command! -bang Revert call VSCodeNotify('workbench.action.files.revert')>
+  command! -bang Open call VSCodeNotify('workbench.action.files.openFile')
+  command! -bang Wa call VSCodeNotify('workbench.action.files.saveAll')
+  command! -bang Q if <q-bang> == '!' | call VSCodeNotify('workbench.action.revertAndCloseActiveEditor') | else | call VSCodeNotify('workbench.action.closeActiveEditor') | endif
+  command! -bang W call VSCodeCall('workbench.action.files.save')
+  command! -bang Wq call <SID>saveAndClose()
+  command! -bang WQ call <SID>saveAndClose()
+  command! -bang Qa call VSCodeNotify('workbench.action.closeAllEditors')
+  command! -bang Wqa call <SID>saveAllAndClose()
+
   call plug#begin('~/.local/share/nvim/plugged')
   Plug 'tpope/vim-surround'
-
-  Plug 'terryma/vim-multiple-cursors'
-      let g:multi_cursor_start_word_key      = '<c-j>'
-      let g:multi_cursor_select_all_word_key = '<c-t>'
-      let g:multi_cursor_start_key           = 'g<c-j>'
-      let g:multi_cursor_select_all_key      = 'g<c-t>'
-      let g:multi_cursor_next_key            = '<c-j>'
-      let g:multi_cursor_prev_key            = '<c-k>'
-      let g:multi_cursor_skip_key            = '<c-l>'
-      let g:multi_cursor_quit_key            = '<Esc>'
   call plug#end()
 endif
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
