@@ -54,6 +54,7 @@ fuse3 3.9.1-1
 fzf 0.21.1-1
 gawk 5.1.0-1
 gcc 10.1.0-2
+gdmap 0.8.1-5
 gettext 0.20.2-1
 ghc 8.10.1-2
 git 2.26.2-1
@@ -151,7 +152,7 @@ ttf-heuristica 1.0.2-3
 ttf-ibm-plex 4.0.2-2
 ttf-iosevka-term-ss07 3.0.1-1
 ttf-jetbrains-mono 1.0.6-1
-ttf-roboto 2.138-2
+ttf-roboto 2.138-3
 udiskie 2.2.0-1
 unclutter 1:1.5-1
 unoconv 0.9-2
