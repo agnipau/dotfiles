@@ -71,7 +71,7 @@ if !exists('g:vscode')
   " Plug 'leafgarland/typescript-vim'
 
   " Colorschemes
-  Plug '~/progetti/anirak-vim'
+  " Plug '~/progetti/anirak-vim'
   Plug 'gruvbox-community/gruvbox'
   call plug#end()
 
@@ -224,11 +224,11 @@ if !exists('g:vscode')
   set t_Co=256
   set background=dark
   set termguicolors
-  colorscheme anirak
-  " " Colorscheme customizations
-  " hi HighlightedyankRegion guibg=#504945
-  " hi NonText guifg=#504945 gui=none
-  " hi Visual guibg=#504945 gui=none
+  colorscheme gruvbox
+  " Colorscheme customizations
+  hi HighlightedyankRegion guibg=#504945
+  hi NonText guifg=#504945 gui=none
+  hi Visual guibg=#504945 gui=none
 
   command! WQ wq
   command! Wq wq

@@ -19,6 +19,7 @@ function fish_mode_prompt --description 'Displays the current mode'
     end
 end
 
+
 set -x EDITOR /usr/bin/nvim
 set -x BROWSER /usr/bin/chromium
 set -e PAGER
@@ -28,10 +29,11 @@ set -x TERMINAL /usr/bin/alacritty
 set -x STATUSBAR /usr/bin/polybar
 set -x SXHKD_SHELL /usr/bin/sh
 set -x TERM xterm-256color
-set -x JAVE_HOME /usr/lib/jvm/java-8-openjdk/bin
+set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk
 set -x DOTNET_CLI_TELEMETRY_OPTOUT true
 set -x XDG_CONFIG_HOME /home/matte/.config
-set -x ANDROID_SDK_ROOT /home/matte/Android/Sdk
+set -x ANDROID_SDK_ROOT /opt/android-sdk
+# set -x JAVA_OPTS '-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 set -x ANDROID_HOME $ANDROID_SDK_ROOT
 set -x PATH \
     /home/matte/bin \
@@ -41,10 +43,13 @@ set -x PATH \
     $GOPATH/bin \
     /home/matte/.luarocks/bin \
     /home/matte/.pub-cache/bin \
+    $ANDROID_HOME/tools \
     $ANDROID_HOME/tools/bin \
     $ANDROID_HOME/platform-tools \
+    $ANDROID_HOME/emulator \
     /home/matte/.local/bin \
     $PATH
+
 set -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 set -x FZF_DEFAULT_OPTS "
   --multi --inline-info --reverse --height 95%
