@@ -1,6 +1,3 @@
-[colors]
-masiero = #ff0
-
 [bar/main]
 override-redirect = true
 wm-restack = bspwm
@@ -18,10 +15,10 @@ line-size = 2
 padding = 4
 module-margin = 1
 
-font-0 = "Product Sans:size=12;0"
-font-1 = "Font Awesome 5 Free:style=Regular:size=12;0"
-font-2 = "Font Awesome 5 Free:style=Solid:size=12;0"
-font-3 = "Font Awesome 5 Brands:size=12;0"
+font-0 = "Product Sans:size=12;4"
+font-1 = "Font Awesome 5 Free:style=Regular:size=12;4"
+font-2 = "Font Awesome 5 Free:style=Solid:size=12;4"
+font-3 = "Font Awesome 5 Brands:size=12;4"
 
 modules-left = date separator bspwm
 modules-right = spotify separator wlan empty-separator pulseaudio empty-separator cpu empty-separator memory empty-separator battery separator bluetooth screenshot
