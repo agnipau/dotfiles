@@ -4,13 +4,13 @@ let maplocalleader=' '
 nnoremap <leader><leader> /
 nnoremap <silent> <leader>mo :nohlsearch<cr>
 nnoremap H 0
-" nnoremap J 3j
-" nnoremap K 3k
+nnoremap J 3j
+nnoremap K 3k
 nnoremap L $
 
 xnoremap H 0
-" xnoremap J 3j
-" xnoremap K 3k
+xnoremap J 3j
+xnoremap K 3k
 xnoremap L $
 
 inoremap <c-z> <c-o>:u<cr>

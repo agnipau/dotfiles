@@ -19,7 +19,7 @@ super + shift + s
 super + BackSpace
     poweroff-menu
 super + shift + c
-    xcolor | tr -d '\n' | xclip -sel clipboard
+    xcolor | tr -d '\n' | xsel -ib
 super + x
     command -v slock && (slock & xset dpms force off)
 super + shift + t

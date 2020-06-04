@@ -19,7 +19,6 @@ git_branch() {
 PS1='\[\e[3m\]\[\e[1;34m\]\w\[\e[0m\] `git_branch`'
 
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
-source /home/matte/.config/broot/launcher/bash/br
 eval "$(zoxide init bash)"
 
 export EDITOR=/usr/bin/nvim

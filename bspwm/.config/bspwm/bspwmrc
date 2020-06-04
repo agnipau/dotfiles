@@ -32,6 +32,7 @@ bspc config presel_feedback_color "#3a434d"
 # xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_HDMI1)
 
 bspc rule -a Blueman-manager state=floating center=true
+bspc rule -a Pcmanfm state=floating center=true
 bspc rule -a Gdmap state=floating center=true
 bspc rule -a GParted state=floating center=true
 bspc rule -a ksnip state=floating center=true

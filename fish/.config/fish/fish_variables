@@ -26,6 +26,7 @@ SETUVAR _fish_abbr_lbar:lemon\x20\x7c\x20lemonbar\x20\x2dg\x202560x70\x20\x2db\x
 SETUVAR _fish_abbr_lcd:cd
 SETUVAR _fish_abbr_ls:exa\x20\x2dlh\x20\x2ds\x20type
 SETUVAR _fish_abbr_mkdir:mkdir\x20\x2dp
+SETUVAR _fish_abbr_nvim:echo\x20no
 SETUVAR _fish_abbr_pinfo:yay\x20\x2dQi\x20\x2d\x2dcolor\x3dalways
 SETUVAR _fish_abbr_poweroff:read\x20\x2dP\x20\x27Sei\x20sicuro\x20di\x20volere\x20spegnere\x3f\x20\x27\x20\x26\x26\x20systemctl\x20poweroff
 SETUVAR _fish_abbr_pygm:pygmentize\x20\x2df\x20png\x20\x2dO\x20\x27font_name\x3dInput\x20Mono\x20Narrow\x2cfont_size\x3d32\x27\x20\x2do\x20pygmentscreen\x2epng\x20script\x2epy
@@ -33,7 +34,7 @@ SETUVAR _fish_abbr_q:exit
 SETUVAR _fish_abbr_reboot:read\x20\x2dP\x20\x27Sei\x20sicuro\x20di\x20volere\x20riavviare\x3f\x20\x27\x20\x26\x26\x20systemctl\x20reboot
 SETUVAR _fish_abbr_ref:sudo\x20reflector\x20\x2d\x2dverbose\x20\x2d\x2dsort\x20rate\x20\x2d\x2dsave\x20/etc/pacman\x2ed/mirrorlist
 SETUVAR _fish_abbr_rem:yay\x20\x2dR\x20\x2d\x2dnoconfirm
-SETUVAR _fish_abbr_rm:trash
+SETUVAR _fish_abbr_rm:trash\x20\x2d\x2d
 SETUVAR _fish_abbr_rme:trash\x2dempty
 SETUVAR _fish_abbr_rmf:rm
 SETUVAR _fish_abbr_rml:trash\x2dlist
@@ -49,7 +50,7 @@ SETUVAR _fish_abbr_suspend:read\x20\x2dP\x20\x27Sei\x20sicuro\x20di\x20volere\x2
 SETUVAR _fish_abbr_t:tmux\x20\x2du
 SETUVAR _fish_abbr_upd:yay\x20\x2d\x2dcolor\x3dalways\x20\x2dSyuv
 SETUVAR _fish_abbr_uupd:yay\x20\x2d\x2dcolor\x3dalways\x20\x2dSyyuv
-SETUVAR _fish_abbr_vim:nvim
+SETUVAR _fish_abbr_vim:echo\x20no
 SETUVAR _fish_abbr_za:zoxide\x20add
 SETUVAR _fish_abbr_zi:z\x20\x2di
 SETUVAR _fish_abbr_zq:zoxide\x20query

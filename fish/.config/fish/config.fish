@@ -27,6 +27,7 @@ set -x SUDO_ASKPASS /home/matte/bin/rofiecho
 set -x GOPATH /home/matte/go
 set -x TERMINAL /usr/bin/alacritty
 set -x STATUSBAR /usr/bin/polybar
+set -x TESSDATA_PREFIX /usr/share/tessdata
 set -x SXHKD_SHELL /usr/bin/sh
 set -x TERM xterm-256color
 set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk
@@ -78,7 +79,7 @@ abbr dl "curl -LOC -"
 abbr cpp "rsync -ah --progress"
 abbr rmf "rm"
 abbr glog "git log --no-color"
-abbr rm "trash"
+abbr rm "trash --"
 abbr q "exit"
 abbr rml "trash-list"
 abbr rmr "trash-restore"
@@ -103,7 +104,8 @@ abbr ctmux "nvim ~/.tmux.conf"
 abbr stmux "tmux source-file ~/.tmux.conf"
 abbr calacritty "nvim ~/.config/alacritty/alacritty.yml"
 abbr cd "z"
-abbr vim "nvim"
+abbr vim "echo no"
+abbr nvim "echo no"
 abbr lbar "lemon | lemonbar -g 2560x70 -b -B '#ff1d2021' -F '#ffebdbb2' -p -f 'Input Mono Narrow:size=13' -o -20 | sh"
 abbr dmenu "dmenu -fn 'Input Mono Narrow' -nf '#545454' -sf '#ffffff' -sb '#212121'"
 
