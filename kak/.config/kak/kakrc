@@ -1,0 +1,18 @@
+evaluate-commands %sh(
+    config_files="
+        common.kak
+        languages.kak
+        plugins.kak
+    "
+
+    for file in ${config_files}; do
+        printf '%s' "
+            try %{
+                source %{${kak_config}/${file}}
+            } catch %{
+                printf '%s%s' -debug %val{error}
+            }
+        "
+    done
+)
+

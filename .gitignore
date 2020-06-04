@@ -8,3 +8,5 @@ emacs/.emacs.d/auto-save-list
 emacs/.emacs.d/recentf
 nvim/.config/nvim/undodir
 nvim/.config/nvim/.netrwhist
+kak/.config/kak/plugins
+kak/.config/kak/colors

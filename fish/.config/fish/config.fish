@@ -20,7 +20,7 @@ function fish_mode_prompt --description 'Displays the current mode'
 end
 
 
-set -x EDITOR /usr/bin/nvim
+set -x EDITOR /usr/bin/kak
 set -x BROWSER /usr/bin/chromium
 set -e PAGER
 set -x SUDO_ASKPASS /home/matte/bin/rofiecho
@@ -57,14 +57,13 @@ set -x FZF_DEFAULT_OPTS "
   --color fg:8,hl:7,fg+:6,bg+:0,hl+:7
   --color info:0,prompt:6,spinner:6,pointer:6,marker:6
 "
-set -x MANPAGER "/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 abbr ref "sudo reflector --verbose --sort rate --save /etc/pacman.d/mirrorlist"
 abbr uupd "yay --color=always -Syyuv"
 abbr upd "yay --color=always -Syuv"
 abbr autorem "yay --color=always -R (yay -Qdtq)"
 abbr mkdir "mkdir -p"
-abbr installed "yay --color=never -Qe | nvim"
+abbr installed "yay --color=never -Qe | kak"
 abbr src "yay --color=always -Ss"
 abbr ins "yay -S --needed --noconfirm"
 abbr pygm "pygmentize -f png -O 'font_name=Input Mono Narrow,font_size=32' -o pygmentscreen.png script.py"
@@ -90,22 +89,19 @@ abbr reboot "read -P 'Sei sicuro di volere riavviare? ' && systemctl reboot"
 abbr poweroff "read -P 'Sei sicuro di volere spegnere? ' && systemctl poweroff"
 abbr suspend "read -P 'Sei sicuro di volere sospendere? ' && systemctl suspend"
 abbr bar "polybar main &disown"
-abbr cpolybar "nvim ~/.config/polybar/config"
+abbr cpolybar "kak ~/.config/polybar/config"
 abbr spolybar "pkill polybar; polybar main &disown"
 # TODO: si3
-abbr ci3 "nvim ~/.config/i3/config"
-abbr cnvim "nvim ~/.config/nvim/init.vim"
+abbr ci3 "kak ~/.config/i3/config"
 abbr shc "shellcheck --enable=all"
-abbr cfish "nvim ~/.config/fish/config.fish"
+abbr cfish "kak ~/.config/fish/config.fish"
 abbr sfish "source ~/.config/fish/config.fish"
-abbr cbash "nvim ~/.bashrc"
+abbr cbash "kak ~/.bashrc"
 abbr bc "insect"
-abbr ctmux "nvim ~/.tmux.conf"
+abbr ctmux "kak ~/.tmux.conf"
 abbr stmux "tmux source-file ~/.tmux.conf"
-abbr calacritty "nvim ~/.config/alacritty/alacritty.yml"
+abbr calacritty "kak ~/.config/alacritty/alacritty.yml"
 abbr cd "z"
-abbr vim "echo no"
-abbr nvim "echo no"
 abbr lbar "lemon | lemonbar -g 2560x70 -b -B '#ff1d2021' -F '#ffebdbb2' -p -f 'Input Mono Narrow:size=13' -o -20 | sh"
 abbr dmenu "dmenu -fn 'Input Mono Narrow' -nf '#545454' -sf '#ffffff' -sb '#212121'"
 
