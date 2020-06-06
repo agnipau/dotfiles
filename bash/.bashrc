@@ -19,7 +19,6 @@ git_branch() {
 PS1='\[\e[3m\]\[\e[1;34m\]\w\[\e[0m\] `git_branch`'
 
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
-eval "$(zoxide init bash)"
 
 export EDITOR=/usr/bin/nvim
 export BROWSER=/usr/bin/chromium
@@ -79,7 +78,6 @@ alias cbash="nvim ~/.bashrc"
 alias ctmux="nvim ~/.tmux.conf"
 alias stmux="tmux source-file ~/.tmux.conf"
 alias calacritty="nvim ~/.config/alacritty/alacritty.yml"
-# alias cd="z"
 alias dmenu="dmenu -fn 'Input Mono Narrow' -nf '#545454' -sf '#ffffff' -sb '#212121'"
 
 # # Start tmux automatically whenever a new terminal instance is opened.

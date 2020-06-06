@@ -101,11 +101,8 @@ abbr bc "insect"
 abbr ctmux "kak ~/.tmux.conf"
 abbr stmux "tmux source-file ~/.tmux.conf"
 abbr calacritty "kak ~/.config/alacritty/alacritty.yml"
-abbr cd "z"
 abbr lbar "lemon | lemonbar -g 2560x70 -b -B '#ff1d2021' -F '#ffebdbb2' -p -f 'Input Mono Narrow:size=13' -o -20 | sh"
 abbr dmenu "dmenu -fn 'Input Mono Narrow' -nf '#545454' -sf '#ffffff' -sb '#212121'"
-
-zoxide init fish | source
 
 # Anirak
 set color_grey = "757c87"

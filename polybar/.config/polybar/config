@@ -157,7 +157,7 @@ format-connected = <ramp-signal> <label-connected>
 label-connected = "%{A1:network:}%essid%%{A}"
 label-connected-foreground = ${xrdb:color7}
 
-label-disconnected = "No Wi-Fi"
+label-disconnected = "%{A1:network:}No Wi-Fi%{A}"
 label-disconnected-foreground = ${xrdb:color7}
 
 ramp-signal-0 = 1/5

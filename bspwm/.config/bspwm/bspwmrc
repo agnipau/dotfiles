@@ -38,9 +38,6 @@ bspc rule -a GParted state=floating center=true
 bspc rule -a ksnip state=floating center=true
 bspc rule -a AlacrittyFloating state=floating center=true
 bspc rule -a Arandr state=floating center=true
-bspc rule -a Chromium desktop='^2'
-bspc rule -a TelegramDesktop desktop='^3'
-bspc rule -a Spotify desktop='^4'
 
 bspc monitor -d term www telegram spotify cinque sei sette otto nove
 
