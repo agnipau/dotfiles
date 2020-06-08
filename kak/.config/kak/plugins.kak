@@ -18,6 +18,29 @@ plug "andreyorst/plug.kak" domain gitlab.com noload config %{
     }
 }
 
+plug "ul/kak-lsp" do %{
+    cargo install --force --path . --locked
+    cargo clean
+} config %{
+    define-command lsp-restart %{ lsp-stop; lsp-start }
+    set-option global lsp_completion_trigger "execute-keys 'h<a-h><a-k>\S[^\s,=;*(){}\[\]]\z<ret>'"
+    set-option global lsp_diagnostic_line_error_sign "!"
+    set-option global lsp_diagnostic_line_warning_sign "?"
+    hook global WinSetOption filetype=(rust|python|dart|sh|typescript|javascript|html|css|json|go|c|cpp) %{
+        map window user "l" ": enter-user-mode lsp<ret>" -docstring "LSP mode"
+        map window lsp "n" "<esc>: lsp-find-error --include-warnings<ret>" -docstring "find next error or warning"
+        map window lsp "p" "<esc>: lsp-find-error --previous --include-warnings<ret>" -docstring "find previous error or warning"
+        lsp-enable-window
+        hook -always global KakEnd .* lsp-exit
+        set-option window lsp_hover_anchor true
+        set-face window DiagnosticError default+u
+        set-face window DiagnosticWarning default+u
+    }
+    hook global WinSetOption filetype=rust %{
+        set-option window lsp_server_configuration rust.clippy_preference="on"
+    }
+}
+
 plug "matgua/anirak.kak" theme config %{
     colorscheme anirak
     add-highlighter global/ column 80 "default,%opt{anirak_gray_cursor_line}"
@@ -33,4 +56,6 @@ plug "alexherbo2/auto-pairs.kak" %{
 }
 
 plug "occivink/kakoune-sudo-write"
+
+plug "atomrc/kakoune-typescript"
 

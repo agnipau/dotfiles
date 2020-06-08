@@ -34,7 +34,7 @@ set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk
 set -x DOTNET_CLI_TELEMETRY_OPTOUT true
 set -x XDG_CONFIG_HOME /home/matte/.config
 set -x ANDROID_SDK_ROOT /opt/android-sdk
-# set -x JAVA_OPTS '-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
+set -x JAVA_OPTS '-XX:+IgnoreUnrecognizedVMOptions' # --add-modules java.se.ee'
 set -x ANDROID_HOME $ANDROID_SDK_ROOT
 set -x PATH \
     /home/matte/bin \

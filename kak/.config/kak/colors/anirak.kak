@@ -115,11 +115,11 @@ face global Information "%opt{anirak_white},%opt{anirak_menu_inactive_bg}"
 face global Error "%opt{anirak_error_fg},default"
 
 # All status line: what we type, but also client@[session]
-face global StatusLine "%opt{anirak_gray},default"
+face global StatusLine "%opt{anirak_white},default"
 # Insert mode, prompt mode
-face global StatusLineMode "%opt{anirak_white},default"
+face global StatusLineMode "%opt{anirak_cyan},default+b"
 # Message like '1 sel'
-face global StatusLineInfo "%opt{anirak_gray},default"
+face global StatusLineInfo "%opt{anirak_white},default"
 # Count
 face global StatusLineValue "%opt{anirak_white},default"
 # Cursor for command line

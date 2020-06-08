@@ -36,6 +36,8 @@ bspc rule -a Pcmanfm state=floating center=true
 bspc rule -a Gdmap state=floating center=true
 bspc rule -a GParted state=floating center=true
 bspc rule -a ksnip state=floating center=true
+bspc rule -a Xarchiver state=floating center=true
+bspc rule -a Pavucontrol state=floating center=true
 bspc rule -a AlacrittyFloating state=floating center=true
 bspc rule -a Arandr state=floating center=true
 

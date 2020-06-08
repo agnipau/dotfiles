@@ -1,5 +1,6 @@
-evaluate-commands %sh(
+evaluate-commands %sh{
     config_files="
+        mappings.kak
         common.kak
         languages.kak
         plugins.kak
@@ -14,5 +15,5 @@ evaluate-commands %sh(
             }
         "
     done
-)
+}
 
