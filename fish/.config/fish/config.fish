@@ -29,12 +29,12 @@ set -x TERMINAL /usr/bin/alacritty
 set -x STATUSBAR /usr/bin/polybar
 set -x TESSDATA_PREFIX /usr/share/tessdata
 set -x SXHKD_SHELL /usr/bin/sh
-set -x TERM xterm-256color
+set -x TERM screen-256color
 set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk
 set -x DOTNET_CLI_TELEMETRY_OPTOUT true
 set -x XDG_CONFIG_HOME /home/matte/.config
 set -x ANDROID_SDK_ROOT /opt/android-sdk
-set -x JAVA_OPTS '-XX:+IgnoreUnrecognizedVMOptions' # --add-modules java.se.ee'
+set -x JAVA_OPTS '-XX:+IgnoreUnrecognizedVMOptions'
 set -x ANDROID_HOME $ANDROID_SDK_ROOT
 set -x PATH \
     /home/matte/bin \
@@ -53,7 +53,7 @@ set -x PATH \
 
 set -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 set -x FZF_DEFAULT_OPTS "
-  --multi --inline-info --reverse --height 95%
+  --multi --inline-info --height 95%
   --color fg:8,hl:7,fg+:6,bg+:0,hl+:7
   --color info:0,prompt:6,spinner:6,pointer:6,marker:6
 "
@@ -118,28 +118,29 @@ set selection_color = "15194c"
 # Material darker
 # set color_grey = "545454"
 
-set fish_color_normal            white
-set fish_color_command           --bold white
-set fish_color_quote             green
-set fish_color_redirection       cyan
-set fish_color_end               --bold black
-set fish_color_error             red
-set fish_color_param             white
-set fish_color_comment           --bold black
-set fish_color_search_match      --background=blue
-set fish_color_operator          --bold yellow
-set fish_color_escape            magenta
-set fish_color_autosuggestion    $color_grey
-set fish_color_cancel            --bold red
-set fish_pager_color_completion  $color_grey
+set fish_color_normal white
+set fish_color_command --bold white
+set fish_color_quote green
+set fish_color_redirection cyan
+set fish_color_end --bold black
+set fish_color_error red
+set fish_color_param white
+set fish_color_comment --bold black
+set fish_color_search_match --background=blue
+set fish_color_operator --bold yellow
+set fish_color_escape magenta
+set fish_color_autosuggestion $color_grey
+set fish_color_cancel --bold red
+set fish_pager_color_completion $color_grey
 set fish_pager_color_description $color_grey
-set fish_pager_color_prefix      --bold white
+set fish_pager_color_prefix --bold white
 
 bass (ssh-agent -s) >/dev/null
 
-# Start tmux automatically whenever a new terminal instance is opened.
+# Start tmux automatically whenever a new terminal instance is opened
 test -z $TMUX;
   and test $DISPLAY;
+  and status --is-interactive;
   and tmux -u
 
 # Start X automatically only if in tty1

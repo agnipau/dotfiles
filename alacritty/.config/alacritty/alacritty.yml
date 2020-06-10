@@ -83,9 +83,9 @@ colors:
   primary:
     background: "0x0c0d10"
     foreground: "0xffffff"
-  cursor:
-    text: "0xffffff"
-    cursor: "0x3743ee"
+  # cursor:
+  #   text: "0xffffff"
+  #   cursor: "0x3743ee"
   normal:
     black: "0x1e2227"
     red: "0xff4766"
