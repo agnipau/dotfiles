@@ -1,0 +1,13 @@
+#!/usr/bin/sh
+
+wid="$1"
+class="$2"
+instance="$3"
+consequences="$4"
+wmname="$(xprop -id "${wid}" WM_NAME | awk '{ print $3 }')"
+
+[ "${wmname}" = '"Question"' ] && [ "${class}" = "Emacs" ] && {
+    printf '%s' "state=floating"
+    exit
+}
+

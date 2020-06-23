@@ -2,7 +2,7 @@
 override-redirect = true
 wm-restack = bspwm
 width = 100%
-height = 4%
+height = 3%
 fixed-center = false
 bottom = true
 dpi = ${xrdb:Xft.dpi:-1}
@@ -21,7 +21,7 @@ font-2 = "Font Awesome 5 Free:style=Solid:size=12;4"
 font-3 = "Font Awesome 5 Brands:size=12;4"
 
 modules-left = date separator bspwm
-modules-right = spotify separator wlan empty-separator pulseaudio empty-separator cpu empty-separator memory empty-separator battery separator bluetooth screenshot
+modules-right = wlan empty-separator pulseaudio empty-separator cpu empty-separator memory empty-separator battery separator bluetooth screenshot powermenu
 
 ; tray-position = right
 ; tray-padding = 2
@@ -182,6 +182,12 @@ label = %{A3:calendar-term:}%date% %time%%{A}
 [module/screenshot]
 type = custom/text
 content = %{A1:flameshot gui:}%{A}
+content-foreground = ${xrdb:color7}
+content-padding = 1
+
+[module/powermenu]
+type = custom/text
+content = %{A1:poweroff-menu:}%{A}
 content-foreground = ${xrdb:color7}
 content-padding = 1
 

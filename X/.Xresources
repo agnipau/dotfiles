@@ -1,5 +1,4 @@
 ! Anirak
-#define alpha_bg argb:c80c0d10
 #define base00 #0c0d10
 #define base01 #ff4766
 #define base02 #17ff93

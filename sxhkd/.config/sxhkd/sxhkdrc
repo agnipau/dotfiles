@@ -10,8 +10,10 @@ super + d
     rofi -show run
 super + shift + d
     desktops
-uper + w
+super + w
     $BROWSER
+super + e
+    emacs
 super + 0
     /home/matte/.cargo/bin/xcursorlocate
 super + shift + s
@@ -19,7 +21,7 @@ super + shift + s
 super + BackSpace
     poweroff-menu
 super + shift + c
-    xcolor | tr -d '\n' | xsel -ib
+    xcolor | tr -d '\n' | xclip -sel clipboard
 super + x
     command -v slock && (slock & xset dpms force off)
 super + shift + t
