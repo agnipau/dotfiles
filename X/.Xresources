@@ -171,6 +171,9 @@ Sxiv.font: Input Mono Narrow 16
 Sxiv.background: #282828
 Sxiv.foreground: #ebdbb2
 
+! Emacs
+! emacs.verticalScrollBars: false
+
 ! General
 Xft.autohint: 1
 Xft.antialias: 1

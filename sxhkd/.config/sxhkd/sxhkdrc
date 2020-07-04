@@ -13,7 +13,7 @@ super + shift + d
 super + w
     $BROWSER
 super + e
-    emacs
+    emacsclient -c
 super + 0
     /home/matte/.cargo/bin/xcursorlocate
 super + shift + s

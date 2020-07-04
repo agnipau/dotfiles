@@ -1,51 +1,161 @@
-(use-package bash-completion
+;;; langs.el --- Configuration for LSP and various programming languages
+
+;;; Commentary:
+;;; Configuration for LSP and various programming languages.
+
+;;; Code:
+
+(use-package typescript-mode
   :straight t
   :config
-  (autoload 'bash-completion-dynamic-complete 
-   "bash-completion"
-   "BASH completion hook")
-  (add-hook 'shell-dynamic-complete-functions
-	    'bash-completion-dynamic-complete))
+  (setq typescript-mode-hook '(lsp-deferred)))
 
-(use-package go-mode
+
+(use-package js
+  :config
+  (defun agnipau/js-lsp-deferred ()
+    "Activate LSP only when dealing with JS files, not JSON files."
+    (unless (string-match  "\\.json$" (buffer-name))
+      (lsp-deferred)))
+  (defun agnipau/js-mode-bindings ()
+    "Sets a hotkey for using the json-snatcher plugin."
+    (when (string-match  "\\.json$" (buffer-name))
+      (local-set-key (kbd "C-c C-g") 'jsons-print-path)))
+
+  (add-to-list 'js-mode-hook 'agnipau/js-lsp-deferred))
+
+
+(use-package json-snatcher
   :straight t
-  :commands go-mode
-  :mode "\\.go\\'"
-  :hook ((go-mode . (lambda () (add-hook 'before-save-hook
-					 #'gofmt-before-save)))))
+  :config
+  (add-hook 'js-mode-hook 'agnipau/js-mode-bindings))
 
-(use-package elpy
+(use-package counsel-jq
+  ;; NOTE: This package uses swiper so it must be loaded after it.
+  :after swiper
+  :straight t)
+
+
+(use-package lsp-mode
+  :straight t
+  :commands (lsp lsp-deferred)
+  :after typescript-mode
+  :init
+  (setq lsp-keymap-prefix (kbd "C-c l"))
+  :custom
+  ;; 100MB
+  (gc-cons-threshold 100000000)
+  ;; Size in bytes: 1024b = 1k, 1k * 1024 = 1mb
+  (read-process-output-max (* 1024 1024))
+  :hook ((sh-mode . lsp-deferred)
+         (typescript-mode . lsp-deferred)
+         (lsp-mode . lsp-enable-which-key-integration)))
+
+(use-package lsp-ui
+  :straight t
+  :after (lsp-mode anirak-theme)
+  :commands lsp-ui-mode)
+
+(use-package lsp-ivy
+  :straight t
+  :after (lsp-mode ivy)
+  :commands lsp-ivy-workspace-symbol)
+
+
+(use-package lsp-python-ms
   :straight t
   :init
-  (elpy-enable))
+  (setq lsp-python-ms-executable
+        (expand-file-name "~/dev/python-language-server/output/bin/Release/linux-x64/publish/Microsoft.Python.LanguageServer"))
+  :hook
+  (python-mode . (lambda ()
+                 (require 'lsp-python-ms)
+                 (lsp-deferred))))
 
-(use-package fish-mode
+
+(use-package rustic
   :straight t
-  :mode "\\.fish\\'"
-  :commands fish-mode)
+  :after (flycheck anirak-theme)
+  :config
+  (setq rustic-lsp-server 'rust-analyzer)
+  (push 'rustic-clippy flycheck-checkers))
+
+
+(use-package csharp-mode
+  :straight t)
+
+(use-package omnisharp
+  :straight t
+  :after (company flycheck)
+  :init
+  (setq omnisharp-server-executable-path (expand-file-name "~/dev/omnisharp/run"))
+  :config
+  (add-hook 'csharp-mode-hook 'omnisharp-mode)
+  ;; Company integration
+  (eval-after-load
+   'company
+   '(add-to-list 'company-backends 'company-omnisharp))
+  (add-hook 'csharp-mode-hook #'company-mode)
+  ;; Flycheck integration
+  (add-hook 'csharp-mode-hook #'flycheck-mode))
+
+
+;; FIXME: Syntax highlighting is broken
+(use-package yaml-mode
+  :straight t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
+
 
 (use-package dart-mode
-  :straight t
-  :mode "\\.dart\\'"
-  :commands dart-mode)
+  :straight t)
 
-(use-package tide
+(use-package lsp-dart
   :straight t
-  :after (typescript-mode company flycheck)
-  :hook '((typescript-mode . tide-setup)
-         (typescript-mode . tide-hl-identifier-mode)
-         (before-save . tide-format-before-save)))
+  :hook (dart-mode . lsp))
 
-(use-package haskell-mode
- :straight t
- :mode "\\.hs\\'"
- :commands haskell-mode)
 
-(use-package rust-mode
+(defun agnipau/lsp-actions-on-save ()
+  "Add hooks to format and organize imports on save."
+  (add-hook 'before-save-hook #'lsp-format-buffer t t)
+  (add-hook 'before-save-hook #'lsp-organize-imports t t))
+
+(use-package cc-mode
+  :config
+  (add-hook 'c-mode-hook #'agnipau/lsp-actions-on-save))
+
+(use-package ccls
   :straight t
-  :mode "\\.rs\\'"
-  :commands rust-mode
+  :config
+  (setq ccls-executable "/usr/bin/ccls")
+  (add-to-list 'c-mode-hook 'lsp-deferred)
+  (add-to-list 'c++-mode-hook 'lsp-deferred))
+
+(use-package modern-cpp-font-lock
+  :straight t
+  :config
+  (modern-c++-font-lock-global-mode t))
+
+
+(use-package markdown-mode
+  :straight t
+  :mode
+  (("README\\.md\\'" . gfm-mode)
+   ("\\.md\\'" . markdown-mode)
+   ("\\.markdown\\'" . markdown-mode))
   :init
-  (setq lsp-rust-server 'rust-analyzer
-	rust-format-on-save t))
+  (setq markdown-command "multimarkdown"))
 
+(use-package grip-mode
+  :straight t
+  :bind (:map markdown-mode-command-map
+         ("g" . grip-mode))
+  :config
+  (setq grip-update-after-change nil)
+  (setq grip-preview-use-webkit nil))
+
+
+(use-package fish-mode
+  :straight t)
+
+;;; langs.el ends here

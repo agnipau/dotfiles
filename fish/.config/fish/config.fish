@@ -5,8 +5,8 @@ function fish_mode_prompt --description 'Displays the current mode'
     return
 end
 
-set -x EDITOR /usr/bin/nvim
-set -x BROWSER /usr/bin/chromium
+set -x EDITOR /usr/bin/emacsclient -c
+set -x BROWSER /usr/bin/firefox
 set -e PAGER
 set -x SUDO_ASKPASS /home/matte/bin/rofiecho
 set -x GOPATH /home/matte/go
@@ -43,18 +43,19 @@ set -x FZF_DEFAULT_OPTS "
   --color info:0,prompt:6,spinner:6,pointer:6,marker:6
 "
 
+
+abbr uupd "yay --color=auto -Syyuv"
+abbr upd "yay --color=auto -Syuv"
+abbr autorem "yay --color=auto -R (yay -Qdtq)"
+abbr installed "yay --color=auto -Qe"
+abbr src "yay --color=auto -Ss"
+abbr ins "yay -S --needed --noconfirm"
+abbr pinfo "yay -Qi --color=auto"
+abbr rpinfo "yay -Si --color=auto"
+abbr rem "yay -R --noconfirm"
 abbr ref "sudo reflector --verbose --sort rate --save /etc/pacman.d/mirrorlist"
-abbr uupd "sudo aura --color=always -Syyuv"
-abbr upd "sudo aura --color=always -Syuv"
-abbr autorem "sudo aura --color=always -R (aura -Qdtq)"
 abbr mkdir "mkdir -p"
-abbr installed "aura --color=auto -Qe"
-abbr src "aura --color=always -Ss"
-abbr ins "sudo aura -S --needed --noconfirm"
 abbr pygm "pygmentize -f png -O 'font_name=Input Mono Narrow,font_size=32' -o pygmentscreen.png script.py"
-abbr pinfo "aura -Qi --color=always"
-abbr rpinfo "aura -Si --color=always"
-abbr rem "sudo aura -R --noconfirm"
 abbr ls "exa -lh -s type"
 abbr la "exa -lah -s type"
 abbr t "tmux -u"
@@ -95,6 +96,10 @@ abbr gp "git push"
 abbr mpv "devour-hide mpv"
 abbr pcmanfm "devour-hide pcmanfm"
 abbr sxiv "devour-hide sxiv"
+abbr code "devour-hide code --verbose >/dev/null 2>&1"
+abbr emacsd "emacs --daemon"
+abbr emacsc "emacsclient -c &disown"
+abbr emacsq "emacsclient -e '(kill-emacs)'"
 
 # Anirak
 set color_grey = "757c87"
