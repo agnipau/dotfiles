@@ -235,6 +235,8 @@
 (use-package company
   :straight t
   :after yasnippet
+  :commands company-mode
+  :hook ((after-init . global-company-mode))
   :bind (:map company-active-map
               ("C-n" . company-select-next)
               ("C-p" . company-select-previous))
@@ -244,8 +246,7 @@
         ;; Delay to show suggestions.
         company-idle-delay 0.00
         company-global-modes '(not shell-mode not eshell-mode)
-        company-tooltip-align-annotations t)
-  (global-company-mode 1))
+        company-tooltip-align-annotations t))
 
 (use-package flycheck
   :straight t
