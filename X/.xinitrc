@@ -9,11 +9,10 @@ unclutter &
 udiskie &
 sxhkd &
 xsetroot -cursor_name left_ptr
-# polybar main &
+polybar main &
 ~/.fehbg &
 blueman-applet &
 # wmname LG3D
-exec startxfce4
-# exec bspwm
+exec bspwm
 # exec awesome
 
