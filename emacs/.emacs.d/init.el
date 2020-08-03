@@ -7,6 +7,7 @@
 
 ;; -- Misc --
 
+(setq create-lockfiles nil)
 (setq inhibit-x-resources t)
 ;; Start emacs in *scratch* buffer.
 (setq inhibit-startup-screen t)
@@ -49,6 +50,10 @@
 
 ;; Highlight current line.
 (global-hl-line-mode 1)
+
+;; Line numbers.
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode 1)
 
 ;; No tabs
 (setq-default indent-tabs-mode nil)
@@ -248,6 +253,11 @@
         company-global-modes '(not shell-mode not eshell-mode)
         company-tooltip-align-annotations t))
 
+(use-package company-box
+  :straight t
+  :after company
+  :hook (company-mode . company-box-mode))
+
 (use-package flycheck
   :straight t
   :config
@@ -385,7 +395,22 @@
 (use-package anirak-theme
   :straight (anirak-theme :type git :host github :repo "agnipau/anirak-theme.el")
   :config
-  (load-theme 'anirak t))
+  (load-theme 'anirak t)
+
+  (defun agnipau/toggle-theme ()
+    "Toggle dark and light Anirak theme."
+    (interactive)
+    (if (get 'agnipau/toggle-theme 'is-light)
+        (progn
+          (load-theme 'anirak t)
+          ;; Needed to refresh fci color
+          (agnipau/global-fci-mode)
+          (put 'agnipau/toggle-theme 'is-light nil))
+      (progn
+        (load-theme 'anirak-light t)
+        ;; Needed to refresh fci color
+        (agnipau/global-fci-mode)
+        (put 'agnipau/toggle-theme 'is-light t)))))
 
 ;; (use-package solarized-theme
 ;;   :straight t
@@ -396,49 +421,53 @@
   :straight t
   :config
   (setq-default
+   ;; TODO: It would be cooler to right align some items but Emacs
+   ;; doesn't have a builtin way to do this so the only way would be
+   ;; to compute some padding every time but it adds a lot of overhead
+   ;; for nothing.
    mode-line-format
-   (list mode-line-front-space
-         '(:eval
-           (let ((eol (coding-system-eol-type buffer-file-coding-system)))
-             (propertize
-              (pcase eol
-                (0 "LF")
-                (1 "CRLF")
-                (2 "CR")
-                (_ ""))
-              'face nil
-              'mouse-face nil
-              'help-echo (format "End-of-line style: %s\nmouse-1: Cycle"
-                                 (pcase eol
-                                   (0 "Unix-style LF")
-                                   (1 "DOS-style CRLF")
-                                   (2 "Mac-style CR")
-                                   (_ "Undecided")))
-              'local-map (let ((map (make-sparse-keymap)))
-                           (define-key map [mode-line mouse-1] 'mode-line-change-eol)
-                           map))))
-         "  "
-         '(:eval
-           (propertize
-            (let ((sys (coding-system-plist buffer-file-coding-system)))
-              (cond ((memq (plist-get sys :category)
-                           '(coding-category-undecided coding-category-utf-8))
-                     "UTF-8")
-                    (t (upcase (symbol-name (plist-get sys :name))))))
-            'face nil
-            'mouse-face nil
-            'help-echo 'mode-line-mule-info-help-echo
-            'local-map mode-line-coding-system-map))
-         "  "
-         '(:eval (propertize "%b" 'face nil
-                             'help-echo (buffer-file-name)))
-         "  "
-         '(:eval (propertize (format "%%l:%%c / %d" (count-lines (point-min) (point-max)))
-                             'face nil 'help-echo
-                             (format "%d%%" (/ (* 100 (point)) (buffer-size)))))
-         "  "
-         minions-mode-line-modes
-         mode-line-end-spaces)))
+   `(,mode-line-front-space
+     (:eval (propertize "%b" 'face nil
+                        'help-echo (buffer-file-name)))
+     "  "
+     ,minions-mode-line-modes
+     " "
+     (:eval
+      (let ((eol (coding-system-eol-type buffer-file-coding-system)))
+        (propertize
+         (pcase eol
+           (0 "LF")
+           (1 "CRLF")
+           (2 "CR")
+           (_ ""))
+         'face nil
+         'mouse-face nil
+         'help-echo (format "End-of-line style: %s\nmouse-1: Cycle"
+                            (pcase eol
+                              (0 "Unix-style LF")
+                              (1 "DOS-style CRLF")
+                              (2 "Mac-style CR")
+                              (_ "Undecided")))
+         'local-map (let ((map (make-sparse-keymap)))
+                      (define-key map [mode-line mouse-1] 'mode-line-change-eol)
+                      map))))
+     "  "
+     (:eval
+      (propertize
+       (let ((sys (coding-system-plist buffer-file-coding-system)))
+         (cond ((memq (plist-get sys :category)
+                      '(coding-category-undecided coding-category-utf-8))
+                "UTF-8")
+               (t (upcase (symbol-name (plist-get sys :name))))))
+       'face nil
+       'mouse-face nil
+       'help-echo 'mode-line-mule-info-help-echo
+       'local-map mode-line-coding-system-map))
+     ;; "  "
+     ;; (:eval (propertize
+     ;;         (format "%%l:%%c / %d" (count-lines (point-min) (point-max)))
+     ;;         'face nil 'help-echo (format-mode-line "%q")))
+     ,mode-line-end-spaces)))
 
 ;; -- Not sure --
 
@@ -501,7 +530,10 @@ If nil, fallback to the prettify-symbols based replacement (add +font features t
       (?.  . ,(regexp-opt '(".." "..." ".?" ".=" ".-" "..<")))
       (?/  . ,(regexp-opt '("//" "/**" "/*" "///" "/=" "/==" "/>")))
       (?:  . ,(regexp-opt '(":=" "::=" ":?>" ":?" "::" ":::" ":<" ":>")))
-      (?\; . ,(regexp-opt '(";;")))
+      ;; NOTE: JetBrains Mono doesn't have ligatures for ;;; but
+      ;; including that anyway has the great effect of not applying
+      ;; the ;; ligature only to the first two characters.
+      (?\; . ,(regexp-opt '(";;" ";;;")))
       (?<  . ,(regexp-opt '("<!--" "<<-" "<-" "<=>" "<=" "<|" "<||" "<|||" "<|>" "<:" "<>" "<-<" "<<<" "<=<" "<<=" "<==" "<==>" "<~>" "<<" "<-|" "<=|" "<~~" "<~" "<$>" "<$" "<+>" "<+" "<*>" "<*" "</" "</>" "<->")))
       (?=  . ,(regexp-opt '("==" "=:=" "===" "=>" "=!=" "=/=" "==>" "=>>")))
       (?>  . ,(regexp-opt '(">=" ">]" ">:" ">>>" ">=>" ">>=" ">>-" ">-")))
@@ -581,7 +613,7 @@ Otherwise it sets the buffer-local composition table to a composition table enha
 If SHOW is positive enable hidden chars, if negative disable hidden chars."
     (interactive)
     (if (or (and (eq nil show) (get 'agnipau/toggle-hidden-chars 'enabled))
-            (and (not (eq nil show)) (< show 1)))
+           (and (not (eq nil show)) (< show 1)))
         (progn
           (setq whitespace-style '(face tabs tab-mark trailing))
           (put 'agnipau/toggle-hidden-chars 'enabled nil)

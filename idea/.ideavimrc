@@ -1,0 +1,32 @@
+set ideajoin
+set multiple-cursors
+set commentary
+set surround
+set exchange
+set highlightedyank
+set clipboard+=unnamed
+set ideamarks
+set ignorecase
+set smartcase
+set number
+set relativenumber
+set incsearch
+set matchpairs=(:),{:},[:],<:>
+
+nnoremap <c-j> J
+nnoremap H 0
+nnoremap J 3j
+nnoremap K 3k
+nnoremap L $
+nnoremap Y y$
+
+" xnoremap // y/\V<c-r>=escape(@",'/\')<cr><cr>
+xnoremap <c-j> J
+xnoremap H 0
+xnoremap J 3j
+xnoremap K 3k
+xnoremap L $
+xnoremap Y y$
+
+command! W w
+

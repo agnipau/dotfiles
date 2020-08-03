@@ -27,6 +27,7 @@
    "tw" '(agnipau/toggle-hidden-chars :wk "Toggle hidden characters")
    "tn" '(hydra-evil-numbers/body :wk "Increment / decrement number at point")
    "tr" '(agnipau/toggle-rainbow-mode :wk "Toggle `rainbow-mode'")
+   "tt" '(agnipau/toggle-theme :wk "Toggle theme")
 
    ;; TODO: Find a way to use double space for search.
    "s" '(:wk "Search")

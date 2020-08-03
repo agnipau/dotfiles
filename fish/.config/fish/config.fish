@@ -5,7 +5,7 @@ function fish_mode_prompt --description 'Displays the current mode'
     return
 end
 
-set -x EDITOR /usr/bin/emacsclient -c
+set -x EDITOR /usr/bin/nvim
 set -x BROWSER /usr/bin/firefox
 set -e PAGER
 set -x SUDO_ASKPASS /home/matte/bin/rofiecho
@@ -16,10 +16,13 @@ set -x TESSDATA_PREFIX /usr/share/tessdata
 set -x SXHKD_SHELL /usr/bin/sh
 set -x TERM screen-256color
 set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk
+# set -x JAVA_HOME /usr/lib/jvm/java-11-openjdk
 set -x DOTNET_CLI_TELEMETRY_OPTOUT true
 set -x XDG_CONFIG_HOME /home/matte/.config
 set -x ANDROID_SDK_ROOT /opt/android-sdk
 set -x JAVA_OPTS '-XX:+IgnoreUnrecognizedVMOptions'
+# set -x _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
+set -x _JAVA_AWT_WM_NONREPARENTING 1
 set -x ANDROID_HOME $ANDROID_SDK_ROOT
 set -x PATH \
     /home/matte/bin \
@@ -66,6 +69,7 @@ abbr rmf "rm"
 abbr glog "git log --no-color"
 abbr rm "trash --"
 abbr q "exit"
+abbr qq "exit"
 abbr rml "trash-list"
 abbr rmr "trash-restore"
 abbr rme "trash-empty"

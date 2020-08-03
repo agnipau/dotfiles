@@ -12,6 +12,7 @@ emacs/.emacs.d/.log/
 emacs/.emacs.d/custom-file.el
 emacs/.emacs.d/forge-database.sqlite
 emacs/.emacs.d/transient/
+emacs/.emacs.d/eshell/
 nvim/.config/nvim/undodir
 nvim/.config/nvim/.netrwhist
 kak/.config/kak/plugins

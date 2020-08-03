@@ -5,13 +5,36 @@
 
 ;;; Code:
 
+(defun agnipau/lsp-actions-on-save ()
+  "Add hooks to format and organize imports on save."
+  (add-hook 'before-save-hook #'lsp-format-buffer t t)
+  (add-hook 'before-save-hook #'lsp-organize-imports t t))
+
+
 (use-package typescript-mode
   :straight t
+  :mode
+  (("\\.ts\\'" . typescript-mode)
+   ("\\.tsx\\'" . typescript-mode))
   :config
   (setq typescript-mode-hook '(lsp-deferred)))
 
+(use-package web-mode
+  :straight t
+  :mode (("\\.tsx\\'" . web-mode)
+         ("\\.jsx\\'" . web-mode)))
+
+(use-package prettier-js
+  :straight t
+  :after web-mode
+  :config
+  (add-hook 'web-mode-hook #'prettier-js-mode))
+
 
 (use-package js
+  :mode
+  (("\\.js\\'" . js-mode)
+   ("\\.jsx\\'" . js-mode))
   :config
   (defun agnipau/js-lsp-deferred ()
     "Activate LSP only when dealing with JS files, not JSON files."
@@ -22,7 +45,8 @@
     (when (string-match  "\\.json$" (buffer-name))
       (local-set-key (kbd "C-c C-g") 'jsons-print-path)))
 
-  (add-to-list 'js-mode-hook 'agnipau/js-lsp-deferred))
+  (add-hook 'js-mode-hook 'agnipau/js-lsp-deferred)
+  (add-hook 'js-mode-hook #'agnipau/lsp-actions-on-save))
 
 
 (use-package json-snatcher
@@ -103,8 +127,9 @@
 ;; FIXME: Syntax highlighting is broken
 (use-package yaml-mode
   :straight t
-  :config
-  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
+  :mode
+  (("\\.yml\\'" . yaml-mode)
+   ("\\.yaml\\'" . yaml-mode)))
 
 
 (use-package dart-mode
@@ -115,11 +140,6 @@
   :hook (dart-mode . lsp))
 
 
-(defun agnipau/lsp-actions-on-save ()
-  "Add hooks to format and organize imports on save."
-  (add-hook 'before-save-hook #'lsp-format-buffer t t)
-  (add-hook 'before-save-hook #'lsp-organize-imports t t))
-
 (use-package cc-mode
   :config
   (add-hook 'c-mode-hook #'agnipau/lsp-actions-on-save))
@@ -128,8 +148,8 @@
   :straight t
   :config
   (setq ccls-executable "/usr/bin/ccls")
-  (add-to-list 'c-mode-hook 'lsp-deferred)
-  (add-to-list 'c++-mode-hook 'lsp-deferred))
+  (add-hook 'c-mode-hook 'lsp-deferred)
+  (add-hook 'c++-mode-hook 'lsp-deferred))
 
 (use-package modern-cpp-font-lock
   :straight t
@@ -149,7 +169,7 @@
 (use-package grip-mode
   :straight t
   :bind (:map markdown-mode-command-map
-         ("g" . grip-mode))
+              ("g" . grip-mode))
   :config
   (setq grip-update-after-change nil)
   (setq grip-preview-use-webkit nil))

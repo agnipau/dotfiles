@@ -21,7 +21,8 @@ font-2 = "Font Awesome 5 Free:style=Solid:size=12;5"
 font-3 = "Font Awesome 5 Brands:size=12;5"
 
 modules-left = date separator bspwm
-modules-right = wlan empty-separator pulseaudio empty-separator cpu empty-separator memory empty-separator battery separator bluetooth screenshot powermenu
+; modules-right = wlan empty-separator pulseaudio empty-separator cpu empty-separator memory empty-separator battery separator bluetooth screenshot powermenu
+modules-right = pulseaudio empty-separator cpu empty-separator memory empty-separator battery separator bluetooth screenshot powermenu
 
 ; tray-position = right
 ; tray-padding = 2

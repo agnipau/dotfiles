@@ -8,8 +8,8 @@ window:
     y: 200
 
   padding:
-    x: 20
-    y: 20
+    x: 10
+    y: 10
 
   dynamic_padding: false
 
@@ -50,6 +50,27 @@ scrolling:
 #   size: 13.0
 #   offset:
 #     x: -1
+#     y: 0
+#   glyph_offset:
+#     x: 0
+#     y: 0
+
+# font:
+#   normal:
+#     family: Iosevka Term SS07
+#     style: Regular
+#   bold:
+#     family: Iosevka Term SS07
+#     style: Bold
+#   italic:
+#     family: Iosevka Term SS07
+#     style: Italic
+#   bold_italic:
+#     family: Iosevka Term SS07
+#     style: Bold Italic
+#   size: 12.0
+#   offset:
+#     x: 0
 #     y: 0
 #   glyph_offset:
 #     x: 0
@@ -230,7 +251,7 @@ colors:
 #     cyan: "0x8FBCBB"
 #     white: "0xECEFF4"
 
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
   color: "0xffffff"
@@ -242,7 +263,7 @@ selection:
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: false
 
-dynamic_title: true
+window.dynamic_title: true
 
 cursor:
   style: Block

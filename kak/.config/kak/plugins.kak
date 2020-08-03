@@ -41,7 +41,7 @@ plug "ul/kak-lsp" do %{
     }
 }
 
-plug "matgua/anirak.kak" theme config %{
+plug "agnipau/anirak.kak" theme config %{
     colorscheme anirak
     add-highlighter global/ column 80 "default,%opt{anirak_gray_cursor_line}"
 }

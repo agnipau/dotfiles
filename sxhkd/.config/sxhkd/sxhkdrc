@@ -13,12 +13,14 @@ super + shift + d
 super + w
     $BROWSER
 super + e
+    emacs
+super + shift + e
     emacsclient -c
 super + 0
     /home/matte/.cargo/bin/xcursorlocate
 super + shift + s
     flameshot gui
-super + BackSpace
+super + shift + BackSpace
     poweroff-menu
 super + shift + c
     xcolor | tr -d '\n' | xclip -sel clipboard
