@@ -20,8 +20,9 @@ set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk
 set -x DOTNET_CLI_TELEMETRY_OPTOUT true
 set -x XDG_CONFIG_HOME /home/matte/.config
 set -x ANDROID_SDK_ROOT /opt/android-sdk
+set -x ANDROID_NDK_ROOT /opt/android-sdk/ndk/21.0.6113669
 set -x JAVA_OPTS '-XX:+IgnoreUnrecognizedVMOptions'
-# set -x _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
+# set -x _JAVA_OPTIONS '-XX:+IgnoreUnrecognizedVMOptions -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 set -x ANDROID_HOME $ANDROID_SDK_ROOT
 set -x PATH \
@@ -74,12 +75,13 @@ abbr rml "trash-list"
 abbr rmr "trash-restore"
 abbr rme "trash-empty"
 abbr rmef "sudo rm -rf ~/.local/share/Trash/files/*"
-abbr k "xset r rate 200 40; sudo localectl set-x11-keymap us pc105 intl caps:ctrl_modifier"
+abbr k "xset r rate 200 40; sudo localectl set-x11-keymap it pc105 us caps:ctrl_modifier"
+abbr kg "gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 40; gsettings set org.gnome.desktop.peripherals.keyboard delay 200"
 abbr airpods "bluetoothctl -- connect 7C:9A:1D:C1:32:5F"
 abbr reboot "read -P 'Sei sicuro di volere riavviare? ' && systemctl reboot"
 abbr poweroff "read -P 'Sei sicuro di volere spegnere? ' && systemctl poweroff"
 abbr suspend "read -P 'Sei sicuro di volere sospendere? ' && systemctl suspend"
-abbr bar "polybar main &disown"
+abbr bar "killall polybar; polybar main &disown"
 abbr cpolybar "nvim ~/.config/polybar/config"
 abbr spolybar "pkill polybar; polybar main &disown"
 # TODO: si3
