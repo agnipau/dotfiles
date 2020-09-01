@@ -35,8 +35,10 @@
 
 ;; Set default, fixed and variable pitch fonts.
 (agnipau/set-fonts
- (default :family "JetBrains Mono" :weight normal :height 120 :width normal)
- (fixed-pitch :family "JetBrains Mono" :weight normal :height 120 :width normal)
+ (default :family "JetBrains Mono" :weight normal :height 112 :width normal)
+ (fixed-pitch :family "JetBrains Mono" :weight normal :height 112 :width normal)
+;;  (default :family "Input Mono Narrow" :weight normal :height 112 :width normal)
+;;  (fixed-pitch :family "Input Mono Narrow" :weight normal :height 112 :width normal)
  (variable-pitch :family "Product Sans" :weight normal :height 120 :width normal))
 
 ;; Better mouse scroll behaviour.
@@ -393,9 +395,14 @@
   (setq counsel-describe-variable-function #'helpful-variable))
 
 (use-package anirak-theme
-  :straight (anirak-theme :type git :host github :repo "agnipau/anirak-theme.el")
+  :straight (anirak-theme :local-repo "~/progetti/anirak-theme.el")
   :config
   (load-theme 'anirak t)
+
+;; (use-package anirak-theme
+;;   :straight (anirak-theme :type git :host github :repo "agnipau/anirak-theme.el")
+;;   :config
+;;   (load-theme 'anirak t)
 
   (defun agnipau/toggle-theme ()
     "Toggle dark and light Anirak theme."

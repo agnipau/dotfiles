@@ -1,8 +1,9 @@
 [bar/main]
-override-redirect = false
+;; Uncomment this for i3:
+; override-redirect = false
 ;; Uncomment this for bspwm:
-; override-redirect = true
-; wm-restack = bspwm
+override-redirect = true
+wm-restack = bspwm
 width = 100%
 height = 3%
 fixed-center = false
@@ -23,12 +24,15 @@ font-2 = "Font Awesome 5 Free:style=Solid:size=12;5"
 font-3 = "Font Awesome 5 Brands:size=12;5"
 
 ;; Uncomment this for bspwm:
+modules-left = date separator bspwm
+
+;; Uncomment this for i3:
 ; modules-left = date separator bspwm
 
 ;; Uncomment this for wifi:
 ; modules-right = wlan empty-separator pulseaudio empty-separator cpu empty-separator memory empty-separator battery separator bluetooth screenshot powermenu
 
-modules-left = date separator i3
+;; Uncomment this for ethernet:
 modules-right = pulseaudio empty-separator cpu empty-separator memory empty-separator battery separator bluetooth screenshot powermenu
 
 ; tray-position = right

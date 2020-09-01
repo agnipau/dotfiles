@@ -66,6 +66,29 @@
   :after typescript-mode
   :init
   (setq lsp-keymap-prefix (kbd "C-c l"))
+  :config
+  (setq lsp-file-watch-ignored '("[/\\\\]\\.git$"
+                                 "[/\\\\]\\.hg$"
+                                 "[/\\\\]\\.bzr$"
+                                 "[/\\\\]_darcs$"
+                                 "[/\\\\]\\.svn$"
+                                 "[/\\\\]_FOSSIL_$"
+                                 "[/\\\\]\\.idea$"
+                                 "[/\\\\]\\.ensime_cache$"
+                                 "[/\\\\]\\.eunit$"
+                                 "[/\\\\]node_modules$"
+                                 "[/\\\\]\\.fslckout$"
+                                 "[/\\\\]\\.tox$"
+                                 "[/\\\\]\\.stack-work$"
+                                 "[/\\\\]\\.bloop$"
+                                 "[/\\\\]\\.metals$"
+                                 "[/\\\\]target$"
+                                 "[/\\\\]\\.ccls-cache$"
+                                 "[/\\\\]\\.deps$"
+                                 "[/\\\\]build-aux$"
+                                 "[/\\\\]autom4te.cache$"
+                                 "[/\\\\]\\.reference$"
+                                 "/home/matte$"))
   :custom
   ;; 100MB
   (gc-cons-threshold 100000000)

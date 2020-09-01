@@ -1,6 +1,8 @@
 set fish_greeting ""
 
 fish_vi_key_bindings
+bind -M insert \cf accept-autosuggestion
+bind -M insert \cn execute
 function fish_mode_prompt --description 'Displays the current mode'
     return
 end
@@ -22,6 +24,7 @@ set -x XDG_CONFIG_HOME /home/matte/.config
 set -x ANDROID_SDK_ROOT /opt/android-sdk
 set -x ANDROID_NDK_ROOT /opt/android-sdk/ndk/21.0.6113669
 set -x JAVA_OPTS '-XX:+IgnoreUnrecognizedVMOptions'
+set -x LD_LIBRARY_PATH '/usr/local/lib'
 # set -x _JAVA_OPTIONS '-XX:+IgnoreUnrecognizedVMOptions -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 set -x ANDROID_HOME $ANDROID_SDK_ROOT
@@ -29,6 +32,7 @@ set -x PATH \
     /home/matte/bin \
     /home/matte/pbin \
     /home/matte/dev/flutter/bin \
+    /home/matte/.gem/ruby/2.7.0/bin \
     /home/matte/.cargo/bin \
     $GOPATH/bin \
     /home/matte/.luarocks/bin \
@@ -66,15 +70,14 @@ abbr t "tmux -u"
 abbr bon "bluetoothctl power on"
 abbr dl "curl -LOC -"
 abbr cpp "rsync -ah --progress"
-abbr rmf "rm"
 abbr glog "git log --no-color"
 abbr rm "trash --"
 abbr q "exit"
 abbr qq "exit"
 abbr rml "trash-list"
 abbr rmr "trash-restore"
-abbr rme "trash-empty"
-abbr rmef "sudo rm -rf ~/.local/share/Trash/files/*"
+abbr rme ""
+abbr rmef ""
 abbr k "xset r rate 200 40; sudo localectl set-x11-keymap it pc105 us caps:ctrl_modifier"
 abbr kg "gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 40; gsettings set org.gnome.desktop.peripherals.keyboard delay 200"
 abbr airpods "bluetoothctl -- connect 7C:9A:1D:C1:32:5F"
@@ -102,14 +105,20 @@ abbr gp "git push"
 abbr mpv "devour-hide mpv"
 abbr pcmanfm "devour-hide pcmanfm"
 abbr sxiv "devour-hide sxiv"
+abbr rcode "code"
 abbr code "devour-hide code --verbose >/dev/null 2>&1"
 abbr emacsd "emacs --daemon"
 abbr emacsc "emacsclient -c &disown"
 abbr emacsq "emacsclient -e '(kill-emacs)'"
+abbr cardib "cargo b"
 
-# Anirak
-set color_grey = "757c87"
-set selection_color = "15194c"
+# Gruvbox dark
+set color_grey = "928374"
+set selection_color = "504945"
+
+# # Anirak
+# set color_grey = "757c87"
+# set selection_color = "15194c"
 
 set fish_color_normal white
 set fish_color_command --bold white

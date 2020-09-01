@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/matte'
+let g:netrw_dirhist_1='/home/matte/progetti/itis-rossi-circolari-bot/src'
 let g:netrw_dirhist_0='/home/matte/.config/fish'
 let g:netrw_dirhist_9='/home/matte/.config'
 let g:netrw_dirhist_8='/home/matte/progetti/dotfiles/sxhkd/.config/sxhkd'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_6='/home/matte/.config/autostart'
 let g:netrw_dirhist_5='/home/matte/.config'
 let g:netrw_dirhist_4='/home/matte/.config/xcursorlocate'
 let g:netrw_dirhist_3='/home/matte/.config/chromium'
-let g:netrw_dirhist_2='/home/matte/masiero'
-let g:netrw_dirhist_1='/home/matte/codeshot/src'
