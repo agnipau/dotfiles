@@ -1,12 +1,6 @@
 let mapleader=' '
 let maplocalleader=' '
 
-set ignorecase
-set smartcase
-set incsearch
-set hlsearch
-set backspace=indent,eol,start
-
 call plug#begin('~/.local/share/nvim/plugged')
   " Plug 'airblade/vim-gitgutter'
   Plug 'machakann/vim-highlightedyank'
@@ -40,9 +34,15 @@ call plug#begin('~/.local/share/nvim/plugged')
           \ 'coc-snippets',
           \ 'coc-pairs',
           \ 'coc-tsserver',
-          \ 'coc-prettier', 
-          \ 'coc-json', 
-          \ 'coc-rust-analyzer', 
+          \ 'coc-prettier',
+          \ 'coc-json',
+          \ 'coc-sql',
+          \ 'coc-css',
+          \ 'coc-python',
+          \ 'coc-html',
+          \ 'coc-svg',
+          \ 'coc-rust-analyzer',
+          \ 'coc-yaml',
           \ ]
 
   " tpope
@@ -74,9 +74,13 @@ nnoremap H 0
 nnoremap J 3j
 nnoremap K 3k
 nnoremap L $
+nnoremap Y y$
 nnoremap <c-z> u<cr>
 nnoremap <leader>ff :Files<cr>
 nnoremap <leader>fb :Buffers<cr>
+nnoremap <leader>re :source $MYVIMRC<cr>
+nnoremap <leader>pi :PlugInstall<cr>
+nnoremap <leader>pc :PlugClean<cr>
 
 xnoremap H 0
 xnoremap J 3j
@@ -188,11 +192,11 @@ xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 
-" Use <TAB> for selections ranges.
-" NOTE: Requires 'textDocument/selectionRange' support from the language server.
-" coc-tsserver, coc-python are the examples of servers that support it.
-nmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <TAB> <Plug>(coc-range-select)
+" " Use <TAB> for selections ranges.
+" " NOTE: Requires 'textDocument/selectionRange' support from the language server.
+" " coc-tsserver, coc-python are the examples of servers that support it.
+" nmap <silent> <TAB> <Plug>(coc-range-select)
+" xmap <silent> <TAB> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
@@ -210,6 +214,11 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set backspace=indent,eol,start
 set number
 set relativenumber
 set list

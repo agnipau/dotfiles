@@ -1,23 +1,45 @@
 {
   "languageserver": {
-    "lua": {
-      "command": "lua-lsp",
-      "filetypes": ["lua"]
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
     },
-    "clangd": {
-      "command": "clangd",
-      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-      "filetypes": ["c", "cpp", "objc", "objcpp"]
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        },
+        "cformatpath": "/bin/clang-format"
+      }
     }
   },
-  "tsserver.log": "verbose",
   "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
+  "rust-analyzer.lruCapacity": 12,
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.inlayHints.chainingHints": true,
+  "diagnostic.errorSign": "×",
+  "diagnostic.warningSign": "!",
+  "diagnostic.infoSign": "#",
+  "diagnostic.hintSign": "@",
+  "diagnostic.messageTarget": "float",
+  "diagnostic.messageDelay": 150,
   "tsserver.trace.server": "verbose",
+  "coc.preferences.hoverTarget": "preview",
+  "suggest.timeout": 500,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
-    "go",
-    "dart",
     "javascriptreact",
     "typescriptreact",
     "html",
@@ -29,8 +51,6 @@
     "python",
     "rust",
     "cpp",
-    "c",
-    "objc",
-    "objcpp"
+    "c"
   ]
 }

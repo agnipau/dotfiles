@@ -53,6 +53,7 @@ set -x FZF_DEFAULT_OPTS "
 
 
 abbr uupd "yay --color=auto -Syyuv"
+abbr uupda "yay --color=auto -Syyuv; rustup update; flutter upgrade --force --verbose; flutter config --no-analytics"
 abbr upd "yay --color=auto -Syuv"
 abbr autorem "yay --color=auto -R (yay -Qdtq)"
 abbr installed "yay --color=auto -Qe"
