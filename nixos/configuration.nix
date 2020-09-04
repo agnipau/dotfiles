@@ -45,30 +45,94 @@ in
   # Set your time zone.
   time.timeZone = "Europe/Rome";
 
+  # I'm sorry Mr. Stallman.
+  nixpkgs.config.allowUnfree = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     wget
+    spotify
     curl
     neovim
     rustup
     tdesktop
     ripgrep
     fd
+    tldr
+    ffmpeg
+    xclip
+    imagemagick
+    fzf
+    dunst
+    gimp
+    ccls
+    asciinema
+    android-studio
+    bat
+    efibootmgr
+    exfat-utils
+    ntfs3g
+    httrack
+    physlock
+    playerctl
+    qbittorrent
+    rsync
+    ranger
+    simplescreenrecorder
+    pv
+    sxiv
+    zathura
+    tokei
+    jetbrains-mono
+    unclutter
+    udiskie
+    xdo
+    xdotool
+    xorg.libxcb
+    dejavu_fonts
+    liberation_ttf
+    symbola
+    cantarell-fonts
+    gyre-fonts
+    caladea
+    carlito
+    gelasio
+    noto-fonts
+    ubuntu_font_family
+    xorg.fontsonymisc
+    xorg.fontsunmisc
+    xorg.fontschumachermisc
+    youtube-dl
+    entr
+    diskus
+    pcmanfm
+    pastel
+    mpv
+    shellcheck
+    pandoc
+    zip
+    python39
+    libnotify
     alacritty
     sxhkd
     bspwm
     trash-cli
     git
+    gcc
     stow
     blueman
+    dart
     fish
+    lxappearance
+    arc-theme
+    arc-icon-theme
     tmux
     polybarFull
     picom
     # picomAutostart
     chromium
-    nodejs
+    nodejs_latest
     yarn
     go
     cmake
@@ -95,6 +159,8 @@ in
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  services.blueman.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
