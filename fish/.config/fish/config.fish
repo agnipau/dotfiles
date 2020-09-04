@@ -10,8 +10,8 @@ end
 set -x EDITOR /usr/bin/nvim
 set -x BROWSER /usr/bin/firefox
 set -e PAGER
-set -x SUDO_ASKPASS /home/matte/bin/rofiecho
-set -x GOPATH /home/matte/go
+set -x SUDO_ASKPASS /home/agnipau/bin/rofiecho
+set -x GOPATH /home/agnipau/go
 set -x TERMINAL /usr/bin/alacritty
 set -x STATUSBAR /usr/bin/polybar
 set -x TESSDATA_PREFIX /usr/share/tessdata
@@ -20,7 +20,7 @@ set -x TERM screen-256color
 set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk
 # set -x JAVA_HOME /usr/lib/jvm/java-11-openjdk
 set -x DOTNET_CLI_TELEMETRY_OPTOUT true
-set -x XDG_CONFIG_HOME /home/matte/.config
+set -x XDG_CONFIG_HOME /home/agnipau/.config
 set -x ANDROID_SDK_ROOT /opt/android-sdk
 set -x ANDROID_NDK_ROOT /opt/android-sdk/ndk/21.0.6113669
 set -x JAVA_OPTS '-XX:+IgnoreUnrecognizedVMOptions'
@@ -29,19 +29,19 @@ set -x LD_LIBRARY_PATH '/usr/local/lib'
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 set -x ANDROID_HOME $ANDROID_SDK_ROOT
 set -x PATH \
-    /home/matte/bin \
-    /home/matte/pbin \
-    /home/matte/dev/flutter/bin \
-    /home/matte/.gem/ruby/2.7.0/bin \
-    /home/matte/.cargo/bin \
+    /home/agnipau/bin \
+    /home/agnipau/pbin \
+    /home/agnipau/dev/flutter/bin \
+    /home/agnipau/.gem/ruby/2.7.0/bin \
+    /home/agnipau/.cargo/bin \
     $GOPATH/bin \
-    /home/matte/.luarocks/bin \
-    /home/matte/.pub-cache/bin \
+    /home/agnipau/.luarocks/bin \
+    /home/agnipau/.pub-cache/bin \
     $ANDROID_HOME/tools \
     $ANDROID_HOME/tools/bin \
     $ANDROID_HOME/platform-tools \
     $ANDROID_HOME/emulator \
-    /home/matte/.local/bin \
+    /home/agnipau/.local/bin \
     $PATH
 
 set -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
@@ -52,16 +52,23 @@ set -x FZF_DEFAULT_OPTS "
 "
 
 
-abbr uupd "yay --color=auto -Syyuv"
-abbr uupda "yay --color=auto -Syyuv; rustup update; flutter upgrade --force --verbose; flutter config --no-analytics"
-abbr upd "yay --color=auto -Syuv"
-abbr autorem "yay --color=auto -R (yay -Qdtq)"
-abbr installed "yay --color=auto -Qe"
-abbr src "yay --color=auto -Ss"
-abbr ins "yay -S --needed --noconfirm"
-abbr pinfo "yay -Qi --color=auto"
-abbr rpinfo "yay -Si --color=auto"
-abbr rem "yay -R --noconfirm"
+# abbr uupd "yay --color=auto -Syyuv"
+# abbr uupda "yay --color=auto -Syyuv; rustup update; flutter upgrade --force --verbose; flutter config --no-analytics"
+# abbr upd "yay --color=auto -Syuv"
+# abbr autorem "yay --color=auto -R (yay -Qdtq)"
+# abbr installed "yay --color=auto -Qe"
+# abbr src "yay --color=auto -Ss"
+# abbr ins "yay -S --needed --noconfirm"
+# abbr pinfo "yay -Qi --color=auto"
+# abbr rpinfo "yay -Si --color=auto"
+# abbr rem "yay -R --noconfirm"
+abbr ssrc "nix-env -qaP"
+abbr src "nix search"
+abbr rem "sudo nix-env -e"
+abbr upd "sudo nix-channel --update"
+abbr uupd "sudo nixos-rebuild switch"
+abbr enix "sudo nvim /etc/nixos/configuration.nix"
+abbr reload ". $HOME/.config/fish/config.fish"
 abbr ref "sudo reflector --verbose --sort rate --save /etc/pacman.d/mirrorlist"
 abbr mkdir "mkdir -p"
 abbr pygm "pygmentize -f png -O 'font_name=Input Mono Narrow,font_size=32' -o pygmentscreen.png script.py"
@@ -77,8 +84,6 @@ abbr q "exit"
 abbr qq "exit"
 abbr rml "trash-list"
 abbr rmr "trash-restore"
-abbr rme ""
-abbr rmef ""
 abbr k "xset r rate 200 40; sudo localectl set-x11-keymap it pc105 us caps:ctrl_modifier"
 abbr kg "gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 40; gsettings set org.gnome.desktop.peripherals.keyboard delay 200"
 abbr airpods "bluetoothctl -- connect 7C:9A:1D:C1:32:5F"

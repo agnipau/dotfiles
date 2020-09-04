@@ -275,7 +275,7 @@ cursor:
 live_config_reload: true
 
 shell:
-  program: /usr/bin/fish
+  program: /home/agnipau/.nix-profile/bin/fish
   # args:
   #   - --login
 

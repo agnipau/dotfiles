@@ -3,7 +3,7 @@
 # MISC
 
 super + Return
-    $TERMINAL
+    alacritty
 super + shift + Return
     floating-term
 super + d
@@ -11,7 +11,7 @@ super + d
 super + shift + d
     desktops
 super + w
-    $BROWSER
+    chromium
 super + e
     emacs
 super + shift + e
@@ -38,17 +38,17 @@ super + Escape
 XF86PowerOff
     prompt "Shutdown computer?" "systemctl poweroff"
 XF86Calculator
-    $TERMINAL -e insect
+    alacritty -e insect
 XF86Sleep
     prompt "Suspend computer?" "systemctl suspend"
 XF86WWW
-    $BROWSER
+    chromium
 XF86DOS
-    $TERMINAL
+    alacritty
 XF86ScreenSaver
     slock; xset dpms force off
 XF86TaskPane
-    $TERMINAL -e htop
+    alacritty -e htop
 XF86MonBrightness{Down,Up}
     xbacklight -{dec,inc} 5
 XF86Audio{Raise,Lower}Volume
