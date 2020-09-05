@@ -24,7 +24,7 @@
       }
     }
   },
-  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
+  "rust-analyzer.serverPath": "/home/agnipau/.config/coc/extensions/coc-rust-analyzer-data/rust-analyzer",
   "rust-analyzer.lruCapacity": 12,
   "rust-analyzer.procMacro.enable": true,
   "rust-analyzer.inlayHints.chainingHints": true,

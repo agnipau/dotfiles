@@ -71,6 +71,7 @@ in
     android-studio
     bat
     efibootmgr
+    jq
     exfat-utils
     ntfs3g
     httrack
@@ -112,7 +113,15 @@ in
     shellcheck
     pandoc
     zip
+    pkgconfig
     python39
+    file
+    dos2unix
+    bc
+    direnv
+    nix-direnv
+    openssl
+    pavucontrol
     libnotify
     alacritty
     sxhkd

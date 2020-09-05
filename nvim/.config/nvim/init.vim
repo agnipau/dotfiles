@@ -29,7 +29,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'mattn/emmet-vim'
       let g:user_emmet_leader_key = '<c-f>'
-  Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }, 'branch': 'release'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
       let g:coc_global_extensions = [
           \ 'coc-snippets',
           \ 'coc-pairs',

@@ -34,6 +34,7 @@ set -x PATH \
     /home/agnipau/dev/flutter/bin \
     /home/agnipau/.gem/ruby/2.7.0/bin \
     /home/agnipau/.cargo/bin \
+    /home/agnipau/.npm-packages/bin \
     $GOPATH/bin \
     /home/agnipau/.luarocks/bin \
     /home/agnipau/.pub-cache/bin \
@@ -99,7 +100,6 @@ abbr shc "shellcheck --enable=all"
 abbr cfish "nvim ~/.config/fish/config.fish"
 abbr sfish "source ~/.config/fish/config.fish"
 abbr cbash "nvim ~/.bashrc"
-abbr bc "insect"
 abbr ctmux "nvim ~/.tmux.conf"
 abbr stmux "tmux source-file ~/.tmux.conf"
 abbr calacritty "nvim ~/.config/alacritty/alacritty.yml"
@@ -144,6 +144,8 @@ set fish_pager_color_description $color_grey
 set fish_pager_color_prefix --bold white
 
 bass (ssh-agent -s) >/dev/null
+
+eval (direnv hook fish)
 
 # Start tmux automatically whenever a new terminal instance is opened
 test -z $TMUX;
