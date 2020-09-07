@@ -7,7 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
       let g:highlightedyank_highlight_duration = 200
 
   " Plug 'unblevable/quick-scope'
-  Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
+  " Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
   Plug 'jiangmiao/auto-pairs'
   Plug 'andymass/vim-matchup'
   Plug 'terryma/vim-multiple-cursors'
@@ -20,7 +20,7 @@ call plug#begin('~/.local/share/nvim/plugged')
       let g:multi_cursor_skip_key            = '<c-l>'
       let g:multi_cursor_quit_key            = '<Esc>'
 
-  Plug 'Yggdroot/indentLine'
+  " Plug 'Yggdroot/indentLine'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'jiangmiao/auto-pairs'
   Plug 'junegunn/vim-easy-align'

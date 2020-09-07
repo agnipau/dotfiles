@@ -68,6 +68,7 @@ in
     gimp
     ccls
     asciinema
+    zsh
     android-studio
     bat
     efibootmgr
@@ -115,6 +116,8 @@ in
     zip
     pkgconfig
     python39
+    hyperfine
+    poppler_utils
     file
     dos2unix
     bc
