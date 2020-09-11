@@ -32,6 +32,8 @@
   "diagnostic.warningSign": "!",
   "diagnostic.infoSign": "#",
   "diagnostic.hintSign": "@",
+  "python.linting.pylintPath": "/run/current-system/sw/bin/pylint",
+  "python.formatting.autopep8Path": "/run/current-system/sw/bin/autopep8",
   "diagnostic.messageTarget": "float",
   "diagnostic.messageDelay": 150,
   "tsserver.trace.server": "verbose",

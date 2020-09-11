@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/agnipau/progetti/wall/src/windows'
+let g:netrw_dirhist_6='/home/agnipau/ripgrep/pkg/brew'
 let g:netrw_dirhist_5='/home/agnipau/progetti/wall/src/xlib'
 let g:netrw_dirhist_4='/home/agnipau/progetti/wall/src'
 let g:netrw_dirhist_3='/home/agnipau/progetti/slap/examples/pwsh'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_1='/home/matte/progetti/itis-rossi-circolari-bot/src'
 let g:netrw_dirhist_0='/home/matte/.config/fish'
 let g:netrw_dirhist_9='/home/matte/.config'
 let g:netrw_dirhist_8='/home/matte/progetti/dotfiles/sxhkd/.config/sxhkd'
-let g:netrw_dirhist_7='/home/matte/.config'
-let g:netrw_dirhist_6='/home/matte/.config/autostart'

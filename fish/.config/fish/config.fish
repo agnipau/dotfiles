@@ -7,8 +7,10 @@ function fish_mode_prompt --description 'Displays the current mode'
     return
 end
 
-set -x EDITOR /usr/bin/nvim
-set -x BROWSER /usr/bin/firefox
+set -x PYTHONPATH $PYTHONPATH \
+    /home/agnipau/.local/lib/python3.8/site-packages
+set -x EDITOR /run/current-system/sw/bin/nvim
+set -x BROWSER /run/current-system/sw/bin/chromium
 set -e PAGER
 set -x SUDO_ASKPASS /home/agnipau/bin/rofiecho
 set -x GOPATH /home/agnipau/go
@@ -73,6 +75,7 @@ abbr reload ". $HOME/.config/fish/config.fish"
 abbr ref "sudo reflector --verbose --sort rate --save /etc/pacman.d/mirrorlist"
 abbr mkdir "mkdir -p"
 abbr pygm "pygmentize -f png -O 'font_name=Input Mono Narrow,font_size=32' -o pygmentscreen.png script.py"
+abbr nixs "nix-shell --run fish"
 abbr ls "exa -lh -s type"
 abbr la "exa -lah -s type"
 abbr t "tmux -u"

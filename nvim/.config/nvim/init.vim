@@ -2,33 +2,33 @@ let mapleader=' '
 let maplocalleader=' '
 
 call plug#begin('~/.local/share/nvim/plugged')
-  " Plug 'airblade/vim-gitgutter'
-  Plug 'machakann/vim-highlightedyank'
-      let g:highlightedyank_highlight_duration = 200
+  " " Plug 'airblade/vim-gitgutter'
+  " Plug 'machakann/vim-highlightedyank'
+  "     let g:highlightedyank_highlight_duration = 200
 
-  " Plug 'unblevable/quick-scope'
-  " Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'andymass/vim-matchup'
-  Plug 'terryma/vim-multiple-cursors'
-      let g:multi_cursor_start_word_key      = '<c-j>'
-      let g:multi_cursor_select_all_word_key = '<c-t>'
-      let g:multi_cursor_start_key           = 'g<c-j>'
-      let g:multi_cursor_select_all_key      = 'g<c-t>'
-      let g:multi_cursor_next_key            = '<c-j>'
-      let g:multi_cursor_prev_key            = '<c-k>'
-      let g:multi_cursor_skip_key            = '<c-l>'
-      let g:multi_cursor_quit_key            = '<Esc>'
+  " " Plug 'unblevable/quick-scope'
+  " " Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
+  " Plug 'jiangmiao/auto-pairs'
+  " Plug 'andymass/vim-matchup'
+  " Plug 'terryma/vim-multiple-cursors'
+  "     let g:multi_cursor_start_word_key      = '<c-j>'
+  "     let g:multi_cursor_select_all_word_key = '<c-t>'
+  "     let g:multi_cursor_start_key           = 'g<c-j>'
+  "     let g:multi_cursor_select_all_key      = 'g<c-t>'
+  "     let g:multi_cursor_next_key            = '<c-j>'
+  "     let g:multi_cursor_prev_key            = '<c-k>'
+  "     let g:multi_cursor_skip_key            = '<c-l>'
+  "     let g:multi_cursor_quit_key            = '<Esc>'
 
-  " Plug 'Yggdroot/indentLine'
-  Plug 'editorconfig/editorconfig-vim'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'junegunn/vim-easy-align'
-  Plug 'airblade/vim-rooter'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
-  Plug 'mattn/emmet-vim'
-      let g:user_emmet_leader_key = '<c-f>'
+  " " Plug 'Yggdroot/indentLine'
+  " Plug 'editorconfig/editorconfig-vim'
+  " Plug 'jiangmiao/auto-pairs'
+  " Plug 'junegunn/vim-easy-align'
+  " Plug 'airblade/vim-rooter'
+  " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  " Plug 'junegunn/fzf.vim'
+  " Plug 'mattn/emmet-vim'
+  "     let g:user_emmet_leader_key = '<c-f>'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
       let g:coc_global_extensions = [
           \ 'coc-snippets',
@@ -45,22 +45,22 @@ call plug#begin('~/.local/share/nvim/plugged')
           \ 'coc-yaml',
           \ ]
 
-  " tpope
-  Plug 'tpope/vim-repeat'
-  Plug 'tpope/vim-surround'
+  " " tpope
+  " Plug 'tpope/vim-repeat'
+  " Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
 
-  " Syntax
-  Plug 'MaxMEllon/vim-jsx-pretty'
-  Plug 'pangloss/vim-javascript'
-  Plug 'purescript-contrib/purescript-vim'
-  Plug 'rust-lang/rust.vim'
-  " Plug 'lervag/vimtex'
-  Plug 'dart-lang/dart-vim-plugin'
-  Plug 'HerringtonDarkholme/yats.vim'
-  Plug 'cespare/vim-toml'
-  Plug 'dag/vim-fish'
-  " Plug 'leafgarland/typescript-vim'
+  " " Syntax
+  " Plug 'MaxMEllon/vim-jsx-pretty'
+  " Plug 'pangloss/vim-javascript'
+  " Plug 'purescript-contrib/purescript-vim'
+  " Plug 'rust-lang/rust.vim'
+  " " Plug 'lervag/vimtex'
+  " Plug 'dart-lang/dart-vim-plugin'
+  " Plug 'HerringtonDarkholme/yats.vim'
+  " Plug 'cespare/vim-toml'
+  " Plug 'dag/vim-fish'
+  " " Plug 'leafgarland/typescript-vim'
 
   " Colorschemes
   " Plug '~/progetti/anirak-vim'
