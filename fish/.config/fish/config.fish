@@ -55,22 +55,22 @@ set -x FZF_DEFAULT_OPTS "
 "
 
 
-# abbr uupd "yay --color=auto -Syyuv"
-# abbr uupda "yay --color=auto -Syyuv; rustup update; flutter upgrade --force --verbose; flutter config --no-analytics"
-# abbr upd "yay --color=auto -Syuv"
-# abbr autorem "yay --color=auto -R (yay -Qdtq)"
-# abbr installed "yay --color=auto -Qe"
-# abbr src "yay --color=auto -Ss"
-# abbr ins "yay -S --needed --noconfirm"
-# abbr pinfo "yay -Qi --color=auto"
-# abbr rpinfo "yay -Si --color=auto"
-# abbr rem "yay -R --noconfirm"
-abbr ssrc "nix-env -qaP"
-abbr src "nix search"
-abbr rem "sudo nix-env -e"
-abbr upd "sudo nix-channel --update"
-abbr uupd "sudo nixos-rebuild switch"
-abbr enix "sudo nvim /etc/nixos/configuration.nix"
+abbr uupd "yay --color=auto -Syyuv"
+abbr uupda "yay --color=auto -Syyuv; rustup update; flutter upgrade --force --verbose; flutter config --no-analytics"
+abbr upd "yay --color=auto -Syuv"
+abbr autorem "yay --color=auto -R (yay -Qdtq)"
+abbr installed "yay --color=auto -Qe"
+abbr src "yay --color=auto -Ss"
+abbr ins "yay -S --needed --noconfirm"
+abbr pinfo "yay -Qi --color=auto"
+abbr rpinfo "yay -Si --color=auto"
+abbr rem "yay -R --noconfirm"
+# abbr ssrc "nix-env -qaP"
+# abbr src "nix search"
+# abbr rem "sudo nix-env -e"
+# abbr upd "sudo nix-channel --update"
+# abbr uupd "sudo nixos-rebuild switch"
+# abbr enix "sudo nvim /etc/nixos/configuration.nix"
 abbr reload ". $HOME/.config/fish/config.fish"
 abbr ref "sudo reflector --verbose --sort rate --save /etc/pacman.d/mirrorlist"
 abbr mkdir "mkdir -p"
@@ -147,8 +147,6 @@ set fish_pager_color_description $color_grey
 set fish_pager_color_prefix --bold white
 
 bass (ssh-agent -s) >/dev/null
-
-eval (direnv hook fish)
 
 # Start tmux automatically whenever a new terminal instance is opened
 test -z $TMUX;

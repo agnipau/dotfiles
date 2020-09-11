@@ -275,7 +275,7 @@ cursor:
 live_config_reload: true
 
 shell:
-  program: /run/current-system/sw/bin/fish
+  program: /usr/bin/fish
   # args:
   #   - --login
 
