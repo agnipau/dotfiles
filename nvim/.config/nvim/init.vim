@@ -25,8 +25,8 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Plug 'jiangmiao/auto-pairs'
   " Plug 'junegunn/vim-easy-align'
   " Plug 'airblade/vim-rooter'
-  " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  " Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
+  Plug 'junegunn/fzf.vim'
   " Plug 'mattn/emmet-vim'
   "     let g:user_emmet_leader_key = '<c-f>'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -240,7 +240,7 @@ set cursorline
 set ff=unix
 set undofile
 set undodir=~/.config/nvim/undodir
-set guifont=Input\ Mono\ Narrow\ Regular:h18
+set guifont=JetBrainsMono:h19
 
 set t_Co=256
 set background=dark

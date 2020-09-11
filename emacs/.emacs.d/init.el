@@ -33,13 +33,13 @@
     ,@(mapcar (lambda (x) `(quote (,(car x) ((t ,(cdr x))))))
               sexpr)))
 
-;; Set default, fixed and variable pitch fonts.
-(agnipau/set-fonts
- (default :family "JetBrains Mono" :weight normal :height 112 :width normal)
- (fixed-pitch :family "JetBrains Mono" :weight normal :height 112 :width normal)
-;;  (default :family "Input Mono Narrow" :weight normal :height 112 :width normal)
-;;  (fixed-pitch :family "Input Mono Narrow" :weight normal :height 112 :width normal)
- (variable-pitch :family "Product Sans" :weight normal :height 120 :width normal))
+;; ;; Set default, fixed and variable pitch fonts.
+;; (agnipau/set-fonts
+;;  (default :family "JetBrains Mono" :weight normal :height 112 :width normal)
+;;  (fixed-pitch :family "JetBrains Mono" :weight normal :height 112 :width normal)
+;; ;;  (default :family "Input Mono Narrow" :weight normal :height 112 :width normal)
+;; ;;  (fixed-pitch :family "Input Mono Narrow" :weight normal :height 112 :width normal)
+;;  (variable-pitch :family "Product Sans" :weight normal :height 120 :width normal))
 
 ;; Better mouse scroll behaviour.
 (setq mouse-wheel-scroll-amount '(4 ((shift) . 4) ((control) . nil)))
@@ -91,17 +91,17 @@
 (use-package expand-region
   :straight t)
 
-(use-package fill-column-indicator
-  :straight t
-  :after anirak-theme
-  :config
-  (define-global-minor-mode agnipau/global-fci-mode fci-mode
-    (lambda ()
-      (unless (derived-mode-p 'help-mode 'debugger-mode 'vterm-mode
-                              'eshell-mode)
-        (fci-mode 1))))
+;; (use-package fill-column-indicator
+;;   :straight t
+;;   :after anirak-theme
+;;   :config
+;;   (define-global-minor-mode agnipau/global-fci-mode fci-mode
+;;     (lambda ()
+;;       (unless (derived-mode-p 'help-mode 'debugger-mode 'vterm-mode
+;;                               'eshell-mode)
+;;         (fci-mode 1))))
 
-  (agnipau/global-fci-mode))
+;;   (agnipau/global-fci-mode))
 
 (use-package evil
     :straight t

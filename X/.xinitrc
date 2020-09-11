@@ -1,5 +1,5 @@
 xrdb -load ~/.Xresources
-xrandr --output eDP1 --off
+xrandr --output eDP-1 --off
 xrandr -s 2560x1440
 picom &
 dunst &
