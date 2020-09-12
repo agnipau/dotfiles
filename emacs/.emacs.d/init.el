@@ -33,13 +33,13 @@
     ,@(mapcar (lambda (x) `(quote (,(car x) ((t ,(cdr x))))))
               sexpr)))
 
-;; ;; Set default, fixed and variable pitch fonts.
-;; (agnipau/set-fonts
-;;  (default :family "JetBrains Mono" :weight normal :height 112 :width normal)
-;;  (fixed-pitch :family "JetBrains Mono" :weight normal :height 112 :width normal)
-;; ;;  (default :family "Input Mono Narrow" :weight normal :height 112 :width normal)
-;; ;;  (fixed-pitch :family "Input Mono Narrow" :weight normal :height 112 :width normal)
-;;  (variable-pitch :family "Product Sans" :weight normal :height 120 :width normal))
+;; Set default, fixed and variable pitch fonts.
+(agnipau/set-fonts
+ (default :family "JetBrains Mono" :weight normal :height 112 :width normal)
+ (fixed-pitch :family "JetBrains Mono" :weight normal :height 112 :width normal)
+;;  (default :family "Input Mono Narrow" :weight normal :height 112 :width normal)
+;;  (fixed-pitch :family "Input Mono Narrow" :weight normal :height 112 :width normal)
+ (variable-pitch :family "Product Sans" :weight normal :height 120 :width normal))
 
 ;; Better mouse scroll behaviour.
 (setq mouse-wheel-scroll-amount '(4 ((shift) . 4) ((control) . nil)))
@@ -260,44 +260,44 @@
   :after company
   :hook (company-mode . company-box-mode))
 
-(use-package flycheck
-  :straight t
-  :config
-  (define-fringe-bitmap 'flycheck-fringe-bitmap-nil [])
-  (define-fringe-bitmap 'flycheck-fringe-bitmap-ball
-        [#b00000000
-         #b00000000
-         #b00000000
-         #b00000000
-         #b00000000
-         #b00000000
-         #b00000000
-         #b00011100
-         #b00111110
-         #b00111110
-         #b00111110
-         #b00011100
-         #b00000000
-         #b00000000
-         #b00000000
-         #b00000000
-         #b00000000])
-  (flycheck-define-error-level 'error
-    :severity 2
-    :overlay-category 'flycheck-error-overlay
-    :fringe-bitmap 'flycheck-fringe-bitmap-nil
-    :fringe-face 'flycheck-fringe-error)
-  (flycheck-define-error-level 'warning
-    :severity 1
-    :overlay-category 'flycheck-warning-overlay
-    :fringe-bitmap 'flycheck-fringe-bitmap-nil
-    :fringe-face 'flycheck-fringe-warning)
-  (flycheck-define-error-level 'info
-    :severity 0
-    :overlay-category 'flycheck-info-overlay
-    :fringe-bitmap 'flycheck-fringe-bitmap-nil
-    :fringe-face 'flycheck-fringe-info)
-  (global-flycheck-mode))
+;; (use-package flycheck
+;;   :straight t
+;;   :config
+;;   (define-fringe-bitmap 'flycheck-fringe-bitmap-nil [])
+;;   (define-fringe-bitmap 'flycheck-fringe-bitmap-ball
+;;         [#b00000000
+;;          #b00000000
+;;          #b00000000
+;;          #b00000000
+;;          #b00000000
+;;          #b00000000
+;;          #b00000000
+;;          #b00011100
+;;          #b00111110
+;;          #b00111110
+;;          #b00111110
+;;          #b00011100
+;;          #b00000000
+;;          #b00000000
+;;          #b00000000
+;;          #b00000000
+;;          #b00000000])
+;;   (flycheck-define-error-level 'error
+;;     :severity 2
+;;     :overlay-category 'flycheck-error-overlay
+;;     :fringe-bitmap 'flycheck-fringe-bitmap-nil
+;;     :fringe-face 'flycheck-fringe-error)
+;;   (flycheck-define-error-level 'warning
+;;     :severity 1
+;;     :overlay-category 'flycheck-warning-overlay
+;;     :fringe-bitmap 'flycheck-fringe-bitmap-nil
+;;     :fringe-face 'flycheck-fringe-warning)
+;;   (flycheck-define-error-level 'info
+;;     :severity 0
+;;     :overlay-category 'flycheck-info-overlay
+;;     :fringe-bitmap 'flycheck-fringe-bitmap-nil
+;;     :fringe-face 'flycheck-fringe-info)
+;;   (global-flycheck-mode))
 
 (use-package rainbow-mode
   :straight t
