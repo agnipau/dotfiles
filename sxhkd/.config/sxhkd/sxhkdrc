@@ -13,7 +13,7 @@ super + shift + d
 super + w
     chromium
 super + e
-    emacs
+    start-neovide
 super + shift + e
     emacsclient -c
 super + 0

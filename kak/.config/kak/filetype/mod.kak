@@ -1,15 +1,12 @@
 eval %sh{
     files="
-        mappings.kak
-        core.kak
-        langs.kak
-        filetype/mod.kak
+        rust.kak
     "
 
     for file in ${files}; do
         printf '%s\n' "
             try %{
-                source %{${kak_config}/${file}}
+                source %{${kak_config}/filetype/${file}}
             } catch %{
                 echo -debug %val{error}
             }

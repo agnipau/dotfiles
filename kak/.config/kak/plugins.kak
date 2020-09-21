@@ -3,11 +3,11 @@ evaluate-commands %sh{
     plugins="${HOME}/.config/kak/plugins"
     mkdir -p "${plugins}"
     [ ! -e "${plugins}/plug.kak" ] && \
-        git clone -q https://gitlab.com/andreyorst/plug.kak.git "$plugins/plug.kak"
+        git clone -q https://github.com/robertmeta/plug.kak.git "$plugins/plug.kak"
     printf '%s' "source '$plugins/plug.kak/rc/plug.kak'"
 }
 
-plug "andreyorst/plug.kak" domain gitlab.com noload config %{
+plug "robertmeta/plug.kak" domain github.com noload config %{
     set-option global plug_always_ensure true
     set-option global plug_profile true
     hook global WinSetOption filetype=plug %{
@@ -41,10 +41,10 @@ plug "ul/kak-lsp" do %{
     }
 }
 
-plug "agnipau/anirak.kak" theme config %{
-    colorscheme anirak
-    add-highlighter global/ column 80 "default,%opt{anirak_gray_cursor_line}"
-}
+# plug "agnipau/anirak.kak" theme config %{
+#     colorscheme anirak
+#     add-highlighter global/ column 80 "default,%opt{anirak_gray_cursor_line}"
+# }
 
 plug "screwtapello/kakoune-inc-dec" domain gitlab.com config %{
     map -docstring "decrement selection" global normal '<C-w>' ': inc-dec-modify-numbers - %val{count}<ret>'

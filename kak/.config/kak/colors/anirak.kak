@@ -2,99 +2,191 @@
 #
 # Inspired by Anirak for VSCode: "https://marketplace.visualstudio.com/items?itemName=barjo.anirak"
 
-# Color palette
-declare-option str anirak_black 'rgb:0c0d10'
-face global anirak_black %opt{anirak_black}
-face global anirak_black_b "%opt{anirak_black}+b"
-declare-option str anirak_white 'rgb:f0f8ff'
-face global anirak_white %opt{anirak_white}
-face global anirak_white_b "%opt{anirak_white}+b"
-declare-option str anirak_blue 'rgb:599aff'
-face global anirak_blue %opt{anirak_blue}
-face global anirak_blue_b "%opt{anirak_blue}+b"
-declare-option str anirak_blue_cursor 'rgb:2f3dfa'
-face global anirak_blue_cursor %opt{anirak_blue_cursor}
-face global anirak_blue_cursor_b "%opt{anirak_blue_cursor}+b"
-declare-option str anirak_blue_selection 'rgb:15194c'
-face global anirak_blue_selection %opt{anirak_blue_selection}
-face global anirak_blue_selection_b "%opt{anirak_blue_selection}+b"
-declare-option str anirak_blue_selection2 'rgb:233551'
-face global anirak_blue_selection2 %opt{anirak_blue_selection2}
-face global anirak_blue_selection2_b "%opt{anirak_blue_selection2}+b"
-declare-option str anirak_cyan 'rgb:9ccdff'
-face global anirak_cyan %opt{anirak_cyan}
-face global anirak_cyan_b "%opt{anirak_cyan}+b"
-declare-option str anirak_green 'rgb:17ff88'
-face global anirak_green %opt{anirak_green}
-face global anirak_green_b "%opt{anirak_green}+b"
-declare-option str anirak_gray_cursor_line 'rgb:111217'
-face global anirak_gray_cursor_line %opt{anirak_gray_cursor_line}
-face global anirak_gray_cursor_line_b "%opt{anirak_gray_cursor_line}+b"
-declare-option str anirak_gray 'rgb:41444c'
-face global anirak_gray %opt{anirak_gray}
-face global anirak_gray_b "%opt{anirak_gray}+b"
-declare-option str anirak_gray_light2 'rgb:40444b'
-face global anirak_gray_light2 %opt{anirak_gray_light2}
-face global anirak_gray_light2_b "%opt{anirak_gray_light2}+b"
-declare-option str anirak_gray_light 'rgb:757c87'
-face global anirak_gray_light %opt{anirak_gray_light}
-face global anirak_gray_light_b "%opt{anirak_gray_light}+b"
-declare-option str anirak_menu_active_bg 'rgb:3a3d46'
+decl str anirak_builtin 'rgb:9ccdff'
+face global anirak_builtin %opt{anirak_builtin}
+
+decl str anirak_foreground 'rgb:f0f8ff'
+face global anirak_foreground %opt{anirak_foreground}
+
+decl str anirak_string_literal 'rgb:599aff'
+face global anirak_string_literal %opt{anirak_string_literal}
+
+decl str anirak_dimmed 'rgb:757c88'
+face global anirak_dimmed %opt{anirak_dimmed}
+
+decl str anirak_dimmed_darker_important 'rgb:5c636d'
+face global anirak_dimmed_darker_important %opt{anirak_dimmed_darker_important}
+
+decl str anirak_dimmed_darker 'rgb:585d67'
+face global anirak_dimmed_darker %opt{anirak_dimmed_darker}
+
+decl str anirak_dimmed_darkest 'rgb:292c37'
+face global anirak_dimmed_darkest %opt{anirak_dimmed_darkest}
+
+decl str anirak_background 'rgb:22252e'
+face global anirak_background %opt{anirak_background}
+
+decl str anirak_background_cursor_line 'rgb:292c37'
+face global anirak_background_cursor_line %opt{anirak_background_cursor_line}
+
+decl str anirak_cursor 'rgb:303eff'
+face global anirak_cursor %opt{anirak_cursor}
+
+decl str anirak_accent 'rgb:17ff93'
+face global anirak_accent %opt{anirak_accent}
+
+decl str anirak_selection 'rgb:1b2060'
+face global anirak_selection %opt{anirak_selection}
+
+decl str anirak_highlight_inactive 'rgb:233551'
+face global anirak_highlight_inactive %opt{anirak_highlight_inactive}
+
+decl str anirak_highlight_active 'rgb:426498'
+face global anirak_highlight_active %opt{anirak_highlight_active}
+
+decl str anirak_lint_error_bg 'rgb:241517'
+face global anirak_lint_error_bg %opt{anirak_lint_error_bg}
+
+decl str anirak_lint_error_fg 'rgb:ff6464'
+face global anirak_lint_error_fg %opt{anirak_lint_error_fg}
+
+decl str anirak_lint_hint_bg 'rgb:0d2023'
+face global anirak_lint_hint_bg %opt{anirak_lint_hint_bg}
+
+decl str anirak_lint_hint_fg 'rgb:2faf64'
+face global anirak_lint_hint_fg %opt{anirak_lint_hint_fg}
+
+decl str anirak_lint_info_bg 'rgb:0a232c'
+face global anirak_lint_info_bg %opt{anirak_lint_info_bg}
+
+decl str anirak_lint_info_fg 'rgb:00b7e4'
+face global anirak_lint_info_fg %opt{anirak_lint_info_fg}
+
+decl str anirak_lint_warning_bg 'rgb:271c13'
+face global anirak_lint_warning_bg %opt{anirak_lint_warning_bg}
+
+decl str anirak_lint_warning_fg 'rgb:fa973a'
+face global anirak_lint_warning_fg %opt{anirak_lint_warning_fg}
+
+decl str anirak_lint_underline 'rgb:ffe89e'
+face global anirak_lint_underline %opt{anirak_lint_underline}
+
+decl str anirak_menu_active_bg 'rgb:3a3d46'
 face global anirak_menu_active_bg %opt{anirak_menu_active_bg}
-face global anirak_menu_active_bg_b "%opt{anirak_menu_active_bg}+b"
-declare-option str anirak_menu_inactive_bg 'rgb:21232b'
+
+decl str anirak_menu_inactive_bg 'rgb:21232b'
 face global anirak_menu_inactive_bg %opt{anirak_menu_inactive_bg}
-face global anirak_menu_inactive_bg_b "%opt{anirak_menu_inactive_bg}+b"
-declare-option str anirak_error_bg 'rgb:241517'
-face global anirak_error_bg %opt{anirak_error_bg}
-face global anirak_error_bg_b "%opt{anirak_error_bg}+b"
-declare-option str anirak_error_fg 'rgb:f86464'
-face global anirak_error_fg %opt{anirak_error_fg}
-face global anirak_error_fg_b "%opt{anirak_error_fg}+b"
 
-face global value %opt{anirak_green}
-face global type %opt{anirak_white}
-face global variable %opt{anirak_white}
-face global function "%opt{anirak_white}+b"
-face global module %opt{anirak_white}
-face global string %opt{anirak_blue}
-face global error %opt{anirak_green}
-face global keyword %opt{anirak_gray_light}
-face global operator %opt{anirak_gray_light}
-face global attribute %opt{anirak_gray_light}
-face global comment %opt{anirak_gray}
-face global meta %opt{anirak_white}
-face global builtin %opt{anirak_gray_light}
-face global delimiter %opt{anirak_gray_light}
+decl str anirak_menu_sthumb 'rgb:3c3e46'
+face global anirak_menu_sthumb %opt{anirak_menu_sthumb}
 
-face global title %opt{anirak_gray}
-face global header %opt{anirak_gray}
-face global mono %opt{anirak_gray}
-face global block %opt{anirak_gray}
-face global link %opt{anirak_blue}
-face global bullet %opt{anirak_gray}
-face global list %opt{anirak_gray}
+decl str anirak_debugging 'rgb:ff0000'
+face global anirak_debugging %opt{anirak_debugging}
 
-add-highlighter global/ line '%val{cursor_line}' "default,%opt{anirak_gray_cursor_line}"
+decl str anirak_term_0 'rgb:1e2227'
+face global anirak_term_0 %opt{anirak_term_0}
 
-face global Default "%opt{anirak_white},%opt{anirak_black}"
+decl str anirak_term_1 'rgb:ff4766'
+face global anirak_term_1 %opt{anirak_term_1}
 
-face global PrimarySelection "default,%opt{anirak_blue_selection}"
-face global PrimaryCursor "%opt{anirak_white},%opt{anirak_blue_cursor}"
-face global PrimaryCursorEol "default,%opt{anirak_cyan}"
+decl str anirak_term_2 'rgb:17ff93'
+face global anirak_term_2 %opt{anirak_term_2}
 
-face global SecondarySelection "default,%opt{anirak_blue_selection2}"
-face global SecondaryCursor "%opt{anirak_white},%opt{anirak_blue_cursor}"
-face global SecondaryCursorEol "default,%opt{anirak_cyan}"
+decl str anirak_term_3 'rgb:ffdc69'
+face global anirak_term_3 %opt{anirak_term_3}
 
-face global MatchingChar "default,%opt{anirak_gray}"
-face global Search "%opt{anirak_blue},%opt{anirak_green}"
-face global CurrentWord "%opt{anirak_white},%opt{anirak_blue}"
+decl str anirak_term_4 'rgb:3743ee'
+face global anirak_term_4 %opt{anirak_term_4}
+
+decl str anirak_term_5 'rgb:4a8ffd'
+face global anirak_term_5 %opt{anirak_term_5}
+
+decl str anirak_term_6 'rgb:75abff'
+face global anirak_term_6 %opt{anirak_term_6}
+
+decl str anirak_term_7 'rgb:f5faff'
+face global anirak_term_7 %opt{anirak_term_7}
+
+decl str anirak_term_8 'rgb:3a434d'
+face global anirak_term_8 %opt{anirak_term_8}
+
+decl str anirak_term_9 'rgb:ff8398'
+face global anirak_term_9 %opt{anirak_term_9}
+
+decl str anirak_term_10 'rgb:71faba'
+face global anirak_term_10 %opt{anirak_term_10}
+
+decl str anirak_term_11 'rgb:ffe388'
+face global anirak_term_11 %opt{anirak_term_11}
+
+decl str anirak_term_12 'rgb:6485f1'
+face global anirak_term_12 %opt{anirak_term_12}
+
+decl str anirak_term_13 'rgb:7aadff'
+face global anirak_term_13 %opt{anirak_term_13}
+
+decl str anirak_term_14 'rgb:bad3ff'
+face global anirak_term_14 %opt{anirak_term_14}
+
+decl str anirak_term_15 'rgb:ffffff'
+face global anirak_term_15 %opt{anirak_term_15}
+
+# self
+face global value %opt{anirak_accent}
+# types
+face global type %opt{anirak_foreground}
+# variables
+face global variable %opt{anirak_foreground}
+# module (use crate::ident_type::IdentType)
+face global module %opt{anirak_foreground}
+# functions
+face global function "%opt{anirak_foreground}+b"
+# string literal
+face global string %opt{anirak_string_literal}
+# default keywords
+face global keyword %opt{anirak_dimmed}
+face global operator %opt{anirak_dimmed}
+# other default keywords
+face global attribute %opt{anirak_builtin}
+# comments
+face global comment %opt{anirak_dimmed_darker_important}
+# documentation comments
+face global documentation %opt{anirak_dimmed_darker_important}
+# macros and attributes
+face global meta %opt{anirak_foreground}
+face global builtin %opt{anirak_debugging}
+
+face global error %opt{anirak_lint_error_fg}
+face global noise %opt{anirak_dimmed}
+
+face global title %opt{anirak_debugging}
+face global header %opt{anirak_debugging}
+face global mono %opt{anirak_debugging}
+face global block %opt{anirak_debugging}
+face global link %opt{anirak_debugging}
+face global bullet %opt{anirak_debugging}
+face global list %opt{anirak_debugging}
+
+add-highlighter global/ line '%val{cursor_line}' "default,%opt{anirak_background_cursor_line}"
+
+face global Default "%opt{anirak_foreground},%opt{anirak_background}"
+
+face global PrimarySelection "default,%opt{anirak_selection}"
+face global PrimaryCursor "%opt{anirak_foreground},%opt{anirak_cursor}"
+face global PrimaryCursorEol "default,%opt{anirak_dimmed}"
+
+face global SecondarySelection "default,%opt{anirak_highlight_active}"
+face global SecondaryCursor "%opt{anirak_foreground},%opt{anirak_highlight_active}"
+face global SecondaryCursorEol "default,%opt{anirak_dimmed}"
+
+# face global MatchingChar "default,%opt{anirak_dimmed_darker}"
+# face global Search "%opt{anirak_blue},%opt{anirak_green}"
+# face global CurrentWord "%opt{anirak_white},%opt{anirak_blue}"
 
 # listchars
-face global Whitespace "%opt{anirak_gray},default+f"
+# face global Whitespace "%opt{anirak_gray},default+f"
 # ~ lines at EOB
-face global BufferPadding "%opt{anirak_black},%opt{anirak_black}"
+face global BufferPadding "%opt{anirak_background},%opt{anirak_background}"
 # Color of the wrap marker
 face global WrapMarker Whitespace
 

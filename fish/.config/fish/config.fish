@@ -18,7 +18,8 @@ set -x TERMINAL /usr/bin/alacritty
 set -x STATUSBAR /usr/bin/polybar
 set -x TESSDATA_PREFIX /usr/share/tessdata
 set -x SXHKD_SHELL /usr/bin/sh
-set -x TERM screen-256color
+# set -x TERM screen-256color
+set -x TERM alacritty
 set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk
 # set -x JAVA_HOME /usr/lib/jvm/java-11-openjdk
 set -x DOTNET_CLI_TELEMETRY_OPTOUT true
@@ -78,14 +79,13 @@ abbr mkdir "mkdir -p"
 abbr pygm "pygmentize -f png -O 'font_name=Input Mono Narrow,font_size=32' -o pygmentscreen.png script.py"
 abbr ls "exa -lh -s type"
 abbr la "exa -lah -s type"
-abbr t "tmux -u"
+abbr t "tmux"
 abbr bon "bluetoothctl power on"
+abbr ggg "git add . && git commit -m Update && git push origin master"
 abbr dl "curl -LOC -"
 abbr cpp "rsync -ah --progress"
 abbr glog "git log --no-color"
 abbr rm "trash --"
-abbr q "exit"
-abbr qq "exit"
 abbr rml "trash-list"
 abbr rmr "trash-restore"
 abbr k "xset r rate 200 40; sudo localectl set-x11-keymap it pc105 us caps:ctrl_modifier"
@@ -121,13 +121,13 @@ abbr emacsc "emacsclient -c &disown"
 abbr emacsq "emacsclient -e '(kill-emacs)'"
 abbr cardib "cargo b"
 
-# Gruvbox dark
-set color_grey = "928374"
-set selection_color = "504945"
+# # Gruvbox dark
+# set color_grey = "928374"
+# set selection_color = "504945"
 
-# # Anirak
-# set color_grey = "757c87"
-# set selection_color = "15194c"
+# Anirak
+set color_grey = "757c88"
+set selection_color = "1b2060"
 
 set fish_color_normal white
 set fish_color_command --bold white
@@ -150,10 +150,11 @@ bass (ssh-agent -s) >/dev/null
 
 # Start tmux automatically whenever a new terminal instance is opened
 test -z $TMUX;
+  and test -z $IN_NEOVIM;
   and test -z $INSIDE_EMACS;
   and test $DISPLAY;
   and status --is-interactive;
-  and tmux -u
+  and tmux
 
 # Start X automatically only if in tty1
 test -z $DISPLAY;
