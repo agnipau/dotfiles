@@ -121,20 +121,20 @@ abbr emacsc "emacsclient -c &disown"
 abbr emacsq "emacsclient -e '(kill-emacs)'"
 abbr cardib "cargo b"
 
-# # Gruvbox dark
-# set color_grey = "928374"
-# set selection_color = "504945"
+# Gruvbox dark
+set color_grey = "928374"
+set selection_color = "504945"
 
-# Anirak
-set color_grey = "757c88"
-set selection_color = "1b2060"
+# # Anirak
+# set color_grey = "757c88"
+# set selection_color = "1b2060"
 
 set fish_color_normal white
 set fish_color_command --bold white
 set fish_color_quote blue
 set fish_color_redirection cyan
 set fish_color_end --bold black
-set fish_color_error red
+set fish_color_error --bold red
 set fish_color_param white
 set fish_color_comment --bold black
 set fish_color_search_match --background=blue

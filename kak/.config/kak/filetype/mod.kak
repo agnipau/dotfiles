@@ -1,7 +1,7 @@
 eval %sh{
-    files="
-        rust.kak
-    "
+    # files="
+    #     rust.kak
+    # "
 
     for file in ${files}; do
         printf '%s\n' "

@@ -1,23 +1,26 @@
+colorscheme gruvbox
+
+# Highlighters.
+# ‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+addhl global/ number-lines -relative -hlcursor -separator ' '
+addhl global/ show-matching
+addhl global/ wrap -word -indent # -marker '↪ '
+addhl global/ line '%val{cursor_line}' "default,%opt{gruvbox_bg1}"
+addhl global/ column 80 "default,%opt{gruvbox_bg1}"
+
+# Options.
+# ‾‾‾‾‾‾‾‾
+
 set global tabstop 4
 set global indentwidth 4
-
-colorscheme anirak
-
-# addhl global/ number-lines -relative -hlcursor -separator ' '
-addhl global/ show-matching
-addhl global/ wrap -word -indent -marker '↪ '
-
-def toggle-whitespaces -docstring 'toggle the visibility of whitespace characters' %{
-    try %{
-        addhl global/ show-whitespaces
-    } catch %{
-        rmhl global/show-whitespaces
-    }
-}
-
 set global ui_options ncurses_assistant=none
-# set global modelinefmt '%val{bufname} {{mode_info}} - %val{client}@[%val{session}]'
+set global modelinefmt '%val{bufname} {{mode_info}} - %val{client}@[%val{session}]'
 set global grepcmd 'rg -L --hidden --with-filename --column'
+set global autowrap_column 80
+
+# Hooks.
+# ‾‾‾‾‾‾
 
 # Insert spaces when tab is pressed.
 hook global InsertChar '\t' %{
@@ -54,10 +57,14 @@ hook global BufCreate '^\*scratch\*$' %{
     exec -buffer *scratch* '%d'
     hook -once -always global BufCreate '^(?!\*scratch\*).*$' %{
         try %{
-            # Throw if the buffer has something other than newlines in the beginning of lines
+            # Throw if the buffer has something other than newlines in the beginning of lines.
             exec -buffer *scratch* '%s\A\n\z<ret>'
             delete-buffer *scratch*
         }
     }
 }
+
+# Highlight TODO, FIXME and other annotations.
+# TODO: Foreground color doesn't work in comments.
+addhl -override global/ regex \b((?:TODO|FIXME|HACK|NOTE):)\s "1:+rb"
 

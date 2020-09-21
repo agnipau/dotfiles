@@ -99,32 +99,32 @@ font:
 
 draw_bold_text_with_bright_colors: true
 
-# Anirak
-colors:
-  primary:
-    background: "0x22252e"
-    foreground: "0xf0f8ff"
-  # cursor:
-  #   text: "0xffffff"
-  #   cursor: "0x3743ee"
-  normal:
-    black: "0x1e2227"
-    red: "0xff4766"
-    green: "0x17ff93"
-    yellow: "0xffdc69"
-    blue: "0x3743ee"
-    magenta: "0x4a8ffd"
-    cyan: "0x75abff"
-    white: "0xf5faff"
-  bright:
-    black: "0x3a434d"
-    red: "0xff8398"
-    green: "0x71faba"
-    yellow: "0xffe388"
-    blue: "0x6485f1"
-    magenta: "0x7aadff"
-    cyan: "0xbad3ff"
-    white: "0xffffff"
+# # Anirak
+# colors:
+#   primary:
+#     background: "0x0c0d10"
+#     foreground: "0xf0f8ff"
+#   # cursor:
+#   #   text: "0xffffff"
+#   #   cursor: "0x3743ee"
+#   normal:
+#     black: "0x1e2227"
+#     red: "0xff4766"
+#     green: "0x17ff93"
+#     yellow: "0xffdc69"
+#     blue: "0x3743ee"
+#     magenta: "0x4a8ffd"
+#     cyan: "0x75abff"
+#     white: "0xf5faff"
+#   bright:
+#     black: "0x3a434d"
+#     red: "0xff8398"
+#     green: "0x71faba"
+#     yellow: "0xffe388"
+#     blue: "0x6485f1"
+#     magenta: "0x7aadff"
+#     cyan: "0xbad3ff"
+#     white: "0xffffff"
 
 # # Doom spacegrey
 # colors:
@@ -174,34 +174,34 @@ colors:
 #     cyan: "#46d9ff"
 #     white: "#bbc2cf"
 
-# # Gruvbox dark
-# colors:
-#   primary:
-#     # hard contrast: background = '#1d2021'
-#     background: "#282828"
-#     # soft contrast: background = '#32302f'
-#     foreground: "#ebdbb2"
-#   cursor:
-#     text: "#282828"
-#     cursor: "#ebdbb2"
-#   normal:
-#     black: "#282828"
-#     red: "#cc241d"
-#     green: "#98971a"
-#     yellow: "#d79921"
-#     blue: "#458588"
-#     magenta: "#b16286"
-#     cyan: "#689d6a"
-#     white: "#ebdbb2"
-#   bright:
-#     black: "#928374"
-#     red: "#fb4934"
-#     green: "#b8bb26"
-#     yellow: "#fabd2f"
-#     blue: "#83a598"
-#     magenta: "#d3869b"
-#     cyan: "#8ec07c"
-#     white: "#ebdbb2"
+# Gruvbox dark
+colors:
+  primary:
+    # background: '#1d2021' # hard
+    background: "#282828"  # normal
+    # background: '#32302f' # soft
+    foreground: "#ebdbb2"
+  cursor:
+    text: "#282828"
+    cursor: "#ebdbb2"
+  normal:
+    black: "#282828"
+    red: "#cc241d"
+    green: "#98971a"
+    yellow: "#d79921"
+    blue: "#458588"
+    magenta: "#b16286"
+    cyan: "#689d6a"
+    white: "#ebdbb2"
+  bright:
+    black: "#928374"
+    red: "#fb4934"
+    green: "#b8bb26"
+    yellow: "#fabd2f"
+    blue: "#83a598"
+    magenta: "#d3869b"
+    cyan: "#8ec07c"
+    white: "#ebdbb2"
 
 # # Material Darker
 # colors:
