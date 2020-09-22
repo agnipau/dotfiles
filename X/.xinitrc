@@ -8,14 +8,12 @@ flameshot &
 unclutter &
 # ~/progetti/bin/fix-gnome-keybindings
 udiskie &
-sxhkd &
 xsetroot -cursor_name left_ptr
 polybar main &
 ~/.fehbg &
 blueman-applet &
 # wmname LG3D
-exec bspwm
 # exec gnome-session
 # exec awesome
-# exec i3
+exec i3
 
