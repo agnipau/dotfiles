@@ -16,7 +16,6 @@ emacs/.emacs.d/eshell/
 nvim/.config/nvim/undodir
 nvim/.config/nvim/.netrwhist
 kak/.config/kak/plugins
-kak/.config/kak/colors
 fish/.config/fish/fish_variables
 idea/.config/JetBrains/IdeaIC2020.1/codestyles/
 idea/.config/JetBrains/IdeaIC2020.1/disabled_plugins.txt
