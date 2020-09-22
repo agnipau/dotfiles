@@ -17,7 +17,9 @@ set -x GOPATH /home/agnipau/go
 set -x TERMINAL /usr/bin/alacritty
 set -x STATUSBAR /usr/bin/polybar
 set -x TESSDATA_PREFIX /usr/share/tessdata
-set -x SXHKD_SHELL /usr/bin/sh
+set -x SHELL /usr/bin/dash
+set -x SXHKD_SHELL $SHELL
+set -x KAKOUNE_POSIX_SHELL $SHELL
 # set -x TERM screen-256color
 set -x TERM alacritty
 set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk

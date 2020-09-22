@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env dash
 
 # If refreshing bspwm, remove all previous rules to prevent doubling up
 bspc rule -r "*"

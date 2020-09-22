@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env dash
 
 # MISC
 
@@ -25,7 +25,7 @@ super + shift + BackSpace
 super + shift + c
     xcolor | tr -d '\n' | xclip -sel clipboard
 super + x
-    command -v slock && (slock & xset dpms force off)
+    slock & xset dpms force off
 super + shift + t
     telegram-desktop
 # Reload sxhkd
