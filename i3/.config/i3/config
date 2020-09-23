@@ -143,6 +143,8 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+bindsym $mod+Tab workspace back_and_forth
+
 # Reload the configuration file.
 bindsym $mod+Shift+c reload
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3).
@@ -153,8 +155,8 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -f '$font' -t warning -m 'D
 # Resize window (you can also use the mouse for that).
 mode "resize" {
     bindsym $left  resize shrink width  4 px or 4 ppt
-    bindsym $down  resize grow   height 4 px or 4 ppt
-    bindsym $up    resize shrink height 4 px or 4 ppt
+    bindsym $down  resize shrink height 4 px or 4 ppt
+    bindsym $up    resize grow   height 4 px or 4 ppt
     bindsym $right resize grow   width  4 px or 4 ppt
 
     # Back to normal: Enter or Escape or $mod+r.

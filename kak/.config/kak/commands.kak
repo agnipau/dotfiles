@@ -20,7 +20,6 @@ def pydef-debug -params 2.. %[
             def -override $1 %[
                 eval %sh[
                     stderr=\"\$(mktemp)\"
-                    python ${py_tmp} \$@ ${@:3}
                 ]
             ]
             hook global KakEnd .* %{
