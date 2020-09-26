@@ -1,5 +1,7 @@
 set fish_greeting ""
 
+starship init fish | source
+
 fish_vi_key_bindings
 bind -M insert \cf accept-autosuggestion
 bind -M insert \cn execute
@@ -19,7 +21,7 @@ set -x STATUSBAR /usr/bin/polybar
 set -x TESSDATA_PREFIX /usr/share/tessdata
 set -x SHELL /usr/bin/dash
 set -x SXHKD_SHELL $SHELL
-set -x KAKOUNE_POSIX_SHELL $SHELL
+set -x KAKOUNE_POSIX_SHELL /usr/bin/bash
 # set -x TERM screen-256color
 set -x TERM alacritty
 set -x JAVA_HOME /usr/lib/jvm/java-8-openjdk
@@ -123,11 +125,11 @@ abbr emacsc "emacsclient -c &disown"
 abbr emacsq "emacsclient -e '(kill-emacs)'"
 abbr cardib "cargo b"
 
-# Gruvbox dark
+# Gruvbox dark.
 set color_grey = "928374"
 set selection_color = "504945"
 
-# # Anirak
+# # Anirak.
 # set color_grey = "757c88"
 # set selection_color = "1b2060"
 
@@ -139,7 +141,7 @@ set fish_color_end --bold black
 set fish_color_error --bold red
 set fish_color_param white
 set fish_color_comment --bold black
-set fish_color_search_match --background=blue
+set fish_color_search_match --background=$selection_color
 set fish_color_operator --bold yellow
 set fish_color_escape magenta
 set fish_color_autosuggestion $color_grey

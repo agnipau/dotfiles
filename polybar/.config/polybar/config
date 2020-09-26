@@ -7,7 +7,7 @@ wm-restack = bspwm
 width = 100%
 height = 3%
 fixed-center = false
-bottom = true
+bottom = false
 dpi = ${xrdb:Xft.dpi:-1}
 
 background = ${xrdb:color0}
@@ -110,8 +110,8 @@ ws-icon-8 = 9;nove
 format = <label-state> <label-mode>
 
 label-mode = %mode%
-label-mode-foreground = ${xrdb:color7}
-label-mode-background = ${xrdb:color1}
+label-mode-foreground = ${xrdb:color3}
+label-mode-background = ${xrdb:color0}
 label-mode-padding = 2
 
 label-focused = %icon%

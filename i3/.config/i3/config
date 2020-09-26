@@ -152,7 +152,7 @@ bindsym $mod+Shift+r restart
 # Exit i3 (logs you out of your X session).
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -f '$font' -t warning -m 'Do you want to close this X session?' -B 'Yes' 'i3-msg exit'"
 
-# Resize window (you can also use the mouse for that).
+# Resize windows.
 mode "resize" {
     bindsym $left  resize shrink width  4 px or 4 ppt
     bindsym $down  resize shrink height 4 px or 4 ppt
@@ -165,8 +165,25 @@ mode "resize" {
     bindsym $mod+r mode "default"
 }
 
-# Toggle resize mode.
 bindsym $mod+r mode "resize"
+
+# Resize tmux panes. I use i3 for this because tmux doesn't support repetitive
+# keybindings mappings like i3 does with modes. I know tmux has key-tables,
+# but to emulate i3's behaviour I would need to create a lot of key-tables,
+# and it's bad.
+mode "resize-tmux" {
+    bindsym $left  exec --no-startup-id tmux resize-pane -L
+    bindsym $down  exec --no-startup-id tmux resize-pane -D
+    bindsym $up    exec --no-startup-id tmux resize-pane -U
+    bindsym $right exec --no-startup-id tmux resize-pane -R
+
+    # Back to normal: Enter or Escape or $mod+r.
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+
+bindsym $mod+Control+r mode "resize-tmux"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available).
@@ -179,4 +196,5 @@ bindsym $mod+r mode "resize"
 for_window [class="sun-awt-X11-XDialogPeer"] floating enable
 for_window [class="sun-awt-X11-XFramePeer"]  floating enable
 for_window [class=Chromium] border pixel 0
+for_window [class=".*"] title_format " <b>%title</b>"
 

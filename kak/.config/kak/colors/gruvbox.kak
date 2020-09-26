@@ -52,7 +52,8 @@ face global attribute     "%opt{gruvbox_orange_bright}"
 face global comment       "%opt{gruvbox_c8_black}+a"
 face global documentation "comment"
 face global meta          "%opt{gruvbox_c14_aqua}"
-face global builtin       "default+b"
+# face global builtin       "default+b"
+face global builtin       "keyword"
 
 # Markdown.
 face global title  "%opt{gruvbox_c10_green}+b"
