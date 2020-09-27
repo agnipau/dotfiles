@@ -31,7 +31,7 @@ client.background       #ffffff
 # Super as mod.
 set $mod Mod4
 
-set  $font pango:JetBrains Mono 11
+set  $font pango:JetBrains Mono Bold 11
 font $font
 
 # exec --no-startup-id nm-applet
@@ -145,7 +145,11 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# Switch between the current and the most recent workspace.
 bindsym $mod+Tab workspace back_and_forth
+
+# Focus urgent window.
+bindsym $mod+x [urgent="latest"] focus
 
 # Reload the configuration file.
 bindsym $mod+Shift+c reload
@@ -198,5 +202,5 @@ bindsym $mod+Control+r mode "resize-tmux"
 for_window [class="sun-awt-X11-XDialogPeer"] floating enable
 for_window [class="sun-awt-X11-XFramePeer"]  floating enable
 for_window [class=Chromium] border pixel 0
-for_window [class=".*"] title_format " <b>%title</b>"
+# for_window [class=".*"] title_format " <b>%title</b>"
 

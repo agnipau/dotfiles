@@ -6,3 +6,6 @@ disabled = true
 [rust]
 symbol = "R "
 
+[python]
+symbol = "P "
+

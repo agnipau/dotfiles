@@ -1,80 +1,29 @@
+env:
+  TERM: alacritty
+
 window:
   dimensions:
-    columns: 120
-    lines: 40
-
+    columns: 0
+    lines: 0
   position:
-    x: 500
-    y: 200
-
+    x: 0
+    y: 0
   padding:
     x: 10
     y: 10
-
   dynamic_padding: false
-
-  # Window decorations
-  #
-  # Values for `decorations`:
-  #     - full: Borders and title bar
-  #     - none: Neither borders nor title bar
   decorations: full
-
   startup_mode: Windowed
-
   title: Alacritty
-
+  dynamic_title: true
   class:
     instance: Alacritty
     general: Alacritty
-
   gtk_theme_variant: dark
 
 scrolling:
   history: 10000
   multiplier: 3
-
-# font:
-#   normal:
-#     family: Operator Mono SSm Lig Book
-#     style: Regular
-#   bold:
-#     family: Operator Mono SSm Lig Bold
-#     style: Bold
-#   italic:
-#     family: Operator Mono SSm Lig Book
-#     style: Italic
-#   bold_italic:
-#     family: Operator Mono SSm Lig Bold
-#     style: Bold Italic
-#   size: 13.0
-#   offset:
-#     x: -1
-#     y: 0
-#   glyph_offset:
-#     x: 0
-#     y: 0
-
-# font:
-#   normal:
-#     family: Iosevka Term SS07
-#     style: Regular
-#   bold:
-#     family: Iosevka Term SS07
-#     style: Bold
-#   italic:
-#     family: Iosevka Term SS07
-#     style: Italic
-#   bold_italic:
-#     family: Iosevka Term SS07
-#     style: Bold Italic
-#   size: 12.0
-#   offset:
-#     x: 0
-#     y: 0
-#   glyph_offset:
-#     x: 0
-#     y: 0
 
 font:
   normal:
@@ -96,83 +45,9 @@ font:
   glyph_offset:
     x: 0
     y: 0
+  use_thin_strokes: false
 
 draw_bold_text_with_bright_colors: true
-
-# # Anirak
-# colors:
-#   primary:
-#     background: "#0c0d10"
-#     foreground: "#f0f8ff"
-#   # cursor:
-#   #   text: "#ffffff"
-#   #   cursor: "#3743ee"
-#   normal:
-#     black: "#1e2227"
-#     red: "#ff4766"
-#     green: "#17ff93"
-#     yellow: "#ffdc69"
-#     blue: "#3743ee"
-#     magenta: "#4a8ffd"
-#     cyan: "#75abff"
-#     white: "#f5faff"
-#   bright:
-#     black: "#3a434d"
-#     red: "#ff8398"
-#     green: "#71faba"
-#     yellow: "#ffe388"
-#     blue: "#6485f1"
-#     magenta: "#7aadff"
-#     cyan: "#bad3ff"
-#     white: "#ffffff"
-
-# # Doom spacegrey
-# colors:
-#   primary:
-#     background: "#2b303b"
-#     foreground: "#c0c5ce"
-#   normal:
-#     black: "#2b303b"
-#     red: "#bf616a"
-#     green: "#a3be8c"
-#     yellow: "#ecbe7b"
-#     blue: "#8fa1b3"
-#     magenta: "#b48ead"
-#     cyan: "#5699af"
-#     white: "#c0c5ce"
-#   bright:
-#     black: "#65737e"
-#     red: "#d08770"
-#     green: "#a3be8c"
-#     yellow: "#ecbe7b"
-#     blue: "#8fa1b3"
-#     magenta: "#c678dd"
-#     cyan: "#5699af"
-#     white: "#c0c5ce"
-
-# # Doom one dark
-# colors:
-#   primary:
-#     background: "#282c34"
-#     foreground: "#bbc2cf"
-#   normal:
-#     black: "#282c34"
-#     red: "#ff6c6b"
-#     green: "#98be65"
-#     yellow: "#ecbe7b"
-#     blue: "#51afef"
-#     magenta: "#c678dd"
-#     cyan: "#46d9ff"
-#     white: "#bbc2cf"
-#   bright:
-#     black: "#5b6268"
-#     red: "#ff6c6b"
-#     green: "#98be65"
-#     yellow: "#ecbe7b"
-#     blue: "#51afef"
-#     magenta: "#c678dd"
-#     cyan: "#46d9ff"
-#     white: "#bbc2cf"
 
 # Gruvbox dark
 colors:
@@ -184,6 +59,9 @@ colors:
   cursor:
     text: "#282828"
     cursor: "#ebdbb2"
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
   normal:
     black: "#282828"
     red: "#cc241d"
@@ -204,76 +82,34 @@ colors:
     white: "#ebdbb2"
   selection:
     background: "#4f4844"
-    text: "#ebdbb2"
-
-# # Material Darker
-# colors:
-#   primary:
-#     background: "#212121"
-#     foreground: "#eeffff"
-#   normal:
-#     black: "#212121"
-#     red: "#ff5370"
-#     green: "#c3e88d"
-#     yellow: "#ffcb6b"
-#     blue: "#82aaff"
-#     magenta: "#c792ea"
-#     cyan: "#89ddff"
-#     white: "#ffffff"
-#   bright:
-#     black: "#545454"
-#     red: "#ff5370"
-#     green: "#c3e88d"
-#     yellow: "#ffcb6b"
-#     blue: "#82aaff"
-#     magenta: "#c792ea"
-#     cyan: "#89ddff"
-#     white: "#ffffff"
-
-# # Nord
-# colors:
-#   primary:
-#     background: "#2E3440"
-#     foreground: "#D8DEE9"
-#   cursor:
-#     text: "#2E3440"
-#     cursor: "#D8DEE9"
-#   normal:
-#     black: "#3B4252"
-#     red: "#BF616A"
-#     green: "#A3BE8C"
-#     yellow: "#EBCB8B"
-#     blue: "#81A1C1"
-#     magenta: "#B48EAD"
-#     cyan: "#88C0D0"
-#     white: "#E5E9F0"
-#   bright:
-#     black: "#4C566A"
-#     red: "#BF616A"
-#     green: "#A3BE8C"
-#     yellow: "#EBCB8B"
-#     blue: "#81A1C1"
-#     magenta: "#B48EAD"
-#     cyan: "#8FBCBB"
-#     white: "#ECEFF4"
+    text: CellForeground
+  indexed_colors:
+    - { index: 16, color: '#3c3836' }
+  search:
+    matches:
+      foreground: '#282828'
+      background: '#fe8019'
+    bar:
+      background: '#3b3735'
+      foreground: '#ebdbb2'
 
 bell:
   animation: EaseOutExpo
   duration: 0
-  color: "#ffffff"
+  color: '#3c3836'
+  command: None
 
 background_opacity: 1.0
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-  # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: true
-
-window.dynamic_title: true
 
 cursor:
   style: Block
+  vi_mode_style: None
   unfocused_hollow: true
+  thickness: 0.15
 
 live_config_reload: true
 
@@ -284,21 +120,14 @@ shell:
 
 working_directory: None
 
-alt_send_esc: true
+winpty_backend: false
 
-debug:
-  render_timer: false
-  persistent_logging: false
-  log_level: Warn
-  print_events: false
-  ref_test: false
+alt_send_esc: true
 
 mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
-
-  hide_when_typing: true
-
+  hide_when_typing: false
   url:
     launcher:
       program: xdg-open
@@ -309,23 +138,102 @@ mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
 key_bindings:
-  - { key: V, mods: Control|Shift, action: Paste }
-  - { key: C, mods: Control|Shift, action: Copy }
-  - { key: Insert, mods: Shift, action: PasteSelection }
-  - { key: Key0, mods: Control, action: ResetFontSize }
-  - { key: Equals, mods: Control, action: IncreaseFontSize }
-  - { key: Add, mods: Control, action: IncreaseFontSize }
-  - { key: Subtract, mods: Control, action: DecreaseFontSize }
-  - { key: Minus, mods: Control, action: DecreaseFontSize }
-  - { key: F, mods: Control|Shift, action: ToggleFullscreen }
+  - { key: Paste,                                action: Paste          }
+  - { key: Copy,                                 action: Copy           }
+  - { key: L,         mods: Control,             action: ClearLogNotice }
+  - { key: L,         mods: Control, mode: ~Vi,  chars: "\x0c"          }
+  - { key: PageUp,    mods: Shift,   mode: ~Alt, action: ScrollPageUp,  }
+  - { key: PageDown,  mods: Shift,   mode: ~Alt, action: ScrollPageDown }
+  - { key: Home,      mods: Shift,   mode: ~Alt, action: ScrollToTop,   }
+  - { key: End,       mods: Shift,   mode: ~Alt, action: ScrollToBottom }
 
-  - { key: Paste, action: Paste }
-  - { key: Copy, action: Copy }
-  - { key: L, mods: Control, action: ClearLogNotice }
-  - { key: L, mods: Control, chars: "\x0c" }
-  - { key: PageUp, mods: Shift, action: ScrollPageUp, mode: ~Alt }
-  - { key: PageDown, mods: Shift, action: ScrollPageDown, mode: ~Alt }
-  - { key: K, mods: Control|Shift, action: ScrollPageUp, mode: ~Alt }
-  - { key: J, mods: Control|Shift, action: ScrollPageDown, mode: ~Alt }
-  - { key: Home, mods: Shift, action: ScrollToTop, mode: ~Alt }
-  - { key: End, mods: Shift, action: ScrollToBottom, mode: ~Alt }
+  # Vi Mode
+  - { key: Space,  mods: Shift|Control, mode: Vi, action: ScrollToBottom          }
+  - { key: Space,  mods: Shift|Control,           action: ToggleViMode            }
+  - { key: Escape,                      mode: Vi, action: ClearSelection          }
+  - { key: I,                           mode: Vi, action: ScrollToBottom          }
+  - { key: I,                           mode: Vi, action: ToggleViMode            }
+  - { key: C,      mods: Control,       mode: Vi, action: ToggleViMode            }
+  - { key: Y,      mods: Control,       mode: Vi, action: ScrollLineUp            }
+  - { key: E,      mods: Control,       mode: Vi, action: ScrollLineDown          }
+  - { key: G,                           mode: Vi, action: ScrollToTop             }
+  - { key: G,      mods: Shift,         mode: Vi, action: ScrollToBottom          }
+  - { key: B,      mods: Control,       mode: Vi, action: ScrollPageUp            }
+  - { key: F,      mods: Control,       mode: Vi, action: ScrollPageDown          }
+  - { key: U,      mods: Control,       mode: Vi, action: ScrollHalfPageUp        }
+  - { key: D,      mods: Control,       mode: Vi, action: ScrollHalfPageDown      }
+  - { key: Y,                           mode: Vi, action: Copy                    }
+  - { key: Y,                           mode: Vi, action: ClearSelection          }
+  - { key: Copy,                        mode: Vi, action: ClearSelection          }
+  - { key: V,                           mode: Vi, action: ToggleNormalSelection   }
+  - { key: V,      mods: Shift,         mode: Vi, action: ToggleLineSelection     }
+  - { key: V,      mods: Control,       mode: Vi, action: ToggleBlockSelection    }
+  - { key: V,      mods: Alt,           mode: Vi, action: ToggleSemanticSelection }
+  - { key: Return,                      mode: Vi, action: Open                    }
+  - { key: K,                           mode: Vi, action: Up                      }
+  - { key: J,                           mode: Vi, action: Down                    }
+  - { key: H,                           mode: Vi, action: Left                    }
+  - { key: L,                           mode: Vi, action: Right                   }
+  - { key: Up,                          mode: Vi, action: Up                      }
+  - { key: Down,                        mode: Vi, action: Down                    }
+  - { key: Left,                        mode: Vi, action: Left                    }
+  - { key: Right,                       mode: Vi, action: Right                   }
+  - { key: Key0,                        mode: Vi, action: First                   }
+  - { key: Key4,   mods: Shift,         mode: Vi, action: Last                    }
+  - { key: Key6,   mods: Shift,         mode: Vi, action: FirstOccupied           }
+  - { key: H,      mods: Shift,         mode: Vi, action: High                    }
+  - { key: M,      mods: Shift,         mode: Vi, action: Middle                  }
+  - { key: L,      mods: Shift,         mode: Vi, action: Low                     }
+  - { key: B,                           mode: Vi, action: SemanticLeft            }
+  - { key: W,                           mode: Vi, action: SemanticRight           }
+  - { key: E,                           mode: Vi, action: SemanticRightEnd        }
+  - { key: B,      mods: Shift,         mode: Vi, action: WordLeft                }
+  - { key: W,      mods: Shift,         mode: Vi, action: WordRight               }
+  - { key: E,      mods: Shift,         mode: Vi, action: WordRightEnd            }
+  - { key: Key5,   mods: Shift,         mode: Vi, action: Bracket                 }
+  - { key: Slash,                       mode: Vi, action: SearchForward           }
+  - { key: Slash,  mods: Shift,         mode: Vi, action: SearchBackward          }
+  - { key: N,                           mode: Vi, action: SearchNext              }
+  - { key: N,      mods: Shift,         mode: Vi, action: SearchPrevious          }
+
+  # (Windows, Linux, and BSD only)
+  - { key: V,        mods: Control|Shift,           action: Paste            }
+  - { key: C,        mods: Control|Shift,           action: Copy             }
+  - { key: F,        mods: Control|Shift,           action: SearchForward    }
+  - { key: B,        mods: Control|Shift,           action: SearchBackward   }
+  - { key: C,        mods: Control|Shift, mode: Vi, action: ClearSelection   }
+  - { key: Insert,   mods: Shift,                   action: PasteSelection   }
+  - { key: Key0,     mods: Control,                 action: ResetFontSize    }
+  - { key: Equals,   mods: Control,                 action: IncreaseFontSize }
+  - { key: Add,      mods: Control,                 action: IncreaseFontSize }
+  - { key: Subtract, mods: Control,                 action: DecreaseFontSize }
+  - { key: Minus,    mods: Control,                 action: DecreaseFontSize }
+
+  # (Windows only)
+  - { key: Return, mods: Alt, action: ToggleFullscreen }
+
+  # (macOS only)
+  - { key: K,      mods: Command, mode: ~Vi, chars: "\x0c"            }
+  - { key: Key0,   mods: Command,            action: ResetFontSize    }
+  - { key: Equals, mods: Command,            action: IncreaseFontSize }
+  - { key: Add,    mods: Command,            action: IncreaseFontSize }
+  - { key: Minus,  mods: Command,            action: DecreaseFontSize }
+  - { key: K,      mods: Command,            action: ClearHistory     }
+  - { key: V,      mods: Command,            action: Paste            }
+  - { key: C,      mods: Command,            action: Copy             }
+  - { key: C,      mods: Command, mode: Vi,  action: ClearSelection   }
+  - { key: H,      mods: Command,            action: Hide             }
+  - { key: M,      mods: Command,            action: Minimize         }
+  - { key: Q,      mods: Command,            action: Quit             }
+  - { key: W,      mods: Command,            action: Quit             }
+  - { key: N,      mods: Command,            action: SpawnNewInstance }
+  - { key: F,      mods: Command|Control,    action: ToggleFullscreen }
+  - { key: F,      mods: Command,            action: SearchForward    }
+  - { key: B,      mods: Command,            action: SearchBackward   }
+
+debug:
+  render_timer: false
+  persistent_logging: false
+  log_level: Warn
+  print_events: false
+

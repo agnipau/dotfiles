@@ -4,7 +4,12 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# source /usr/share/zsh/plugins/zsh
+# Better tab completion.
+local ls_colors="di=38;5;7:ln=38;5;7:so=38;5;7:pi=38;5;7:ex=38;5;7:bd=38;5;7:cd=38;5;7:su=38;5;7:sg=38;5;7:tw=38;5;7:ow=38;5;7:"
+zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==1;37=37}:${(s.:.)ls_colors}:ma=48;5;16;1")'
+zstyle    ':completion:*:default' menu select
+autoload -Uz compinit && compinit
+bindkey '^[[Z' reverse-menu-complete
 
 # zle widget to paste from system clipboard.
 _paste() {
@@ -33,7 +38,7 @@ setopt INTERACTIVE_COMMENTS
 # Syntax highlighting.
 local green="#b8bb26"
 local orange="#fe8019"
-local gray="#928374"
+local gray="#a89984"
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[command]="fg=white,bold"
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=${gray}"
@@ -137,8 +142,8 @@ alias sxiv='devour-hide sxiv'
 # alias emacsq='emacsclient -e "$(kill-emacs)"'
 alias cardib='cargo b'
 
-# Start tmux automatically whenever a new terminal instance is opened.
-[[ -z "${TMUX}" && -z "${IN_NEOVIM}" && -z "${INSIDE_EMACS}" && -n "${DISPLAY}" && -o interactive ]] && tmux
+# # Start tmux automatically whenever a new terminal instance is opened.
+# [[ -z "${TMUX}" && -z "${IN_NEOVIM}" && -z "${INSIDE_EMACS}" && -n "${DISPLAY}" && -o interactive ]] && tmux
 
 # Start X automatically only if in tty1.
 [[ -z "${DISPLAY}" && "$(tty)" == "/dev/tty1" ]] && startx

@@ -48,3 +48,7 @@ hook global BufCreate '.*\.cs$' %{
     set buffer filetype csharp
 }
 
+hook global BufCreate '.*\.config/polybar/config$' %{
+    set buffer filetype ini
+}
+
