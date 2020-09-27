@@ -9,9 +9,9 @@ unclutter &
 # ~/progetti/bin/fix-gnome-keybindings
 udiskie &
 xsetroot -cursor_name left_ptr
-polybar main &
+# polybar main &
 ~/.fehbg &
-blueman-applet &
+# blueman-applet &
 # wmname LG3D
 # exec gnome-session
 # exec awesome

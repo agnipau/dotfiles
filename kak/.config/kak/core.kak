@@ -1,12 +1,40 @@
+colorscheme gruvbox
+
+# Window focus.
+# ‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+set-face global CursorLine "default,%opt{gruvbox_bg1}"
+addhl global/ line '%val{cursor_line}' CursorLine
+set-face global InactiveCursor "default,%opt{gruvbox_bg4}"
+
+hook global FocusIn .* %{
+    set-face window CursorLine "default,%opt{gruvbox_bg1}"
+    set-face window PrimaryCursor PrimaryCursor
+    set-face window PrimaryCursorEol PrimaryCursorEol
+    set-face window SecondaryCursor SecondaryCursor
+    set-face window SecondaryCursorEol SecondaryCursorEol
+    set-face window LineNumberCursor LineNumberCursor
+    set-face window PrimarySelection PrimarySelection
+    set-face window SecondarySelection SecondarySelection
+}
+
+hook global FocusOut .* %{
+    set-face window CursorLine "default,%opt{gruvbox_bg0}"
+    set-face window PrimaryCursor InactiveCursor
+    set-face window PrimaryCursorEol InactiveCursor
+    set-face window SecondaryCursor InactiveCursor
+    set-face window SecondaryCursorEol InactiveCursor
+    set-face window LineNumberCursor LineNumbers
+    set-face window PrimarySelection InactiveCursor
+    set-face window SecondarySelection InactiveCursor
+}
+
 # Appearance.
 # ‾‾‾‾‾‾‾‾‾‾‾
-
-colorscheme gruvbox
 
 addhl global/ number-lines -relative -hlcursor -separator ' '
 addhl global/ show-matching
 addhl global/ wrap -word -indent # -marker '↪ '
-addhl global/ line '%val{cursor_line}' "default,%opt{gruvbox_bg1}"
 addhl global/ column 80 "default,%opt{gruvbox_bg1}"
 
 set global ui_options ncurses_assistant=none ncurses_status_on_top=true
