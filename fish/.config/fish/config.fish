@@ -5,9 +5,6 @@ starship init fish | source
 fish_vi_key_bindings
 bind -M insert \cf accept-autosuggestion
 bind -M insert \cn execute
-function fish_mode_prompt --description 'Displays the current mode'
-    return
-end
 
 set -x PYTHONPATH $PYTHONPATH \
     /home/agnipau/.local/lib/python3.8/site-packages
@@ -51,14 +48,12 @@ set -x PATH \
     $ANDROID_HOME/emulator \
     /home/agnipau/.local/bin \
     $PATH
-
 set -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 set -x FZF_DEFAULT_OPTS "
   --multi --inline-info --height 95%
   --color fg:8,hl:7,fg+:6,bg+:0,hl+:7
   --color info:0,prompt:6,spinner:6,pointer:6,marker:6
 "
-
 
 abbr uupd "yay --color=auto -Syyuv"
 abbr uupda "yay --color=auto -Syyuv; rustup update; flutter upgrade --force --verbose; flutter config --no-analytics"
@@ -129,10 +124,6 @@ abbr cardib "cargo b"
 set color_grey = "928374"
 set selection_color = "504945"
 
-# # Anirak.
-# set color_grey = "757c88"
-# set selection_color = "1b2060"
-
 set fish_color_normal white
 set fish_color_command --bold white
 set fish_color_quote blue
@@ -152,15 +143,15 @@ set fish_pager_color_prefix --bold white
 
 bass (ssh-agent -s) >/dev/null
 
-# Start tmux automatically whenever a new terminal instance is opened
-test -z $TMUX;
-  and test -z $IN_NEOVIM;
-  and test -z $INSIDE_EMACS;
-  and test $DISPLAY;
-  and status --is-interactive;
-  and tmux
+# # Start tmux automatically whenever a new terminal instance is opened.
+# test -z $TMUX;
+#   and test -z $IN_NEOVIM;
+#   and test -z $INSIDE_EMACS;
+#   and test $DISPLAY;
+#   and status --is-interactive;
+#   and tmux
 
-# Start X automatically only if in tty1
+# Start X automatically only if in tty1.
 test -z $DISPLAY;
     and test (tty) = /dev/tty1;
     and startx

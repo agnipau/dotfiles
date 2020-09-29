@@ -1,1 +1,0 @@
-/home/agnipau/.fzf/shell/key-bindings.fish

@@ -18,11 +18,11 @@ roots = ["package.json"]
 command = "css-languageserver"
 args = ["--stdio"]
 
-[language.html]
-filetypes = ["html"]
-roots = ["package.json"]
-command = "html-languageserver"
-args = ["--stdio"]
+# [language.html]
+# filetypes = ["html"]
+# roots = ["package.json"]
+# command = "html-languageserver"
+# args = ["--stdio"]
 
 [language.json]
 filetypes = ["json"]
@@ -30,13 +30,13 @@ roots = ["package.json"]
 command = "json-languageserver"
 args = ["--stdio"]
 
-[language.go]
-filetypes = ["go"]
-roots = ["Gopkg.toml", "go.mod", ".git", ".hg"]
-command = "gopls"
-offset_encoding = "utf-8"
+# [language.go]
+# filetypes = ["go"]
+# roots = ["Gopkg.toml", "go.mod", ".git", ".hg"]
+# command = "gopls"
+# offset_encoding = "utf-8"
 
-[language.bash]
+[language.sh]
 filetypes = ["sh"]
 roots = [".git", ".hg"]
 command = "bash-language-server"
@@ -48,11 +48,11 @@ roots = ["pubspec.yaml", ".git"]
 command = "dart"
 args = ["/opt/dart-sdk/bin/snapshots/analysis_server.dart.snapshot", "--lsp"]
 
-[language.c_cpp]
-filetypes = ["c", "cpp"]
-roots = ["compile_flags.txt", "compile_commands.json"]
-command = "clangd"
-offset_encoding = "utf-8"
+# [language.c_cpp]
+# filetypes = ["c", "cpp"]
+# roots = ["compile_flags.txt", "compile_commands.json"]
+# command = "clangd"
+# offset_encoding = "utf-8"
 
 [language.javascript]
 filetypes = ["javascript"]

@@ -11,6 +11,13 @@ zstyle    ':completion:*:default' menu select
 autoload -Uz compinit && compinit
 bindkey '^[[Z' reverse-menu-complete
 
+# More intelligent completion in general.
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+# Do not enter command lines into the history list if they are duplicates
+# of the previous event.
+setopt HIST_IGNORE_DUPS
+
 # zle widget to paste from system clipboard.
 _paste() {
     LBUFFER="${LBUFFER}$(xsel -ob)"
@@ -142,8 +149,8 @@ alias sxiv='devour-hide sxiv'
 # alias emacsq='emacsclient -e "$(kill-emacs)"'
 alias cardib='cargo b'
 
-# # Start tmux automatically whenever a new terminal instance is opened.
-# [[ -z "${TMUX}" && -z "${IN_NEOVIM}" && -z "${INSIDE_EMACS}" && -n "${DISPLAY}" && -o interactive ]] && tmux
+# Start tmux automatically whenever a new terminal instance is opened.
+[[ -z "${TMUX}" && -z "${IN_NEOVIM}" && -z "${INSIDE_EMACS}" && -n "${DISPLAY}" && -o interactive ]] && tmux
 
 # Start X automatically only if in tty1.
 [[ -z "${DISPLAY}" && "$(tty)" == "/dev/tty1" ]] && startx

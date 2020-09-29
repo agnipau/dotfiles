@@ -5,7 +5,12 @@ disabled = true
 
 [rust]
 symbol = "R "
+disabled = true
+
+[package]
+disabled = true
 
 [python]
 symbol = "P "
+disabled = true
 

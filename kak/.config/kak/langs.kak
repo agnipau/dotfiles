@@ -10,7 +10,7 @@ set global lsp_diagnostic_line_error_sign   "!"
 set global lsp_diagnostic_line_warning_sign "?"
 
 # hook global WinSetOption filetype=(rust|python|dart|sh|typescript|javascript|html|css|json|go|c|cpp) %{
-hook global WinSetOption filetype=(rust) %{
+hook global WinSetOption filetype=(rust|typescript|javascript|python|sh|dart|json|css) %{
     map buffer user 'l' ': enter-user-mode lsp<ret>' -docstring 'LSP mode'
     map buffer lsp 'R' ': lsp-rename-prompt<ret>' -docstring 'rename symbol under cursor'
     lsp-enable-window
@@ -20,6 +20,12 @@ hook global WinSetOption filetype=(rust) %{
     face buffer DiagnosticWarning "default+u"
     face buffer LineFlagErrors    "%opt{gruvbox_c9_red}"
 }
+
+# Custom objects.
+# ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+# Taken from mawww's dotfiles.
+map -docstring "xml tag object" global object t %{c<lt>([\w.]+)\b[^>]*?(?<lt>!/)>,<lt>/([\w.]+)\b[^>]*?(?<lt>!/)><ret>}
 
 # Language-specific configurations.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -37,6 +43,21 @@ hook global WinSetOption filetype=python %{
 
 hook global WinSetOption filetype=cpp %{
     set buffer formatcmd 'clang-format'
+    hook buffer BufWritePre .* %{format}
+}
+
+hook global WinSetOption filetype=html %{
+    set buffer formatcmd 'prettier --parser=html'
+    hook buffer BufWritePre .* %{format}
+}
+
+hook global WinSetOption filetype=css %{
+    set buffer formatcmd 'prettier --parser=css'
+    hook buffer BufWritePre .* %{format}
+}
+
+hook global WinSetOption filetype=json %{
+    set buffer formatcmd 'jq .'
     hook buffer BufWritePre .* %{format}
 }
 

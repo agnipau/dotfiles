@@ -54,7 +54,7 @@ floating_modifier $mod
 # Applications.
 set $term alacritty
 bindsym           $mod+Return    exec --no-startup-id $term
-bindsym           $mod+d         exec --no-startup-id rofi -show run
+bindsym           $mod+d         exec --no-startup-id rofi-launch
 bindsym           $mod+Shift+s   exec --no-startup-id flameshot gui
 bindsym --release $mod+Control+c exec --no-startup-id xcolor | tr -d '\n' | xclip -sel clipboard
 bindsym           $mod+Shift+x   exec --no-startup-id physlock

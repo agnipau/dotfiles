@@ -1,7 +1,5 @@
 eval %sh{
     files="
-        commands.kak
-        mappings.kak
         core.kak
         langs.kak
         filetype/mod.kak
