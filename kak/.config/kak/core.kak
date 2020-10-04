@@ -33,7 +33,7 @@ hook global FocusOut .* %{
 # ‾‾‾‾‾‾‾‾‾‾‾
 
 hook global WinCreate ^[^*]+$ %{
-    addhl window/ number-lines -relative -hlcursor -separator ' '
+    addhl window/ number-lines -hlcursor -separator ' ' # -relative
 }
 addhl global/ show-matching
 # addhl global/ wrap -word -indent # -marker '↪ '
@@ -106,8 +106,9 @@ def toggle-whitespaces -docstring 'toggle the visibility of whitespace character
 map global user 'h' ': toggle-whitespaces<ret>' -docstring 'toggle whitespaces'
 
 # Sudo write.
-# Taken from https://github.com/occivink/kakoune-sudo-write/blob/master/sudo-write.kak
-# ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+# Taken from
+# https://github.com/occivink/kakoune-sudo-write/blob/master/sudo-write.kak
+# ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 def -hidden sudo-write-cached-password %{
     # The password was already cached, so we don't need any tricky handling.
@@ -134,10 +135,11 @@ def -hidden sudo-write-prompt-password %{
                 reg f %sh{ mktemp -t XXXXXX }
                 write %reg{f}
 
-                # Write the password in a buffer in order to pass it through STDIN to sudo
-                # somewhat dangerous, but better than passing the password
-                # through the shell scope's environment or interpolating it inside the shell string
-                # 'exec |' is pretty much the only way to pass data over STDIN
+                # Write the password in a buffer in order to pass it through
+                # STDIN to sudo somewhat dangerous, but better than passing
+                # the password through the shell scope's environment or
+                # interpolating it inside the shell string 'exec |' is pretty
+                # much the only way to pass data over STDIN.
                 edit -scratch '*sudo-password-tmp*'
                 reg '"' "%val{text}"
                 exec <a-P>
@@ -201,6 +203,9 @@ def wrap %{
                     '///')
                         printf '%s\n' "exec '|fmt -w ${kak_opt_autowrap_column} -p ''///''<ret>'"
                         ;;
+                    '//!')
+                        printf '%s\n' "exec '|fmt -w ${kak_opt_autowrap_column} -p ''//!''<ret>'"
+                        ;;
                     '//'*)
                         printf '%s\n' "exec '|fmt -w ${kak_opt_autowrap_column} -p ''//''<ret>'"
                         ;;
@@ -209,7 +214,7 @@ def wrap %{
                         ;;
                 esac
                 ;;
-            sh|python)
+            sh|python|kak)
                 printf '%s\n' "exec '|fmt -w ${kak_opt_autowrap_column} -p \"#\"<ret>'"
                 ;;
             *)
@@ -219,11 +224,94 @@ def wrap %{
     }
 }
 
+# Increment/decrement number.
+# ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+def incdec-num -params 2 %{
+    eval %sh{
+        if [ "$1" = '+' ]; then
+            new_num="$(( kak_selection + $2 ))"
+        else
+            new_num="$(( kak_selection - $2 ))"
+        fi
+        printf '%s\n' "exec 'dha${new_num}<esc>i<esc>L'"
+    }
+}
+
+map global normal +       ': incdec-num + 1<ret>' -docstring 'increment number at cursor'
+map global normal <minus> ': incdec-num - 1<ret>' -docstring 'decrement number at cursor'
+
+# Auto pairs.
+# ‾‾‾‾‾‾‾‾‾‾‾
+
+def insert-pair -params 1 %<
+    eval %sh<
+        [ "${kak_selection}" != ' ' ] && {
+            printf '%s\n' "exec i"
+            exit
+        }
+
+        closing_char=''
+        case "$1" in
+            '(')
+                closing_char=')'
+                ;;
+            '[')
+                closing_char=']'
+                ;;
+            '{')
+                closing_char='}'
+                ;;
+            *)
+            	exit
+				;;
+        esac
+
+        printf '%s\n' "exec i${closing_char}<left>"
+
+        printf '%s\n' "on-key %<
+    eval %sh<
+        case \"\${kak_key}\" in
+            '<backspace>')
+                echo 'exec <esc>Hdi'
+                ;;
+            '<ret>')
+                echo 'exec <ret><esc>O<tab>'
+                ;;
+            '${closing_char}')
+                echo 'exec <right>'
+                ;;
+            *)
+                echo \"info \${kak_key}\"
+                echo \"exec \${kak_key}\"
+                ;;
+        esac
+    >
+>"
+    >
+>
+
+hook global InsertChar \( 'exec "<esc>: insert-pair (<ret>"'
+hook global InsertChar \[ 'exec "<esc>: insert-pair [<ret>"'
+hook global InsertChar \{ 'exec "<esc>: insert-pair {<ret>"'
+
+# # Better escape.
+# # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+# hook global InsertChar k %{
+#     try %{
+#         exec -draft hH <a-k>jk<ret> d
+#         exec <esc>
+#     }
+# }
+
+# map global insert <esc> ''
+
 # Editor config integration.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 hook global BufOpenFile .* %{ editorconfig-load }
-hook global BufNewFile .* %{ editorconfig-load }
+hook global BufNewFile .*  %{ editorconfig-load }
 
 # Highlight the word under the cursor.
 # Taken from mawww's dotfiles.
@@ -276,12 +364,14 @@ hook global WinCreate .* %{
     set window aligntab false
 }
 
-# Delete the `*scratch*' buffer as soon as another is created, but only if it's empty.
+# Delete the `*scratch*' buffer as soon as another is created, but only if
+# it's empty.
 hook global BufCreate '^\*scratch\*$' %{
     exec -buffer *scratch* '%d'
     hook -once -always global BufCreate '^(?!\*scratch\*).*$' %{
         try %{
-            # Throw if the buffer has something other than newlines in the beginning of lines.
+            # Throw if the buffer has something other than newlines in the
+            # beginning of lines.
             exec -buffer *scratch* '%s\A\n\z<ret>'
             delete-buffer *scratch*
         }
@@ -334,14 +424,14 @@ map global normal '<c-k>'       '3k'
 map global normal '<backspace>' 'gh' # means <c-h>
 map global normal '<c-l>'       'gl'
 
-hook global -always BufOpenFifo '\*grep\*' %{ map -- global normal - ': grep-next-match<ret>' }
-hook global -always BufOpenFifo '\*make\*' %{ map -- global normal - ': make-next-error<ret>' }
+hook global -always BufOpenFifo '\*grep\*' %{ map global normal <minus> ': grep-next-match<ret>' }
+hook global -always BufOpenFifo '\*make\*' %{ map global normal <minus> ': make-next-error<ret>' }
 
 # Window management.
 declare-user-mode wm
-map global user 'w' ': enter-user-mode wm<ret>'
-map global wm 'l' ': new<ret>'
-map global wm 'j' ': tmux-terminal-vertical kak -c %val{session}<ret>'
+map global user w ': enter-user-mode wm<ret>'                          -docstring 'window management mode'
+map global wm   l ': new<ret>'                                         -docstring 'new horizontal split'
+map global wm   j ': tmux-terminal-vertical kak -c %val{session}<ret>' -docstring 'new vertical split'
 
 # Disable arrows, they're useless.
 map global normal '<left>'    ''
@@ -364,15 +454,13 @@ map global insert '<s-down>'  ''
 # Surround commands.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-def -hidden surround-inner %{
-    eval %sh{
-        wrapping_text="$(printf '%s' "${kak_text}" | kak-escape raw-insert | kak-escape double-string "'")"
-        printf '%s\n' "exec -draft 'i${wrapping_text}<esc>a${wrapping_text}<esc>'"
-    }
-}
-
 def surround -docstring 'surround selection with a string of an arbitrary length' %{
-    prompt 'surround:' surround-inner
+    prompt surround: %{
+        eval %sh{
+            wrapping_text="$(printf '%s' "${kak_text}" | kak-escape raw-insert | kak-escape double-string "'")"
+            printf '%s\n' "exec -draft 'i${wrapping_text}<esc>a${wrapping_text}<esc>'"
+        }
+    }
 }
 
 def surround-pair -docstring 'surround selection with a pair of chars' -params 1 %{
@@ -407,23 +495,23 @@ def surround-pair -docstring 'surround selection with a pair of chars' -params 1
 }
 
 declare-user-mode surround
-map global user 's' ': enter-user-mode surround<ret>'
-map global surround 's' ': surround<ret>'
+map global user     s ': enter-user-mode surround<ret>'      -docstring 'surround mode'
+map global surround s ': surround<ret>'                      -docstring 'surround selection with an arbitrary length string'
+map global surround p ': enter-user-mode surround-pair<ret>' -docstring 'surround pair mode'
 
 declare-user-mode surround-pair
-map global surround 'p' ': enter-user-mode surround-pair<ret>'
-map global surround-pair '(' %{: surround-pair '('<ret>}
-map global surround-pair ')' %{: surround-pair ')'<ret>}
-map global surround-pair '[' %{: surround-pair '['<ret>}
-map global surround-pair ']' %{: surround-pair ']'<ret>}
-map global surround-pair '{' %[: surround-pair '{'<ret>]
-map global surround-pair '}' %[: surround-pair '}'<ret>]
-map global surround-pair '<' %{: surround-pair '<lt>'<ret>}
-map global surround-pair '>' %{: surround-pair '<gt>'<ret>}
-map global surround-pair '|' %{: surround-pair '|'<ret>}
-map global surround-pair '_' %{: surround-pair '_'<ret>}
-map -- global surround-pair '-' %{: surround-pair '-'<ret>}
-map global surround-pair "'" %{: surround-pair "'"<ret>}
-map global surround-pair '"' %{: surround-pair '"'<ret>}
-map global surround-pair "`" %{: surround-pair "`"<ret>}
+map global surround-pair '('       %{: surround-pair '('<ret>}    -docstring 'surround with ()'
+map global surround-pair ')'       %{: surround-pair ')'<ret>}    -docstring 'surround with ()'
+map global surround-pair '['       %{: surround-pair '['<ret>}    -docstring 'surround with []'
+map global surround-pair ']'       %{: surround-pair ']'<ret>}    -docstring 'surround with []'
+map global surround-pair '{'       %[: surround-pair '{'<ret>]    -docstring 'surround with {}'
+map global surround-pair '}'       %[: surround-pair '}'<ret>]    -docstring 'surround with {}'
+map global surround-pair '<'       %{: surround-pair '<lt>'<ret>} -docstring 'surround with <>'
+map global surround-pair '>'       %{: surround-pair '<gt>'<ret>} -docstring 'surround with <>'
+map global surround-pair '|'       %{: surround-pair '|'<ret>}    -docstring 'surround with ||'
+map global surround-pair '_'       %{: surround-pair '_'<ret>}    -docstring 'surround with __'
+map global surround-pair '<minus>' %{: surround-pair '-'<ret>}    -docstring 'surround with --'
+map global surround-pair "'"       %{: surround-pair "'"<ret>}    -docstring "surround with ''"
+map global surround-pair '"'       %{: surround-pair '"'<ret>}    -docstring 'surround with ""'
+map global surround-pair "`"       %{: surround-pair "`"<ret>}    -docstring 'surround with ``'
 

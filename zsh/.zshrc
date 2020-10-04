@@ -74,7 +74,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
 export EDITOR='/usr/bin/nvim'
-export BROWSER='/usr/bin/chromium'
+export BROWSER='/usr/bin/firefox'
 export TERMINAL='/usr/bin/alacritty'
 export TERM='alacritty'
 export STATUSBAR='/usr/bin/polybar'

@@ -1,32 +1,24 @@
-# Gruvbox Dark Medium.
+# # Gruvbox Dark Medium.
+# # class                 border  backgr. text    indicator child_border
+# client.focused          #3c3836 #3c3836 #ebdbb2 #3c3836   #3c3836
+# # Window that was focused but now is killed.
+# client.focused_inactive #3c3836 #3c3836 #ebdbb2 #3c3836   #3c3836
+# client.unfocused        #282828 #282828 #ebdbb2 #282828   #282828
+# client.urgent           #fb4934 #fb4934 #7d241a #fb4934   #fb4934
+# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# client.background       #ffffff
+
+# Anirak.
 # class                 border  backgr. text    indicator child_border
-client.focused          #3c3836 #3c3836 #ebdbb2 #3c3836   #3c3836
+client.focused          #0c0d10 #0c0d10 #17ff93 #0c0d10   #0c0d10
 # Window that was focused but now is killed.
-client.focused_inactive #3c3836 #3c3836 #ebdbb2 #3c3836   #3c3836
-client.unfocused        #282828 #282828 #ebdbb2 #282828   #282828
-client.urgent           #fb4934 #fb4934 #7d241a #fb4934   #fb4934
+client.focused_inactive #0c0d10 #0c0d10 #17ff93 #0c0d10   #0c0d10
+client.unfocused        #0c0d10 #0c0d10 #f5faff #0c0d10   #0c0d10
+client.urgent           #ff4766 #ff4766 #0c0d10 #ff4766   #ff4766
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
-# # Nord.
-# # class                 border  backgr. text    indicator child_border
-# client.focused          #2e3440 #2e3440 #e5e9f0 #2e3440   #2e3440
-# # Window that was focused but now is killed.
-# client.focused_inactive #2e3440 #2e3440 #e5e9f0 #2e3440   #2e3440
-# client.unfocused        #2e3440 #2e3440 #616e88 #2e3440   #2e3440
-# client.urgent           #bf616a #00ff00 #00ff00 #bf616a   #bf616a
-# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-# client.background       #ffffff
-
-# # Material dark.
-# # class                 border  backgr. text    indicator child_border
-# client.focused          #212121 #212121 #eeffff #212121   #212121
-# # Window that was focused but now is killed.
-# client.focused_inactive #212121 #212121 #eeffff #212121   #212121
-# client.unfocused        #212121 #212121 #545454 #212121   #212121
-# client.urgent           #ff5370 #00ff00 #00ff00 #ff5370   #ff5370
-# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-# client.background       #ffffff
+title_align center
 
 # Super as mod.
 set $mod Mod4
@@ -202,5 +194,5 @@ bindsym $mod+Control+r mode "resize-tmux"
 for_window [class="sun-awt-X11-XDialogPeer"] floating enable
 for_window [class="sun-awt-X11-XFramePeer"]  floating enable
 for_window [class=Chromium] border pixel 0
-# for_window [class=".*"] title_format " <b>%title</b>"
+for_window [class=firefox] border pixel 0
 

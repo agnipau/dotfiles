@@ -51,6 +51,11 @@ hook global WinSetOption filetype=html %{
     hook buffer BufWritePre .* %{format}
 }
 
+hook global WinSetOption filetype=typescript %{
+    set buffer formatcmd 'prettier --parser=typescript'
+    hook buffer BufWritePre .* %{format}
+}
+
 hook global WinSetOption filetype=css %{
     set buffer formatcmd 'prettier --parser=css'
     hook buffer BufWritePre .* %{format}
