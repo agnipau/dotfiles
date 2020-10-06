@@ -37,7 +37,7 @@ bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT
 bindsym XF86AudioPrev        exec --no-startup-id playerctl previous
 bindsym XF86AudioPlay        exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext        exec --no-startup-id playerctl next
-bindsym XF86WWW              exec --no-startup-id chromium
+bindsym XF86WWW              exec --no-startup-id firefox
 bindsym XF86DOS              exec --no-startup-id $term
 
 # Use Mouse+$mod to drag floating windows to their wanted position.
@@ -46,9 +46,9 @@ floating_modifier $mod
 # Applications.
 set $term alacritty
 bindsym           $mod+Return    exec --no-startup-id $term
-bindsym           $mod+d         exec --no-startup-id rofi-launch
+bindsym           $mod+d         exec --no-startup-id $HOME/bin/rofi-launch
 bindsym           $mod+Shift+s   exec --no-startup-id flameshot gui
-bindsym --release $mod+Control+c exec --no-startup-id xcolor | tr -d '\n' | xclip -sel clipboard
+bindsym --release $mod+Control+c exec --no-startup-id xcolor | tr -d '\n' | xsel -ib
 bindsym           $mod+Shift+x   exec --no-startup-id physlock
 
 bindsym $mod+q kill
@@ -194,5 +194,5 @@ bindsym $mod+Control+r mode "resize-tmux"
 for_window [class="sun-awt-X11-XDialogPeer"] floating enable
 for_window [class="sun-awt-X11-XFramePeer"]  floating enable
 for_window [class=Chromium] border pixel 0
-for_window [class=firefox] border pixel 0
+for_window [class=firefox]  border pixel 0
 
