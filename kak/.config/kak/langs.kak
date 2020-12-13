@@ -6,8 +6,8 @@ eval %sh{kak-lsp --kakoune -s "${kak_session}"}
 def lsp-restart %{ lsp-stop; lsp-start }
 
 # set-option global lsp_completion_trigger "execute-keys 'h<a-h><a-k>\S[^\s,=;*(){}\[\]]\z<ret>'"
-set global lsp_diagnostic_line_error_sign   "!"
-set global lsp_diagnostic_line_warning_sign "?"
+set global lsp_diagnostic_line_error_sign '▓'
+set global lsp_diagnostic_line_warning_sign '▒'
 
 # hook global WinSetOption filetype=(rust|python|dart|sh|typescript|javascript|html|css|json|go|c|cpp) %{
 hook global WinSetOption filetype=(rust|typescript|javascript|python|sh|dart|json|css) %{
@@ -34,6 +34,11 @@ hook global WinSetOption filetype=rust %{
     set buffer formatcmd 'rustfmt'
     hook buffer BufWritePre .* %{format}
     set buffer lsp_server_configuration rust.clippy_preference="on"
+}
+
+hook global WinSetOption filetype=zig %{
+    set buffer formatcmd 'zig fmt --stdin'
+    hook buffer BufWritePre .* %{format}
 }
 
 hook global WinSetOption filetype=python %{

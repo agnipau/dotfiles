@@ -3,12 +3,12 @@ colorscheme gruvbox
 # Window focus.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-set-face global CursorLine "default,%opt{gruvbox_bg1}"
+set-face global CursorLine "default,%opt{gruvbox_bg0}"
 addhl global/ line '%val{cursor_line}' CursorLine
 set-face global InactiveCursor "default,%opt{gruvbox_bg4}"
 
 hook global FocusIn .* %{
-    set-face window CursorLine "default,%opt{gruvbox_bg1}"
+    set-face window CursorLine "default,%opt{gruvbox_bg0}"
     set-face window PrimaryCursor PrimaryCursor
     set-face window PrimaryCursorEol PrimaryCursorEol
     set-face window SecondaryCursor SecondaryCursor
@@ -19,7 +19,7 @@ hook global FocusIn .* %{
 }
 
 hook global FocusOut .* %{
-    set-face window CursorLine "default,%opt{gruvbox_bg0}"
+    set-face window CursorLine "default,%opt{gruvbox_bg0_h}"
     set-face window PrimaryCursor InactiveCursor
     set-face window PrimaryCursorEol InactiveCursor
     set-face window SecondaryCursor InactiveCursor
@@ -32,12 +32,12 @@ hook global FocusOut .* %{
 # Appearance.
 # ‾‾‾‾‾‾‾‾‾‾‾
 
-hook global WinCreate ^[^*]+$ %{
-    addhl window/ number-lines -hlcursor -separator ' ' # -relative
-}
+# hook global WinCreate ^[^*]+$ %{
+#     addhl window/ number-lines -hlcursor -separator ' ' # -relative
+# }
 addhl global/ show-matching
 # addhl global/ wrap -word -indent # -marker '↪ '
-addhl global/ column 80 "default,%opt{gruvbox_bg1}"
+addhl global/ column 80 "default,%opt{gruvbox_bg0}"
 
 set global ui_options ncurses_assistant=none ncurses_status_on_top=true
 
@@ -46,33 +46,33 @@ set global ui_options ncurses_assistant=none ncurses_status_on_top=true
 
 set global tabstop 4
 set global indentwidth 4
-set global modelinefmt '%val{bufname} {{mode_info}} - %val{client}@[%val{session}]'
+set global modelinefmt '%val{cursor_line}:%val{cursor_column}:%val{buf_line_count} %val{bufname} {{mode_info}} %val{client}@[%val{session}]'
 set global grepcmd 'rg -L --hidden --with-filename --column'
 set global autoreload yes
 
-# FZF.
-# ‾‾‾‾
-
-source "%val{config}/plugins/fzf.kak/rc/fzf.kak"
-source "%val{config}/plugins/fzf.kak/rc/modules/fzf-file.kak"
-source "%val{config}/plugins/fzf.kak/rc/modules/fzf-buffer.kak"
-source "%val{config}/plugins/fzf.kak/rc/modules/fzf-search.kak"
-source "%val{config}/plugins/fzf.kak/rc/modules/fzf-cd.kak"
-
-hook -once global ModuleLoaded fzf %{
-    set global fzf_highlight_command 'bat'
-    set global fzf_file_command      'fd --type f --follow'
-    set global fzf_cd_command        'fd --type d --follow'
-    set global fzf_default_opts      '--multi --inline-info --height 95% --color fg:8,hl:7,fg+:6,bg+:0,hl+:7 --color info:0,prompt:6,spinner:6,pointer:6,marker:6'
-    set global fzf_preview_pos       'up'
-}
-
-def f %{
-    require-module fzf
-    fzf-mode
-}
-
-map global user f ': f<ret>'
+# # FZF.
+# # ‾‾‾‾
+#
+# source "%val{config}/plugins/fzf.kak/rc/fzf.kak"
+# source "%val{config}/plugins/fzf.kak/rc/modules/fzf-file.kak"
+# source "%val{config}/plugins/fzf.kak/rc/modules/fzf-buffer.kak"
+# source "%val{config}/plugins/fzf.kak/rc/modules/fzf-search.kak"
+# source "%val{config}/plugins/fzf.kak/rc/modules/fzf-cd.kak"
+#
+# hook -once global ModuleLoaded fzf %{
+#     set global fzf_highlight_command 'bat'
+#     set global fzf_file_command      'fd --type f --follow'
+#     set global fzf_cd_command        'fd --type d --follow'
+#     set global fzf_default_opts      '--multi --inline-info --height 95% --color fg:8,hl:7,fg+:6,bg+:0,hl+:7 --color info:0,prompt:6,spinner:6,pointer:6,marker:6'
+#     set global fzf_preview_pos       'up'
+# }
+#
+# def f %{
+#     require-module fzf
+#     fzf-mode
+# }
+#
+# map global user f ': f<ret>'
 
 # System clipboard handling.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -416,7 +416,7 @@ map global normal '<a-,>'   '<a-space>' -docstring 'remove the main selection'
 map global normal '#'       ': comment-line<ret>'       -docstring 'comment/uncomment selection (<a-c>)'
 map global normal '='       ': wrap<ret>'               -docstring 'wrap text to fill %opt{autowrap_column}, similiar to `jq` in Vim'
 map global user   'h'       ': toggle-whitespaces<ret>' -docstring 'toggle whitespaces'
-map global user   '<space>' '/'                         -docstring 'search'
+map global user   '<space>' '/(?i)'                     -docstring 'search'
 
 # Faster movements.
 map global normal '<ret>'       '3j' # means <c-j>

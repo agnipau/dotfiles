@@ -8,15 +8,15 @@
 # client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # client.background       #ffffff
 
-# Anirak.
-# class                 border  backgr. text    indicator child_border
-client.focused          #0c0d10 #0c0d10 #17ff93 #0c0d10   #0c0d10
-# Window that was focused but now is killed.
-client.focused_inactive #0c0d10 #0c0d10 #17ff93 #0c0d10   #0c0d10
-client.unfocused        #0c0d10 #0c0d10 #f5faff #0c0d10   #0c0d10
-client.urgent           #ff4766 #ff4766 #0c0d10 #ff4766   #ff4766
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-client.background       #ffffff
+# # Anirak.
+# # class                 border  backgr. text    indicator child_border
+# client.focused          #0c0d10 #0c0d10 #17ff93 #0c0d10   #0c0d10
+# # Window that was focused but now is killed.
+# client.focused_inactive #0c0d10 #0c0d10 #17ff93 #0c0d10   #0c0d10
+# client.unfocused        #0c0d10 #0c0d10 #f5faff #0c0d10   #0c0d10
+# client.urgent           #ff4766 #ff4766 #0c0d10 #ff4766   #ff4766
+# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# client.background       #ffffff
 
 title_align center
 
@@ -29,7 +29,7 @@ set  $font pango:JetBrains Mono Bold 11
 font $font
 
 # exec --no-startup-id nm-applet
-exec --no-startup-id polybar main
+# exec --no-startup-id polybar main
 exec --no-startup-id blueman-applet
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
@@ -187,10 +187,11 @@ bindsym $mod+Control+r mode "resize-tmux"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available).
-# bar {
-#     status_command i3status
-#     font $font
-# }
+bar {
+    status_command i3status
+    separator_symbol "  "
+    font $font
+}
 
 # for_window [class="SimpleScreenRecorder"] floating enable
 for_window [class="sun-awt-X11-XDialogPeer"] floating enable

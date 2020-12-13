@@ -30,10 +30,10 @@ font-3 = "Font Awesome 5 Brands:size=12;5"
 modules-left = date separator i3
 
 ;; Uncomment this for wifi:
-; modules-right = wlan empty-separator pulseaudio empty-separator cpu empty-separator memory empty-separator battery separator bluetooth screenshot powermenu
+; modules-right = wlan empty-separator pulseaudio empty-separator cpu empty-separator memory empty-separator separator bluetooth screenshot powermenu
 
 ;; Uncomment this for ethernet:
-modules-right = pulseaudio empty-separator cpu empty-separator memory empty-separator battery separator bluetooth screenshot powermenu
+modules-right = pulseaudio empty-separator cpu empty-separator memory empty-separator separator bluetooth screenshot powermenu
 
 ; tray-position = right
 ; tray-padding = 2

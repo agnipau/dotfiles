@@ -3,7 +3,7 @@
 # Inspired by https://github.com/gruvbox-community/gruvbox.
 
 # Base16 colors.
-decl str gruvbox_c0_black   'rgb:282828'
+decl str gruvbox_c0_black   'rgb:1d2021'
 decl str gruvbox_c1_red     'rgb:cc241d'
 decl str gruvbox_c2_green   'rgb:98971a'
 decl str gruvbox_c3_yellow  'rgb:d79921'
@@ -65,28 +65,28 @@ face global bullet "%opt{gruvbox_c14_aqua}"
 face global list   "%opt{gruvbox_fg0}"
 
 # Builtins.
-face global Default            "%opt{gruvbox_fg0},%opt{gruvbox_bg0}"
-face global PrimarySelection   "default,%opt{gruvbox_bg4}+g"
-face global SecondarySelection "default,%opt{gruvbox_bg2}+g"
-face global PrimaryCursor      "%opt{gruvbox_bg0},%opt{gruvbox_fg0}+fg"
-face global SecondaryCursor    "%opt{gruvbox_bg0},%opt{gruvbox_fg4}+fg"
-face global PrimaryCursorEol   "%opt{gruvbox_bg0},%opt{gruvbox_c11_yellow}+fg"
-face global SecondaryCursorEol "%opt{gruvbox_bg0},%opt{gruvbox_c11_yellow}+fg"
-face global LineNumbers        "%opt{gruvbox_bg3}"
+face global Default            "%opt{gruvbox_fg0},%opt{gruvbox_bg0_h}"
+face global PrimarySelection   "default,%opt{gruvbox_bg3}+g"
+face global SecondarySelection "default,%opt{gruvbox_bg1}+g"
+face global PrimaryCursor      "%opt{gruvbox_bg0_h},%opt{gruvbox_fg0}+fg"
+face global SecondaryCursor    "%opt{gruvbox_bg0_h},%opt{gruvbox_fg4}+fg"
+face global PrimaryCursorEol   "%opt{gruvbox_bg0_h},%opt{gruvbox_c11_yellow}+fg"
+face global SecondaryCursorEol "%opt{gruvbox_bg0_h},%opt{gruvbox_c11_yellow}+fg"
+face global LineNumbers        "%opt{gruvbox_bg2}"
 face global LineNumberCursor   "%opt{gruvbox_c11_yellow}"
-face global LineNumbersWrapped "%opt{gruvbox_bg0}"
-face global MenuForeground     "%opt{gruvbox_fg1},%opt{gruvbox_bg3}+b"
-face global MenuBackground     "default,%opt{gruvbox_bg2}"
+face global LineNumbersWrapped "%opt{gruvbox_bg0_h}"
+face global MenuForeground     "%opt{gruvbox_fg1},%opt{gruvbox_bg2}+b"
+face global MenuBackground     "default,%opt{gruvbox_bg1}"
 face global MenuInfo           "%opt{gruvbox_c12_blue}"
-face global Information        "%opt{gruvbox_fg4},%opt{gruvbox_bg1}"
+face global Information        "%opt{gruvbox_fg4},%opt{gruvbox_bg0}"
 face global Error              "%opt{gruvbox_c9_red},default+b"
-face global StatusLine         "%opt{gruvbox_fg1},%opt{gruvbox_bg1}"
+face global StatusLine         "%opt{gruvbox_fg1},%opt{gruvbox_bg0}"
 face global StatusLineMode     "%opt{gruvbox_fg1}"
 face global StatusLineInfo     "%opt{gruvbox_fg4}"
 face global StatusLineValue    "%opt{gruvbox_c9_red}"
-face global StatusCursor       "%opt{gruvbox_bg0},%opt{gruvbox_fg0}"
+face global StatusCursor       "%opt{gruvbox_bg0_h},%opt{gruvbox_fg0}"
 face global Prompt             "%opt{gruvbox_fg4}"
-face global MatchingChar       "default,%opt{gruvbox_bg2}"
-face global BufferPadding      "%opt{gruvbox_bg0},%opt{gruvbox_bg0}"
-face global Whitespace         "%opt{gruvbox_bg2}+f"
+face global MatchingChar       "default,%opt{gruvbox_bg1}"
+face global BufferPadding      "%opt{gruvbox_bg0_h},%opt{gruvbox_bg0_h}"
+face global Whitespace         "%opt{gruvbox_bg1}+f"
 
