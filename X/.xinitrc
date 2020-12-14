@@ -10,7 +10,7 @@ unclutter &
 udiskie &
 xsetroot -cursor_name left_ptr
 # polybar main &
-hsetroot black
+hsetroot -solid black
 # blueman-applet &
 # wmname LG3D
 # exec gnome-session
