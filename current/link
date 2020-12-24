@@ -14,5 +14,9 @@ stow -t ~ \
   tmux \
   zathura \
   zsh
+
+sudo stow -t / \
+    debian
+
 ./spotify
 
