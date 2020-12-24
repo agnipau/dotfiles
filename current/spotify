@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for dir in "${HOME}/.config/spotify/Users/"*; do
+    printf '%s\n' 'app.browser.zoom-level=125' >"${dir}/prefs"
+    exit
+done
+

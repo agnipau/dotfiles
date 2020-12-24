@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+stow -D -t ~ \
+  X \
+  alacritty \
+  bash \
+  compton \
+  dunst \
+  emacs \
+  i3 \
+  i3status \
+  nvim \
+  starship \
+  tmux \
+  zathura \
+  zsh
+

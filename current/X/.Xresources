@@ -1,0 +1,186 @@
+#define base00 #000000
+#define base01 #ff4766
+#define base02 #17ff93
+#define base03 #ffdc69
+#define base04 #3743ee
+#define base05 #4a8ffd
+#define base06 #75abff
+#define base07 #f5faff
+#define base08 #3a434d
+#define base09 #ff8398
+#define base0A #71faba
+#define base0B #ffe388
+#define base0C #6485f1
+#define base0D #7aadff
+#define base0E #bad3ff
+#define base0F #ffffff
+
+! ! Doom spacegrey
+! #define base00 #2b303b
+! #define base01 #bf616a
+! #define base02 #a3be8c
+! #define base03 #ecbe7b
+! #define base04 #8fa1b3
+! #define base05 #b48ead
+! #define base06 #5699af
+! #define base07 #c0c5ce
+! #define base08 #65737e
+! #define base09 #d08770
+! #define base0A #a3be8c
+! #define base0B #ecbe7b
+! #define base0C #8fa1b3
+! #define base0D #c678dd
+! #define base0E #5699af
+! #define base0F #c0c5ce
+
+! ! Doom one dark
+! #define base00 #282c34
+! #define base01 #ff6c6b
+! #define base02 #98be65
+! #define base03 #ecbe7b
+! #define base04 #51afef
+! #define base05 #c678dd
+! #define base06 #46d9ff
+! #define base07 #bbc2cf
+! #define base08 #5b6268
+! #define base09 #ff6c6b
+! #define base0A #98be65
+! #define base0B #ecbe7b
+! #define base0C #51afef
+! #define base0D #c678dd
+! #define base0E #46d9ff
+! #define base0F #bbc2cf
+
+! ! Gruvbox Dark
+! #define base00 #282828
+! #define base01 #cc241d
+! #define base02 #98971a
+! #define base03 #d79921
+! #define base04 #458588
+! #define base05 #b16286
+! #define base06 #689d6a
+! #define base07 #ebdbb2
+! #define base08 #928374
+! #define base09 #fb4934
+! #define base0A #b8bb26
+! #define base0B #fabd2f
+! #define base0C #83a598
+! #define base0D #d3869b
+! #define base0E #8ec07c
+! #define base0F #ebdbb2
+
+! ! Nord
+! #define base00 #2e3440
+! #define base01 #bf616a
+! #define base02 #a3be8c
+! #define base03 #ebcb8b
+! #define base04 #81a1c1
+! #define base05 #848ead
+! #define base06 #88c0d0
+! #define base07 #e5e9f0
+! #define base08 #616e88
+! #define base09 #bf616a
+! #define base0A #a3be8c
+! #define base0B #ebcb8b
+! #define base0C #81a1c1
+! #define base0D #848ead
+! #define base0E #8fbcbb
+! #define base0F #eceff4
+
+! ! Material darker
+! #define base00 #212121
+! #define base01 #ff5370
+! #define base02 #c3e88d
+! #define base03 #ffcb6b
+! #define base04 #82aaff
+! #define base05 #c792ea
+! #define base06 #89ddff
+! #define base07 #eeffff
+! #define base08 #545454
+! #define base09 #ff5370
+! #define base0A #c3e88d
+! #define base0B #ffcb6b
+! #define base0C #82aaff
+! #define base0D #c792ea
+! #define base0E #89ddff
+! #define base0F #ffffff
+
+! URxvt
+*foreground: base07
+*background: base00
+*cursorColor: base07
+
+*color0: base00
+*color1: base01
+*color2: base02
+*color3: base03
+*color4: base04
+*color5: base05
+*color6: base06
+*color7: base07
+
+*color8: base08
+*color9: base09
+*color10: base0A
+*color11: base0B
+*color12: base0C
+*color13: base0D
+*color14: base0E
+*color15: base0F
+
+URxvt.cursorBlink: 1
+URxvt.font: xft:Input Mono Narrow:size=14:style=Regular
+URxvt.italicFont: xft:Input Mono Narrow:size=14:style=Italic
+URxvt.boldFont: xft:Input Mono Narrow:size=14:style=Bold
+
+URxvt.lineSpace: 0
+URxvt.letterSpace: -1
+URxvt.scrollBar: false
+URxvt.internalBorder: 44
+URxvt.cursorUnderline: false
+URxvt.geometry: 70x35
+URxvt.thickness: 5
+URxvt.titleBar: false
+URxvt.intensityStyles: false
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: chromium
+URxvt.matcher.button: 1
+
+! Rofi
+rofi.color-window: base00, base07, base00, base00, base03
+rofi.color-normal: base00, base08, base00, base00, base07
+rofi.color-active: base08, base0E, base00, base0B, base00
+rofi.color-urgent: base00, base08, base00, base00, base08
+
+rofi.font: Input Mono Narrow 18
+! rofi.matching: fuzzy
+rofi.levenshtein-sort: true
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+rofi.columns: 4
+rofi.eh: 1
+rofi.padding: 400
+rofi.bw: 0
+rofi.fullscreen: true
+rofi.opacity: 50
+rofi.dpi: 125
+
+! sxiv
+Sxiv.font: Input Mono Narrow 16
+Sxiv.background: #282828
+Sxiv.foreground: #ebdbb2
+
+! Emacs
+! emacs.verticalScrollBars: false
+
+! General
+Xft.autohint: 1
+Xft.antialias: 1
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.dpi: 125
+! *.dpi: 96
+
