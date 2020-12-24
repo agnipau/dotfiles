@@ -1,68 +1,13 @@
 {
-  "languageserver": {
-    "bash": {
-      "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
-    },
-    "lua": {
-      "cwd": "/usr/share/lua-language-server",
-      "command": "/usr/bin/lua-language-server",
-      "args": [
-        "-E",
-        "-e",
-        "LANG=en",
-        "/usr/share/lua-language-server/main.lua"
-      ],
-      "filetypes": ["lua"],
-      "rootPatterns": [".git/"]
-    },
-    "ccls": {
-      "command": "ccls",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "rootPatterns": [
-        ".ccls",
-        "compile_commands.json",
-        ".vim/",
-        ".git/",
-        ".hg/"
-      ],
-      "initializationOptions": {
-        "cache": {
-          "directory": "/tmp/ccls"
-        },
-        "cformatpath": "/bin/clang-format"
-      }
-    }
-  },
-  "Lua.diagnostics.disable": ["lowercase-global"],
-  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
+  "rust-analyzer.serverPath": "/home/agnipau/.local/bin/rust-analyzer",
   "rust-analyzer.lruCapacity": 12,
   "rust-analyzer.procMacro.enable": true,
   "rust-analyzer.inlayHints.chainingHints": true,
-  "diagnostic.errorSign": "×",
-  "diagnostic.warningSign": "!",
-  "diagnostic.infoSign": "#",
-  "diagnostic.hintSign": "@",
   "diagnostic.messageTarget": "float",
   "diagnostic.messageDelay": 150,
-  "tsserver.trace.server": "verbose",
   "suggest.timeout": 500,
   "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact",
-    "html",
-    "css",
-    "Markdown",
-    "graphql",
-    "json",
-    "yaml",
-    "python",
-    "rust",
-    "cpp",
-    "c"
+    "rust"
   ]
 }
+
