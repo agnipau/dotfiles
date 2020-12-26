@@ -1,9 +1,6 @@
 eval "$(starship init zsh)"
 
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source "${ZSH_AUTOSUGGESTIONS_PATH}"
 
 # Better tab completion.
 local ls_colors="di=38;5;7:ln=38;5;7:so=38;5;7:pi=38;5;7:ex=38;5;7:bd=38;5;7:cd=38;5;7:su=38;5;7:sg=38;5;7:tw=38;5;7:ow=38;5;7:"
@@ -87,8 +84,7 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=red,bold"
 # This controls even the $(...).
 ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]="fg=yellow,bold"
 export ZSH_HIGHLIGHT_MAXLENGTH=60
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "${ZSH_SYNTAX_HIGHLIGHTING_PATH}"
 
 # Env-vars.
 export LC_ALL='en_US.UTF-8'
@@ -116,7 +112,7 @@ export FZF_DEFAULT_OPTS="
   --color info:0,prompt:6,spinner:6,pointer:6,marker:6
 "
 export GOPATH='/home/agnipau/go'
-export PATH="/home/agnipau/bin:/home/agnipau/.local/bin:/home/agnipau/pbin:/home/agnipau/dev/flutter/bin:/home/agnipau/.cargo/bin:/home/agnipau/.npm-packages/bin:${GOPATH}/bin:/home/agnipau/.luarocks/bin:/home/agnipau/.pub-cache/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/emulator:/home/agnipau/.local/bin:${PATH}"
+export PATH="/home/agnipau/progetti/bin:/home/agnipau/.local/bin:/home/agnipau/progetti/pbin:/home/agnipau/dev/flutter/bin:/home/agnipau/.cargo/bin:/home/agnipau/.npm-packages/bin:${GOPATH}/bin:/home/agnipau/.luarocks/bin:/home/agnipau/.pub-cache/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/emulator:/home/agnipau/.local/bin:${PATH}"
 
 # Aliases.
 alias tmux='tmux -u'
@@ -182,5 +178,5 @@ alias cardib='cargo b'
 [[ -z "${TMUX}" && -z "${IN_NEOVIM}" && -z "${INSIDE_EMACS}" && -n "${DISPLAY}" && -o interactive ]] && tmux
 
 # Start X automatically only if in tty1.
-[[ -z "${DISPLAY}" && "$(tty)" == "/dev/tty1" ]] && startx
+# [[ -z "${DISPLAY}" && "$(tty)" == "/dev/tty1" ]] && startx
 

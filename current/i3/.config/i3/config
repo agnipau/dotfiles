@@ -48,7 +48,7 @@ floating_modifier $mod
 
 # Applications.
 bindsym $mod+Return exec --no-startup-id $term
-bindsym $mod+d exec --no-startup-id $HOME/bin/rofi-launch
+bindsym $mod+d exec --no-startup-id $HOME/progetti/bin/rofi-launch
 bindsym $mod+Shift+w exec --no-startup-id $browser
 bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 bindsym --release $mod+Control+c exec --no-startup-id xcolor | tr -d '\n' | xsel -ib
@@ -199,4 +199,5 @@ for_window [class="sun-awt-X11-XDialogPeer"] floating enable
 for_window [class="sun-awt-X11-XFramePeer"]  floating enable
 for_window [class=Chromium] border pixel 0
 for_window [class=Firefox-esr]  border pixel 0
+for_window [class=Firefox]  border pixel 0
 
