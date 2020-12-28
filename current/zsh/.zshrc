@@ -178,5 +178,5 @@ alias cardib='cargo b'
 [[ -z "${TMUX}" && -z "${IN_NEOVIM}" && -z "${INSIDE_EMACS}" && -n "${DISPLAY}" && -o interactive ]] && tmux
 
 # Start X automatically only if in tty1.
-# [[ -z "${DISPLAY}" && "$(tty)" == "/dev/tty1" ]] && startx
+[[ -z "${DISPLAY}" && "$(tty)" == "/dev/tty1" ]] && startx
 
