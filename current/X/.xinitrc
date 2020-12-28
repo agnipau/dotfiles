@@ -1,6 +1,5 @@
-# xrdb -load ~/.Xresources
-# xrandr -s 2560x1440
-# dunst &
+xrdb -load ~/.Xresources
+dunst &
 picom &
 flameshot &
 # unclutter &

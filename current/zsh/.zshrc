@@ -1,6 +1,6 @@
 eval "$(starship init zsh)"
 
-source "${ZSH_AUTOSUGGESTIONS_PATH}"
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Better tab completion.
 local ls_colors="di=38;5;7:ln=38;5;7:so=38;5;7:pi=38;5;7:ex=38;5;7:bd=38;5;7:cd=38;5;7:su=38;5;7:sg=38;5;7:tw=38;5;7:ow=38;5;7:"
@@ -84,7 +84,7 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=red,bold"
 # This controls even the $(...).
 ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]="fg=yellow,bold"
 export ZSH_HIGHLIGHT_MAXLENGTH=60
-source "${ZSH_SYNTAX_HIGHLIGHTING_PATH}"
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Env-vars.
 export LC_ALL='en_US.UTF-8'
