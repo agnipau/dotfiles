@@ -154,7 +154,7 @@ rofi.color-active: base08, base0E, base00, base0B, base00
 rofi.color-urgent: base00, base08, base00, base00, base08
 
 rofi.font: Input Mono Narrow 18
-! rofi.matching: fuzzy
+rofi.matching: fuzzy
 rofi.levenshtein-sort: true
 rofi.separator-style: none
 rofi.hide-scrollbar: true

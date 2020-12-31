@@ -50,6 +50,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id $term
 bindsym $mod+d exec --no-startup-id $HOME/progetti/bin/rofi-launch
 bindsym $mod+Shift+w exec --no-startup-id $browser
+bindsym $mod+e exec --no-startup-id emacs
 bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 bindsym --release $mod+Control+c exec --no-startup-id xcolor | tr -d '\n' | xsel -ib
 bindsym $mod+Shift+x exec --no-startup-id physlock
@@ -84,7 +85,7 @@ bindsym $mod+f fullscreen toggle
 # Change container layout (stacked, tabbed, toggle split).
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+t layout toggle split
 
 # Toggle tiling / floating.
 bindsym $mod+Shift+space floating toggle
