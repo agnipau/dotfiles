@@ -4,159 +4,173 @@
 
 { config, pkgs, ... }:
 
-let
-  # picomAutostart = (pkgs.makeAutostartItem { name = "picom"; package = pkgs.picom; });
-in
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
-  hardware.bluetooth = {
-    enable = true;
-  };
-
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.useOSProber = true;
 
-  # networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "agnipau-nixos";
+  networking.wireless.enable = false;
+
+  # Set your time zone.
+  time.timeZone = "Europe/Rome";
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
-  networking.interfaces.enp4s0f1.useDHCP = true;
-  networking.interfaces.wlp3s0.useDHCP = true;
+  networking.interfaces.enp42s0.useDHCP = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
   # console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
   # };
 
-  # Set your time zone.
-  time.timeZone = "Europe/Rome";
+  # Enable CUPS to print documents.
+  services.printing.enable = false;
 
-  # I'm sorry Mr. Stallman.
+  # Enable sound.
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
+
+  services.xserver = {
+    enable = true;
+    autorun = true;
+    # xrandrHeads = [
+    #   "HDMI-1"
+    #   {
+    #     "monitorConfig" = "Option \"Ignore\" \"true\"";
+    #     "output" = "eDP-1";
+    #   }
+    # ];
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 40;
+    layout = "it";
+    xkbModel = "pc105";
+    xkbVariant = "us";
+    xkbOptions = "caps:ctrl_modifier";
+    displayManager.defaultSession = "none+i3";
+    displayManager.lightdm.enable = true;
+    displayManager.autoLogin.enable = true;
+    displayManager.autoLogin.user = "agnipau";
+    windowManager.i3.enable = true;
+    desktopManager.xterm.enable = false;
+    # Enable touchpad support (enabled default in most desktopManager).
+    libinput.enable = false;
+    videoDrivers = [ "nvidia" ];
+  };
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.agnipau = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ];
+    shell = pkgs.zsh;
+  };
+  users.extraUsers.root.shell = pkgs.zsh;
+
+  # Sorry R. M. Stallman.
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wget
-    spotify
     curl
+    spotify
     neovim
     rustup
     tdesktop
     ripgrep
     fd
+    i3
     tldr
     ffmpeg
+    obs-studio
     xclip
+    xsel
+    dash
+    firefox
+    binutils.bintools
     imagemagick
     fzf
     dunst
     gimp
+    mypaint
+    starship
     ccls
-    asciinema
     zsh
-    android-studio
+    zsh-autosuggestions
+    zsh-syntax-highlighting
     bat
     efibootmgr
     jq
     exfat-utils
     ntfs3g
-    httrack
+    lxappearance
+    arc-theme
+    arc-icon-theme
     physlock
     playerctl
     qbittorrent
     rsync
-    ranger
-    simplescreenrecorder
     pv
     sxiv
     zathura
     tokei
-    jetbrains-mono
-    unclutter
-    udiskie
     xdo
     xdotool
-    xorg.libxcb
-    dejavu_fonts
-    liberation_ttf
-    symbola
-    cantarell-fonts
-    gyre-fonts
-    caladea
-    carlito
-    gelasio
-    noto-fonts
-    ubuntu_font_family
-    xorg.fontsonymisc
-    xorg.fontsunmisc
-    xorg.fontschumachermisc
     youtube-dl
+    emacs
     entr
     diskus
-    pcmanfm
     pastel
-    mpv
+    pcmanfm
+    vlc
     shellcheck
     pandoc
     zip
     pkgconfig
     python39
     hyperfine
-    poppler_utils
     file
     dos2unix
     bc
-    direnv
-    nix-direnv
     openssl
-    pavucontrol
+    openssl.dev
     libnotify
+    pavucontrol
     alacritty
-    sxhkd
-    bspwm
     trash-cli
     git
     gcc
+    clang
     stow
-    blueman
-    dart
-    fish
-    lxappearance
-    arc-theme
-    arc-icon-theme
     tmux
-    polybarFull
     picom
-    # picomAutostart
-    chromium
-    nodejs_latest
-    yarn
-    go
-    cmake
-    flameshot
-    roboto
-    unzip
-    p7zip
-    exa
     rofi
-    feh
-    python38Packages.grip 
+    exa
+    p7zip
+    flameshot
+    cmake
+    gnumake
+    libtool
+    nodejs_latest
   ];
+  environment.variables.OPENSSL_DIR = "${pkgs.openssl.dev}";
+  environment.variables.OPENSSL_LIB_DIR = "${pkgs.openssl.out}/lib";
+  environment.variables.ZSH_AUTOSUGGESTIONS_PATH = "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh";
+  environment.variables.ZSH_SYNTAX_HIGHLIGHTING_PATH = "${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -164,15 +178,12 @@ in
   # programs.gnupg.agent = {
   #   enable = true;
   #   enableSSHSupport = true;
-  #   pinentryFlavor = "gnome3";
   # };
 
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
-  services.blueman.enable = true;
+  services.openssh.enable = false;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -180,58 +191,12 @@ in
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable sound.
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
-
-  # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-    autorun = true;
-    xrandrHeads = [
-      "HDMI-1"
-      {
-        "monitorConfig" = "Option \"Ignore\" \"true\"";
-	"output" = "eDP-1";
-      }
-    ];
-    autoRepeatDelay = 200;
-    autoRepeatInterval = 40;
-    layout = "us";
-    xkbOptions = "eurosign:e";
-    displayManager.defaultSession = "none+bspwm";
-    displayManager.lightdm = {
-      enable = true;
-      autoLogin.enable = true;
-      autoLogin.user = "agnipau";
-    };
-    windowManager.bspwm.enable = true;
-    # windowManager.bspwm.configFile = builtins.getEnv "HOME" + "/.config/bspwm/bspwmrc";
-    desktopManager.xterm.enable = false;
-  };
-
-  # Enable touchpad support.
-  services.xserver.libinput.enable = true;
-
-  # Enable the KDE Desktop Environment.
-  # services.xserver.displayManager.sddm.enable = true;
-  # services.xserver.desktopManager.plasma5.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.agnipau = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  };
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "20.03"; # Did you read the comment?
+  system.stateVersion = "20.09"; # Did you read the comment?
 }
 
