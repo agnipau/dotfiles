@@ -1,13 +1,21 @@
 {
-  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
-  "rust-analyzer.lruCapacity": 12,
-  "rust-analyzer.procMacro.enable": true,
-  "rust-analyzer.inlayHints.chainingHints": true,
   "diagnostic.messageTarget": "float",
   "diagnostic.messageDelay": 150,
   "suggest.timeout": 500,
+  "languageserver": {
+      "dart": {
+          "command": "dart",
+          "args": ["/opt/dart-sdk/bin/snapshots/analysis_server.dart.snapshot", "--lsp"],
+          "filetypes": ["dart"]
+      },
+      "rust": {
+          "command": "rust-analyzer",
+          "filetypes": ["rust"]
+      }
+  },
   "coc.preferences.formatOnSaveFiletypes": [
-    "rust"
+    "rust",
+    "dart"
   ]
 }
 

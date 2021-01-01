@@ -1,4 +1,5 @@
-eval "$(starship init zsh)"
+setopt PROMPT_SUBST
+PROMPT="\$(sprompt \$?)"
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -173,6 +174,7 @@ alias sxiv='devour-hide sxiv'
 # alias emacsc='emacsclient -c &disown'
 # alias emacsq='emacsclient -e "$(kill-emacs)"'
 alias cardib='cargo b'
+alias cat='bat'
 
 # Start tmux automatically whenever a new terminal instance is opened.
 [[ -z "${TMUX}" && -z "${IN_NEOVIM}" && -z "${INSIDE_EMACS}" && -n "${DISPLAY}" && -o interactive ]] && tmux

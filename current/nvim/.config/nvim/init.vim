@@ -162,15 +162,15 @@ Plug 'junegunn/fzf.vim'
     " let g:fzf_layout = { 'down': '~40%' }
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-    let g:coc_global_extensions = [
-        \ 'coc-rust-analyzer',
-        \ ]
+    let g:coc_global_extensions = []
 
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
 
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'airblade/vim-rooter'
+
+Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
 
