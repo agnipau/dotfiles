@@ -1,9 +1,6 @@
 aic94xx-firmware 30-9
 alacritty 0.6.0-1
-android-platform 30_r03-1
-android-sdk 26.1.1-1
-android-sdk-build-tools r30.0.3-2
-android-sdk-platform-tools 30.0.5-1
+android-studio 4.1.1.0-1
 arc-gtk-theme 20201013-2
 arc-icon-theme 20161122-3
 aurvote 1.9-3
@@ -46,6 +43,7 @@ groff 1.22.4-3
 grub 2:2.04-8
 gzip 1.10-3
 hsetroot 1.0.5-1
+htop 3.0.4-1
 hyperfine 1.11.0-1
 i3-wm 4.19-1
 i3status 2.13-3
@@ -59,6 +57,7 @@ linux-firmware 20201218.646f159-1
 lxappearance 0.6.3-4
 m4 1.4.18-3
 make 4.3-3
+man-db 2.9.3-1
 mypaint 2.0.0-2
 neovim 0.4.4-1
 neovim-plug 0.10.0-3
@@ -85,6 +84,7 @@ python 3.9.1-1
 python-grip 4.5.2-1
 python-pip 20.2.4-1
 qbittorrent 4.3.1-1
+qemu 5.2.0-2
 renameutils 0.12.0-7
 ripgrep 12.1.1-1
 rofi 1.6.1-1
@@ -104,6 +104,7 @@ texinfo 6.7-3
 tmux 3.1_c-1
 tokei 12.0.4-1
 trash-cli 0.17.1.14-6
+tree 1.8.0-2
 ttf-dejavu 2.37+18+g9b5d1b2f-2
 ttf-font-awesome 5.15.1-1
 ttf-iosevka-ss07 4.2.0-1

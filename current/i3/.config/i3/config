@@ -201,4 +201,5 @@ for_window [class="sun-awt-X11-XFramePeer"]  floating enable
 for_window [class=Chromium] border pixel 0
 for_window [class=Firefox-esr]  border pixel 0
 for_window [class=Firefox]  border pixel 0
+for_window [title="Android Emulator - Pixel_4_XL_API_30:5554"] floating enable
 
