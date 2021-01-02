@@ -1,5 +1,4 @@
-setopt PROMPT_SUBST
-PROMPT="\$(sprompt \$?)"
+eval "$(sprompt init -s zsh -u -p)"
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 

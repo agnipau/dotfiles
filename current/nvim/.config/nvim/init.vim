@@ -61,6 +61,8 @@ set backspace=indent,eol,start
 set foldmethod=marker
 " Fold fill character.
 set fillchars=fold:\ 
+" Disable annoying swap files.
+set noswapfile
 " GUI font.
 set guifont=JetBrains\ Mono:h12
 " set guifont=JetBrains\ Mono:h15
@@ -145,6 +147,8 @@ Plug 'tpope/vim-surround'
 
 Plug 'tpope/vim-commentary'
 
+Plug 'tpope/vim-fugitive'
+
 Plug 'cespare/vim-toml'
 
 Plug 'rust-lang/rust.vim'
@@ -166,7 +170,8 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
 
-Plug 'jiangmiao/auto-pairs'
+" TODO(agnipau): Find a decent plugin, this is annoying.
+" Plug 'jiangmiao/auto-pairs'
 
 Plug 'airblade/vim-rooter'
 
@@ -200,6 +205,7 @@ hi CocErrorSign guibg=#282828 guifg=#fb4934
 hi CocWarningSign guibg=#282828 guifg=#fe8019
 hi CocInfoSign guibg=#282828 guifg=#b8bb26
 hi CocHintSign guibg=#282828 guifg=#8ec07c
+hi CocHighlightText guibg=#504945
 hi FoldColumn guibg=#1d2021
 
 " }}}

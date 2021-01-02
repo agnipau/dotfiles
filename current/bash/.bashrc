@@ -3,3 +3,5 @@
 
 export PATH="${PATH}:/home/agnipau/.cargo/bin"
 
+eval "$(sprompt init -s bash -u -p)"
+
