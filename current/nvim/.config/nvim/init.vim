@@ -206,7 +206,7 @@ hi CocWarningSign guibg=#282828 guifg=#fe8019
 hi CocInfoSign guibg=#282828 guifg=#b8bb26
 hi CocHintSign guibg=#282828 guifg=#8ec07c
 hi CocHighlightText guibg=#504945
-hi FoldColumn guibg=#1d2021
+hi Folded guibg=none guifg=#a89984
 
 " }}}
 " Autocommands {{{
