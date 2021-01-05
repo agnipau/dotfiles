@@ -15,7 +15,9 @@
   },
   "coc.preferences.formatOnSaveFiletypes": [
     "rust",
-    "dart"
+    "dart",
+    "typescript",
+    "typescriptreact"
   ]
 }
 

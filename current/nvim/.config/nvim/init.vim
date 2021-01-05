@@ -166,7 +166,7 @@ Plug 'junegunn/fzf.vim'
     " let g:fzf_layout = { 'down': '~40%' }
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-    let g:coc_global_extensions = []
+    let g:coc_global_extensions = [ 'coc-tsserver' ]
 
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
 
@@ -176,6 +176,10 @@ Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
 Plug 'airblade/vim-rooter'
 
 Plug 'dart-lang/dart-vim-plugin'
+
+Plug 'peitalin/vim-jsx-typescript'
+
+Plug 'HerringtonDarkholme/yats.vim'
 
 call plug#end()
 
