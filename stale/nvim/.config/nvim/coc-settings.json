@@ -11,13 +11,18 @@
       "rust": {
           "command": "rust-analyzer",
           "filetypes": ["rust"]
+      },
+      "python": {
+          "command": "pyls",
+          "filetypes": ["python"]
       }
   },
   "coc.preferences.formatOnSaveFiletypes": [
     "rust",
     "dart",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "python"
   ]
 }
 
