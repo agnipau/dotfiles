@@ -1,10 +1,10 @@
 verbosity = 0
 
 [server]
-# exit session if no requests were received during given period in seconds
-# ciao come va io mi chiamo ciao come va e tu come ti chiami works only in unix sockets mode (-s/--session)
-# set to 0 to disable
-timeout = 1800 # seconds = 30 minutes
+# Exit session if no requests were received during given period in seconds.
+# Works only in unix sockets mode (-s/--session).
+# Set to 0 to disable.
+timeout = 1800
 
 [language.rust]
 filetypes = ["rust"]
@@ -12,72 +12,15 @@ roots = ["Cargo.toml"]
 command = "rust-analyzer"
 offset_encoding = "utf-8"
 
-[language.css]
-filetypes = ["css"]
-roots = ["package.json"]
-command = "css-languageserver"
-args = ["--stdio"]
-
-# [language.html]
-# filetypes = ["html"]
-# roots = ["package.json"]
-# command = "html-languageserver"
-# args = ["--stdio"]
-
-[language.json]
-filetypes = ["json"]
-roots = ["package.json"]
-command = "json-languageserver"
-args = ["--stdio"]
-
-# [language.go]
-# filetypes = ["go"]
-# roots = ["Gopkg.toml", "go.mod", ".git", ".hg"]
-# command = "gopls"
-# offset_encoding = "utf-8"
-
-[language.sh]
-filetypes = ["sh"]
-roots = [".git", ".hg"]
-command = "bash-language-server"
-args = ["start"]
-
 [language.dart]
 filetypes = ["dart"]
-roots = ["pubspec.yaml", ".git"]
+roots = ["pubspec.yaml"]
 command = "dart"
 args = ["/opt/dart-sdk/bin/snapshots/analysis_server.dart.snapshot", "--lsp"]
 
-# [language.c_cpp]
-# filetypes = ["c", "cpp"]
-# roots = ["compile_flags.txt", "compile_commands.json"]
-# command = "clangd"
-# offset_encoding = "utf-8"
-
-[language.javascript]
-filetypes = ["javascript"]
-roots = ["package.json"]
-command = "typescript-language-server"
-args = ["--stdio"]
-offset_encoding = "utf-8"
-
-[language.typescript]
-filetypes = ["typescript"]
-roots = ["package.json"]
-command = "typescript-language-server"
-args = ["--stdio"]
-offset_encoding = "utf-8"
-
-[language.tsx]
-filetypes = ["typescript"]
-roots = ["package.json"]
-command = "typescript-language-server"
-args = ["--stdio"]
-offset_encoding = "utf-8"
-
 [language.python]
 filetypes = ["python"]
-roots = ["requirements.txt", "setup.py", ".git", ".hg"]
+roots = ["requirements.txt", "setup.py"]
 command = "pyls"
 offset_encoding = "utf-8"
 
