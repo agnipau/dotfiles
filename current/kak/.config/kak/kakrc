@@ -73,29 +73,182 @@ set-option global modelinefmt '%val{cursor_line}:%val{cursor_column}:%val{buf_li
 set-option global grepcmd 'rg -L --hidden --with-filename --column'
 set-option global autoreload yes
 
-# # FZF.
-# # ‾‾‾‾
-#
-# source "%val{config}/plugins/fzf.kak/rc/fzf.kak"
-# source "%val{config}/plugins/fzf.kak/rc/modules/fzf-file.kak"
-# source "%val{config}/plugins/fzf.kak/rc/modules/fzf-buffer.kak"
-# source "%val{config}/plugins/fzf.kak/rc/modules/fzf-search.kak"
-# source "%val{config}/plugins/fzf.kak/rc/modules/fzf-cd.kak"
-#
-# hook -once global ModuleLoaded fzf %{
-#     set-option global fzf_highlight_command 'bat'
-#     set-option global fzf_file_command      'fd --type f --follow'
-#     set-option global fzf_cd_command        'fd --type d --follow'
-#     set-option global fzf_default_opts      '--multi --inline-info --height 95% --color fg:8,hl:7,fg+:6,bg+:0,hl+:7 --color info:0,prompt:6,spinner:6,pointer:6,marker:6'
-#     set-option global fzf_preview_pos       'up'
-# }
-#
-# define-command f %{
-#     require-module fzf
-#     fzf-mode
-# }
-#
-# map global user f ': f<ret>'
+define-command pwd -docstring 'Print the current working directory' %{
+    evaluate-commands %sh{
+        echo "echo $PWD"
+    }
+}
+
+define-command put-cursors -params 1.. -docstring 'Put cursors at specific line numbers' %{
+    evaluate-commands %sh{
+        kakconf put-cursors -t "$kak_buf_line_count" -l $*
+    }
+}
+define-command put-cursors-zero -params 1.. -docstring 'Put cursors at specific line numbers (0-based indexes)' %{
+    evaluate-commands %sh{
+        kakconf put-cursors -z -t "$kak_buf_line_count" -l $*
+    }
+}
+
+declare-option -hidden str temp_edit_last_buffer ""
+define-command temp-edit -params 2 -docstring 'edit that uses only one buffer' %{
+    evaluate-commands %sh{
+        if [ "$kak_opt_temp_edit_last_buffer" ]; then
+            echo delete-buffer "$kak_opt_temp_edit_last_buffer"
+        fi
+        echo set-option global temp_edit_last_buffer "$1"
+        echo edit "$1" "$2"
+    }
+}
+define-command delete-temp-buffer -docstring 'Delete the buffer used by `temp-edit`' %{
+    evaluate-commands %sh{
+        if [ "$kak_opt_temp_edit_last_buffer" ]; then
+            echo delete-buffer "$kak_opt_temp_edit_last_buffer"
+            echo set-option global temp_edit_last_buffer %{}
+        fi
+    }
+}
+
+define-command backup-selections -docstring 'Backup all selections to the backup register' %{
+    execute-keys -draft '"bZ'
+}
+define-command restore-selections -docstring 'Restore all selections from the backup register' %{
+    execute-keys '"bz'
+}
+
+# FZF.
+# ‾‾‾‾
+
+define-command fzf-edit -docstring 'edit file using FZF' %{
+    nop %sh{
+        tmux split-window -l '30%' "
+kak -p $kak_session <<<\"
+    evaluate-commands -client $kak_client %{
+        backup-selections
+    }
+\"
+
+result=\"\$(fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ temp-edit {} 1 }\\\"\" --preview-window=':0%')\"
+
+if [ -z \"\$result\" ]; then
+    kak -p $kak_session <<<\"
+        evaluate-commands -client $kak_client %{
+            restore-selections
+            delete-temp-buffer
+        }
+    \"
+else
+    kak -p $kak_session <<<\"
+        evaluate-commands -client $kak_client %{
+            set-option global temp_edit_last_buffer %{}
+        }
+    \"
+fi
+"
+    }
+}
+
+# TODO(agnipau): Use a buffer to preview.
+define-command fzf-cd -docstring 'change directory using FZF' %{
+    nop %sh{
+        tmux split-window -l '30%' "
+args=\"\$(fd --type d --hidden --follow --exclude .git | fzf --preview='run ls -a {}')\"
+
+if [ \"\$args\" ]; then
+    kak -p $kak_session <<<\"
+        evaluate-commands -client $kak_client %{
+            change-directory \"\$args\"
+        }
+    \"
+fi
+"
+    }
+}
+
+define-command fzf-buffer -docstring 'change buffer using FZF' %{
+    nop %sh{
+        tmux split-window -l '30%' "
+kak -p $kak_session <<<\"
+    evaluate-commands -client $kak_client %{
+        backup-selections
+    }
+\"
+
+result=\"\$(tr ' ' '\n' <<<\"$kak_buflist\" | fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ buffer {} }\\\"\" --preview-window=':0%')\"
+
+if [ -z \"\$result\" ]; then
+    kak -p $kak_session <<<\"
+        evaluate-commands -client $kak_client %{
+            restore-selections
+        }
+    \"
+fi
+"
+    }
+}
+
+define-command fzf-lines -docstring 'search through lines of a file using FZF' %{
+    nop %sh{
+        tmux split-window -l '30%' "
+kak -p $kak_session <<<\"
+    evaluate-commands -client $kak_client %{
+        backup-selections
+    }
+\"
+
+result=\"\$(fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ put-cursors-zero {+n} }\\\"\" --preview-window=':0%' <\"$kak_buffile\")\"
+
+if [ -z \"\$result\" ]; then
+    kak -p $kak_session <<<\"
+        evaluate-commands -client $kak_client %{
+            restore-selections
+        }
+    \"
+fi
+"
+    }
+}
+
+define-command fzf-rg -params 1 -docstring 'jump to a file at a specific line using Ripgrep and FZF' %{
+    nop %sh{
+        tmux split-window -l '30%' "
+kak -p $kak_session <<<\"
+    evaluate-commands -client $kak_client %{
+        backup-selections
+    }
+\"
+
+result=\"\$(rg $1 --line-number | fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ temp-edit \\\$(rg '(.+):(\d+)' -o -r '\\\$1 \\\$2' <<<{}) }\\\"\" --preview-window=':0%')\"
+
+if [ -z \"\$result\" ]; then
+    kak -p $kak_session <<<\"
+        evaluate-commands -client $kak_client %{
+            restore-selections
+            delete-temp-buffer
+        }
+    \"
+else
+    kak -p $kak_session <<<\"
+        evaluate-commands -client $kak_client %{
+            set-option global temp_edit_last_buffer %{}
+        }
+    \"
+fi
+"
+    }
+}
+
+define-command fzf-rg-prompt -docstring 'jump to a file at a specific line using Ripgrep and FZF (prompt)' %{
+    prompt 'ripgrep:' %{fzf-rg %val{text}}
+}
+
+declare-user-mode fzf
+map global user f ': enter-user-mode fzf<ret>' -docstring 'FZF mode'
+map global fzf f ': fzf-edit<ret>' -docstring 'edit file using FZF'
+map global fzf d ': fzf-cd<ret>' -docstring 'change directory using FZF'
+map global fzf b ': fzf-buffer<ret>' -docstring 'change buffer using FZF'
+map global fzf l ': fzf-lines<ret>' -docstring 'search through lines of a file using FZF'
+map global fzf r ': fzf-rg-prompt<ret>' -docstring 'jump to a file at a specific line using Ripgrep and FZF (prompt)'
 
 # System clipboard handling.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -114,6 +267,8 @@ map global user <a-P> ': evaluate-commands %sh{ kakconf paste before -s }<ret>' 
 map global user y ': xsel-yank<ret>' -docstring 'yank active selection to X11 clipboard'
 map global user R ': xsel-replace<ret>' -docstring "replace all selections with X11 clipboard's contents"
 
+# map global normal <c>
+
 # Highlight hidden characters.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
@@ -130,7 +285,7 @@ map global user 'h' ': toggle-whitespaces<ret>' -docstring 'toggle the visibilit
 # TODO(agnipau): Auto pairs.
 
 # Increment/decrement numbers.
-# ----------------------------
+# ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 define-command increment-number -params 1 -docstring "Increment the selection" %{
     execute-keys "| kakconf inc-number -o %arg{1}<ret>"
@@ -182,7 +337,7 @@ hook global BufNewFile .* %{ editorconfig-load }
 # }
 
 # Tab behavior.
-# -------------
+# ‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 # Insert spaces when tab is pressed.
 hook global InsertChar '\t' %{
@@ -208,7 +363,7 @@ hook global BufWritePre .* %{
         evaluate-commands %sh{
             case "$kak_opt_filetype" in
             asciidoc|markdown) exit ;;
-            *) printf '%s\n' "execute-keys -draft '%s\h+$<ret>d'" ;;
+            *) echo execute-keys -draft '%s\h+$<ret>d' ;;
             esac
         }
     }
@@ -232,15 +387,69 @@ map global normal '<backspace>' 'gh'
 map global normal '<c-l>' 'gl'
 
 # Window management.
-# ------------------
+# ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+declare-option -docstring 'Controls the layout of the panes' bool wm_focus_mode true
+define-command wm-focus-mode -docstring 'Toggle focus mode' %{
+    evaluate-commands %sh{
+        if [ "$kak_opt_wm_focus_mode" == true ]; then
+            echo set-option global wm_focus_mode false
+        else
+            echo set-option global wm_focus_mode true
+        fi
+        echo wm-balance
+    }
+}
+
+define-command wm-balance -docstring 'Balance the panes according to %opt{wm_focus_mode}' %{
+    nop %sh{
+        if [ "$kak_opt_wm_focus_mode" == true ]; then
+            active_pane="$(tmux run 'echo #{pane_id}')"
+            size=100
+            for id in $(tmux list-panes -F '#{pane_id}'); do
+                [ "$id" == "$active_pane" ] && continue
+                tmux resize-pane -t "$id" -x '5%'
+                size="$(( size - 5 ))"
+            done
+            tmux resize-pane -t "$active_pane" -x "$size%"
+        else
+            tmux select-layout even-horizontal
+        fi
+    }
+}
+
+define-command wm-split -docstring 'New horizontal split and balance splits horizontally' %{
+    evaluate-commands %sh{
+        tmux split-window -h "kak -c $kak_session"
+        echo wm-balance
+    }
+}
+
+define-command wm-close -docstring 'Close the current split and balance splits horizontally' %{
+    evaluate-commands %sh{
+        tmux kill-pane
+        echo wm-balance
+    }
+}
+
+define-command wm-focus -params 1 -docstring 'Focus left split' %{
+    evaluate-commands %sh{
+        tmux select-pane "$1"
+        echo wm-balance
+    }
+}
 
 declare-user-mode wm
-map global user w ': enter-user-mode wm<ret>' -docstring 'window management mode'
-map global wm l ': new<ret>' -docstring 'new horizontal split'
-map global wm j ': tmux-terminal-vertical kak -c %val{session}<ret>' -docstring 'new vertical split'
+map global normal '<c-w>' ': enter-user-mode wm<ret>' -docstring 'window management mode'
+map global wm '<c-w>' ': wm-split<ret>' -docstring 'New horizontal split and balance splits horizontally'
+map global wm '<backspace>' ': wm-focus -L<ret>' -docstring 'Focus left split'
+map global wm '<c-l>' ': wm-focus -R<ret>' -docstring 'Focus right split'
+map global wm '<ret>' ': wm-focus -D<ret>' -docstring 'Focus below split'
+map global wm '<c-k>' ': wm-focus -U<ret>' -docstring 'Focus above split'
+map global wm '<c-d>' ': wm-close<ret>' -docstring 'Close the current split and balance splits horizontally'
+map global wm '<c-f>' ': wm-focus-mode<ret>' -docstring 'Toggle focus mode'
 
 # Surround.
-# ---------
+# ‾‾‾‾‾‾‾‾‾
 
 declare-user-mode surround
 map global user s ': enter-user-mode surround<ret>' -docstring 'surround mode'
@@ -298,7 +507,7 @@ define-command lsp-restart -docstring 'Restart kak-lsp session' %{
 map -docstring "xml tag object" global object t %{c<lt>([\w.]+)\b[^>]*?(?<lt>!/)>,<lt>/([\w.]+)\b[^>]*?(?<lt>!/)><ret>}
 
 # Language configuration.
-# -----------------------
+# ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 hook global WinSetOption filetype=rust %{
     set-option buffer formatcmd 'rustfmt'
@@ -319,6 +528,12 @@ hook global WinSetOption filetype=python %{
 hook global WinSetOption filetype=cpp %{
     set-option buffer formatcmd 'clang-format'
     hook buffer BufWritePre .* %{format}
+}
+
+hook global WinSetOption filetype=grep %{
+    map buffer normal '<c-f>' ': grep-jump<ret>'
+    # TODO(agnipau): Why this is buggy?
+    # map buffer goto 'd' ': grep-jump<ret>'
 }
 
 hook global WinSetOption filetype=html %{
