@@ -52,14 +52,15 @@ map global normal '=' ': wrap<ret>' -docstring "Wrap comment to fit %opt{autowra
 # Appearance.
 # ‾‾‾‾‾‾‾‾‾‾‾
 
-# hook global WinCreate ^[^*]+$ %{
-#     add-highlighter window/ number-lines -hlcursor -separator ' ' # -relative
-# }
+hook global WinCreate ^[^*]+$ %{
+    add-highlighter window/ column "%opt{autowrap_column}" "default,%opt{gruvbox_bg0}"
+    # add-highlighter window/ number-lines -hlcursor -separator ' ' # -relative
+}
+
 # Show matching char.
 add-highlighter global/ show-matching
 # Wrap lines and show a visual indicator.
 add-highlighter global/ wrap -word -indent -marker '↪ '
-add-highlighter global/ column "%opt{autowrap_column}" "default,%opt{gruvbox_bg0}"
 set-option global ui_options ncurses_assistant=none ncurses_status_on_top=false
 # Disable startup screen.
 set-option global startup_info_version -1
@@ -71,7 +72,7 @@ set-option global tabstop 4
 set-option global indentwidth 4
 set-option global modelinefmt '%val{cursor_line}:%val{cursor_column}:%val{buf_line_count} %val{bufname} {{mode_info}} %val{client}@[%val{session}]'
 set-option global grepcmd 'rg -L --hidden --with-filename --column'
-set-option global autoreload yes
+set-option global autoreload no
 
 define-command pwd -docstring 'Print the current working directory' %{
     evaluate-commands %sh{
@@ -129,7 +130,7 @@ define-command restore-selections -docstring 'Restore all selections from the ba
 
 define-command fzf-edit -docstring 'Edit file using FZF' %{
     nop %sh{
-        tmux split-window -l '30%' "
+        tmux split-window -f -l '30%' "
 result=\"\$(fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ temp-edit {} }\\\"\" --preview-window=':0')\"
 
 if [ -z \"\$result\" ]; then
@@ -150,19 +151,20 @@ fi
     }
 }
 
-# TODO(agnipau): Use -fifo or a more performing method than autoreload.
 define-command fzf-cd -docstring 'Change directory using FZF' %{
     nop %sh{
-        tmux split-window -l '30%' "
-file_path=/tmp/fzf_cd
+        tmux split-window -f -l '30%' "
+tmp_file=/tmp/kak_cd
+
 kak -p $kak_session <<<\"
     evaluate-commands -client $kak_client %{
         backup-selections
-        edit -readonly \"\$file_path\"
+        edit -readonly \"\$tmp_file\"
+        remove-highlighter \"window/column_${kak_opt_autowrap_column}_default,$kak_opt_gruvbox_bg0\"
     }
 \"
 
-args=\"\$(fd --type d --hidden --follow --exclude .git | fzf --preview=\"ls -lha {+} >'\$file_path'\" --preview-window=':0')\"
+args=\"\$(fd --type d --hidden --follow --exclude .git | fzf --preview=\"ls -lha {+} >'\$tmp_file'; kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ edit! -readonly \\\$tmp_file }\\\"\" --preview-window=':0')\"
 
 if [ \"\$args\" ]; then
     kak -p $kak_session <<<\"
@@ -175,17 +177,17 @@ fi
 kak -p $kak_session <<<\"
     evaluate-commands -client $kak_client %{
         restore-selections
-        delete-buffer \"\$file_path\"
+        delete-buffer \"\$tmp_file\"
     }
 \"
-rm -f \"\$file_path\"
+rm -f \"\$tmp_file\"
 "
     }
 }
 
 define-command fzf-buffer -docstring 'Change buffer using FZF' %{
     nop %sh{
-        tmux split-window -l '30%' "
+        tmux split-window -f -l '30%' "
 result=\"\$(tr ' ' '\n' <<<\"$kak_buflist\" | fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ buffer {} }\\\"\" --preview-window=':0')\"
 
 if [ -z \"\$result\" ]; then
@@ -201,7 +203,7 @@ fi
 
 define-command fzf-lines -docstring 'Search through lines of a file using FZF' %{
     nop %sh{
-        tmux split-window -l '30%' "
+        tmux split-window -f -l '30%' "
 kak -p $kak_session <<<\"
     evaluate-commands -client $kak_client %{
         backup-selections
@@ -223,7 +225,7 @@ fi
 
 define-command fzf-rg -params 1 -docstring 'Jump to a file at a specific line using Ripgrep and FZF' %{
     nop %sh{
-        tmux split-window -l '30%' "
+        tmux split-window -f -l '30%' "
 kak -p $kak_session <<<\"
     evaluate-commands -client $kak_client %{
         backup-selections
