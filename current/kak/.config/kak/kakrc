@@ -91,16 +91,24 @@ define-command put-cursors-zero -params 1.. -docstring 'Put cursors at specific 
 }
 
 declare-option -hidden str temp_edit_last_buffer ""
-define-command temp-edit -params 2 -docstring 'edit that uses only one buffer' %{
+define-command temp-edit -params 1..2 -docstring 'Edit that uses only one buffer' %{
     evaluate-commands %sh{
         if [ "$kak_opt_temp_edit_last_buffer" ]; then
             echo delete-buffer "$kak_opt_temp_edit_last_buffer"
         fi
-        echo set-option global temp_edit_last_buffer "$1"
-        echo edit "$1" "$2"
+    }
+    try %{
+        buffer %arg{1}
+        execute-keys %sh{
+            [ "$2" ] && echo "${2}g"
+        }
+        set-option global temp_edit_last_buffer %{}
+    } catch %{
+        set-option global temp_edit_last_buffer %arg{1}
+        edit %arg{1} %arg{2}
     }
 }
-define-command delete-temp-buffer -docstring 'Delete the buffer used by `temp-edit`' %{
+define-command temp-delete-buffer -docstring 'Delete the buffer used by `temp-edit`' %{
     evaluate-commands %sh{
         if [ "$kak_opt_temp_edit_last_buffer" ]; then
             echo delete-buffer "$kak_opt_temp_edit_last_buffer"
@@ -119,22 +127,16 @@ define-command restore-selections -docstring 'Restore all selections from the ba
 # FZF.
 # ‾‾‾‾
 
-define-command fzf-edit -docstring 'edit file using FZF' %{
+define-command fzf-edit -docstring 'Edit file using FZF' %{
     nop %sh{
         tmux split-window -l '30%' "
-kak -p $kak_session <<<\"
-    evaluate-commands -client $kak_client %{
-        backup-selections
-    }
-\"
-
-result=\"\$(fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ temp-edit {} 1 }\\\"\" --preview-window=':0%')\"
+result=\"\$(fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ temp-edit {} }\\\"\" --preview-window=':0')\"
 
 if [ -z \"\$result\" ]; then
     kak -p $kak_session <<<\"
         evaluate-commands -client $kak_client %{
-            restore-selections
-            delete-temp-buffer
+            buffer \"$kak_buffile\"
+            temp-delete-buffer
         }
     \"
 else
@@ -148,11 +150,19 @@ fi
     }
 }
 
-# TODO(agnipau): Use a buffer to preview.
-define-command fzf-cd -docstring 'change directory using FZF' %{
+# TODO(agnipau): Use -fifo or a more performing method than autoreload.
+define-command fzf-cd -docstring 'Change directory using FZF' %{
     nop %sh{
         tmux split-window -l '30%' "
-args=\"\$(fd --type d --hidden --follow --exclude .git | fzf --preview='run ls -a {}')\"
+file_path=/tmp/fzf_cd
+kak -p $kak_session <<<\"
+    evaluate-commands -client $kak_client %{
+        backup-selections
+        edit -readonly \"\$file_path\"
+    }
+\"
+
+args=\"\$(fd --type d --hidden --follow --exclude .git | fzf --preview=\"ls -lha {+} >'\$file_path'\" --preview-window=':0')\"
 
 if [ \"\$args\" ]; then
     kak -p $kak_session <<<\"
@@ -161,11 +171,35 @@ if [ \"\$args\" ]; then
         }
     \"
 fi
+
+kak -p $kak_session <<<\"
+    evaluate-commands -client $kak_client %{
+        restore-selections
+        delete-buffer \"\$file_path\"
+    }
+\"
+rm -f \"\$file_path\"
 "
     }
 }
 
-define-command fzf-buffer -docstring 'change buffer using FZF' %{
+define-command fzf-buffer -docstring 'Change buffer using FZF' %{
+    nop %sh{
+        tmux split-window -l '30%' "
+result=\"\$(tr ' ' '\n' <<<\"$kak_buflist\" | fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ buffer {} }\\\"\" --preview-window=':0')\"
+
+if [ -z \"\$result\" ]; then
+    kak -p $kak_session <<<\"
+        evaluate-commands -client $kak_client %{
+            buffer \"$kak_buffile\"
+        }
+    \"
+fi
+"
+    }
+}
+
+define-command fzf-lines -docstring 'Search through lines of a file using FZF' %{
     nop %sh{
         tmux split-window -l '30%' "
 kak -p $kak_session <<<\"
@@ -174,7 +208,7 @@ kak -p $kak_session <<<\"
     }
 \"
 
-result=\"\$(tr ' ' '\n' <<<\"$kak_buflist\" | fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ buffer {} }\\\"\" --preview-window=':0%')\"
+result=\"\$(fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ put-cursors-zero {+n} }\\\"\" --preview-window=':0' <\"$kak_buffile\")\"
 
 if [ -z \"\$result\" ]; then
     kak -p $kak_session <<<\"
@@ -187,7 +221,7 @@ fi
     }
 }
 
-define-command fzf-lines -docstring 'search through lines of a file using FZF' %{
+define-command fzf-rg -params 1 -docstring 'Jump to a file at a specific line using Ripgrep and FZF' %{
     nop %sh{
         tmux split-window -l '30%' "
 kak -p $kak_session <<<\"
@@ -196,35 +230,13 @@ kak -p $kak_session <<<\"
     }
 \"
 
-result=\"\$(fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ put-cursors-zero {+n} }\\\"\" --preview-window=':0%' <\"$kak_buffile\")\"
+result=\"\$(rg $1 --line-number | fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ temp-edit \\\$(rg '(.+):(\d+)' -o -r '\\\$1 \\\$2' <<<{}) }\\\"\" --preview-window=':0')\"
 
 if [ -z \"\$result\" ]; then
     kak -p $kak_session <<<\"
         evaluate-commands -client $kak_client %{
             restore-selections
-        }
-    \"
-fi
-"
-    }
-}
-
-define-command fzf-rg -params 1 -docstring 'jump to a file at a specific line using Ripgrep and FZF' %{
-    nop %sh{
-        tmux split-window -l '30%' "
-kak -p $kak_session <<<\"
-    evaluate-commands -client $kak_client %{
-        backup-selections
-    }
-\"
-
-result=\"\$(rg $1 --line-number | fzf --preview=\"kak -p $kak_session <<<\\\"evaluate-commands -client $kak_client %{ temp-edit \\\$(rg '(.+):(\d+)' -o -r '\\\$1 \\\$2' <<<{}) }\\\"\" --preview-window=':0%')\"
-
-if [ -z \"\$result\" ]; then
-    kak -p $kak_session <<<\"
-        evaluate-commands -client $kak_client %{
-            restore-selections
-            delete-temp-buffer
+            temp-delete-buffer
         }
     \"
 else
@@ -238,17 +250,17 @@ fi
     }
 }
 
-define-command fzf-rg-prompt -docstring 'jump to a file at a specific line using Ripgrep and FZF (prompt)' %{
+define-command fzf-rg-prompt -docstring 'Jump to a file at a specific line using Ripgrep and FZF (prompt)' %{
     prompt 'ripgrep:' %{fzf-rg %val{text}}
 }
 
 declare-user-mode fzf
 map global user f ': enter-user-mode fzf<ret>' -docstring 'FZF mode'
-map global fzf f ': fzf-edit<ret>' -docstring 'edit file using FZF'
-map global fzf d ': fzf-cd<ret>' -docstring 'change directory using FZF'
-map global fzf b ': fzf-buffer<ret>' -docstring 'change buffer using FZF'
-map global fzf l ': fzf-lines<ret>' -docstring 'search through lines of a file using FZF'
-map global fzf r ': fzf-rg-prompt<ret>' -docstring 'jump to a file at a specific line using Ripgrep and FZF (prompt)'
+map global fzf f ': fzf-edit<ret>' -docstring 'Edit file using FZF'
+map global fzf d ': fzf-cd<ret>' -docstring 'Change directory using FZF'
+map global fzf b ': fzf-buffer<ret>' -docstring 'Change buffer using FZF'
+map global fzf l ': fzf-lines<ret>' -docstring 'Search through lines of a file using FZF'
+map global fzf r ': fzf-rg-prompt<ret>' -docstring 'Jump to a file at a specific line using Ripgrep and FZF (prompt)'
 
 # System clipboard handling.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -260,12 +272,12 @@ define-command xsel-replace -docstring "Replace all selections with X11 clipboar
     execute-keys '|xsel -ob<ret>'
 }
 
-map global user p ': evaluate-commands %sh{ kakconf paste after }<ret>' -docstring 'paste (after) from X11 clipboard'
-map global user P ': evaluate-commands %sh{ kakconf paste before }<ret>' -docstring 'paste (before) from X11 clipboard'
-map global user <a-p> ': evaluate-commands %sh{ kakconf paste after -s }<ret>' -docstring 'paste (after and select) from X11 clipboard'
-map global user <a-P> ': evaluate-commands %sh{ kakconf paste before -s }<ret>' -docstring 'paste (before and select) from X11 clipboard'
-map global user y ': xsel-yank<ret>' -docstring 'yank active selection to X11 clipboard'
-map global user R ': xsel-replace<ret>' -docstring "replace all selections with X11 clipboard's contents"
+map global user p ': evaluate-commands %sh{ kakconf paste after }<ret>' -docstring 'Paste (after) from X11 clipboard'
+map global user P ': evaluate-commands %sh{ kakconf paste before }<ret>' -docstring 'Paste (before) from X11 clipboard'
+map global user <a-p> ': evaluate-commands %sh{ kakconf paste after -s }<ret>' -docstring 'Paste (after and select) from X11 clipboard'
+map global user <a-P> ': evaluate-commands %sh{ kakconf paste before -s }<ret>' -docstring 'Paste (before and select) from X11 clipboard'
+map global user y ': xsel-yank<ret>' -docstring 'Yank active selection to X11 clipboard'
+map global user R ': xsel-replace<ret>' -docstring "Replace all selections with X11 clipboard's contents"
 
 # map global normal <c>
 
@@ -280,7 +292,7 @@ define-command toggle-whitespaces -docstring 'Toggle the visibility of whitespac
     }
 }
 
-map global user 'h' ': toggle-whitespaces<ret>' -docstring 'toggle the visibility of whitespace characters'
+map global user 'h' ': toggle-whitespaces<ret>' -docstring 'Toggle the visibility of whitespace characters'
 
 # TODO(agnipau): Auto pairs.
 
@@ -303,15 +315,15 @@ define-command decnumber -docstring "Decrement the selection interactively" %{
 }
 
 declare-user-mode arithmetic-lock
-map global user a ': enter-user-mode -lock arithmetic-lock<ret>' -docstring 'arithmetic mode (lock)'
-map global arithmetic-lock j ': decrement-number 1<ret>' -docstring 'decrement number by 1'
-map global arithmetic-lock k ': increment-number 1<ret>' -docstring 'increment number by 1'
-map global arithmetic-lock J ': decrement-number 10<ret>' -docstring 'decrement number by 10'
-map global arithmetic-lock K ': increment-number 10<ret>' -docstring 'increment number by 10'
+map global user a ': enter-user-mode -lock arithmetic-lock<ret>' -docstring 'Arithmetic mode (lock)'
+map global arithmetic-lock j ': decrement-number 1<ret>' -docstring 'Decrement number by 1'
+map global arithmetic-lock k ': increment-number 1<ret>' -docstring 'Increment number by 1'
+map global arithmetic-lock J ': decrement-number 10<ret>' -docstring 'Decrement number by 10'
+map global arithmetic-lock K ': increment-number 10<ret>' -docstring 'Increment number by 10'
 declare-user-mode arithmetic
-map global user A ': enter-user-mode arithmetic<ret>' -docstring 'arithmetic mode'
-map global arithmetic j ': decnumber<ret>' -docstring 'decrement number'
-map global arithmetic k ': incnumber<ret>' -docstring 'increment number'
+map global user A ': enter-user-mode arithmetic<ret>' -docstring 'Arithmetic mode'
+map global arithmetic j ': decnumber<ret>' -docstring 'Decrement number'
+map global arithmetic k ': incnumber<ret>' -docstring 'Increment number'
 
 # Editor config integration.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -372,12 +384,12 @@ hook global BufWritePre .* %{
 # Custom mappings.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-map global normal '<space>' ',' -docstring 'leader key'
-map global normal ',' '<space>' -docstring 'remove all selections except main'
-map global normal '<a-,>' '<a-space>' -docstring 'remove the main selection'
+map global normal '<space>' ',' -docstring 'Leader key'
+map global normal ',' '<space>' -docstring 'Remove all selections except main'
+map global normal '<a-,>' '<a-space>' -docstring 'Remove the main selection'
 
-map global normal '#' ': comment-line<ret>' -docstring 'comment/uncomment selection'
-map global user '<space>' '/(?i)' -docstring 'search'
+map global normal '#' ': comment-line<ret>' -docstring 'Comment/uncomment selection'
+map global user '<space>' '/(?i)' -docstring 'Search'
 
 # Means <c-j>.
 map global normal '<ret>' '3j'
@@ -439,7 +451,7 @@ define-command wm-focus -params 1 -docstring 'Focus left split' %{
 }
 
 declare-user-mode wm
-map global normal '<c-w>' ': enter-user-mode wm<ret>' -docstring 'window management mode'
+map global normal '<c-w>' ': enter-user-mode wm<ret>' -docstring 'Window management mode'
 map global wm '<c-w>' ': wm-split<ret>' -docstring 'New horizontal split and balance splits horizontally'
 map global wm '<backspace>' ': wm-focus -L<ret>' -docstring 'Focus left split'
 map global wm '<c-l>' ': wm-focus -R<ret>' -docstring 'Focus right split'
@@ -452,23 +464,23 @@ map global wm '<c-f>' ': wm-focus-mode<ret>' -docstring 'Toggle focus mode'
 # ‾‾‾‾‾‾‾‾‾
 
 declare-user-mode surround
-map global user s ': enter-user-mode surround<ret>' -docstring 'surround mode'
+map global user s ': enter-user-mode surround<ret>' -docstring 'Surround mode'
 
 # This single line blows Tim Pope's vim-surround away.
 # Kakoune is way too powerful to be real.
-map global surround s ': execute-keys "Ls\A.|.\z<lt>ret<gt>i"<ret>' -docstring 'surround with string'
+map global surround s ': execute-keys "Ls\A.|.\z<lt>ret<gt>i"<ret>' -docstring 'Surround with string'
 
 declare-user-mode surround-lock
-map global user S ': enter-user-mode -lock surround-lock<ret>' -docstring 'surround mode (lock)'
+map global user S ': enter-user-mode -lock surround-lock<ret>' -docstring 'Surround mode (lock)'
 
-map global surround-lock ( ': execute-keys "i(<lt>esc<gt>Ha)<lt>esc<gt>"<ret>' -docstring 'surround with ()'
-map global surround-lock ) ': execute-keys "i(<lt>esc<gt>Ha)<lt>esc<gt>"<ret>' -docstring 'surround with ()'
+map global surround-lock ( ': execute-keys "i(<lt>esc<gt>Ha)<lt>esc<gt>"<ret>' -docstring 'Surround with ()'
+map global surround-lock ) ': execute-keys "i(<lt>esc<gt>Ha)<lt>esc<gt>"<ret>' -docstring 'Surround with ()'
 
-map global surround-lock [ ': execute-keys "i[<lt>esc<gt>Ha]<lt>esc<gt>"<ret>' -docstring 'surround with []'
-map global surround-lock ] ': execute-keys "i[<lt>esc<gt>Ha]<lt>esc<gt>"<ret>' -docstring 'surround with []'
+map global surround-lock [ ': execute-keys "i[<lt>esc<gt>Ha]<lt>esc<gt>"<ret>' -docstring 'Surround with []'
+map global surround-lock ] ': execute-keys "i[<lt>esc<gt>Ha]<lt>esc<gt>"<ret>' -docstring 'Surround with []'
 
-map global surround-lock { ': execute-keys "i{<lt>esc<gt>Ha}<lt>esc<gt>"<ret>' -docstring 'surround with {}'
-map global surround-lock } ': execute-keys "i{<lt>esc<gt>Ha}<lt>esc<gt>"<ret>' -docstring 'surround with {}'
+map global surround-lock { ': execute-keys "i{<lt>esc<gt>Ha}<lt>esc<gt>"<ret>' -docstring 'Surround with {}'
+map global surround-lock } ': execute-keys "i{<lt>esc<gt>Ha}<lt>esc<gt>"<ret>' -docstring 'Surround with {}'
 
 # LSP.
 # ‾‾‾‾
@@ -504,7 +516,7 @@ define-command lsp-restart -docstring 'Restart kak-lsp session' %{
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 # Taken from mawww's dotfiles.
-map -docstring "xml tag object" global object t %{c<lt>([\w.]+)\b[^>]*?(?<lt>!/)>,<lt>/([\w.]+)\b[^>]*?(?<lt>!/)><ret>}
+map -docstring "XML tag object" global object t %{c<lt>([\w.]+)\b[^>]*?(?<lt>!/)>,<lt>/([\w.]+)\b[^>]*?(?<lt>!/)><ret>}
 
 # Language configuration.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
