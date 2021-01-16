@@ -285,11 +285,20 @@ define-command xsel-yank -docstring 'Yank active selection to X11 clipboard' %{
 define-command xsel-replace -docstring "Replace all selections with X11 clipboard's contents" %{
     execute-keys '|xsel -ob<ret>'
 }
+define-command xsel-paste -params 1..2 -docstring 'Paste from X11 clipboard' %{
+    evaluate-commands %sh{
+        if [ "$2" ]; then
+            kakconf paste $1 $2
+        else
+            kakconf paste $1
+        fi
+    }
+}
 
-map global user p ': evaluate-commands %sh{ kakconf paste after }<ret>' -docstring 'Paste (after) from X11 clipboard'
-map global user P ': evaluate-commands %sh{ kakconf paste before }<ret>' -docstring 'Paste (before) from X11 clipboard'
-map global user <a-p> ': evaluate-commands %sh{ kakconf paste after -s }<ret>' -docstring 'Paste (after and select) from X11 clipboard'
-map global user <a-P> ': evaluate-commands %sh{ kakconf paste before -s }<ret>' -docstring 'Paste (before and select) from X11 clipboard'
+map global user p ': xsel-paste after<ret>' -docstring 'Paste (after) from X11 clipboard'
+map global user P ': xsel-paste before<ret>' -docstring 'Paste (before) from X11 clipboard'
+map global user <a-p> ': xsel-paste after -s<ret>' -docstring 'Paste (after and select) from X11 clipboard'
+map global user <a-P> ': xsel-paste before -s<ret>' -docstring 'Paste (before and select) from X11 clipboard'
 map global user y ': xsel-yank<ret>' -docstring 'Yank active selection to X11 clipboard'
 map global user R ': xsel-replace<ret>' -docstring "Replace all selections with X11 clipboard's contents"
 
@@ -462,7 +471,7 @@ define-command wm-focus -params 1 -docstring 'Focus left split' %{
 }
 
 declare-user-mode wm
-            map global normal '<c-w>' ': enter-user-mode wm<ret>' -docstring 'Window management mode'
+map global normal '<c-w>' ': enter-user-mode wm<ret>' -docstring 'Window management mode'
 map global wm '<c-w>' ': wm-split<ret>' -docstring 'New horizontal split and balance splits horizontally'
 map global wm '<backspace>' ': wm-focus -L<ret>' -docstring 'Focus left split'
 map global wm '<c-l>' ': wm-focus -R<ret>' -docstring 'Focus right split'
@@ -477,21 +486,27 @@ map global wm '<c-f>' ': wm-focus-mode<ret>' -docstring 'Toggle focus mode'
 declare-user-mode surround
 map global user s ': enter-user-mode surround<ret>' -docstring 'Surround mode'
 
+define-command surround-str -docstring 'Surround selection with string' %{
+    execute-keys "Ls\A.|.\z<ret>i"
+}
+
 # This single line blows Tim Pope's vim-surround away.
 # Kakoune is way too powerful to be real.
-map global surround s ': execute-keys "Ls\A.|.\z<lt>ret<gt>i"<ret>' -docstring 'Surround with string'
+map global surround s ': surround-str<ret>' -docstring 'Surround with string'
 
 declare-user-mode surround-lock
 map global user S ': enter-user-mode -lock surround-lock<ret>' -docstring 'Surround mode (lock)'
 
-map global surround-lock ( ': execute-keys "i(<lt>esc<gt>Ha)<lt>esc<gt>"<ret>' -docstring 'Surround with ()'
-map global surround-lock ) ': execute-keys "i(<lt>esc<gt>Ha)<lt>esc<gt>"<ret>' -docstring 'Surround with ()'
+define-command surround-pair -params 2 -docstring 'Surround selection with pair' %{
+    execute-keys "i%arg{1}<esc>Ha%arg{2}<esc><ret>"
+}
 
-map global surround-lock [ ': execute-keys "i[<lt>esc<gt>Ha]<lt>esc<gt>"<ret>' -docstring 'Surround with []'
-map global surround-lock ] ': execute-keys "i[<lt>esc<gt>Ha]<lt>esc<gt>"<ret>' -docstring 'Surround with []'
-
-map global surround-lock { ': execute-keys "i{<lt>esc<gt>Ha}<lt>esc<gt>"<ret>' -docstring 'Surround with {}'
-map global surround-lock } ': execute-keys "i{<lt>esc<gt>Ha}<lt>esc<gt>"<ret>' -docstring 'Surround with {}'
+map global surround-lock ( ': surround-pair ( )<ret>' -docstring 'Surround with ()'
+map global surround-lock ) ': surround-pair ( )<ret>' -docstring 'Surround with ()'
+map global surround-lock [ ': surround-pair [ ]<ret>' -docstring 'Surround with []'
+map global surround-lock ] ': surround-pair [ ]<ret>' -docstring 'Surround with []'
+map global surround-lock { ': surround-pair { }<ret>' -docstring 'Surround with {}'
+map global surround-lock } ': surround-pair { }<ret>' -docstring 'Surround with {}'
 
 # LSP.
 # ‾‾‾‾
