@@ -55,6 +55,7 @@ i3status 2.13-3
 imagemagick 7.0.10.58-1
 jdk-openjdk 15.0.1.u9-1
 jdk8-openjdk 8.u275-1
+jdownloader2 latest-13
 jq 1.6-4
 kak-lsp 8.0.0-1
 kakoune 2020.09.01-1
@@ -69,8 +70,6 @@ make 4.3-3
 man-db 2.9.3-1
 mpv 1:0.33.0-3
 mypaint 2.0.0-2
-neovim 0.4.4-1
-neovim-plug 0.10.0-3
 nodejs 15.6.0-1
 noto-fonts 20201226-1
 npm 6.14.11-1
@@ -97,7 +96,7 @@ python-grip 4.5.2-1
 python-language-server 0.36.2-1
 python-matplotlib 3.3.3-2
 python-pip 20.2.4-1
-qbittorrent 4.3.1-1
+qbittorrent 4.3.2-1
 qemu 5.2.0-2
 renameutils 0.12.0-7
 ripgrep 12.1.1-1

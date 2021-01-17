@@ -4,8 +4,8 @@ colorscheme gruvbox
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 set-face global CursorLine "default,%opt{gruvbox_bg0}"
-add-highlighter global/ line '%val{cursor_line}' CursorLine
 set-face global InactiveCursor "default,%opt{gruvbox_bg4}"
+add-highlighter global/ line '%val{cursor_line}' CursorLine
 
 hook global FocusIn .* %{
     set-face window CursorLine "default,%opt{gruvbox_bg0}"
@@ -47,7 +47,7 @@ define-command wrap -docstring "Wrap comment to fit %opt{autowrap_column} chars 
     execute-keys "| kakconf wrap-text -f %opt{filetype} -w %opt{autowrap_column}<ret>"
 }
 
-map global normal '=' ': wrap<ret>' -docstring "Wrap comment to fit %opt{autowrap_column} chars for %%opt{filetype}"
+map global normal '=' ': wrap<ret>' -docstring "wrap comment to fit %opt{autowrap_column} chars for %%opt{filetype}"
 
 # Appearance.
 # ‾‾‾‾‾‾‾‾‾‾‾
@@ -62,22 +62,17 @@ add-highlighter global/ show-matching
 # Wrap lines and show a visual indicator.
 add-highlighter global/ wrap -word -indent -marker '↪ '
 set-option global ui_options ncurses_assistant=none ncurses_status_on_top=false
-# Disable startup screen.
+# Disable startup screen message.
 set-option global startup_info_version -1
+set-option global modelinefmt '%val{cursor_line}:%val{cursor_column}:%val{buf_line_count} %val{bufname} %opt{filetype} {{mode_info}} %val{client}@[%val{session}]'
 
 # General settings.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 set-option global tabstop 4
 set-option global indentwidth 4
-set-option global modelinefmt '%val{cursor_line}:%val{cursor_column}:%val{buf_line_count} %val{bufname} {{mode_info}} %val{client}@[%val{session}]'
 set-option global grepcmd 'rg -L --hidden --with-filename --column'
 set-option global autoreload no
-
-map global normal n nvv
-map global normal N Nvv
-map global normal <a-n> <a-n>vv
-map global normal <a-N> <a-N>vv
 
 define-command pwd -docstring 'Print the current working directory' %{
     evaluate-commands %sh{
@@ -191,7 +186,7 @@ rm -f $tmpfile
     }
 }
 
-define-command fzf-buffer -docstring 'Change buffer using FZF' %{
+define-command fzf-change-buffer -docstring 'Change buffer using FZF' %{
     nop %sh{
         tmux split-window -f -l '30%' "
 fzfpreview=\"buffile=\\\$(kakconf double-string \' <<<{}); kak -p ${kak_session@Q} <<<\\\"evaluate-commands -client ${kak_client@Q} %{ buffer '\\\$buffile' }\\\"\"
@@ -202,6 +197,30 @@ if [ -z \"\$result\" ]; then
     kak -p ${kak_session@Q} <<<\"
         evaluate-commands -client ${kak_client@Q} %{
             buffer $kak_quoted_buffile
+        }
+    \"
+fi
+"
+    }
+}
+
+define-command fzf-delete-buffer -docstring 'Delete buffer using FZF' %{
+    nop %sh{
+        tmux split-window -f -l '30%' "
+fzfpreview=\"buffile=\\\$(kakconf double-string \' <<<{}); kak -p ${kak_session@Q} <<<\\\"evaluate-commands -client ${kak_client@Q} %{ buffer '\\\$buffile' }\\\"\"
+eval \"set -- $kak_quoted_buflist\"
+result=\"\$(printf '%s\n' \"\$@\" | fzf --preview=\"\$fzfpreview\" --preview-window=':0')\"
+
+if [ -z \"\$result\" ]; then
+    kak -p ${kak_session@Q} <<<\"
+        evaluate-commands -client ${kak_client@Q} %{
+            buffer $kak_quoted_buffile
+        }
+    \"
+else
+    kak -p ${kak_session@Q} <<<\"
+        evaluate-commands -client ${kak_client@Q} %{
+            delete-buffer
         }
     \"
 fi
@@ -270,11 +289,12 @@ define-command fzf-rg-prompt -docstring 'Jump to a file at a specific line using
 
 declare-user-mode fzf
 map global user f ': enter-user-mode fzf<ret>' -docstring 'FZF mode'
-map global fzf f ': fzf-edit<ret>' -docstring 'Edit file using FZF'
-map global fzf d ': fzf-cd<ret>' -docstring 'Change directory using FZF'
-map global fzf b ': fzf-buffer<ret>' -docstring 'Change buffer using FZF'
-map global fzf l ': fzf-lines<ret>' -docstring 'Search through lines of a file using FZF'
-map global fzf r ': fzf-rg-prompt<ret>' -docstring 'Jump to a file at a specific line using Ripgrep and FZF (prompt)'
+map global fzf f ': fzf-edit<ret>' -docstring 'edit file using FZF'
+map global fzf d ': fzf-cd<ret>' -docstring 'change directory using FZF'
+map global fzf b ': fzf-change-buffer<ret>' -docstring 'change buffer using FZF'
+map global fzf B ': fzf-delete-buffer<ret>' -docstring 'delete buffer using FZF'
+map global fzf l ': fzf-lines<ret>' -docstring 'search through lines of a file using FZF'
+map global fzf r ': fzf-rg-prompt<ret>' -docstring 'jump to a file at a specific line using Ripgrep and FZF (prompt)'
 
 # System clipboard handling.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -295,25 +315,25 @@ define-command xsel-paste -params 1..2 -docstring 'Paste from X11 clipboard' %{
     }
 }
 
-map global user p ': xsel-paste after<ret>' -docstring 'Paste (after) from X11 clipboard'
-map global user P ': xsel-paste before<ret>' -docstring 'Paste (before) from X11 clipboard'
-map global user <a-p> ': xsel-paste after -s<ret>' -docstring 'Paste (after and select) from X11 clipboard'
-map global user <a-P> ': xsel-paste before -s<ret>' -docstring 'Paste (before and select) from X11 clipboard'
-map global user y ': xsel-yank<ret>' -docstring 'Yank active selection to X11 clipboard'
-map global user R ': xsel-replace<ret>' -docstring "Replace all selections with X11 clipboard's contents"
+map global user p ': xsel-paste after<ret>' -docstring 'paste (after) from X11 clipboard'
+map global user P ': xsel-paste before<ret>' -docstring 'paste (before) from X11 clipboard'
+map global user <a-p> ': xsel-paste after -s<ret>' -docstring 'paste (after and select) from X11 clipboard'
+map global user <a-P> ': xsel-paste before -s<ret>' -docstring 'paste (before and select) from X11 clipboard'
+map global user y ': xsel-yank<ret>' -docstring 'yank active selection to X11 clipboard'
+map global user R ': xsel-replace<ret>' -docstring "replace all selections with X11 clipboard's contents"
 
 # Highlight hidden characters.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 define-command toggle-whitespaces -docstring 'Toggle the visibility of whitespace characters' %{
     try %{
-        add-highlighter global/ show-whitespaces
+        add-highlighter window/ show-whitespaces
     } catch %{
-        remove-highlighter global/show-whitespaces
+        remove-highlighter window/show-whitespaces
     }
 }
 
-map global user 'h' ': toggle-whitespaces<ret>' -docstring 'Toggle the visibility of whitespace characters'
+map global user 'h' ': toggle-whitespaces<ret>' -docstring 'toggle the visibility of whitespace characters'
 
 # TODO(agnipau): Auto pairs.
 
@@ -334,15 +354,15 @@ define-command decnumber -docstring "Decrement the selection interactively" %{
 }
 
 declare-user-mode arithmetic-lock
-map global user a ': enter-user-mode -lock arithmetic-lock<ret>' -docstring 'Arithmetic mode (lock)'
-map global arithmetic-lock j ': decrement-number 1<ret>' -docstring 'Decrement number by 1'
-map global arithmetic-lock k ': increment-number 1<ret>' -docstring 'Increment number by 1'
-map global arithmetic-lock J ': decrement-number 10<ret>' -docstring 'Decrement number by 10'
-map global arithmetic-lock K ': increment-number 10<ret>' -docstring 'Increment number by 10'
+map global user a ': enter-user-mode -lock arithmetic-lock<ret>' -docstring 'arithmetic mode (lock)'
+map global arithmetic-lock j ': decrement-number 1<ret>' -docstring 'decrement number by 1'
+map global arithmetic-lock k ': increment-number 1<ret>' -docstring 'increment number by 1'
+map global arithmetic-lock J ': decrement-number 10<ret>' -docstring 'decrement number by 10'
+map global arithmetic-lock K ': increment-number 10<ret>' -docstring 'increment number by 10'
 declare-user-mode arithmetic
-map global user A ': enter-user-mode arithmetic<ret>' -docstring 'Arithmetic mode'
-map global arithmetic j ': decnumber<ret>' -docstring 'Decrement number'
-map global arithmetic k ': incnumber<ret>' -docstring 'Increment number'
+map global user A ': enter-user-mode arithmetic<ret>' -docstring 'arithmetic mode'
+map global arithmetic j ': decnumber<ret>' -docstring 'decrement number'
+map global arithmetic k ': incnumber<ret>' -docstring 'increment number'
 
 # Editor config integration.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -403,12 +423,12 @@ hook global BufWritePre .* %{
 # Custom mappings.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-map global normal '<space>' ',' -docstring 'Leader key'
-map global normal ',' '<space>' -docstring 'Remove all selections except main'
-map global normal '<a-,>' '<a-space>' -docstring 'Remove the main selection'
+map global normal '<space>' ',' -docstring 'leader key'
+map global normal ',' '<space>' -docstring 'remove all selections except main'
+map global normal '<a-,>' '<a-space>' -docstring 'remove the main selection'
 
-map global normal '#' ': comment-line<ret>' -docstring 'Comment/uncomment selection'
-map global user '<space>' '/(?i)' -docstring 'Search'
+map global normal '#' ': comment-line<ret>' -docstring 'comment/uncomment selection'
+map global user '<space>' '/(?i)' -docstring 'search (case insensitive)'
 
 # Means <c-j>.
 map global normal '<ret>' '3j'
@@ -417,10 +437,16 @@ map global normal '<c-k>' '3k'
 map global normal '<backspace>' 'gh'
 map global normal '<c-l>' 'gl'
 
+# Center vertically on next/previous search result.
+map global normal n nvv
+map global normal N Nvv
+map global normal <a-n> <a-n>vv
+map global normal <a-N> <a-N>vv
+
 # Window management.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-declare-option -docstring 'Controls the layout of the panes' bool wm_focus_mode true
+declare-option -docstring 'Controls the layout of the panes' bool wm_focus_mode false
 define-command wm-focus-mode -docstring 'Toggle focus mode' %{
     evaluate-commands %sh{
         if [ "$kak_opt_wm_focus_mode" == true ]; then
@@ -471,42 +497,42 @@ define-command wm-focus -params 1 -docstring 'Focus left split' %{
 }
 
 declare-user-mode wm
-map global normal '<c-w>' ': enter-user-mode wm<ret>' -docstring 'Window management mode'
-map global wm '<c-w>' ': wm-split<ret>' -docstring 'New horizontal split and balance splits horizontally'
-map global wm '<backspace>' ': wm-focus -L<ret>' -docstring 'Focus left split'
-map global wm '<c-l>' ': wm-focus -R<ret>' -docstring 'Focus right split'
-map global wm '<ret>' ': wm-focus -D<ret>' -docstring 'Focus below split'
-map global wm '<c-k>' ': wm-focus -U<ret>' -docstring 'Focus above split'
-map global wm '<c-d>' ': wm-close<ret>' -docstring 'Close the current split and balance splits horizontally'
-map global wm '<c-f>' ': wm-focus-mode<ret>' -docstring 'Toggle focus mode'
+map global normal '<c-w>' ': enter-user-mode wm<ret>' -docstring 'window management mode'
+map global wm '<c-w>' ': wm-split<ret>' -docstring 'new horizontal split and balance splits horizontally'
+map global wm '<backspace>' ': wm-focus -L<ret>' -docstring 'focus left split'
+map global wm '<c-l>' ': wm-focus -R<ret>' -docstring 'focus right split'
+map global wm '<ret>' ': wm-focus -D<ret>' -docstring 'focus below split'
+map global wm '<c-k>' ': wm-focus -U<ret>' -docstring 'focus above split'
+map global wm '<c-d>' ': wm-close<ret>' -docstring 'close the current split and balance splits horizontally'
+map global wm '<c-f>' ': wm-focus-mode<ret>' -docstring 'toggle focus mode'
 
 # Surround.
 # ‾‾‾‾‾‾‾‾‾
 
 declare-user-mode surround
-map global user s ': enter-user-mode surround<ret>' -docstring 'Surround mode'
+map global user s ': enter-user-mode surround<ret>' -docstring 'surround mode'
 
-define-command surround-str -docstring 'Surround selection with string' %{
+define-command surround-str -docstring 'surround selection with string' %{
     execute-keys "Ls\A.|.\z<ret>i"
 }
 
 # This single line blows Tim Pope's vim-surround away.
 # Kakoune is way too powerful to be real.
-map global surround s ': surround-str<ret>' -docstring 'Surround with string'
+map global surround s ': surround-str<ret>' -docstring 'surround with string'
 
 declare-user-mode surround-lock
-map global user S ': enter-user-mode -lock surround-lock<ret>' -docstring 'Surround mode (lock)'
+map global user S ': enter-user-mode -lock surround-lock<ret>' -docstring 'surround mode (lock)'
 
 define-command surround-pair -params 2 -docstring 'Surround selection with pair' %{
     execute-keys "i%arg{1}<esc>Ha%arg{2}<esc><ret>"
 }
 
-map global surround-lock ( ': surround-pair ( )<ret>' -docstring 'Surround with ()'
-map global surround-lock ) ': surround-pair ( )<ret>' -docstring 'Surround with ()'
-map global surround-lock [ ': surround-pair [ ]<ret>' -docstring 'Surround with []'
-map global surround-lock ] ': surround-pair [ ]<ret>' -docstring 'Surround with []'
-map global surround-lock { ': surround-pair { }<ret>' -docstring 'Surround with {}'
-map global surround-lock } ': surround-pair { }<ret>' -docstring 'Surround with {}'
+map global surround-lock ( ': surround-pair ( )<ret>' -docstring 'surround with ()'
+map global surround-lock ) ': surround-pair ( )<ret>' -docstring 'surround with ()'
+map global surround-lock [ ': surround-pair [ ]<ret>' -docstring 'surround with []'
+map global surround-lock ] ': surround-pair [ ]<ret>' -docstring 'surround with []'
+map global surround-lock { ': surround-pair { }<ret>' -docstring 'surround with {}'
+map global surround-lock } ': surround-pair { }<ret>' -docstring 'surround with {}'
 
 # LSP.
 # ‾‾‾‾
@@ -527,7 +553,8 @@ set-face global DiagnosticWarning "default+u"
 set-face global LineFlagErrors "%opt{gruvbox_c9_red}"
 
 map global user 'l' ': enter-user-mode lsp<ret>' -docstring 'LSP mode'
-map global lsp 'R' ': lsp-rename-prompt<ret>' -docstring 'Rename symbol under the main cursor (prompt for a new name)'
+map global normal '<c-f>' ': lsp-hover<ret>' -docstring 'show info for current position'
+map global lsp 'R' ': lsp-rename-prompt<ret>' -docstring 'rename symbol under the main cursor (prompt for a new name)'
 
 hook global WinSetOption filetype=(rust|python|sh|dart) %{
     lsp-enable-window
