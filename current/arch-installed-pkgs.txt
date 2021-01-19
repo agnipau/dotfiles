@@ -68,6 +68,7 @@ man-db 2.9.3-1
 mpv 1:0.33.0-3
 mypaint 2.0.0-2
 neovim 0.4.4-1
+neovim-plug 0.10.0-3
 nodejs 15.6.0-1
 noto-fonts 20201226-1
 npm 6.14.11-1
