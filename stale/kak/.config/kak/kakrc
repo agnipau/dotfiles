@@ -1,4 +1,6 @@
-colorscheme gruvbox
+source ~/.config/kak/colors/gruvbox.kak
+source ~/.config/kak/filetype/rust.kak
+source ~/.config/kak/editorconfig.kak
 
 # Window focus.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -32,16 +34,17 @@ hook global FocusOut .* %{
 # Autowrap.
 # ‾‾‾‾‾‾‾‾‾
 
+declare-option int autowrap_column
 set-option global autowrap_column 80
-set-option global autowrap_fmtcmd 'kakconf wrap-text -w %c'
-set-option global autowrap_format_paragraph yes
+# set-option global autowrap_fmtcmd 'kakconf wrap-text -w %c'
+# set-option global autowrap_format_paragraph yes
 
-hook global WinSetOption filetype=(asciidoc|markdown) %{
-    autowrap-enable
-    hook -once window WinSetOption filetype=(?!asciidoc)(?!markdown).* %{
-        autowrap-disable
-    }
-}
+# hook global WinSetOption filetype=(asciidoc|markdown) %{
+#     autowrap-enable
+#     hook -once window WinSetOption filetype=(?!asciidoc)(?!markdown).* %{
+#         autowrap-disable
+#     }
+# }
 
 define-command wrap -docstring "Wrap comment to fit %opt{autowrap_column} chars for %%opt{filetype}" %{
     execute-keys "| kakconf wrap-text -f %opt{filetype} -w %opt{autowrap_column}<ret>"
@@ -61,7 +64,7 @@ hook global WinCreate ^[^*]+$ %{
 add-highlighter global/ show-matching
 # Wrap lines and show a visual indicator.
 add-highlighter global/ wrap -word -indent -marker '↪ '
-set-option global ui_options ncurses_assistant=none ncurses_status_on_top=false
+set-option global ui_options ncurses_assistant=none ncurses_enable_mouse=true ncurses_status_on_top=false
 # Disable startup screen message.
 set-option global startup_info_version -1
 set-option global modelinefmt '%val{cursor_line}:%val{cursor_column}:%val{buf_line_count} %val{bufname} %opt{filetype} {{mode_info}} %val{client}@[%val{session}]'
@@ -71,7 +74,7 @@ set-option global modelinefmt '%val{cursor_line}:%val{cursor_column}:%val{buf_li
 
 set-option global tabstop 4
 set-option global indentwidth 4
-set-option global grepcmd 'rg -L --hidden --with-filename --column'
+# set-option global grepcmd 'rg -L --hidden --with-filename --column'
 set-option global autoreload no
 
 define-command pwd -docstring 'Print the current working directory' %{
@@ -556,7 +559,7 @@ map global user 'l' ': enter-user-mode lsp<ret>' -docstring 'LSP mode'
 map global normal '<c-f>' ': lsp-hover<ret>' -docstring 'show info for current position'
 map global lsp 'R' ': lsp-rename-prompt<ret>' -docstring 'rename symbol under the main cursor (prompt for a new name)'
 
-hook global WinSetOption filetype=(rust|python|sh|dart) %{
+hook global WinSetOption filetype=(rust-custom|python|sh|dart) %{
     lsp-enable-window
 }
 
@@ -574,7 +577,7 @@ map -docstring "XML tag object" global object t %{c<lt>([\w.]+)\b[^>]*?(?<lt>!/)
 # Language configuration.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-hook global WinSetOption filetype=rust %{
+hook global WinSetOption filetype=rust-custom %{
     set-option buffer formatcmd 'rustfmt'
     hook buffer BufWritePre .* %{format}
     set-option buffer lsp_server_configuration rust.clippy_preference="on"

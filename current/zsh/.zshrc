@@ -1,7 +1,10 @@
 eval "$(sprompt init -s zsh -u -p)"
 
 # Ctrl-Z for fast bg and fg (in vim for example).
-stty susp undef
+# stty susp undef
+bindkey -s '^z' 'fg^M'
+bindkey -s '^z' 'fg^M'
+bindkey -s '^z' 'fg^M'
 bindkey -s '^z' 'fg^M'
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -93,7 +96,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Env-vars.
 export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
-export EDITOR='/usr/bin/nvim'
+export EDITOR='/usr/bin/kak'
 export BROWSER='/usr/bin/firefox'
 export TERMINAL='/usr/bin/alacritty'
 export TERM='alacritty'
@@ -178,6 +181,7 @@ alias sxiv='devour-hide sxiv'
 # alias emacsq='emacsclient -e "$(kill-emacs)"'
 alias cardib='cargo b'
 alias cat='bat'
+alias kak='kak -n -E "source ~/.config/kak/kakrc"'
 
 # Start tmux automatically whenever a new terminal instance is opened.
 [[ -z "${TMUX}" && -z "${IN_NEOVIM}" && -z "${INSIDE_EMACS}" && -n "${DISPLAY}" && -o interactive ]] && tmux

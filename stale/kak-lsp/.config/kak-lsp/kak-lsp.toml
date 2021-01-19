@@ -7,7 +7,7 @@ verbosity = 0
 timeout = 1800
 
 [language.rust]
-filetypes = ["rust"]
+filetypes = ["rust-custom"]
 roots = ["Cargo.toml"]
 command = "rust-analyzer"
 offset_encoding = "utf-8"
