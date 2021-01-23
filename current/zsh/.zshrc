@@ -1,10 +1,7 @@
 eval "$(sprompt init -s zsh -u -p)"
 
 # Ctrl-Z for fast bg and fg (in vim for example).
-# stty susp undef
-bindkey -s '^z' 'fg^M'
-bindkey -s '^z' 'fg^M'
-bindkey -s '^z' 'fg^M'
+stty susp undef
 bindkey -s '^z' 'fg^M'
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

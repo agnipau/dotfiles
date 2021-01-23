@@ -1,6 +1,4 @@
-# Gruvbox Dark Theme.
-#
-# Inspired by https://github.com/gruvbox-community/gruvbox.
+# Gruvbox Dark Theme: https://github.com/gruvbox-community/gruvbox.
 
 # Base16 colors.
 declare-option str gruvbox_c0_black rgb:1d2021
