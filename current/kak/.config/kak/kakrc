@@ -1,4 +1,10 @@
 source ~/.config/kak/colors/gruvbox.kak
+source ~/.config/kak/filetype/arch-linux.kak
+source ~/.config/kak/filetype/asciidoc.kak
+source ~/.config/kak/filetype/c-family.kak
+source ~/.config/kak/filetype/kakrc.kak
+source ~/.config/kak/filetype/sh.kak
+source ~/.config/kak/filetype/rust.kak
 
 # Window focus.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -81,9 +87,9 @@ hook global WinSetOption filetype=(asciidoc|markdown) %{
 define-command wrap-text -docstring "Wrap text to fit %opt{autowrap_column} chars for %%opt{filetype}" %{
     execute-keys %sh{
         if [ "$kak_opt_filetype" ]; then
-            echo "| kakconf wrap-text -f %opt{filetype} -w %opt{autowrap_column}<ret>"
+            echo "| kakconf wrap-text -f $kak_opt_filetype -w $kak_opt_autowrap_column<ret>"
         else
-            echo "| kakconf wrap-text -w %opt{autowrap_column}<ret>"
+            echo "| kakconf wrap-text -w $kak_opt_autowrap_column<ret>"
         fi
     }
 }
@@ -722,26 +728,26 @@ map global surround-lock } ': surround-pair { }<ret>' -docstring 'surround with 
 # evaluate-commands %sh{
 #     kak-lsp --kakoune -s "$kak_session"
 # }
-# 
+#
 # set-option global lsp_diagnostic_line_error_sign '█'
 # # set-option global lsp_diagnostic_line_warning_sign '▓'
 # set-option global lsp_diagnostic_line_warning_sign '▒'
 # set-option global lsp_hover_anchor true
 # set-option global lsp_insert_spaces true
 # set-option global lsp_auto_highlight_references true
-# 
+#
 # set-face global DiagnosticError "default+u"
 # set-face global DiagnosticWarning "default+u"
 # set-face global LineFlagErrors "%opt{gruvbox_c9_red}"
-# 
+#
 # map global user 'l' ': enter-user-mode lsp<ret>' -docstring 'LSP mode'
 # map global normal '<c-f>' ': lsp-hover<ret>' -docstring 'show info for current position'
 # map global lsp 'R' ': lsp-rename-prompt<ret>' -docstring 'rename symbol under the main cursor (prompt for a new name)'
-# 
+#
 # hook global WinSetOption filetype=(rust-custom|python|sh|dart) %{
 #     lsp-enable-window
 # }
-# 
+#
 # define-command lsp-restart -docstring 'Restart kak-lsp session' %{
 #     lsp-stop
 #     lsp-start
