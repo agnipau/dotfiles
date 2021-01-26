@@ -1,10 +1,10 @@
 source ~/.config/kak/colors/gruvbox.kak
-source ~/.config/kak/filetype/arch-linux.kak
-source ~/.config/kak/filetype/asciidoc.kak
-source ~/.config/kak/filetype/c-family.kak
-source ~/.config/kak/filetype/kakrc.kak
-source ~/.config/kak/filetype/sh.kak
-source ~/.config/kak/filetype/rust.kak
+
+evaluate-commands %sh{
+    kakconf ft -t c markdown makefile dart dockerfile toml arch-linux asciidoc \
+                  git json latex diff html cmake css yaml ini sql systemd i3 \
+                  kakrc sh python javascript rust
+}
 
 # Window focus.
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -53,16 +53,16 @@ define-command -hidden autowrap-cursor %{
                 # If we're adding characters past the limit, just wrap them around.
                 execute-keys -draft "<a-h><a-k>.{%opt{autowrap_column}}\h*[^\s]*<ret>1s(\h+)[^\h]*\z<ret>c<ret>"
             } catch %{
+                evaluate-commands -draft %{
+                    execute-keys '<a-]>p<a-x><a-j>|kakconf wrap-text -w $kak_opt_autowrap_column<ret>'
+                    try %{ execute-keys s\h+$<ret> d }
+                }
                 # If we're adding characters in the middle of a sentence, use
                 # the `fmtcmd` command to wrap the entire paragraph.
-                evaluate-commands %sh{
-                    printf %s "
-                        evaluate-commands -draft %{
-                            execute-keys '<a-]>p<a-x><a-j>|kakconf wrap-text -w $kak_opt_autowrap_column<ret>'
-                            try %{ execute-keys s\h+$<ret> d }
-                        }
-                        select '${kak_main_reg_m}'
-                    "
+                #
+                # TODO(agnipau): Remove this %sh{} block
+                select %sh{
+                    echo "$kak_main_reg_m"
                 }
             }
         }
@@ -84,14 +84,8 @@ hook global WinSetOption filetype=(asciidoc|markdown) %{
     }
 }
 
-define-command wrap-text -docstring "Wrap text to fit %opt{autowrap_column} chars for %%opt{filetype}" %{
-    execute-keys %sh{
-        if [ "$kak_opt_filetype" ]; then
-            echo "| kakconf wrap-text -f $kak_opt_filetype -w $kak_opt_autowrap_column<ret>"
-        else
-            echo "| kakconf wrap-text -w $kak_opt_autowrap_column<ret>"
-        fi
-    }
+                define-command wrap-text -docstring "Wrap text to fit %opt{autowrap_column} chars for %%opt{filetype}" %{
+    execute-keys "| kakconf wrap-text -f %opt{filetype} -w %opt{autowrap_column}<ret>"
 }
 
 map global normal '=' ': wrap-text<ret>' -docstring "wrap text to fit %opt{autowrap_column} chars for %%opt{filetype}"
@@ -121,7 +115,7 @@ set-option global indentwidth 4
 set-option global autoreload no
 
 define-command pwd -docstring 'Print the current working directory' %{
-    echo %sh{ echo "$PWD" }
+    evaluate-commands %sh{ kakconf pwd }
 }
 
 define-command put-cursors -params 1.. -docstring 'Put cursors at specific line numbers' %{
@@ -138,27 +132,12 @@ define-command put-cursors-zero -params 1.. -docstring 'Put cursors at specific 
 declare-option -hidden str temp_edit_last_buffer ""
 define-command temp-edit -params 1..2 -docstring 'Edit that uses only one buffer' %{
     evaluate-commands %sh{
-        if [ "$kak_opt_temp_edit_last_buffer" ]; then
-            echo delete-buffer "'$(kakconf double-string \' <<<"$kak_opt_temp_edit_last_buffer")'"
-        fi
-    }
-    try %{
-        buffer %arg{1}
-        execute-keys %sh{
-            [ "$2" ] && echo "${2}g"
-        }
-        set-option global temp_edit_last_buffer %{}
-    } catch %{
-        set-option global temp_edit_last_buffer %arg{1}
-        edit %arg{1} %arg{2}
+        kakconf temp-edit -b "$kak_opt_temp_edit_last_buffer" -f "$1" -l "$2"
     }
 }
 define-command temp-delete-buffer -docstring 'Delete the buffer used by `temp-edit`' %{
     evaluate-commands %sh{
-        if [ "$kak_opt_temp_edit_last_buffer" ]; then
-            echo delete-buffer "'$(kakconf double-string \' <<<"$kak_opt_temp_edit_last_buffer")'"
-            echo set-option global temp_edit_last_buffer %{}
-        fi
+        kakconf temp-delete-buffer -b "$kak_opt_temp_edit_last_buffer"
     }
 }
 
@@ -174,156 +153,43 @@ define-command restore-selections -docstring 'Restore all selections from the ba
 
 define-command fzf-edit -docstring 'Edit file using FZF' %{
     nop %sh{
-        tmux split-window -f -l '30%' "
-fzfpreview=\"buffile=\\\$(kakconf double-string \' <<<{}); kak -p ${kak_session@Q} <<<\\\"evaluate-commands -client ${kak_client@Q} %{ temp-edit '\\\$buffile' }\\\"\"
-result=\"\$(fzf --preview=\"\$fzfpreview\" --preview-window=':0')\"
-
-if [ -z \"\$result\" ]; then
-    kak -p ${kak_session@Q} <<<\"
-        evaluate-commands -client ${kak_client@Q} %{
-            buffer $kak_quoted_buffile
-            temp-delete-buffer
-        }
-    \"
-else
-    kak -p ${kak_session@Q} <<<\"
-        evaluate-commands -client ${kak_client@Q} %{
-            set-option global temp_edit_last_buffer %{}
-        }
-    \"
-fi
-"
+        kakconf fzf-edit -s $kak_session -c $kak_client -f "$kak_buffile"
     }
 }
 
 define-command fzf-cd -docstring 'Change directory using FZF' %{
+    backup-selections
+    edit -readonly /tmp/kak_fzf_cd
+    remove-highlighter "window/column_%opt{autowrap_column}_default,%opt{gruvbox_bg0}"
     nop %sh{
-        tmpfile=/tmp/kak_cd
-        tmux split-window -f -l '30%' "
-kak -p ${kak_session@Q} <<<\"
-    evaluate-commands -client ${kak_client@Q} %{
-        backup-selections
-        edit -readonly $tmpfile
-        remove-highlighter \"window/column_${kak_opt_autowrap_column}_default,$kak_opt_gruvbox_bg0\"
-    }
-\"
-
-args=\"\$(fd --type d --hidden --follow --exclude .git | fzf --preview=\"ls -lha {+} >$tmpfile; kak -p ${kak_session@Q} <<<\\\"evaluate-commands -client ${kak_client@Q} %{ edit! -readonly $tmpfile }\\\"\" --preview-window=':0')\"
-
-if [ \"\$args\" ]; then
-    args=\$(kakconf double-string \' <<<\"\$args\")
-    kak -p ${kak_session@Q} <<<\"
-        evaluate-commands -client ${kak_client@Q} %{
-            change-directory '\$args'
-        }
-    \"
-fi
-
-kak -p ${kak_session@Q} <<<\"
-    evaluate-commands -client ${kak_client@Q} %{
-        restore-selections
-        delete-buffer $tmpfile
-    }
-\"
-rm -f $tmpfile
-"
+        kakconf fzf-cd -s $kak_session -c $kak_client
     }
 }
 
 define-command fzf-change-buffer -docstring 'Change buffer using FZF' %{
     nop %sh{
-        tmux split-window -f -l '30%' "
-fzfpreview=\"buffile=\\\$(kakconf double-string \' <<<{}); kak -p ${kak_session@Q} <<<\\\"evaluate-commands -client ${kak_client@Q} %{ buffer '\\\$buffile' }\\\"\"
-eval \"set -- $kak_quoted_buflist\"
-result=\"\$(printf '%s\n' \"\$@\" | fzf --preview=\"\$fzfpreview\" --preview-window=':0')\"
-
-if [ -z \"\$result\" ]; then
-    kak -p ${kak_session@Q} <<<\"
-        evaluate-commands -client ${kak_client@Q} %{
-            buffer $kak_quoted_buffile
-        }
-    \"
-fi
-"
+        kakconf fzf-change-buffer -s $kak_session -c $kak_client -f "$kak_buffile" -l $kak_buflist
     }
 }
 
 define-command fzf-delete-buffer -docstring 'Delete buffer using FZF' %{
     nop %sh{
-        tmux split-window -f -l '30%' "
-fzfpreview=\"buffile=\\\$(kakconf double-string \' <<<{}); kak -p ${kak_session@Q} <<<\\\"evaluate-commands -client ${kak_client@Q} %{ buffer '\\\$buffile' }\\\"\"
-eval \"set -- $kak_quoted_buflist\"
-result=\"\$(printf '%s\n' \"\$@\" | fzf --preview=\"\$fzfpreview\" --preview-window=':0')\"
-
-if [ -z \"\$result\" ]; then
-    kak -p ${kak_session@Q} <<<\"
-        evaluate-commands -client ${kak_client@Q} %{
-            buffer $kak_quoted_buffile
-        }
-    \"
-else
-    kak -p ${kak_session@Q} <<<\"
-        evaluate-commands -client ${kak_client@Q} %{
-            delete-buffer
-        }
-    \"
-fi
-"
+        kakconf fzf-delete-buffer -s $kak_session -c $kak_client -f "$kak_buffile" -l $kak_buflist
     }
 }
 
 define-command fzf-lines -docstring 'Search through lines of a file using FZF' %{
+    backup-selections
+    write /tmp/kak_fzf_lines
     nop %sh{
-        tmpfile=/tmp/kak_lines
-        mkfifo $tmpfile
-        tmux split-window -f -l '30%' "
-kak -p ${kak_session@Q} <<<\"
-    evaluate-commands -client ${kak_client@Q} %{
-        backup-selections
-        write $tmpfile
-    }
-\"
-
-result=\"\$(fzf --preview=\"kak -p ${kak_session@Q} <<<\\\"evaluate-commands -client ${kak_client@Q} %{ put-cursors-zero {+n} }\\\"\" --preview-window=':0' <$tmpfile)\"
-
-if [ -z \"\$result\" ]; then
-    kak -p ${kak_session@Q} <<<\"
-        evaluate-commands -client ${kak_client@Q} %{
-            restore-selections
-        }
-    \"
-fi
-rm -f $tmpfile
-"
+        kakconf fzf-lines -s $kak_session -c $kak_client
     }
 }
 
 define-command fzf-rg -params 1 -docstring 'Jump to a file at a specific line using Ripgrep and FZF' %{
+    backup-selections
     nop %sh{
-        tmux split-window -f -l '30%' "
-kak -p ${kak_session@Q} <<<\"
-    evaluate-commands -client ${kak_client@Q} %{
-        backup-selections
-    }
-\"
-
-result=\"\$(rg ${1@Q} --line-number | fzf --preview=\"kak -p ${kak_session@Q} <<<\\\"evaluate-commands -client ${kak_client@Q} %{ temp-edit \\\$(rg '(.+):(\d+)' -o -r '\\\$1 \\\$2' <<<{}) }\\\"\" --preview-window=':0')\"
-
-if [ -z \"\$result\" ]; then
-    kak -p ${kak_session@Q} <<<\"
-        evaluate-commands -client ${kak_client@Q} %{
-            restore-selections
-            temp-delete-buffer
-        }
-    \"
-else
-    kak -p ${kak_session@Q} <<<\"
-        evaluate-commands -client ${kak_client@Q} %{
-            set-option global temp_edit_last_buffer %{}
-        }
-    \"
-fi
-"
+        kakconf fzf-rg -s $kak_session -c $kak_client -q "$1"
     }
 }
 
@@ -349,20 +215,24 @@ define-command xsel-yank -docstring 'Yank active selection to X11 clipboard' %{
 define-command xsel-replace -docstring "Replace all selections with X11 clipboard's contents" %{
     execute-keys '|xsel -ob<ret>'
 }
-define-command xsel-paste -params 1..2 -docstring 'Paste from X11 clipboard' %{
-    evaluate-commands %sh{
-        if [ "$2" ]; then
-            kakconf paste "$1" "$2"
-        else
-            kakconf paste "$1"
-        fi
-    }
+
+define-command xsel-paste-before-select -docstring 'Paste (before and select) from X11 clipboard' %{
+    evaluate-commands %sh{ kakconf paste before -s }
+}
+define-command xsel-paste-after-select -docstring 'Paste (after and select) from X11 clipboard' %{
+    evaluate-commands %sh{ kakconf paste after -s }
+}
+define-command xsel-paste-before -docstring 'Paste (before) from X11 clipboard' %{
+    evaluate-commands %sh{ kakconf paste before }
+}
+define-command xsel-paste-after -docstring 'Paste (after) from X11 clipboard' %{
+    evaluate-commands %sh{ kakconf paste after }
 }
 
-map global user p ': xsel-paste after<ret>' -docstring 'paste (after) from X11 clipboard'
-map global user P ': xsel-paste before<ret>' -docstring 'paste (before) from X11 clipboard'
-map global user <a-p> ': xsel-paste after -s<ret>' -docstring 'paste (after and select) from X11 clipboard'
-map global user <a-P> ': xsel-paste before -s<ret>' -docstring 'paste (before and select) from X11 clipboard'
+map global user p ': xsel-paste-after<ret>' -docstring 'paste (after) from X11 clipboard'
+map global user P ': xsel-paste-before<ret>' -docstring 'paste (before) from X11 clipboard'
+map global user <a-p> ': xsel-paste-after-select<ret>' -docstring 'paste (after and select) from X11 clipboard'
+map global user <a-P> ': xsel-paste-before-select<ret>' -docstring 'paste (before and select) from X11 clipboard'
 map global user y ': xsel-yank<ret>' -docstring 'yank active selection to X11 clipboard'
 map global user R ': xsel-replace<ret>' -docstring "replace all selections with X11 clipboard's contents"
 
@@ -422,6 +292,7 @@ hook global BufCreate .*[.](editorconfig) %{
 define-command editorconfig-load -params ..1 -docstring "editorconfig-load [file]: set formatting behavior according to editorconfig" %{
     evaluate-commands %sh{ kakconf editorconfig -p "${1:-$kak_buffile}" }
 }
+
 hook global BufOpenFile .* %{ editorconfig-load }
 hook global BufNewFile .* %{ editorconfig-load }
 
@@ -467,10 +338,7 @@ hook global InsertDelete ' ' %{
 hook global BufWritePre .* %{
     try %{
         execute-keys -draft %sh{
-            case "$kak_opt_filetype" in
-                markdown) ;;
-                *) echo '%s\h+$<ret>d' ;;
-            esac
+            kakconf remove-trailing-whitespace -f "$kak_opt_filetype"
         }
     }
 }
@@ -537,17 +405,15 @@ hook global BufSetOption filetype=python %{
 }
 
 define-command extend-selections-left -docstring 'extend selections to the left to align with the leftmost selected column' %{
-    evaluate-commands %sh{
-        seldesc=$(kakconf extend-selections -d left -s "$kak_selections_desc")
-        echo select "$seldesc"
+    select %sh{
+        kakconf extend-selections -d left -s "$kak_selections_desc"
     }
 }
 
 define-command comment-block -docstring '(un)comment selections using block comments' %{
     evaluate-commands %sh{
-        if [ -z "${kak_opt_comment_block_begin}" ] || [ -z "${kak_opt_comment_block_end}" ]; then
-            echo "fail \"The 'comment_block' options are empty, could not comment the selection\""
-        fi
+        kakconf check-var -v "$kak_opt_comment_block_begin" -n '%opt{comment_block_begin}'
+        kakconf check-var -v "$kak_opt_comment_block_end" -n '%opt{comment_block_end}'
     }
 
     evaluate-commands -save-regs '"/' -draft %{
@@ -573,9 +439,7 @@ define-command comment-block -docstring '(un)comment selections using block comm
 
 define-command comment-line -docstring '(un)comment selected lines using line comments' %{
     evaluate-commands %sh{
-        if [ -z "${kak_opt_comment_line}" ]; then
-            echo "fail \"The 'comment_line' option is empty, could not comment the line\""
-        fi
+        kakconf check-var -n '%opt{comment_line}' -v "$kak_opt_comment_line"
     }
 
     evaluate-commands -save-regs '"/' -draft %{
@@ -762,8 +626,10 @@ map -docstring "XML tag object" global object t %{c<lt>([\w.]+)\b[^>]*?(?<lt>!/)
 # Format.
 # ‾‾‾‾‾‾‾
 
-declare-option -docstring "shell command used for the 'format-selections' and 'format-buffer' commands" \
+declare-option -docstring "command name used for the 'format-selections' and 'format-buffer' commands" \
     str formatcmd
+
+declare-option -docstring "%%opt{formatcmd} args" str-list formatcmd_args
 
 define-command format-buffer -docstring "Format the contents of the buffer" %{
     evaluate-commands -draft %{
@@ -774,24 +640,12 @@ define-command format-buffer -docstring "Format the contents of the buffer" %{
 
 define-command format-selections -docstring "Format the selections individually" %{
     evaluate-commands %sh{
-        if [ -z "${kak_opt_formatcmd}" ]; then
-            echo "fail 'The option ''formatcmd'' must be set'"
-        fi
+        kakconf check-var -n '%opt{formatcmd}' -v "$kak_opt_formatcmd"
     }
+
     evaluate-commands -draft -no-hooks -save-regs '|' %{
         set-register '|' %{
-            format_in="$(mktemp "${TMPDIR:-/tmp}"/kak-formatter.XXXXXX)"
-            format_out="$(mktemp "${TMPDIR:-/tmp}"/kak-formatter.XXXXXX)"
-
-            cat >"$format_in"
-            eval "$kak_opt_formatcmd" <"$format_in" >"$format_out"
-            if [ $? -eq 0 ]; then
-                cat "$format_out"
-            else
-                printf 'eval -client %s %%{ fail formatter returned an error %s }\n' "$kak_client" "$?" | kak -p "$kak_session"
-                cat "$format_in"
-            fi
-            rm -f "$format_in" "$format_out"
+            kakconf format-selections -f "$kak_opt_formatcmd" -a $kak_opt_formatcmd_args
         }
         execute-keys '|<ret>'
     }
@@ -801,49 +655,58 @@ define-command format-selections -docstring "Format the selections individually"
 # ‾‾‾‾‾‾‾‾‾‾
 
 hook global WinSetOption filetype=rust %{
-    set-option buffer formatcmd 'rustfmt --config "edition=2018"'
+    set-option buffer formatcmd "rustfmt"
+    set-option -add buffer formatcmd_args "--config"
+    set-option -add buffer formatcmd_args "edition=2018"
     hook buffer BufWritePre .* %{format-buffer}
     # set-option buffer lsp_server_configuration rust.clippy_preference="on"
 }
 
 hook global WinSetOption filetype=zig %{
-    set-option buffer formatcmd 'zig fmt --stdin'
+    set-option buffer formatcmd "zig"
+    set-option -add buffer formatcmd_args "fmt"
+    set-option -add buffer formatcmd_args "--stdin"
     hook buffer BufWritePre .* %{format-buffer}
 }
 
 hook global WinSetOption filetype=python %{
-    set-option buffer formatcmd 'autopep8 -'
+    set-option buffer formatcmd "autopep8"
+    set-option -add buffer formatcmd_args "-"
     hook buffer BufWritePre .* %{format-buffer}
 }
 
 hook global WinSetOption filetype=cpp %{
-    set-option buffer formatcmd 'clang-format'
+    set-option buffer formatcmd "clang-format"
     hook buffer BufWritePre .* %{format-buffer}
 }
 
 hook global WinSetOption filetype=grep %{
-    map buffer normal '<c-f>' ': grep-jump<ret>'
+    map buffer normal '<c-f>' ": grep-jump<ret>"
     # TODO(agnipau): Why this is buggy?
     # map buffer goto 'd' ': grep-jump<ret>'
 }
 
 hook global WinSetOption filetype=html %{
-    set-option buffer formatcmd 'prettier --parser=html'
+    set-option buffer formatcmd "prettier"
+    set-option -add buffer formatcmd_args "--parser=html"
     hook buffer BufWritePre .* %{format-buffer}
 }
 
 hook global WinSetOption filetype=typescript %{
-    set-option buffer formatcmd 'prettier --parser=typescript'
+    set-option buffer formatcmd "prettier"
+    set-option -add buffer formatcmd_args "--parser=typescript"
     hook buffer BufWritePre .* %{format-buffer}
 }
 
 hook global WinSetOption filetype=css %{
-    set-option buffer formatcmd 'prettier --parser=css'
+    set-option buffer formatcmd "prettier"
+    set-option -add buffer formatcmd_args "--parser=css"
     hook buffer BufWritePre .* %{format-buffer}
 }
 
 hook global WinSetOption filetype=json %{
-    set-option buffer formatcmd 'jq .'
+    set-option buffer formatcmd "jq"
+    set-option -add buffer formatcmd_args "."
     hook buffer BufWritePre .* %{format-buffer}
 }
 

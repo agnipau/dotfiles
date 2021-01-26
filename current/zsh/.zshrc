@@ -179,6 +179,7 @@ alias sxiv='devour-hide sxiv'
 alias cardib='cargo b'
 alias cat='bat'
 alias kak='kak -n -E "source ~/.config/kak/kakrc"'
+alias ytd='youtube-dl'
 
 # Start tmux automatically whenever a new terminal instance is opened.
 [[ -z "${TMUX}" && -z "${IN_NEOVIM}" && -z "${INSIDE_EMACS}" && -n "${DISPLAY}" && -o interactive ]] && tmux
