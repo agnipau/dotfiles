@@ -84,7 +84,7 @@ hook global WinSetOption filetype=(asciidoc|markdown) %{
     }
 }
 
-                define-command wrap-text -docstring "Wrap text to fit %opt{autowrap_column} chars for %%opt{filetype}" %{
+define-command wrap-text -docstring "Wrap text to fit %opt{autowrap_column} chars for %%opt{filetype}" %{
     execute-keys "| kakconf wrap-text -f %opt{filetype} -w %opt{autowrap_column}<ret>"
 }
 
@@ -212,6 +212,10 @@ map global fzf r ': fzf-rg-prompt<ret>' -docstring 'jump to a file at a specific
 define-command xsel-yank -docstring 'Yank active selection to X11 clipboard' %{
     execute-keys '<a-|>xsel -ib<ret>: echo -markup %{{Information}yanked active selection to X11 clipboard}<ret>'
 }
+define-command xsel-delete -docstring 'Delete and copy to X11 clipboard' %{
+    xsel-yank
+    execute-keys d
+}
 define-command xsel-replace -docstring "Replace all selections with X11 clipboard's contents" %{
     execute-keys '|xsel -ob<ret>'
 }
@@ -234,6 +238,7 @@ map global user P ': xsel-paste-before<ret>' -docstring 'paste (before) from X11
 map global user <a-p> ': xsel-paste-after-select<ret>' -docstring 'paste (after and select) from X11 clipboard'
 map global user <a-P> ': xsel-paste-before-select<ret>' -docstring 'paste (before and select) from X11 clipboard'
 map global user y ': xsel-yank<ret>' -docstring 'yank active selection to X11 clipboard'
+map global user d ': xsel-delete<ret>' -docstring 'delete and copy to X11 clipboard'
 map global user R ': xsel-replace<ret>' -docstring "replace all selections with X11 clipboard's contents"
 
 # Highlight hidden characters.
@@ -714,3 +719,17 @@ hook global BufCreate '.*\.config/polybar/config$' %{
     set-option buffer filetype ini
 }
 
+define-command json-fx %{
+    evaluate-commands -no-hooks %{
+        write /tmp/kak_json_fx_in
+    }
+    edit! /tmp/kak_json_fx_out.json 1
+    prompt -on-change %{
+        evaluate-commands %sh{
+            kakconf json-fx -t "$kak_text" -i 2 </tmp/kak_json_fx_in >/tmp/kak_json_fx_out.json
+        }
+        edit! /tmp/kak_json_fx_out.json 1
+    } -on-abort %{
+        delete-buffer!
+    } fx: %{}
+}

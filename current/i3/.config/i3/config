@@ -51,7 +51,7 @@ bindsym $mod+Return exec --no-startup-id $term
 bindsym $mod+d exec --no-startup-id $HOME/progetti/bin/rofi-launch
 bindsym $mod+Shift+w exec --no-startup-id $browser
 bindsym $mod+Shift+s exec --no-startup-id flameshot gui
-bindsym --release $mod+Control+c exec --no-startup-id xcolor | tr -d '\n' | xsel -ib
+bindsym --release $mod+Shift+c exec --no-startup-id xcolor | tr -d '\n' | xsel -ib
 bindsym $mod+Shift+x exec --no-startup-id physlock
 
 bindsym $mod+q kill
@@ -147,7 +147,7 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+x [urgent="latest"] focus
 
 # Reload the configuration file.
-bindsym $mod+Shift+c reload
+bindsym $mod+Control+c reload
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3).
 bindsym $mod+Shift+r restart
 # Exit i3 (logs you out of your X session).
@@ -196,10 +196,12 @@ bar {
 
 # for_window [class="SimpleScreenRecorder"] floating enable
 for_window [class="sun-awt-X11-XDialogPeer"] floating enable
-for_window [class="sun-awt-X11-XFramePeer"]  floating enable
+for_window [class="sun-awt-X11-XFramePeer"] floating enable
+for_window [class="Pcmanfm"] floating enable
 for_window [class=Chromium] border pixel 0
-for_window [class=Firefox-esr]  border pixel 0
-for_window [class=Firefox]  border pixel 0
+for_window [class=Firefox-esr] border pixel 0
+for_window [class=Firefox] border pixel 0
 for_window [title="Android Emulator - Pixel_4_XL_API_30:5554"] floating enable
 for_window [title="Picture-in-Picture"] sticky enable
+for_window [title="Grader"] floating enable
 

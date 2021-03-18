@@ -91,9 +91,10 @@ export ZSH_HIGHLIGHT_MAXLENGTH=60
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Env-vars.
+export CHROME_EXECUTABLE=/usr/bin/chromium
 export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
-export EDITOR='/usr/bin/kak'
+export EDITOR='/usr/bin/nvim'
 export BROWSER='/usr/bin/firefox'
 export TERMINAL='/usr/bin/alacritty'
 export TERM='alacritty'
@@ -166,7 +167,7 @@ alias poweroff='read "?Do you want to shutdown? " && systemctl poweroff'
 alias suspend='read "?Do you want to suspend? " && systemctl suspend'
 alias bar='killall polybar; polybar main &disown'
 alias scheck='shellcheck --enable=all'
-alias gs='git status'
+alias gst='git status'
 alias ga='git add .'
 alias gc='git commit -m \"\"'
 alias gp='git push'
