@@ -1,14 +1,4 @@
 " Colors {{{
-" bold
-" underline
-" undercurl	curly underline
-" strikethrough
-" reverse
-" inverse		same as reverse
-" italic
-" standout
-" nocombine	override attributes instead of combining them
-" NONE		no attributes used (used to reset it)
 highlight! GruvboxGreen gui=nocombine guifg=#b8bb26
 highlight! GruvboxGreenBold gui=bold guifg=#b8bb26
 highlight! GruvboxGreenUnderline gui=underline guifg=#b8bb26
@@ -19,7 +9,7 @@ highlight! GruvboxPurple gui=nocombine guifg=#d3869b
 highlight! GruvboxOrange gui=nocombine guifg=#fe8019
 highlight! GruvboxAqua gui=nocombine guifg=#8ec07c
 highlight! GruvboxAquaBold gui=bold guifg=#8ec07c
-highlight! GruvboxGray gui=nocombine guifg=#928374
+highlight! GruvboxGray gui=nocombine guifg=#a89984
 highlight! GruvboxYellow gui=nocombine guifg=#fabd2f
 highlight! GruvboxRed gui=nocombine guifg=#fb4934
 highlight! GruvboxRedUnderline gui=underline guifg=#fb4934
@@ -27,16 +17,58 @@ highlight! GruvboxBlue gui=nocombine guifg=#83a598
 highlight! GruvboxDebug gui=underline guibg=red guifg=black
 " }}}
 
+" Vim syntax hi groups {{{
+highlight! link Statement GruvboxRed
+highlight! link Conditional GruvboxRed
+highlight! link Repeat GruvboxRed
+highlight! link Label GruvboxRed
+highlight! link Exception GruvboxRed
+highlight! link Keyword GruvboxRed
+highlight! link StorageClass GruvboxRed
+highlight! link Structure GruvboxRed
+highlight! link Typedef GruvboxRed
+
+highlight! link Function GruvboxGreenBold
+highlight! link String GruvboxGreen
+
+highlight! link Identifier GruvboxWhite
+
+highlight! link Operator GruvboxGray
+highlight! link vimBracket GruvboxGray
+highlight! link vimSetSep GruvboxGray
+highlight! link vimParenSep GruvboxGray
+highlight! link vimSep GruvboxGray
+highlight! link vimContinue GruvboxGray
+
+highlight! link PreProc GruvboxAqua
+highlight! link Include GruvboxAqua
+highlight! link Define GruvboxAqua
+highlight! link Type GruvboxAqua
+highlight! link Macro GruvboxAqua
+highlight! link PreCondit GruvboxAqua
+highlight! link vimNotation GruvboxAquaBold
+highlight! link vimMapModKey GruvboxAquaBold
+
+highlight! link Constant GruvboxPurple
+highlight! link Character GruvboxPurple
+highlight! link Boolean GruvboxPurple
+highlight! link Number GruvboxPurple
+highlight! link Float GruvboxPurple
+
+highlight! link vimFuncSID GruvboxDebug
+" }}}
+
 " Misc {{{
 highlight! Normal guibg=#1d2021 guifg=#ebdbb2
 highlight! EndOfBuffer guifg=#1d2021
 highlight! ColorColumn guibg=#282828 guifg=none
 highlight! CursorLine guibg=#282828 guifg=none
-highlight! CursorLineNr guibg=#282828
+highlight! CursorLineNr guibg=#282828 guifg=#fabd2f gui=nocombine
+highlight! LineNr guifg=#928374
 highlight! Visual guibg=#504945 gui=none
 highlight! StatusLine gui=nocombine guibg=#504945 guifg=#ebdbb2
 highlight! StatusLineNC gui=nocombine guibg=#282828 guifg=#ebdbb2
-highlight! Search guibg=#fe8019 guifg=#1d2021
+highlight! Search guibg=#fabd2f guifg=#1d2021
 highlight! NonText guifg=#665c54 gui=none
 highlight! VertSplit guibg=#282828 guifg=#282828
 highlight! Folded guibg=#282828 guifg=#a89984
@@ -147,8 +179,8 @@ highlight! link LspDiagnosticsVirtualTextHint GruvboxAqua
 highlight! link LspDiagnosticsVirtualTextInformation GruvboxBlue
 highlight! link LspDiagnosticsVirtualTextWarning GruvboxOrange
 
-highlight! link LspReferenceRead GruvboxDebug
-highlight! link LspReferenceText GruvboxDebug
-highlight! link LspReferenceWrite GruvboxDebug
+highlight! link LspReferenceRead Visual
+highlight! LspReferenceText guibg=#928374
+highlight! LspReferenceWrite guibg=#928374
 " }}}
 

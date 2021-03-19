@@ -39,6 +39,7 @@ tnoremap <c-g> <c-\><c-n>
 " }}}
 
 " Options {{{
+set textwidth=100
 set colorcolumn=100
 " Use tab to insert spaces
 set expandtab
@@ -65,6 +66,12 @@ set noswapfile
 set guifont=JetBrains\ Mono:h12
 " set guifont=JetBrains\ Mono:h15
 
+" Threshold for the CursorHold event for example
+set updatetime=1000
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
+
 " set fillchars=vert:\│
 " set sidescroll=40
 " set complete=.,w,b,i,u,t,
@@ -74,6 +81,9 @@ set guifont=JetBrains\ Mono:h12
 " capital letters.
 set ignorecase
 set smartcase
+
+set number
+set relativenumber
 
 " Incremental and highlighted search
 set incsearch
@@ -127,7 +137,7 @@ set statusline=
 set statusline+=\ %f\ 
 set statusline+=%m
 set statusline+=%=
-set statusline+=\ %l:%c:%L
+" set statusline+=\ %l:%c:%L
 set statusline+=\ [%{&filetype}
 set statusline+=\ %{&ff}
 set statusline+=\ %{&fileencoding}]\ 
@@ -231,9 +241,6 @@ local on_attach = function(client, bufnr)
     -- Set autocommands conditional on server_capabilities
     if client.resolved_capabilities.document_highlight then
         vim.api.nvim_exec([[
-            hi LspReferenceRead cterm=bold ctermbg=red guibg=LightYellow
-            hi LspReferenceText cterm=bold ctermbg=red guibg=LightYellow
-            hi LspReferenceWrite cterm=bold ctermbg=red guibg=LightYellow
             augroup lsp_document_highlight
                 autocmd! * <buffer>
                 autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()

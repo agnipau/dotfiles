@@ -58,7 +58,7 @@ colors:
     foreground: "#ebdbb2"
   cursor:
     text: "#282828"
-    cursor: "#ebdbb2"
+    cursor: "#fabd2f"
   vi_mode_cursor:
     text: CellBackground
     cursor: CellForeground
