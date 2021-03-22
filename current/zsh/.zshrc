@@ -63,27 +63,26 @@ bindkey "^V" paste
 setopt INTERACTIVE_COMMENTS
 
 # Syntax highlighting.
-local green="#b8bb26"
-local orange="#fe8019"
-local gray="#a89984"
+local color_comment="#928374"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=$color_comment"
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[command]="fg=white,bold"
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=${gray}"
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=${gray}"
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]="fg=$color_comment"
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]="fg=$color_comment"
 ZSH_HIGHLIGHT_STYLES[commandseparator]="fg=yellow,bold"
 ZSH_HIGHLIGHT_STYLES[globbing]="fg=yellow,bold"
 ZSH_HIGHLIGHT_STYLES[redirection]="fg=yellow,bold"
 ZSH_HIGHLIGHT_STYLES[reserved-word]="fg=white,bold"
 ZSH_HIGHLIGHT_STYLES[builtin]="fg=white,bold"
 ZSH_HIGHLIGHT_STYLES[alias]="fg=white,bold,underline"
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]="fg=${green}"
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]="fg=${green}"
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]="fg=green"
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]="fg=green"
 ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]="fg=yellow,bold"
 ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]="fg=yellow,bold"
 ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]="fg=yellow,bold"
 ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument-unclosed]="fg=yellow,bold"
-ZSH_HIGHLIGHT_STYLES[comment]="fg=black,bold"
-ZSH_HIGHLIGHT_STYLES[precommand]="fg=${orange},bold"
+ZSH_HIGHLIGHT_STYLES[comment]="fg=$color_comment"
+ZSH_HIGHLIGHT_STYLES[precommand]="fg=orange,bold"
 ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=red,bold"
 # This controls even the $(...).
 ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]="fg=yellow,bold"
@@ -114,7 +113,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="
   --multi --inline-info --height 95%
   --color fg:8,hl:7,fg+:6,bg+:0,hl+:7
-  --color info:0,prompt:6,spinner:6,pointer:6,marker:6
+  --color info:8,prompt:6,spinner:6,pointer:6,marker:6
 "
 export GOPATH='/home/agnipau/go'
 export PATH="/home/agnipau/progetti/bin:/home/agnipau/.local/bin:/home/agnipau/progetti/pbin:/home/agnipau/dev/flutter/bin:/home/agnipau/.cargo/bin:/home/agnipau/.npm-packages/bin:${GOPATH}/bin:/home/agnipau/.luarocks/bin:/home/agnipau/.pub-cache/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/emulator:/home/agnipau/.local/bin:${PATH}"

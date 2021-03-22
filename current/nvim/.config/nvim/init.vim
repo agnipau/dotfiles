@@ -1,6 +1,6 @@
 " Mappings {{{
-let mapleader=' '
-let maplocalleader=' '
+let mapleader = ' '
+let maplocalleader = ' '
 
 nnoremap <leader><leader> /
 " Search for selection
@@ -66,6 +66,12 @@ set noswapfile
 set guifont=JetBrains\ Mono:h12
 " set guifont=JetBrains\ Mono:h15
 
+" Matching paren highlighting is useless
+let g:loaded_matchparen = 1
+
+" Highlight Lua code inside VimL
+let g:vimsyn_embed = 'l'
+
 " Threshold for the CursorHold event for example
 set updatetime=1000
 " Always show the signcolumn, otherwise it would shift the text each time
@@ -82,8 +88,11 @@ set signcolumn=yes
 set ignorecase
 set smartcase
 
-set number
-set relativenumber
+" set number
+" set relativenumber
+
+" Unfold all levels
+set foldlevel=99
 
 " Incremental and highlighted search
 set incsearch
@@ -94,7 +103,7 @@ set inccommand=nosplit
 " Use the system clipboard
 set clipboard=unnamedplus
 " Highlight the line where the cursor is
-set cursorline
+" set cursorline
 
 " Save undos after file closes
 set undofile
@@ -112,16 +121,16 @@ set grepprg=rg\ --vimgrep\ --no-heading
 
 set list
 " By default only show hidden chars that are annoying
-set listchars=tab:┊\ ,nbsp:␣,trail:·,extends:>,precedes:<
+set listchars=tab:→\ ,nbsp:␣,trail:·,extends:>,precedes:<
 let g:list_chars_on = 0
 function! s:toggle_list_chars()
     if g:list_chars_on
         " Only show hidden chars that are annoying
-        set listchars=tab:┊\ ,nbsp:␣,trail:·,extends:>,precedes:<
+        set listchars=tab:→\ ,nbsp:␣,trail:·,extends:>,precedes:<
         let g:list_chars_on = 0
     else
         " Show all hidden chars
-        set listchars=tab:┊\ ,nbsp:␣,space:·,trail:·,extends:>,precedes:<
+        set listchars=tab:→\ ,nbsp:␣,space:·,trail:·,extends:>,precedes:<
         let g:list_chars_on = 1
     endif
 endfunction
@@ -137,10 +146,10 @@ set statusline=
 set statusline+=\ %f\ 
 set statusline+=%m
 set statusline+=%=
-" set statusline+=\ %l:%c:%L
-set statusline+=\ [%{&filetype}
+set statusline+=\ %l:%c:%L
+set statusline+=\ %{&filetype}
 set statusline+=\ %{&ff}
-set statusline+=\ %{&fileencoding}]\ 
+set statusline+=\ %{&fileencoding}\ 
 " }}}
 
 " Plugins {{{
@@ -156,9 +165,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
 
 Plug 'junegunn/fzf.vim'
-    " Use fd to search files
-    let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git'
-    " let $FZF_DEFAULT_OPTS = '--multi --inline-info --color fg:8,hl:7,fg+:6,bg+:0,hl+:7 --color info:0,prompt:6,spinner:6,pointer:6,marker:6'
     " Don't preview files
     let g:fzf_preview_window = []
     " Use the legacy layout
@@ -169,7 +175,6 @@ Plug 'junegunn/fzf.vim'
 " Plug 'airblade/vim-rooter'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    " html css javascript typescript rust bash json toml yaml
     " echo nvim_treesitter#statusline(90)
 
 Plug 'neovim/nvim-lspconfig'
@@ -179,6 +184,8 @@ Plug 'nvim-lua/completion-nvim'
     set completeopt=menuone,noinsert,noselect
     " Avoid showing message extra message when using completion
     set shortmess+=c
+
+Plug 'chrisbra/Colorizer'
 call plug#end()
 " }}}
 
@@ -186,9 +193,12 @@ call plug#end()
 " Tree Sitter
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
+    ensure_installed = { "html", "css", "javascript", "typescript", "rust", "bash", "json", "toml", "yaml", "query", "lua", "cpp", "c", "python" },
+
     highlight = {
         enable = true,
     },
+
     incremental_selection = {
         enable = true,
         keymaps = {
@@ -198,6 +208,7 @@ require'nvim-treesitter.configs'.setup {
             node_decremental = "V",
         },
     },
+
     indent = {
         enable = true,
     },
@@ -234,6 +245,10 @@ local on_attach = function(client, bufnr)
     -- Set some keybinds conditional on server capabilities
     if client.resolved_capabilities.document_formatting then
         buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+        vim.cmd [[augroup Format]]
+        vim.cmd [[autocmd! * <buffer>]]
+        vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+        vim.cmd [[augroup END]]
     elseif client.resolved_capabilities.document_range_formatting then
         buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
     end
@@ -265,24 +280,24 @@ EOF
 " }}}
 
 " Theme {{{
-colorscheme gruvbox
+let g:gruv_mode = 'dark'
+let g:gruv_variant = 'h'
+colorscheme gruv
 " }}}
 
 " Autocommands {{{
-" Unfold all levels
-au BufWinEnter * silent! :%foldopen!
-
-au FileType sh,rust,json,toml
-    \ highlight! Normal guibg=#1d2021 guifg=#928374
-
 au FileType yaml
     \ highlight! link TSField GruvboxBlue
 
 " Highlight on yank
 au TextYankPost * lua vim.highlight.on_yank {on_visual = false, higroup = "Visual"}
 
-au FileType rust,typescript,javascript,python,css,json,html,sh,toml,yaml
-    \ set foldmethod=expr |
-    \ set foldexpr=nvim_treesitter#foldexpr()
+" Disable line numbers for terminal
+au TermOpen * setlocal nonumber norelativenumber
+
+au FileType html,css,javascript,typescript,rust,sh,json,toml,yaml,query,lua,cpp,c,python
+    \ setlocal syntax=off |
+    \ setlocal foldmethod=expr |
+    \ setlocal foldexpr=nvim_treesitter#foldexpr()
 " }}}
 

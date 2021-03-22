@@ -52,12 +52,15 @@ draw_bold_text_with_bright_colors: true
 # Gruvbox dark
 colors:
   primary:
-    background: "#1d2021" # hard
-    # background: "#282828" # normal
-    # background: "#32302f" # soft
+    # Hard
+    background: "#1d2021"
+    # Normal
+    # background: "#282828"
+    # Soft
+    # background: "#32302f"
     foreground: "#ebdbb2"
   cursor:
-    text: "#282828"
+    text: "#1d2021"
     cursor: "#fabd2f"
   vi_mode_cursor:
     text: CellBackground
