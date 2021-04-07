@@ -13,8 +13,10 @@ noremap K 3k
 noremap L $
 nnoremap Y y$
 
-nnoremap <silent> <leader>er :e $MYVIMRC<cr>
-nnoremap <silent> <leader>re :source $MYVIMRC <bar> nohlsearch<cr>
+nnoremap <silent> <leader>ve :e $MYVIMRC<cr>
+nnoremap <silent> <leader>vr :source $MYVIMRC <bar> nohlsearch<cr>
+
+nnoremap <silent> <c-y> J
 
 nnoremap <silent> <c-l> :vertical resize +5<cr>
 nnoremap <silent> <c-h> :vertical resize -5<cr>
@@ -28,6 +30,8 @@ nnoremap <silent> <c-t><c-d> :tabclose<cr>
 nnoremap <silent> <leader>pi :PlugInstall<cr>
 nnoremap <silent> <leader>pu :PlugUpdate<cr>
 nnoremap <silent> <leader>pc :PlugClean<cr>
+
+nnoremap <silent> <leader>tf :w <bar> :e <bar> TSBufEnable highlight<cr>
 
 nnoremap <silent> <leader>ff :Files<cr>
 nnoremap <silent> <leader>fb :Buffers<cr>
@@ -121,12 +125,12 @@ set grepprg=rg\ --vimgrep\ --no-heading
 
 set list
 " By default only show hidden chars that are annoying
-set listchars=tab:→\ ,nbsp:␣,trail:·,extends:>,precedes:<
+set listchars=tab:\ \ ,nbsp:␣,trail:·,extends:>,precedes:<
 let g:list_chars_on = 0
 function! s:toggle_list_chars()
     if g:list_chars_on
         " Only show hidden chars that are annoying
-        set listchars=tab:→\ ,nbsp:␣,trail:·,extends:>,precedes:<
+        set listchars=tab:\ \ ,nbsp:␣,trail:·,extends:>,precedes:<
         let g:list_chars_on = 0
     else
         " Show all hidden chars
@@ -176,6 +180,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     " echo nvim_treesitter#statusline(90)
+Plug 'nvim-treesitter/playground'
 
 Plug 'neovim/nvim-lspconfig'
 
@@ -186,6 +191,17 @@ Plug 'nvim-lua/completion-nvim'
     set shortmess+=c
 
 Plug 'chrisbra/Colorizer'
+
+Plug 'prettier/vim-prettier', {
+    \ 'do': 'yarn install',
+    \ 'for': ['html', 'css'] }
+    let g:prettier#exec_cmd_async = 1
+    au BufWritePre *.html,*.css
+        \ Prettier
+
+Plug 'mattn/emmet-vim'
+    let g:user_emmet_install_global = 0
+    au FileType html,css EmmetInstall
 call plug#end()
 " }}}
 
@@ -193,7 +209,23 @@ call plug#end()
 " Tree Sitter
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "html", "css", "javascript", "typescript", "rust", "bash", "json", "toml", "yaml", "query", "lua", "cpp", "c", "python" },
+    ensure_installed = {
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "rust",
+        "bash",
+        "json",
+        "toml",
+        "yaml",
+        "query",
+        "lua",
+        "cpp",
+        "c",
+        "python",
+        "dart"
+    },
 
     highlight = {
         enable = true,
@@ -265,16 +297,13 @@ local on_attach = function(client, bufnr)
     end
 end
 
--- Enable (broadcasting) snippet capability for completion
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-require'lspconfig'.html.setup {
-  capabilities = capabilities,
-}
-
-local servers = { "rust_analyzer", "tsserver", "pyright", "bashls", "cssls" }
+local servers = { "rust_analyzer", "tsserver", "pyright", "bashls", "ccls", "dartls" }
 for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup { on_attach = on_attach }
+    local config = { on_attach = on_attach }
+    if lsp == "dartls" then
+        config.cmd = { "dart", "/opt/dart-sdk/bin/snapshots/analysis_server.dart.snapshot", "--lsp" }
+    end
+    nvim_lsp[lsp].setup(config)
 end
 EOF
 " }}}
@@ -286,13 +315,10 @@ colorscheme gruv
 " }}}
 
 " Autocommands {{{
-au FileType yaml
-    \ highlight! link TSField GruvboxBlue
-
 " Highlight on yank
-au TextYankPost * lua vim.highlight.on_yank {on_visual = false, higroup = "Visual"}
+au TextYankPost * lua vim.highlight.on_yank { on_visual = false, higroup = "Visual" }
 
-" Disable line numbers for terminal
+" Disable line numbers for terminal always
 au TermOpen * setlocal nonumber norelativenumber
 
 au FileType html,css,javascript,typescript,rust,sh,json,toml,yaml,query,lua,cpp,c,python

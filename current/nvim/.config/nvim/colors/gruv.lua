@@ -99,7 +99,7 @@ local theme = {
         not_important = { guifg = palette.fg4 },
         comment = { guifg = palette.gray },
         string = { guifg = palette.blue },
-        number = { guifg = palette.purple, gui = attrs.bold },
+        number = { guifg = palette.yellow, gui = attrs.bold },
         type = { guifg = palette.aqua },
         variable = { guifg = palette.fg1 },
     },
@@ -120,7 +120,7 @@ local theme = {
 
 local debug = { guibg = 'red', guifg = 'black', gui = attrs.nocombine }
 
-function highlight(group, opts)
+function highlight_format(group, opts)
     if opts == nil then
         error("Required param opts is nil")
     end
@@ -151,7 +151,11 @@ function highlight(group, opts)
         params = params .. " gui=" .. attrs.nocombine
     end
 
-    vim.api.nvim_command("highlight! " .. group .. params)
+    return "highlight! " .. group .. params
+end
+
+function highlight(group, opts)
+    vim.api.nvim_command(highlight_format(group, opts))
 end
 
 -- Vim syntax hi groups {{{
@@ -249,7 +253,7 @@ highlight("SignColumn", { guibg = theme.editor.normal.guibg })
 
 highlight("Folded", theme.editor.folded)
 highlight("EndOfBuffer", { guifg = theme.editor.normal.guibg })
-highlight("NonText", theme.editor.folded)
+highlight("NonText", { guifg = theme.syntax.not_important.guifg })
 
 highlight("TabLine", { guifg = theme.syntax.not_important.guifg, guibg = theme.editor.normal.guibg })
 highlight("TabLineFill", { guifg = theme.editor.normal.guibg, guibg = theme.editor.normal.guibg })
@@ -269,7 +273,6 @@ highlight("PmenuThumb", { guibg = theme.editor.popup_active.guibg })
 
 -- Tree sitter {{{
 highlight("TSAnnotation", debug)
-highlight("TSAttribute", debug)
 highlight("TSParameterReference", debug)
 highlight("TSText", debug)
 highlight("TSSymbol", debug)
@@ -301,20 +304,27 @@ highlight("TSPunctSpecial", theme.syntax.not_important)
 highlight("TSTagDelimiter", theme.syntax.not_important)
 highlight("TSConditional", theme.syntax.not_important)
 highlight("TSRepeat", theme.syntax.not_important)
+-- Dart @override and decorators/attributes/annotations in other languages
+highlight("TSAttribute", theme.syntax.number)
 
 highlight("TSError", { guifg = theme.editor.error.guifg, guibg = theme.editor.error.guibg, gui = attrs.bold })
 
 highlight("TSBoolean", theme.syntax.number)
-highlight("TSNumber", theme.syntax.number)
-highlight("TSFloat", theme.syntax.number)
 -- nil in Lua
 highlight("TSConstBuiltin", theme.syntax.number)
+highlight("TSNumber", theme.syntax.number)
+highlight("TSFloat", theme.syntax.number)
 -- Rust lifetime annotations
 highlight("TSLabel", theme.syntax.number)
 highlight("TSStringEscape", theme.syntax.number)
 
 -- Struct fields in Rust
 highlight("TSField", theme.syntax.variable)
+vim.api.nvim_command(string.format([[
+au FileType yaml
+    \ %s
+]], highlight_format("TSField", debug)))
+
 -- Fields in some other languages
 highlight("TSProperty", theme.syntax.variable)
 -- Function parameters
@@ -351,15 +361,15 @@ highlight("TSConstant", theme.syntax.type)
 -- }}}
 
 -- Builtin LSP {{{
-highlight("LspDiagnosticsDefaultError", debug)
-highlight("LspDiagnosticsDefaultHint", debug)
-highlight("LspDiagnosticsDefaultInformation", debug)
-highlight("LspDiagnosticsDefaultWarning", debug)
+highlight("LspDiagnosticsDefaultError", { guifg = theme.editor.popup_inactive.guifg })
+highlight("LspDiagnosticsDefaultHint", { guifg = theme.editor.popup_inactive.guifg })
+highlight("LspDiagnosticsDefaultInformation", { guifg = theme.editor.popup_inactive.guifg })
+highlight("LspDiagnosticsDefaultWarning", { guifg = theme.editor.popup_inactive.guifg })
 
-highlight("LspDiagnosticsFloatingError", debug)
-highlight("LspDiagnosticsFloatingHint", debug)
-highlight("LspDiagnosticsFloatingInformation", debug)
-highlight("LspDiagnosticsFloatingWarning", debug)
+-- highlight("LspDiagnosticsFloatingError", debug)
+-- highlight("LspDiagnosticsFloatingHint", debug)
+-- highlight("LspDiagnosticsFloatingInformation", debug)
+-- highlight("LspDiagnosticsFloatingWarning", debug)
 
 highlight("LspDiagnosticsSignError", theme.editor.error)
 highlight("LspDiagnosticsSignHint", theme.editor.hint)
@@ -382,3 +392,7 @@ highlight("LspReferenceRead", theme.editor.search)
 highlight("LspReferenceText", theme.editor.search)
 highlight("LspReferenceWrite", theme.editor.search)
 -- }}}
+
+highlight("ASTEditFocusedNode", { guibg = palette.bg3, gui = attrs.none })
+highlight("ASTEditRoot", { guibg = palette.bg1, gui = attrs.none })
+

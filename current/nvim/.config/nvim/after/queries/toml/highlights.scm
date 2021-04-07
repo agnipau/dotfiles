@@ -1,7 +1,6 @@
 (bare_key) @type.builtin
 
-(pair
-  (bare_key) @property)
+(pair (bare_key) @property)
 
 (string) @string
 (boolean) @constant.builtin
@@ -11,11 +10,7 @@
 
 (ERROR) @error
 
-[
-    "["
-    "]"
-] @punctuation.bracket
+["["
+ "]"] @punctuation.bracket
 
-[
-    "="
-] @operator
+["="] @operator

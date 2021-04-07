@@ -1,113 +1,86 @@
 ;;; Builtins
 ;; Keywords
 
-(if_statement
- [
-     "if"
-     "then"
-     "end"
- ] @conditional)
+(if_statement ["if" "then" "end"] @conditional)
 
-[
-    "else"
-    "elseif"
-    "then"
-] @conditional
+["else"
+ "elseif"
+ "then"] @conditional
 
 (for_statement
- [
-     "for"
-     "do"
-     "end"
- ] @repeat)
+ ["for"
+  "do"
+  "end"] @repeat)
 
 (for_in_statement
- [
-     "for"
-     "do"
-     "end"
- ] @repeat)
+ ["for"
+  "do"
+  "end"] @repeat)
 
 (while_statement
- [
-     "while"
-     "do"
-     "end"
- ] @repeat)
+ ["while"
+  "do"
+  "end"] @repeat)
 
 (repeat_statement
- [
-     "repeat"
-     "until"
- ] @repeat)
+ ["repeat"
+  "until"] @repeat)
 
 (do_statement
- [
-     "do"
-     "end"
- ] @keyword)
+ ["do"
+  "end"] @keyword)
 
-[
-    "in"
-    "local"
-    "return"
-    (break_statement)
-    "goto"
-] @keyword
+["in"
+ "local"
+ "return"
+ (break_statement)
+ "goto"] @keyword
 
 ;; Operators
 
-[
-    "not"
-    "and"
-    "or"
-] @keyword.operator
+["not"
+ "and"
+ "or"] @keyword.operator
 
-[
-    "="
-    "~="
-    "=="
-    "<="
-    ">="
-    "<"
-    ">"
-    "+"
-    "-"
-    "%"
-    "/"
-    "//"
-    "*"
-    "^"
-    "&"
-    "~"
-    "|"
-    ">>"
-    "<<"
-    ".."
-    "#"
-] @operator
+["="
+ "~="
+ "=="
+ "<="
+ ">="
+ "<"
+ ">"
+ "+"
+ "-"
+ "%"
+ "/"
+ "//"
+ "*"
+ "^"
+ "&"
+ "~"
+ "|"
+ ">>"
+ "<<"
+ ".."
+ "#"] @operator
 
 ;; Punctuation
 [ "," "." ":"] @punctuation.delimiter
 
 ;; Brackets
-[
-    "("
-    ")"
-    "["
-    "]"
-    "{"
-    "}"
-] @punctuation.bracket
+["("
+ ")"
+ "["
+ "]"
+ "{"
+ "}"] @punctuation.bracket
 
 ;; Variables
 (identifier) @variable
 
 ;; Constants
-[
-    (false)
-    (true)
-] @boolean
+[(false)
+ (true)] @boolean
 (nil) @constant.builtin
 (spread) @constant ;; "..."
 
@@ -127,8 +100,7 @@
 (function_call (field_expression (property_identifier) @function) . (arguments))
 
 ;; Parameters
-(parameters
-    (identifier) @parameter)
+(parameters (identifier) @parameter)
 
 ;; Nodes
 ; (table ["{" "}"] @constructor)

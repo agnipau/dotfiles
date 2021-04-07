@@ -1,5 +1,5 @@
-(true) @boolean
-(false) @boolean
+[(true)
+ (false)] @boolean
 (null) @constant.builtin
 (number) @number
 (pair key: (string) @label)
@@ -7,9 +7,9 @@
 (array (string) @string)
 (string_content (escape_sequence) @string.escape)
 (ERROR) @error
-":" @punctuation.delimiter
-"," @punctuation.delimiter
-"[" @punctuation.bracket
-"]" @punctuation.bracket
-"{" @punctuation.bracket
-"}" @punctuation.bracket
+[":"
+ ","] @punctuation.delimiter
+["["
+ "]"
+ "{"
+ "}"] @punctuation.bracket
